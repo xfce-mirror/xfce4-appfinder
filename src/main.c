@@ -170,7 +170,7 @@ cb_appstree (GtkTreeView        *treeview,
     model = gtk_tree_view_get_model(treeview);
     if (gtk_tree_model_get_iter(model, &iter, path))
     {
-		gchar *name, *dname, *filename, *exec, **execp;
+		gchar *name, *dname, *filename, *exec = NULL, **execp;
 		gboolean found = FALSE;
 		XfceDesktopEntry *dentry;
 		GDir *dir;
@@ -179,48 +179,59 @@ cb_appstree (GtkTreeView        *treeview,
 		/* we fetch the name of the application to run */
 		gtk_tree_model_get(model, &iter, APP_TEXT, &name, -1);
 
-		dir = g_dir_open (entriespaths[0], 0, NULL);
-		if (dir==NULL)
-			return;
-		while (!found && ((filename = (gchar *)g_dir_read_name(dir))!=NULL))
-		{
-			filename = g_strdup_printf ("%s%s", entriespaths[0], filename);
-			if (g_file_test(filename, G_FILE_TEST_IS_DIR))
-				goto skip;
-			dentry = xfce_desktop_entry_new (filename, keys, 7);
-
-			xfce_desktop_entry_parse (dentry);
-	
-			xfce_desktop_entry_get_string (dentry, "Name", FALSE, &dname);
-
-			if (strcmp(dname, name)==0)
+		while (entriespaths[i]!=NULL) {
+			dir = g_dir_open (entriespaths[i], 0, NULL);
+			if (dir==NULL)
+				break;
+			while (!found && ((filename = (gchar *)g_dir_read_name(dir))!=NULL))
 			{
-				xfce_desktop_entry_get_string (dentry, "Exec", FALSE, &exec);
-				saveHistory(filename);
-				found = TRUE;
+				filename = g_strdup_printf ("%s%s", entriespaths[i], filename);
+				if (g_file_test(filename, G_FILE_TEST_IS_DIR))
+					goto skip;
+				dentry = xfce_desktop_entry_new (filename, keys, 7);
+	
+				xfce_desktop_entry_parse (dentry);
+		
+				xfce_desktop_entry_get_string (dentry, "Name", FALSE, &dname);
+	
+				if (strcmp(dname, name)==0)
+				{
+					xfce_desktop_entry_get_string (dentry, "Exec", FALSE, &exec);
+					saveHistory(filename);
+					found = TRUE;
+				}
+				if (dname)
+					g_free(dname);
+	
+				skip:
+					g_free(filename);
 			}
-			if (dname)
-				g_free(dname);
+			g_dir_close(dir);
+			if (found)
+				break;
+			i++;
+		}
 
-			skip:
-				g_free(filename);
+		if (exec) {
+			if (g_strrstr(exec, "%")!= NULL)
+			{	
+				execp = g_strsplit(exec, "%", 0);
+				g_printf("Now starting \"%s\"...\n", execp[0]);
+				exec_command(execp[0]);
+				g_strfreev (execp);
+			}
+			else
+			{
+				g_printf("Now starting \"%s\"...\n", exec);
+				exec_command(exec);
+			}
+			g_free(exec);
 		}
-		g_dir_close(dir);
-
-		if (g_strrstr(exec, "%")!= NULL)
-		{	
-			execp = g_strsplit(exec, "%", 0);
-			g_printf("Now starting \"%s\"...\n", execp[0]);
-			exec_command(execp[0]);
-			g_strfreev (execp);
+		else {
+			xfce_info("Cannot execute %s\n", name);
 		}
-		else
-		{
-			g_printf("Now starting \"%s\"...\n", exec);
-			exec_command(exec);
-		}
-		g_free(exec);
-		g_free(name);
+		if (name)
+			g_free(name);
     }
 }
 
