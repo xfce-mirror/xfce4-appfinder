@@ -1,10 +1,13 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Xfce 4 Appfinder
-Comment=Xfce 4 Appfinder 
+Name[nl]=Xfce 4 Appfinder
+Comment=Xfce 4 Appfinder
+Comment[nl]=Zoek geïnstalleerde programma's
 Exec=xfce4-appfinder
 Icon=xfce4-appfinder
 Terminal=false
 Type=Application
 Categories=Utility
 GenericName=Appfinder
+GenericName[nl]=Appfinder
