@@ -222,7 +222,6 @@ gchar *get_path_from_name(gchar *name) {
 				continue;
 
 			dentry = xfce_desktop_entry_new (filename, keys, 7);
-			xfce_desktop_entry_parse (dentry);
 			xfce_desktop_entry_get_string (dentry, "Name", FALSE, &dname);
 
 			if (strcmp(dname, name)==0)
@@ -277,8 +276,11 @@ cb_appstree (GtkTreeView        *treeview,
 				if (g_file_test(filename, G_FILE_TEST_IS_DIR))
 					goto skip;
 
-				dentry = xfce_desktop_entry_new (filename, keys, 7);
-				xfce_desktop_entry_parse (dentry);
+				if (!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7)))
+				{
+					i++;
+					continue;
+				}
 				xfce_desktop_entry_get_string (dentry, "Name", FALSE, &dname);
 
 				if (strcmp(dname, name)==0)
@@ -440,7 +442,7 @@ GtkListStore *create_categories_liststore(void)
  *   create_categories_treeview
  *
  **********/
-GtkWidget * create_categories_treeview(void)
+GtkWidget *create_categories_treeview(void)
 {
 	GtkTreeModel      *model;
 	GtkTreeViewColumn *col;
@@ -574,8 +576,11 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 		if (history!=NULL) {
 			while (history[i]!=NULL) {
 				if (g_file_test(history[i], G_FILE_TEST_EXISTS)) {
-					dentry = xfce_desktop_entry_new (history[i], keys, 7);
-					xfce_desktop_entry_parse (dentry);
+					if (!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (history[i], keys, 7)))
+					{
+						i++;
+						continue;
+					}
 					if (!xfce_desktop_entry_get_string (dentry, "Name", FALSE, &name))
 						name = "";
 					if (xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &img))
@@ -585,6 +590,8 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 							icon = load_icon_entry(img);
 							g_free(img);
 						}
+						else
+							icon = NULL;
 					}
 					else
 						icon = NULL;
@@ -616,10 +623,15 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 				{
 					filename = g_strdup_printf ("%s%s", entriespaths[i], filename);
 					if (g_file_test(filename, G_FILE_TEST_IS_DIR))
-						goto skip;
-					dentry = xfce_desktop_entry_new (filename, keys, 7);
-
-					xfce_desktop_entry_parse (dentry);
+					{
+						g_free(filename);
+						continue;
+					}
+					if (!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7)))
+					{
+						g_free(filename);
+						continue;
+					}
 
 					/* if selected categories is not All filter the results */
 					if (category!=APPFINDER_ALL)
@@ -697,9 +709,9 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 					out:
 						if (dentry)
 							g_object_unref (dentry);
-					skip:
-						if (filename)
-							g_free(filename);
+
+					if (filename)
+						g_free(filename);
 				}
 				g_dir_close(dir);
 			}
