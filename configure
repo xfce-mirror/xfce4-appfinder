@@ -1817,7 +1817,7 @@ fi
 
 # Define the identity of the package.
  PACKAGE=xfce4-appfinder
- VERSION=4.2.1
+ VERSION=4.2.2
 
 
 cat >>confdefs.h <<_ACEOF
@@ -22284,7 +22284,7 @@ echo "${ECHO_T}yes" >&6
   fi
 
 
-                                                                      ac_config_files="$ac_config_files xfce4-appfinder.spec Makefile po/Makefile.in src/Makefile doc/Makefile doc/C/Makefile doc/C/images/Makefile"
+                                                                                          ac_config_files="$ac_config_files xfce4-appfinder.spec Makefile po/Makefile.in src/Makefile doc/Makefile doc/C/Makefile doc/C/images/Makefile doc/fr/Makefile doc/fr/images/Makefile"
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
 # tests run on this system so they can be shared between configure
@@ -22863,6 +22863,8 @@ do
   "doc/Makefile" ) CONFIG_FILES="$CONFIG_FILES doc/Makefile" ;;
   "doc/C/Makefile" ) CONFIG_FILES="$CONFIG_FILES doc/C/Makefile" ;;
   "doc/C/images/Makefile" ) CONFIG_FILES="$CONFIG_FILES doc/C/images/Makefile" ;;
+  "doc/fr/Makefile" ) CONFIG_FILES="$CONFIG_FILES doc/fr/Makefile" ;;
+  "doc/fr/images/Makefile" ) CONFIG_FILES="$CONFIG_FILES doc/fr/images/Makefile" ;;
   "depfiles" ) CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
   "default-1" ) CONFIG_COMMANDS="$CONFIG_COMMANDS default-1" ;;
   "config.h" ) CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
