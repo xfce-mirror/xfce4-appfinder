@@ -1,3 +1,58 @@
+2004-10-22 21:33  olivier
+
+	* src/xfce4-appfinder.desktop: Theme fixes update locale [fr] for
+	  desktop files
+
+2004-10-14 19:13  pollux
+
+	* configure, configure.ac, po/be.gmo, po/de.gmo, po/eu.gmo,
+	  po/fi.gmo, po/fi.po, po/gu.gmo, po/it.gmo, po/nl.gmo, po/pa.gmo,
+	  po/zh_CN.gmo, src/xfce4-appfinder.desktop: update FI translations
+
+2004-10-11 18:30  benny
+
+	* po/: be.po, de.po, eu.po, gu.po, it.po, nl.po, pa.po,
+	  xfce4-appfinder.pot, zh_CN.po: update-po for Moe.
+
+2004-10-10 13:52  pollux
+
+	* configure, configure.ac, po/pt_PT.gmo, po/pt_PT.po: update pt_PT
+	  translations
+
+2004-10-09 19:47  eduard
+
+	* src/: af-constants.h, appfinder.h, callbacks.c, callbacks.h:
+	  Trivial style fixes
+
+2004-10-09 16:20  pollux
+
+	* configure, configure.ac, po/fa.gmo, po/fa.po: update FA
+	  translations
+
+2004-10-08 15:49  edscott
+
+	* configure, configure.ac, po/es.gmo, po/es.po, po/es_MX.gmo,
+	  po/es_MX.po: add spanish language translations
+
+2004-10-07 22:35  benny
+
+	* Makefile.in, aclocal.m4, configure, m4/debug.m4,
+	  m4/glib-gettext.m4, m4/pkg.m4, src/Makefile.in: Added
+	  --enable-final (-O1 for GNU ld) as per Jaspers request. Added
+	  missing m4 files.
+
+2004-10-03 18:14  pollux
+
+	* configure, configure.ac, ltmain.sh, po/pa.gmo, po/pa.po: Punjabi
+	  translations (PA) from jaswinderlinux@netscape.net
+
+2004-10-02 15:28  olivier
+
+	* ChangeLog, Makefile.in, aclocal.m4, config.guess, config.sub,
+	  configure, depcomp, install-sh, ltmain.sh,
+	  po/xfce4-appfinder.pot, src/Makefile.in: Update all files for 4.2
+	  beta 1
+
 2004-09-30 22:15  eduard
 
 	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
