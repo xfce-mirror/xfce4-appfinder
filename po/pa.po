@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-24 21:51+0200\n"
+"POT-Creation-Date: 2004-10-11 18:28+0200\n"
 "PO-Revision-Date: 2004-09-23 15:41+0530\n"
 "Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
@@ -15,73 +15,73 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms: Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"Plural-Forms: Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
 
-#: src/main.c:97 src/main.c:103
+#: src/main.c:98 src/main.c:104
 msgid "Now starting"
 msgstr "ਹੁਣ ਸ਼ੁਰੂ"
 
-#: src/main.c:110
+#: src/main.c:112
 msgid "Cannot execute"
 msgstr "ਚਲਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: src/main.c:146
+#: src/main.c:148
 msgid "<b>Search:</b>"
 msgstr "<b>ਖੋਜ:</b>"
 
-#: src/main.c:203
+#: src/main.c:205
 msgid "Categories"
 msgstr "ਸ਼੍ਰੇਣੀਆਂ"
 
-#: src/af-constants.h:69
+#: src/af-constants.h:72
 msgid "All"
 msgstr "ਸਭ"
 
-#: src/af-constants.h:70
+#: src/af-constants.h:73
 msgid "Recently Used"
 msgstr "ਤਾਜ਼ਾ ਵਰਤੇ"
 
-#: src/af-constants.h:71
+#: src/af-constants.h:74
 msgid "Core"
 msgstr "ਮੂਲ"
 
-#: src/af-constants.h:72
+#: src/af-constants.h:75
 msgid "Development"
 msgstr "ਵਿਕਾਸ-ਕਰਤਾ"
 
-#: src/af-constants.h:73
+#: src/af-constants.h:76
 msgid "Office"
 msgstr "ਦਫਤਰ"
 
-#: src/af-constants.h:74
+#: src/af-constants.h:77
 msgid "Graphics"
 msgstr "ਗਰਾਫਿਕਸ"
 
-#: src/af-constants.h:75
+#: src/af-constants.h:78
 msgid "Network"
 msgstr "ਨੈੱਟਵਰਕ"
 
-#: src/af-constants.h:76
+#: src/af-constants.h:79
 msgid "AudioVideo"
 msgstr "ਆਡੀਓ-ਵੀਡਿਓ"
 
-#: src/af-constants.h:77
+#: src/af-constants.h:80
 msgid "Game"
 msgstr "ਖੇਡ"
 
-#: src/af-constants.h:78
+#: src/af-constants.h:81
 msgid "Education"
 msgstr "ਵਿਦਿਅਕ"
 
-#: src/af-constants.h:79
+#: src/af-constants.h:82
 msgid "System"
 msgstr "ਸਿਸਟਮ"
 
-#: src/af-constants.h:80
+#: src/af-constants.h:83
 msgid "Filemanager"
 msgstr "ਫਾਇਲ਼-ਪ੍ਰਬੰਧਕ"
 
-#: src/af-constants.h:81
+#: src/af-constants.h:84
 msgid "Utility"
 msgstr "ਉਪਯੋਗਤਾ"
-

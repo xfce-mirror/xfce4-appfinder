@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-20 08:23+0200\n"
+"POT-Creation-Date: 2004-10-11 18:28+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Eduard Roccatello <eduard@xfce.org>\n"
 "Language-Team: it <it@li.org>\n"
@@ -32,55 +32,55 @@ msgstr "<b>Cerca:</b>"
 msgid "Categories"
 msgstr "Categorie"
 
-#: src/af-constants.h:69
+#: src/af-constants.h:72
 msgid "All"
 msgstr "Tutte"
 
-#: src/af-constants.h:70
+#: src/af-constants.h:73
 msgid "Recently Used"
 msgstr "Usati di recente"
 
-#: src/af-constants.h:71
+#: src/af-constants.h:74
 msgid "Core"
 msgstr "Principali"
 
-#: src/af-constants.h:72
+#: src/af-constants.h:75
 msgid "Development"
 msgstr "Sviluppo"
 
-#: src/af-constants.h:73
+#: src/af-constants.h:76
 msgid "Office"
 msgstr "Ufficio"
 
-#: src/af-constants.h:74
+#: src/af-constants.h:77
 msgid "Graphics"
 msgstr "Grafica"
 
-#: src/af-constants.h:75
+#: src/af-constants.h:78
 msgid "Network"
 msgstr "Rete ed internet"
 
-#: src/af-constants.h:76
+#: src/af-constants.h:79
 msgid "AudioVideo"
 msgstr "Multimedia"
 
-#: src/af-constants.h:77
+#: src/af-constants.h:80
 msgid "Game"
 msgstr "Gioco"
 
-#: src/af-constants.h:78
+#: src/af-constants.h:81
 msgid "Education"
 msgstr "Educativi"
 
-#: src/af-constants.h:79
+#: src/af-constants.h:82
 msgid "System"
 msgstr "Sistema"
 
-#: src/af-constants.h:80
+#: src/af-constants.h:83
 msgid "Filemanager"
 msgstr ""
 
-#: src/af-constants.h:81
+#: src/af-constants.h:84
 msgid "Utility"
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-02 10:35+0200\n"
+"POT-Creation-Date: 2004-10-11 18:28+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,54 +32,54 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: src/af-constants.h:69
+#: src/af-constants.h:72
 msgid "All"
 msgstr ""
 
-#: src/af-constants.h:70
+#: src/af-constants.h:73
 msgid "Recently Used"
 msgstr ""
 
-#: src/af-constants.h:71
+#: src/af-constants.h:74
 msgid "Core"
 msgstr ""
 
-#: src/af-constants.h:72
+#: src/af-constants.h:75
 msgid "Development"
 msgstr ""
 
-#: src/af-constants.h:73
+#: src/af-constants.h:76
 msgid "Office"
 msgstr ""
 
-#: src/af-constants.h:74
+#: src/af-constants.h:77
 msgid "Graphics"
 msgstr ""
 
-#: src/af-constants.h:75
+#: src/af-constants.h:78
 msgid "Network"
 msgstr ""
 
-#: src/af-constants.h:76
+#: src/af-constants.h:79
 msgid "AudioVideo"
 msgstr ""
 
-#: src/af-constants.h:77
+#: src/af-constants.h:80
 msgid "Game"
 msgstr ""
 
-#: src/af-constants.h:78
+#: src/af-constants.h:81
 msgid "Education"
 msgstr ""
 
-#: src/af-constants.h:79
+#: src/af-constants.h:82
 msgid "System"
 msgstr ""
 
-#: src/af-constants.h:80
+#: src/af-constants.h:83
 msgid "Filemanager"
 msgstr ""
 
-#: src/af-constants.h:81
+#: src/af-constants.h:84
 msgid "Utility"
 msgstr ""

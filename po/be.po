@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-20 08:23+0200\n"
+"POT-Creation-Date: 2004-10-11 18:28+0200\n"
 "PO-Revision-Date: 2004-09-12 13:04+0300\n"
 "Last-Translator: Ales Nyakhaychyk <nab@mail.by>\n"
 "Language-Team: Belorussian\n"
@@ -31,54 +31,54 @@ msgstr "<b>Пошук:</b>"
 msgid "Categories"
 msgstr "Катэгорыі"
 
-#: src/af-constants.h:69
+#: src/af-constants.h:72
 msgid "All"
 msgstr "Усе"
 
-#: src/af-constants.h:70
+#: src/af-constants.h:73
 msgid "Recently Used"
 msgstr "Нядаўна выкарыстоўваліся"
 
-#: src/af-constants.h:71
+#: src/af-constants.h:74
 msgid "Core"
 msgstr "Асноўныя"
 
-#: src/af-constants.h:72
+#: src/af-constants.h:75
 msgid "Development"
 msgstr "Распрацоўка"
 
-#: src/af-constants.h:73
+#: src/af-constants.h:76
 msgid "Office"
 msgstr "Канцэлярыя"
 
-#: src/af-constants.h:74
+#: src/af-constants.h:77
 msgid "Graphics"
 msgstr "Графіка"
 
-#: src/af-constants.h:75
+#: src/af-constants.h:78
 msgid "Network"
 msgstr "Сетка"
 
-#: src/af-constants.h:76
+#: src/af-constants.h:79
 msgid "AudioVideo"
 msgstr "Музыка і фільмы"
 
-#: src/af-constants.h:77
+#: src/af-constants.h:80
 msgid "Game"
 msgstr "Гульні"
 
-#: src/af-constants.h:78
+#: src/af-constants.h:81
 msgid "Education"
 msgstr "Адукацыя"
 
-#: src/af-constants.h:79
+#: src/af-constants.h:82
 msgid "System"
 msgstr "Сыстэма"
 
-#: src/af-constants.h:80
+#: src/af-constants.h:83
 msgid "Filemanager"
 msgstr "Кіраваньне файламі"
 
-#: src/af-constants.h:81
+#: src/af-constants.h:84
 msgid "Utility"
 msgstr "Прыблуды"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-20 08:23+0200\n"
+"POT-Creation-Date: 2004-10-11 18:28+0200\n"
 "PO-Revision-Date: 2004-09-18 15:14+0100\n"
 "Last-Translator: Moritz Heiber <moe@xfce.org>\n"
 "Language-Team: none <none@none>\n"
@@ -31,54 +31,54 @@ msgstr "<b>Suche:</b>"
 msgid "Categories"
 msgstr "Kategorien"
 
-#: src/af-constants.h:69
+#: src/af-constants.h:72
 msgid "All"
 msgstr "Alle"
 
-#: src/af-constants.h:70
+#: src/af-constants.h:73
 msgid "Recently Used"
 msgstr "Zuletzt genutzt"
 
-#: src/af-constants.h:71
+#: src/af-constants.h:74
 msgid "Core"
 msgstr "Kern"
 
-#: src/af-constants.h:72
+#: src/af-constants.h:75
 msgid "Development"
 msgstr "Entwicklung"
 
-#: src/af-constants.h:73
+#: src/af-constants.h:76
 msgid "Office"
 msgstr "Büro"
 
-#: src/af-constants.h:74
+#: src/af-constants.h:77
 msgid "Graphics"
 msgstr "Grafik"
 
-#: src/af-constants.h:75
+#: src/af-constants.h:78
 msgid "Network"
 msgstr "Netzwerk"
 
-#: src/af-constants.h:76
+#: src/af-constants.h:79
 msgid "AudioVideo"
 msgstr "Audio/Video"
 
-#: src/af-constants.h:77
+#: src/af-constants.h:80
 msgid "Game"
 msgstr "Spiele"
 
-#: src/af-constants.h:78
+#: src/af-constants.h:81
 msgid "Education"
 msgstr "Ausbildung"
 
-#: src/af-constants.h:79
+#: src/af-constants.h:82
 msgid "System"
 msgstr "System"
 
-#: src/af-constants.h:80
+#: src/af-constants.h:83
 msgid "Filemanager"
 msgstr "Dateimanager"
 
-#: src/af-constants.h:81
+#: src/af-constants.h:84
 msgid "Utility"
 msgstr "Werkzeuge"
