@@ -562,10 +562,14 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 	GdkPixbuf     *icon = NULL;
 	GPatternSpec  *ptrn = NULL;
 	GDir *dir = NULL;
+	gboolean found = FALSE;
 	gchar *filename;
+	gchar *comment;
 	gchar *name;
 	gchar *img;
 	gchar *dcategories;
+	gchar **cats = NULL;
+	gint x = 0;
 	gint i = 0;
 
 	if (pattern != NULL)
@@ -631,12 +635,11 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 					}
 
 					/* if selected categories is not All filter the results */
-					if (category!=APPFINDER_ALL)
+					if (category != APPFINDER_ALL &&
+							xfce_desktop_entry_get_string (dentry, "Categories", FALSE, &dcategories))
 					{
-						if (xfce_desktop_entry_get_string (dentry, "Categories", FALSE, &dcategories))
-						{
-							gchar **cats = NULL;
-							int x=0;
+							found = FALSE;
+							x = 0;
 
 							if (dcategories)
 							{
@@ -650,62 +653,87 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 								{
 									if (g_ascii_strcasecmp(cats[x], categories[category])==0)
 									{
-										g_strfreev (cats);
-										goto ok;
+										found = TRUE;
+										break;
 									}
 									x++;
 								}
+
 								g_strfreev (cats);
+
+								if (!found)
+								{
+									if (dentry)
+										g_object_unref (dentry);
+
+									if (filename)
+										g_free(filename);
+
+									continue;
+								}
 							}
-						}
-						goto out;
 					}
 
-					ok:
-						if (!xfce_desktop_entry_get_string (dentry, "Name", FALSE, &name))
-							goto out;
-
-						if (pattern!=NULL) {
-							gchar *comment;
-							if (!xfce_desktop_entry_get_string (dentry, "Comment", FALSE, &comment))
-								comment = "";
-								if (!(g_pattern_match_string (ptrn, g_utf8_strdown(name, -1))
-								||g_pattern_match_string (ptrn, g_utf8_strdown(comment, -1))))
-							{
-								if (name)
-									g_free(name);
-								if (comment)
-									g_free(comment);
-								goto out;
-							}
-							if (comment)
-								g_free(comment);
-						}
-
-						if (xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &img) && img)
-						{
-							icon = load_icon_entry(img);
-							g_free(img);
-						}
-						else
-						{
-							icon = NULL;
-						}
-
-						gtk_list_store_append(store, &iter);
-						gtk_list_store_set(store, &iter,
-							APP_ICON, icon,
-							APP_TEXT, name,
-							-1);
+					if (!xfce_desktop_entry_get_string (dentry, "Name", FALSE, &name))
+					{
+						if (dentry)
+							g_object_unref (dentry);
 
 						if (name)
 							g_free(name);
-						if (icon)
-							g_object_unref (icon);
 
-					out:
-						if (dentry)
-							g_object_unref (dentry);
+						if (filename)
+							g_free(filename);
+
+						continue;
+					}
+
+					if (pattern != NULL)
+					{
+						if (!xfce_desktop_entry_get_string (dentry, "Comment", FALSE, &comment))
+							comment = "";
+
+						if (!(g_pattern_match_string (ptrn, g_utf8_strdown(name, -1)) ||
+								g_pattern_match_string (ptrn, g_utf8_strdown(comment, -1))))
+						{
+							if (name)
+								g_free(name);
+							if (comment)
+								g_free(comment);
+							if (filename)
+								g_free(filename);
+							if (dentry)
+								g_object_unref (dentry);
+							continue;
+						}
+						if (comment)
+							g_free(comment);
+					}
+
+					if (xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &img) && img)
+					{
+						icon = load_icon_entry(img);
+						g_free(img);
+					}
+					else
+					{
+						icon = NULL;
+					}
+
+					gtk_list_store_append(store, &iter);
+					gtk_list_store_set(store, &iter,
+						APP_ICON, icon,
+						APP_TEXT, name,
+						-1);
+
+					if (name)
+						g_free(name);
+
+					if (icon)
+						g_object_unref (icon);
+
+					if (dentry)
+						g_object_unref (dentry);
 
 					if (filename)
 						g_free(filename);
