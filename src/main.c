@@ -339,22 +339,25 @@ cb_categoriestree (GtkTreeSelection *selection,
 	int next = showedcat;
 	int i = 0;
 	GtkTreeIter iter;
+	gchar *name = NULL;
 	t_appfinder *af = userdata;
 
-    if (gtk_tree_model_get_iter(model, &iter, path))
+    if (!path_currently_selected && gtk_tree_model_get_iter(model, &iter, path))
     {
-      gchar *name;
-      gtk_tree_model_get(model, &iter, CAT_TEXT, &name, -1);
-      if (!path_currently_selected)
-      {
-	while (categories[i])
-	{
-		if (strcmp(categories[i], name)==0)
-			next=i;
-		i++;
-	}
-      }
-      g_free(name);
+		gtk_tree_model_get(model, &iter, CAT_TEXT, &name, -1);
+		if (name)
+		{
+			while (categories[i])
+			{
+				if (strcmp(categories[i], name)==0)
+				{
+					next=i;
+					break;
+				}
+				i++;
+			}
+			g_free(name);
+		}
     }
 	if (next == showedcat)
 		return TRUE;
