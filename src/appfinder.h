@@ -31,6 +31,24 @@ typedef struct {
 	GtkWidget *appscroll;
 } t_appfinder;
 
+typedef struct _afdialog AfDialog;
+struct _afdialog {
+	GtkWidget *dialog;
+	GtkWidget *frame;
+	GtkWidget *vbox;
+	GtkWidget *vboxl;
+	GtkWidget *header;
+	GtkWidget *hbox;
+	GtkWidget *img;
+	GtkWidget *name;
+	GtkWidget *comment;
+	GtkWidget *cats;
+	GtkWidget *exec;
+	GtkWidget *bbox;
+	GtkWidget *btnClose;
+	GtkWidget *separator;
+};
+
 int showedcat;
 const char *configfile;
 
@@ -60,6 +78,8 @@ gboolean
 cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer treeview);
 
 void cb_menurun (GtkMenuItem *menuitem, gpointer data);
+
+void cb_menuinfo (GtkMenuItem *menuitem, gpointer data);
 
 GtkListStore *
 create_categories_liststore (void);
