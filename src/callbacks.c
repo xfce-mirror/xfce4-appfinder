@@ -233,7 +233,7 @@ void cb_menuinfo (GtkMenuItem *menuitem, gpointer data)
         gtk_widget_show(dlg->frame);
         gtk_box_pack_start (GTK_BOX (dlg->hbox), dlg->frame, FALSE, TRUE, 10);
 
-        xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &iconpath);
+        xfce_desktop_entry_get_string (dentry, "Icon", TRUE, &iconpath);
         
         if (iconpath)
         {
@@ -263,7 +263,7 @@ void cb_menuinfo (GtkMenuItem *menuitem, gpointer data)
         gtk_widget_show(dlg->name);
         gtk_box_pack_start (GTK_BOX (dlg->vboxl), dlg->name, FALSE, FALSE, 0);
 
-        xfce_desktop_entry_get_string (dentry, _("Comment"), FALSE, &comment);
+        xfce_desktop_entry_get_string (dentry, _("Comment"), TRUE, &comment);
         if (!comment)
         {
             comment = _("N/A");
@@ -277,7 +277,7 @@ void cb_menuinfo (GtkMenuItem *menuitem, gpointer data)
         gtk_widget_show(dlg->comment);
         gtk_box_pack_start (GTK_BOX (dlg->vboxl), dlg->comment, FALSE, FALSE, 0);
 
-        xfce_desktop_entry_get_string (dentry, "Categories", FALSE, &cats);
+        xfce_desktop_entry_get_string (dentry, "Categories", TRUE, &cats);
         if (!cats)
         {
             cats = _("N/A");
@@ -297,7 +297,7 @@ void cb_menuinfo (GtkMenuItem *menuitem, gpointer data)
         gtk_widget_show(dlg->cats);
         gtk_box_pack_start (GTK_BOX (dlg->vboxl), dlg->cats, FALSE, FALSE, 0);
 
-        xfce_desktop_entry_get_string (dentry, "Exec", FALSE, &exec);
+        xfce_desktop_entry_get_string (dentry, "Exec", TRUE, &exec);
         if (!exec)
         {
             exec = _("N/A");

@@ -1,85 +1,86 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# translation of ru.po to Russian
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Anthony Ivanoff <a-i@bk.ru>, 2005.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-12 10:05+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2005-01-02 10:57+0100\n"
+"PO-Revision-Date: 2005-01-08 11:05+0500\n"
+"Last-Translator: Anthony Ivanoff <a-i@bk.ru>\n"
+"Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10\n"
 
 #: src/main.c:99 src/main.c:105
 msgid "Now starting"
-msgstr ""
+msgstr "Запуск"
 
 #: src/main.c:113
 msgid "Cannot execute"
-msgstr ""
+msgstr "Ошибка запуска"
 
 #: src/main.c:149
 msgid "<b>Search:</b>"
-msgstr ""
+msgstr "<b>Найти:</b>"
 
 #: src/main.c:206
 msgid "Categories"
-msgstr ""
+msgstr "Категории"
 
 #: src/af-constants.h:54
 msgid "All"
-msgstr ""
+msgstr "Все"
 
 #: src/af-constants.h:55
 msgid "Recently Used"
-msgstr ""
+msgstr "Недавно использованные"
 
 #: src/af-constants.h:56
 msgid "Core"
-msgstr ""
+msgstr "Основные"
 
 #: src/af-constants.h:57
 msgid "Development"
-msgstr ""
+msgstr "Разработка"
 
 #: src/af-constants.h:58
 msgid "Office"
-msgstr ""
+msgstr "Офис"
 
 #: src/af-constants.h:59
 msgid "Graphics"
-msgstr ""
+msgstr "Графика"
 
 #: src/af-constants.h:60
 msgid "Network"
-msgstr ""
+msgstr "Сеть"
 
 #: src/af-constants.h:61
 msgid "AudioVideo"
-msgstr ""
+msgstr "Аудио/Видео"
 
 #: src/af-constants.h:62
 msgid "Game"
-msgstr ""
+msgstr "Игры"
 
 #: src/af-constants.h:63
 msgid "Education"
-msgstr ""
+msgstr "Образование"
 
 #: src/af-constants.h:64
 msgid "System"
-msgstr ""
+msgstr "Система"
 
 #: src/af-constants.h:65
 msgid "Filemanager"
-msgstr ""
+msgstr "Файловые менеджеры"
 
 #: src/af-constants.h:66
 msgid "Utility"
-msgstr ""
+msgstr "Утилиты"
+
