@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=XFce4 Appfinder
+Comment=XFce4 Appfinder 
+Exec=xfce4-appfinder
+Icon=xfce4-appfinder
+Terminal=false
+Type=Application
+Categories=Utility
