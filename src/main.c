@@ -3,6 +3,9 @@
 
 #include <libxfce4util/libxfce4util.h>
 
+#define APPFINDER_ALL 0
+#define APPFINDER_HISTORY 1
+
 enum
 {
   APP_ICON = 0,
@@ -166,7 +169,7 @@ cb_dragappstree (GtkWidget *widget, GdkDragContext *dc, GtkSelectionData *data,
 			gtk_tree_model_get(model, &iter, APP_TEXT, &name, -1);
 			if (name){
 				if ((path = get_path_from_name(name))!=NULL) {
-					gtk_selection_data_set (data, data->target, 8, path, strlen(path));
+					gtk_selection_data_set (data, gdk_atom_intern ("text/plain", FALSE), 8, path, strlen(path));
 					g_free(path);
 				}
 				g_free(name);
@@ -413,21 +416,18 @@ t_appfinder *create_interface(void)
  **********/
 GtkListStore *create_categories_liststore(void)
 {
-  int i;
+  int i = 0;
   GtkListStore  *store;
   GtkTreeIter    iter;
 
   store = gtk_list_store_new(CAT_COLS, G_TYPE_STRING);
 
-	i=0;
-	while(categories[i])
-	{
-		gtk_list_store_append(store, &iter);
-		gtk_list_store_set(store, &iter,
-                	CAT_TEXT, categories[i],
-                	-1);
-		i++;
-	}
+  while(categories[i])
+  {
+	gtk_list_store_append(store, &iter);
+	gtk_list_store_set(store, &iter, CAT_TEXT, categories[i], -1);
+	i++;
+  }
   return store;
 }
 
@@ -477,10 +477,12 @@ load_icon_entry (gchar *img)
 	GdkPixbuf *icon = NULL;
 	GError    *error = NULL;
 
-	if (!g_file_test(img, G_FILE_TEST_EXISTS)) {
+	if (!g_file_test(img, G_FILE_TEST_EXISTS))
+	{
 		/* ok, it's not a path. has it a .png suffix? */
 		/* if not let's add it and check for the icon */
 		if (g_str_has_suffix(img, ".png") || g_str_has_suffix(img, ".xpm"))
+		{
 			while(iconspaths[i])
 			{
 				imgPath = g_strdup_printf ("%s%s", iconspaths[i], img);
@@ -490,7 +492,9 @@ load_icon_entry (gchar *img)
 				imgPath = NULL;
 				i++;
 			}
+		}
 		else
+		{
 			while(iconspaths[i])
 			{
 				imgPath = g_strdup_printf ("%s%s.png", iconspaths[i], img);
@@ -505,12 +509,15 @@ load_icon_entry (gchar *img)
 				i++;
 			}
 		}
+	}
 	else
+	{
 		imgPath = g_strdup(img);
+	}
 
 	if (imgPath==NULL)
 		return NULL;
-	
+
 	icon = gdk_pixbuf_new_from_file(imgPath, &error);
 	g_free(imgPath);
 
@@ -558,7 +565,7 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 	}
 
 	store = gtk_list_store_new(APP_COLS, GDK_TYPE_PIXBUF, G_TYPE_STRING);
-	if (category==1) {
+	if (category==APPFINDER_HISTORY) {
 		/* We load data from appfinder' rc file */
 		gchar **history = parseHistory();
 		if (history!=NULL) {
@@ -608,7 +615,7 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 					xfce_desktop_entry_parse (dentry);
 
 					/* if selected categories is not All filter the results */
-					if (category!=0)
+					if (category!=APPFINDER_ALL)
 					{
 						if (xfce_desktop_entry_get_string (dentry, "Categories", FALSE, &dcategories))
 						{
