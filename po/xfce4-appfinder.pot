@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2003-12-27 14:25+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-08-24 21:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,98 +16,70 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Sorry, no match for searched text."
-msgstr ""
-
-msgid "No items available"
-msgstr ""
-
-msgid "Appfinder InfoBox"
-msgstr ""
-
-msgid "Informations about \""
-msgstr ""
-
-msgid "Icon"
-msgstr ""
-
-msgid "<b>Name:</b> "
-msgstr ""
-
-msgid "Comment"
-msgstr ""
-
-msgid "N/A"
-msgstr ""
-
-msgid "<b>Comment:</b> "
-msgstr ""
-
-msgid "<b>Categories:</b> "
-msgstr ""
-
-msgid "<b>Command:</b> "
-msgstr ""
-
-msgid "Run program"
-msgstr ""
-
-msgid "Informations..."
-msgstr ""
-
-msgid "Add to panel"
-msgstr ""
-
-msgid "Add to desktop menu"
-msgstr ""
-
-msgid "<b>Search:</b>"
-msgstr ""
-
-msgid "Categories"
-msgstr ""
-
+#: src/main.c:97 src/main.c:103
 msgid "Now starting"
 msgstr ""
 
+#: src/main.c:110
 msgid "Cannot execute"
 msgstr ""
 
+#: src/main.c:146
+msgid "<b>Search:</b>"
+msgstr ""
+
+#: src/main.c:203
+msgid "Categories"
+msgstr ""
+
+#: src/af-constants.h:69
 msgid "All"
 msgstr ""
 
+#: src/af-constants.h:70
 msgid "Recently Used"
 msgstr ""
 
+#: src/af-constants.h:71
 msgid "Core"
 msgstr ""
 
+#: src/af-constants.h:72
 msgid "Development"
 msgstr ""
 
+#: src/af-constants.h:73
 msgid "Office"
 msgstr ""
 
+#: src/af-constants.h:74
 msgid "Graphics"
 msgstr ""
 
+#: src/af-constants.h:75
 msgid "Network"
 msgstr ""
 
+#: src/af-constants.h:76
 msgid "AudioVideo"
 msgstr ""
 
+#: src/af-constants.h:77
 msgid "Game"
 msgstr ""
 
+#: src/af-constants.h:78
 msgid "Education"
 msgstr ""
 
+#: src/af-constants.h:79
 msgid "System"
 msgstr ""
 
+#: src/af-constants.h:80
 msgid "Filemanager"
 msgstr ""
 
+#: src/af-constants.h:81
 msgid "Utility"
 msgstr ""

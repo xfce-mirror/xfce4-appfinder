@@ -1,6 +1,6 @@
 @SET_MAKE@
 
-EXTRA_DIST = xfce4-appfinder.spec TODO ChangeLog.old
+EXTRA_DIST = xfce4-appfinder.spec TODO ChangeLog 
 
 SUBDIRS =						\
 	po						\

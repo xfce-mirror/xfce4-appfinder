@@ -192,7 +192,7 @@ sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 sysconfdir = @sysconfdir@
 target_alias = @target_alias@
-EXTRA_DIST = xfce4-appfinder.spec TODO ChangeLog.old
+EXTRA_DIST = xfce4-appfinder.spec TODO ChangeLog 
 SUBDIRS = \
 	po						\
 	src
