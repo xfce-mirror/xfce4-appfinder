@@ -1,0 +1,87 @@
+# translation of el_GR.po to Ελληνικά
+# translation of xfce4-appfinder.po to Ελληνικά
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Stavros Giannouris <StavrosG2002@freemail.gr>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: el_GR\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-03-12 10:05+0100\n"
+"PO-Revision-Date: 2005-03-21 20:50+0200\n"
+"Last-Translator: Stavros Giannouris <StavrosG2002@freemail.gr>\n"
+"Language-Team: Ελληνικά\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+
+#: src/main.c:99 src/main.c:105
+msgid "Now starting"
+msgstr "Ξεκινάει"
+
+#: src/main.c:113
+msgid "Cannot execute"
+msgstr "Αδυναμία εκτέλεσης"
+
+#: src/main.c:149
+msgid "<b>Search:</b>"
+msgstr "<b>Εύρεση:</b>"
+
+#: src/main.c:206
+msgid "Categories"
+msgstr "Κατηγορίες"
+
+#: src/af-constants.h:54
+msgid "All"
+msgstr "Όλα"
+
+#: src/af-constants.h:55
+msgid "Recently Used"
+msgstr "Πρόσφατα Χρησιμοποιημένα"
+
+#: src/af-constants.h:56
+msgid "Core"
+msgstr "Πυρήνας"
+
+#: src/af-constants.h:57
+msgid "Development"
+msgstr "Ανάπτυξη"
+
+#: src/af-constants.h:58
+msgid "Office"
+msgstr "Γραφείο"
+
+#: src/af-constants.h:59
+msgid "Graphics"
+msgstr "Γραφικά"
+
+#: src/af-constants.h:60
+msgid "Network"
+msgstr "Δίκτυο"
+
+#: src/af-constants.h:61
+msgid "AudioVideo"
+msgstr "ΕικόναΉχος"
+
+#: src/af-constants.h:62
+msgid "Game"
+msgstr "Παιχνίδι"
+
+#: src/af-constants.h:63
+msgid "Education"
+msgstr "Εκπαίδευση"
+
+#: src/af-constants.h:64
+msgid "System"
+msgstr "Σύστημα"
+
+#: src/af-constants.h:65
+msgid "Filemanager"
+msgstr "Διαχειριστής αρχείων"
+
+#: src/af-constants.h:66
+msgid "Utility"
+msgstr "Βοηθητικά"
+
