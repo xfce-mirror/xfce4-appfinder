@@ -1,3 +1,38 @@
+2005-03-04 18:32  pollux
+
+	* configure.ac, po/pl.po: add PL translations
+
+2005-02-21 09:39  pollux
+
+	* configure.ac, po/ja.po: update JA translations
+
+2005-01-22 13:22  pollux
+
+	* po/: fi.gmo, fi.po: update FI translations
+
+2005-01-19 21:50  eduard
+
+	* src/: callbacks.c, main.c: fix bug 709
+
+2005-01-08 16:04  pollux
+
+	* configure, configure.ac, po/ru.gmo, po/ru.po,
+	  src/xfce4-appfinder.desktop: update RU translations
+
+2005-01-06 20:24  pollux
+
+	* configure, configure.ac, ltmain.sh, po/uk.gmo, po/uk.po: update
+	  UK translations
+
+2005-01-05 17:01  pollux
+
+	* po/: he.gmo, he.po: update HE translations
+
+2005-01-02 13:51  olivier
+
+	* ChangeLog, Makefile.in, configure, configure.ac, ltmain.sh,
+	  po/xfce4-appfinder.pot: Update version and changelog
+
 2004-12-25 21:33  kelnos
 
 	* Makefile.am: fix distcheck-bz2

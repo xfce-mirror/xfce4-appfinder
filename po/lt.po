@@ -1,17 +1,17 @@
-# Lithuanian translation of PACKAGE.
-# Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# Mantas <mantaz@gmail.com>, 2004.
-# , fuzzy
+# Lithuanian translation of XFCE4-Appfinder.
+# Copyright (C) 2004 THE XFCE4-Appfinder'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the XFCE4-Appfinder package.
+# Mantas <mantaz@gmail.com>, 2004 - 2005,
+# Rimas Kudelis <rq@akl.lt>, 2005.
 # 
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: XFCE4-Appfinder 4.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-10-11 18:28+0200\n"
-"PO-Revision-Date: 2004-10-29 22:32+0300\n"
-"Last-Translator: Mantas <mantaz@gmail.com>\n"
+"PO-Revision-Date: 2005-01-18 00:44+0200\n"
+"Last-Translator: Rimas Kudelis <rq@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: src/main.c:98 src/main.c:104
 msgid "Now starting"
-msgstr "Dabar paleidžiama"
+msgstr "Dabar vykdoma"
 
 #: src/main.c:112
 msgid "Cannot execute"
-msgstr "Neįmnoma įvykdyti"
+msgstr "Nepavyko įvykdyti"
 
 #: src/main.c:148
 msgid "<b>Search:</b>"
@@ -35,11 +35,11 @@ msgstr "Kategorijos"
 
 #: src/af-constants.h:72
 msgid "All"
-msgstr "Visi"
+msgstr "Visos"
 
 #: src/af-constants.h:73
 msgid "Recently Used"
-msgstr "Nesenai Naudotos"
+msgstr "Neseniai naudotos"
 
 #: src/af-constants.h:74
 msgid "Core"
@@ -47,11 +47,11 @@ msgstr "Pagrindinės"
 
 #: src/af-constants.h:75
 msgid "Development"
-msgstr "Kūrimas"
+msgstr "Programavimo įrankiai"
 
 #: src/af-constants.h:76
 msgid "Office"
-msgstr "Biuro Programos"
+msgstr "Biuro programos"
 
 #: src/af-constants.h:77
 msgid "Graphics"
@@ -63,7 +63,7 @@ msgstr "Tinklas"
 
 #: src/af-constants.h:79
 msgid "AudioVideo"
-msgstr "Audio Video"
+msgstr "Multimedija"
 
 #: src/af-constants.h:80
 msgid "Game"
@@ -75,13 +75,13 @@ msgstr "Mokomosios"
 
 #: src/af-constants.h:82
 msgid "System"
-msgstr "Sistemos"
+msgstr "Sisteminės"
 
 #: src/af-constants.h:83
 msgid "Filemanager"
-msgstr "Bylų Tvarkyklės"
+msgstr "Bylų tvarkyklės"
 
 #: src/af-constants.h:84
 msgid "Utility"
-msgstr "Pagalbinės"
+msgstr "Pagalbiniai įrankiai"
 

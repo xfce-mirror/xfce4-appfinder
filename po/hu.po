@@ -1,17 +1,16 @@
-# translation of Xfce4 appfinder to Finnish
-# This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
-#
-# Juha Kautto <kautto.juha@kolumbus.fi>, 2004.
+# This is the hungarian translation of xfce4-appfinder package.
+# Copyright (C) 2004 xfce4-appfinder'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Servitore <sas@321 uh:))>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Xfce4-appfinder\n"
+"Project-Id-Version: hu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-01-02 10:57+0100\n"
-"PO-Revision-Date: 2005-01-22 17:58+0200\n"
-"Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2005-01-09 15:43+0100\n"
+"Last-Translator: SZERVÑC Attila <sas@321.hu>\n"
+"Language-Team: hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,69 +18,69 @@ msgstr ""
 #: src/main.c:99
 #: src/main.c:105
 msgid "Now starting"
-msgstr "Käynnistetään"
+msgstr "Most indul"
 
 #: src/main.c:113
 msgid "Cannot execute"
-msgstr "Ei voi suorittaa"
+msgstr "Nem futtatható"
 
 #: src/main.c:149
 msgid "<b>Search:</b>"
-msgstr "<b>Etsi:</b>"
+msgstr "<b>Keresés:</b>"
 
 #: src/main.c:206
 msgid "Categories"
-msgstr "Ryhmät"
+msgstr "Kategóriák"
 
 #: src/af-constants.h:54
 msgid "All"
-msgstr "Kaikki"
+msgstr "Minden"
 
 #: src/af-constants.h:55
 msgid "Recently Used"
-msgstr "Viimeksi käytetyt"
+msgstr "Most használt"
 
 #: src/af-constants.h:56
 msgid "Core"
-msgstr "Perusohjelmat"
+msgstr "Alap"
 
 #: src/af-constants.h:57
 msgid "Development"
-msgstr "Ohjelmakehitys"
+msgstr "Fejlesztés"
 
 #: src/af-constants.h:58
 msgid "Office"
-msgstr "Toimisto"
+msgstr "Iroda"
 
 #: src/af-constants.h:59
 msgid "Graphics"
-msgstr "Kuvankäsittely"
+msgstr "Grafika"
 
 #: src/af-constants.h:60
 msgid "Network"
-msgstr "Verkko"
+msgstr "Hálózat"
 
 #: src/af-constants.h:61
 msgid "AudioVideo"
-msgstr "Audio/Video"
+msgstr "Hang és Mozgókép"
 
 #: src/af-constants.h:62
 msgid "Game"
-msgstr "Pelit"
+msgstr "Játék"
 
 #: src/af-constants.h:63
 msgid "Education"
-msgstr "Koulutus"
+msgstr "Oktatás"
 
 #: src/af-constants.h:64
 msgid "System"
-msgstr "Järjestelmä"
+msgstr "Rendszer"
 
 #: src/af-constants.h:65
 msgid "Filemanager"
-msgstr "Tiedostonhallinta"
+msgstr "Fájlkezelő"
 
 #: src/af-constants.h:66
 msgid "Utility"
-msgstr "Apuohjelmat"
+msgstr "Eszközök"
 

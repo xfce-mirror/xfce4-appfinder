@@ -1817,7 +1817,7 @@ fi
 
 # Define the identity of the package.
  PACKAGE=xfce4-appfinder
- VERSION=4.2.0
+ VERSION=4.2.1
 
 
 cat >>confdefs.h <<_ACEOF
@@ -20573,8 +20573,9 @@ cat >>confdefs.h <<\_ACEOF
 _ACEOF
 
 
-  ALL_LINGUAS="be cs de en_GB es es_MX et eu fa fi gu he it ko
-			    lt nl pa pt_BR pt_PT ro tr zh_CN"
+  ALL_LINGUAS="be cs da de en_GB es es_MX et eu fa fi gu
+                            he hu it ja ko lt nl pa pt_BR pt_PT ro ru
+			    sk tr uk zh_CN"
 
 
 
