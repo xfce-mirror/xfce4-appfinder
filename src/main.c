@@ -310,7 +310,7 @@ void cb_menuinfo (GtkMenuItem *menuitem, gpointer data)
 		if (iconpath)
 		{
 			icon = xfce_themed_icon_load(iconpath, 48);
-			if (!icon)
+			if (!icon) {
 				icon = xfce_inline_icon_at_size (default_icon_data_48_48, 48, 48);
 				icon2 = gdk_pixbuf_copy (icon);
 				gdk_pixbuf_saturate_and_pixelate(icon, icon2, 0.0, TRUE);
@@ -944,8 +944,10 @@ gint
 main (gint argc, gchar **argv)
 {
 	t_appfinder *appfinder;
+	
+	xfce_textdomain(GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 	gtk_init(&argc, &argv);
-  build_paths ();
+  	build_paths ();
 	configfile = g_strconcat (xfce_get_userdir(), "/afhistory", NULL);
 	appfinder = create_interface();
 	gtk_main();
