@@ -1,0 +1,86 @@
+# translation of xfce4-appfinder.po to Slovak
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Juraj Brosz <juro@jurajbrosz.info>, 2004, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-01-02 10:57+0100\n"
+"PO-Revision-Date: 2005-02-08 20:52+0100\n"
+"Last-Translator: Juraj Brosz <juro@jurajbrosz.info>\n"
+"Language-Team: Slovak <sk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+
+#: src/main.c:99 src/main.c:105
+msgid "Now starting"
+msgstr "Práve spúšťam"
+
+#: src/main.c:113
+msgid "Cannot execute"
+msgstr "Nie je možné vykonať"
+
+#: src/main.c:149
+msgid "<b>Search:</b>"
+msgstr "<b>Hľadať:</b>"
+
+#: src/main.c:206
+msgid "Categories"
+msgstr "Kategórie"
+
+#: src/af-constants.h:54
+msgid "All"
+msgstr "Všetky"
+
+#: src/af-constants.h:55
+msgid "Recently Used"
+msgstr "Nedávno použité"
+
+#: src/af-constants.h:56
+msgid "Core"
+msgstr "Hlavné"
+
+#: src/af-constants.h:57
+msgid "Development"
+msgstr "Vývojové nástroje"
+
+#: src/af-constants.h:58
+msgid "Office"
+msgstr "Kancelária"
+
+#: src/af-constants.h:59
+msgid "Graphics"
+msgstr "Grafika"
+
+#: src/af-constants.h:60
+msgid "Network"
+msgstr "Sieť"
+
+#: src/af-constants.h:61
+msgid "AudioVideo"
+msgstr "Audio a video"
+
+#: src/af-constants.h:62
+msgid "Game"
+msgstr "Hry"
+
+#: src/af-constants.h:63
+msgid "Education"
+msgstr "Vzdelanie"
+
+#: src/af-constants.h:64
+msgid "System"
+msgstr "Systém"
+
+#: src/af-constants.h:65
+msgid "Filemanager"
+msgstr "Správca súborov"
+
+#: src/af-constants.h:66
+msgid "Utility"
+msgstr "Nástroje"
+
