@@ -1,0 +1,84 @@
+# Xfce4-appfinder German translation
+# Copyright (C) 2004 Eduard Roccatello
+# This file is distributed under the same license as the Xfce4-appfinder package.
+# Moritz Heiber <moe@xfce.org>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-08-24 21:51+0200\n"
+"PO-Revision-Date: 2004-09-18 15:14+0100\n"
+"Last-Translator: Moritz Heiber <moe@xfce.org>\n"
+"Language-Team: none <none@none>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main.c:97 src/main.c:103
+msgid "Now starting"
+msgstr "Starte jetzt"
+
+#: src/main.c:110
+msgid "Cannot execute"
+msgstr "Nicht ausführbar"
+
+#: src/main.c:146
+msgid "<b>Search:</b>"
+msgstr "<b>Suche:</b>"
+
+#: src/main.c:203
+msgid "Categories"
+msgstr "Kategorien"
+
+#: src/af-constants.h:69
+msgid "All"
+msgstr "Alle"
+
+#: src/af-constants.h:70
+msgid "Recently Used"
+msgstr "Zuletzt genutzt"
+
+#: src/af-constants.h:71
+msgid "Core"
+msgstr "Kern"
+
+#: src/af-constants.h:72
+msgid "Development"
+msgstr "Entwicklung"
+
+#: src/af-constants.h:73
+msgid "Office"
+msgstr "Büro"
+
+#: src/af-constants.h:74
+msgid "Graphics"
+msgstr "Grafik"
+
+#: src/af-constants.h:75
+msgid "Network"
+msgstr "Netzwerk"
+
+#: src/af-constants.h:76
+msgid "AudioVideo"
+msgstr "Audio/Video"
+
+#: src/af-constants.h:77
+msgid "Game"
+msgstr "Spiele"
+
+#: src/af-constants.h:78
+msgid "Education"
+msgstr "Ausbildung"
+
+#: src/af-constants.h:79
+msgid "System"
+msgstr "System"
+
+#: src/af-constants.h:80
+msgid "Filemanager"
+msgstr "Dateimanager"
+
+#: src/af-constants.h:81
+msgid "Utility"
+msgstr "Werkzeuge"
