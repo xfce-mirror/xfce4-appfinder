@@ -20546,7 +20546,7 @@ cat >>confdefs.h <<\_ACEOF
 _ACEOF
 
 
-  ALL_LINGUAS="be de eu fa gu it nl pa pt_PT zh_CN es es_MX"
+  ALL_LINGUAS="be de eu fa fi gu it nl pa pt_PT zh_CN es es_MX"
 
 
 

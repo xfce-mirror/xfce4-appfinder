@@ -1,0 +1,85 @@
+# translation of Xfce4 appfinder to Finnish
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+#
+# Juha Kautto <kautto.juha@kolumbus.fi>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-09-20 08:23+0200\n"
+"PO-Revision-Date: 2004-10-14 15:14+0100\n"
+"Last-Translator: Juha Kautto <kautto.juha@kolumbus.fi>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main.c:98 src/main.c:104
+msgid "Now starting"
+msgstr "Käynnistän"
+
+#: src/main.c:112
+msgid "Cannot execute"
+msgstr "Ei voi suorittaa"
+
+#: src/main.c:148
+msgid "<b>Search:</b>"
+msgstr "<b>Etsi:</b>"
+
+#: src/main.c:205
+msgid "Categories"
+msgstr "Ryhmät"
+
+#: src/af-constants.h:69
+msgid "All"
+msgstr "Kaikki"
+
+#: src/af-constants.h:70
+msgid "Recently Used"
+msgstr "Viimeksi käytetyt"
+
+#: src/af-constants.h:71
+msgid "Core"
+msgstr "Perus"
+
+#: src/af-constants.h:72
+msgid "Development"
+msgstr "Ohjelmakehitys"
+
+#: src/af-constants.h:73
+msgid "Office"
+msgstr "Toimisto"
+
+#: src/af-constants.h:74
+msgid "Graphics"
+msgstr "Kuvankäsittely"
+
+#: src/af-constants.h:75
+msgid "Network"
+msgstr "Verkko"
+
+#: src/af-constants.h:76
+msgid "AudioVideo"
+msgstr "Audio/Video"
+
+#: src/af-constants.h:77
+msgid "Game"
+msgstr "Pelit"
+
+#: src/af-constants.h:78
+msgid "Education"
+msgstr "Koulutus"
+
+#: src/af-constants.h:79
+msgid "System"
+msgstr "Järjestelmä"
+
+#: src/af-constants.h:80
+msgid "Filemanager"
+msgstr "Tiedostojen käsittely"
+
+#: src/af-constants.h:81
+msgid "Utility"
+msgstr "Yleistyökalut"
