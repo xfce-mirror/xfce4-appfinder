@@ -1,3 +1,17 @@
+2004-10-30 16:00  pollux
+
+	* configure, configure.ac, po/lt.gmo, po/lt.po: update LT
+	  translations
+
+2004-10-28 13:55  pollux
+
+	* configure, configure.ac, ltmain.sh, po/he.gmo, po/he.po,
+	  src/xfce4-appfinder.desktop: update HE translations
+
+2004-10-23 16:45  olivier
+
+	* ChangeLog: Update ChangeLog
+
 2004-10-22 22:38  olivier
 
 	* ChangeLog, configure, configure.ac, ltmain.sh: Updated versions
