@@ -24,7 +24,7 @@ cb_appstree (GtkTreeView        *treeview,
                        gpointer            userdata);
 void
 cb_searchentry (GtkEntry *entry,
-			gpointer userdata);
+            gpointer userdata);
 gboolean
 cb_categoriestree (GtkTreeSelection *selection,
                        GtkTreeModel     *model,
@@ -34,7 +34,7 @@ cb_categoriestree (GtkTreeSelection *selection,
 
 void
 cb_dragappstree (GtkWidget *widget, GdkDragContext *drag_context, GtkSelectionData *data,
-				guint info, guint time, gpointer user_data);
+                guint info, guint time, gpointer user_data);
 
 gboolean
 cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer treeview);

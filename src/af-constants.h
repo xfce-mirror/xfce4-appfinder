@@ -25,69 +25,74 @@
 
 enum
 {
-  APP_ICON = 0,
-  APP_TEXT,
-  APP_COLS
+    APP_ICON = 0,
+    APP_TEXT,
+    APP_COLS
 };
 
 enum
 {
-  CAT_TEXT = 0,
-  CAT_COLS
+    CAT_TEXT = 0,
+    CAT_COLS
 };
 
 /* What to search for in .desktop files */
-static const char *keys [] = {
-	"Name",
-	"Comment",
-	"Icon",
-	"Categories",
-	"OnlyShowIn",
-	"Exec",
-	"Terminal",
-	NULL
+static const char *keys [] =
+{
+    "Name",
+    "Comment",
+    "Icon",
+    "Categories",
+    "OnlyShowIn",
+    "Exec",
+    "Terminal",
+    NULL
 };
 
-static const char *categories [] = {
-	"All",
-	"Recently Used",
-	"Core",
-	"Development",
-	"Office",
-	"Graphics",
-	"Network",
-	"AudioVideo",
-	"Game",
-	"Education",
-	"System",
-	"Filemanager",
-	"Utility",
-	NULL
+static const char *categories [] =
+{
+    "All",
+    "Recently Used",
+    "Core",
+    "Development",
+    "Office",
+    "Graphics",
+    "Network",
+    "AudioVideo",
+    "Game",
+    "Education",
+    "System",
+    "Filemanager",
+    "Utility",
+    NULL
 };
 
-static const char *i18ncategories [] = {
-	N_("All"),
-	N_("Recently Used"),
-	N_("Core"),
-	N_("Development"),
-	N_("Office"),
-	N_("Graphics"),
-	N_("Network"),
-	N_("AudioVideo"),
-	N_("Game"),
-	N_("Education"),
-	N_("System"),
-	N_("Filemanager"),
-	N_("Utility"),
-	NULL
+static const char *i18ncategories [] =
+{
+    N_("All"),
+    N_("Recently Used"),
+    N_("Core"),
+    N_("Development"),
+    N_("Office"),
+    N_("Graphics"),
+    N_("Network"),
+    N_("AudioVideo"),
+    N_("Game"),
+    N_("Education"),
+    N_("System"),
+    N_("Filemanager"),
+    N_("Utility"),
+    NULL
 };
 
 /* Places where i can drop things */
-static GtkTargetEntry gte[] = {{"DESKTOP_PATH_ENTRY", 0, 0},
-	{"text/plain", 0, 1},
-	{"application/x-desktop", 0, 2},
-	{"STRING", 0, 3},
-	{"UTF8_STRING", 0, 4}
+static GtkTargetEntry gte[] =
+{
+    {"DESKTOP_PATH_ENTRY", 0, 0},
+    {"text/plain", 0, 1},
+    {"application/x-desktop", 0, 2},
+    {"STRING", 0, 3},
+    {"UTF8_STRING", 0, 4}
 };
 
 #endif

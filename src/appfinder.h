@@ -23,36 +23,38 @@
 #define CONFIGFILE "afhistory"
 
 typedef struct _appfinder Appfinder;
-struct _appfinder {
-	GtkWidget *mainwindow;
-	GtkWidget *hpaned;
-	GtkWidget *rightvbox;
-
-	GtkWidget *searchbox;
-	GtkWidget *searchlabel;
-	GtkWidget *searchentry;
-
-	GtkWidget *categoriestree;
-	GtkWidget *appstree;
-	GtkWidget *appscroll;
+struct _appfinder
+{
+    GtkWidget *mainwindow;
+    GtkWidget *hpaned;
+    GtkWidget *rightvbox;
+    
+    GtkWidget *searchbox;
+    GtkWidget *searchlabel;
+    GtkWidget *searchentry;
+    
+    GtkWidget *categoriestree;
+    GtkWidget *appstree;
+    GtkWidget *appscroll;
 } _appfinder;
 
 typedef struct _afdialog AfDialog;
-struct _afdialog {
-	GtkWidget *dialog;
-	GtkWidget *frame;
-	GtkWidget *vbox;
-	GtkWidget *vboxl;
-	GtkWidget *header;
-	GtkWidget *hbox;
-	GtkWidget *img;
-	GtkWidget *name;
-	GtkWidget *comment;
-	GtkWidget *cats;
-	GtkWidget *exec;
-	GtkWidget *bbox;
-	GtkWidget *btnClose;
-	GtkWidget *separator;
+struct _afdialog
+{
+    GtkWidget *dialog;
+    GtkWidget *frame;
+    GtkWidget *vbox;
+    GtkWidget *vboxl;
+    GtkWidget *header;
+    GtkWidget *hbox;
+    GtkWidget *img;
+    GtkWidget *name;
+    GtkWidget *comment;
+    GtkWidget *cats;
+    GtkWidget *exec;
+    GtkWidget *bbox;
+    GtkWidget *btnClose;
+    GtkWidget *separator;
 };
 
 int showedcat;
