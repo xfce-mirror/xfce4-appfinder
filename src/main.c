@@ -309,7 +309,7 @@ void cb_menuinfo (GtkMenuItem *menuitem, gpointer data)
 		xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &iconpath);
 		if (iconpath)
 		{
-			icon = load_icon_entry (iconpath);
+			icon = xfce_themed_icon_load(iconpath, 48);
 			if (icon)
 				icon = gdk_pixbuf_scale_simple(icon, 48, 48, GDK_INTERP_BILINEAR);
 			else
@@ -577,76 +577,6 @@ GtkWidget *create_categories_treeview(void)
 	return view;
 }
 
-
-/*
- * Load an icon entry from a given path
- *
- * @param img - absolute or relative path to the icon
- * @returns GdkPixbuf * a pointer to the icon (must be freed) (NULL if not found)
- */
-GdkPixbuf *
-load_icon_entry (gchar *img)
-{
-	gint i = 0;
-	gchar *imgPath = NULL;
-	GdkPixbuf *icon = NULL;
-	GError    *error = NULL;
-
-	if (!g_file_test(img, G_FILE_TEST_EXISTS))
-	{
-		/* ok, it's not a path. has it a .png suffix? */
-		/* if not let's add it and check for the icon */
-		if (g_str_has_suffix(img, ".png") || g_str_has_suffix(img, ".xpm"))
-		{
-			while(iconspaths[i])
-			{
-				imgPath = g_strdup_printf ("%s%s", iconspaths[i], img);
-				if (g_file_test(imgPath, G_FILE_TEST_EXISTS))
-					break;
-				g_free(imgPath);
-				imgPath = NULL;
-				i++;
-			}
-		}
-		else
-		{
-			while(iconspaths[i])
-			{
-				imgPath = g_strdup_printf ("%s%s.png", iconspaths[i], img);
-				if (g_file_test(imgPath, G_FILE_TEST_EXISTS))
-					break;
-				g_free(imgPath);
-				imgPath = g_strdup_printf ("%s%s.xpm", iconspaths[i], img);
-				if (g_file_test(imgPath, G_FILE_TEST_EXISTS))
-					break;
-				g_free(imgPath);
-				imgPath = NULL;
-				i++;
-			}
-		}
-	}
-	else
-	{
-		imgPath = g_strdup(img);
-	}
-
-	if (imgPath==NULL)
-		return xfce_themed_icon_load (img, 32);
-
-	icon = gdk_pixbuf_new_from_file(imgPath, &error);
-	g_free(imgPath);
-
-	if (error)
-	{
-		g_warning("%s", error->message);
-		g_error_free(error);
-		error = NULL;
-		icon = NULL;
-	}
-
-	return icon;
-}
-
 /*
  * This function handles all the searches into desktop files
  *
@@ -683,9 +613,7 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 				{
 					if (xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &img) && img)
 					{
-							icon = load_icon_entry(img);
-							if (icon)
-								icon = gdk_pixbuf_scale_simple(icon, 24, 24, GDK_INTERP_BILINEAR);
+							icon = xfce_themed_icon_load(img, 24);
 							g_free(img);
 					}
 					else
@@ -728,8 +656,9 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 				while ((filename = (gchar *)g_dir_read_name(dir))!=NULL)
 				{
 					filename = g_strconcat (entriespaths[i], filename, NULL);
-					if (g_file_test(filename, G_FILE_TEST_IS_DIR) ||
-							!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7)) || !dentry)
+					if (!g_file_test(filename, G_FILE_TEST_EXISTS) || 
+						g_file_test(filename, G_FILE_TEST_IS_DIR) ||
+						!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7)) || !dentry)
 					{
 						if (filename) {
 							g_free(filename);
@@ -825,9 +754,7 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 
 					if (xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &img) && img)
 					{
-						icon = load_icon_entry(img);
-						if (icon)
-							icon = gdk_pixbuf_scale_simple(icon, 24, 24, GDK_INTERP_BILINEAR);
+						icon = xfce_themed_icon_load(img, 24);
 						g_free(img);
 					}
 					else
