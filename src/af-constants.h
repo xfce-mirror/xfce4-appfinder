@@ -46,7 +46,7 @@ const char *entriespaths [] = {
 	"/opt/gnome2/share/applications/",
 	NULL
 };
-#endif
+
 
 /* Some standard paths for icons */
 const char *iconspaths [] = {
@@ -63,6 +63,7 @@ const char *iconspaths [] = {
 	"/opt/kde/share/icons/default.kde/32x32/filesystems/",
 	NULL
 };
+#endif
 
 /* What to search for in .desktop files */
 const char *keys [] = {
@@ -90,6 +91,23 @@ const char *categories [] = {
 	"System",
 	"Filemanager",
 	"Utility",
+	NULL
+};
+
+const char *i18ncategories [] = {
+	_("All"),
+	_("Recently Used"),
+	_("Core"),
+	_("Development"),
+	_("Office"),
+	_("Graphics"),
+	_("Network"),
+	_("AudioVideo"),
+	_("Game"),
+	_("Education"),
+	_("System"),
+	_("Filemanager"),
+	_("Utility"),
 	NULL
 };
 

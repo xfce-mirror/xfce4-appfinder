@@ -2,7 +2,9 @@
 
 EXTRA_DIST = xfce4-appfinder.spec TODO ChangeLog.old
 
-SUBDIRS = src
+SUBDIRS =						\
+	po						\
+	src
 
 distclean-local:
 	-rm -rf *.cache *~

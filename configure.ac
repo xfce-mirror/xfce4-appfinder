@@ -3,7 +3,7 @@ dnl
 
 AC_INIT([src/main.c])
 
-AM_INIT_AUTOMAKE([xfce4-appfinder], [0.3.0])
+AM_INIT_AUTOMAKE([xfce4-appfinder], [0.4.0])
 
 AM_CONFIG_HEADER([config.h])
 
@@ -22,6 +22,9 @@ AC_PROG_LIBTOOL
 dnl check for standard header files
 AC_HEADER_STDC
 
+dnl Check for i18n support
+BM_I18N([xfce4-appfinder], [it])
+
 dnl Check for required packages
 BM_DEPEND([LIBXFCEGUI4], [libxfcegui4-1.0], [4.1.0])
 
@@ -31,6 +34,7 @@ BM_DEBUG_SUPPORT
 AC_OUTPUT([
 xfce4-appfinder.spec
 Makefile
+po/Makefile.in
 src/Makefile
 ])
 

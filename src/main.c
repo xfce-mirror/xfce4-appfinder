@@ -74,7 +74,7 @@ cb_searchentry (GtkEntry *entry,
 		gtk_list_store_append(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))), &iter);
 		gtk_list_store_set(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))),
 							&iter, APP_ICON, xfce_inline_icon_at_size (default_icon_data_48_48, 24, 24),
-							APP_TEXT, "Sorry, no match for searched text.", -1);
+							APP_TEXT, _("Sorry, no match for searched text."), -1);
 		gtk_widget_set_sensitive(af->appstree, FALSE);
 	}
 	else
@@ -175,20 +175,20 @@ void execute_from_name (gchar *name)
 			if (g_strrstr(exec, "%")!= NULL)
 			{
 				execp = g_strsplit(exec, "%", 0);
-				g_printf("Now starting \"%s\"...\n", execp[0]);
+				g_printf(g_strconcat(_("Now starting"), " \"", execp[0], "\"...\n", NULL));
 				exec_command(execp[0]);
 				g_strfreev (execp);
 			}
 			else
 			{
-				g_printf("Now starting \"%s\"...\n", exec);
+				g_printf(g_strconcat(_("Now starting"), " \"", exec, "\"...\n", NULL));
 				exec_command(exec);
 			}
 			g_free(exec);
 		}
 	}
 	else {
-		xfce_info("Cannot execute %s\n", name);
+		xfce_info(g_strconcat(_("Cannot execute"), " \"", name, "\"", NULL));
 	}
 	if (filepath)
 		g_free(filepath);
@@ -212,9 +212,9 @@ cb_categoriestree (GtkTreeSelection *selection,
 		gtk_tree_model_get(model, &iter, CAT_TEXT, &name, -1);
 		if (name)
 		{
-			while (categories[i])
+			while (i18ncategories[i])
 			{
-				if (strcmp(categories[i], name)==0)
+				if (strcmp(i18ncategories[i], name)==0)
 				{
 					next=i;
 					break;
@@ -237,7 +237,7 @@ cb_categoriestree (GtkTreeSelection *selection,
 		gtk_list_store_append(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))), &iter);
 		gtk_list_store_set(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))),
 							&iter, APP_ICON, xfce_inline_icon_at_size (default_icon_data_48_48, 24, 24),
-							APP_TEXT, "No items available", -1);
+							APP_TEXT, _("No items available"), -1);
 		gtk_widget_set_sensitive(af->appstree, FALSE);
 	}
 	else
@@ -302,7 +302,7 @@ void cb_menuinfo (GtkMenuItem *menuitem, gpointer data)
 		gtk_widget_show(dlg->vboxl);
 		gtk_box_pack_start (GTK_BOX (dlg->hbox), dlg->vboxl, TRUE, TRUE, 10);
 
-		dlg->frame = gtk_aspect_frame_new ("Icon", 0.5, 0.5, 1.8, TRUE);
+		dlg->frame = gtk_aspect_frame_new (_("Icon"), 0.5, 0.5, 1.8, TRUE);
 		gtk_widget_show(dlg->frame);
 		gtk_box_pack_start (GTK_BOX (dlg->hbox), dlg->frame, FALSE, TRUE, 10);
 
@@ -327,17 +327,17 @@ void cb_menuinfo (GtkMenuItem *menuitem, gpointer data)
 		gtk_container_add (GTK_CONTAINER (dlg->frame), dlg->img);
 
 		dlg->name = gtk_label_new(NULL);
-		gtk_label_set_markup (GTK_LABEL(dlg->name), g_strconcat("<b>Name:</b> ", name, NULL));
+		gtk_label_set_markup (GTK_LABEL(dlg->name), g_strconcat(_("<b>Name:</b> "), name, NULL));
 		gtk_misc_set_alignment (GTK_MISC(dlg->name), 0, 0);
 		gtk_widget_show(dlg->name);
 		gtk_box_pack_start (GTK_BOX (dlg->vboxl), dlg->name, FALSE, FALSE, 0);
 
-		xfce_desktop_entry_get_string (dentry, "Comment", FALSE, &comment);
+		xfce_desktop_entry_get_string (dentry, _("Comment"), FALSE, &comment);
 		if (!comment)
-			comment = "N/A";
+			comment = _("N/A");
 		dlg->comment = gtk_label_new(NULL);
 		gtk_label_set_line_wrap (GTK_LABEL(dlg->comment), TRUE);
-		gtk_label_set_markup (GTK_LABEL(dlg->comment), g_strconcat("<b>Comment:</b> ", comment, NULL));
+		gtk_label_set_markup (GTK_LABEL(dlg->comment), g_strconcat(_("<b>Comment:</b> "), comment, NULL));
 		g_free(comment);
 		gtk_misc_set_alignment (GTK_MISC(dlg->comment), 0, 0);
 		gtk_widget_show(dlg->comment);
@@ -345,7 +345,7 @@ void cb_menuinfo (GtkMenuItem *menuitem, gpointer data)
 
 		xfce_desktop_entry_get_string (dentry, "Categories", FALSE, &cats);
 		if (!cats)
-			cats = "N/A";
+			cats = _("N/A");
 		else
 		{
 			catsarray = g_strsplit (cats, ";", 0);
@@ -355,7 +355,7 @@ void cb_menuinfo (GtkMenuItem *menuitem, gpointer data)
 		}
 
 		dlg->cats = gtk_label_new(NULL);
-		gtk_label_set_markup (GTK_LABEL(dlg->cats), g_strconcat("<b>Categories:</b> ", cats, NULL));
+		gtk_label_set_markup (GTK_LABEL(dlg->cats), g_strconcat(_("<b>Categories:</b> "), cats, NULL));
 		g_free(cats);
 		gtk_misc_set_alignment (GTK_MISC(dlg->cats), 0, 0);
 		gtk_widget_show(dlg->cats);
@@ -363,9 +363,9 @@ void cb_menuinfo (GtkMenuItem *menuitem, gpointer data)
 
 		xfce_desktop_entry_get_string (dentry, "Exec", FALSE, &exec);
 		if (!exec)
-			exec = "N/A";
+			exec = _("N/A");
 		dlg->exec = gtk_label_new(NULL);
-		gtk_label_set_markup (GTK_LABEL(dlg->exec), g_strconcat("<b>Command:</b> ", exec, NULL));
+		gtk_label_set_markup (GTK_LABEL(dlg->exec), g_strconcat(_("<b>Command:</b> "), exec, NULL));
 		gtk_misc_set_alignment (GTK_MISC(dlg->exec), 0, 0);
 		g_free(exec);
 		gtk_widget_show(dlg->exec);
@@ -421,7 +421,7 @@ cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer treeview)
 			gtk_widget_show (menuitem);
 			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 
-			menuitem = gtk_image_menu_item_new_with_label ("Run program");
+			menuitem = gtk_image_menu_item_new_with_label (_("Run program"));
 			icon = gtk_image_new_from_stock (GTK_STOCK_EXECUTE, GTK_ICON_SIZE_MENU);
 			gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM(menuitem), icon);
 			g_signal_connect (G_OBJECT(menuitem), "activate", G_CALLBACK(cb_menurun), (gpointer)name);
@@ -429,7 +429,7 @@ cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer treeview)
 			gtk_widget_show (menuitem);
 			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 
-			menuitem = gtk_image_menu_item_new_with_label ("Informations...");
+			menuitem = gtk_image_menu_item_new_with_label (_("Informations..."));
 			icon = gtk_image_new_from_stock (GTK_STOCK_DIALOG_INFO, GTK_ICON_SIZE_MENU);
 			gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM(menuitem), icon);
 			g_signal_connect (G_OBJECT(menuitem), "activate", G_CALLBACK(cb_menuinfo), (gpointer)name);
@@ -441,7 +441,7 @@ cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer treeview)
 			gtk_widget_show (menuitem);
 			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 
-			menuitem = gtk_image_menu_item_new_with_label ("Add to panel");
+			menuitem = gtk_image_menu_item_new_with_label (_("Add to panel"));
 			icon = gtk_image_new_from_stock (GTK_STOCK_CONVERT, GTK_ICON_SIZE_MENU);
 			gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM(menuitem), icon);
 			gtk_widget_show (icon);
@@ -449,7 +449,7 @@ cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer treeview)
 			gtk_widget_set_sensitive (menuitem, FALSE);
 			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 
-			menuitem = gtk_image_menu_item_new_with_label ("Add to desktop menu");
+			menuitem = gtk_image_menu_item_new_with_label (_("Add to desktop menu"));
 			icon = gtk_image_new_from_stock (GTK_STOCK_INDEX, GTK_ICON_SIZE_MENU);
 			gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM(menuitem), icon);
 			gtk_widget_show (icon);
@@ -495,7 +495,7 @@ t_appfinder *create_interface(void)
 
 	af->searchlabel = GTK_WIDGET(gtk_label_new(NULL));
 	gtk_misc_set_alignment(GTK_MISC(af->searchlabel), 0.0, 0.5);
-	gtk_label_set_markup_with_mnemonic(GTK_LABEL(af->searchlabel), "<b>Search:</b>");
+	gtk_label_set_markup_with_mnemonic(GTK_LABEL(af->searchlabel), _("<b>Search:</b>"));
 	gtk_box_pack_start(GTK_BOX(af->searchbox), af->searchlabel, FALSE, TRUE, 0);
 
 	af->searchentry = GTK_WIDGET(gtk_entry_new());
@@ -537,7 +537,7 @@ GtkListStore *create_categories_liststore(void)
   while(categories[i])
   {
 	gtk_list_store_append(store, &iter);
-	gtk_list_store_set(store, &iter, CAT_TEXT, categories[i], -1);
+	gtk_list_store_set(store, &iter, CAT_TEXT, i18ncategories[i], -1);
 	i++;
   }
   return store;
@@ -561,7 +561,7 @@ GtkWidget *create_categories_treeview(void)
 	view = gtk_tree_view_new_with_model(model);
 
 	col = gtk_tree_view_column_new();
-	gtk_tree_view_column_set_title(col, "Categories");
+	gtk_tree_view_column_set_title(col, _("Categories"));
 
 	renderer = gtk_cell_renderer_text_new();
 	gtk_tree_view_column_pack_start(col, renderer, TRUE);
