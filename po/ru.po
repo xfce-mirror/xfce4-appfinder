@@ -1,0 +1,86 @@
+# translation of ru.po to Russian
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Anthony Ivanoff <a-i@bk.ru>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ru\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-01-02 10:57+0100\n"
+"PO-Revision-Date: 2005-01-08 11:05+0500\n"
+"Last-Translator: Anthony Ivanoff <a-i@bk.ru>\n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10\n"
+
+#: src/main.c:99 src/main.c:105
+msgid "Now starting"
+msgstr "Запуск"
+
+#: src/main.c:113
+msgid "Cannot execute"
+msgstr "Ошибка запуска"
+
+#: src/main.c:149
+msgid "<b>Search:</b>"
+msgstr "<b>Найти:</b>"
+
+#: src/main.c:206
+msgid "Categories"
+msgstr "Категории"
+
+#: src/af-constants.h:54
+msgid "All"
+msgstr "Все"
+
+#: src/af-constants.h:55
+msgid "Recently Used"
+msgstr "Недавно использованные"
+
+#: src/af-constants.h:56
+msgid "Core"
+msgstr "Основные"
+
+#: src/af-constants.h:57
+msgid "Development"
+msgstr "Разработка"
+
+#: src/af-constants.h:58
+msgid "Office"
+msgstr "Офис"
+
+#: src/af-constants.h:59
+msgid "Graphics"
+msgstr "Графика"
+
+#: src/af-constants.h:60
+msgid "Network"
+msgstr "Сеть"
+
+#: src/af-constants.h:61
+msgid "AudioVideo"
+msgstr "Аудио/Видео"
+
+#: src/af-constants.h:62
+msgid "Game"
+msgstr "Игры"
+
+#: src/af-constants.h:63
+msgid "Education"
+msgstr "Образование"
+
+#: src/af-constants.h:64
+msgid "System"
+msgstr "Система"
+
+#: src/af-constants.h:65
+msgid "Filemanager"
+msgstr "Файловые менеджеры"
+
+#: src/af-constants.h:66
+msgid "Utility"
+msgstr "Утилиты"
+
