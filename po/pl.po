@@ -1,0 +1,86 @@
+# Polish translations for xfce package
+# Polskie tłumaczenia dla pakietu xfce.
+# Copyright (C) 2005 THE xfce'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xfce package.
+# Marek Piechut <mco@o2.pl>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce 4-appfinder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-01-02 10:57+0100\n"
+"PO-Revision-Date: 2005-02-22 18:52+0100\n"
+"Last-Translator: Marek Piechut <mco@o2.pl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/main.c:99 src/main.c:105
+msgid "Now starting"
+msgstr "Uruchamianie"
+
+#: src/main.c:113
+msgid "Cannot execute"
+msgstr "Nie można uruchomić"
+
+#: src/main.c:149
+msgid "<b>Search:</b>"
+msgstr "Wyszukaj:"
+
+#: src/main.c:206
+msgid "Categories"
+msgstr "Kategorie"
+
+#: src/af-constants.h:54
+msgid "All"
+msgstr "Wszystkie"
+
+#: src/af-constants.h:55
+msgid "Recently Used"
+msgstr "Najczęściej Używane"
+
+#: src/af-constants.h:56
+msgid "Core"
+msgstr "Główne"
+
+#: src/af-constants.h:57
+msgid "Development"
+msgstr "Programowanie"
+
+#: src/af-constants.h:58
+msgid "Office"
+msgstr "Biuro"
+
+#: src/af-constants.h:59
+msgid "Graphics"
+msgstr "Grafika"
+
+#: src/af-constants.h:60
+msgid "Network"
+msgstr "Sieć"
+
+#: src/af-constants.h:61
+msgid "AudioVideo"
+msgstr "Multimedia"
+
+#: src/af-constants.h:62
+msgid "Game"
+msgstr "Gry"
+
+#: src/af-constants.h:63
+msgid "Education"
+msgstr "Edukacyjne"
+
+#: src/af-constants.h:64
+msgid "System"
+msgstr "Systemowe"
+
+#: src/af-constants.h:65
+msgid "Filemanager"
+msgstr "Menedżery Plików"
+
+#: src/af-constants.h:66
+msgid "Utility"
+msgstr "Narzędzia"
