@@ -3,7 +3,7 @@ dnl
 
 AC_INIT([src/main.c])
 
-AM_INIT_AUTOMAKE([xfce4-appfinder], [4.1.99.1])
+AM_INIT_AUTOMAKE([xfce4-appfinder], [4.1.99.2])
 
 AM_CONFIG_HEADER([config.h])
 
@@ -27,7 +27,7 @@ BM_I18N([xfce4-appfinder], [be de es es_MX eu fa fi gu he it ko lt nl
 		            pa pt_PT tr zh_CN])
 
 dnl Check for required packages
-BM_DEPEND([LIBXFCEGUI4], [libxfcegui4-1.0], [4.1.0])
+BM_DEPEND([LIBXFCEGUI4], [libxfcegui4-1.0], [4.1.99])
 
 dnl Check for debugging support
 BM_DEBUG_SUPPORT

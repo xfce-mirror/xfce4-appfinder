@@ -88,7 +88,8 @@ maintainers, etc. Commented out by default.
   <para>
     The Xfce 4 Appfinder is part of the <ulink url="http://www.xfce.org" 
       type="html">Xfce 4 Desktop Environment</ulink> and features application
-      search on the whole system. It searches for .desktop files based on the
+      search on the whole system. It searches for 
+      <filename>.desktop</filename> files based on the
       freedesktop spec and makes an index of the found apps.
   </para>
 
@@ -100,12 +101,13 @@ maintainers, etc. Commented out by default.
 <sect1 id="appfinder-getting-started">
   <title>Getting Started</title>
   
-  <para>You can start Appfinder from console running "xfce4-appfinder" command
-        or launching it through panel launcher icon.
+  <para>You can start Appfinder from console running
+  <command>xfce4-appfinder</command> command or launching
+  it through panel launcher icon.
   </para>
 
   <para>
-    When you start the appfineder you will see a window appearing center
+    When you start the appfinder you will see a window appearing center
     of your screen, looking like this:
   </para>
 

@@ -1,11 +1,40 @@
+2004-12-04 00:12  eduard
+
+	* Makefile.am, Makefile.in, aclocal.m4, compile, config.guess,
+	config.sub, configure, configure.ac, depcomp, install-sh,
+	ltmain.sh, missing, doc/Makefile.am, doc/Makefile.in,
+	doc/xfce-nochunk.xsl, doc/C/Makefile.am, doc/C/Makefile.in,
+	doc/C/xfce4-appfinder.html, doc/C/xfce4-appfinder.xml,
+	doc/C/images/Makefile.am, doc/C/images/Makefile.in,
+	doc/C/images/default_appfinder.png, doc/C/images/handle-popup.png,
+	doc/C/images/item-popup.png, src/Makefile.in, src/main.c: Doc
+	addition and 506 559 bugs fixed
+
+2004-12-02 12:00  benny
+
+	* src/main.c: Fix typo.
+
+2004-11-28 19:01  pollux
+
+	* configure, configure.ac, po/tr.gmo, po/tr.po: update TR
+	translations
+
+2004-11-26 20:06  pollux
+
+	* configure, configure.ac, ltmain.sh, po/ko.gmo, po/ko.po: update
+	KO translations
+
+2004-11-13 19:01  olivier
+
+	* ChangeLog: Update ChangeLog
+
 2004-11-06 17:24  olivier
 
 	* ChangeLog, Makefile.in, aclocal.m4, compile, config.guess,
-	  config.sub, configure, configure.ac, depcomp, install-sh,
-	  missing, src/Makefile.in: Update
-	  automake/autoconf/libtool/gettext versions to generate the
-	  configure scripts and Makefiles, Update versions of all packages
-	  to 4.1.99.1 (ie 4.2 RC1), Update ChangeLogs.
+	config.sub, configure, configure.ac, depcomp, install-sh, missing,
+	src/Makefile.in: Update automake/autoconf/libtool/gettext versions
+	to generate the configure scripts and Makefiles, Update versions of
+	all packages to 4.1.99.1 (ie 4.2 RC1), Update ChangeLogs.
 
 2004-10-30 21:03  olivier
 
@@ -14,12 +43,12 @@
 2004-10-30 16:00  pollux
 
 	* configure, configure.ac, po/lt.gmo, po/lt.po: update LT
-	  translations
+	translations
 
 2004-10-28 13:55  pollux
 
 	* configure, configure.ac, ltmain.sh, po/he.gmo, po/he.po,
-	  src/xfce4-appfinder.desktop: update HE translations
+	src/xfce4-appfinder.desktop: update HE translations
 
 2004-10-23 16:45  olivier
 
@@ -28,73 +57,72 @@
 2004-10-22 22:38  olivier
 
 	* ChangeLog, configure, configure.ac, ltmain.sh: Updated versions
-	  and change logs
+	and change logs
 
 2004-10-22 21:33  olivier
 
 	* src/xfce4-appfinder.desktop: Theme fixes update locale [fr] for
-	  desktop files
+	desktop files
 
 2004-10-14 19:13  pollux
 
 	* configure, configure.ac, po/be.gmo, po/de.gmo, po/eu.gmo,
-	  po/fi.gmo, po/fi.po, po/gu.gmo, po/it.gmo, po/nl.gmo, po/pa.gmo,
-	  po/zh_CN.gmo, src/xfce4-appfinder.desktop: update FI translations
+	po/fi.gmo, po/fi.po, po/gu.gmo, po/it.gmo, po/nl.gmo, po/pa.gmo,
+	po/zh_CN.gmo, src/xfce4-appfinder.desktop: update FI translations
 
 2004-10-11 18:30  benny
 
 	* po/: be.po, de.po, eu.po, gu.po, it.po, nl.po, pa.po,
-	  xfce4-appfinder.pot, zh_CN.po: update-po for Moe.
+	xfce4-appfinder.pot, zh_CN.po: update-po for Moe.
 
 2004-10-10 13:52  pollux
 
 	* configure, configure.ac, po/pt_PT.gmo, po/pt_PT.po: update pt_PT
-	  translations
+	translations
 
 2004-10-09 19:47  eduard
 
 	* src/: af-constants.h, appfinder.h, callbacks.c, callbacks.h:
-	  Trivial style fixes
+	Trivial style fixes
 
 2004-10-09 16:20  pollux
 
 	* configure, configure.ac, po/fa.gmo, po/fa.po: update FA
-	  translations
+	translations
 
 2004-10-08 15:49  edscott
 
 	* configure, configure.ac, po/es.gmo, po/es.po, po/es_MX.gmo,
-	  po/es_MX.po: add spanish language translations
+	po/es_MX.po: add spanish language translations
 
 2004-10-07 22:35  benny
 
 	* Makefile.in, aclocal.m4, configure, m4/debug.m4,
-	  m4/glib-gettext.m4, m4/pkg.m4, src/Makefile.in: Added
-	  --enable-final (-O1 for GNU ld) as per Jaspers request. Added
-	  missing m4 files.
+	m4/glib-gettext.m4, m4/pkg.m4, src/Makefile.in: Added
+	--enable-final (-O1 for GNU ld) as per Jaspers request. Added
+	missing m4 files.
 
 2004-10-03 18:14  pollux
 
 	* configure, configure.ac, ltmain.sh, po/pa.gmo, po/pa.po: Punjabi
-	  translations (PA) from jaswinderlinux@netscape.net
+	translations (PA) from jaswinderlinux@netscape.net
 
 2004-10-02 15:28  olivier
 
 	* ChangeLog, Makefile.in, aclocal.m4, config.guess, config.sub,
-	  configure, depcomp, install-sh, ltmain.sh,
-	  po/xfce4-appfinder.pot, src/Makefile.in: Update all files for 4.2
-	  beta 1
+	configure, depcomp, install-sh, ltmain.sh, po/xfce4-appfinder.pot,
+	src/Makefile.in: Update all files for 4.2 beta 1
 
 2004-09-30 22:15  eduard
 
 	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
-	  configure.ac, depcomp, install-sh, ltmain.sh, src/Makefile.in:
-	  version update
+	configure.ac, depcomp, install-sh, ltmain.sh, src/Makefile.in:
+	version update
 
 2004-09-29 09:59  pollux
 
 	* configure, configure.ac, po/zh_CN.gmo, po/zh_CN.po: updated zh_CN
-	  translations from yongtao yang <yongtao.yang@gmail.com>
+	translations from yongtao yang <yongtao.yang@gmail.com>
 
 2004-09-28 21:51  eduard
 
@@ -107,7 +135,7 @@
 2004-09-23 23:36  pollux
 
 	* configure, configure.ac, po/gu.gmo, po/gu.po: add Gujarati
-	  translations (GU) from Ankit Patel <ankit@redhat.com>
+	translations (GU) from Ankit Patel <ankit@redhat.com>
 
 2004-09-23 10:22  jasper
 
@@ -116,12 +144,12 @@
 2004-09-22 05:18  kelnos
 
 	* src/xfce4-appfinder.desktop: add GenericName tags to settings
-	  .desktop files
+	.desktop files
 
 2004-09-21 13:51  jasper
 
 	* po/: be.gmo, be.po, de.gmo, de.po, eu.gmo, eu.po, it.gmo, it.po,
-	  nl.gmo, nl.po: Run make update-po at Moe's request.
+	nl.gmo, nl.po: Run make update-po at Moe's request.
 
 2004-09-21 00:22  olivier
 
@@ -134,19 +162,19 @@
 2004-09-19 12:14  jasper
 
 	* configure, configure.ac, po/nl.gmo, po/nl.po: Update nl
-	  translations
+	translations
 
 2004-09-18 18:41  pollux
 
 	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
-	  configure.ac, depcomp, install-sh, ltmain.sh, po/eu.gmo,
-	  po/eu.po, src/Makefile.in: update EU translations
+	configure.ac, depcomp, install-sh, ltmain.sh, po/eu.gmo, po/eu.po,
+	src/Makefile.in: update EU translations
 
 2004-09-18 15:45  moe
 
 	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
-	  configure.ac, depcomp, install-sh, ltmain.sh, po/de.gmo,
-	  po/de.po, src/Makefile.in: Adding German translation
+	configure.ac, depcomp, install-sh, ltmain.sh, po/de.gmo, po/de.po,
+	src/Makefile.in: Adding German translation
 
 2004-09-18 14:29  eduard
 
@@ -155,13 +183,13 @@
 2004-09-18 14:13  eduard
 
 	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
-	  depcomp, install-sh, ltmain.sh, src/Makefile.am, src/Makefile.in:
-	  .desktop added and makefile changes
+	depcomp, install-sh, ltmain.sh, src/Makefile.am, src/Makefile.in:
+	.desktop added and makefile changes
 
 2004-09-17 00:10  pollux
 
 	* configure, configure.ac, ltmain.sh, po/be.gmo, po/be.po: add BE
-	  translations from Ales Nyakhaychyk <nab@mail.by>
+	translations from Ales Nyakhaychyk <nab@mail.by>
 
 2004-09-15 21:31  eduard
 
@@ -174,7 +202,7 @@
 2004-08-24 21:53  eduard
 
 	* Makefile.am, Makefile.in, po/Makefile.in.in,
-	  po/xfce4-appfinder.pot: make dist/rpm fixes
+	po/xfce4-appfinder.pot: make dist/rpm fixes
 
 2004-08-02 21:00  eduard
 
@@ -183,43 +211,43 @@
 2004-07-29 20:46  eduard
 
 	* ChangeLog, TODO, src/callbacks.c, src/main.c:
-	  Internationalization fixes (on category liststore)
+	Internationalization fixes (on category liststore)
 
 2004-07-28 23:22  benny
 
 	* m4/depends.m4: Fixed (module)_FOUND bug reported by brian.
-	  Hopefully nothing else broke this time.
+	Hopefully nothing else broke this time.
 
 2004-07-26 21:46  eduard
 
 	* po/it.gmo, po/it.po, src/Makefile.am, src/Makefile.in,
-	  src/af-constants.h, src/appfinder.h, src/callbacks.c,
-	  src/callbacks.h, src/main.c: Directory recursion added
+	src/af-constants.h, src/appfinder.h, src/callbacks.c,
+	src/callbacks.h, src/main.c: Directory recursion added
 
 2004-07-24 20:52  benny
 
 	* m4/depends.m4: Readded XFCE_MCS_PLUGIN() again, dunno how I
-	  manage to remove it everytime I edit depends.m4!
+	manage to remove it everytime I edit depends.m4!
 
 2004-07-24 19:30  benny
 
 	* m4/depends.m4: XFCE_PANEL_PLUGIN had wrong panel version for the
-	  threaded test.
+	threaded test.
 
 2004-07-24 19:28  benny
 
 	* m4/depends.m4: Extended the XFCE_PANEL_PLUGIN macro to include
-	  some magic for threaded panels.
+	some magic for threaded panels.
 
 2004-07-22 01:00  benny
 
 	* m4/depends.m4: Readded the XFCE_MCS_PLUGIN macro. I didn't ment
-	  to remove it, tho.
+	to remove it, tho.
 
 2004-07-20 22:58  benny
 
 	* m4/depends.m4: Modifed panel plugin check, so one (the installer)
-	  can choose to install into a different plugin dir.
+	can choose to install into a different plugin dir.
 
 2004-07-18 16:19  pollux
 
@@ -228,19 +256,19 @@
 2004-07-18 16:01  eduard
 
 	* po/it.po, po/xfce4-appfinder.pot, src/af-constants.h,
-	  src/appfinder.h, src/main.c: i18n fixes
+	src/appfinder.h, src/main.c: i18n fixes
 
 2004-07-18 15:08  eduard
 
 	* po/: ChangeLog, Makefile.in.in, POTFILES.in, it.gmo, it.po,
-	  xfce4-appfinder.pot: po files
+	xfce4-appfinder.pot: po files
 
 2004-07-18 15:04  eduard
 
 	* Makefile.am, Makefile.in, aclocal.m4, compile, config.guess,
-	  config.h.in, config.sub, configure, configure.ac, depcomp,
-	  install-sh, ltmain.sh, missing, mkinstalldirs, src/Makefile.in,
-	  src/af-constants.h, src/main.c: i18n support
+	config.h.in, config.sub, configure, configure.ac, depcomp,
+	install-sh, ltmain.sh, missing, mkinstalldirs, src/Makefile.in,
+	src/af-constants.h, src/main.c: i18n support
 
 2004-07-18 11:01  eduard
 
@@ -253,30 +281,30 @@
 2004-07-17 19:09  eduard
 
 	* ChangeLog, TODO, src/main.c: Code clean and resync with
-	  libxfce4gui
+	libxfce4gui
 
 2004-07-17 14:20  benny
 
 	* src/: Makefile.am, af-constants.h, main.c: Fix make dist. First
-	  attempt to use XDG basedir spec, Eduard please have a look and
-	  fix it.
+	attempt to use XDG basedir spec, Eduard please have a look and fix
+	it.
 
 2004-06-27 11:45  eduard
 
 	* Makefile.in, TODO, aclocal.m4, autogen.sh, src/appfinder.h,
-	  src/main.c: Added infobox to the right menu
+	src/main.c: Added infobox to the right menu
 
 2004-06-24 20:50  eduard
 
 	* src/: appfinder.h, main.c: Some clean and reorganization.  Menu
-	  added
+	added
 
 2004-06-22 20:50  eduard
 
 	* AUTHORS, README, TODO, src/af-constants.h, src/appfinder.h,
-	  src/main.c: No item report added.  A lot of small fixes and
-	  cleanup.  Support for right click on treeview (just the callback
-	  for now).
+	src/main.c: No item report added.  A lot of small fixes and
+	cleanup.  Support for right click on treeview (just the callback
+	for now).
 
 2004-06-21 21:13  eduard
 
@@ -285,13 +313,13 @@
 2004-06-21 21:02  eduard
 
 	* BUGS, TODO, src/inline-icon.h, src/main.c,
-	  src/xfce4-appfinder.png: It doesn't flicker anymore.	Code clean.
-	  Icon added.	Some bug fixed (segfaults ;-)
+	src/xfce4-appfinder.png: It doesn't flicker anymore.  Code clean. 
+	Icon added.  Some bug fixed (segfaults ;-)
 
 2004-06-20 01:57  eduard
 
 	* src/main.c: Removed the labels (goto ugly stuff) and code
-	  improvements
+	improvements
 
 2004-06-19 22:59  eduard
 
@@ -300,7 +328,7 @@
 2004-06-19 22:21  benny
 
 	* m4/: X11.m4, debug.m4, depends.m4, i18n.m4: Added missing .m4
-	  files.
+	files.
 
 2004-06-19 22:16  eduard
 
@@ -309,7 +337,7 @@
 2004-06-19 20:43  eduard
 
 	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
-	  ltmain.sh, src/Makefile.in: Added autogen.sh and m4 directory
+	ltmain.sh, src/Makefile.in: Added autogen.sh and m4 directory
 
 2004-06-19 19:58  eduard
 
@@ -342,13 +370,26 @@
 2004-05-07 21:43  eduard
 
 	* configure, configure.ac, xfce4-appfinder.spec.in, config.guess,
-	  install-sh, config.sub, Makefile.am, missing, mkinstalldirs,
-	  AUTHORS, Makefile.in, config.h.in, ChangeLog, INSTALL, COPYING,
-	  src/Makefile.am, src/inline-icon.h, src/Makefile.in, src/main.c,
-	  src/main.h, src/xfce4-appfinder.png: Initial revision
+	install-sh, config.sub, Makefile.am, missing, mkinstalldirs,
+	AUTHORS, Makefile.in, config.h.in, ChangeLog, INSTALL, COPYING,
+	src/Makefile.am, src/inline-icon.h, src/Makefile.in, src/main.c,
+	src/main.h, src/xfce4-appfinder.png: Initial revision
+
+2004-05-07 21:43  eduard
+
+	* configure, configure.ac, xfce4-appfinder.spec.in, config.guess,
+	install-sh, config.sub, Makefile.am, missing, mkinstalldirs,
+	AUTHORS, Makefile.in, config.h.in, ChangeLog, INSTALL, COPYING,
+	src/Makefile.am, src/inline-icon.h, src/Makefile.in, src/main.c,
+	src/main.h, src/xfce4-appfinder.png: Initial import
 
 2004-05-07 21:36  eduard
 
 	* BUGS, NEWS, TODO, compile, depcomp, README, aclocal.m4,
-	  ltmain.sh: Initial revision
+	ltmain.sh: Initial revision
+
+2004-05-07 21:36  eduard
+
+	* BUGS, NEWS, TODO, compile, depcomp, README, aclocal.m4,
+	ltmain.sh: Initial import
 
