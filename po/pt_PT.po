@@ -1,0 +1,87 @@
+# Portuguese translation of Xfce-appfinder.
+# Copyright (C) 2004 THE Xfce-appfinder'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Xfce-appfinder package.
+# Nuno Donato <nunodonato@gmail.com>, 2004.
+# 
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce-appfinder 4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-10-02 10:35+0200\n"
+"PO-Revision-Date: 2004-10-09 21:28+0100\n"
+"Last-Translator: Nuno Donato <nunodonato@gmail.com>\n"
+"Language-Team: Portuguese <pt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: src/main.c:98 src/main.c:104
+msgid "Now starting"
+msgstr "A iniciar"
+
+#: src/main.c:112
+msgid "Cannot execute"
+msgstr "Não foi possível executar"
+
+#: src/main.c:148
+msgid "<b>Search:</b>"
+msgstr "<b>Procurar:</b>"
+
+#: src/main.c:205
+msgid "Categories"
+msgstr "Categorias"
+
+#: src/af-constants.h:69
+msgid "All"
+msgstr "Tudo"
+
+#: src/af-constants.h:70
+msgid "Recently Used"
+msgstr "Recentemente Usadas"
+
+#: src/af-constants.h:71
+msgid "Core"
+msgstr "Núcleo"
+
+#: src/af-constants.h:72
+msgid "Development"
+msgstr "Desenvolvimento"
+
+#: src/af-constants.h:73
+msgid "Office"
+msgstr "Escritório"
+
+#: src/af-constants.h:74
+msgid "Graphics"
+msgstr "Gráficos"
+
+#: src/af-constants.h:75
+msgid "Network"
+msgstr "Rede"
+
+#: src/af-constants.h:76
+msgid "AudioVideo"
+msgstr "Aúdio/Video"
+
+#: src/af-constants.h:77
+msgid "Game"
+msgstr "Jogos"
+
+#: src/af-constants.h:78
+msgid "Education"
+msgstr "Educação"
+
+#: src/af-constants.h:79
+msgid "System"
+msgstr "Sistema"
+
+#: src/af-constants.h:80
+msgid "Filemanager"
+msgstr "Gestor de Ficheiros"
+
+#: src/af-constants.h:81
+msgid "Utility"
+msgstr "Utilitários"
+
