@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2003-12-27 14:25+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Sorry, no match for searched text."
+msgstr ""
+
+msgid "No items available"
+msgstr ""
+
+msgid "Appfinder InfoBox"
+msgstr ""
+
+msgid "Informations about \""
+msgstr ""
+
+msgid "Icon"
+msgstr ""
+
+msgid "<b>Name:</b> "
+msgstr ""
+
+msgid "Comment"
+msgstr ""
+
+msgid "N/A"
+msgstr ""
+
+msgid "<b>Comment:</b> "
+msgstr ""
+
+msgid "<b>Categories:</b> "
+msgstr ""
+
+msgid "<b>Command:</b> "
+msgstr ""
+
+msgid "Run program"
+msgstr ""
+
+msgid "Informations..."
+msgstr ""
+
+msgid "Add to panel"
+msgstr ""
+
+msgid "Add to desktop menu"
+msgstr ""
+
+msgid "<b>Search:</b>"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Now starting"
+msgstr ""
+
+msgid "Cannot execute"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "Recently Used"
+msgstr ""
+
+msgid "Core"
+msgstr ""
+
+msgid "Development"
+msgstr ""
+
+msgid "Office"
+msgstr ""
+
+msgid "Graphics"
+msgstr ""
+
+msgid "Network"
+msgstr ""
+
+msgid "AudioVideo"
+msgstr ""
+
+msgid "Game"
+msgstr ""
+
+msgid "Education"
+msgstr ""
+
+msgid "System"
+msgstr ""
+
+msgid "Filemanager"
+msgstr ""
+
+msgid "Utility"
+msgstr ""
