@@ -220,13 +220,16 @@ gboolean xfce_appfinder_list_add (XfceDesktopEntry *dentry, GtkListStore *store,
 {
     GtkTreeIter iter;
     GdkPixbuf *icon = NULL;
+    gchar *exec = NULL;
     gchar *name = NULL;
+    gchar *name_lower = NULL;
     gchar *img = NULL;
     gchar *dcat = NULL;
     gchar *comment = NULL;
 
     if (!(xfce_desktop_entry_get_string (dentry, "Name", TRUE, &name) && name))
     {
+            g_free(name);
             return FALSE;
     }
 
@@ -234,12 +237,14 @@ gboolean xfce_appfinder_list_add (XfceDesktopEntry *dentry, GtkListStore *store,
     {
         if (!(xfce_desktop_entry_get_string (dentry, "Categories", TRUE, &dcat) && dcat))
         {
+            g_free(name);
             return FALSE;
         }
         
         if (g_pattern_match_string (pcat, g_utf8_casefold(dcat, -1)) == FALSE)
         {
             g_free(dcat);
+            g_free(name);
             return FALSE;
         }
     }
@@ -247,9 +252,19 @@ gboolean xfce_appfinder_list_add (XfceDesktopEntry *dentry, GtkListStore *store,
     if (psearch)
     {
         xfce_desktop_entry_get_string (dentry, "Comment", TRUE, &comment);
+        xfce_desktop_entry_get_string (dentry, "Name", FALSE, &name_lower);
+        xfce_desktop_entry_get_string (dentry, "Exec", FALSE, &exec);
+        comment = g_utf8_strdown(comment, -1);
+        name_lower = g_utf8_strdown(name_lower, -1);
+        exec = g_utf8_strdown(exec, -1);
         if (!(comment && g_pattern_match_string (psearch, g_utf8_casefold(comment, -1))) &&
-                    !g_pattern_match_string (psearch, name))
+                    !g_pattern_match_string (psearch, name_lower) &&
+                    !g_pattern_match_string (psearch, exec))
         {
+            g_free(name);
+            g_free(name_lower);
+            g_free(comment);
+            g_free(exec);
             return FALSE;
         }
     }
@@ -275,7 +290,22 @@ gboolean xfce_appfinder_list_add (XfceDesktopEntry *dentry, GtkListStore *store,
     {
         g_object_unref (icon);
     }
-
+     if (comment)
+     {
+         g_free(comment);
+     }
+     if (name_lower)
+     {
+         g_free(name_lower);
+     }
+     if (exec)
+     {
+         g_free(exec);
+     }
+     if (dcat)
+     {
+         g_free(dcat);
+     }
     return TRUE;
 }
 
