@@ -24,6 +24,10 @@
 #include <libxfce4util/libxfce4util.h>
 #include <libxfcegui4/libxfcegui4.h>
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include "af-constants.h"
 #include "appfinder.h"
 #include "inline-icon.h"
@@ -945,7 +949,7 @@ main (gint argc, gchar **argv)
 {
 	t_appfinder *appfinder;
 	
-	xfce_textdomain(GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
+	xfce_textdomain(GETTEXT_PACKAGE, LOCALEDIR, "UTF-8");
 	gtk_init(&argc, &argv);
   	build_paths ();
 	configfile = g_strconcat (xfce_get_userdir(), "/afhistory", NULL);

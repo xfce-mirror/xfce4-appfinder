@@ -17,6 +17,9 @@
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 */
 
+#ifndef __HAVE_APPFINDER_H
+#define __HAVE_APPFINDER_H
+
 typedef struct {
 	GtkWidget *mainwindow;
 	GtkWidget *hpaned;
@@ -113,3 +116,5 @@ gchar *get_path_from_name(gchar *name);
 void saveHistory(gchar *path);
 
 void execute_from_name (gchar *name);
+
+#endif

@@ -17,6 +17,9 @@
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 */
 
+#ifndef __HAVE_AF_CONSTANTS_H
+#define __HAVE_AF_CONSTANTS_H
+
 #define APPFINDER_ALL 0
 #define APPFINDER_HISTORY 1
 
@@ -32,38 +35,6 @@ enum
   CAT_TEXT = 0,
   CAT_COLS
 };
-
-#if 0
-/* Some standard paths for .desktop files */
-const char *entriespaths [] = {
-	"/usr/share/applications/",
-	"/usr/share/applications/kde/",
-	"/usr/local/share/applications/",
-	"/usr/local/share/applications/kde/",
-	"/opt/kde/share/applications/kde/",
-	"/usr/X11R6/share/",
-	"/opt/gnome/share/applications/",
-	"/opt/gnome2/share/applications/",
-	NULL
-};
-
-
-/* Some standard paths for icons */
-const char *iconspaths [] = {
-	"/usr/share/pixmaps/",
-	"/usr/share/icons/default.kde/32x32/apps/",
-	"/usr/share/icons/default.kde/32x32/devices/",
-	"/usr/share/icons/default.kde/32x32/actions/",
-	"/usr/share/icons/default.kde/32x32/mimetypes/",
-	"/usr/share/icons/default.kde/32x32/filesystems/",
-	"/opt/kde/share/icons/default.kde/32x32/apps/",
-	"/opt/kde/share/icons/default.kde/32x32/devices/",
-	"/opt/kde/share/icons/default.kde/32x32/actions/",
-	"/opt/kde/share/icons/default.kde/32x32/mimetypes/",
-	"/opt/kde/share/icons/default.kde/32x32/filesystems/",
-	NULL
-};
-#endif
 
 /* What to search for in .desktop files */
 const char *keys [] = {
@@ -94,20 +65,20 @@ const char *categories [] = {
 	NULL
 };
 
-const char *i18ncategories [] = {
-	_("All"),
-	_("Recently Used"),
-	_("Core"),
-	_("Development"),
-	_("Office"),
-	_("Graphics"),
-	_("Network"),
-	_("AudioVideo"),
-	_("Game"),
-	_("Education"),
-	_("System"),
-	_("Filemanager"),
-	_("Utility"),
+char *i18ncategories [] = {
+	N_("All"),
+	N_("Recently Used"),
+	N_("Core"),
+	N_("Development"),
+	N_("Office"),
+	N_("Graphics"),
+	N_("Network"),
+	N_("AudioVideo"),
+	N_("Game"),
+	N_("Education"),
+	N_("System"),
+	N_("Filemanager"),
+	N_("Utility"),
 	NULL
 };
 
@@ -118,3 +89,5 @@ GtkTargetEntry gte[] = {{"DESKTOP_PATH_ENTRY", 0, 0},
 	{"STRING", 0, 3},
 	{"UTF8_STRING", 0, 4}
 };
+
+#endif
