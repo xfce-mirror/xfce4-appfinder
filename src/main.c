@@ -71,6 +71,11 @@ const char *categories [] = {
 	NULL
 };
 
+GtkTargetEntry gte[] = {{"DESKTOP_PATH_ENTRY", GTK_TARGET_SAME_WIDGET, 0},
+	{"text/plain", 0, 1},
+	{"application/x-desktop", 0, 2}
+};
+
 typedef struct {
 	GtkWidget *mainwindow;
 	GtkWidget *hpaned;
@@ -106,6 +111,10 @@ cb_categoriestree (GtkTreeSelection *selection,
                        gboolean          path_currently_selected,
                        gpointer          userdata);
 
+void
+cb_dragappstree (GtkWidget *widget, GdkDragContext *drag_context, GtkSelectionData *data,
+				guint info, guint time, gpointer user_data);
+
 GtkListStore *
 create_categories_liststore (void);
 
@@ -133,11 +142,39 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern);
 
 gchar **parseHistory(void);
 
+gchar *get_path_from_name(gchar *name);
+
 void saveHistory(gchar *path);
 
 /**************
  * Functions
  **************/
+
+void
+cb_dragappstree (GtkWidget *widget, GdkDragContext *dc, GtkSelectionData *data,
+				guint info, guint time, gpointer user_data) {
+	GtkTreeModel *model;
+    GtkTreeIter   iter;
+	gchar *name = NULL;
+	gchar *path = NULL;
+
+	if (data->target == gdk_atom_intern("DESKTOP_PATH_ENTRY", FALSE)) {
+		model = gtk_tree_view_get_model(GTK_TREE_VIEW(widget));
+		if (gtk_tree_model_get_iter(model, &iter,
+					gtk_tree_row_reference_get_path(g_object_get_data(G_OBJECT(dc), "gtk-tree-view-source-row")))) {
+			gtk_tree_model_get(model, &iter, APP_TEXT, &name, -1);
+			if (name){
+				if ((path = get_path_from_name(name))!=NULL) {
+					gtk_selection_data_set (data, gdk_atom_intern ("DESKTOP_PATH_ENTRY", FALSE),
+										8, path, strlen (path)
+										);
+					g_free(path);
+				}
+				g_free(name);
+			}
+		}
+	}
+}
 
 void
 cb_searchentry (GtkEntry *entry,
@@ -156,6 +193,50 @@ cb_searchentry (GtkEntry *entry,
 	gtk_tree_selection_unselect_all
 		(gtk_tree_view_get_selection(GTK_TREE_VIEW(af->categoriestree)));
 	g_free(text);
+}
+
+
+gchar *get_path_from_name(gchar *name) {
+	GDir *dir;
+	XfceDesktopEntry *dentry;
+	gboolean found = FALSE;
+	gchar *filename = NULL;
+	gchar *dname = NULL;
+	gint i = 0;
+
+	while (entriespaths[i]!=NULL)
+	{
+		if ((dir = g_dir_open (entriespaths[i], 0, NULL))==NULL)
+		{
+			i++;
+			continue;
+		}
+
+		while (!found && ((filename = (gchar *)g_dir_read_name(dir))!=NULL))
+		{
+			filename = g_strdup_printf ("%s%s", entriespaths[i], filename);
+			if (g_file_test(filename, G_FILE_TEST_IS_DIR))
+				continue;
+
+			dentry = xfce_desktop_entry_new (filename, keys, 7);
+			xfce_desktop_entry_parse (dentry);
+			xfce_desktop_entry_get_string (dentry, "Name", FALSE, &dname);
+
+			if (strcmp(dname, name)==0)
+				found = TRUE;
+
+			if (dname)
+				g_free(dname);
+
+			if (!found)
+				g_free(filename);
+		}
+		g_dir_close(dir);
+		if (found)
+			return filename;
+		i++;
+	}
+	return NULL;
 }
 
 void
@@ -179,21 +260,24 @@ cb_appstree (GtkTreeView        *treeview,
 		/* we fetch the name of the application to run */
 		gtk_tree_model_get(model, &iter, APP_TEXT, &name, -1);
 
-		while (entriespaths[i]!=NULL) {
-			dir = g_dir_open (entriespaths[i], 0, NULL);
-			if (dir==NULL)
-				break;
+		while (entriespaths[i]!=NULL)
+		{
+			if ((dir = g_dir_open (entriespaths[i], 0, NULL))==NULL)
+			{
+				i++;
+				continue;
+			}
+
 			while (!found && ((filename = (gchar *)g_dir_read_name(dir))!=NULL))
 			{
 				filename = g_strdup_printf ("%s%s", entriespaths[i], filename);
 				if (g_file_test(filename, G_FILE_TEST_IS_DIR))
 					goto skip;
+
 				dentry = xfce_desktop_entry_new (filename, keys, 7);
-	
 				xfce_desktop_entry_parse (dentry);
-		
 				xfce_desktop_entry_get_string (dentry, "Name", FALSE, &dname);
-	
+
 				if (strcmp(dname, name)==0)
 				{
 					xfce_desktop_entry_get_string (dentry, "Exec", FALSE, &exec);
@@ -202,7 +286,7 @@ cb_appstree (GtkTreeView        *treeview,
 				}
 				if (dname)
 					g_free(dname);
-	
+
 				skip:
 					g_free(filename);
 			}
@@ -301,7 +385,7 @@ t_appfinder *create_interface(void)
 	
 	af->searchbox = GTK_WIDGET(gtk_hbox_new(FALSE, 6));
 	gtk_container_set_border_width(GTK_CONTAINER(af->searchbox), 6);
-	gtk_box_pack_start(GTK_BOX(af->rightvbox), af->searchbox, FALSE, TRUE, 0);	
+	gtk_box_pack_start(GTK_BOX(af->rightvbox), af->searchbox, FALSE, TRUE, 0);
 
 	af->searchlabel = GTK_WIDGET(gtk_label_new(NULL));
 	gtk_misc_set_alignment(GTK_MISC(af->searchlabel), 0.0, 0.5);
@@ -663,6 +747,8 @@ create_apps_treeview(gchar *textSearch)
 	                                    NULL);
 
 	gtk_tree_view_append_column(GTK_TREE_VIEW(view), col);
+	gtk_tree_view_enable_model_drag_source(GTK_TREE_VIEW(view),                                        											GDK_BUTTON1_MASK, gte, 3, GDK_ACTION_MOVE);
+	g_signal_connect(view, "drag-data-get", (GCallback) cb_dragappstree, NULL);
 	return view;
 }
 gchar **parseHistory(void) {
