@@ -1817,7 +1817,7 @@ fi
 
 # Define the identity of the package.
  PACKAGE=xfce4-appfinder
- VERSION=4.2.0
+ VERSION=4.2.1
 
 
 cat >>confdefs.h <<_ACEOF
