@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2004-07-18 10:25+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-09-20 08:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Eduard Roccatello <eduard@xfce.org>\n"
 "Language-Team: it <it@li.org>\n"
@@ -15,98 +16,112 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Sorry, no match for searched text."
-msgstr "Nessun risultato trovato."
-
-msgid "No items available"
-msgstr "Nessun elemento disponibile"
-
-msgid "Appfinder InfoBox"
-msgstr ""
-
-msgid "Informations about \""
-msgstr "Informazioni su \""
-
-msgid "Icon"
-msgstr "Icona"
-
-msgid "<b>Name:</b> "
-msgstr "<b>Nome:</b> "
-
-msgid "Comment"
-msgstr "Commento"
-
-msgid "N/A"
-msgstr "N/D"
-
-msgid "<b>Comment:</b> "
-msgstr "<b>Commento:</b> "
-
-msgid "<b>Categories:</b> "
-msgstr "<b>Categorie:</b> "
-
-msgid "<b>Command:</b> "
-msgstr "<b>Comando:</b> "
-
-msgid "Run program"
-msgstr "Avvia programma"
-
-msgid "Informations..."
-msgstr "Informazioni..."
-
-msgid "Add to panel"
-msgstr "Aggiungi al panel"
-
-msgid "Add to desktop menu"
-msgstr "Aggiungi al menu del desktop"
-
-msgid "<b>Search:</b>"
-msgstr "<b>Cerca:</b>"
-
-msgid "Categories"
-msgstr "Categorie"
-
+#: src/main.c:98 src/main.c:104
 msgid "Now starting"
 msgstr "Avvio"
 
+#: src/main.c:112
 msgid "Cannot execute"
 msgstr "Non posso eseguire"
 
+#: src/main.c:148
+msgid "<b>Search:</b>"
+msgstr "<b>Cerca:</b>"
+
+#: src/main.c:205
+msgid "Categories"
+msgstr "Categorie"
+
+#: src/af-constants.h:69
 msgid "All"
 msgstr "Tutte"
 
+#: src/af-constants.h:70
 msgid "Recently Used"
 msgstr "Usati di recente"
 
+#: src/af-constants.h:71
 msgid "Core"
 msgstr "Principali"
 
+#: src/af-constants.h:72
 msgid "Development"
 msgstr "Sviluppo"
 
+#: src/af-constants.h:73
 msgid "Office"
 msgstr "Ufficio"
 
+#: src/af-constants.h:74
 msgid "Graphics"
 msgstr "Grafica"
 
+#: src/af-constants.h:75
 msgid "Network"
 msgstr "Rete ed internet"
 
+#: src/af-constants.h:76
 msgid "AudioVideo"
 msgstr "Multimedia"
 
+#: src/af-constants.h:77
 msgid "Game"
 msgstr "Gioco"
 
+#: src/af-constants.h:78
 msgid "Education"
 msgstr "Educativi"
 
+#: src/af-constants.h:79
 msgid "System"
 msgstr "Sistema"
 
+#: src/af-constants.h:80
 msgid "Filemanager"
 msgstr ""
 
+#: src/af-constants.h:81
 msgid "Utility"
 msgstr ""
+
+#~ msgid "Sorry, no match for searched text."
+#~ msgstr "Nessun risultato trovato."
+
+#~ msgid "No items available"
+#~ msgstr "Nessun elemento disponibile"
+
+#~ msgid "Informations about \""
+#~ msgstr "Informazioni su \""
+
+#~ msgid "Icon"
+#~ msgstr "Icona"
+
+#~ msgid "<b>Name:</b> "
+#~ msgstr "<b>Nome:</b> "
+
+#~ msgid "Comment"
+#~ msgstr "Commento"
+
+#~ msgid "N/A"
+#~ msgstr "N/D"
+
+#~ msgid "<b>Comment:</b> "
+#~ msgstr "<b>Commento:</b> "
+
+#~ msgid "<b>Categories:</b> "
+#~ msgstr "<b>Categorie:</b> "
+
+#~ msgid "<b>Command:</b> "
+#~ msgstr "<b>Comando:</b> "
+
+#~ msgid "Run program"
+#~ msgstr "Avvia programma"
+
+#~ msgid "Informations..."
+#~ msgstr "Informazioni..."
+
+#~ msgid "Add to panel"
+#~ msgstr "Aggiungi al panel"
+
+#~ msgid "Add to desktop menu"
+#~ msgstr "Aggiungi al menu del desktop"

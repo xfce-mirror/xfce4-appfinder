@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-24 21:51+0200\n"
+"POT-Creation-Date: 2004-09-20 08:23+0200\n"
 "PO-Revision-Date: 2004-09-13 15:13+0200\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <librezale@librezale.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "X-Generator: KBabel 1.3.1\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: src/main.c:97 src/main.c:103
+#: src/main.c:98 src/main.c:104
 msgid "Now starting"
 msgstr "Orain abiarazten"
 
-#: src/main.c:110
+#: src/main.c:112
 msgid "Cannot execute"
 msgstr "Ezin da abiarazi"
 
-#: src/main.c:146
+#: src/main.c:148
 msgid "<b>Search:</b>"
 msgstr "<b> Bilatu</b>"
 
-#: src/main.c:203
+#: src/main.c:205
 msgid "Categories"
 msgstr "Kategoriak"
 
@@ -84,4 +84,3 @@ msgstr "Fitxategi-kudeatzailea"
 #: src/af-constants.h:81
 msgid "Utility"
 msgstr "Utilitatea"
-

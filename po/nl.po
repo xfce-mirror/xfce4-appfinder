@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-24 21:51+0200\n"
+"POT-Creation-Date: 2004-09-20 08:23+0200\n"
 "PO-Revision-Date: 2004-09-19 12:01+0200\n"
 "Last-Translator: Jasper Huijsmans <jasper@xfce.org>\n"
 "Language-Team: Nederlands <nl@li.org>\n"
@@ -16,19 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:97 src/main.c:103
+#: src/main.c:98 src/main.c:104
 msgid "Now starting"
 msgstr "Bezig met starten"
 
-#: src/main.c:110
+#: src/main.c:112
 msgid "Cannot execute"
 msgstr "Kan programma niet uitvoeren"
 
-#: src/main.c:146
+#: src/main.c:148
 msgid "<b>Search:</b>"
 msgstr "<b>Zoeken:</b>"
 
-#: src/main.c:203
+#: src/main.c:205
 msgid "Categories"
 msgstr "Categoriën"
 

@@ -7,27 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-24 21:51+0200\n"
+"POT-Creation-Date: 2004-09-20 08:23+0200\n"
 "PO-Revision-Date: 2004-09-12 13:04+0300\n"
 "Last-Translator: Ales Nyakhaychyk <nab@mail.by>\n"
 "Language-Team: Belorussian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:97 src/main.c:103
+#: src/main.c:98 src/main.c:104
 msgid "Now starting"
 msgstr "Пачалася праца"
 
-#: src/main.c:110
+#: src/main.c:112
 msgid "Cannot execute"
 msgstr "Немагчыма выканаць"
 
-#: src/main.c:146
+#: src/main.c:148
 msgid "<b>Search:</b>"
 msgstr "<b>Пошук:</b>"
 
-#: src/main.c:203
+#: src/main.c:205
 msgid "Categories"
 msgstr "Катэгорыі"
 
@@ -82,4 +82,3 @@ msgstr "Кіраваньне файламі"
 #: src/af-constants.h:81
 msgid "Utility"
 msgstr "Прыблуды"
-
