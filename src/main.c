@@ -28,6 +28,8 @@
 #include "appfinder.h"
 #include "inline-icon.h"
 
+static gchar **entriespaths;
+
 /**************
  * Functions
  **************/
@@ -629,7 +631,7 @@ load_icon_entry (gchar *img)
 	}
 
 	if (imgPath==NULL)
-		return NULL;
+		return xfce_themed_icon_load (img, 32);
 
 	icon = gdk_pixbuf_new_from_file(imgPath, &error);
 	g_free(imgPath);
@@ -961,6 +963,56 @@ void saveHistory(gchar *path) {
 	}
 	fclose(f);
 }
+
+static void
+build_paths (void)
+{
+  gchar **applications;
+  gint    napplications;
+  gchar **apps;
+  gint    napps;
+  gchar **applnk;
+  gint    napplnk;
+  gint    i, n;
+
+  applications = xfce_resource_lookup_all (XFCE_RESOURCE_DATA, "applications/");
+  for (napplications = 0; applications[napplications] != NULL; ++napplications);
+
+  apps = xfce_resource_lookup_all (XFCE_RESOURCE_DATA, "apps/");
+  for (napps = 0; apps[napps] != NULL; ++napps);
+
+  applnk = xfce_resource_lookup_all (XFCE_RESOURCE_DATA, "applnk/");
+  for (napplnk = 0; applnk[napplnk] != NULL; ++napplnk);
+
+  entriespaths = g_new0 (gchar *, 2 * napplications + napps + napplnk + 3);
+  i = 0;
+
+  entriespaths[i++] = xfce_get_homefile (".kde", "share", "apps", NULL);
+  entriespaths[i++] = xfce_get_homefile (".kde", "share", "applnk", NULL);
+
+  for (n = 0; n < napplications; ++n)
+    {
+      entriespaths[i++] = applications[n];
+      entriespaths[i++] = g_build_filename (applications[n], "kde", NULL);
+    }
+  g_free (applications);
+
+  for (n = 0; n < napps; ++i, ++n)
+    entriespaths[i] = apps[n];
+  g_free (apps);
+
+  for (n = 0; n < napplnk; ++i, ++n)
+    entriespaths[n] = applnk[n];
+  g_free (applnk);
+
+  g_print ("\nPATHS:\n");
+  for (n = 0; entriespaths[n] != NULL; ++n)
+    {
+      g_print ("  %s\n", entriespaths[n]);
+    }
+  g_print ("\n\n");
+}
+
 /**********
  *   main
  **********/
@@ -969,6 +1021,7 @@ main (gint argc, gchar **argv)
 {
 	t_appfinder *appfinder;
 	gtk_init(&argc, &argv);
+  build_paths ();
 	configfile = g_strconcat (xfce_get_userdir(), "/afhistory", NULL);
 	appfinder = create_interface();
 	gtk_main();

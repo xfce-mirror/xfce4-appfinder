@@ -33,6 +33,7 @@ enum
   CAT_COLS
 };
 
+#if 0
 /* Some standard paths for .desktop files */
 const char *entriespaths [] = {
 	"/usr/share/applications/",
@@ -45,6 +46,7 @@ const char *entriespaths [] = {
 	"/opt/gnome2/share/applications/",
 	NULL
 };
+#endif
 
 /* Some standard paths for icons */
 const char *iconspaths [] = {
