@@ -1,3 +1,45 @@
+2004-09-30 22:15  eduard
+
+	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
+	  configure.ac, depcomp, install-sh, ltmain.sh, src/Makefile.in:
+	  version update
+
+2004-09-29 09:59  pollux
+
+	* configure, configure.ac, po/zh_CN.gmo, po/zh_CN.po: updated zh_CN
+	  translations from yongtao yang <yongtao.yang@gmail.com>
+
+2004-09-28 21:51  eduard
+
+	* src/main.c: Fix the fix :-)
+
+2004-09-28 21:34  eduard
+
+	* src/main.c: Fix 339
+
+2004-09-23 23:36  pollux
+
+	* configure, configure.ac, po/gu.gmo, po/gu.po: add Gujarati
+	  translations (GU) from Ankit Patel <ankit@redhat.com>
+
+2004-09-23 10:22  jasper
+
+	* src/xfce4-appfinder.desktop: Add nl translations
+
+2004-09-22 05:18  kelnos
+
+	* src/xfce4-appfinder.desktop: add GenericName tags to settings
+	  .desktop files
+
+2004-09-21 13:51  jasper
+
+	* po/: be.gmo, be.po, de.gmo, de.po, eu.gmo, eu.po, it.gmo, it.po,
+	  nl.gmo, nl.po: Run make update-po at Moe's request.
+
+2004-09-21 00:22  olivier
+
+	* ChangeLog, po/xfce4-appfinder.pot: Update all ChangeLogs
+
 2004-09-19 15:34  eduard
 
 	* src/main.c: kdedir support and better syntax
