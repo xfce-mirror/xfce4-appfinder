@@ -1,46 +1,225 @@
-Thursday 2004-07-29, Eduard Roccatello
-	* Internationalization fixes (on category liststore)
+2004-09-19 15:34  eduard
 
-Monday 2004-07-26, Eduard Roccatello
-	* Recursive directory traverse (support all legacy apps)
+	* src/main.c: kdedir support and better syntax
 
-Sunday 2004-07-18, Eduard Roccatello
-	* Internationalization support
+2004-09-19 12:14  jasper
 
-Saturday 2004-07-17, Eduard Roccatello
-	* Code cleanup (use of libxfce4gui)
+	* configure, configure.ac, po/nl.gmo, po/nl.po: Update nl
+	  translations
 
-Sunday 2004-06-27, Eduard Roccatello
-	* Info box added
+2004-09-18 18:41  pollux
 
-Thursday 2004-06-24, Eduard Roccatello
-	* General clean up
-	* Menu added
+	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
+	  configure.ac, depcomp, install-sh, ltmain.sh, po/eu.gmo,
+	  po/eu.po, src/Makefile.in: update EU translations
 
-Tuesday 2004-06-22, Eduard Roccatello
-	* No item message added
-	* Some crash fixes
+2004-09-18 15:45  moe
 
-Monday 2004-06-21, Eduard Roccatello
-	* List flickering removed
-	* SIGSEGV Fixes
-	* Icon Added
+	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
+	  configure.ac, depcomp, install-sh, ltmain.sh, po/de.gmo,
+	  po/de.po, src/Makefile.in: Adding German translation
 
-Sunday 2004-06-20, Eduard Roccatello
-	* Ugly stuff removed ;-)
+2004-09-18 14:29  eduard
 
-Saturday 2004-06-19, Eduard Roccatello
-	* Some fixes on Desktop entries
-	* Deprecated things removed
+	* src/xfce4-appfinder.desktop: .desktop file missing (d'oh!)
 
-Monday 2004-06-14, Eduard Roccatello
-	* Drag and drop fixes
+2004-09-18 14:13  eduard
 
-Tuesday 2004-05-18, Eduard Roccatello
-	* Fixed crash on some app execution
-	
-Friday 2004-05-07, Eduard Roccatello
-	* Cvs IMPORT :-)
+	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
+	  depcomp, install-sh, ltmain.sh, src/Makefile.am, src/Makefile.in:
+	  .desktop added and makefile changes
 
-Sunday 2004-02-01, Eduard Roccatello
-	* First public release
+2004-09-17 00:10  pollux
+
+	* configure, configure.ac, ltmain.sh, po/be.gmo, po/be.po: add BE
+	  translations from Ales Nyakhaychyk <nab@mail.by>
+
+2004-09-15 21:31  eduard
+
+	* src/: appfinder.h, main.c: Basedir support added
+
+2004-08-24 21:57  eduard
+
+	* ChangeLog.old: forgot a file :-)
+
+2004-08-24 21:53  eduard
+
+	* Makefile.am, Makefile.in, po/Makefile.in.in,
+	  po/xfce4-appfinder.pot: make dist/rpm fixes
+
+2004-08-02 21:00  eduard
+
+	* src/callbacks.c: removed useless menu entries
+
+2004-07-29 20:46  eduard
+
+	* ChangeLog, TODO, src/callbacks.c, src/main.c:
+	  Internationalization fixes (on category liststore)
+
+2004-07-28 23:22  benny
+
+	* m4/depends.m4: Fixed (module)_FOUND bug reported by brian.
+	  Hopefully nothing else broke this time.
+
+2004-07-26 21:46  eduard
+
+	* po/it.gmo, po/it.po, src/Makefile.am, src/Makefile.in,
+	  src/af-constants.h, src/appfinder.h, src/callbacks.c,
+	  src/callbacks.h, src/main.c: Directory recursion added
+
+2004-07-24 20:52  benny
+
+	* m4/depends.m4: Readded XFCE_MCS_PLUGIN() again, dunno how I
+	  manage to remove it everytime I edit depends.m4!
+
+2004-07-24 19:30  benny
+
+	* m4/depends.m4: XFCE_PANEL_PLUGIN had wrong panel version for the
+	  threaded test.
+
+2004-07-24 19:28  benny
+
+	* m4/depends.m4: Extended the XFCE_PANEL_PLUGIN macro to include
+	  some magic for threaded panels.
+
+2004-07-22 01:00  benny
+
+	* m4/depends.m4: Readded the XFCE_MCS_PLUGIN macro. I didn't ment
+	  to remove it, tho.
+
+2004-07-20 22:58  benny
+
+	* m4/depends.m4: Modifed panel plugin check, so one (the installer)
+	  can choose to install into a different plugin dir.
+
+2004-07-18 16:19  pollux
+
+	* src/main.c: i18n fix
+
+2004-07-18 16:01  eduard
+
+	* po/it.po, po/xfce4-appfinder.pot, src/af-constants.h,
+	  src/appfinder.h, src/main.c: i18n fixes
+
+2004-07-18 15:08  eduard
+
+	* po/: ChangeLog, Makefile.in.in, POTFILES.in, it.gmo, it.po,
+	  xfce4-appfinder.pot: po files
+
+2004-07-18 15:04  eduard
+
+	* Makefile.am, Makefile.in, aclocal.m4, compile, config.guess,
+	  config.h.in, config.sub, configure, configure.ac, depcomp,
+	  install-sh, ltmain.sh, missing, mkinstalldirs, src/Makefile.in,
+	  src/af-constants.h, src/main.c: i18n support
+
+2004-07-18 11:01  eduard
+
+	* src/main.c: Fix build issue
+
+2004-07-17 19:21  eduard
+
+	* src/main.c: Remove a useless thing
+
+2004-07-17 19:09  eduard
+
+	* ChangeLog, TODO, src/main.c: Code clean and resync with
+	  libxfce4gui
+
+2004-07-17 14:20  benny
+
+	* src/: Makefile.am, af-constants.h, main.c: Fix make dist. First
+	  attempt to use XDG basedir spec, Eduard please have a look and
+	  fix it.
+
+2004-06-27 11:45  eduard
+
+	* Makefile.in, TODO, aclocal.m4, autogen.sh, src/appfinder.h,
+	  src/main.c: Added infobox to the right menu
+
+2004-06-24 20:50  eduard
+
+	* src/: appfinder.h, main.c: Some clean and reorganization.  Menu
+	  added
+
+2004-06-22 20:50  eduard
+
+	* AUTHORS, README, TODO, src/af-constants.h, src/appfinder.h,
+	  src/main.c: No item report added.  A lot of small fixes and
+	  cleanup.  Support for right click on treeview (just the callback
+	  for now).
+
+2004-06-21 21:13  eduard
+
+	* src/af-constants.h: Added af-constants.h file
+
+2004-06-21 21:02  eduard
+
+	* BUGS, TODO, src/inline-icon.h, src/main.c,
+	  src/xfce4-appfinder.png: It doesn't flicker anymore.	Code clean.
+	  Icon added.	Some bug fixed (segfaults ;-)
+
+2004-06-20 01:57  eduard
+
+	* src/main.c: Removed the labels (goto ugly stuff) and code
+	  improvements
+
+2004-06-19 22:59  eduard
+
+	* src/main.c: Fixed potential crash on categories callback
+
+2004-06-19 22:21  benny
+
+	* m4/: X11.m4, debug.m4, depends.m4, i18n.m4: Added missing .m4
+	  files.
+
+2004-06-19 22:16  eduard
+
+	* src/main.c: Speed improvements and code cleanup
+
+2004-06-19 20:43  eduard
+
+	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
+	  ltmain.sh, src/Makefile.in: Added autogen.sh and m4 directory
+
+2004-06-19 19:58  eduard
+
+	* src/main.c: Some other fixes on dentry. Deprecated things removed
+
+2004-06-19 19:00  eduard
+
+	* src/main.c: Some fixes on free()
+
+2004-06-19 14:10  eduard
+
+	* src/main.c: Code cleanup
+
+2004-06-14 22:18  eduard
+
+	* src/main.c: drag and drop fixes
+
+2004-06-13 18:48  eduard
+
+	* configure.ac, src/main.c: Drag and drop support Some bug fixed
+
+2004-05-19 22:13  eduard
+
+	* config.guess, config.sub, ltmain.sh: Added autogen.sh
+
+2004-05-18 23:06  eduard
+
+	* src/: inline-icon.h, main.c: Fixed crash on some app execution
+
+2004-05-07 21:43  eduard
+
+	* configure, configure.ac, xfce4-appfinder.spec.in, config.guess,
+	  install-sh, config.sub, Makefile.am, missing, mkinstalldirs,
+	  AUTHORS, Makefile.in, config.h.in, ChangeLog, INSTALL, COPYING,
+	  src/Makefile.am, src/inline-icon.h, src/Makefile.in, src/main.c,
+	  src/main.h, src/xfce4-appfinder.png: Initial revision
+
+2004-05-07 21:36  eduard
+
+	* BUGS, NEWS, TODO, compile, depcomp, README, aclocal.m4,
+	  ltmain.sh: Initial revision
+
