@@ -1,3 +1,62 @@
+2005-01-10 13:56  pollux
+
+	* configure, configure.ac, po/hu.gmo, po/hu.po: update HU
+	  translations
+
+2005-01-10 13:23  pollux
+
+	* src/xfce4-appfinder.desktop: update LT translations
+
+2005-01-10 12:55  pollux
+
+	* po/: lt.gmo, lt.po: update LT translations
+
+2005-01-09 13:41  pollux
+
+	* src/xfce4-appfinder.desktop: update RO translations
+
+2005-01-09 13:30  benny
+
+	* doc/C/: xfce4-appfinder.html, xfce4-appfinder.xml: Update version
+	  in documentation.
+
+2005-01-08 16:49  pollux
+
+	* configure, configure.ac, po/ru.gmo, po/ru.po,
+	  src/xfce4-appfinder.desktop: update RU translations
+
+2005-01-08 16:04  pollux
+
+	* configure, configure.ac, po/ru.gmo, po/ru.po,
+	  src/xfce4-appfinder.desktop: update RU translations
+
+2005-01-06 21:33  pollux
+
+	* configure, configure.ac, po/uk.gmo, po/uk.po: update UK
+	  translations, i hope i didn't forget any file this time
+
+2005-01-06 20:24  pollux
+
+	* configure, configure.ac, ltmain.sh, po/uk.gmo, po/uk.po: update
+	  UK translations
+
+2005-01-05 23:13  benny
+
+	* ChangeLog, ltmain.sh: Final updates
+
+2005-01-05 17:14  pollux
+
+	* po/: he.gmo, he.po: update HE translations
+
+2005-01-05 17:01  pollux
+
+	* po/: he.gmo, he.po: update HE translations
+
+2005-01-02 13:51  olivier
+
+	* ChangeLog, Makefile.in, configure, configure.ac, ltmain.sh,
+	  po/xfce4-appfinder.pot: Update version and changelog
+
 2004-12-25 21:33  kelnos
 
 	* Makefile.am: fix distcheck-bz2
@@ -471,7 +530,20 @@
 	  install-sh, config.sub, Makefile.am, missing, mkinstalldirs,
 	  AUTHORS, Makefile.in, config.h.in, ChangeLog, INSTALL, COPYING,
 	  src/Makefile.am, src/inline-icon.h, src/Makefile.in, src/main.c,
+	  src/main.h, src/xfce4-appfinder.png: Initial import
+
+2004-05-07 21:43  eduard
+
+	* configure, configure.ac, xfce4-appfinder.spec.in, config.guess,
+	  install-sh, config.sub, Makefile.am, missing, mkinstalldirs,
+	  AUTHORS, Makefile.in, config.h.in, ChangeLog, INSTALL, COPYING,
+	  src/Makefile.am, src/inline-icon.h, src/Makefile.in, src/main.c,
 	  src/main.h, src/xfce4-appfinder.png: Initial revision
+
+2004-05-07 21:36  eduard
+
+	* BUGS, NEWS, TODO, compile, depcomp, README, aclocal.m4,
+	  ltmain.sh: Initial import
 
 2004-05-07 21:36  eduard
 
