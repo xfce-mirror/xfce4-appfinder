@@ -182,7 +182,7 @@ GtkListStore *create_categories_liststore(void)
   while(categories[i])
   {
 	gtk_list_store_append(store, &iter);
-	gtk_list_store_set(store, &iter, CAT_TEXT, i18ncategories[i], -1);
+	gtk_list_store_set(store, &iter, CAT_TEXT, _(i18ncategories[i]), -1);
 	i++;
   }
   return store;

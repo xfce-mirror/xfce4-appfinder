@@ -131,7 +131,7 @@ cb_categoriestree (GtkTreeSelection *selection,
 		{
 			while (i18ncategories[i])
 			{
-				if (strcmp(i18ncategories[i], name)==0)
+				if (strcmp(_(i18ncategories[i]), name)==0)
 				{
 					next=i;
 					break;
