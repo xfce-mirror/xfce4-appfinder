@@ -531,7 +531,7 @@ build_paths (void)
     
     for (n = 0; n < napplnk; ++i, ++n)
     {
-        entriespaths[n] = applnk[n];
+        entriespaths[i] = applnk[n];
     }
     g_free (applnk);
     
