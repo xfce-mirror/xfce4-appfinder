@@ -1,3 +1,22 @@
+/*  xfce4-appfinder
+ *
+ *  Copyright (C) 2004 Eduard Roccatello (eduard@xfce.org)
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+*/
+
 #include <string.h>
 #include <gtk/gtk.h>
 #include <glib.h>
@@ -6,77 +25,8 @@
 #include <libxfcegui4/libxfcegui4.h>
 
 #include "af-constants.h"
+#include "appfinder.h"
 #include "inline-icon.h"
-
-typedef struct {
-	GtkWidget *mainwindow;
-	GtkWidget *hpaned;
-	GtkWidget *rightvbox;
-
-	GtkWidget *searchbox;
-	GtkWidget *searchlabel;
-	GtkWidget *searchentry;
-
-	GtkWidget *categoriestree;
-	GtkWidget *appstree;
-	GtkWidget *appscroll;
-} t_appfinder;
-
-int showedcat;
-const char *configfile;
-
-/*********************
- * Functions Proto
- *********************/
-void
-cb_appstree (GtkTreeView        *treeview,
-                       GtkTreePath        *path,
-                       GtkTreeViewColumn  *col,
-                       gpointer            userdata);
-void
-cb_searchentry (GtkEntry *entry,
-			gpointer userdata);
-gboolean
-cb_categoriestree (GtkTreeSelection *selection,
-                       GtkTreeModel     *model,
-                       GtkTreePath      *path,
-                       gboolean          path_currently_selected,
-                       gpointer          userdata);
-
-void
-cb_dragappstree (GtkWidget *widget, GdkDragContext *drag_context, GtkSelectionData *data,
-				guint info, guint time, gpointer user_data);
-
-GtkListStore *
-create_categories_liststore (void);
-
-GtkListStore *
-create_search_liststore(gchar *textSearch);
-
-GtkListStore *
-create_apps_liststore(void);
-
-GtkWidget *
-create_apps_treeview(gchar *textSearch);
-
-GtkWidget *
-create_categories_treeview(void);
-
-t_appfinder *
-create_interface(void);
-
-GdkPixbuf *
-load_icon_entry(gchar *img);
-
-gchar *parseExec(gchar *exec);
-
-GtkListStore *fetch_desktop_resources (gint category, gchar *pattern);
-
-gchar **parseHistory(void);
-
-gchar *get_path_from_name(gchar *name);
-
-void saveHistory(gchar *path);
 
 /**************
  * Functions
@@ -108,12 +58,30 @@ void
 cb_searchentry (GtkEntry *entry,
 			gpointer userdata)
 {
+	GtkTreeIter iter;
 	t_appfinder *af = userdata;
 	gchar *text = g_utf8_strdown(gtk_entry_get_text(entry), -1);
+	showedcat = APPFINDER_ALL;
 	gtk_list_store_clear (GTK_LIST_STORE(gtk_tree_view_get_model(GTK_TREE_VIEW(af->appstree))));
-	gtk_tree_view_set_model (GTK_TREE_VIEW(af->appstree), GTK_TREE_MODEL(fetch_desktop_resources(showedcat, text)));
-	gtk_tree_selection_unselect_all
-			(gtk_tree_view_get_selection(GTK_TREE_VIEW(af->categoriestree)));
+	gtk_tree_view_set_model (GTK_TREE_VIEW(af->appstree),
+							GTK_TREE_MODEL(fetch_desktop_resources(showedcat, text)));
+
+	/* No application found. Tell the user about it */
+	if (!gtk_tree_model_get_iter_first (gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree)), &iter))
+	{
+		gtk_list_store_append(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))), &iter);
+		gtk_list_store_set(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))),
+							&iter, APP_ICON, inline_icon_at_size (default_icon_data_48_48, 24, 24),
+							APP_TEXT, "Sorry, no match for searched text.", -1);
+		gtk_widget_set_sensitive(af->appstree, FALSE);
+	}
+	else
+	{
+		gtk_widget_set_sensitive(af->appstree, TRUE);
+	}
+
+	gtk_tree_selection_unselect_all(
+							gtk_tree_view_get_selection(GTK_TREE_VIEW(af->categoriestree)));
 	if (text)
 		g_free(text);
 }
@@ -140,7 +108,7 @@ gchar *get_path_from_name(gchar *name) {
 
 		while (!found && ((filename = (gchar *)g_dir_read_name(dir))!=NULL))
 		{
-			filename = g_strdup_printf ("%s%s", entriespaths[i], filename);
+			filename = g_strconcat(entriespaths[i], filename, NULL);
 			if (g_file_test(filename, G_FILE_TEST_IS_DIR) ||
 					!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7))) {
 				g_free(filename);
@@ -197,7 +165,7 @@ cb_appstree (GtkTreeView        *treeview,
 
 			while (!found && ((filename = (gchar *)g_dir_read_name(dir))!=NULL))
 			{
-				filename = g_strdup_printf ("%s%s", entriespaths[i], filename);
+				filename = g_strconcat(entriespaths[i], filename, NULL);
 				if (g_file_test(filename, G_FILE_TEST_IS_DIR) ||
 						!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7)))
 				{
@@ -283,13 +251,39 @@ cb_categoriestree (GtkTreeSelection *selection,
 		return TRUE;
 	showedcat = next;
 	gtk_list_store_clear (GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))));
-	gtk_tree_view_set_model (GTK_TREE_VIEW(af->appstree), GTK_TREE_MODEL(fetch_desktop_resources(showedcat, NULL)));
+	gtk_tree_view_set_model (GTK_TREE_VIEW(af->appstree),
+							GTK_TREE_MODEL(fetch_desktop_resources(showedcat, NULL)));
+
+	/* Ok there are no items in the list. Write a message and disable the treeview */
+	if (!gtk_tree_model_get_iter_first (gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree)), &iter))
+	{
+		gtk_list_store_append(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))), &iter);
+		gtk_list_store_set(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))),
+							&iter, APP_ICON, inline_icon_at_size (default_icon_data_48_48, 24, 24),
+							APP_TEXT, "No items available", -1);
+		gtk_widget_set_sensitive(af->appstree, FALSE);
+	}
+	else
+	{
+		gtk_widget_set_sensitive(af->appstree, TRUE);
+	}
     return TRUE; /* allow selection state to change */
   }
 
+gboolean
+cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer user) {
+	/* 3 is for right button */
+	if (event->button == 3)
+	{
+		g_printf("You have clicked the right button. Menu!!! Ehmmm not yet :-)\n");
+		return TRUE;
+	}
+	/* If hasn't been clicked with right button let's propagate the event */
+	return FALSE;
+}
 
 /**********
- * create_interface 
+ * create_interface
  **********/
 t_appfinder *create_interface(void)
 {
@@ -329,8 +323,14 @@ t_appfinder *create_interface(void)
 	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(af->appscroll), GTK_SHADOW_IN);
 	gtk_scrolled_window_set_policy  (GTK_SCROLLED_WINDOW(af->appscroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 	gtk_box_pack_start(GTK_BOX(af->rightvbox), af->appscroll, TRUE, TRUE, 0);
-	af->appstree = create_apps_treeview(NULL);
+	af->appstree = create_apps_treeview();
+	gtk_tree_view_enable_model_drag_source(GTK_TREE_VIEW(af->appstree),
+										GDK_BUTTON1_MASK, gte, 5, GDK_ACTION_COPY);
 	g_signal_connect(af->appstree, "row-activated", (GCallback) cb_appstree, NULL);
+	g_signal_connect(af->appstree, "drag-data-get", (GCallback) cb_dragappstree, NULL);
+	g_signal_connect(af->appstree, "button-press-event", G_CALLBACK(cb_appstreeclick), af->appstree);
+
+
 	gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(af->appscroll), af->appstree);
 
 	gtk_window_set_position(GTK_WINDOW(af->mainwindow), GTK_WIN_POS_CENTER_ALWAYS);
@@ -479,23 +479,14 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 	GPatternSpec  *ptrn = NULL;
 	GDir *dir = NULL;
 	gboolean found = FALSE;
-	gchar *filename;
-	gchar *comment;
-	gchar *name;
-	gchar *img;
-	gchar *dcategories;
+	gchar *filename = NULL;
+	gchar *comment = NULL;
+	gchar *name = NULL;
+	gchar *img = NULL;
+	gchar *dcategories = NULL;
 	gchar **cats = NULL;
-	gint x = 0;
-	gint i = 0;
-
-	if (pattern != NULL)
-	{
-		gchar *tmp = g_strdelimit (pattern, " ", '*');
-		tmp = g_strdup_printf ("*%s*", tmp);
-		ptrn = g_pattern_spec_new (tmp);
-		if (tmp)
-			g_free(tmp);
-	}
+	gint x = 0; /* A counter for category section */
+	gint i = 0; /* A counter for general use */
 
 	store = gtk_list_store_new(APP_COLS, GDK_TYPE_PIXBUF, G_TYPE_STRING);
 	if (category==APPFINDER_HISTORY) {
@@ -537,16 +528,28 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 		}
 	}
 	else {
+		if (pattern != NULL)
+		{
+			gchar *tmp = g_strdelimit (pattern, " ", '*');
+			tmp = g_strdup_printf ("*%s*", tmp);
+			ptrn = g_pattern_spec_new (tmp);
+			if (tmp)
+				g_free(tmp);
+		}
+
 		while (entriespaths[i]!=NULL) {
 			if ((dir = g_dir_open (entriespaths[i], 0, NULL))!=NULL)
 			{
 				while ((filename = (gchar *)g_dir_read_name(dir))!=NULL)
 				{
-					filename = g_strdup_printf ("%s%s", entriespaths[i], filename);
+					filename = g_strconcat (entriespaths[i], filename, NULL);
 					if (g_file_test(filename, G_FILE_TEST_IS_DIR) ||
-							!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7)))
+							!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7)) || !dentry)
 					{
-						g_free(filename);
+						if (filename) {
+							g_free(filename);
+							filename = NULL;
+						}
 						continue;
 					}
 
@@ -582,18 +585,22 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 									if (dentry)
 										g_object_unref (dentry);
 
-									if (filename)
+									if (filename) {
 										g_free(filename);
+										filename = NULL;
+									}
 
 									continue;
 								}
 							}
 					}
 
-					if (!xfce_desktop_entry_get_string (dentry, "Name", FALSE, &name))
+					if (!xfce_desktop_entry_get_string (dentry, "Name", FALSE, &name) || !name)
 					{
-						if (dentry)
+						if (dentry) {
 							g_object_unref (dentry);
+							dentry = NULL;
+						}
 
 						if (name)
 							g_free(name);
@@ -621,8 +628,10 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 								g_free(comment);
 							if (filename)
 								g_free(filename);
-							if (dentry)
+							if (dentry) {
 								g_object_unref (dentry);
+								dentry = NULL;
+							}
 							continue;
 						}
 						if (comment)
@@ -645,23 +654,33 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 						APP_TEXT, name,
 						-1);
 
-					if (name)
+					if (name) {
 						g_free(name);
+						name = NULL;
+					}
 
-					if (icon)
+					if (icon) {
 						g_object_unref (icon);
+						icon = NULL;
+					}
 
-					if (dentry)
+					if (dentry) {
 						g_object_unref (dentry);
+						dentry = NULL;
+					}
 
-					if (filename)
+					if (filename) {
 						g_free(filename);
+						filename = NULL;
+					}
 				}
 				g_dir_close(dir);
 			}
 			i++;
 		}
 	}
+	/* There are no elements in the tree, leave a message */
+
 	if (ptrn)
 		g_pattern_spec_free (ptrn);
 	return store;
@@ -689,23 +708,17 @@ GtkListStore *create_search_liststore(gchar *textSearch)
 }
 
 
-/**********
- *   create_categories_treeview
- **********/
+/*
+ * Create a new treeview for applications installed on the system
+ */
 GtkWidget *
-create_apps_treeview(gchar *textSearch)
+create_apps_treeview()
 {
-	GtkTreeModel      *model;
 	GtkTreeViewColumn *col;
 	GtkCellRenderer   *renderer;
 	GtkWidget         *view;
 
-	if (textSearch)
-		model = GTK_TREE_MODEL(create_search_liststore(textSearch));
-	else
-		model = GTK_TREE_MODEL(create_apps_liststore());
-
-	view = gtk_tree_view_new_with_model(model);
+	view = gtk_tree_view_new_with_model(GTK_TREE_MODEL(create_apps_liststore()));
 
 	col = gtk_tree_view_column_new();
 	gtk_tree_view_set_headers_visible (GTK_TREE_VIEW(view), FALSE);
@@ -723,8 +736,7 @@ create_apps_treeview(gchar *textSearch)
 	                                    NULL);
 
 	gtk_tree_view_append_column(GTK_TREE_VIEW(view), col);
-	gtk_tree_view_enable_model_drag_source(GTK_TREE_VIEW(view),                                        											GDK_BUTTON1_MASK, gte, 5, GDK_ACTION_COPY);
-	g_signal_connect(view, "drag-data-get", (GCallback) cb_dragappstree, NULL);
+
 	return view;
 }
 
@@ -772,7 +784,7 @@ main (gint argc, gchar **argv)
 {
 	t_appfinder *appfinder;
 	gtk_init(&argc, &argv);
-	configfile = g_strdup_printf ("%s/afhistory", xfce_get_userdir ());
+	configfile = g_strconcat (xfce_get_userdir(), "/afhistory", NULL);
 	appfinder = create_interface();
 	gtk_main();
 	return 0;

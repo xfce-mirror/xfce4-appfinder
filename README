@@ -3,8 +3,19 @@ README for xfce4-appfinder
 
 WHAT IS IT?
 -----------
-A tool to find apps in your system ;-)
+Xfce4 Appfinder is an useful software that permits you to find every
+application in the system supporting Desktop entry format.
+
+WHAT CAN I DO WITH IT?
+----------------------
+Search for "lost" software, add entries to xfdesktop menu,
+add launchers to the panel (not yet :-) and obviously run the selected
+software from it.
+
+SOMETHING MORE?
+---------------
+Please check TODO file ;-)
 
 WHO DID IT?
 -----------
-(c) 2004 Eduard Roccatello (master at spine-group.org)
+(c) 2004 Eduard Roccatello (eduard@xfce.org)
