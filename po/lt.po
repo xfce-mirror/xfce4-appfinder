@@ -1,0 +1,87 @@
+# Lithuanian translation of PACKAGE.
+# Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Mantas <mantaz@gmail.com>, 2004.
+# , fuzzy
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-10-11 18:28+0200\n"
+"PO-Revision-Date: 2004-10-29 22:32+0300\n"
+"Last-Translator: Mantas <mantaz@gmail.com>\n"
+"Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: src/main.c:98 src/main.c:104
+msgid "Now starting"
+msgstr "Dabar paleidžiama"
+
+#: src/main.c:112
+msgid "Cannot execute"
+msgstr "Neįmnoma įvykdyti"
+
+#: src/main.c:148
+msgid "<b>Search:</b>"
+msgstr "<b>Ieškoti:</b>"
+
+#: src/main.c:205
+msgid "Categories"
+msgstr "Kategorijos"
+
+#: src/af-constants.h:72
+msgid "All"
+msgstr "Visi"
+
+#: src/af-constants.h:73
+msgid "Recently Used"
+msgstr "Nesenai Naudotos"
+
+#: src/af-constants.h:74
+msgid "Core"
+msgstr "Pagrindinės"
+
+#: src/af-constants.h:75
+msgid "Development"
+msgstr "Kūrimas"
+
+#: src/af-constants.h:76
+msgid "Office"
+msgstr "Biuro Programos"
+
+#: src/af-constants.h:77
+msgid "Graphics"
+msgstr "Grafika"
+
+#: src/af-constants.h:78
+msgid "Network"
+msgstr "Tinklas"
+
+#: src/af-constants.h:79
+msgid "AudioVideo"
+msgstr "Audio Video"
+
+#: src/af-constants.h:80
+msgid "Game"
+msgstr "Žaidimai"
+
+#: src/af-constants.h:81
+msgid "Education"
+msgstr "Mokomosios"
+
+#: src/af-constants.h:82
+msgid "System"
+msgstr "Sistemos"
+
+#: src/af-constants.h:83
+msgid "Filemanager"
+msgstr "Bylų Tvarkyklės"
+
+#: src/af-constants.h:84
+msgid "Utility"
+msgstr "Pagalbinės"
+
