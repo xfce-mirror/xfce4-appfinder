@@ -310,10 +310,7 @@ void cb_menuinfo (GtkMenuItem *menuitem, gpointer data)
 		if (iconpath)
 		{
 			icon = xfce_themed_icon_load(iconpath, 48);
-			if (icon)
-				icon = gdk_pixbuf_scale_simple(icon, 48, 48, GDK_INTERP_BILINEAR);
-			else
-			{
+			if (!icon)
 				icon = xfce_inline_icon_at_size (default_icon_data_48_48, 48, 48);
 				icon2 = gdk_pixbuf_copy (icon);
 				gdk_pixbuf_saturate_and_pixelate(icon, icon2, 0.0, TRUE);
