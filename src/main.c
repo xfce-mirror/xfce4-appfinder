@@ -511,9 +511,12 @@ build_paths (void)
     
     entriespaths[i++] = xfce_get_homefile (".kde", "share", "apps", NULL);
     entriespaths[i++] = xfce_get_homefile (".kde", "share", "applnk", NULL);
-    if (kdedir = (gchar *)getenv("KDEDIR"))
+    if ((kdedir = g_strdup(g_getenv("KDEDIR"))) != NULL)
     {
-        entriespaths[i++] = g_build_filename (kdedir, "share/applications/kde", NULL); 
+        entriespaths[i++] = g_build_filename (kdedir, "share",  "applications",  "kde", NULL); 
+        printf ("%s\n", entriespaths[i - 1]);
+        g_free(kdedir);
+        
     }
     
     for (n = 0; n < napplications; ++n)
