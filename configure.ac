@@ -3,7 +3,7 @@ dnl
 
 AC_INIT([src/main.c])
 
-AM_INIT_AUTOMAKE([xfce4-appfinder], [0.4.0])
+AM_INIT_AUTOMAKE([xfce4-appfinder], [4.1.90])
 
 AM_CONFIG_HEADER([config.h])
 
