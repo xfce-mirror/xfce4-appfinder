@@ -53,13 +53,15 @@ CONFIG_CLEAN_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
 PROGRAMS = $(bin_PROGRAMS)
-am_xfce4_appfinder_OBJECTS = xfce4_appfinder-main.$(OBJEXT)
+am_xfce4_appfinder_OBJECTS = xfce4_appfinder-callbacks.$(OBJEXT) \
+	xfce4_appfinder-main.$(OBJEXT)
 xfce4_appfinder_OBJECTS = $(am_xfce4_appfinder_OBJECTS)
 xfce4_appfinder_DEPENDENCIES =
 DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
-@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/xfce4_appfinder-main.Po
+@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/xfce4_appfinder-callbacks.Po \
+@AMDEP_TRUE@	./$(DEPDIR)/xfce4_appfinder-main.Po
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) \
@@ -196,6 +198,8 @@ xfce4_appfinder_SOURCES = \
 	af-constants.h							\
 	appfinder.h							\
 	inline-icon.h							\
+	callbacks.c							\
+	callbacks.h							\
 	main.c								\
 	main.h
 
@@ -282,6 +286,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xfce4_appfinder-callbacks.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xfce4_appfinder-main.Po@am__quote@
 
 .c.o:
@@ -307,6 +312,30 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LTCOMPILE) -c -o $@ $<
+
+xfce4_appfinder-callbacks.o: callbacks.c
+@am__fastdepCC_TRUE@	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(xfce4_appfinder_CFLAGS) $(CFLAGS) -MT xfce4_appfinder-callbacks.o -MD -MP -MF "$(DEPDIR)/xfce4_appfinder-callbacks.Tpo" -c -o xfce4_appfinder-callbacks.o `test -f 'callbacks.c' || echo '$(srcdir)/'`callbacks.c; \
+@am__fastdepCC_TRUE@	then mv -f "$(DEPDIR)/xfce4_appfinder-callbacks.Tpo" "$(DEPDIR)/xfce4_appfinder-callbacks.Po"; else rm -f "$(DEPDIR)/xfce4_appfinder-callbacks.Tpo"; exit 1; fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='callbacks.c' object='xfce4_appfinder-callbacks.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/xfce4_appfinder-callbacks.Po' tmpdepfile='$(DEPDIR)/xfce4_appfinder-callbacks.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(xfce4_appfinder_CFLAGS) $(CFLAGS) -c -o xfce4_appfinder-callbacks.o `test -f 'callbacks.c' || echo '$(srcdir)/'`callbacks.c
+
+xfce4_appfinder-callbacks.obj: callbacks.c
+@am__fastdepCC_TRUE@	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(xfce4_appfinder_CFLAGS) $(CFLAGS) -MT xfce4_appfinder-callbacks.obj -MD -MP -MF "$(DEPDIR)/xfce4_appfinder-callbacks.Tpo" -c -o xfce4_appfinder-callbacks.obj `if test -f 'callbacks.c'; then $(CYGPATH_W) 'callbacks.c'; else $(CYGPATH_W) '$(srcdir)/callbacks.c'; fi`; \
+@am__fastdepCC_TRUE@	then mv -f "$(DEPDIR)/xfce4_appfinder-callbacks.Tpo" "$(DEPDIR)/xfce4_appfinder-callbacks.Po"; else rm -f "$(DEPDIR)/xfce4_appfinder-callbacks.Tpo"; exit 1; fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='callbacks.c' object='xfce4_appfinder-callbacks.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/xfce4_appfinder-callbacks.Po' tmpdepfile='$(DEPDIR)/xfce4_appfinder-callbacks.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(xfce4_appfinder_CFLAGS) $(CFLAGS) -c -o xfce4_appfinder-callbacks.obj `if test -f 'callbacks.c'; then $(CYGPATH_W) 'callbacks.c'; else $(CYGPATH_W) '$(srcdir)/callbacks.c'; fi`
+
+xfce4_appfinder-callbacks.lo: callbacks.c
+@am__fastdepCC_TRUE@	if $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(xfce4_appfinder_CFLAGS) $(CFLAGS) -MT xfce4_appfinder-callbacks.lo -MD -MP -MF "$(DEPDIR)/xfce4_appfinder-callbacks.Tpo" -c -o xfce4_appfinder-callbacks.lo `test -f 'callbacks.c' || echo '$(srcdir)/'`callbacks.c; \
+@am__fastdepCC_TRUE@	then mv -f "$(DEPDIR)/xfce4_appfinder-callbacks.Tpo" "$(DEPDIR)/xfce4_appfinder-callbacks.Plo"; else rm -f "$(DEPDIR)/xfce4_appfinder-callbacks.Tpo"; exit 1; fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='callbacks.c' object='xfce4_appfinder-callbacks.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/xfce4_appfinder-callbacks.Plo' tmpdepfile='$(DEPDIR)/xfce4_appfinder-callbacks.TPlo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(xfce4_appfinder_CFLAGS) $(CFLAGS) -c -o xfce4_appfinder-callbacks.lo `test -f 'callbacks.c' || echo '$(srcdir)/'`callbacks.c
 
 xfce4_appfinder-main.o: main.c
 @am__fastdepCC_TRUE@	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(xfce4_appfinder_CFLAGS) $(CFLAGS) -MT xfce4_appfinder-main.o -MD -MP -MF "$(DEPDIR)/xfce4_appfinder-main.Tpo" -c -o xfce4_appfinder-main.o `test -f 'main.c' || echo '$(srcdir)/'`main.c; \

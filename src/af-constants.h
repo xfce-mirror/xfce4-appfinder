@@ -37,7 +37,7 @@ enum
 };
 
 /* What to search for in .desktop files */
-const char *keys [] = {
+static const char *keys [] = {
 	"Name",
 	"Comment",
 	"Icon",
@@ -48,7 +48,7 @@ const char *keys [] = {
 	NULL
 };
 
-const char *categories [] = {
+static const char *categories [] = {
 	"All",
 	"Recently Used",
 	"Core",
@@ -65,7 +65,7 @@ const char *categories [] = {
 	NULL
 };
 
-char *i18ncategories [] = {
+static const char *i18ncategories [] = {
 	N_("All"),
 	N_("Recently Used"),
 	N_("Core"),
@@ -83,7 +83,7 @@ char *i18ncategories [] = {
 };
 
 /* Places where i can drop things */
-GtkTargetEntry gte[] = {{"DESKTOP_PATH_ENTRY", 0, 0},
+static GtkTargetEntry gte[] = {{"DESKTOP_PATH_ENTRY", 0, 0},
 	{"text/plain", 0, 1},
 	{"application/x-desktop", 0, 2},
 	{"STRING", 0, 3},

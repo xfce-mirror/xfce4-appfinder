@@ -1,9 +1,11 @@
 bin_PROGRAMS = xfce4-appfinder
 
-xfce4_appfinder_SOURCES = 						\
+xfce4_appfinder_SOURCES = 					\
 	af-constants.h							\
 	appfinder.h							\
 	inline-icon.h							\
+	callbacks.c							\
+	callbacks.h							\
 	main.c								\
 	main.h
 

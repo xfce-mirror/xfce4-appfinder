@@ -20,7 +20,8 @@
 #ifndef __HAVE_APPFINDER_H
 #define __HAVE_APPFINDER_H
 
-typedef struct {
+typedef struct _appfinder Appfinder;
+struct _appfinder {
 	GtkWidget *mainwindow;
 	GtkWidget *hpaned;
 	GtkWidget *rightvbox;
@@ -32,7 +33,7 @@ typedef struct {
 	GtkWidget *categoriestree;
 	GtkWidget *appstree;
 	GtkWidget *appscroll;
-} t_appfinder;
+} _appfinder;
 
 typedef struct _afdialog AfDialog;
 struct _afdialog {
@@ -53,36 +54,14 @@ struct _afdialog {
 };
 
 int showedcat;
+int npaths;
 const char *configfile;
 
 /*********************
  * Functions Proto
  *********************/
-void
-cb_appstree (GtkTreeView        *treeview,
-                       GtkTreePath        *path,
-                       GtkTreeViewColumn  *col,
-                       gpointer            userdata);
-void
-cb_searchentry (GtkEntry *entry,
-			gpointer userdata);
-gboolean
-cb_categoriestree (GtkTreeSelection *selection,
-                       GtkTreeModel     *model,
-                       GtkTreePath      *path,
-                       gboolean          path_currently_selected,
-                       gpointer          userdata);
 
-void
-cb_dragappstree (GtkWidget *widget, GdkDragContext *drag_context, GtkSelectionData *data,
-				guint info, guint time, gpointer user_data);
-
-gboolean
-cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer treeview);
-
-void cb_menurun (GtkMenuItem *menuitem, gpointer data);
-
-void cb_menuinfo (GtkMenuItem *menuitem, gpointer data);
+gboolean xfce_appfinder_list_add (XfceDesktopEntry *dentry, GtkListStore *store, GPatternSpec  *psearch, GPatternSpec  *pcat);
 
 GtkListStore *
 create_categories_liststore (void);
@@ -99,13 +78,8 @@ create_apps_treeview(void);
 GtkWidget *
 create_categories_treeview(void);
 
-t_appfinder *
+Appfinder *
 create_interface(void);
-
-GdkPixbuf *
-load_icon_entry(gchar *img);
-
-gchar *parseExec(gchar *exec);
 
 GtkListStore *fetch_desktop_resources (gint category, gchar *pattern);
 

@@ -67,43 +67,43 @@ msgid "Categories"
 msgstr "Categorie"
 
 msgid "Now starting"
-msgstr ""
+msgstr "Avvio"
 
 msgid "Cannot execute"
-msgstr ""
+msgstr "Non posso eseguire"
 
 msgid "All"
-msgstr ""
+msgstr "Tutte"
 
 msgid "Recently Used"
-msgstr ""
+msgstr "Usati di recente"
 
 msgid "Core"
-msgstr ""
+msgstr "Principali"
 
 msgid "Development"
-msgstr ""
+msgstr "Sviluppo"
 
 msgid "Office"
-msgstr ""
+msgstr "Ufficio"
 
 msgid "Graphics"
-msgstr ""
+msgstr "Grafica"
 
 msgid "Network"
-msgstr ""
+msgstr "Rete ed internet"
 
 msgid "AudioVideo"
-msgstr ""
+msgstr "Multimedia"
 
 msgid "Game"
-msgstr ""
+msgstr "Gioco"
 
 msgid "Education"
-msgstr ""
+msgstr "Educativi"
 
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 msgid "Filemanager"
 msgstr ""
