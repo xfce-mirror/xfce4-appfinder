@@ -1,6 +1,6 @@
 /*  xfce4-appfinder
  *
- *  Copyright (C) 2004 Eduard Roccatello (eduard@xfce.org)
+ *  Copyright (C) 2004-2005 Eduard Roccatello (eduard@xfce.org)
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -65,7 +65,7 @@ gchar *get_path_from_name(gchar *name) {
                     continue;
             }
 
-            if (xfce_desktop_entry_get_string (dentry, "Name", FALSE, &dname) && dname) {
+            if (xfce_desktop_entry_get_string (dentry, "Name", TRUE, &dname) && dname) {
                     if (strcmp(dname, name)==0)
                             found = TRUE;
                     g_free(dname);
@@ -88,7 +88,7 @@ void execute_from_name (gchar *name)
 
     if ((filepath = get_path_from_name(name)) &&
         XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filepath, keys, 7)) &&
-        xfce_desktop_entry_get_string (dentry, "Exec", FALSE, &exec))
+        xfce_desktop_entry_get_string (dentry, "Exec", TRUE, &exec))
     {
         saveHistory(filepath);
         if (exec)
@@ -225,14 +225,14 @@ gboolean xfce_appfinder_list_add (XfceDesktopEntry *dentry, GtkListStore *store,
     gchar *dcat = NULL;
     gchar *comment = NULL;
 
-    if (!(xfce_desktop_entry_get_string (dentry, "Name", FALSE, &name) && name))
+    if (!(xfce_desktop_entry_get_string (dentry, "Name", TRUE, &name) && name))
     {
             return FALSE;
     }
 
     if (pcat)
     {
-        if (!(xfce_desktop_entry_get_string (dentry, "Categories", FALSE, &dcat) && dcat))
+        if (!(xfce_desktop_entry_get_string (dentry, "Categories", TRUE, &dcat) && dcat))
         {
             return FALSE;
         }
@@ -246,7 +246,7 @@ gboolean xfce_appfinder_list_add (XfceDesktopEntry *dentry, GtkListStore *store,
     
     if (psearch)
     {
-        xfce_desktop_entry_get_string (dentry, "Comment", FALSE, &comment);
+        xfce_desktop_entry_get_string (dentry, "Comment", TRUE, &comment);
         if (!(comment && g_pattern_match_string (psearch, g_utf8_casefold(comment, -1))) &&
                     !g_pattern_match_string (psearch, name))
         {
@@ -254,7 +254,7 @@ gboolean xfce_appfinder_list_add (XfceDesktopEntry *dentry, GtkListStore *store,
         }
     }
 
-    if (xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &img) && img)
+    if (xfce_desktop_entry_get_string (dentry, "Icon", TRUE, &img) && img)
     {
         icon = xfce_themed_icon_load(img, 24);
         g_free(img);
@@ -279,7 +279,7 @@ gboolean xfce_appfinder_list_add (XfceDesktopEntry *dentry, GtkListStore *store,
     return TRUE;
 }
 
-/*
+/**
  * This function handles all the searches into desktop files
  *
  * @param category - the category to search for (defined into the array in the header)
