@@ -1,9 +1,8 @@
 # Lithuanian translation of XFCE4-Appfinder.
 # Copyright (C) 2004 THE XFCE4-Appfinder'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the XFCE4-Appfinder package.
-# Mantas <mantaz@gmail.com>, 2004.
-# , fuzzy
-# Mantas <mantaz@gmail.com>, 2005.
+# Mantas <mantaz@gmail.com>, 2004 - 2005,
+# Rimas Kudelis <rq@akl.lt>, 2005.
 # 
 # 
 msgid ""
@@ -11,7 +10,7 @@ msgstr ""
 "Project-Id-Version: XFCE4-Appfinder 4.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-10-11 18:28+0200\n"
-"PO-Revision-Date: 2005-01-07 00:30+0200\n"
+"PO-Revision-Date: 2005-01-18 00:44+0200\n"
 "Last-Translator: Rimas Kudelis <rq@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +23,7 @@ msgstr "Dabar vykdoma"
 
 #: src/main.c:112
 msgid "Cannot execute"
-msgstr "Neįmanoma įvykdyti"
+msgstr "Nepavyko įvykdyti"
 
 #: src/main.c:148
 msgid "<b>Search:</b>"
@@ -40,7 +39,7 @@ msgstr "Visos"
 
 #: src/af-constants.h:73
 msgid "Recently Used"
-msgstr "Nesenai Naudotos"
+msgstr "Neseniai naudotos"
 
 #: src/af-constants.h:74
 msgid "Core"
@@ -48,7 +47,7 @@ msgstr "Pagrindinės"
 
 #: src/af-constants.h:75
 msgid "Development"
-msgstr "Kūrimas"
+msgstr "Programavimo įrankiai"
 
 #: src/af-constants.h:76
 msgid "Office"
