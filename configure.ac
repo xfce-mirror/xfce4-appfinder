@@ -3,7 +3,7 @@ dnl
 
 AC_INIT([src/main.c])
 
-AM_INIT_AUTOMAKE([xfce4-appfinder], [4.2.0])
+AM_INIT_AUTOMAKE([xfce4-appfinder], [4.3.0])
 
 AM_CONFIG_HEADER([config.h])
 
@@ -40,5 +40,7 @@ src/Makefile
 doc/Makefile
 doc/C/Makefile
 doc/C/images/Makefile
+doc/fr/Makefile
+doc/fr/images/Makefile
 ])
 

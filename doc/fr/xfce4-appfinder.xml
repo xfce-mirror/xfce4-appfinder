@@ -1,0 +1,214 @@
+<?xml version='1.0'?> 
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY manrevision "1.2"> 
+  <!ENTITY date "November 2004"> 
+  <!ENTITY appversion "4.2"> 
+  <!ENTITY app "<application>xfce4-appfinder</application>">
+]>
+
+<article id="xfce4-appfinder" lang="fr">
+
+<!-- Header --> 
+<articleinfo>
+
+  <title>Le chercheur d'applications de Xfce 4</title>
+  
+  <copyright>
+    <year>2004</year> <holder>Eduard Roccatello</holder>
+  </copyright>
+
+<!-- translators: uncomment this: -->
+
+  <copyright>
+   <year>2005</year> <holder>M.C. Collilieux (French
+   translation)</holder>
+  </copyright>
+
+ 
+
+<!-- I don't know about this
+  <legalnotice id="legalnotice">
+    <para>
+      This document is provided under the terms of the GNU GPL, version
+      2 or (at your option) any later version.
+    </para>
+  </legalnotice>
+-->
+  <authorgroup>
+
+    <author>
+      <firstname>Eduard</firstname> <surname>Roccatello</surname>
+      <affiliation>
+	<address><email>eduard@xfce.org</email></address>
+      </affiliation>
+    </author>
+
+<!-- This is appropriate place for other contributors: translators,
+maintainers, etc. Commented out by default. -->
+
+    <othercredit role="translator">
+      <firstname>Marie-Claude</firstname> <surname>Collilieux</surname>
+      <affiliation>
+	<orgname>French Translation Team</orgname>
+	<address><email>m.collilieux@free.fr</email> </address>
+      </affiliation> <contrib>French translation</contrib>
+    </othercredit>
+
+
+  </authorgroup>
+
+  <!--
+  <revhistory>
+    <revision>
+      <revnumber>0.4</revnumber> 
+      <date>May 2003</date>
+      <authorinitials>jbh</authorinitials>
+    </revision>
+    <revision>
+      <revnumber>0.3</revnumber> 
+      <date>February 2003</date>
+      <authorinitials>jbh</authorinitials>
+    </revision>
+  </revhistory>
+  -->
+
+  <releaseinfo>Ce manuel décrit &app; version &appversion;. 
+    dernière mise à jour : &date;
+  </releaseinfo>
+
+</articleinfo>
+
+  <!-- extra space -->
+  <para>&nbsp;</para>
+  
+<sect1 id="appfinder-intro">
+  <title>Introduction</title>
+
+  <para>
+    Le chercheur d'applications de Xfce 4 fait partie de l'<ulink url="http://www.xfce.org" type="html">environnement de bureau de XFce</ulink>, il permet de rechercher des applications dans tout le système. Il recherche les fichiers <filename>.desktop</filename> basés sur les définitions du freedesktop et construit un index des applications trouvées.
+  </para>
+
+</sect1>
+
+  <!-- extra space -->
+  <para>&nbsp;</para>
+  
+<sect1 id="appfinder-getting-started">
+  <title>Pour démarrer</title>
+  
+  <para>Vous pouvez lancer le chercheur d'application à partir de la console avec la commande <command>xfce4-appfinder</command> ou le charger par l'intermédiaire de l'icône du lanceur sur le panneau.
+  </para>
+
+  <para>
+    Lorsque vous démarrez le chercheur d'applications, vous voyez apparaître une fenêtre au centre de votre écran, ressemblant à ceci : 
+  </para>
+
+  <figure id="default-appfinder-fig">
+    <title>Le chercheur d'applications Xfce4</title> 
+    <screenshot>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/default_appfinder.png" format="PNG"/>
+	</imageobject> 
+	<textobject>
+	  <phrase>La fenêtre du chercheur d'applications est coupée en deux : du coté gauche, vous avez les catégories et du coté droit les applications trouvées pour la catégorie choisie. Elle comprend aussi une zone pour rechercher une application correspondant à un mot-clé.
+	  </phrase>
+	</textobject>
+      </mediaobject>
+    </screenshot>
+  </figure>
+
+  <para>
+    Double-cliquer sur une application la lance tandis qu'un clic droit ouvre un menu permettant d'accèder à des informations sur l'application choisie.
+  </para>
+
+  <figure id="handle-popup-fig">
+    <title>Menu popup</title> 
+    <screenshot>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/appfinder-handle-popup.png" format="PNG"/>
+	</imageobject> 
+	<textobject>
+	  <phrase>Menu popup sur un clic droit.</phrase>
+	</textobject>
+      </mediaobject>
+    </screenshot>
+  </figure>
+
+  <para>
+  La fenêtre d'information est utile pour obtenir tous les détails du fichier desktop. Nous pouvons voir les informations sur le nom, les commentaires, les catégories et la commande.
+  </para>
+
+  <figure id="item-popup-fig">
+    <title>Fenêtre d'information sur un item</title> 
+    <screenshot>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/appfinder-item-popup.png" format="PNG"/>
+	</imageobject> 
+	<!-- 
+	<imageobject>
+	  <imagedata fileref="images/item-popup.eps" format="EPS"/>
+	</imageobject> 
+	--> 
+	<textobject>
+	  <phrase>Fenêtre d'information sur un item.</phrase>
+	</textobject>
+      </mediaobject>
+    </screenshot>
+  </figure>
+
+</sect1>
+
+  <!-- extra space -->
+  <para>&nbsp;</para>
+  
+<sect1 id="appfinder-advanced">
+  <title>Fonctions avancées du chercheur d'applications</title>
+
+  <para>
+    Le chercheur d'applications de Xfce peut interagir avec d'autres applications par le glisser-déposer. Actuellement, il peut déposer des items dans l'éditeur de menu et dans certains éléments du panneau de Xfce.
+  </para>
+  
+  <para>
+    Vous pouvez éditer le menu du bureau dans l'éditeur de menu Xfce 4 avec un glisser-déposer à partir du chercheur d'applications.
+    Rechercher une application et l'ajouter au menu du bureau devient plus facile et plus rapide. Il vous suffit de choisir un item dans la liste du chercheur d'applications, de le faire glisser sur la liste de l'éditeur de menu et d'admirer le résultat.
+  </para>
+
+  <para>
+    Le chercheur d'applications de Xfce 4 permet aussi le glisser-déposer sur le lanceur de  la gestion des paramètres.
+    Vous pouvez deplacer un item du chercheur d'applications vers la zone de saisie de la  commande d'un bouton lanceur et voir la commande s'écrire entièrement, Une manière rapide d'ajouter de nouvelles applications.
+  </para>
+</sect1>
+
+  
+  <!-- extra space -->
+  <para>&nbsp;</para>
+  
+<sect1 id="appfinder-copyright">
+  <title>À propos de &app;</title>
+
+  <para>&app; est écrit par Eduard Roccatello 
+    (<email>eduard@xfce.org</email>). Vous trouverez des informations supplémentaires sur le <ulink url="http://www.xfce.org" type="http">site web Xfce</ulink>. 
+  </para>
+
+  <para>Pour soumettre un bogue ou faire une suggestion sur l'application 
+    ou sur le manuel, utilisez le système de rapport de bogue à <ulink 
+      url="http://bugzilla.xfce.org/" 
+      type="http">http://bugzilla.xfce.org/</ulink>.
+  </para>
+
+  <para>Si vous avez des questions sur l'utilisation ou l'installation de ce paquetage, écrivez à la <ulink url="http://lunar-linux.org/mailman/listinfo/xfce" type="http">liste de diffusion xfce</ulink>. Les discussions sur le développement se tiennent sur la <ulink url="http://lunar-linux.org/mailman/listinfo/xfce4-dev" type="http">liste de diffusion xfce4-dev</ulink>.
+  </para>
+    
+  <para>&app; est distribué suivant les termes de la GNU General Public License publiée par la Free Software Foundation, soit la version 2, soit (à votre convenance) une version ultérieure.
+  </para>
+
+  <para>Vous devez avoir reçu une copie de la GNU General Public License avec ce programme. Si ce n'est pas le cas, écrivez à la Free Software Foundation, Inc.,, 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+  </para>
+
+</sect1>
+
+</article>
