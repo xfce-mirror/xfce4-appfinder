@@ -1,3 +1,12 @@
+2004-11-06 17:24  olivier
+
+	* ChangeLog, Makefile.in, aclocal.m4, compile, config.guess,
+	  config.sub, configure, configure.ac, depcomp, install-sh,
+	  missing, src/Makefile.in: Update
+	  automake/autoconf/libtool/gettext versions to generate the
+	  configure scripts and Makefiles, Update versions of all packages
+	  to 4.1.99.1 (ie 4.2 RC1), Update ChangeLogs.
+
 2004-10-30 21:03  olivier
 
 	* ChangeLog, ltmain.sh: Global update for 4.1.91 (Xfce 4.2 beta 2)
