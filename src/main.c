@@ -1,7 +1,9 @@
+#include <string.h>
 #include <gtk/gtk.h>
 #include <glib.h>
 
 #include <libxfce4util/libxfce4util.h>
+#include <libxfcegui4/libxfcegui4.h>
 
 #define APPFINDER_ALL 0
 #define APPFINDER_HISTORY 1
@@ -409,6 +411,7 @@ t_appfinder *create_interface(void)
 	gtk_window_set_default_size(GTK_WINDOW(af->mainwindow), gdk_screen_width ()/2, gdk_screen_height()/2);
 
 	gtk_widget_show_all(af->mainwindow);
+	return af;
 }
 
 /**********
@@ -473,7 +476,7 @@ GdkPixbuf *
 load_icon_entry (gchar *img)
 {
 	gint i = 0;
-	gchar *imgPath;
+	gchar *imgPath = NULL;
 	GdkPixbuf *icon = NULL;
 	GError    *error = NULL;
 
@@ -577,8 +580,11 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 						name = "";
 					if (xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &img))
 					{
-						icon = load_icon_entry(img);
-						g_free(img);
+						if (img)
+						{
+							icon = load_icon_entry(img);
+							g_free(img);
+						}
 					}
 					else
 						icon = NULL;
@@ -598,7 +604,8 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 				}
 				i++;
 			}
-			g_strfreev(history);
+			if (history)
+				g_strfreev(history);
 		}
 	}
 	else {
@@ -619,11 +626,14 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 					{
 						if (xfce_desktop_entry_get_string (dentry, "Categories", FALSE, &dcategories))
 						{
-							gchar **cats;
+							gchar **cats = NULL;
 							int x=0;
 
-							cats = g_strsplit (dcategories, ";", 0);
-							g_free(dcategories);
+							if (dcategories)
+							{
+								cats = g_strsplit (dcategories, ";", 0);
+								g_free(dcategories);
+							}
 
 							while(cats[x])
 							{
@@ -662,8 +672,13 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 
 						if (xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &img))
 						{
-							icon = load_icon_entry(img);
-							g_free(img);
+							if (img)
+							{
+								icon = load_icon_entry(img);
+								g_free(img);
+							}
+							else
+								icon = NULL;
 						}
 						else
 							icon = NULL;
@@ -756,6 +771,7 @@ create_apps_treeview(gchar *textSearch)
 	g_signal_connect(view, "drag-data-get", (GCallback) cb_dragappstree, NULL);
 	return view;
 }
+
 gchar **parseHistory(void) {
 	gchar *contents;
 	if (g_file_get_contents (configfile, &contents, NULL, NULL)) {
