@@ -1,0 +1,22 @@
+22:39 <+ofourdan> woops
+22:39 <+ofourdan> (xfce4-appfinder:15633): Gtk-WARNING **: Ignoring the separator setting
+22:39 <+ofourdan>
+22:39 <+ofourdan> ** (xfce4-appfinder:15633): WARNING **: Invalid UTF8 string passed to pango_layout_set_text()
+22:39 <+ofourdan>
+22:39 <+ofourdan> (xfce4-appfinder:15633): GLib-GObject-CRITICAL **: file gvalue.c: line 175 (g_value_peek_pointer):
+                  assertion `G_IS_VALUE (value)' failed
+22:39 <+ofourdan> Segmentation fault
+
+22:43 <+perldude> hmm. I never experienced this flickering in Filer... just as an example :)
+22:46 <+perldude> master^shadow: I used to create a new empty liststore and set the liststore after its finished. currently
+                  I use clear the liststore
+
+22:43 <+kelnos|work> hmm
+22:43 <+kelnos|work> in the "All" list, i have a blank item on the bottom, and when i dbl click on it, i get
+22:43 <+kelnos|work> Could not run command: ?H
+22:44 <+kelnos|work> and to console:
+22:44 <+kelnos|work> (xfce4-appfinder:3514): Gtk-WARNING **: Ignoring the separator setting
+22:44 <+kelnos|work>
+22:44 <+kelnos|work> ** (xfce4-appfinder:3514): WARNING **: Invalid UTF8 string passed to pango_layout_set_text()
+22:44 <+kelnos|work> free(): invalid pointer 0xbfffed20!
+
