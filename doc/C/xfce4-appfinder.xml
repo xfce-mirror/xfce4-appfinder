@@ -138,7 +138,7 @@ maintainers, etc. Commented out by default.
     <screenshot>
       <mediaobject>
 	<imageobject>
-	  <imagedata fileref="images/handle-popup.png" format="PNG"/>
+	  <imagedata fileref="images/appfinder-handle-popup.png" format="PNG"/>
 	</imageobject> 
 	<textobject>
 	  <phrase>Right click popup menu.</phrase>
@@ -157,7 +157,7 @@ maintainers, etc. Commented out by default.
     <screenshot>
       <mediaobject>
 	<imageobject>
-	  <imagedata fileref="images/item-popup.png" format="PNG"/>
+	  <imagedata fileref="images/appfinder-item-popup.png" format="PNG"/>
 	</imageobject> 
 	<!-- 
 	<imageobject>

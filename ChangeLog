@@ -1,3 +1,26 @@
+2004-12-11 18:51  olivier
+
+	* po/xfce4-appfinder.pot: Various changes and small fixes
+
+2004-12-05 22:20  pollux
+
+	* configure, configure.ac, po/en_GB.gmo, po/en_GB.po: add en_GB
+	translations
+
+2004-12-05 21:50  pollux
+
+	* src/xfce4-appfinder.desktop: update KO translations and add
+	screenshots in xfprint doc
+
+2004-12-04 18:03  benny
+
+	* ChangeLog, Makefile.in, aclocal.m4, compile, config.guess,
+	config.sub, configure, configure.ac, depcomp, install-sh,
+	ltmain.sh, missing, doc/Makefile.in, doc/C/Makefile.in,
+	doc/C/xfce4-appfinder.html, doc/C/xfce4-appfinder.xml,
+	doc/C/images/Makefile.in, src/Makefile.in: Update configure and
+	ChangeLog. Small typo/style fix in doc.
+
 2004-12-04 00:12  eduard
 
 	* Makefile.am, Makefile.in, aclocal.m4, compile, config.guess,

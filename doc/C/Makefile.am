@@ -1,12 +1,12 @@
-SUBDIRS = \
+SUBDIRS = 								\
   	 images
 
-noinst_DATA = \
+noinst_DATA = 								\
 	xfce4-appfinder.xml 
 
 docdir=$(datadir)/xfce4/doc/C
 
-doc_DATA= \
+doc_DATA= 								\
 	xfce4-appfinder.html 
 
 EXTRA_DIST = $(noinst_DATA) $(doc_DATA)
