@@ -57,7 +57,9 @@ cb_dragappstree (GtkWidget *widget, GdkDragContext *drag_context, GtkSelectionDa
 				guint info, guint time, gpointer user_data);
 
 gboolean
-cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer user);
+cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer treeview);
+
+void cb_menurun (GtkMenuItem *menuitem, gpointer data);
 
 GtkListStore *
 create_categories_liststore (void);
@@ -89,3 +91,5 @@ gchar **parseHistory(void);
 gchar *get_path_from_name(gchar *name);
 
 void saveHistory(gchar *path);
+
+void execute_from_name (gchar *name);

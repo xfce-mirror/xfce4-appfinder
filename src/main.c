@@ -71,7 +71,7 @@ cb_searchentry (GtkEntry *entry,
 	{
 		gtk_list_store_append(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))), &iter);
 		gtk_list_store_set(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))),
-							&iter, APP_ICON, inline_icon_at_size (default_icon_data_48_48, 24, 24),
+							&iter, APP_ICON, xfce_inline_icon_at_size (default_icon_data_48_48, 24, 24),
 							APP_TEXT, "Sorry, no match for searched text.", -1);
 		gtk_widget_set_sensitive(af->appstree, FALSE);
 	}
@@ -140,63 +140,38 @@ cb_appstree (GtkTreeView        *treeview,
              GtkTreeViewColumn  *col,
              gpointer            userdata)
 {
-    GtkTreeModel *model;
-    GtkTreeIter   iter;
+	gchar *name = NULL;
+	GtkTreeModel *model;
+	GtkTreeIter   iter;
 
     model = gtk_tree_view_get_model(treeview);
     if (gtk_tree_model_get_iter(model, &iter, path))
     {
-		gchar *name, *dname, *filename, *exec = NULL, **execp;
-		gboolean found = FALSE;
-		XfceDesktopEntry *dentry;
-		GDir *dir;
-		gint i = 0;
-
 		/* we fetch the name of the application to run */
 		gtk_tree_model_get(model, &iter, APP_TEXT, &name, -1);
-
-		while (entriespaths[i]!=NULL)
+		if (name)
 		{
-			if ((dir = g_dir_open (entriespaths[i], 0, NULL))==NULL)
-			{
-				i++;
-				continue;
-			}
-
-			while (!found && ((filename = (gchar *)g_dir_read_name(dir))!=NULL))
-			{
-				filename = g_strconcat(entriespaths[i], filename, NULL);
-				if (g_file_test(filename, G_FILE_TEST_IS_DIR) ||
-						!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7)))
-				{
-					g_free(filename);
-					continue;
-				}
-
-				xfce_desktop_entry_get_string (dentry, "Name", FALSE, &dname);
-
-				if (dname)
-				{
-					if (strcmp(dname, name)==0)
-					{
-						xfce_desktop_entry_get_string (dentry, "Exec", FALSE, &exec);
-						saveHistory(filename);
-						found = TRUE;
-					}
-					g_free(dname);
-				}
-
-				g_free(filename);
-			}
-			g_dir_close(dir);
-			if (found)
-				break;
-			i++;
+			execute_from_name (name);
+			g_free(name);
 		}
+    }
+}
 
+void execute_from_name (gchar *name)
+{
+	gchar *filepath = NULL;
+	gchar *exec = NULL;
+	gchar **execp = NULL;
+	XfceDesktopEntry *dentry;
+
+	if ((filepath = get_path_from_name(name)) &&
+		XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filepath, keys, 7)) &&
+		xfce_desktop_entry_get_string (dentry, "Exec", FALSE, &exec))
+	{
+		saveHistory(filepath);
 		if (exec) {
 			if (g_strrstr(exec, "%")!= NULL)
-			{	
+			{
 				execp = g_strsplit(exec, "%", 0);
 				g_printf("Now starting \"%s\"...\n", execp[0]);
 				exec_command(execp[0]);
@@ -209,12 +184,12 @@ cb_appstree (GtkTreeView        *treeview,
 			}
 			g_free(exec);
 		}
-		else {
-			xfce_info("Cannot execute %s\n", name);
-		}
-		if (name)
-			g_free(name);
-    }
+	}
+	else {
+		xfce_info("Cannot execute %s\n", name);
+	}
+	if (filepath)
+		g_free(filepath);
 }
 
 gboolean
@@ -259,7 +234,7 @@ cb_categoriestree (GtkTreeSelection *selection,
 	{
 		gtk_list_store_append(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))), &iter);
 		gtk_list_store_set(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))),
-							&iter, APP_ICON, inline_icon_at_size (default_icon_data_48_48, 24, 24),
+							&iter, APP_ICON, xfce_inline_icon_at_size (default_icon_data_48_48, 24, 24),
 							APP_TEXT, "No items available", -1);
 		gtk_widget_set_sensitive(af->appstree, FALSE);
 	}
@@ -270,13 +245,88 @@ cb_categoriestree (GtkTreeSelection *selection,
     return TRUE; /* allow selection state to change */
   }
 
+void cb_menurun (GtkMenuItem *menuitem, gpointer data)
+{
+	gchar *name = data;
+
+	if (name)
+	{
+		execute_from_name(name);
+		g_free (name);
+	}
+}
+
 gboolean
-cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer user) {
+cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer treeview)
+{
+	GtkWidget *menu, *menuitem, *icon;
+	GtkTreeSelection *selection;
+	GtkTreePath *treepath;
+	GtkTreeModel *treemodel;
+	GtkTreeIter iter;
+	gchar *name;
 	/* 3 is for right button */
 	if (event->button == 3)
 	{
-		g_printf("You have clicked the right button. Menu!!! Ehmmm not yet :-)\n");
-		return TRUE;
+	 	selection = gtk_tree_view_get_selection(GTK_TREE_VIEW(treeview));
+		gtk_tree_selection_unselect_all(selection);
+		if (gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW(treeview), event->x, event->y,
+															&treepath, NULL, NULL, NULL))
+		{
+			gtk_tree_selection_select_path (selection, treepath);
+			treemodel = gtk_tree_view_get_model(treeview);
+			gtk_tree_model_get_iter (treemodel, &iter, treepath);
+ 			gtk_tree_model_get(treemodel, &iter, APP_TEXT, &name, -1);
+
+			menu = gtk_menu_new();
+			menuitem = gtk_image_menu_item_new_with_label ("Xfce4 Appfinder");
+			gtk_widget_show (menuitem);
+			gtk_widget_set_sensitive (menuitem, FALSE);
+			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+
+			menuitem = gtk_separator_menu_item_new ();
+			gtk_widget_show (menuitem);
+			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+
+			menuitem = gtk_image_menu_item_new_with_label ("Run program");
+			icon = gtk_image_new_from_stock (GTK_STOCK_EXECUTE, GTK_ICON_SIZE_MENU);
+			gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM(menuitem), icon);
+			g_signal_connect (G_OBJECT(menuitem), "activate", G_CALLBACK(cb_menurun), (gpointer)name);
+			gtk_widget_show (icon);
+			gtk_widget_show (menuitem);
+			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+
+			menuitem = gtk_image_menu_item_new_with_label ("Informations...");
+			icon = gtk_image_new_from_stock (GTK_STOCK_DIALOG_INFO, GTK_ICON_SIZE_MENU);
+			gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM(menuitem), icon);
+			gtk_widget_show (icon);
+			gtk_widget_show (menuitem);
+			gtk_widget_set_sensitive (menuitem, FALSE);
+			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+
+			menuitem = gtk_separator_menu_item_new ();
+			gtk_widget_show (menuitem);
+			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+
+			menuitem = gtk_image_menu_item_new_with_label ("Add to panel");
+			icon = gtk_image_new_from_stock (GTK_STOCK_CONVERT, GTK_ICON_SIZE_MENU);
+			gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM(menuitem), icon);
+			gtk_widget_show (icon);
+			gtk_widget_show (menuitem);
+			gtk_widget_set_sensitive (menuitem, FALSE);
+			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+
+			menuitem = gtk_image_menu_item_new_with_label ("Add to desktop menu");
+			icon = gtk_image_new_from_stock (GTK_STOCK_INDEX, GTK_ICON_SIZE_MENU);
+			gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM(menuitem), icon);
+			gtk_widget_show (icon);
+			gtk_widget_show (menuitem);
+			gtk_widget_set_sensitive (menuitem, FALSE);
+			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+
+			gtk_menu_popup (GTK_MENU(menu), NULL, NULL, NULL, NULL, 0, gtk_get_current_event_time());
+			return TRUE;
+		}
 	}
 	/* If hasn't been clicked with right button let's propagate the event */
 	return FALSE;
@@ -295,7 +345,7 @@ t_appfinder *create_interface(void)
 	af->mainwindow = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 	g_signal_connect(af->mainwindow, "delete_event", gtk_main_quit, NULL);
 	gtk_window_set_title(GTK_WINDOW(af->mainwindow), "Xfce4 Appfinder");
-	gtk_window_set_icon(GTK_WINDOW(af->mainwindow),inline_icon_at_size (default_icon_data_48_48, 48, 48));
+	gtk_window_set_icon(GTK_WINDOW(af->mainwindow),xfce_inline_icon_at_size (default_icon_data_48_48, 48, 48));
 
 	af->hpaned = GTK_WIDGET(gtk_hpaned_new ());
 	gtk_container_add(GTK_CONTAINER(af->mainwindow), af->hpaned);
