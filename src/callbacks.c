@@ -354,26 +354,6 @@ cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer treeview)
 			gtk_widget_show (menuitem);
 			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 
-			menuitem = gtk_separator_menu_item_new ();
-			gtk_widget_show (menuitem);
-			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
-
-			menuitem = gtk_image_menu_item_new_with_label (_("Add to panel"));
-			icon = gtk_image_new_from_stock (GTK_STOCK_CONVERT, GTK_ICON_SIZE_MENU);
-			gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM(menuitem), icon);
-			gtk_widget_show (icon);
-			gtk_widget_show (menuitem);
-			gtk_widget_set_sensitive (menuitem, FALSE);
-			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
-
-			menuitem = gtk_image_menu_item_new_with_label (_("Add to desktop menu"));
-			icon = gtk_image_new_from_stock (GTK_STOCK_INDEX, GTK_ICON_SIZE_MENU);
-			gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM(menuitem), icon);
-			gtk_widget_show (icon);
-			gtk_widget_show (menuitem);
-			gtk_widget_set_sensitive (menuitem, FALSE);
-			gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
-
 			gtk_menu_popup (GTK_MENU(menu), NULL, NULL, NULL, NULL, 0, gtk_get_current_event_time());
 			return TRUE;
 		}
