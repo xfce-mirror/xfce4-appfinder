@@ -71,9 +71,11 @@ const char *categories [] = {
 	NULL
 };
 
-GtkTargetEntry gte[] = {{"DESKTOP_PATH_ENTRY", GTK_TARGET_SAME_WIDGET, 0},
+GtkTargetEntry gte[] = {{"DESKTOP_PATH_ENTRY", 0, 0},
 	{"text/plain", 0, 1},
-	{"application/x-desktop", 0, 2}
+	{"application/x-desktop", 0, 2},
+	{"STRING", 0, 3},
+	{"UTF8_STRING", 0, 4}
 };
 
 typedef struct {
@@ -158,22 +160,18 @@ cb_dragappstree (GtkWidget *widget, GdkDragContext *dc, GtkSelectionData *data,
 	gchar *name = NULL;
 	gchar *path = NULL;
 
-	if (data->target == gdk_atom_intern("DESKTOP_PATH_ENTRY", FALSE)) {
 		model = gtk_tree_view_get_model(GTK_TREE_VIEW(widget));
 		if (gtk_tree_model_get_iter(model, &iter,
 					gtk_tree_row_reference_get_path(g_object_get_data(G_OBJECT(dc), "gtk-tree-view-source-row")))) {
 			gtk_tree_model_get(model, &iter, APP_TEXT, &name, -1);
 			if (name){
 				if ((path = get_path_from_name(name))!=NULL) {
-					gtk_selection_data_set (data, gdk_atom_intern ("DESKTOP_PATH_ENTRY", FALSE),
-										8, path, strlen (path)
-										);
+					gtk_selection_data_set (data, data->target, 8, path, strlen(path));
 					g_free(path);
 				}
 				g_free(name);
 			}
 		}
-	}
 }
 
 void
@@ -747,7 +745,7 @@ create_apps_treeview(gchar *textSearch)
 	                                    NULL);
 
 	gtk_tree_view_append_column(GTK_TREE_VIEW(view), col);
-	gtk_tree_view_enable_model_drag_source(GTK_TREE_VIEW(view),                                        											GDK_BUTTON1_MASK, gte, 3, GDK_ACTION_MOVE);
+	gtk_tree_view_enable_model_drag_source(GTK_TREE_VIEW(view),                                        											GDK_BUTTON1_MASK, gte, 5, GDK_ACTION_COPY);
 	g_signal_connect(view, "drag-data-get", (GCallback) cb_dragappstree, NULL);
 	return view;
 }
