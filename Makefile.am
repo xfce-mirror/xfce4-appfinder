@@ -1,10 +1,19 @@
 @SET_MAKE@
 
-EXTRA_DIST = xfce4-appfinder.spec TODO ChangeLog 
+EXTRA_DIST =								\
+	AUTHORS								\
+	BUGS								\
+	COPYING								\
+	ChangeLog 							\
+	INSTALL								\
+	NEWS								\
+	README								\
+	TODO								\
+	xfce4-appfinder.spec
 
-SUBDIRS =						\
-	po						\
-	doc						\
+SUBDIRS =								\
+	po								\
+	doc								\
 	src
 
 distclean-local:

@@ -196,10 +196,20 @@ sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 sysconfdir = @sysconfdir@
 target_alias = @target_alias@
-EXTRA_DIST = xfce4-appfinder.spec TODO ChangeLog 
+EXTRA_DIST = \
+	AUTHORS								\
+	BUGS								\
+	COPYING								\
+	ChangeLog 							\
+	INSTALL								\
+	NEWS								\
+	README								\
+	TODO								\
+	xfce4-appfinder.spec
+
 SUBDIRS = \
-	po						\
-	doc						\
+	po								\
+	doc								\
 	src
 
 ACLOCAL_AMFLAGS = -I m4
