@@ -20,6 +20,7 @@
 #ifndef __HAVE_APPFINDER_H
 #define __HAVE_APPFINDER_H
 
+#include <af-constants.h>
 #define CONFIGFILE "afhistory"
 
 typedef struct _appfinder Appfinder;

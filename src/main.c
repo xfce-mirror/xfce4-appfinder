@@ -26,11 +26,12 @@
 #include <string.h>
 #include <gtk/gtk.h>
 #include <glib.h>
+#include <glib/gprintf.h>
 
 #include <libxfce4util/libxfce4util.h>
 #include <libxfcegui4/libxfcegui4.h>
 
-#include <af-constants.h>
+#include <main.h>
 #include <appfinder.h>
 #include <callbacks.h>
 #include <inline-icon.h>
@@ -41,9 +42,9 @@ gchar *get_path_from_name(gchar *name) {
     GDir *dir;
     XfceDesktopEntry *dentry;
     gboolean found = FALSE;
-    gchar *filename;
+    gchar *filename; 
     gchar *dname;
-    gchar *filepath;
+    gchar *filepath = NULL; 
     gint i = 0;
 
     g_return_val_if_fail(name!=NULL, NULL);
@@ -95,14 +96,14 @@ void execute_from_name (gchar *name)
             if (g_strrstr(exec, "%")!= NULL)
             {
                 execp = g_strsplit(exec, "%", 0);
-                g_printf(g_strconcat(_("Now starting"), " \"", execp[0], "\"...\n", NULL));
-                exec_command(execp[0]);
+                g_printf (g_strconcat(_("Now starting"), " \"", execp[0], "\"...\n", NULL));
+		g_spawn_command_line_async (execp[0], NULL);
                 g_strfreev (execp);
             }
             else
             {
                 g_printf(g_strconcat(_("Now starting"), " \"", exec, "\"...\n", NULL));
-                exec_command(exec);
+		g_spawn_command_line_async (exec, NULL);
             }
             g_free(exec);
         }
@@ -488,7 +489,7 @@ void saveHistory(gchar *path)
 static void
 build_paths (void)
 {
-    gchar *kdedir;
+    const gchar *kdedir;
     gchar **applications;
     gint    napplications;
     gchar **apps;
