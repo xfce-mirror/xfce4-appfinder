@@ -20,6 +20,8 @@
 #ifndef __HAVE_APPFINDER_H
 #define __HAVE_APPFINDER_H
 
+#define CONFIGFILE "afhistory"
+
 typedef struct _appfinder Appfinder;
 struct _appfinder {
 	GtkWidget *mainwindow;

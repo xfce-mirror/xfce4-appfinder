@@ -504,8 +504,10 @@ main (gint argc, gchar **argv)
 	
 	xfce_textdomain(GETTEXT_PACKAGE, LOCALEDIR, "UTF-8");
 	gtk_init(&argc, &argv);
-  	build_paths ();
-	configfile = g_strconcat (xfce_get_userdir(), "/afhistory", NULL);
+	build_paths ();
+	configfile = xfce_resource_save_location (XFCE_RESOURCE_CONFIG,
+                                        "xfce4" G_DIR_SEPARATOR_S CONFIGFILE, 
+                                        TRUE);
 	appfinder = create_interface();
 	gtk_main();
 	return 0;
