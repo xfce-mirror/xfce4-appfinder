@@ -1,12 +1,14 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Xfce 4 Appfinder
+Name[et]=Xfce 4 Appfinder
 Name[fi]=Xfce 4 Appfinder
 Name[he]=Xfce 4 Appfinder
 Name[ko]=Xfce 4 검색
 Name[nl]=Xfce 4 Appfinder
 Name[fr]=Xfce 4 Appfinder
 Comment=Xfce 4 Appfinder
+Comment[et]=Näitab paigaldatud rakenduste nimekirja
 Comment[fi]=Etsi asennettuja ohjelmia koneesta
 Comment[he]=כלי לחיפוש יישומים
 Comment[ko]=응용프로그램 검색
@@ -18,6 +20,7 @@ Terminal=false
 Type=Application
 Categories=Utility
 GenericName=Appfinder
+GenericName[et]=Appfinder
 GenericName[fi]=Appfinder
 GenericName[ko]=응용프로그램 검색
 GenericName[nl]=Appfinder

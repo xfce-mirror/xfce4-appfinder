@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Mart  <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: appfinder VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-10-11 18:28+0200\n"
+"PO-Revision-Date: 2004-12-09 21:03+0300\n"
+"Language-Team: Estonian <et@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Mart Tõnso <mart.tonso@ttu.ee>\n"
+
+#: src/main.c:98
+#: src/main.c:104
+msgid "Now starting"
+msgstr "Nüüd käivitub"
+
+#: src/main.c:112
+msgid "Cannot execute"
+msgstr "Ei saa käivitada"
+
+#: src/main.c:148
+msgid "<b>Search:</b>"
+msgstr "<b>Otsi:</b>"
+
+#: src/main.c:205
+msgid "Categories"
+msgstr "Kategooriad"
+
+#: src/af-constants.h:72
+msgid "All"
+msgstr "Kõik"
+
+#: src/af-constants.h:73
+msgid "Recently Used"
+msgstr "Hiljuti kasutatud"
+
+#: src/af-constants.h:74
+msgid "Core"
+msgstr "Tuum"
+
+#: src/af-constants.h:75
+msgid "Development"
+msgstr "Arendus"
+
+#: src/af-constants.h:76
+msgid "Office"
+msgstr "Kontor"
+
+#: src/af-constants.h:77
+msgid "Graphics"
+msgstr "Graafika"
+
+#: src/af-constants.h:78
+msgid "Network"
+msgstr "Võrgundus"
+
+#: src/af-constants.h:79
+msgid "AudioVideo"
+msgstr "AudioVideo"
+
+#: src/af-constants.h:80
+msgid "Game"
+msgstr "Mäng"
+
+#: src/af-constants.h:81
+msgid "Education"
+msgstr "Haridus"
+
+#: src/af-constants.h:82
+msgid "System"
+msgstr "Süsteem"
+
+#: src/af-constants.h:83
+msgid "Filemanager"
+msgstr "Failihaldur"
+
+#: src/af-constants.h:84
+msgid "Utility"
+msgstr "Tarvik"
+
