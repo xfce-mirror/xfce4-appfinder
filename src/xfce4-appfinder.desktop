@@ -2,10 +2,12 @@
 Encoding=UTF-8
 Name=Xfce 4 Appfinder
 Name[fi]=Xfce 4 Appfinder
+Name[he]=Xfce 4 Appfinder
 Name[nl]=Xfce 4 Appfinder
 Name[fr]=Xfce 4 Appfinder
 Comment=Xfce 4 Appfinder
 Comment[fi]=Etsi asennettuja ohjelmia koneesta
+Comment[he]=כלי לחיפוש יישומים
 Comment[nl]=Zoek geïnstalleerde programma's
 Comment[fr]=Liste des applications installées
 Exec=xfce4-appfinder
