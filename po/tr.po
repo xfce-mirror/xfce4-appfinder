@@ -1,0 +1,84 @@
+# translation of xfce4-appfinder to Turkish.
+# Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Erçin EKER <ercin.eker@linux.org.tr>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-10-02 10:35+0200\n"
+"PO-Revision-Date: 2004-10-10 11:05+0300\n"
+"Last-Translator: Erçin EKER <ercin.eker@linux.org.tr>\n"
+"Language-Team: Turkish <tr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main.c:98 src/main.c:104
+msgid "Now starting"
+msgstr "Başlıyor"
+
+#: src/main.c:112
+msgid "Cannot execute"
+msgstr "Çalıştırılamıyor"
+
+#: src/main.c:148
+msgid "<b>Search:</b>"
+msgstr "<b>Ara:</b>"
+
+#: src/main.c:205
+msgid "Categories"
+msgstr "Kategoriler"
+
+#: src/af-constants.h:69
+msgid "All"
+msgstr "Hepsi"
+
+#: src/af-constants.h:70
+msgid "Recently Used"
+msgstr "Sık Kullanılan"
+
+#: src/af-constants.h:71
+msgid "Core"
+msgstr "Temel"
+
+#: src/af-constants.h:72
+msgid "Development"
+msgstr "Geliştirme"
+
+#: src/af-constants.h:73
+msgid "Office"
+msgstr "Ofis"
+
+#: src/af-constants.h:74
+msgid "Graphics"
+msgstr "Grafik"
+
+#: src/af-constants.h:75
+msgid "Network"
+msgstr "Ağ"
+
+#: src/af-constants.h:76
+msgid "AudioVideo"
+msgstr "SesGörüntü"
+
+#: src/af-constants.h:77
+msgid "Game"
+msgstr "Oyun"
+
+#: src/af-constants.h:78
+msgid "Education"
+msgstr "Eğitim"
+
+#: src/af-constants.h:79
+msgid "System"
+msgstr "Sistem"
+
+#: src/af-constants.h:80
+msgid "Filemanager"
+msgstr "DosyaYönetici"
+
+#: src/af-constants.h:81
+msgid "Utility"
+msgstr "Araç"
