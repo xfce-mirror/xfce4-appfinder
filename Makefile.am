@@ -4,6 +4,7 @@ EXTRA_DIST = xfce4-appfinder.spec TODO ChangeLog
 
 SUBDIRS =						\
 	po						\
+	doc						\
 	src
 
 distclean-local:

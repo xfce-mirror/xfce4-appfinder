@@ -37,5 +37,8 @@ xfce4-appfinder.spec
 Makefile
 po/Makefile.in
 src/Makefile
+doc/Makefile
+doc/C/Makefile
+doc/C/images/Makefile
 ])
 

@@ -506,7 +506,7 @@ build_paths (void)
     applnk = xfce_resource_lookup_all (XFCE_RESOURCE_DATA, "applnk/");
     for (napplnk = 0; applnk[napplnk] != NULL; ++napplnk);
     
-    entriespaths = g_new0 (gchar *, 2 * napplications + napps + napplnk + 4);
+    entriespaths = g_new0 (gchar *, 2 * napplications + napps + napplnk + 6);
     i = 0;
     
     entriespaths[i++] = xfce_get_homefile (".kde", "share", "apps", NULL);
@@ -515,6 +515,12 @@ build_paths (void)
     {
         entriespaths[i++] = g_build_filename (kdedir, "share",  "applications",  "kde", NULL); 
     }
+
+    /* FreeBSD Gnome stuff */
+    entriespaths[i++] = g_build_filename ("/usr", "X11R6", "share", "gnome", "applications", NULL);
+
+    /* /usr/global stuff */
+    entriespaths[i++] = g_build_filename ("/usr", "global", "share", "applications", NULL);
     
     for (n = 0; n < napplications; ++n)
     {
