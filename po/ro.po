@@ -1,0 +1,87 @@
+# Romanian translation of xfce4-appfinder.
+# Copyright (C) 2004 Free Software Foundation.
+# This file is distributed under the same license as the xfwm4 package.
+# Mişu Moldovan <dumol@go.ro>, 2004.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.2 rc1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-11-10 07:57+0100\n"
+"PO-Revision-Date: 2004-11-14 19:01+0200\n"
+"Last-Translator: Mişu Moldovan <dumol@go.ro>\n"
+"Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: src/main.c:98 src/main.c:104
+msgid "Now starting"
+msgstr "Se porneşte"
+
+#: src/main.c:112
+msgid "Cannot execute"
+msgstr "Nu poate fi pornit"
+
+#: src/main.c:148
+msgid "<b>Search:</b>"
+msgstr "<b>Caută:</b>"
+
+#: src/main.c:205
+msgid "Categories"
+msgstr "Categorii"
+
+#: src/af-constants.h:72
+msgid "All"
+msgstr "Toate"
+
+#: src/af-constants.h:73
+msgid "Recently Used"
+msgstr "Recent utilizate"
+
+#: src/af-constants.h:74
+msgid "Core"
+msgstr "Esenţiale"
+
+#: src/af-constants.h:75
+msgid "Development"
+msgstr "Dezvoltare"
+
+#: src/af-constants.h:76
+msgid "Office"
+msgstr "Office"
+
+#: src/af-constants.h:77
+msgid "Graphics"
+msgstr "Grafică"
+
+#: src/af-constants.h:78
+msgid "Network"
+msgstr "Reţea"
+
+#: src/af-constants.h:79
+msgid "AudioVideo"
+msgstr "Audio/Video"
+
+#: src/af-constants.h:80
+msgid "Game"
+msgstr "Jocuri"
+
+#: src/af-constants.h:81
+msgid "Education"
+msgstr "Educaţionale"
+
+#: src/af-constants.h:82
+msgid "System"
+msgstr "Sistem"
+
+#: src/af-constants.h:83
+msgid "Filemanager"
+msgstr "Administrator fişiere"
+
+#: src/af-constants.h:84
+msgid "Utility"
+msgstr "Utilitare"
+
