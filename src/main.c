@@ -207,7 +207,10 @@ gchar *get_path_from_name(gchar *name) {
 	gchar *dname = NULL;
 	gint i = 0;
 
-	while (entriespaths[i]!=NULL)
+	if (!name)
+		return NULL;
+
+	while (entriespaths[i])
 	{
 		if ((dir = g_dir_open (entriespaths[i], 0, NULL))==NULL)
 		{
@@ -218,17 +221,19 @@ gchar *get_path_from_name(gchar *name) {
 		while (!found && ((filename = (gchar *)g_dir_read_name(dir))!=NULL))
 		{
 			filename = g_strdup_printf ("%s%s", entriespaths[i], filename);
-			if (g_file_test(filename, G_FILE_TEST_IS_DIR))
+			if (g_file_test(filename, G_FILE_TEST_IS_DIR) ||
+					!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7))) {
+				g_free(filename);
 				continue;
+			}
 
-			dentry = xfce_desktop_entry_new (filename, keys, 7);
 			xfce_desktop_entry_get_string (dentry, "Name", FALSE, &dname);
 
-			if (strcmp(dname, name)==0)
-				found = TRUE;
-
-			if (dname)
+			if (dname) {
+				if (strcmp(dname, name)==0)
+					found = TRUE;
 				g_free(dname);
+			}
 
 			if (!found)
 				g_free(filename);
@@ -273,27 +278,27 @@ cb_appstree (GtkTreeView        *treeview,
 			while (!found && ((filename = (gchar *)g_dir_read_name(dir))!=NULL))
 			{
 				filename = g_strdup_printf ("%s%s", entriespaths[i], filename);
-				if (g_file_test(filename, G_FILE_TEST_IS_DIR))
-					goto skip;
-
-				if (!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7)))
+				if (g_file_test(filename, G_FILE_TEST_IS_DIR) ||
+						!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7)))
 				{
-					i++;
+					g_free(filename);
 					continue;
 				}
+
 				xfce_desktop_entry_get_string (dentry, "Name", FALSE, &dname);
 
-				if (strcmp(dname, name)==0)
-				{
-					xfce_desktop_entry_get_string (dentry, "Exec", FALSE, &exec);
-					saveHistory(filename);
-					found = TRUE;
-				}
 				if (dname)
+				{
+					if (strcmp(dname, name)==0)
+					{
+						xfce_desktop_entry_get_string (dentry, "Exec", FALSE, &exec);
+						saveHistory(filename);
+						found = TRUE;
+					}
 					g_free(dname);
+				}
 
-				skip:
-					g_free(filename);
+				g_free(filename);
 			}
 			g_dir_close(dir);
 			if (found)
@@ -373,7 +378,7 @@ t_appfinder *create_interface(void)
 	t_appfinder *af;
 
 	af = g_new(t_appfinder, 1);
-	showedcat=0;
+	showedcat = APPFINDER_ALL;
 
 	af->mainwindow = gtk_window_new(GTK_WINDOW_TOPLEVEL);
  	g_signal_connect(af->mainwindow, "delete_event", gtk_main_quit, NULL);
@@ -575,33 +580,26 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 		gchar **history = parseHistory();
 		if (history!=NULL) {
 			while (history[i]!=NULL) {
-				if (g_file_test(history[i], G_FILE_TEST_EXISTS)) {
-					if (!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (history[i], keys, 7)))
+				if (g_file_test(history[i], G_FILE_TEST_EXISTS) &&
+						XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (history[i], keys, 7)) &&
+						xfce_desktop_entry_get_string (dentry, "Name", FALSE, &name))
+				{
+					if (xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &img) && img)
 					{
-						i++;
-						continue;
-					}
-					if (!xfce_desktop_entry_get_string (dentry, "Name", FALSE, &name))
-						name = "";
-					if (xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &img))
-					{
-						if (img)
-						{
 							icon = load_icon_entry(img);
 							g_free(img);
-						}
-						else
-							icon = NULL;
 					}
 					else
+					{
 						icon = NULL;
+					}
 		
 					gtk_list_store_append(store, &iter);
 					gtk_list_store_set(store, &iter,
 									APP_ICON, icon,
 									APP_TEXT, name,
 									-1);
-		
+
 					if (name)
 						g_free(name);
 					if (icon)
@@ -622,12 +620,8 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 				while ((filename = (gchar *)g_dir_read_name(dir))!=NULL)
 				{
 					filename = g_strdup_printf ("%s%s", entriespaths[i], filename);
-					if (g_file_test(filename, G_FILE_TEST_IS_DIR))
-					{
-						g_free(filename);
-						continue;
-					}
-					if (!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7)))
+					if (g_file_test(filename, G_FILE_TEST_IS_DIR) ||
+							!XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (filename, keys, 7)))
 					{
 						g_free(filename);
 						continue;
@@ -647,23 +641,26 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 								g_free(dcategories);
 							}
 
-							while(cats[x])
+							if (cats)
 							{
-								if (g_ascii_strcasecmp(cats[x], categories[category])==0)
+								while(cats[x])
 								{
-									g_strfreev (cats);
-									goto ok;
+									if (g_ascii_strcasecmp(cats[x], categories[category])==0)
+									{
+										g_strfreev (cats);
+										goto ok;
+									}
+									x++;
 								}
-								x++;
+								g_strfreev (cats);
 							}
-							g_strfreev (cats);
 						}
 						goto out;
 					}
 
 					ok:
 						if (!xfce_desktop_entry_get_string (dentry, "Name", FALSE, &name))
-							name = "";
+							goto out;
 
 						if (pattern!=NULL) {
 							gchar *comment;
@@ -682,18 +679,15 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 								g_free(comment);
 						}
 
-						if (xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &img))
+						if (xfce_desktop_entry_get_string (dentry, "Icon", FALSE, &img) && img)
 						{
-							if (img)
-							{
-								icon = load_icon_entry(img);
-								g_free(img);
-							}
-							else
-								icon = NULL;
+							icon = load_icon_entry(img);
+							g_free(img);
 						}
 						else
+						{
 							icon = NULL;
+						}
 
 						gtk_list_store_append(store, &iter);
 						gtk_list_store_set(store, &iter,
@@ -786,12 +780,10 @@ create_apps_treeview(gchar *textSearch)
 
 gchar **parseHistory(void) {
 	gchar *contents;
-	if (g_file_get_contents (configfile, &contents, NULL, NULL)) {
-		if (contents != NULL) {
+	if (g_file_get_contents (configfile, &contents, NULL, NULL) && (contents != NULL)) {
 			gchar **history = g_strsplit (contents, "\n", -1);
 			g_free (contents);
 			return history;
-		}
 	}
 	return NULL;
 }
