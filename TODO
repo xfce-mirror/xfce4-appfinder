@@ -1,14 +1,12 @@
 TODO
 ====
-
-FOR v0.2
---------
-	o Code cleanup
-	o Tooltips for applications entry 
-
-	
-FOR v?.?
---------
-	o Drag and Drop to panel
-	o Exporting xfdesktop menu
-	o Most Used apps 
+	o Drag and Drop to panel - DONE (miss panel support)
+	o Exporting xfdesktop menu - DONE
+	o Most Used apps - DONE
+	o Avoid flickering - DONE
+	o No item message on the apps treeview
+	o Recursive directory analysis
+	o Menu on right click on apps treeview
+	o Custom paths
+	o About box
+	o Support for legacy apps

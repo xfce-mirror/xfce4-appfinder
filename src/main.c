@@ -5,83 +5,8 @@
 #include <libxfce4util/libxfce4util.h>
 #include <libxfcegui4/libxfcegui4.h>
 
-#define APPFINDER_ALL 0
-#define APPFINDER_HISTORY 1
-
-enum
-{
-  APP_ICON = 0,
-  APP_TEXT,
-  APP_COLS
-};
-
-enum
-{
-  CAT_TEXT = 0,
-  CAT_COLS
-};
-
-const char *entriespaths [] = {
-	"/usr/share/applications/",
-	"/usr/share/applications/kde/",
-	"/usr/local/share/applications/",
-	"/usr/local/share/applications/kde/",
-	"/opt/kde/share/applications/kde/",
-	"/usr/X11R6/share/",
-	"/opt/gnome/share/applications/",
-	"/opt/gnome2/share/applications/",
-	NULL
-};
-
-const char *iconspaths [] = {
-	"/usr/share/pixmaps/",
-	"/usr/share/icons/default.kde/32x32/apps/",
-	"/usr/share/icons/default.kde/32x32/devices/",
-	"/usr/share/icons/default.kde/32x32/actions/",
-	"/usr/share/icons/default.kde/32x32/mimetypes/",
-	"/usr/share/icons/default.kde/32x32/filesystems/",
-	"/opt/kde/share/icons/default.kde/32x32/apps/",
-	"/opt/kde/share/icons/default.kde/32x32/devices/",
-	"/opt/kde/share/icons/default.kde/32x32/actions/",
-	"/opt/kde/share/icons/default.kde/32x32/mimetypes/",
-	"/opt/kde/share/icons/default.kde/32x32/filesystems/",
-	NULL
-};
-
-const char *keys [] = {
-	"Name",
-	"Comment",
-	"Icon",
-	"Categories",
-	"OnlyShowIn",
-	"Exec",
-	"Terminal",
-	NULL
-};
-
-const char *categories [] = {
-	"All",
-	"Recently Used",
-	"Core",
-	"Development",
-	"Office",
-	"Graphics",
-	"Network",
-	"AudioVideo",
-	"Game",
-	"Education",
-	"System",
-	"Filemanager",
-	"Utility",
-	NULL
-};
-
-GtkTargetEntry gte[] = {{"DESKTOP_PATH_ENTRY", 0, 0},
-	{"text/plain", 0, 1},
-	{"application/x-desktop", 0, 2},
-	{"STRING", 0, 3},
-	{"UTF8_STRING", 0, 4}
-};
+#include "af-constants.h"
+#include "inline-icon.h"
 
 typedef struct {
 	GtkWidget *mainwindow;
@@ -186,16 +111,11 @@ cb_searchentry (GtkEntry *entry,
 	t_appfinder *af = userdata;
 	gchar *text = g_utf8_strdown(gtk_entry_get_text(entry), -1);
 	gtk_list_store_clear (GTK_LIST_STORE(gtk_tree_view_get_model(GTK_TREE_VIEW(af->appstree))));
-	gtk_widget_hide(af->appstree);
-	gtk_widget_destroy (af->appstree);
-	af->appstree = create_apps_treeview(text);
-	g_signal_connect(af->appstree, "row-activated", (GCallback) cb_appstree, NULL);
-	gtk_widget_show(af->appstree);
-	gtk_scrolled_window_add_with_viewport
-		(GTK_SCROLLED_WINDOW(af->appscroll), af->appstree);
+	gtk_tree_view_set_model (GTK_TREE_VIEW(af->appstree), GTK_TREE_MODEL(fetch_desktop_resources(showedcat, text)));
 	gtk_tree_selection_unselect_all
-		(gtk_tree_view_get_selection(GTK_TREE_VIEW(af->categoriestree)));
-	g_free(text);
+			(gtk_tree_view_get_selection(GTK_TREE_VIEW(af->categoriestree)));
+	if (text)
+		g_free(text);
 }
 
 
@@ -363,12 +283,7 @@ cb_categoriestree (GtkTreeSelection *selection,
 		return TRUE;
 	showedcat = next;
 	gtk_list_store_clear (GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appstree))));
-	gtk_widget_hide(af->appstree);
-	gtk_widget_destroy (af->appstree);
-	af->appstree = create_apps_treeview(NULL);
-	g_signal_connect(af->appstree, "row-activated", (GCallback) cb_appstree, NULL);
-	gtk_widget_show(af->appstree);
-	gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(af->appscroll), af->appstree);
+	gtk_tree_view_set_model (GTK_TREE_VIEW(af->appstree), GTK_TREE_MODEL(fetch_desktop_resources(showedcat, NULL)));
     return TRUE; /* allow selection state to change */
   }
 
@@ -384,9 +299,10 @@ t_appfinder *create_interface(void)
 	showedcat = APPFINDER_ALL;
 
 	af->mainwindow = gtk_window_new(GTK_WINDOW_TOPLEVEL);
- 	g_signal_connect(af->mainwindow, "delete_event", gtk_main_quit, NULL);
+	g_signal_connect(af->mainwindow, "delete_event", gtk_main_quit, NULL);
 	gtk_window_set_title(GTK_WINDOW(af->mainwindow), "Xfce4 Appfinder");
-	
+	gtk_window_set_icon(GTK_WINDOW(af->mainwindow),inline_icon_at_size (default_icon_data_48_48, 48, 48));
+
 	af->hpaned = GTK_WIDGET(gtk_hpaned_new ());
 	gtk_container_add(GTK_CONTAINER(af->mainwindow), af->hpaned);
 	af->categoriestree = create_categories_treeview();
@@ -690,11 +606,14 @@ GtkListStore *fetch_desktop_resources (gint category, gchar *pattern) {
 
 					if (pattern != NULL)
 					{
-						if (!xfce_desktop_entry_get_string (dentry, "Comment", FALSE, &comment))
-							comment = "";
 
-						if (!(g_pattern_match_string (ptrn, g_utf8_strdown(name, -1)) ||
-								g_pattern_match_string (ptrn, g_utf8_strdown(comment, -1))))
+						if (!xfce_desktop_entry_get_string (dentry, "Comment", FALSE, &comment))
+							comment = NULL;
+
+						if (!g_pattern_match_string (ptrn, g_utf8_strdown(name, -1)) ||
+							(comment != NULL ?
+								!g_pattern_match_string (ptrn, g_utf8_strdown(comment, -1)) :
+								FALSE))
 						{
 							if (name)
 								g_free(name);
@@ -824,7 +743,7 @@ void saveHistory(gchar *path) {
 	gint i = 0;
 	FILE *f;
 	/* We must check if it is already in the history before inserting it ;-) */
-	if (history != NULL) {
+	if (history) {
 		while(history[i] != NULL) {
 			if (strcmp(path, history[i])==0) {
 				return;
@@ -836,7 +755,7 @@ void saveHistory(gchar *path) {
 	f = fopen(configfile, "w");
 	fprintf(f, "%s\n", path);
 	i = 0;
-	if (history != NULL) {
+	if (history) {
 		while (history[i] != NULL && i-1<10) {
 			fprintf(f, "%s\n", history[i]);
 			i++;
