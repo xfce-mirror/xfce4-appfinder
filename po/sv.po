@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xcfe4-appfinder HEAD\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2005-03-21 19:38+0100\n"
+"Last-Translator: Aron Stansvik <elvstone@gmail.com>\n"
+"Language-Team: Swedish <elvstone@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Country: SWEDEN\n"
+
+#: src/main.c:99
+#: src/main.c:105
+msgid "Now starting"
+msgstr "Startar nu"
+
+#: src/main.c:113
+msgid "Cannot execute"
+msgstr "Kan inte köra"
+
+#: src/main.c:149
+msgid "<b>Search:</b>"
+msgstr "<b>Sök:</b>"
+
+#: src/main.c:206
+msgid "Categories"
+msgstr "Kategorier"
+
+#: src/af-constants.h:54
+msgid "All"
+msgstr "Alla"
+
+#: src/af-constants.h:55
+msgid "Recently Used"
+msgstr "Senast Använda"
+
+#: src/af-constants.h:56
+msgid "Core"
+msgstr "Standard"
+
+#: src/af-constants.h:57
+msgid "Development"
+msgstr "Utveckling"
+
+#: src/af-constants.h:58
+msgid "Office"
+msgstr "Kontor"
+
+#: src/af-constants.h:59
+msgid "Graphics"
+msgstr "Grafik"
+
+#: src/af-constants.h:60
+msgid "Network"
+msgstr "Nätverk"
+
+#: src/af-constants.h:61
+msgid "AudioVideo"
+msgstr "LjudBild"
+
+#: src/af-constants.h:62
+msgid "Game"
+msgstr "Spel"
+
+#: src/af-constants.h:63
+msgid "Education"
+msgstr "Utbildning"
+
+#: src/af-constants.h:64
+msgid "System"
+msgstr "System"
+
+#: src/af-constants.h:65
+msgid "Filemanager"
+msgstr "Filhanterare"
+
+#: src/af-constants.h:66
+msgid "Utility"
+msgstr "Verktyg"
+
