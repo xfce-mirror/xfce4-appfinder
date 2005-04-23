@@ -23,7 +23,7 @@ dnl check for standard header files
 AC_HEADER_STDC
 
 dnl Check for i18n support
-BM_I18N([xfce4-appfinder], [be bn_IN cs da de el en_GB es es_MX et eu
+BM_I18N([xfce4-appfinder], [be bn_IN ca cs da de el en_GB es es_MX et eu
 			    fa fi gu he hu it ja ko lt nl pa pt_BR pt_PT
 			    ro ru sk tr uk zh_CN])
 
