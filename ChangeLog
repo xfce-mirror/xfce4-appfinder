@@ -1,515 +1,1008 @@
-2005-03-04 18:32  pollux
+2005-04-16 16:05  pollux
 
-	* configure.ac, po/pl.po: add PL translations
+	* xfce4-appfinder/branches/xfce_4_2/configure.ac,
+	  xfce4-appfinder/branches/xfce_4_2/po/bn_IN.po: add bn_IN
+	  translations
 
-2005-02-21 09:39  pollux
+2005-04-12 14:58  jasper
 
-	* configure.ac, po/ja.po: update JA translations
+	* xfce4-appfinder/branches/xfce_4_2/Makefile.in,
+	  xfce4-appfinder/branches/xfce_4_2/aclocal.m4,
+	  xfce4-appfinder/branches/xfce_4_2/autogen.sh,
+	  xfce4-appfinder/branches/xfce_4_2/compile,
+	  xfce4-appfinder/branches/xfce_4_2/config.guess,
+	  xfce4-appfinder/branches/xfce_4_2/config.h.in,
+	  xfce4-appfinder/branches/xfce_4_2/config.sub,
+	  xfce4-appfinder/branches/xfce_4_2/configure,
+	  xfce4-appfinder/branches/xfce_4_2/depcomp,
+	  xfce4-appfinder/branches/xfce_4_2/doc/C/Makefile.in,
+	  xfce4-appfinder/branches/xfce_4_2/doc/C/images/Makefile.in,
+	  xfce4-appfinder/branches/xfce_4_2/doc/Makefile.in,
+	  xfce4-appfinder/branches/xfce_4_2/doc/fr/Makefile.in,
+	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/Makefile.in,
+	  xfce4-appfinder/branches/xfce_4_2/install-sh,
+	  xfce4-appfinder/branches/xfce_4_2/ltmain.sh,
+	  xfce4-appfinder/branches/xfce_4_2/missing,
+	  xfce4-appfinder/branches/xfce_4_2/mkinstalldirs,
+	  xfce4-appfinder/branches/xfce_4_2/po/Makefile.in.in,
+	  xfce4-appfinder/branches/xfce_4_2/po/be.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/cs.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/da.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/de.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/el_GR.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/en_GB.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/es.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/es_MX.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/et.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/eu.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/fa.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/fi.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/gu.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/he.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/hu.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/it.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/ja.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/ko.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/lt.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/nl.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/pa.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/pt_BR.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/pt_PT.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/ro.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/ru.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/sk.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/tr.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/uk.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/zh_CN.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/src/Makefile.in: Make xfce_4_2
+	  branch use dev tools and remove generated files
 
-2005-01-22 13:22  pollux
+2005-04-07 17:02  pollux
 
-	* po/: fi.gmo, fi.po: update FI translations
+	* xfce4-appfinder/branches/xfce_4_2/po/be.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/cs.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/cs.po,
+	  xfce4-appfinder/branches/xfce_4_2/po/da.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/de.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/el_GR.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/en_GB.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/es.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/es_MX.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/et.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/eu.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/fa.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/fi.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/gu.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/he.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/hu.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/it.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/ja.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/ko.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/lt.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/nl.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/pa.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/pt_BR.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/pt_PT.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/ro.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/ru.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/sk.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/tr.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/uk.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/zh_CN.gmo: update CS
+	  translations
 
-2005-01-19 21:50  eduard
+2005-03-28 08:59  jasper
 
-	* src/: callbacks.c, main.c: fix bug 709
+	* xfce4-appfinder/branches/xfce_4_2/configure,
+	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
+	  xfce4-appfinder/branches/xfce_4_2/doc/C/xfce4-appfinder.html,
+	  xfce4-appfinder/branches/xfce_4_2/doc/Makefile.am,
+	  xfce4-appfinder/branches/xfce_4_2/doc/Makefile.in,
+	  xfce4-appfinder/branches/xfce_4_2/doc/fr/Makefile.am,
+	  xfce4-appfinder/branches/xfce_4_2/doc/fr/Makefile.in,
+	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/Makefile.am,
+	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/Makefile.in,
+	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/appfinder-handle-popup.png,
+	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/appfinder-item-popup.png,
+	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/default_appfinder.png,
+	  xfce4-appfinder/branches/xfce_4_2/doc/fr/xfce4-appfinder.html,
+	  xfce4-appfinder/branches/xfce_4_2/doc/fr/xfce4-appfinder.xml: Add
+	  French docs
 
-2005-01-08 16:04  pollux
+2005-03-28 08:58  
 
-	* configure, configure.ac, po/ru.gmo, po/ru.po,
-	  src/xfce4-appfinder.desktop: update RU translations
+	* xfce4-appfinder/branches/xfce_4_2/doc/fr: This commit was
+	  manufactured by cvs2svn to create branch 'xfce_4_2'.
 
-2005-01-06 20:24  pollux
+2005-03-26 11:08  pollux
 
-	* configure, configure.ac, ltmain.sh, po/uk.gmo, po/uk.po: update
-	  UK translations
+	* xfce4-appfinder/branches/xfce_4_2/configure,
+	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
+	  xfce4-appfinder/branches/xfce_4_2/ltmain.sh,
+	  xfce4-appfinder/branches/xfce_4_2/po/el_GR.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/el_GR.po: ADD el_GR
+	  translations from Stavros Giannouris <StavrosG2002@freemail.gr>
 
-2005-01-05 17:01  pollux
+2005-03-26 10:38  pollux
 
-	* po/: he.gmo, he.po: update HE translations
+	* xfce4-appfinder/branches/xfce_4_2/po/eu.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/eu.po: update EU translations
 
-2005-01-02 13:51  olivier
+2005-03-12 14:53  olivier
 
-	* ChangeLog, Makefile.in, configure, configure.ac, ltmain.sh,
-	  po/xfce4-appfinder.pot: Update version and changelog
+	* xfce4-appfinder/branches/xfce_4_2/ChangeLog: Update ChangeLog
 
-2004-12-25 21:33  kelnos
+2005-03-12 14:19  olivier
 
-	* Makefile.am: fix distcheck-bz2
+	* xfce4-appfinder/branches/xfce_4_2/configure,
+	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
+	  xfce4-appfinder/branches/xfce_4_2/ltmain.sh,
+	  xfce4-appfinder/branches/xfce_4_2/po/xfce4-appfinder.pot: Mass
+	  update for 4.2.1
 
-2004-12-24 20:10  eduard
+2005-03-09 22:42  eduard
 
-	* src/: af-constants.h, appfinder.h, callbacks.c, main.c, main.h:
-	  Build fix for --enable-debug=full
+	* xfce4-appfinder/branches/xfce_4_2/AUTHORS,
+	  xfce4-appfinder/branches/xfce_4_2/src/main.c: Lowercase patch to
+	  fix 710
 
-2004-12-24 01:03  kelnos
+2005-03-09 15:40  pollux
 
-	* Makefile.am: add dist-bz2 and distcheck-bz2 targets
+	* xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
+	  update SK translations
 
-2004-12-24 00:33  olivier
+2005-03-05 14:55  pollux
 
-	* doc/C/images/: appfinder-item-popup.png, default_appfinder.png:
-	  Themes and screenshots
+	* xfce4-appfinder/branches/xfce_4_2/configure,
+	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
+	  xfce4-appfinder/branches/xfce_4_2/po/sk.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/sk.po: update SK translations
 
-2004-12-23 22:24  pollux
+2005-03-05 11:21  pollux
 
-	* configure, configure.ac, po/et.gmo, po/et.po,
-	  src/xfce4-appfinder.desktop: update ET translations
+	* xfce4-appfinder/branches/xfce_4_2/configure,
+	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
+	  xfce4-appfinder/branches/xfce_4_2/po/da.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/da.po: add DA translations
+	  from Jesper Berth <big@santaz.dk>
 
-2004-12-22 21:46  benny
+2005-03-05 10:52  pollux
 
-	* ChangeLog, Makefile.am, Makefile.in: Update ChangeLog. Fix
+	* xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
+	  update HU translations
+
+2005-03-05 10:42  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
+	  update EU translations
+
+2005-03-04 17:43  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/po/ja.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/ja.po: update JA translations
+
+2005-02-21 08:57  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/configure,
+	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
+	  xfce4-appfinder/branches/xfce_4_2/po/ja.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/ja.po: update JA translations
+
+2005-02-21 08:57  
+
+	* xfce4-appfinder/branches/xfce_4_2/po/ja.po: This commit was
+	  manufactured by cvs2svn to create branch 'xfce_4_2'.
+
+2005-02-01 17:25  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
+	  update zh_CN translations
+
+2005-01-23 17:09  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/po/lt.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/lt.po: update LT translations
+
+2005-01-23 16:48  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/po/fi.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/fi.po,
+	  xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
+	  update FI translations
+
+2005-01-22 09:18  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/po/fi.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/fi.po: update FI translations
+
+2005-01-20 19:47  eduard
+
+	* xfce4-appfinder/branches/xfce_4_2/src/callbacks.c,
+	  xfce4-appfinder/branches/xfce_4_2/src/main.c: Fix 709
+
+2005-01-10 18:01  benny
+
+	* xfce4-appfinder/branches/xfce_4_2/ChangeLog,
+	  xfce4-appfinder/branches/xfce_4_2/NEWS: Final touch before the tag
+
+2005-01-10 12:56  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/configure,
+	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
+	  xfce4-appfinder/branches/xfce_4_2/po/hu.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/hu.po: update HU translations
+
+2005-01-10 12:23  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
+	  update LT translations
+
+2005-01-10 11:55  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/po/lt.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/lt.po: update LT translations
+
+2005-01-09 12:41  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
+	  update RO translations
+
+2005-01-09 12:30  benny
+
+	* xfce4-appfinder/branches/xfce_4_2/doc/C/xfce4-appfinder.html,
+	  xfce4-appfinder/branches/xfce_4_2/doc/C/xfce4-appfinder.xml:
+	  Update version in documentation.
+
+2005-01-08 15:49  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/configure,
+	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
+	  xfce4-appfinder/branches/xfce_4_2/po/ru.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/ru.po,
+	  xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
+	  update RU translations
+
+2005-01-08 15:49  
+
+	* xfce4-appfinder/branches/xfce_4_2/po/ru.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/ru.po: This commit was
+	  manufactured by cvs2svn to create branch 'xfce_4_2'.
+
+2005-01-06 20:33  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/configure,
+	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
+	  xfce4-appfinder/branches/xfce_4_2/po/uk.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/uk.po: update UK
+	  translations, i hope i didn't forget any file this time
+
+2005-01-06 20:33  
+
+	* xfce4-appfinder/branches/xfce_4_2/po/uk.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/uk.po: This commit was
+	  manufactured by cvs2svn to create branch 'xfce_4_2'.
+
+2005-01-05 22:13  benny
+
+	* xfce4-appfinder/branches/xfce_4_2/ChangeLog,
+	  xfce4-appfinder/branches/xfce_4_2/ltmain.sh: Final updates
+
+2005-01-05 16:14  pollux
+
+	* xfce4-appfinder/branches/xfce_4_2/po/he.gmo,
+	  xfce4-appfinder/branches/xfce_4_2/po/he.po: update HE translations
+
+2005-01-05 16:14  
+
+	* xfce4-appfinder/branches/xfce_4_2,
+	  xfce4-appfinder/branches/xfce_4_2/COPYING,
+	  xfce4-appfinder/branches/xfce_4_2/INSTALL,
+	  xfce4-appfinder/branches/xfce_4_2/NEWS,
+	  xfce4-appfinder/branches/xfce_4_2/xfce4-appfinder.spec.in: This
+	  commit was manufactured by cvs2svn to create branch 'xfce_4_2'.
+
+2005-01-02 12:51  olivier
+
+	* xfce4-appfinder/trunk/ChangeLog,
+	  xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/ltmain.sh,
+	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot: Update version and
+	  changelog
+
+2004-12-25 20:33  kelnos
+
+	* xfce4-appfinder/trunk/Makefile.am: fix distcheck-bz2
+
+2004-12-24 19:10  eduard
+
+	* xfce4-appfinder/trunk/src/af-constants.h,
+	  xfce4-appfinder/trunk/src/appfinder.h,
+	  xfce4-appfinder/trunk/src/callbacks.c,
+	  xfce4-appfinder/trunk/src/main.c,
+	  xfce4-appfinder/trunk/src/main.h: Build fix for
+	  --enable-debug=full
+
+2004-12-24 00:03  kelnos
+
+	* xfce4-appfinder/trunk/Makefile.am: add dist-bz2 and distcheck-bz2
+	  targets
+
+2004-12-23 23:33  olivier
+
+	* xfce4-appfinder/trunk/doc/C/images/appfinder-item-popup.png,
+	  xfce4-appfinder/trunk/doc/C/images/default_appfinder.png: Themes
+	  and screenshots
+
+2004-12-23 21:24  pollux
+
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/po/et.gmo, xfce4-appfinder/trunk/po/et.po,
+	  xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: update ET
+	  translations
+
+2004-12-22 20:46  benny
+
+	* xfce4-appfinder/trunk/ChangeLog,
+	  xfce4-appfinder/trunk/Makefile.am,
+	  xfce4-appfinder/trunk/Makefile.in: Update ChangeLog. Fix
 	  EXTRA_DIST.
 
-2004-12-21 11:00  jasper
+2004-12-21 10:00  jasper
 
-	* configure: Reporting for autotool duty
+	* xfce4-appfinder/trunk/configure: Reporting for autotool duty
 
-2004-12-21 10:10  kelnos
+2004-12-21 09:10  kelnos
 
-	* configure.ac: add czech translations
+	* xfce4-appfinder/trunk/configure.ac: add czech translations
 
-2004-12-21 10:03  kelnos
+2004-12-21 09:03  kelnos
 
-	* po/: cs.gmo, cs.po: add/update czech translations
+	* xfce4-appfinder/trunk/po/cs.gmo, xfce4-appfinder/trunk/po/cs.po:
+	  add/update czech translations
 
-2004-12-20 22:00  jasper
+2004-12-20 21:00  jasper
 
-	* ChangeLog, configure, configure.ac: Update versions and ChangeLog
+	* xfce4-appfinder/trunk/ChangeLog, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac: Update versions and ChangeLog
 
-2004-12-19 17:36  fleclainche
+2004-12-19 16:36  fleclainche
 
-	* doc/C/images/: appfinder-handle-popup.png,
-	  appfinder-item-popup.png, default_appfinder.png: Documentation
-	  screenshots update
+	* xfce4-appfinder/trunk/doc/C/images/appfinder-handle-popup.png,
+	  xfce4-appfinder/trunk/doc/C/images/appfinder-item-popup.png,
+	  xfce4-appfinder/trunk/doc/C/images/default_appfinder.png:
+	  Documentation screenshots update
 
-2004-12-15 19:56  pollux
+2004-12-15 18:56  pollux
 
-	* configure, configure.ac, po/pt_BR.gmo, po/pt_BR.po: update pt_BR
-	  translations
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/po/pt_BR.gmo,
+	  xfce4-appfinder/trunk/po/pt_BR.po: update pt_BR translations
 
-2004-12-14 21:33  pollux
+2004-12-14 20:33  pollux
 
-	* configure, configure.ac, po/ro.gmo, po/ro.po: add RO translations
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/po/ro.gmo, xfce4-appfinder/trunk/po/ro.po:
+	  add RO translations
 
-2004-12-11 19:56  benny
+2004-12-11 18:56  benny
 
-	* doc/C/xfce4-appfinder.html: Somehow this was left out from the
-	  previous commit.
+	* xfce4-appfinder/trunk/doc/C/xfce4-appfinder.html: Somehow this was
+	  left out from the previous commit.
 
-2004-12-11 19:50  benny
+2004-12-11 18:50  benny
 
-	* ChangeLog, doc/C/Makefile.am, doc/C/xfce4-appfinder.xml,
-	  doc/C/images/Makefile.am, doc/C/images/Makefile.in,
-	  doc/C/images/appfinder-handle-popup.png,
-	  doc/C/images/appfinder-item-popup.png,
-	  doc/C/images/handle-popup.png, doc/C/images/item-popup.png: Fix
-	  conflicting image files that are also in xfce4-panel.
+	* xfce4-appfinder/trunk/ChangeLog,
+	  xfce4-appfinder/trunk/doc/C/Makefile.am,
+	  xfce4-appfinder/trunk/doc/C/images/Makefile.am,
+	  xfce4-appfinder/trunk/doc/C/images/Makefile.in,
+	  xfce4-appfinder/trunk/doc/C/images/appfinder-handle-popup.png,
+	  xfce4-appfinder/trunk/doc/C/images/appfinder-item-popup.png,
+	  xfce4-appfinder/trunk/doc/C/images/handle-popup.png,
+	  xfce4-appfinder/trunk/doc/C/images/item-popup.png,
+	  xfce4-appfinder/trunk/doc/C/xfce4-appfinder.xml: Fix conflicting
+	  image files that are also in xfce4-panel.
 
-2004-12-11 18:51  olivier
+2004-12-11 17:51  olivier
 
-	* po/xfce4-appfinder.pot: Various changes and small fixes
+	* xfce4-appfinder/trunk/po/xfce4-appfinder.pot: Various changes and
+	  small fixes
 
-2004-12-05 22:20  pollux
+2004-12-05 21:20  pollux
 
-	* configure, configure.ac, po/en_GB.gmo, po/en_GB.po: add en_GB
-	  translations
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/po/en_GB.gmo,
+	  xfce4-appfinder/trunk/po/en_GB.po: add en_GB translations
 
-2004-12-05 21:50  pollux
+2004-12-05 20:50  pollux
 
-	* src/xfce4-appfinder.desktop: update KO translations and add
-	  screenshots in xfprint doc
+	* xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: update KO
+	  translations and add screenshots in xfprint doc
 
-2004-12-04 18:03  benny
+2004-12-04 17:03  benny
 
-	* ChangeLog, Makefile.in, aclocal.m4, compile, config.guess,
-	  config.sub, configure, configure.ac, depcomp, install-sh,
-	  ltmain.sh, missing, doc/Makefile.in, doc/C/Makefile.in,
-	  doc/C/xfce4-appfinder.html, doc/C/xfce4-appfinder.xml,
-	  doc/C/images/Makefile.in, src/Makefile.in: Update configure and
+	* xfce4-appfinder/trunk/ChangeLog,
+	  xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/aclocal.m4, xfce4-appfinder/trunk/compile,
+	  xfce4-appfinder/trunk/config.guess,
+	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac, xfce4-appfinder/trunk/depcomp,
+	  xfce4-appfinder/trunk/doc/C/Makefile.in,
+	  xfce4-appfinder/trunk/doc/C/images/Makefile.in,
+	  xfce4-appfinder/trunk/doc/C/xfce4-appfinder.html,
+	  xfce4-appfinder/trunk/doc/C/xfce4-appfinder.xml,
+	  xfce4-appfinder/trunk/doc/Makefile.in,
+	  xfce4-appfinder/trunk/install-sh, xfce4-appfinder/trunk/ltmain.sh,
+	  xfce4-appfinder/trunk/missing,
+	  xfce4-appfinder/trunk/src/Makefile.in: Update configure and
 	  ChangeLog. Small typo/style fix in doc.
 
-2004-12-04 00:12  eduard
+2004-12-03 23:12  eduard
 
-	* Makefile.am, Makefile.in, aclocal.m4, compile, config.guess,
-	  config.sub, configure, configure.ac, depcomp, install-sh,
-	  ltmain.sh, missing, doc/Makefile.am, doc/Makefile.in,
-	  doc/xfce-nochunk.xsl, doc/C/Makefile.am, doc/C/Makefile.in,
-	  doc/C/xfce4-appfinder.html, doc/C/xfce4-appfinder.xml,
-	  doc/C/images/Makefile.am, doc/C/images/Makefile.in,
-	  doc/C/images/default_appfinder.png,
-	  doc/C/images/handle-popup.png, doc/C/images/item-popup.png,
-	  src/Makefile.in, src/main.c: Doc addition and 506 559 bugs fixed
+	* xfce4-appfinder/trunk/Makefile.am,
+	  xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/aclocal.m4, xfce4-appfinder/trunk/compile,
+	  xfce4-appfinder/trunk/config.guess,
+	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac, xfce4-appfinder/trunk/depcomp,
+	  xfce4-appfinder/trunk/doc, xfce4-appfinder/trunk/doc/C,
+	  xfce4-appfinder/trunk/doc/C/Makefile.am,
+	  xfce4-appfinder/trunk/doc/C/Makefile.in,
+	  xfce4-appfinder/trunk/doc/C/images,
+	  xfce4-appfinder/trunk/doc/C/images/Makefile.am,
+	  xfce4-appfinder/trunk/doc/C/images/Makefile.in,
+	  xfce4-appfinder/trunk/doc/C/images/default_appfinder.png,
+	  xfce4-appfinder/trunk/doc/C/images/handle-popup.png,
+	  xfce4-appfinder/trunk/doc/C/images/item-popup.png,
+	  xfce4-appfinder/trunk/doc/C/xfce4-appfinder.html,
+	  xfce4-appfinder/trunk/doc/C/xfce4-appfinder.xml,
+	  xfce4-appfinder/trunk/doc/Makefile.am,
+	  xfce4-appfinder/trunk/doc/Makefile.in,
+	  xfce4-appfinder/trunk/doc/xfce-nochunk.xsl,
+	  xfce4-appfinder/trunk/install-sh, xfce4-appfinder/trunk/ltmain.sh,
+	  xfce4-appfinder/trunk/missing,
+	  xfce4-appfinder/trunk/src/Makefile.in,
+	  xfce4-appfinder/trunk/src/main.c: Doc addition and 506 559 bugs
+	  fixed
 
-2004-12-02 12:00  benny
+2004-12-02 11:00  benny
 
-	* src/main.c: Fix typo.
+	* xfce4-appfinder/trunk/src/main.c: Fix typo.
 
-2004-11-28 19:01  pollux
+2004-11-28 18:01  pollux
 
-	* configure, configure.ac, po/tr.gmo, po/tr.po: update TR
-	  translations
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/po/tr.gmo, xfce4-appfinder/trunk/po/tr.po:
+	  update TR translations
 
-2004-11-26 20:06  pollux
+2004-11-26 19:06  pollux
 
-	* configure, configure.ac, ltmain.sh, po/ko.gmo, po/ko.po: update
-	  KO translations
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/ko.gmo,
+	  xfce4-appfinder/trunk/po/ko.po: update KO translations
 
-2004-11-13 19:01  olivier
+2004-11-13 18:01  olivier
 
-	* ChangeLog: Update ChangeLog
+	* xfce4-appfinder/trunk/ChangeLog: Update ChangeLog
 
-2004-11-06 17:24  olivier
+2004-11-06 16:24  olivier
 
-	* ChangeLog, Makefile.in, aclocal.m4, compile, config.guess,
-	  config.sub, configure, configure.ac, depcomp, install-sh,
-	  missing, src/Makefile.in: Update
+	* xfce4-appfinder/trunk/ChangeLog,
+	  xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/aclocal.m4, xfce4-appfinder/trunk/compile,
+	  xfce4-appfinder/trunk/config.guess,
+	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac, xfce4-appfinder/trunk/depcomp,
+	  xfce4-appfinder/trunk/install-sh, xfce4-appfinder/trunk/missing,
+	  xfce4-appfinder/trunk/src/Makefile.in: Update
 	  automake/autoconf/libtool/gettext versions to generate the
 	  configure scripts and Makefiles, Update versions of all packages
 	  to 4.1.99.1 (ie 4.2 RC1), Update ChangeLogs.
 
-2004-10-30 21:03  olivier
+2004-10-30 19:03  olivier
 
-	* ChangeLog, ltmain.sh: Global update for 4.1.91 (Xfce 4.2 beta 2)
+	* xfce4-appfinder/trunk/ChangeLog, xfce4-appfinder/trunk/ltmain.sh:
+	  Global update for 4.1.91 (Xfce 4.2 beta 2)
 
-2004-10-30 16:00  pollux
+2004-10-30 14:00  pollux
 
-	* configure, configure.ac, po/lt.gmo, po/lt.po: update LT
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/po/lt.gmo, xfce4-appfinder/trunk/po/lt.po:
+	  update LT translations
+
+2004-10-28 11:55  pollux
+
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/he.gmo,
+	  xfce4-appfinder/trunk/po/he.po,
+	  xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: update HE
 	  translations
 
-2004-10-28 13:55  pollux
+2004-10-23 14:45  olivier
 
-	* configure, configure.ac, ltmain.sh, po/he.gmo, po/he.po,
-	  src/xfce4-appfinder.desktop: update HE translations
+	* xfce4-appfinder/trunk/ChangeLog: Update ChangeLog
 
-2004-10-23 16:45  olivier
+2004-10-22 20:38  olivier
 
-	* ChangeLog: Update ChangeLog
+	* xfce4-appfinder/trunk/ChangeLog, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/ltmain.sh: Updated versions and change logs
 
-2004-10-22 22:38  olivier
+2004-10-22 19:33  olivier
 
-	* ChangeLog, configure, configure.ac, ltmain.sh: Updated versions
-	  and change logs
+	* xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: Theme fixes
+	  update locale [fr] for desktop files
 
-2004-10-22 21:33  olivier
+2004-10-14 17:13  pollux
 
-	* src/xfce4-appfinder.desktop: Theme fixes update locale [fr] for
-	  desktop files
-
-2004-10-14 19:13  pollux
-
-	* configure, configure.ac, po/be.gmo, po/de.gmo, po/eu.gmo,
-	  po/fi.gmo, po/fi.po, po/gu.gmo, po/it.gmo, po/nl.gmo, po/pa.gmo,
-	  po/zh_CN.gmo, src/xfce4-appfinder.desktop: update FI translations
-
-2004-10-11 18:30  benny
-
-	* po/: be.po, de.po, eu.po, gu.po, it.po, nl.po, pa.po,
-	  xfce4-appfinder.pot, zh_CN.po: update-po for Moe.
-
-2004-10-10 13:52  pollux
-
-	* configure, configure.ac, po/pt_PT.gmo, po/pt_PT.po: update pt_PT
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/po/be.gmo, xfce4-appfinder/trunk/po/de.gmo,
+	  xfce4-appfinder/trunk/po/eu.gmo, xfce4-appfinder/trunk/po/fi.gmo,
+	  xfce4-appfinder/trunk/po/fi.po, xfce4-appfinder/trunk/po/gu.gmo,
+	  xfce4-appfinder/trunk/po/it.gmo, xfce4-appfinder/trunk/po/nl.gmo,
+	  xfce4-appfinder/trunk/po/pa.gmo,
+	  xfce4-appfinder/trunk/po/zh_CN.gmo,
+	  xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: update FI
 	  translations
 
-2004-10-09 19:47  eduard
+2004-10-11 16:30  benny
 
-	* src/: af-constants.h, appfinder.h, callbacks.c, callbacks.h:
-	  Trivial style fixes
+	* xfce4-appfinder/trunk/po/be.po, xfce4-appfinder/trunk/po/de.po,
+	  xfce4-appfinder/trunk/po/eu.po, xfce4-appfinder/trunk/po/gu.po,
+	  xfce4-appfinder/trunk/po/it.po, xfce4-appfinder/trunk/po/nl.po,
+	  xfce4-appfinder/trunk/po/pa.po,
+	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot,
+	  xfce4-appfinder/trunk/po/zh_CN.po: update-po for Moe.
 
-2004-10-09 16:20  pollux
+2004-10-10 11:52  pollux
 
-	* configure, configure.ac, po/fa.gmo, po/fa.po: update FA
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/po/pt_PT.gmo,
+	  xfce4-appfinder/trunk/po/pt_PT.po: update pt_PT translations
+
+2004-10-09 17:47  eduard
+
+	* xfce4-appfinder/trunk/src/af-constants.h,
+	  xfce4-appfinder/trunk/src/appfinder.h,
+	  xfce4-appfinder/trunk/src/callbacks.c,
+	  xfce4-appfinder/trunk/src/callbacks.h: Trivial style fixes
+
+2004-10-09 14:20  pollux
+
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/po/fa.gmo, xfce4-appfinder/trunk/po/fa.po:
+	  update FA translations
+
+2004-10-08 13:49  edscott
+
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/po/es.gmo, xfce4-appfinder/trunk/po/es.po,
+	  xfce4-appfinder/trunk/po/es_MX.gmo,
+	  xfce4-appfinder/trunk/po/es_MX.po: add spanish language
 	  translations
 
-2004-10-08 15:49  edscott
+2004-10-07 20:35  benny
 
-	* configure, configure.ac, po/es.gmo, po/es.po, po/es_MX.gmo,
-	  po/es_MX.po: add spanish language translations
+	* xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/aclocal.m4, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/m4/debug.m4,
+	  xfce4-appfinder/trunk/m4/glib-gettext.m4,
+	  xfce4-appfinder/trunk/m4/pkg.m4,
+	  xfce4-appfinder/trunk/src/Makefile.in: Added --enable-final (-O1
+	  for GNU ld) as per Jaspers request. Added missing m4 files.
 
-2004-10-07 22:35  benny
+2004-10-03 16:14  pollux
 
-	* Makefile.in, aclocal.m4, configure, m4/debug.m4,
-	  m4/glib-gettext.m4, m4/pkg.m4, src/Makefile.in: Added
-	  --enable-final (-O1 for GNU ld) as per Jaspers request. Added
-	  missing m4 files.
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/pa.gmo,
+	  xfce4-appfinder/trunk/po/pa.po: Punjabi translations (PA) from
+	  jaswinderlinux@netscape.net
 
-2004-10-03 18:14  pollux
+2004-10-02 13:28  olivier
 
-	* configure, configure.ac, ltmain.sh, po/pa.gmo, po/pa.po: Punjabi
-	  translations (PA) from jaswinderlinux@netscape.net
-
-2004-10-02 15:28  olivier
-
-	* ChangeLog, Makefile.in, aclocal.m4, config.guess, config.sub,
-	  configure, depcomp, install-sh, ltmain.sh,
-	  po/xfce4-appfinder.pot, src/Makefile.in: Update all files for 4.2
+	* xfce4-appfinder/trunk/ChangeLog,
+	  xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/aclocal.m4,
+	  xfce4-appfinder/trunk/config.guess,
+	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/depcomp, xfce4-appfinder/trunk/install-sh,
+	  xfce4-appfinder/trunk/ltmain.sh,
+	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot,
+	  xfce4-appfinder/trunk/src/Makefile.in: Update all files for 4.2
 	  beta 1
 
-2004-09-30 22:15  eduard
+2004-09-30 20:15  eduard
 
-	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
-	  configure.ac, depcomp, install-sh, ltmain.sh, src/Makefile.in:
-	  version update
+	* xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/aclocal.m4,
+	  xfce4-appfinder/trunk/config.guess,
+	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac, xfce4-appfinder/trunk/depcomp,
+	  xfce4-appfinder/trunk/install-sh, xfce4-appfinder/trunk/ltmain.sh,
+	  xfce4-appfinder/trunk/src/Makefile.in: version update
 
-2004-09-29 09:59  pollux
+2004-09-29 07:59  pollux
 
-	* configure, configure.ac, po/zh_CN.gmo, po/zh_CN.po: updated zh_CN
-	  translations from yongtao yang <yongtao.yang@gmail.com>
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/po/zh_CN.gmo,
+	  xfce4-appfinder/trunk/po/zh_CN.po: updated zh_CN translations from
+	  yongtao yang <yongtao.yang@gmail.com>
 
-2004-09-28 21:51  eduard
+2004-09-28 19:51  eduard
 
-	* src/main.c: Fix the fix :-)
+	* xfce4-appfinder/trunk/src/main.c: Fix the fix :-)
 
-2004-09-28 21:34  eduard
+2004-09-28 19:34  eduard
 
-	* src/main.c: Fix 339
+	* xfce4-appfinder/trunk/src/main.c: Fix 339
 
-2004-09-23 23:36  pollux
+2004-09-23 21:36  pollux
 
-	* configure, configure.ac, po/gu.gmo, po/gu.po: add Gujarati
-	  translations (GU) from Ankit Patel <ankit@redhat.com>
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/po/gu.gmo, xfce4-appfinder/trunk/po/gu.po:
+	  add Gujarati translations (GU) from Ankit Patel <ankit@redhat.com>
 
-2004-09-23 10:22  jasper
+2004-09-23 08:22  jasper
 
-	* src/xfce4-appfinder.desktop: Add nl translations
-
-2004-09-22 05:18  kelnos
-
-	* src/xfce4-appfinder.desktop: add GenericName tags to settings
-	  .desktop files
-
-2004-09-21 13:51  jasper
-
-	* po/: be.gmo, be.po, de.gmo, de.po, eu.gmo, eu.po, it.gmo, it.po,
-	  nl.gmo, nl.po: Run make update-po at Moe's request.
-
-2004-09-21 00:22  olivier
-
-	* ChangeLog, po/xfce4-appfinder.pot: Update all ChangeLogs
-
-2004-09-19 15:34  eduard
-
-	* src/main.c: kdedir support and better syntax
-
-2004-09-19 12:14  jasper
-
-	* configure, configure.ac, po/nl.gmo, po/nl.po: Update nl
+	* xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: Add nl
 	  translations
 
-2004-09-18 18:41  pollux
+2004-09-22 03:18  kelnos
 
-	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
-	  configure.ac, depcomp, install-sh, ltmain.sh, po/eu.gmo,
-	  po/eu.po, src/Makefile.in: update EU translations
+	* xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: add GenericName
+	  tags to settings .desktop files
 
-2004-09-18 15:45  moe
+2004-09-21 11:51  jasper
 
-	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
-	  configure.ac, depcomp, install-sh, ltmain.sh, po/de.gmo,
-	  po/de.po, src/Makefile.in: Adding German translation
+	* xfce4-appfinder/trunk/po/be.gmo, xfce4-appfinder/trunk/po/be.po,
+	  xfce4-appfinder/trunk/po/de.gmo, xfce4-appfinder/trunk/po/de.po,
+	  xfce4-appfinder/trunk/po/eu.gmo, xfce4-appfinder/trunk/po/eu.po,
+	  xfce4-appfinder/trunk/po/it.gmo, xfce4-appfinder/trunk/po/it.po,
+	  xfce4-appfinder/trunk/po/nl.gmo, xfce4-appfinder/trunk/po/nl.po:
+	  Run make update-po at Moe's request.
 
-2004-09-18 14:29  eduard
+2004-09-20 22:22  olivier
 
-	* src/xfce4-appfinder.desktop: .desktop file missing (d'oh!)
+	* xfce4-appfinder/trunk/ChangeLog,
+	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot: Update all
+	  ChangeLogs
 
-2004-09-18 14:13  eduard
+2004-09-19 13:34  eduard
 
-	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
-	  depcomp, install-sh, ltmain.sh, src/Makefile.am, src/Makefile.in:
-	  .desktop added and makefile changes
+	* xfce4-appfinder/trunk/src/main.c: kdedir support and better syntax
 
-2004-09-17 00:10  pollux
+2004-09-19 10:14  jasper
 
-	* configure, configure.ac, ltmain.sh, po/be.gmo, po/be.po: add BE
-	  translations from Ales Nyakhaychyk <nab@mail.by>
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/po/nl.gmo, xfce4-appfinder/trunk/po/nl.po:
+	  Update nl translations
 
-2004-09-15 21:31  eduard
+2004-09-18 16:41  pollux
 
-	* src/: appfinder.h, main.c: Basedir support added
+	* xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/aclocal.m4,
+	  xfce4-appfinder/trunk/config.guess,
+	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac, xfce4-appfinder/trunk/depcomp,
+	  xfce4-appfinder/trunk/install-sh, xfce4-appfinder/trunk/ltmain.sh,
+	  xfce4-appfinder/trunk/po/eu.gmo, xfce4-appfinder/trunk/po/eu.po,
+	  xfce4-appfinder/trunk/src/Makefile.in: update EU translations
 
-2004-08-24 21:57  eduard
+2004-09-18 13:45  moe
 
-	* ChangeLog.old: forgot a file :-)
+	* xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/aclocal.m4,
+	  xfce4-appfinder/trunk/config.guess,
+	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac, xfce4-appfinder/trunk/depcomp,
+	  xfce4-appfinder/trunk/install-sh, xfce4-appfinder/trunk/ltmain.sh,
+	  xfce4-appfinder/trunk/po/de.gmo, xfce4-appfinder/trunk/po/de.po,
+	  xfce4-appfinder/trunk/src/Makefile.in: Adding German translation
 
-2004-08-24 21:53  eduard
+2004-09-18 12:29  eduard
 
-	* Makefile.am, Makefile.in, po/Makefile.in.in,
-	  po/xfce4-appfinder.pot: make dist/rpm fixes
+	* xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: .desktop file
+	  missing (d'oh!)
 
-2004-08-02 21:00  eduard
+2004-09-18 12:13  eduard
 
-	* src/callbacks.c: removed useless menu entries
+	* xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/aclocal.m4,
+	  xfce4-appfinder/trunk/config.guess,
+	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/depcomp, xfce4-appfinder/trunk/install-sh,
+	  xfce4-appfinder/trunk/ltmain.sh,
+	  xfce4-appfinder/trunk/src/Makefile.am,
+	  xfce4-appfinder/trunk/src/Makefile.in: .desktop added and makefile
+	  changes
 
-2004-07-29 20:46  eduard
+2004-09-16 22:10  pollux
 
-	* ChangeLog, TODO, src/callbacks.c, src/main.c:
-	  Internationalization fixes (on category liststore)
+	* xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/be.gmo,
+	  xfce4-appfinder/trunk/po/be.po: add BE translations from Ales
+	  Nyakhaychyk <nab@mail.by>
 
-2004-07-28 23:22  benny
+2004-09-15 19:31  eduard
 
-	* m4/depends.m4: Fixed (module)_FOUND bug reported by brian.
-	  Hopefully nothing else broke this time.
+	* xfce4-appfinder/trunk/src/appfinder.h,
+	  xfce4-appfinder/trunk/src/main.c: Basedir support added
 
-2004-07-26 21:46  eduard
+2004-08-24 19:57  eduard
 
-	* po/it.gmo, po/it.po, src/Makefile.am, src/Makefile.in,
-	  src/af-constants.h, src/appfinder.h, src/callbacks.c,
-	  src/callbacks.h, src/main.c: Directory recursion added
+	* xfce4-appfinder/trunk/ChangeLog.old: forgot a file :-)
 
-2004-07-24 20:52  benny
+2004-08-24 19:53  eduard
 
-	* m4/depends.m4: Readded XFCE_MCS_PLUGIN() again, dunno how I
-	  manage to remove it everytime I edit depends.m4!
+	* xfce4-appfinder/trunk/Makefile.am,
+	  xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/po/Makefile.in.in,
+	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot: make dist/rpm fixes
 
-2004-07-24 19:30  benny
+2004-08-02 19:00  eduard
 
-	* m4/depends.m4: XFCE_PANEL_PLUGIN had wrong panel version for the
-	  threaded test.
+	* xfce4-appfinder/trunk/src/callbacks.c: removed useless menu
+	  entries
 
-2004-07-24 19:28  benny
+2004-07-29 18:46  eduard
 
-	* m4/depends.m4: Extended the XFCE_PANEL_PLUGIN macro to include
-	  some magic for threaded panels.
+	* xfce4-appfinder/trunk/ChangeLog, xfce4-appfinder/trunk/TODO,
+	  xfce4-appfinder/trunk/src/callbacks.c,
+	  xfce4-appfinder/trunk/src/main.c: Internationalization fixes (on
+	  category liststore)
 
-2004-07-22 01:00  benny
+2004-07-28 21:22  benny
 
-	* m4/depends.m4: Readded the XFCE_MCS_PLUGIN macro. I didn't ment
-	  to remove it, tho.
+	* xfce4-appfinder/trunk/m4/depends.m4: Fixed (module)_FOUND bug
+	  reported by brian. Hopefully nothing else broke this time.
 
-2004-07-20 22:58  benny
+2004-07-26 19:46  eduard
 
-	* m4/depends.m4: Modifed panel plugin check, so one (the installer)
-	  can choose to install into a different plugin dir.
+	* xfce4-appfinder/trunk/po/it.gmo, xfce4-appfinder/trunk/po/it.po,
+	  xfce4-appfinder/trunk/src/Makefile.am,
+	  xfce4-appfinder/trunk/src/Makefile.in,
+	  xfce4-appfinder/trunk/src/af-constants.h,
+	  xfce4-appfinder/trunk/src/appfinder.h,
+	  xfce4-appfinder/trunk/src/callbacks.c,
+	  xfce4-appfinder/trunk/src/callbacks.h,
+	  xfce4-appfinder/trunk/src/main.c: Directory recursion added
 
-2004-07-18 16:19  pollux
+2004-07-24 18:52  benny
 
-	* src/main.c: i18n fix
+	* xfce4-appfinder/trunk/m4/depends.m4: Readded XFCE_MCS_PLUGIN()
+	  again, dunno how I manage to remove it everytime I edit
+	  depends.m4!
 
-2004-07-18 16:01  eduard
+2004-07-24 17:30  benny
 
-	* po/it.po, po/xfce4-appfinder.pot, src/af-constants.h,
-	  src/appfinder.h, src/main.c: i18n fixes
+	* xfce4-appfinder/trunk/m4/depends.m4: XFCE_PANEL_PLUGIN had wrong
+	  panel version for the threaded test.
 
-2004-07-18 15:08  eduard
+2004-07-24 17:28  benny
 
-	* po/: ChangeLog, Makefile.in.in, POTFILES.in, it.gmo, it.po,
-	  xfce4-appfinder.pot: po files
+	* xfce4-appfinder/trunk/m4/depends.m4: Extended the
+	  XFCE_PANEL_PLUGIN macro to include some magic for threaded panels.
 
-2004-07-18 15:04  eduard
+2004-07-21 23:00  benny
 
-	* Makefile.am, Makefile.in, aclocal.m4, compile, config.guess,
-	  config.h.in, config.sub, configure, configure.ac, depcomp,
-	  install-sh, ltmain.sh, missing, mkinstalldirs, src/Makefile.in,
-	  src/af-constants.h, src/main.c: i18n support
+	* xfce4-appfinder/trunk/m4/depends.m4: Readded the XFCE_MCS_PLUGIN
+	  macro. I didn't ment to remove it, tho.
 
-2004-07-18 11:01  eduard
+2004-07-20 20:58  benny
 
-	* src/main.c: Fix build issue
+	* xfce4-appfinder/trunk/m4/depends.m4: Modifed panel plugin check,
+	  so one (the installer) can choose to install into a different
+	  plugin dir.
 
-2004-07-17 19:21  eduard
+2004-07-18 14:19  pollux
 
-	* src/main.c: Remove a useless thing
+	* xfce4-appfinder/trunk/src/main.c: i18n fix
 
-2004-07-17 19:09  eduard
+2004-07-18 14:01  eduard
 
-	* ChangeLog, TODO, src/main.c: Code clean and resync with
+	* xfce4-appfinder/trunk/po/it.po,
+	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot,
+	  xfce4-appfinder/trunk/src/af-constants.h,
+	  xfce4-appfinder/trunk/src/appfinder.h,
+	  xfce4-appfinder/trunk/src/main.c: i18n fixes
+
+2004-07-18 13:08  eduard
+
+	* xfce4-appfinder/trunk/po, xfce4-appfinder/trunk/po/ChangeLog,
+	  xfce4-appfinder/trunk/po/Makefile.in.in,
+	  xfce4-appfinder/trunk/po/POTFILES.in,
+	  xfce4-appfinder/trunk/po/it.gmo, xfce4-appfinder/trunk/po/it.po,
+	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot: po files
+
+2004-07-18 13:04  eduard
+
+	* xfce4-appfinder/trunk/Makefile.am,
+	  xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/aclocal.m4, xfce4-appfinder/trunk/compile,
+	  xfce4-appfinder/trunk/config.guess,
+	  xfce4-appfinder/trunk/config.h.in,
+	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac, xfce4-appfinder/trunk/depcomp,
+	  xfce4-appfinder/trunk/install-sh, xfce4-appfinder/trunk/ltmain.sh,
+	  xfce4-appfinder/trunk/missing,
+	  xfce4-appfinder/trunk/mkinstalldirs,
+	  xfce4-appfinder/trunk/src/Makefile.in,
+	  xfce4-appfinder/trunk/src/af-constants.h,
+	  xfce4-appfinder/trunk/src/main.c: i18n support
+
+2004-07-18 09:01  eduard
+
+	* xfce4-appfinder/trunk/src/main.c: Fix build issue
+
+2004-07-17 17:21  eduard
+
+	* xfce4-appfinder/trunk/src/main.c: Remove a useless thing
+
+2004-07-17 17:09  eduard
+
+	* xfce4-appfinder/trunk/ChangeLog, xfce4-appfinder/trunk/TODO,
+	  xfce4-appfinder/trunk/src/main.c: Code clean and resync with
 	  libxfce4gui
 
-2004-07-17 14:20  benny
+2004-07-17 12:20  benny
 
-	* src/: Makefile.am, af-constants.h, main.c: Fix make dist. First
-	  attempt to use XDG basedir spec, Eduard please have a look and
-	  fix it.
+	* xfce4-appfinder/trunk/src/Makefile.am,
+	  xfce4-appfinder/trunk/src/af-constants.h,
+	  xfce4-appfinder/trunk/src/main.c: Fix make dist. First attempt to
+	  use XDG basedir spec, Eduard please have a look and fix it.
 
-2004-06-27 11:45  eduard
+2004-06-27 09:45  eduard
 
-	* Makefile.in, TODO, aclocal.m4, autogen.sh, src/appfinder.h,
-	  src/main.c: Added infobox to the right menu
+	* xfce4-appfinder/trunk/Makefile.in, xfce4-appfinder/trunk/TODO,
+	  xfce4-appfinder/trunk/aclocal.m4,
+	  xfce4-appfinder/trunk/autogen.sh,
+	  xfce4-appfinder/trunk/src/appfinder.h,
+	  xfce4-appfinder/trunk/src/main.c: Added infobox to the right menu
 
-2004-06-24 20:50  eduard
+2004-06-24 18:50  eduard
 
-	* src/: appfinder.h, main.c: Some clean and reorganization.  Menu
-	  added
+	* xfce4-appfinder/trunk/src/appfinder.h,
+	  xfce4-appfinder/trunk/src/main.c: Some clean and reorganization.
+	  Menu added
 
-2004-06-22 20:50  eduard
+2004-06-22 18:50  eduard
 
-	* AUTHORS, README, TODO, src/af-constants.h, src/appfinder.h,
-	  src/main.c: No item report added.  A lot of small fixes and
-	  cleanup.  Support for right click on treeview (just the callback
-	  for now).
+	* xfce4-appfinder/trunk/AUTHORS, xfce4-appfinder/trunk/README,
+	  xfce4-appfinder/trunk/TODO,
+	  xfce4-appfinder/trunk/src/af-constants.h,
+	  xfce4-appfinder/trunk/src/appfinder.h,
+	  xfce4-appfinder/trunk/src/main.c: No item report added. A lot of
+	  small fixes and cleanup. Support for right click on treeview (just
+	  the callback for now).
 
-2004-06-21 21:13  eduard
+2004-06-21 19:13  eduard
 
-	* src/af-constants.h: Added af-constants.h file
+	* xfce4-appfinder/trunk/src/af-constants.h: Added af-constants.h
+	  file
 
-2004-06-21 21:02  eduard
+2004-06-21 19:02  eduard
 
-	* BUGS, TODO, src/inline-icon.h, src/main.c,
-	  src/xfce4-appfinder.png: It doesn't flicker anymore.	Code clean.
-	  Icon added.	Some bug fixed (segfaults ;-)
+	* xfce4-appfinder/trunk/BUGS, xfce4-appfinder/trunk/TODO,
+	  xfce4-appfinder/trunk/src/inline-icon.h,
+	  xfce4-appfinder/trunk/src/main.c,
+	  xfce4-appfinder/trunk/src/xfce4-appfinder.png: It doesn't flicker
+	  anymore. Code clean. Icon added. Some bug fixed (segfaults ;-)
 
-2004-06-20 01:57  eduard
+2004-06-19 23:57  eduard
 
-	* src/main.c: Removed the labels (goto ugly stuff) and code
-	  improvements
+	* xfce4-appfinder/trunk/src/main.c: Removed the labels (goto ugly
+	  stuff) and code improvements
 
-2004-06-19 22:59  eduard
+2004-06-19 20:59  eduard
 
-	* src/main.c: Fixed potential crash on categories callback
+	* xfce4-appfinder/trunk/src/main.c: Fixed potential crash on
+	  categories callback
 
-2004-06-19 22:21  benny
+2004-06-19 20:21  benny
 
-	* m4/: X11.m4, debug.m4, depends.m4, i18n.m4: Added missing .m4
-	  files.
+	* xfce4-appfinder/trunk/m4, xfce4-appfinder/trunk/m4/X11.m4,
+	  xfce4-appfinder/trunk/m4/debug.m4,
+	  xfce4-appfinder/trunk/m4/depends.m4,
+	  xfce4-appfinder/trunk/m4/i18n.m4: Added missing .m4 files.
 
-2004-06-19 22:16  eduard
+2004-06-19 20:16  eduard
 
-	* src/main.c: Speed improvements and code cleanup
+	* xfce4-appfinder/trunk/src/main.c: Speed improvements and code
+	  cleanup
 
-2004-06-19 20:43  eduard
+2004-06-19 18:43  eduard
 
-	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
-	  ltmain.sh, src/Makefile.in: Added autogen.sh and m4 directory
+	* xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/aclocal.m4,
+	  xfce4-appfinder/trunk/config.guess,
+	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/ltmain.sh,
+	  xfce4-appfinder/trunk/src/Makefile.in: Added autogen.sh and m4
+	  directory
 
-2004-06-19 19:58  eduard
+2004-06-19 17:58  eduard
 
-	* src/main.c: Some other fixes on dentry. Deprecated things removed
+	* xfce4-appfinder/trunk/src/main.c: Some other fixes on dentry.
+	  Deprecated things removed
 
-2004-06-19 19:00  eduard
+2004-06-19 17:00  eduard
 
-	* src/main.c: Some fixes on free()
+	* xfce4-appfinder/trunk/src/main.c: Some fixes on free()
 
-2004-06-19 14:10  eduard
+2004-06-19 12:10  eduard
 
-	* src/main.c: Code cleanup
+	* xfce4-appfinder/trunk/src/main.c: Code cleanup
 
-2004-06-14 22:18  eduard
+2004-06-14 20:18  eduard
 
-	* src/main.c: drag and drop fixes
+	* xfce4-appfinder/trunk/src/main.c: drag and drop fixes
 
-2004-06-13 18:48  eduard
+2004-06-13 16:48  eduard
 
-	* configure.ac, src/main.c: Drag and drop support Some bug fixed
+	* xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/src/main.c: Drag and drop support Some bug
+	  fixed
 
-2004-05-19 22:13  eduard
+2004-05-19 20:13  eduard
 
-	* config.guess, config.sub, ltmain.sh: Added autogen.sh
+	* xfce4-appfinder/trunk/config.guess,
+	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/ltmain.sh:
+	  Added autogen.sh
 
-2004-05-18 23:06  eduard
+2004-05-18 21:06  eduard
 
-	* src/: inline-icon.h, main.c: Fixed crash on some app execution
+	* xfce4-appfinder/trunk/src/inline-icon.h,
+	  xfce4-appfinder/trunk/src/main.c: Fixed crash on some app
+	  execution
 
-2004-05-07 21:43  eduard
+2004-05-07 19:43  eduard
 
-	* configure, configure.ac, xfce4-appfinder.spec.in, config.guess,
-	  install-sh, config.sub, Makefile.am, missing, mkinstalldirs,
-	  AUTHORS, Makefile.in, config.h.in, ChangeLog, INSTALL, COPYING,
-	  src/Makefile.am, src/inline-icon.h, src/Makefile.in, src/main.c,
-	  src/main.h, src/xfce4-appfinder.png: Initial revision
+	* xfce4-appfinder/trunk/AUTHORS, xfce4-appfinder/trunk/COPYING,
+	  xfce4-appfinder/trunk/ChangeLog, xfce4-appfinder/trunk/INSTALL,
+	  xfce4-appfinder/trunk/Makefile.am,
+	  xfce4-appfinder/trunk/Makefile.in,
+	  xfce4-appfinder/trunk/config.guess,
+	  xfce4-appfinder/trunk/config.h.in,
+	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
+	  xfce4-appfinder/trunk/configure.ac,
+	  xfce4-appfinder/trunk/install-sh, xfce4-appfinder/trunk/missing,
+	  xfce4-appfinder/trunk/mkinstalldirs, xfce4-appfinder/trunk/src,
+	  xfce4-appfinder/trunk/src/Makefile.am,
+	  xfce4-appfinder/trunk/src/Makefile.in,
+	  xfce4-appfinder/trunk/src/inline-icon.h,
+	  xfce4-appfinder/trunk/src/main.c,
+	  xfce4-appfinder/trunk/src/main.h,
+	  xfce4-appfinder/trunk/src/xfce4-appfinder.png,
+	  xfce4-appfinder/trunk/xfce4-appfinder.spec.in: Initial revision
 
-2004-05-07 21:36  eduard
+2004-05-07 19:36  eduard
 
-	* BUGS, NEWS, TODO, compile, depcomp, README, aclocal.m4,
-	  ltmain.sh: Initial revision
+	* xfce4-appfinder/trunk/BUGS, xfce4-appfinder/trunk/NEWS,
+	  xfce4-appfinder/trunk/README, xfce4-appfinder/trunk/TODO,
+	  xfce4-appfinder/trunk/aclocal.m4, xfce4-appfinder/trunk/compile,
+	  xfce4-appfinder/trunk/depcomp, xfce4-appfinder/trunk/ltmain.sh:
+	  Initial revision
+
+2004-05-07 19:36  
+
+	* xfce4-appfinder/branches, xfce4-appfinder/tags,
+	  xfce4-appfinder/trunk: New repository initialized by cvs2svn.
 
