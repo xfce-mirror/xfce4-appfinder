@@ -24,7 +24,7 @@ AC_HEADER_STDC
 
 dnl Check for i18n support
 BM_I18N([xfce4-appfinder], [be cs de en_GB es es_MX et eu fa fi gu he it ja ko
-			    lt nl pa pl pt_BR pt_PT ro ru sv tr uk zh_CN])
+			    lt mr nl pa pl pt_BR pt_PT ro ru sv tr uk zh_CN])
 
 dnl Check for required packages
 BM_DEPEND([LIBXFCEGUI4], [libxfcegui4-1.0], [4.2.0])
