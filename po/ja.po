@@ -1,14 +1,14 @@
-# Japanese translation for xfce4-appfinder.
-# Copyright (C) 2004-2005 Free Software Foundation, Inc.
+# Japanese translations for xfce4-appfinder package.
+# Copyright (C) 2004-2005 The Xfce development team.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Daichi Kawahata <daichik@users.sourceforge.net>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.2.0\n"
+"Project-Id-Version: xfce4-appfinder 4.2.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-01-02 10:57+0100\n"
-"PO-Revision-Date: 2005-02-18 06:55+0900\n"
+"PO-Revision-Date: 2005-05-12 18:52+0900\n"
 "Last-Translator: Daichi Kawahata <daichik@users.sourceforge.net>\n"
 "Language-Team: xfce-users-jp <xfce-users-jp@ml.fdiary.net>\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgstr "全て"
 
 #: src/af-constants.h:55
 msgid "Recently Used"
-msgstr "最近使用したもの"
+msgstr "最近使用したアプリ"
 
 #: src/af-constants.h:56
 msgid "Core"
