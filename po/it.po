@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-11 18:28+0200\n"
+"POT-Creation-Date: 2005-03-12 10:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Eduard Roccatello <eduard@xfce.org>\n"
 "Language-Team: it <it@li.org>\n"
@@ -16,71 +16,71 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:98 src/main.c:104
+#: src/main.c:99 src/main.c:105
 msgid "Now starting"
 msgstr "Avvio"
 
-#: src/main.c:112
+#: src/main.c:113
 msgid "Cannot execute"
 msgstr "Non posso eseguire"
 
-#: src/main.c:148
+#: src/main.c:149
 msgid "<b>Search:</b>"
 msgstr "<b>Cerca:</b>"
 
-#: src/main.c:205
+#: src/main.c:206
 msgid "Categories"
 msgstr "Categorie"
 
-#: src/af-constants.h:72
+#: src/af-constants.h:54
 msgid "All"
 msgstr "Tutte"
 
-#: src/af-constants.h:73
+#: src/af-constants.h:55
 msgid "Recently Used"
 msgstr "Usati di recente"
 
-#: src/af-constants.h:74
+#: src/af-constants.h:56
 msgid "Core"
 msgstr "Principali"
 
-#: src/af-constants.h:75
+#: src/af-constants.h:57
 msgid "Development"
 msgstr "Sviluppo"
 
-#: src/af-constants.h:76
+#: src/af-constants.h:58
 msgid "Office"
 msgstr "Ufficio"
 
-#: src/af-constants.h:77
+#: src/af-constants.h:59
 msgid "Graphics"
 msgstr "Grafica"
 
-#: src/af-constants.h:78
+#: src/af-constants.h:60
 msgid "Network"
 msgstr "Rete ed internet"
 
-#: src/af-constants.h:79
+#: src/af-constants.h:61
 msgid "AudioVideo"
 msgstr "Multimedia"
 
-#: src/af-constants.h:80
+#: src/af-constants.h:62
 msgid "Game"
 msgstr "Gioco"
 
-#: src/af-constants.h:81
+#: src/af-constants.h:63
 msgid "Education"
 msgstr "Educativi"
 
-#: src/af-constants.h:82
+#: src/af-constants.h:64
 msgid "System"
 msgstr "Sistema"
 
-#: src/af-constants.h:83
+#: src/af-constants.h:65
 msgid "Filemanager"
 msgstr ""
 
-#: src/af-constants.h:84
+#: src/af-constants.h:66
 msgid "Utility"
 msgstr ""
 

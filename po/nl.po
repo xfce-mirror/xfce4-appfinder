@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-11 18:28+0200\n"
+"POT-Creation-Date: 2005-03-12 10:05+0100\n"
 "PO-Revision-Date: 2004-09-19 12:01+0200\n"
 "Last-Translator: Jasper Huijsmans <jasper@xfce.org>\n"
 "Language-Team: Nederlands <nl@li.org>\n"
@@ -16,70 +16,70 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:98 src/main.c:104
+#: src/main.c:99 src/main.c:105
 msgid "Now starting"
 msgstr "Bezig met starten"
 
-#: src/main.c:112
+#: src/main.c:113
 msgid "Cannot execute"
 msgstr "Kan programma niet uitvoeren"
 
-#: src/main.c:148
+#: src/main.c:149
 msgid "<b>Search:</b>"
 msgstr "<b>Zoeken:</b>"
 
-#: src/main.c:205
+#: src/main.c:206
 msgid "Categories"
 msgstr "Categoriën"
 
-#: src/af-constants.h:72
+#: src/af-constants.h:54
 msgid "All"
 msgstr "Alles"
 
-#: src/af-constants.h:73
+#: src/af-constants.h:55
 msgid "Recently Used"
 msgstr "Recent"
 
-#: src/af-constants.h:74
+#: src/af-constants.h:56
 msgid "Core"
 msgstr "Accesoires"
 
-#: src/af-constants.h:75
+#: src/af-constants.h:57
 msgid "Development"
 msgstr "Ontwikkeling"
 
-#: src/af-constants.h:76
+#: src/af-constants.h:58
 msgid "Office"
 msgstr "Kantoor"
 
-#: src/af-constants.h:77
+#: src/af-constants.h:59
 msgid "Graphics"
 msgstr "Grafisch"
 
-#: src/af-constants.h:78
+#: src/af-constants.h:60
 msgid "Network"
 msgstr "Internet"
 
-#: src/af-constants.h:79
+#: src/af-constants.h:61
 msgid "AudioVideo"
 msgstr "Multimedia"
 
-#: src/af-constants.h:80
+#: src/af-constants.h:62
 msgid "Game"
 msgstr "Spellen"
 
-#: src/af-constants.h:81
+#: src/af-constants.h:63
 msgid "Education"
 msgstr "Educatief"
 
-#: src/af-constants.h:82
+#: src/af-constants.h:64
 msgid "System"
 msgstr "Systeem"
 
-#: src/af-constants.h:83
+#: src/af-constants.h:65
 msgid "Filemanager"
 msgstr "Bestandsbeheer"
 
-#: src/af-constants.h:84
+#: src/af-constants.h:66
 msgid "Utility"
 msgstr "Hulpmiddelen"

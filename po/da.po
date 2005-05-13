@@ -1,4 +1,4 @@
-## Danish translations for xfce4-appfinder package.
+# # Danish translations for xfce4-appfinder package.
 # Copyright (C) 2002-2005 Olivier Fourdan
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Jesper Berth <bigsanta@berthit.dk>, 2005.
@@ -6,7 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.0\n"
-"POT-Creation-Date: 2004-08-06 16:17+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-03-12 10:05+0100\n"
 "PO-Revision-Date: 2005-02-21 19:17+0100\n"
 "Last-Translator: Jesper Berth <bigsanta@berthit.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -14,70 +15,70 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:97 src/main.c:103
+#: src/main.c:99 src/main.c:105
 msgid "Now starting"
 msgstr "Starter nu"
 
-#: src/main.c:110
+#: src/main.c:113
 msgid "Cannot execute"
 msgstr "Kan ikke køre"
 
-#: src/main.c:146
+#: src/main.c:149
 msgid "<b>Search:</b>"
 msgstr "<b>Søg:</b>"
 
-#: src/main.c:203
+#: src/main.c:206
 msgid "Categories"
 msgstr "Kategorier"
 
-#: src/af-constants.h:69
+#: src/af-constants.h:54
 msgid "All"
 msgstr "Alle"
 
-#: src/af-constants.h:70
+#: src/af-constants.h:55
 msgid "Recently Used"
 msgstr "Sidst brugt"
 
-#: src/af-constants.h:71
+#: src/af-constants.h:56
 msgid "Core"
 msgstr ""
 
-#: src/af-constants.h:72
+#: src/af-constants.h:57
 msgid "Development"
 msgstr "Udvikling"
 
-#: src/af-constants.h:73
+#: src/af-constants.h:58
 msgid "Office"
 msgstr "Kontor"
 
-#: src/af-constants.h:74
+#: src/af-constants.h:59
 msgid "Graphics"
 msgstr "Grafik"
 
-#: src/af-constants.h:75
+#: src/af-constants.h:60
 msgid "Network"
 msgstr "Netværk"
 
-#: src/af-constants.h:76
+#: src/af-constants.h:61
 msgid "AudioVideo"
 msgstr "LydBilled"
 
-#: src/af-constants.h:77
+#: src/af-constants.h:62
 msgid "Game"
 msgstr "Spil"
 
-#: src/af-constants.h:78
+#: src/af-constants.h:63
 msgid "Education"
 msgstr "Undervisning"
 
-#: src/af-constants.h:79
+#: src/af-constants.h:64
 msgid "System"
 msgstr "System"
 
-#: src/af-constants.h:80
+#: src/af-constants.h:65
 msgid "Filemanager"
 msgstr "Filhåndtering"
 
-#: src/af-constants.h:81
+#: src/af-constants.h:66
 msgid "Utility"
 msgstr "Værktøj"

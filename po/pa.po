@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-11 18:28+0200\n"
+"POT-Creation-Date: 2005-03-12 10:05+0100\n"
 "PO-Revision-Date: 2004-09-23 15:41+0530\n"
 "Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
@@ -18,70 +18,70 @@ msgstr ""
 "Plural-Forms: Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
 
-#: src/main.c:98 src/main.c:104
+#: src/main.c:99 src/main.c:105
 msgid "Now starting"
 msgstr "ਹੁਣ ਸ਼ੁਰੂ"
 
-#: src/main.c:112
+#: src/main.c:113
 msgid "Cannot execute"
 msgstr "ਚਲਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: src/main.c:148
+#: src/main.c:149
 msgid "<b>Search:</b>"
 msgstr "<b>ਖੋਜ:</b>"
 
-#: src/main.c:205
+#: src/main.c:206
 msgid "Categories"
 msgstr "ਸ਼੍ਰੇਣੀਆਂ"
 
-#: src/af-constants.h:72
+#: src/af-constants.h:54
 msgid "All"
 msgstr "ਸਭ"
 
-#: src/af-constants.h:73
+#: src/af-constants.h:55
 msgid "Recently Used"
 msgstr "ਤਾਜ਼ਾ ਵਰਤੇ"
 
-#: src/af-constants.h:74
+#: src/af-constants.h:56
 msgid "Core"
 msgstr "ਮੂਲ"
 
-#: src/af-constants.h:75
+#: src/af-constants.h:57
 msgid "Development"
 msgstr "ਵਿਕਾਸ-ਕਰਤਾ"
 
-#: src/af-constants.h:76
+#: src/af-constants.h:58
 msgid "Office"
 msgstr "ਦਫਤਰ"
 
-#: src/af-constants.h:77
+#: src/af-constants.h:59
 msgid "Graphics"
 msgstr "ਗਰਾਫਿਕਸ"
 
-#: src/af-constants.h:78
+#: src/af-constants.h:60
 msgid "Network"
 msgstr "ਨੈੱਟਵਰਕ"
 
-#: src/af-constants.h:79
+#: src/af-constants.h:61
 msgid "AudioVideo"
 msgstr "ਆਡੀਓ-ਵੀਡਿਓ"
 
-#: src/af-constants.h:80
+#: src/af-constants.h:62
 msgid "Game"
 msgstr "ਖੇਡ"
 
-#: src/af-constants.h:81
+#: src/af-constants.h:63
 msgid "Education"
 msgstr "ਵਿਦਿਅਕ"
 
-#: src/af-constants.h:82
+#: src/af-constants.h:64
 msgid "System"
 msgstr "ਸਿਸਟਮ"
 
-#: src/af-constants.h:83
+#: src/af-constants.h:65
 msgid "Filemanager"
 msgstr "ਫਾਇਲ਼-ਪ੍ਰਬੰਧਕ"
 
-#: src/af-constants.h:84
+#: src/af-constants.h:66
 msgid "Utility"
 msgstr "ਉਪਯੋਗਤਾ"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-02 10:57+0100\n"
+"POT-Creation-Date: 2005-03-12 10:05+0100\n"
 "PO-Revision-Date: 2005-02-08 20:52+0100\n"
 "Last-Translator: Juraj Brosz <juro@jurajbrosz.info>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -83,4 +83,3 @@ msgstr "Správca súborov"
 #: src/af-constants.h:66
 msgid "Utility"
 msgstr "Nástroje"
-

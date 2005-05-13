@@ -9,79 +9,78 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XFCE4-Appfinder 4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-11 18:28+0200\n"
+"POT-Creation-Date: 2005-03-12 10:05+0100\n"
 "PO-Revision-Date: 2005-01-18 00:44+0200\n"
 "Last-Translator: Rimas Kudelis <rq@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:98 src/main.c:104
+#: src/main.c:99 src/main.c:105
 msgid "Now starting"
 msgstr "Dabar vykdoma"
 
-#: src/main.c:112
+#: src/main.c:113
 msgid "Cannot execute"
 msgstr "Nepavyko įvykdyti"
 
-#: src/main.c:148
+#: src/main.c:149
 msgid "<b>Search:</b>"
 msgstr "<b>Ieškoti:</b>"
 
-#: src/main.c:205
+#: src/main.c:206
 msgid "Categories"
 msgstr "Kategorijos"
 
-#: src/af-constants.h:72
+#: src/af-constants.h:54
 msgid "All"
 msgstr "Visos"
 
-#: src/af-constants.h:73
+#: src/af-constants.h:55
 msgid "Recently Used"
 msgstr "Neseniai naudotos"
 
-#: src/af-constants.h:74
+#: src/af-constants.h:56
 msgid "Core"
 msgstr "Pagrindinės"
 
-#: src/af-constants.h:75
+#: src/af-constants.h:57
 msgid "Development"
 msgstr "Programavimo įrankiai"
 
-#: src/af-constants.h:76
+#: src/af-constants.h:58
 msgid "Office"
 msgstr "Biuro programos"
 
-#: src/af-constants.h:77
+#: src/af-constants.h:59
 msgid "Graphics"
 msgstr "Grafika"
 
-#: src/af-constants.h:78
+#: src/af-constants.h:60
 msgid "Network"
 msgstr "Tinklas"
 
-#: src/af-constants.h:79
+#: src/af-constants.h:61
 msgid "AudioVideo"
 msgstr "Multimedija"
 
-#: src/af-constants.h:80
+#: src/af-constants.h:62
 msgid "Game"
 msgstr "Žaidimai"
 
-#: src/af-constants.h:81
+#: src/af-constants.h:63
 msgid "Education"
 msgstr "Mokomosios"
 
-#: src/af-constants.h:82
+#: src/af-constants.h:64
 msgid "System"
 msgstr "Sisteminės"
 
-#: src/af-constants.h:83
+#: src/af-constants.h:65
 msgid "Filemanager"
 msgstr "Bylų tvarkyklės"
 
-#: src/af-constants.h:84
+#: src/af-constants.h:66
 msgid "Utility"
 msgstr "Pagalbiniai įrankiai"
-

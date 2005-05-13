@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-02 10:35+0200\n"
+"POT-Creation-Date: 2005-03-12 10:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: edscott@xfce.org\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,70 +16,70 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:98 src/main.c:104
+#: src/main.c:99 src/main.c:105
 msgid "Now starting"
 msgstr "Comenzando"
 
-#: src/main.c:112
+#: src/main.c:113
 msgid "Cannot execute"
 msgstr "No se puede ejecutar"
 
-#: src/main.c:148
+#: src/main.c:149
 msgid "<b>Search:</b>"
 msgstr "<b>Buscar:</b>"
 
-#: src/main.c:205
+#: src/main.c:206
 msgid "Categories"
-msgstr "Categorías"
+msgstr "Categoras"
 
-#: src/af-constants.h:69
+#: src/af-constants.h:54
 msgid "All"
 msgstr "Todos"
 
-#: src/af-constants.h:70
+#: src/af-constants.h:55
 msgid "Recently Used"
 msgstr "Recientemente usados"
 
-#: src/af-constants.h:71
+#: src/af-constants.h:56
 msgid "Core"
 msgstr "Principal"
 
-#: src/af-constants.h:72
+#: src/af-constants.h:57
 msgid "Development"
 msgstr "Desarrollo"
 
-#: src/af-constants.h:73
+#: src/af-constants.h:58
 msgid "Office"
 msgstr "Oficina"
 
-#: src/af-constants.h:74
+#: src/af-constants.h:59
 msgid "Graphics"
-msgstr "Gráficos"
+msgstr "Grficos"
 
-#: src/af-constants.h:75
+#: src/af-constants.h:60
 msgid "Network"
 msgstr "Red"
 
-#: src/af-constants.h:76
+#: src/af-constants.h:61
 msgid "AudioVideo"
 msgstr "Audio y video"
 
-#: src/af-constants.h:77
+#: src/af-constants.h:62
 msgid "Game"
 msgstr "Juegos"
 
-#: src/af-constants.h:78
+#: src/af-constants.h:63
 msgid "Education"
-msgstr "Educación"
+msgstr "Educacin"
 
-#: src/af-constants.h:79
+#: src/af-constants.h:64
 msgid "System"
 msgstr "Sistema"
 
-#: src/af-constants.h:80
+#: src/af-constants.h:65
 msgid "Filemanager"
 msgstr "Manejo de archivos"
 
-#: src/af-constants.h:81
+#: src/af-constants.h:66
 msgid "Utility"
-msgstr "Utilerías"
+msgstr "Utileras"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder-fa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-20 08:23+0200\n"
+"POT-Creation-Date: 2005-03-12 10:05+0100\n"
 "PO-Revision-Date: 2004-09-29 12:58+0330\n"
 "Last-Translator: Abbas Izad <abbasizad@hotmail.com>\n"
 "Language-Team: Persian\n"
@@ -17,71 +17,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: src/main.c:98 src/main.c:104
+#: src/main.c:99 src/main.c:105
 msgid "Now starting"
 msgstr "اکنون شروع میشود"
 
-#: src/main.c:112
+#: src/main.c:113
 msgid "Cannot execute"
 msgstr "نمیتوان اجرا کرد"
 
-#: src/main.c:148
+#: src/main.c:149
 msgid "<b>Search:</b>"
 msgstr "<b>جستجو:</b>"
 
-#: src/main.c:205
+#: src/main.c:206
 msgid "Categories"
 msgstr "رده‌ها"
 
-#: src/af-constants.h:69
+#: src/af-constants.h:54
 msgid "All"
 msgstr "همه"
 
-#: src/af-constants.h:70
+#: src/af-constants.h:55
 msgid "Recently Used"
 msgstr "اخیرا استفاده شده"
 
-#: src/af-constants.h:71
+#: src/af-constants.h:56
 msgid "Core"
 msgstr "هسته مرکزی"
 
-#: src/af-constants.h:72
+#: src/af-constants.h:57
 msgid "Development"
 msgstr "توسعه"
 
-#: src/af-constants.h:73
+#: src/af-constants.h:58
 msgid "Office"
 msgstr "دفتر"
 
-#: src/af-constants.h:74
+#: src/af-constants.h:59
 msgid "Graphics"
 msgstr "گرافیک‌ها"
 
-#: src/af-constants.h:75
+#: src/af-constants.h:60
 msgid "Network"
 msgstr "شبکه"
 
-#: src/af-constants.h:76
+#: src/af-constants.h:61
 msgid "AudioVideo"
 msgstr "صوتی‌تصویری"
 
-#: src/af-constants.h:77
+#: src/af-constants.h:62
 msgid "Game"
 msgstr "بازی"
 
-#: src/af-constants.h:78
+#: src/af-constants.h:63
 msgid "Education"
 msgstr "آموزشی"
 
-#: src/af-constants.h:79
+#: src/af-constants.h:64
 msgid "System"
 msgstr "سیستم"
 
-#: src/af-constants.h:80
+#: src/af-constants.h:65
 msgid "Filemanager"
 msgstr "مدیر‌پرونده"
 
-#: src/af-constants.h:81
+#: src/af-constants.h:66
 msgid "Utility"
 msgstr "وسیله"
-

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-11 18:28+0200\n"
+"POT-Creation-Date: 2005-03-12 10:05+0100\n"
 "PO-Revision-Date: 2004-11-24 15:37+0900\n"
 "Last-Translator: ByungHyun Choi<byunghyunchoi@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,70 +16,70 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:98 src/main.c:104
+#: src/main.c:99 src/main.c:105
 msgid "Now starting"
 msgstr "기동 중입니다."
 
-#: src/main.c:112
+#: src/main.c:113
 msgid "Cannot execute"
 msgstr "실행할 수 없군요."
 
-#: src/main.c:148
+#: src/main.c:149
 msgid "<b>Search:</b>"
 msgstr "<b>검색:</b>"
 
-#: src/main.c:205
+#: src/main.c:206
 msgid "Categories"
 msgstr "분류"
 
-#: src/af-constants.h:72
+#: src/af-constants.h:54
 msgid "All"
 msgstr "모두"
 
-#: src/af-constants.h:73
+#: src/af-constants.h:55
 msgid "Recently Used"
 msgstr "최근 사용한 것"
 
-#: src/af-constants.h:74
+#: src/af-constants.h:56
 msgid "Core"
 msgstr "핵심"
 
-#: src/af-constants.h:75
+#: src/af-constants.h:57
 msgid "Development"
 msgstr "개발용"
 
-#: src/af-constants.h:76
+#: src/af-constants.h:58
 msgid "Office"
 msgstr "사무용"
 
-#: src/af-constants.h:77
+#: src/af-constants.h:59
 msgid "Graphics"
 msgstr "그래픽용"
 
-#: src/af-constants.h:78
+#: src/af-constants.h:60
 msgid "Network"
 msgstr "네트워크용"
 
-#: src/af-constants.h:79
+#: src/af-constants.h:61
 msgid "AudioVideo"
 msgstr "멀티미디어"
 
-#: src/af-constants.h:80
+#: src/af-constants.h:62
 msgid "Game"
 msgstr "놀이"
 
-#: src/af-constants.h:81
+#: src/af-constants.h:63
 msgid "Education"
 msgstr "교육용"
 
-#: src/af-constants.h:82
+#: src/af-constants.h:64
 msgid "System"
 msgstr "시스템 관리용"
 
-#: src/af-constants.h:83
+#: src/af-constants.h:65
 msgid "Filemanager"
 msgstr "화일 관리자"
 
-#: src/af-constants.h:84
+#: src/af-constants.h:66
 msgid "Utility"
 msgstr "도구"

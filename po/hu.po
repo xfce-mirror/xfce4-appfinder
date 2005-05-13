@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-02 10:57+0100\n"
+"POT-Creation-Date: 2005-03-12 10:05+0100\n"
 "PO-Revision-Date: 2005-01-09 15:43+0100\n"
 "Last-Translator: SZERVÑC Attila <sas@321.hu>\n"
 "Language-Team: hungarian <hu@li.org>\n"
@@ -15,8 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:99
-#: src/main.c:105
+#: src/main.c:99 src/main.c:105
 msgid "Now starting"
 msgstr "Most indul"
 
@@ -83,4 +82,3 @@ msgstr "Fájlkezelő"
 #: src/af-constants.h:66
 msgid "Utility"
 msgstr "Eszközök"
-
