@@ -1,3 +1,16 @@
+2005-05-06 19:01  pollux
+
+	* xfce4-appfinder/trunk/configure.ac, bn_IN.po: add bn_IN
+	  translations
+
+2005-05-06 18:46  pollux
+
+	* xfce4-appfinder/trunk/configure.ac, mr.po: add MR translations
+
+2005-05-04 21:00  olivier
+
+	* ChangeLog: Update ChangeLog
+
 2005-04-12 14:00  jasper
 
 	* xfce4-appfinder/trunk/Makefile.in,
@@ -14,52 +27,33 @@
 	  xfce4-appfinder/trunk/doc/fr/images/Makefile.in,
 	  xfce4-appfinder/trunk/install-sh, xfce4-appfinder/trunk/ltmain.sh,
 	  xfce4-appfinder/trunk/missing,
-	  xfce4-appfinder/trunk/mkinstalldirs,
-	  xfce4-appfinder/trunk/po/Makefile.in.in,
-	  xfce4-appfinder/trunk/po/be.gmo, xfce4-appfinder/trunk/po/cs.gmo,
-	  xfce4-appfinder/trunk/po/de.gmo,
-	  xfce4-appfinder/trunk/po/en_GB.gmo,
-	  xfce4-appfinder/trunk/po/es.gmo,
-	  xfce4-appfinder/trunk/po/es_MX.gmo,
-	  xfce4-appfinder/trunk/po/et.gmo, xfce4-appfinder/trunk/po/eu.gmo,
-	  xfce4-appfinder/trunk/po/fa.gmo, xfce4-appfinder/trunk/po/fi.gmo,
-	  xfce4-appfinder/trunk/po/gu.gmo, xfce4-appfinder/trunk/po/he.gmo,
-	  xfce4-appfinder/trunk/po/it.gmo, xfce4-appfinder/trunk/po/ko.gmo,
-	  xfce4-appfinder/trunk/po/lt.gmo, xfce4-appfinder/trunk/po/nl.gmo,
-	  xfce4-appfinder/trunk/po/pa.gmo,
-	  xfce4-appfinder/trunk/po/pt_BR.gmo,
-	  xfce4-appfinder/trunk/po/pt_PT.gmo,
-	  xfce4-appfinder/trunk/po/ro.gmo, xfce4-appfinder/trunk/po/ru.gmo,
-	  xfce4-appfinder/trunk/po/tr.gmo, xfce4-appfinder/trunk/po/uk.gmo,
-	  xfce4-appfinder/trunk/po/zh_CN.gmo,
-	  xfce4-appfinder/trunk/src/Makefile.in: Move remaining modules to
-	  use dev tools and remove generated files
+	  xfce4-appfinder/trunk/mkinstalldirs, Makefile.in.in, be.gmo,
+	  cs.gmo, de.gmo, en_GB.gmo, es.gmo, es_MX.gmo, et.gmo, eu.gmo,
+	  fa.gmo, fi.gmo, gu.gmo, he.gmo, it.gmo, ko.gmo, lt.gmo, nl.gmo,
+	  pa.gmo, pt_BR.gmo, pt_PT.gmo, ro.gmo, ru.gmo, tr.gmo, uk.gmo,
+	  zh_CN.gmo, xfce4-appfinder/trunk/src/Makefile.in: Move remaining
+	  modules to use dev tools and remove generated files
 
 2005-04-08 11:55  pollux
 
-	* xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/sv.po: add SV translations
+	* xfce4-appfinder/trunk/configure.ac, sv.po: add SV translations
 
 2005-03-04 17:32  pollux
 
-	* xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/pl.po: add PL translations
+	* xfce4-appfinder/trunk/configure.ac, pl.po: add PL translations
 
 2005-02-21 08:39  pollux
 
-	* xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/ja.po: update JA translations
+	* xfce4-appfinder/trunk/configure.ac, ja.po: update JA translations
 
 2005-01-22 12:22  pollux
 
-	* xfce4-appfinder/trunk/po/fi.gmo, xfce4-appfinder/trunk/po/fi.po:
-	  update FI translations
+	* fi.gmo, fi.po: update FI translations
 
 2005-01-08 15:04  pollux
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/ru.gmo, xfce4-appfinder/trunk/po/ru.po,
+	  xfce4-appfinder/trunk/configure.ac, ru.gmo, ru.po,
 	  xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: update RU
 	  translations
 
@@ -67,13 +61,12 @@
 
 	* xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/uk.gmo,
-	  xfce4-appfinder/trunk/po/uk.po: update UK translations
+	  xfce4-appfinder/trunk/ltmain.sh, uk.gmo, uk.po: update UK
+	  translations
 
 2005-01-05 16:01  pollux
 
-	* xfce4-appfinder/trunk/po/he.gmo, xfce4-appfinder/trunk/po/he.po:
-	  update HE translations
+	* he.gmo, he.po: update HE translations
 
 2005-01-02 12:51  olivier
 
@@ -81,131 +74,106 @@
 	  xfce4-appfinder/trunk/Makefile.in,
 	  xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/ltmain.sh,
-	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot: Update version and
-	  changelog
+	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder.pot: Update
+	  version and changelog
 
 2004-12-23 21:24  pollux
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/et.gmo, xfce4-appfinder/trunk/po/et.po,
+	  xfce4-appfinder/trunk/configure.ac, et.gmo, et.po,
 	  xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: update ET
 	  translations
 
 2004-12-21 09:03  kelnos
 
-	* xfce4-appfinder/trunk/po/cs.gmo, xfce4-appfinder/trunk/po/cs.po:
-	  add/update czech translations
+	* cs.gmo, cs.po: add/update czech translations
 
 2004-12-15 18:56  pollux
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/pt_BR.gmo,
-	  xfce4-appfinder/trunk/po/pt_BR.po: update pt_BR translations
+	  xfce4-appfinder/trunk/configure.ac, pt_BR.gmo, pt_BR.po: update
+	  pt_BR translations
 
 2004-12-14 20:33  pollux
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/ro.gmo, xfce4-appfinder/trunk/po/ro.po:
-	  add RO translations
+	  xfce4-appfinder/trunk/configure.ac, ro.gmo, ro.po: add RO
+	  translations
 
 2004-12-11 17:51  olivier
 
-	* xfce4-appfinder/trunk/po/xfce4-appfinder.pot: Various changes and
-	  small fixes
+	* xfce4-appfinder.pot: Various changes and small fixes
 
 2004-12-05 21:20  pollux
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/en_GB.gmo,
-	  xfce4-appfinder/trunk/po/en_GB.po: add en_GB translations
+	  xfce4-appfinder/trunk/configure.ac, en_GB.gmo, en_GB.po: add en_GB
+	  translations
 
 2004-11-28 18:01  pollux
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/tr.gmo, xfce4-appfinder/trunk/po/tr.po:
-	  update TR translations
+	  xfce4-appfinder/trunk/configure.ac, tr.gmo, tr.po: update TR
+	  translations
 
 2004-11-26 19:06  pollux
 
 	* xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/ko.gmo,
-	  xfce4-appfinder/trunk/po/ko.po: update KO translations
+	  xfce4-appfinder/trunk/ltmain.sh, ko.gmo, ko.po: update KO
+	  translations
 
 2004-10-30 14:00  pollux
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/lt.gmo, xfce4-appfinder/trunk/po/lt.po:
-	  update LT translations
+	  xfce4-appfinder/trunk/configure.ac, lt.gmo, lt.po: update LT
+	  translations
 
 2004-10-28 11:55  pollux
 
 	* xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/he.gmo,
-	  xfce4-appfinder/trunk/po/he.po,
+	  xfce4-appfinder/trunk/ltmain.sh, he.gmo, he.po,
 	  xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: update HE
 	  translations
 
 2004-10-14 17:13  pollux
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/be.gmo, xfce4-appfinder/trunk/po/de.gmo,
-	  xfce4-appfinder/trunk/po/eu.gmo, xfce4-appfinder/trunk/po/fi.gmo,
-	  xfce4-appfinder/trunk/po/fi.po, xfce4-appfinder/trunk/po/gu.gmo,
-	  xfce4-appfinder/trunk/po/it.gmo, xfce4-appfinder/trunk/po/nl.gmo,
-	  xfce4-appfinder/trunk/po/pa.gmo,
-	  xfce4-appfinder/trunk/po/zh_CN.gmo,
+	  xfce4-appfinder/trunk/configure.ac, be.gmo, de.gmo, eu.gmo,
+	  fi.gmo, fi.po, gu.gmo, it.gmo, nl.gmo, pa.gmo, zh_CN.gmo,
 	  xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: update FI
 	  translations
 
 2004-10-11 16:30  benny
 
-	* xfce4-appfinder/trunk/po/be.po, xfce4-appfinder/trunk/po/de.po,
-	  xfce4-appfinder/trunk/po/eu.po, xfce4-appfinder/trunk/po/gu.po,
-	  xfce4-appfinder/trunk/po/it.po, xfce4-appfinder/trunk/po/nl.po,
-	  xfce4-appfinder/trunk/po/pa.po,
-	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot,
-	  xfce4-appfinder/trunk/po/zh_CN.po: update-po for Moe.
+	* be.po, de.po, eu.po, gu.po, it.po, nl.po, pa.po,
+	  xfce4-appfinder.pot, zh_CN.po: update-po for Moe.
 
 2004-10-10 11:52  pollux
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/pt_PT.gmo,
-	  xfce4-appfinder/trunk/po/pt_PT.po: update pt_PT translations
+	  xfce4-appfinder/trunk/configure.ac, pt_PT.gmo, pt_PT.po: update
+	  pt_PT translations
 
 2004-10-09 14:20  pollux
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/fa.gmo, xfce4-appfinder/trunk/po/fa.po:
-	  update FA translations
+	  xfce4-appfinder/trunk/configure.ac, fa.gmo, fa.po: update FA
+	  translations
 
 2004-10-08 13:49  edscott
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/es.gmo, xfce4-appfinder/trunk/po/es.po,
-	  xfce4-appfinder/trunk/po/es_MX.gmo,
-	  xfce4-appfinder/trunk/po/es_MX.po: add spanish language
-	  translations
+	  xfce4-appfinder/trunk/configure.ac, es.gmo, es.po, es_MX.gmo,
+	  es_MX.po: add spanish language translations
 
 2004-10-03 16:14  pollux
 
 	* xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/pa.gmo,
-	  xfce4-appfinder/trunk/po/pa.po: Punjabi translations (PA) from
-	  jaswinderlinux@netscape.net
+	  xfce4-appfinder/trunk/ltmain.sh, pa.gmo, pa.po: Punjabi
+	  translations (PA) from jaswinderlinux@netscape.net
 
 2004-10-02 13:28  olivier
 
@@ -215,47 +183,37 @@
 	  xfce4-appfinder/trunk/config.guess,
 	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/depcomp, xfce4-appfinder/trunk/install-sh,
-	  xfce4-appfinder/trunk/ltmain.sh,
-	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot,
+	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder.pot,
 	  xfce4-appfinder/trunk/src/Makefile.in: Update all files for 4.2
 	  beta 1
 
 2004-09-29 07:59  pollux
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/zh_CN.gmo,
-	  xfce4-appfinder/trunk/po/zh_CN.po: updated zh_CN translations from
-	  yongtao yang <yongtao.yang@gmail.com>
+	  xfce4-appfinder/trunk/configure.ac, zh_CN.gmo, zh_CN.po: updated
+	  zh_CN translations from yongtao yang <yongtao.yang@gmail.com>
 
 2004-09-23 21:36  pollux
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/gu.gmo, xfce4-appfinder/trunk/po/gu.po:
-	  add Gujarati translations (GU) from Ankit Patel <ankit@redhat.com>
+	  xfce4-appfinder/trunk/configure.ac, gu.gmo, gu.po: add Gujarati
+	  translations (GU) from Ankit Patel <ankit@redhat.com>
 
 2004-09-21 11:51  jasper
 
-	* xfce4-appfinder/trunk/po/be.gmo, xfce4-appfinder/trunk/po/be.po,
-	  xfce4-appfinder/trunk/po/de.gmo, xfce4-appfinder/trunk/po/de.po,
-	  xfce4-appfinder/trunk/po/eu.gmo, xfce4-appfinder/trunk/po/eu.po,
-	  xfce4-appfinder/trunk/po/it.gmo, xfce4-appfinder/trunk/po/it.po,
-	  xfce4-appfinder/trunk/po/nl.gmo, xfce4-appfinder/trunk/po/nl.po:
-	  Run make update-po at Moe's request.
+	* be.gmo, be.po, de.gmo, de.po, eu.gmo, eu.po, it.gmo, it.po,
+	  nl.gmo, nl.po: Run make update-po at Moe's request.
 
 2004-09-20 22:22  olivier
 
-	* xfce4-appfinder/trunk/ChangeLog,
-	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot: Update all
+	* xfce4-appfinder/trunk/ChangeLog, xfce4-appfinder.pot: Update all
 	  ChangeLogs
 
 2004-09-19 10:14  jasper
 
 	* xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/nl.gmo, xfce4-appfinder/trunk/po/nl.po:
-	  Update nl translations
+	  xfce4-appfinder/trunk/configure.ac, nl.gmo, nl.po: Update nl
+	  translations
 
 2004-09-18 16:41  pollux
 
@@ -265,8 +223,8 @@
 	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac, xfce4-appfinder/trunk/depcomp,
 	  xfce4-appfinder/trunk/install-sh, xfce4-appfinder/trunk/ltmain.sh,
-	  xfce4-appfinder/trunk/po/eu.gmo, xfce4-appfinder/trunk/po/eu.po,
-	  xfce4-appfinder/trunk/src/Makefile.in: update EU translations
+	  eu.gmo, eu.po, xfce4-appfinder/trunk/src/Makefile.in: update EU
+	  translations
 
 2004-09-18 13:45  moe
 
@@ -276,28 +234,25 @@
 	  xfce4-appfinder/trunk/config.sub, xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac, xfce4-appfinder/trunk/depcomp,
 	  xfce4-appfinder/trunk/install-sh, xfce4-appfinder/trunk/ltmain.sh,
-	  xfce4-appfinder/trunk/po/de.gmo, xfce4-appfinder/trunk/po/de.po,
-	  xfce4-appfinder/trunk/src/Makefile.in: Adding German translation
+	  de.gmo, de.po, xfce4-appfinder/trunk/src/Makefile.in: Adding
+	  German translation
 
 2004-09-16 22:10  pollux
 
 	* xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/be.gmo,
-	  xfce4-appfinder/trunk/po/be.po: add BE translations from Ales
-	  Nyakhaychyk <nab@mail.by>
+	  xfce4-appfinder/trunk/ltmain.sh, be.gmo, be.po: add BE
+	  translations from Ales Nyakhaychyk <nab@mail.by>
 
 2004-08-24 19:53  eduard
 
 	* xfce4-appfinder/trunk/Makefile.am,
-	  xfce4-appfinder/trunk/Makefile.in,
-	  xfce4-appfinder/trunk/po/Makefile.in.in,
-	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot: make dist/rpm fixes
+	  xfce4-appfinder/trunk/Makefile.in, Makefile.in.in,
+	  xfce4-appfinder.pot: make dist/rpm fixes
 
 2004-07-26 19:46  eduard
 
-	* xfce4-appfinder/trunk/po/it.gmo, xfce4-appfinder/trunk/po/it.po,
-	  xfce4-appfinder/trunk/src/Makefile.am,
+	* it.gmo, it.po, xfce4-appfinder/trunk/src/Makefile.am,
 	  xfce4-appfinder/trunk/src/Makefile.in,
 	  xfce4-appfinder/trunk/src/af-constants.h,
 	  xfce4-appfinder/trunk/src/appfinder.h,
@@ -307,17 +262,13 @@
 
 2004-07-18 14:01  eduard
 
-	* xfce4-appfinder/trunk/po/it.po,
-	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot,
+	* it.po, xfce4-appfinder.pot,
 	  xfce4-appfinder/trunk/src/af-constants.h,
 	  xfce4-appfinder/trunk/src/appfinder.h,
 	  xfce4-appfinder/trunk/src/main.c: i18n fixes
 
 2004-07-18 13:08  eduard
 
-	* xfce4-appfinder/trunk/po, xfce4-appfinder/trunk/po/ChangeLog,
-	  xfce4-appfinder/trunk/po/Makefile.in.in,
-	  xfce4-appfinder/trunk/po/POTFILES.in,
-	  xfce4-appfinder/trunk/po/it.gmo, xfce4-appfinder/trunk/po/it.po,
-	  xfce4-appfinder/trunk/po/xfce4-appfinder.pot: po files
+	* ., ChangeLog, Makefile.in.in, POTFILES.in, it.gmo, it.po,
+	  xfce4-appfinder.pot: po files
 
