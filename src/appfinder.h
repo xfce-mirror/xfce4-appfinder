@@ -20,24 +20,21 @@
 #ifndef __HAVE_APPFINDER_H
 #define __HAVE_APPFINDER_H
 
-#include <af-constants.h>
 #define CONFIGFILE "afhistory"
 
-typedef struct _appfinder Appfinder;
-struct _appfinder
+enum
 {
-    GtkWidget *mainwindow;
-    GtkWidget *hpaned;
-    GtkWidget *rightvbox;
-    
-    GtkWidget *searchbox;
-    GtkWidget *searchlabel;
-    GtkWidget *searchentry;
-    
-    GtkWidget *categoriestree;
-    GtkWidget *appstree;
-    GtkWidget *appscroll;
-} _appfinder;
+    APP_ICON = 0,
+    APP_TEXT,
+    APP_COLS
+};
+
+enum
+{
+    CAT_TEXT = 0,
+    CAT_COLS
+};
+
 
 typedef struct _afdialog AfDialog;
 struct _afdialog
@@ -66,34 +63,8 @@ const char *configfile;
  * Functions Proto
  *********************/
 
-gboolean xfce_appfinder_list_add (XfceDesktopEntry *dentry, GtkListStore *store, GPatternSpec  *psearch, GPatternSpec  *pcat);
-
-GtkListStore *
-create_categories_liststore (void);
-
-GtkListStore *
-create_search_liststore(gchar *textSearch);
-
-GtkListStore *
-create_apps_liststore(void);
-
-GtkWidget *
-create_apps_treeview(void);
-
-GtkWidget *
-create_categories_treeview(void);
-
-Appfinder *
-create_interface(void);
-
-GtkListStore *fetch_desktop_resources (gint category, gchar *pattern);
-
 gchar **parseHistory(void);
 
-gchar *get_path_from_name(gchar *name);
-
 void saveHistory(gchar *path);
-
-void execute_from_name (gchar *name);
 
 #endif
