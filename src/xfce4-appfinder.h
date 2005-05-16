@@ -32,7 +32,7 @@ extern "C" {
 
 #define XFCE_APPFINDER(obj)           GTK_CHECK_CAST (obj, xfce_appfinder_get_type(), XfceAppfinder)
 #define XFCE_APPFINDER_CLASS(klass)   GTK_CHECK_CLASS_CAST (klass, xfce_appfinder_get_type(), XfceAppfinderClass)
-#define IS_XFCE_APPFINDER(obj)        GTK_CHECK_TYPE (obj, xfce_appfinder_get_type())
+#define XFCE_IS_APPFINDER(obj)        GTK_CHECK_TYPE (obj, xfce_appfinder_get_type())
 #define APPFINDER_ALL                  0
 
 typedef struct _XfceAppfinder        XfceAppfinder;
