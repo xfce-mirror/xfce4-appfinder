@@ -1,4 +1,5 @@
 # List of source files containing translatable strings.
 src/main.c
-src/af-constants.h
+src/xfce-appfinder.h
+src/xfce-appfinder.c
 

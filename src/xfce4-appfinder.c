@@ -78,6 +78,11 @@ gboolean       callbackCategoryTreeClick      (GtkTreeSelection       *selection
 gboolean       callbackApplicationRightClick  (GtkWidget              *treeview,
                                                GdkEventButton         *event,
                                                gpointer                appfinder);
+
+gint           sort_compare_func              (GtkTreeModel           *model,
+                                               GtkTreeIter            *a,
+                                               GtkTreeIter            *b,
+                                               gpointer                userdata);
                                                
 GHashTable *   createDesktopCache             ();
                                                
@@ -270,15 +275,52 @@ create_categories_treeview (void)
     return view;
 }
 
+gint
+sort_compare_func (GtkTreeModel *model, GtkTreeIter  *a, GtkTreeIter  *b, gpointer userdata)
+{
+    gint sortcol = GPOINTER_TO_INT(userdata);
+    gint ret = 0;
+    gchar *name1, *name2;
+
+    gtk_tree_model_get(model, a, APPLICATION_TREE_TEXT, &name1, -1);
+    gtk_tree_model_get(model, b, APPLICATION_TREE_TEXT, &name2, -1);
+
+    if (name1 == NULL || name2 == NULL)
+    {
+        if (name1 == NULL && name2 == NULL)
+        return 0;
+
+        ret = (name1 == NULL) ? -1 : 1;
+    }
+    else
+    {
+        ret = g_utf8_collate(name1, name2);
+    }
+
+    g_free(name1);
+    g_free(name2);
+
+    return ret;
+}
+
 GtkWidget*
 create_applications_treeview (XfceAppfinder *appfinder)
 {
     GtkTreeViewColumn *col;
+    GtkTreeSortable   *sortable;
+    GtkListStore      *liststore;
     GtkCellRenderer   *renderer;
     GtkWidget         *view;
 
-    view = gtk_tree_view_new_with_model(GTK_TREE_MODEL(load_desktop_resources(0, NULL, appfinder)));
+    liststore = load_desktop_resources(0, NULL, appfinder);
+    sortable = GTK_TREE_SORTABLE(liststore);
 
+    gtk_tree_sortable_set_sort_func(sortable, APPLICATION_TREE_TEXT, sort_compare_func, GINT_TO_POINTER(APPLICATION_TREE_TEXT), NULL);
+
+    gtk_tree_sortable_set_sort_column_id(sortable, APPLICATION_TREE_TEXT, GTK_SORT_ASCENDING);
+    
+    view = gtk_tree_view_new_with_model(GTK_TREE_MODEL(liststore));
+    
     col = gtk_tree_view_column_new();
     gtk_tree_view_set_headers_visible (GTK_TREE_VIEW(view), FALSE);
 
@@ -497,9 +539,19 @@ callbackCategoryTreeClick  (GtkTreeSelection *selection,
     
     if (next != showedcat)
     {
+        GtkTreeSortable   *sortable;
+        GtkListStore      *liststore;
+        
         showedcat = next;
         gtk_list_store_clear (GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appsTree))));
-        gtk_tree_view_set_model (GTK_TREE_VIEW(af->appsTree), GTK_TREE_MODEL(load_desktop_resources(showedcat, NULL, af)));
+
+        liststore = load_desktop_resources(showedcat, NULL, af);
+        sortable = GTK_TREE_SORTABLE(liststore);
+    
+        gtk_tree_sortable_set_sort_func(sortable, APPLICATION_TREE_TEXT, sort_compare_func, GINT_TO_POINTER(APPLICATION_TREE_TEXT), NULL);
+    
+        gtk_tree_sortable_set_sort_column_id(sortable, APPLICATION_TREE_TEXT, GTK_SORT_ASCENDING);
+        gtk_tree_view_set_model (GTK_TREE_VIEW(af->appsTree), GTK_TREE_MODEL(liststore));
     
         /* Ok there are no items in the list. Write a message and disable the treeview */
         if (!gtk_tree_model_get_iter_first (gtk_tree_view_get_model (GTK_TREE_VIEW(af->appsTree)), &iter))
@@ -522,12 +574,21 @@ callbackCategoryTreeClick  (GtkTreeSelection *selection,
 void
 xfce_appfinder_search (XfceAppfinder *appfinder, gchar *pattern)
 {
+    GtkTreeSortable   *sortable;
+    GtkListStore      *liststore;    
     GtkTreeIter iter;
     gchar *text = g_utf8_strdown(pattern, -1);
     showedcat = APPFINDER_ALL;
     
     gtk_list_store_clear (GTK_LIST_STORE(gtk_tree_view_get_model(GTK_TREE_VIEW(appfinder->appsTree))));
-    gtk_tree_view_set_model (GTK_TREE_VIEW(appfinder->appsTree), GTK_TREE_MODEL(load_desktop_resources (APPFINDER_ALL, text, appfinder)));
+    liststore = load_desktop_resources(APPFINDER_ALL, text, appfinder);
+    sortable = GTK_TREE_SORTABLE(liststore);
+
+    gtk_tree_sortable_set_sort_func(sortable, APPLICATION_TREE_TEXT, sort_compare_func, GINT_TO_POINTER(APPLICATION_TREE_TEXT), NULL);
+
+    gtk_tree_sortable_set_sort_column_id(sortable, APPLICATION_TREE_TEXT, GTK_SORT_ASCENDING);
+ 
+    gtk_tree_view_set_model (GTK_TREE_VIEW(appfinder->appsTree), GTK_TREE_MODEL(liststore));
 
     /* No application found. Tell the user about it */
     if (!gtk_tree_model_get_iter_first (gtk_tree_view_get_model (GTK_TREE_VIEW(appfinder->appsTree)), &iter))
