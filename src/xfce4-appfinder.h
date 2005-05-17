@@ -35,13 +35,24 @@ extern "C" {
 #define XFCE_IS_APPFINDER(obj)        GTK_CHECK_TYPE (obj, xfce_appfinder_get_type())
 #define APPFINDER_ALL                  0
 
-typedef struct _XfceAppfinder        XfceAppfinder;
-typedef struct _XfceAppfinderClass   XfceAppfinderClass;
+typedef struct _XfceAppfinder               XfceAppfinder;
+typedef struct _XfceAppfinderClass          XfceAppfinderClass;
+typedef struct _XfceAppfinderCacheEntry     XfceAppfinderCacheEntry;
+
+struct _XfceAppfinderCacheEntry
+{
+    gchar     *path;
+    gchar     *name;
+    gchar     *exec;
+    gchar     *comment;
+    gchar     *categories;
+    gchar     *icon;
+};
 
 struct _XfceAppfinder
 {
-    gpointer  desktopData;
     GtkVBox      vbox;
+    GHashTable  *cache;    
     
     GtkWidget *hpaned;
     GtkWidget *rightvbox;
