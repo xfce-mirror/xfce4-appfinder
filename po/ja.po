@@ -1,144 +1,146 @@
-# Japanese translation for xfce4-appfinder.
-# Copyright (C) 2004-2005 Free Software Foundation, Inc.
+# Japanese translations for xfce4-appfinder package.
+# Copyright (C) 2004-2005 The Xfce development team.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Daichi Kawahata <daichik@users.sourceforge.net>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.2.0\n"
-"Report-Msgid-Bugs-To: xfce-i18n@xfce.org\n"
-"POT-Creation-Date: 2005-02-16 08:40+0900\n"
-"PO-Revision-Date: 2005-02-17 21:33+0900\n"
+"Project-Id-Version: xfce4-appfinder 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-05-23 20:07+0900\n"
+"PO-Revision-Date: 2005-05-19 08:31+0900\n"
 "Last-Translator: Daichi Kawahata <daichik@users.sourceforge.net>\n"
-"Language-Team: Japanese <xfce-i18n@xfce.org>\n"
+"Language-Team: xfce-users-jp <xfce-users-jp@ml.fdiary.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/af-constants.h:54
-msgid "All"
-msgstr "全て"
-
-#: src/af-constants.h:55
-msgid "Recently Used"
-msgstr "最近使用したもの"
-
-#: src/af-constants.h:56
-msgid "Core"
-msgstr "コア"
-
-#: src/af-constants.h:57
-msgid "Development"
-msgstr "開発"
-
-#: src/af-constants.h:58
-msgid "Office"
-msgstr "事務"
-
-#: src/af-constants.h:59
-msgid "Graphics"
-msgstr "グラフィックス"
-
-#: src/af-constants.h:60
-msgid "Network"
-msgstr "ネットワーク"
-
-#: src/af-constants.h:61
-msgid "AudioVideo"
-msgstr "映像・音楽"
-
-#: src/af-constants.h:62
-msgid "Game"
-msgstr "ゲーム"
-
-#: src/af-constants.h:63
-msgid "Education"
-msgstr "教育"
-
-#: src/af-constants.h:64
-msgid "System"
-msgstr "システム"
-
-#: src/af-constants.h:65
-msgid "Filemanager"
-msgstr "ファイルマネージャ"
-
-#: src/af-constants.h:66
-msgid "Utility"
-msgstr "ユーティリティ"
-
-#: src/callbacks.c:79
-msgid "Sorry, no match for searched text."
-msgstr "検索したテキストに該当するものはありません。"
-
-#: src/callbacks.c:166
-msgid "No items available"
-msgstr "利用できるアイテムはありません"
-
-#: src/callbacks.c:213
-msgid "Appfinder InfoBox"
-msgstr "Appfinder InfoBox"
-
-#: src/callbacks.c:219
-msgid "Informations about \""
-msgstr "次に関する情報 \""
-
-#: src/callbacks.c:232
-msgid "Icon"
-msgstr "アイコン"
-
-#: src/callbacks.c:261
-msgid "<b>Name:</b> "
-msgstr "<b>名前:</b> "
-
-#: src/callbacks.c:266
-msgid "Comment"
-msgstr "コメント"
-
-#: src/callbacks.c:269 src/callbacks.c:283 src/callbacks.c:303
-msgid "N/A"
-msgstr "利用不可"
-
-#: src/callbacks.c:274
-msgid "<b>Comment:</b> "
-msgstr "<b>コメント:</b> "
-
-#: src/callbacks.c:294
-msgid "<b>Categories:</b> "
-msgstr "<b>分類:</b> "
-
-#: src/callbacks.c:306
-msgid "<b>Command:</b> "
-msgstr "<b>コマンド:</b> "
-
-#: src/callbacks.c:362
-msgid "Run program"
-msgstr "プログラム実行"
-
-#: src/callbacks.c:370
-msgid "Informations..."
-msgstr "情報..."
-
-#: src/main.c:99 src/main.c:105
+# FIXME: C
+#: ../src/main.c:152
 msgid "Now starting"
 msgstr "起動しています"
 
-#: src/main.c:113
-msgid "Cannot execute"
-msgstr "実行できません"
+#: ../src/main.c:161
+msgid "Cannot execute the selected application"
+msgstr "選択したアプリケーションを実行できません"
 
-#: src/main.c:149
+#: ../src/main.c:190
+msgid "Appfinder InfoBox"
+msgstr "アプリファインダー 情報ボックス"
+
+# FIXME: C
+#: ../src/main.c:197
+msgid "Informations about \""
+msgstr "次に関する情報 \""
+
+#: ../src/main.c:210
+msgid "Icon"
+msgstr "アイコン"
+
+#: ../src/main.c:239
+msgid "<b>Name:</b> "
+msgstr "<b>名前:</b> "
+
+#: ../src/main.c:244
+msgid "Comment"
+msgstr "コメント"
+
+#: ../src/main.c:247 ../src/main.c:261 ../src/main.c:281
+msgid "N/A"
+msgstr "利用不可"
+
+#: ../src/main.c:252
+msgid "<b>Comment:</b> "
+msgstr "<b>コメント:</b> "
+
+#: ../src/main.c:272
+msgid "<b>Categories:</b> "
+msgstr "<b>分類:</b> "
+
+#: ../src/main.c:284
+msgid "<b>Command:</b> "
+msgstr "<b>コマンド:</b> "
+
+#: ../src/main.c:326
+msgid "Run program"
+msgstr "プログラムを実行"
+
+#: ../src/main.c:334
+msgid "Informations..."
+msgstr "情報..."
+
+#: ../src/main.c:395
 msgid "<b>Search:</b>"
 msgstr "<b>検索:</b>"
 
-#: src/main.c:206
+#: ../src/xfce4-appfinder.c:110
+msgid "All"
+msgstr "すべて"
+
+#: ../src/xfce4-appfinder.c:111
+msgid "Core"
+msgstr "コア"
+
+#: ../src/xfce4-appfinder.c:112
+msgid "Development"
+msgstr "開発"
+
+#: ../src/xfce4-appfinder.c:113
+msgid "Office"
+msgstr "オフィス"
+
+#: ../src/xfce4-appfinder.c:114
+msgid "Graphics"
+msgstr "グラフィックス"
+
+#: ../src/xfce4-appfinder.c:115
+msgid "Network"
+msgstr "ネットワーク"
+
+#: ../src/xfce4-appfinder.c:116
+msgid "AudioVideo"
+msgstr "音楽・映像"
+
+#: ../src/xfce4-appfinder.c:117
+msgid "Game"
+msgstr "ゲーム"
+
+#: ../src/xfce4-appfinder.c:118
+msgid "Education"
+msgstr "教育"
+
+#: ../src/xfce4-appfinder.c:119
+msgid "System"
+msgstr "システム"
+
+#: ../src/xfce4-appfinder.c:120
+msgid "Filemanager"
+msgstr "ファイルマネージャ"
+
+#: ../src/xfce4-appfinder.c:121
+msgid "Utility"
+msgstr "ユーティリティ"
+
+#: ../src/xfce4-appfinder.c:266
 msgid "Categories"
 msgstr "分類"
 
-#: src/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce4-appfinder.c:563
+msgid "No items available"
+msgstr "利用できるアイテムはありません"
+
+#: ../src/xfce4-appfinder.c:600
+msgid "Sorry, no match for searched text."
+msgstr "検索したテキストに該当するものはありません。"
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
 msgstr "アプリファインダー"
 
-#: src/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Find installed applications"
+msgstr "アプリケーションを検索します"
+
+#: ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
 msgstr "Xfce 4 アプリファインダー"
