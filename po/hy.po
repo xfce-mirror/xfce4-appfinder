@@ -1,0 +1,85 @@
+# translation of xfce4-appfinder.hy.po to 
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder.hy\n"
+"Report-Msgid-Bugs-To: norik@oric.org\n"
+"POT-Creation-Date: 2005-03-12 10:05+0100\n"
+"PO-Revision-Date: 2005-08-04 18:04+0500\n"
+"Last-Translator: \n"
+"Language-Team:  <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+
+#: src/main.c:99 src/main.c:105
+msgid "Now starting"
+msgstr "Անցնենք գործի"
+
+#: src/main.c:113
+msgid "Cannot execute"
+msgstr "Հնարավոր չէ աշխատացնել"
+
+#: src/main.c:149
+msgid "<b>Search:</b>"
+msgstr "<b>Փնտրել՝</b>"
+
+#: src/main.c:206
+msgid "Categories"
+msgstr "Դասեր"
+
+#: src/af-constants.h:54
+msgid "All"
+msgstr "Բոլոր"
+
+#: src/af-constants.h:55
+msgid "Recently Used"
+msgstr "Վերջերս Գործածված"
+
+#: src/af-constants.h:56
+msgid "Core"
+msgstr "Հիմնական"
+
+#: src/af-constants.h:57
+msgid "Development"
+msgstr "Մշակում"
+
+#: src/af-constants.h:58
+msgid "Office"
+msgstr "Գրասենյակ"
+
+#: src/af-constants.h:59
+msgid "Graphics"
+msgstr "Պատկերավոր"
+
+#: src/af-constants.h:60
+msgid "Network"
+msgstr "Ցանց"
+
+#: src/af-constants.h:61
+msgid "AudioVideo"
+msgstr "Համասփյուռ"
+
+#: src/af-constants.h:62
+msgid "Game"
+msgstr "Խաղեր"
+
+#: src/af-constants.h:63
+msgid "Education"
+msgstr "Կրթություն"
+
+#: src/af-constants.h:64
+msgid "System"
+msgstr "Համակարգ"
+
+#: src/af-constants.h:65
+msgid "Filemanager"
+msgstr "Ֆայլային կառավարիչ"
+
+#: src/af-constants.h:66
+msgid "Utility"
+msgstr "Սպասարկող ծրագրեր"
+
