@@ -1,15 +1,14 @@
-# translation of Xfce4 appfinder to Finnish
-# This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
-#
-# Juha Kautto <kautto.juha@kolumbus.fi>, 2004.
+# translation of Xfce4-appfinder to Finnish
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Copyright (C) 2004-2005 The Xfce Development Team
+# Juha Kautto <kautto.juha@kolumbus.fi>, 2004
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-03-12 10:05+0100\n"
-"PO-Revision-Date: 2005-01-22 17:58+0200\n"
+"PO-Revision-Date: 2005-08-11 11:34+0200\n"
 "Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -62,7 +61,7 @@ msgstr "Verkko"
 
 #: src/af-constants.h:61
 msgid "AudioVideo"
-msgstr "Audio/Video"
+msgstr "Ääni ja kuva"
 
 #: src/af-constants.h:62
 msgid "Game"
