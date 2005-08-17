@@ -1,16 +1,14 @@
-# Lithuanian translation of PACKAGE.
-# Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Lithuanian translation of xfce4-appfinder.
+# Copyright (C) 2004-2005 The Xfce development team.
+# This file is distributed under the same license as the xfce4-appfinder package.
 # Mantas <mantaz@gmail.com>, 2004.
-# , fuzzy
-# 
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: xfce4-appfinder 4.3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-10-11 18:28+0200\n"
-"PO-Revision-Date: 2004-10-29 22:32+0300\n"
+"PO-Revision-Date: 2005-08-17 22:14+0900\n"
 "Last-Translator: Mantas <mantaz@gmail.com>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
