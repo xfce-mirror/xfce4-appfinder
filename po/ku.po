@@ -1,0 +1,91 @@
+# translation of xfce4-appfinder.po to Kurdish
+# translation of ku.po to Kurdish
+# Copyright (C) 2004-2005 The Xfce development team.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Erdal Ronahi <erdal.ronahi@gmail.com, pckurd@hotmail.com>, 2005.
+#
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2005-08-29 00:30+0200\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: n != 1\n"
+"Project-Id-Version: xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Erdal Ronahi <erdal.ronahi@gmail.com, pckurd@hotmail.com>\n"
+"Language-Team: Kurdish <gnu-ku-wergerandin@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2005-01-02 10:57+0100\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"X-Poedit-Language: Kurdish\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: KBabel 1.10\n"
+
+#: src/main.c:99
+#: src/main.c:105
+msgid "Now starting"
+msgstr "Niha dest pê dike"
+
+#: src/main.c:113
+msgid "Cannot execute"
+msgstr "Nikare bimeşîne"
+
+#: src/main.c:149
+msgid "<b>Search:</b>"
+msgstr "<b>Lê bigere:</b>"
+
+#: src/main.c:206
+msgid "Categories"
+msgstr "Kategorî"
+
+#: src/af-constants.h:54
+msgid "All"
+msgstr "Hemû"
+
+#: src/af-constants.h:55
+msgid "Recently Used"
+msgstr "Nû bi kar anî"
+
+#: src/af-constants.h:56
+msgid "Core"
+msgstr "Cevher"
+
+#: src/af-constants.h:57
+msgid "Development"
+msgstr "Perisandin"
+
+#: src/af-constants.h:58
+msgid "Office"
+msgstr "Ofîs"
+
+#: src/af-constants.h:59
+msgid "Graphics"
+msgstr "Grafîk"
+
+#: src/af-constants.h:60
+msgid "Network"
+msgstr "Tor"
+
+#: src/af-constants.h:61
+msgid "AudioVideo"
+msgstr "AudioVideo"
+
+#: src/af-constants.h:62
+msgid "Game"
+msgstr "Leyistîk"
+
+#: src/af-constants.h:63
+msgid "Education"
+msgstr "Perwerdehî"
+
+#: src/af-constants.h:64
+msgid "System"
+msgstr "Pergal"
+
+#: src/af-constants.h:65
+msgid "Filemanager"
+msgstr "Menajerê dosiyan"
+
+#: src/af-constants.h:66
+msgid "Utility"
+msgstr "Bernameya alîkar"
+
