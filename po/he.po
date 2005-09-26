@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-12 10:05+0100\n"
+"POT-Creation-Date: 2005-09-26 12:06+0900\n"
 "PO-Revision-Date: 2004-08-22 16:31+0300\n"
 "Last-Translator: Yuval Tanny <tanai@int.gov.il>\n"
 "Language-Team: Hebrew Team <xfce2004@yahoo.com>\n"
@@ -84,48 +84,3 @@ msgstr "מנהל קבצים"
 #: src/af-constants.h:66
 msgid "Utility"
 msgstr "תכנית שירות"
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "לא נמצאו תוצאות מתאימות."
-
-#~ msgid "No items available"
-#~ msgstr "אין פריטים זמינים"
-
-#~ msgid "Appfinder InfoBox"
-#~ msgstr "תיבת מידע Appfinder"
-
-#~ msgid "Informations about \""
-#~ msgstr "מידע אודות \""
-
-#~ msgid "Icon"
-#~ msgstr "סמל"
-
-#~ msgid "<b>Name:</b> "
-#~ msgstr "<b>שם:</b> "
-
-#~ msgid "Comment"
-#~ msgstr "הערה"
-
-#~ msgid "N/A"
-#~ msgstr "לא זמין"
-
-#~ msgid "<b>Comment:</b> "
-#~ msgstr "<b>הערה:</b> "
-
-#~ msgid "<b>Categories:</b> "
-#~ msgstr "<b>קטגוריות:</b> "
-
-#~ msgid "<b>Command:</b> "
-#~ msgstr "<b>פקודה:</b> "
-
-#~ msgid "Run program"
-#~ msgstr "הרץ תכנית"
-
-#~ msgid "Informations..."
-#~ msgstr "מידע..."
-
-#~ msgid "Add to panel"
-#~ msgstr "הוסף ללוח"
-
-#~ msgid "Add to desktop menu"
-#~ msgstr "הוסף לתפריט שולחן עבודה"

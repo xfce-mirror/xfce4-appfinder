@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-02 10:57+0100\n"
+"POT-Creation-Date: 2005-09-26 12:06+0900\n"
 "PO-Revision-Date: 2005-08-19 23:22+0900\n"
 "Last-Translator: Petri Jooste <petri.jooste@gmail.com>\n"
 "Language-Team: Afrikaans <i18n@af.org.za>\n"
@@ -82,4 +82,3 @@ msgstr "Lêerbestuurder"
 #: src/af-constants.h:66
 msgid "Utility"
 msgstr "Nutsprogram"
-

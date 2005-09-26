@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-12 10:05+0100\n"
+"POT-Creation-Date: 2005-09-26 12:06+0900\n"
 "PO-Revision-Date: 2005-08-19 23:27+0900\n"
 "Last-Translator: Eduard Roccatello <eduard@xfce.org>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -82,45 +82,3 @@ msgstr ""
 #: src/af-constants.h:66
 msgid "Utility"
 msgstr ""
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "Nessun risultato trovato."
-
-#~ msgid "No items available"
-#~ msgstr "Nessun elemento disponibile"
-
-#~ msgid "Informations about \""
-#~ msgstr "Informazioni su \""
-
-#~ msgid "Icon"
-#~ msgstr "Icona"
-
-#~ msgid "<b>Name:</b> "
-#~ msgstr "<b>Nome:</b> "
-
-#~ msgid "Comment"
-#~ msgstr "Commento"
-
-#~ msgid "N/A"
-#~ msgstr "N/D"
-
-#~ msgid "<b>Comment:</b> "
-#~ msgstr "<b>Commento:</b> "
-
-#~ msgid "<b>Categories:</b> "
-#~ msgstr "<b>Categorie:</b> "
-
-#~ msgid "<b>Command:</b> "
-#~ msgstr "<b>Comando:</b> "
-
-#~ msgid "Run program"
-#~ msgstr "Avvia programma"
-
-#~ msgid "Informations..."
-#~ msgstr "Informazioni..."
-
-#~ msgid "Add to panel"
-#~ msgstr "Aggiungi al panel"
-
-#~ msgid "Add to desktop menu"
-#~ msgstr "Aggiungi al menu del desktop"
