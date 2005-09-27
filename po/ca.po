@@ -1,15 +1,16 @@
-# translation of ca.po to
-# This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2005.
+# Catalan translations for xfce-utils package.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Pau Rul·lan Ferragut <paurullan@bulma.net>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ca\n"
+"Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-26 12:06+0900\n"
-"PO-Revision-Date: 2005-04-23 16:00+0200\n"
-"Last-Translator: \n"
-"Language-Team:  <ca@li.org>\n"
+"PO-Revision-Date: 2005-09-27 14:07+0900\n"
+"Last-Translator: Pau Rul·lan Ferragut <paurullan@bulma.net>\n"
+"Language-Team: Catalan <ca@dodds.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"

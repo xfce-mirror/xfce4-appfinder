@@ -1,16 +1,15 @@
-# Lithuanian translation of XFCE4-Appfinder.
-# Copyright (C) 2004 THE XFCE4-Appfinder'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the XFCE4-Appfinder package.
+# Lithuanian translation of xfce4-appfinder.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
 # Mantas <mantaz@gmail.com>, 2004 - 2005,
 # Rimas Kudelis <rq@akl.lt>, 2005.
-# 
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: XFCE4-Appfinder 4.2\n"
+"Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-26 12:06+0900\n"
-"PO-Revision-Date: 2005-01-18 00:44+0200\n"
+"PO-Revision-Date: 2005-09-27 14:25+0900\n"
 "Last-Translator: Rimas Kudelis <rq@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"

@@ -1,11 +1,11 @@
 # Afrikaans translations for xfce4-appfinder package.
-# Copyright (C) 2004-2005 The Xfce development team.
+# Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Petri Jooste <petri.jooste@gmail.com>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.2.2\n"
+"Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-26 12:06+0900\n"
 "PO-Revision-Date: 2005-08-19 23:22+0900\n"

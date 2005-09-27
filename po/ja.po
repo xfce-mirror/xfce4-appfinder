@@ -1,7 +1,7 @@
 # $Id$
 #
 # Japanese translations for xfce4-appfinder package.
-# Copyright (C) 2004-2005 The Xfce development team.
+# Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Daichi Kawahata <daichi@xfce.org>, 2005.
 #

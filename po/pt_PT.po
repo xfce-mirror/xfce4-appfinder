@@ -1,18 +1,16 @@
-# Portuguese translation of Xfce-appfinder.
-# Copyright (C) 2004 THE Xfce-appfinder'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the Xfce-appfinder package.
+# Portuguese translation of xfce4-appfinder.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
 # Nuno Donato <nunodonato@gmail.com>, 2004.
-# 
-# 
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Xfce-appfinder 4.2\n"
+"Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-26 12:06+0900\n"
-"PO-Revision-Date: 2004-10-09 21:28+0100\n"
+"PO-Revision-Date: 2005-09-27 14:27+0900\n"
 "Last-Translator: Nuno Donato <nunodonato@gmail.com>\n"
-"Language-Team: Portuguese <pt@li.org>\n"
+"Language-Team: Portuguese <translation-team-pt@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"

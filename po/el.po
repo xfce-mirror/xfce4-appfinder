@@ -1,17 +1,16 @@
-# translation of el_GR.po to Ελληνικά
-# translation of xfce4-appfinder.po to Ελληνικά
-# This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Greek translations for xfce-utils package.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
 # Stavros Giannouris <StavrosG2002@freemail.gr>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: el_GR\n"
+"Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-26 12:06+0900\n"
-"PO-Revision-Date: 2005-04-16 15:41+0200\n"
-"Last-Translator: Stavros Giannouris\n"
-"Language-Team: Ελληνικά\n"
+"PO-Revision-Date: 2005-09-27 14:10+0900\n"
+"Last-Translator: Stavros Giannouris <StavrosG2002@freemail.gr>\n"
+"Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"

@@ -1,14 +1,15 @@
 # This is the hungarian translation of xfce4-appfinder package.
-# Copyright (C) 2004 xfce4-appfinder'S COPYRIGHT HOLDER
+# Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Servitore <sas@321 uh:))>, 2004.
+# SZERVÑC Attila <sas@321.hu>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: hu\n"
+"Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-26 12:06+0900\n"
-"PO-Revision-Date: 2005-01-09 15:43+0100\n"
+"PO-Revision-Date: 2005-09-27 14:17+0900\n"
 "Last-Translator: SZERVÑC Attila <sas@321.hu>\n"
 "Language-Team: hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"

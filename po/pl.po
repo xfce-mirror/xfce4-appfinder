@@ -1,5 +1,5 @@
 # Polish translations for xfce4-appfinder package.
-# Copyright (C) 2004-2005 The Xfce development team.
+# Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Piotr Maliński <admin@rk.edu.pl> 2005-09-20.
 #
@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-26 12:06+0900\n"
+"POT-Creation-Date: 2005-09-27 13:11+0900\n"
 "PO-Revision-Date: 2005-09-21 05:59+0900\n"
 "Last-Translator: Piotr Maliński <admin@rk.edu.pl>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -15,70 +15,70 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:99 src/main.c:105
+#: ../src/main.c:99 ../src/main.c:105
 msgid "Now starting"
 msgstr "Startuję"
 
-#: src/main.c:113
+#: ../src/main.c:113
 msgid "Cannot execute"
 msgstr "Nie mogę wykonać"
 
-#: src/main.c:149
+#: ../src/main.c:149
 msgid "<b>Search:</b>"
 msgstr "<b>Szukaj</b>"
 
-#: src/main.c:206
+#: ../src/main.c:206
 msgid "Categories"
 msgstr "Kategorie"
 
-#: src/af-constants.h:54
+#: ../src/af-constants.h:54
 msgid "All"
 msgstr "Wszystkie"
 
-#: src/af-constants.h:55
+#: ../src/af-constants.h:55
 msgid "Recently Used"
 msgstr "Ostatnio używane"
 
-#: src/af-constants.h:56
+#: ../src/af-constants.h:56
 msgid "Core"
 msgstr "Podstawowe"
 
-#: src/af-constants.h:57
+#: ../src/af-constants.h:57
 msgid "Development"
 msgstr "Programowanie"
 
-#: src/af-constants.h:58
+#: ../src/af-constants.h:58
 msgid "Office"
 msgstr "Biuro"
 
-#: src/af-constants.h:59
+#: ../src/af-constants.h:59
 msgid "Graphics"
 msgstr "Grafika"
 
-#: src/af-constants.h:60
+#: ../src/af-constants.h:60
 msgid "Network"
 msgstr "Sieć"
 
-#: src/af-constants.h:61
+#: ../src/af-constants.h:61
 msgid "AudioVideo"
 msgstr "Multimedia"
 
-#: src/af-constants.h:62
+#: ../src/af-constants.h:62
 msgid "Game"
 msgstr "Gry"
 
-#: src/af-constants.h:63
+#: ../src/af-constants.h:63
 msgid "Education"
 msgstr "Edukacja"
 
-#: src/af-constants.h:64
+#: ../src/af-constants.h:64
 msgid "System"
 msgstr "System"
 
-#: src/af-constants.h:65
+#: ../src/af-constants.h:65
 msgid "Filemanager"
 msgstr "Menadżer plików"
 
-#: src/af-constants.h:66
+#: ../src/af-constants.h:66
 msgid "Utility"
 msgstr "Narzędzie"
