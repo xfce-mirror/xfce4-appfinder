@@ -1,0 +1,216 @@
+<?xml version='1.0'?> 
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY manrevision "1.2"> 
+  <!ENTITY date "November 2004"> 
+  <!ENTITY appversion "4.2"> 
+  <!ENTITY app "<application>xfce4-appfinder</application>">
+]>
+
+<article id="xfce4-appfinder" lang="he">
+
+<!-- Header --> 
+<articleinfo>
+
+  <title>מאתר הישומים של Xfce 4</title>
+  
+  <copyright>
+    <year>2004</year> <holder>Eduard Roccatello</holder>
+  </copyright>
+
+<!-- translators: uncomment this: -->
+
+  <copyright>
+   <year>2005</year> <holder>Dotan Kamber (Hebrew
+   translation)</holder>
+  </copyright>
+
+ 
+
+<!-- I don't know about this
+  <legalnotice id="legalnotice">
+    <para>
+      This document is provided under the terms of the GNU GPL, version
+      2 or (at your option) any later version.
+    </para>
+  </legalnotice>
+-->
+  <authorgroup>
+
+    <author>
+      <firstname>Eduard</firstname> <surname>Roccatello</surname>
+      <affiliation>
+	<address><email>eduard@xfce.org</email></address>
+      </affiliation>
+    </author>
+
+<!-- This is appropriate place for other contributors: translators,
+maintainers, etc. Commented out by default. -->
+
+    <othercredit role="translator">
+      <firstname>דותן</firstname> <surname>קמבר</surname>
+      <affiliation>
+	<address><email>kamberd@yahoo.com</email> </address>
+      </affiliation> <contrib>תרגום עברי</contrib>
+    </othercredit>
+
+  </authorgroup>
+
+  <!--
+  <revhistory>
+    <revision>
+      <revnumber>0.4</revnumber> 
+      <date>May 2003</date>
+      <authorinitials>jbh</authorinitials>
+    </revision>
+    <revision>
+      <revnumber>0.3</revnumber> 
+      <date>February 2003</date>
+      <authorinitials>jbh</authorinitials>
+    </revision>
+  </revhistory>
+  -->
+
+  <releaseinfo>מדריך זה מתאר את &app; גרסה &appversion; עידכון אחרון : &date;
+ </releaseinfo>
+ 
+
+</articleinfo>
+
+  <!-- extra space -->
+  <para>&nbsp;</para>
+  
+<sect1 id="appfinder-intro">
+  <title>מבוא</title>
+
+  <para>
+מתר הישומים הוא חלק מ <ulink url="http://www.xfce.org" type="html">סביבת שולחן העבודה של Xfce 4</ulink> ומביא אליה חיפוש ישומים במערכת כולה. התוכנית מחפשת קבצי <filename>.desktop</filename> בהתאם למפרט של freedesktop ורושמת את הישומים שנמצאו. 
+  </para>
+
+</sect1>
+
+   <!-- extra space -->
+  <para>&nbsp;</para>
+  
+<sect1 id="appfinder-getting-started">
+  <title>מתחילים</title>
+  
+  <para>
+ניתן להתחיל את מאתר הישומים ממסוף על יד הרצת הפקודה
+  <command>xfce4-appfinder</command> או לשגר את הישום דרך משגר בלוח.
+  </para>
+
+  <para>
+באיתחול מאתר הישומים יופיע במרכז המסך חלון הנראה כך:
+  </para>
+
+  <figure id="default-appfinder-fig">
+    <title>מאתר הישומים</title> 
+    <screenshot>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/default_appfinder.png" format="PNG"/>
+	</imageobject> 
+	<textobject>
+	  <phrase>חלון מאתר הישומים של Xfce4 נחלק לשניים: משמאל יש לנו קבוצות ומימין הישומים שנמצאו ומתאימים לקבוצה הנבחרת. מאתר הישומים מכיל גם תיבה לחיפוש ישומים התואמים מילת מפתח מסוימת.
+	  </phrase>
+	</textobject>
+      </mediaobject>
+    </screenshot>
+  </figure>
+
+ <para>
+לחיצה כפולה על ישום תשגר אותו, לחיצה ימנית תציג חלון מזנק ממנו ניתן לקבל מידע אודות הישום הנבחר
+  </para>
+
+  <figure id="handle-popup-fig">
+    <title>תפריט מזנק</title> 
+    <screenshot>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/appfinder-handle-popup.png" format="PNG"/>
+	</imageobject> 
+	<textobject>
+	  <phrase>התפריט המזנק של הלחיצה הימנית.</phrase>
+	</textobject>
+      </mediaobject>
+    </screenshot>
+  </figure>
+
+  <para>
+חלון המידע שימושי לקבלת כל פרטי המובאה של קובץ desktop. ניתן לקבל מידע אודות השם, הערות, קבוצות השתיכות ופקודה.
+  </para>
+
+  <figure id="item-popup-fig">
+    <title>חלון מידע לפריט</title> 
+    <screenshot>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/appfinder-item-popup.png" format="PNG"/>
+	</imageobject> 
+	<!-- 
+	<imageobject>
+	  <imagedata fileref="images/item-popup.eps" format="EPS"/>
+	</imageobject> 
+	--> 
+	<textobject>
+	  <phrase>חלון מידע לפריט.</phrase>
+	</textobject>
+      </mediaobject>
+    </screenshot>
+  </figure>
+
+</sect1>
+
+  <!-- extra space -->
+  <para>&nbsp;</para>
+  
+<sect1 id="appfinder-advanced">
+  <title>תכונות מתקדמות של מאתר הישומים</title>
+
+  <para>
+למאתר השיומים אפשרות לתקשר עם תוכנות אחרות דרך גרירה והטלה. הלכה למעשה ניתן להטיל פריטים על עורך התפריטים של Xfce 4 ועל חלקים מסוימים מהלוח.
+  </para>
+  
+  <para>
+ניתן לערוך את תפריט שולחן העבודה דרך עורך התפריטים של Xfce 4 בעזרת גרירה והטלה ממאתר הישומים. באופן זה חיפוש ישומים והוספתם לתפריט שולחן העבודה יהיו קלים יותר ומהירים יותר. כל שי לעשות הוא לבחור פריט מהרשימה במאתר הישומים, לגרור אותו על רשימת עורך התפריטים ולהנות מהתוצאה.
+  </para>
+
+  <para>
+מאתר הישומים של Xfce 4 תומך גם בגרירה והטלה על חלון ההגדרות של משגר לוח Xfce 4. ניתן להטיל פריטי מאתר ישומים על מובאת הפקודה של משגר לוח ולקבל את כל הפקודה רשומה. דרך מהירה להוספת ישומים חדשים.
+  </para>
+</sect1>
+
+  
+  <!-- extra space -->
+  <para>&nbsp;</para>
+  
+<sect1 id="appfinder-copyright">
+  <title>אודות &app;</title>
+
+  <para>&app; נכתב על ידי Eduard Roccatello 
+    (<email>eduard@xfce.org</email>). למידע נוסף ניתן לבקר ב <ulink url="http://www.xfce.org" type="http">אתר Xfce</ulink>. 
+  </para>
+
+  <para>לדיווח על תקלה או כדי להציע דבר מה בנוגע ליישום זה או למדריך זה יש להשתמש במערכת המעקב אחר תקלות ב- <ulink 
+      url="http://bugzilla.xfce.org/" 
+      type="http">http://bugzilla.xfce.org/</ulink>. 
+  </para>
+
+  <para>אם יש לך שאלות בנוגע לשימוש או להתקנת ישום זה ניתן להפנותן <ulink 
+      url="http://lunar-linux.org/mailman/listinfo/xfce"
+      type="http">לרשימת הדיוור של Xfce</ulink>. דיונים אודות הפיתוח נערכים ברשימת הדיוור <ulink 
+      url="http://lunar-linux.org/mailman/listinfo/xfce4-dev"
+      type="http">xfce4-dev</ulink>.
+  </para>
+    
+  <para> תוכנית זו מופצת תחת תנאי רישיון GPL (GNU General Public Liscense) כפי שהם מפורסמים על ידי קרן התוכנה החופשית; גרסה 2 של הרישיון או (לבחירתך) כל גרסה מאוחרת יותר.
+  </para>
+
+  <para>עותק של רישיון ה- GNU General Public Liscense אמור היה להיות מצורף לתוכנית זו; אם לא כך, ניתן לכתוב לקרן התוכנה החופשית: Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, 
+    USA.
+</para>
+
+</sect1>
+
+</article>
