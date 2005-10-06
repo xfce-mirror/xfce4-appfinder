@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-26 12:06+0900\n"
-"PO-Revision-Date: 2005-05-12 18:52+0900\n"
+"PO-Revision-Date: 2005-10-06 15:07+0900\n"
 "Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "開発"
 
 #: src/af-constants.h:58
 msgid "Office"
-msgstr "事務"
+msgstr "オフィス"
 
 #: src/af-constants.h:59
 msgid "Graphics"
