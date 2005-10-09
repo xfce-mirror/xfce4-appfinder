@@ -1,0 +1,84 @@
+# Swedish translations for xfce4-appfinder package.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Alexander Toresson <alexander.toresson@gmail.com>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.2.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-10-09 15:52+0900\n"
+"PO-Revision-Date: 2005-10-06 16:31+0100\n"
+"Last-Translator: Alexander Toresson <alexander.toresson@gmail.com>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main.c:99 src/main.c:105
+msgid "Now starting"
+msgstr "Startar nu"
+
+#: src/main.c:113
+msgid "Cannot execute"
+msgstr "Kan inte starta"
+
+#: src/main.c:149
+msgid "<b>Search:</b>"
+msgstr "<b>Sök:</b>"
+
+#: src/main.c:206
+msgid "Categories"
+msgstr "Kategorier"
+
+#: src/af-constants.h:54
+msgid "All"
+msgstr "Alla"
+
+#: src/af-constants.h:55
+msgid "Recently Used"
+msgstr "Nyligen använda"
+
+#: src/af-constants.h:56
+msgid "Core"
+msgstr "Kärna"
+
+#: src/af-constants.h:57
+msgid "Development"
+msgstr "Utveckling"
+
+#: src/af-constants.h:58
+msgid "Office"
+msgstr "Kontor"
+
+#: src/af-constants.h:59
+msgid "Graphics"
+msgstr "Grafik"
+
+#: src/af-constants.h:60
+msgid "Network"
+msgstr "Nätverk"
+
+#: src/af-constants.h:61
+msgid "AudioVideo"
+msgstr "Audio/Video"
+
+#: src/af-constants.h:62
+msgid "Game"
+msgstr "Spel"
+
+#: src/af-constants.h:63
+msgid "Education"
+msgstr "Utbildning"
+
+#: src/af-constants.h:64
+msgid "System"
+msgstr "System"
+
+#: src/af-constants.h:65
+msgid "Filemanager"
+msgstr "Filhanterare"
+
+#: src/af-constants.h:66
+msgid "Utility"
+msgstr "Verktyg"
