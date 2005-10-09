@@ -1,3 +1,5 @@
+# $Id$
+#
 # Japanese translations for xfce4-appfinder package.
 # Copyright (C) 2004-2005 The Xfce development team.
 # This file is distributed under the same license as the xfce4-appfinder package.
@@ -5,10 +7,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.3.0\n"
+"Project-Id-Version: xfce4-appfinder 4.3.0svn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-18 20:16+0900\n"
-"PO-Revision-Date: 2005-05-19 08:31+0900\n"
+"POT-Creation-Date: 2005-10-08 00:42+0900\n"
+"PO-Revision-Date: 2005-09-13 23:25+0900\n"
 "Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
 "MIME-Version: 1.0\n"
@@ -16,116 +18,135 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 # FIXME: C
-#: src/main.c:152
+#: ../src/main.c:152
 msgid "Now starting"
 msgstr "起動しています"
 
-#: src/main.c:161
+#: ../src/main.c:161
 msgid "Cannot execute the selected application"
 msgstr "選択したアプリケーションを実行できません"
 
-#: src/main.c:190
+#: ../src/main.c:190
 msgid "Appfinder InfoBox"
 msgstr "アプリファインダー 情報ボックス"
 
 # FIXME: C
-#: src/main.c:197
+#: ../src/main.c:197
 msgid "Informations about \""
 msgstr "次に関する情報 \""
 
-#: src/main.c:210
+#: ../src/main.c:210
 msgid "Icon"
 msgstr "アイコン"
 
-#: src/main.c:239
+#: ../src/main.c:239
 msgid "<b>Name:</b> "
 msgstr "<b>名前:</b> "
 
-#: src/main.c:244
+#: ../src/main.c:244
 msgid "Comment"
 msgstr "コメント"
 
-#: src/main.c:247 src/main.c:261 src/main.c:281
+#: ../src/main.c:247 ../src/main.c:261 ../src/main.c:281
 msgid "N/A"
 msgstr "利用不可"
 
-#: src/main.c:252
+#: ../src/main.c:252
 msgid "<b>Comment:</b> "
 msgstr "<b>コメント:</b> "
 
-#: src/main.c:272
+#: ../src/main.c:272
 msgid "<b>Categories:</b> "
 msgstr "<b>分類:</b> "
 
-#: src/main.c:284
+#: ../src/main.c:284
 msgid "<b>Command:</b> "
 msgstr "<b>コマンド:</b> "
 
-#: src/main.c:326
+#: ../src/main.c:326
 msgid "Run program"
 msgstr "プログラムを実行"
 
-#: src/main.c:334
+#: ../src/main.c:334
 msgid "Informations..."
 msgstr "情報..."
 
-#: src/main.c:395
+#: ../src/main.c:395
 msgid "<b>Search:</b>"
 msgstr "<b>検索:</b>"
 
-#: src/xfce4-appfinder.c:265
+#: ../src/main.c:402
+msgid "Show categories"
+msgstr "分類を表示"
+
+#: ../src/xfce4-appfinder.c:110
+msgid "All"
+msgstr "すべて"
+
+#: ../src/xfce4-appfinder.c:111
+msgid "Core"
+msgstr "コア"
+
+#: ../src/xfce4-appfinder.c:112
+msgid "Development"
+msgstr "開発"
+
+#: ../src/xfce4-appfinder.c:113
+msgid "Office"
+msgstr "オフィス"
+
+#: ../src/xfce4-appfinder.c:114
+msgid "Graphics"
+msgstr "グラフィックス"
+
+#: ../src/xfce4-appfinder.c:115
+msgid "Network"
+msgstr "ネットワーク"
+
+#: ../src/xfce4-appfinder.c:116
+msgid "AudioVideo"
+msgstr "音楽・映像"
+
+#: ../src/xfce4-appfinder.c:117
+msgid "Game"
+msgstr "ゲーム"
+
+#: ../src/xfce4-appfinder.c:118
+msgid "Education"
+msgstr "教育"
+
+#: ../src/xfce4-appfinder.c:119
+msgid "System"
+msgstr "システム"
+
+#: ../src/xfce4-appfinder.c:120
+msgid "Filemanager"
+msgstr "ファイルマネージャ"
+
+#: ../src/xfce4-appfinder.c:121
+msgid "Utility"
+msgstr "ユーティリティ"
+
+#: ../src/xfce4-appfinder.c:265
 msgid "Categories"
 msgstr "分類"
 
-#: src/xfce4-appfinder.c:562
+#: ../src/xfce4-appfinder.c:562
 msgid "No items available"
 msgstr "利用できるアイテムはありません"
 
-#: src/xfce4-appfinder.c:599
+#: ../src/xfce4-appfinder.c:599
 msgid "Sorry, no match for searched text."
 msgstr "検索したテキストに該当するものはありません。"
 
-#~ msgid "All"
-#~ msgstr "すべて"
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr "アプリファインダー"
 
-#~ msgid "Core"
-#~ msgstr "コア"
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr "Xfce 4 のアプリケーション・ファインダーです"
 
-#~ msgid "Development"
-#~ msgstr "開発"
-
-#~ msgid "Office"
-#~ msgstr "オフィス"
-
-#~ msgid "Graphics"
-#~ msgstr "グラフィックス"
-
-#~ msgid "Network"
-#~ msgstr "ネットワーク"
-
-#~ msgid "AudioVideo"
-#~ msgstr "音楽・映像"
-
-#~ msgid "Game"
-#~ msgstr "ゲーム"
-
-#~ msgid "Education"
-#~ msgstr "教育"
-
-#~ msgid "System"
-#~ msgstr "システム"
-
-#~ msgid "Filemanager"
-#~ msgstr "ファイルマネージャ"
-
-#~ msgid "Utility"
-#~ msgstr "ユーティリティ"
-
-#~ msgid "Appfinder"
-#~ msgstr "アプリファインダー"
-
-#~ msgid "Find installed applications"
-#~ msgstr "アプリケーションを検索します"
-
-#~ msgid "Xfce 4 Appfinder"
-#~ msgstr "Xfce 4 アプリファインダー"
+#: ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr "Xfce 4 アプリファインダー"
