@@ -216,7 +216,7 @@ void cb_menuinfo (GtkMenuItem *menuitem, gpointer data)
         gtk_window_set_icon (GTK_WINDOW (dlg->dialog), icon);
 
         dlg->vbox = GTK_DIALOG (dlg->dialog)->vbox;
-        dlg->header = xfce_create_header (icon, g_strconcat(_("Informations about \""), name, "\"", NULL));
+        dlg->header = xfce_create_header (icon, g_strconcat(_("Information about \""), name, "\"", NULL));
         gtk_widget_show (dlg->header);
         gtk_box_pack_start (GTK_BOX (dlg->vbox), dlg->header, FALSE, TRUE, 0);
         g_object_unref(icon);
@@ -367,7 +367,7 @@ cb_appstreeclick (GtkWidget *widget, GdkEventButton *event, gpointer treeview)
             gtk_widget_show (menuitem);
             gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 
-            menuitem = gtk_image_menu_item_new_with_label (_("Informations..."));
+            menuitem = gtk_image_menu_item_new_with_label (_("Information..."));
             icon = gtk_image_new_from_stock (GTK_STOCK_DIALOG_INFO, GTK_ICON_SIZE_MENU);
             gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM(menuitem), icon);
             g_signal_connect (G_OBJECT(menuitem), "activate", G_CALLBACK(cb_menuinfo), (gpointer)name);
