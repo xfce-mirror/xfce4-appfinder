@@ -1,14 +1,14 @@
 # Finnish translations for xfce4-appfinder package.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-# Juha Kautto <Juha@xfce.org>, 2004
+# Juha Kautto <juha@xfce.org>, 2004
 # Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-08 06:13+0900\n"
+"POT-Creation-Date: 2005-10-09 15:52+0900\n"
 "PO-Revision-Date: 2005-09-27 14:24+0900\n"
 "Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
