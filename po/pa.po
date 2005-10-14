@@ -1,14 +1,14 @@
-# translation of xfce4-appfinder.po to Punjabi
-# This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Punjabi translations for xfce4-appfinder package.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder\n"
+"Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-14 16:55+0200\n"
-"PO-Revision-Date: 2004-09-23 15:41+0530\n"
+"POT-Creation-Date: 2005-10-15 01:59+0900\n"
+"PO-Revision-Date: 2005-10-15 01:50+0900\n"
 "Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
 "Plural-Forms: Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"\n"
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
@@ -26,11 +25,6 @@ msgstr ""
 msgid "Xfce 4 Appfinder"
 msgstr ""
 
-#: ../src/main.c:272
-#, fuzzy
-msgid "<b>Name</b>"
-msgstr "<b>ਖੋਜ:</b>"
-
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
 msgstr ""
@@ -38,11 +32,6 @@ msgstr ""
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
 msgstr ""
-
-#: ../src/main.c:329
-#, fuzzy
-msgid "<b>Categories</b>"
-msgstr "ਸ਼੍ਰੇਣੀਆਂ"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
@@ -59,11 +48,6 @@ msgstr ""
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>ਖੋਜ:</b>"
-
-#: ../src/main.c:466
-#, fuzzy
-msgid "Show Categories"
-msgstr "ਸ਼੍ਰੇਣੀਆਂ"
 
 #: ../src/xfce4-appfinder.c:114
 msgid "All"
@@ -132,12 +116,3 @@ msgstr ""
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
 msgstr ""
-
-#~ msgid "Now starting"
-#~ msgstr "ਹੁਣ ਸ਼ੁਰੂ"
-
-#~ msgid "Cannot execute"
-#~ msgstr "ਚਲਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
-
-#~ msgid "Recently Used"
-#~ msgstr "ਤਾਜ਼ਾ ਵਰਤੇ"

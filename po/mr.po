@@ -1,14 +1,14 @@
-# Marathi Translation of  xfce4-appfinder.
+# Marathi Translation of xfce4-appfinder.
+# Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Pallavi Nikam <pallavi_edu@rediffmail.com>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder\n"
+"Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-14 16:55+0200\n"
-"PO-Revision-Date: 2005-04-20 18:33+0530\n"
+"POT-Creation-Date: 2005-10-15 01:59+0900\n"
+"PO-Revision-Date: 2005-10-15 01:49+0900\n"
 "Last-Translator: Pallavi Nikam <pallavi_edu@rediffmail.com>\n"
 "Language-Team: Marathi <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,11 +24,6 @@ msgstr ""
 msgid "Xfce 4 Appfinder"
 msgstr ""
 
-#: ../src/main.c:272
-#, fuzzy
-msgid "<b>Name</b>"
-msgstr "<b>शोधा:</b>"
-
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
 msgstr ""
@@ -36,11 +31,6 @@ msgstr ""
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
 msgstr ""
-
-#: ../src/main.c:329
-#, fuzzy
-msgid "<b>Categories</b>"
-msgstr "विभाग"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
@@ -57,11 +47,6 @@ msgstr ""
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>शोधा:</b>"
-
-#: ../src/main.c:466
-#, fuzzy
-msgid "Show Categories"
-msgstr "विभाग"
 
 #: ../src/xfce4-appfinder.c:114
 msgid "All"
@@ -130,12 +115,3 @@ msgstr ""
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
 msgstr ""
-
-#~ msgid "Now starting"
-#~ msgstr "आता सुरु होत आहे"
-
-#~ msgid "Cannot execute"
-#~ msgstr "अमलात येत नाही"
-
-#~ msgid "Recently Used"
-#~ msgstr "आत्ताच वापरले"

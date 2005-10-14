@@ -1,16 +1,16 @@
 # $Id$
 #
 # Japanese translations for xfce4-appfinder package.
-# Copyright (C) 2004-2005 The Xfce development team.
+# Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Daichi Kawahata <daichi@xfce.org>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.3.0svn\n"
+"Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-14 16:55+0200\n"
-"PO-Revision-Date: 2005-09-13 23:25+0900\n"
+"POT-Creation-Date: 2005-10-15 01:59+0900\n"
+"PO-Revision-Date: 2005-10-15 02:03+0900\n"
 "Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
 "MIME-Version: 1.0\n"
@@ -26,44 +26,38 @@ msgid "Xfce 4 Appfinder"
 msgstr "Xfce 4 アプリファインダー"
 
 #: ../src/main.c:272
-#, fuzzy
 msgid "<b>Name</b>"
-msgstr "<b>名前:</b> "
+msgstr "<b>名前</b>"
 
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
 msgstr "利用不可"
 
 #: ../src/main.c:296
-#, fuzzy
 msgid "<b>Comment</b>"
-msgstr "<b>コメント:</b> "
+msgstr "<b>コメント</b>"
 
 #: ../src/main.c:329
-#, fuzzy
 msgid "<b>Categories</b>"
-msgstr "<b>分類:</b> "
+msgstr "<b>分類</b>"
 
 #: ../src/main.c:354
-#, fuzzy
 msgid "<b>Command</b>"
-msgstr "<b>コマンド:</b> "
+msgstr "<b>コマンド</b>"
 
 #: ../src/main.c:389
 msgid "Run program"
 msgstr "プログラムを実行"
 
 #: ../src/main.c:397
-#, fuzzy
 msgid "More Information..."
-msgstr "情報..."
+msgstr "さらなる情報..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>検索:</b>"
 
 #: ../src/main.c:466
-#, fuzzy
 msgid "Show Categories"
 msgstr "分類を表示"
 
@@ -109,7 +103,7 @@ msgstr "システム"
 
 #: ../src/xfce4-appfinder.c:124
 msgid "Filemanager"
-msgstr "ファイルマネージャ"
+msgstr "ファイルマネージャー"
 
 #: ../src/xfce4-appfinder.c:125
 msgid "Utility"
@@ -134,20 +128,3 @@ msgstr "アプリファインダー"
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
 msgstr "Xfce 4 のアプリケーション・ファインダーです"
-
-# FIXME: C
-#~ msgid "Now starting"
-#~ msgstr "起動しています"
-
-#~ msgid "Appfinder InfoBox"
-#~ msgstr "アプリファインダー 情報ボックス"
-
-# FIXME: C
-#~ msgid "Informations about \""
-#~ msgstr "次に関する情報 \""
-
-#~ msgid "Icon"
-#~ msgstr "アイコン"
-
-#~ msgid "Comment"
-#~ msgstr "コメント"

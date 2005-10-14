@@ -1,16 +1,15 @@
 # Korean translations for xfce4-appfinder package.
-# Copyright (C) 2002-2005 The Xfce development team
+# Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # ByungHyun Choi <byunghyun.choi@gmail.com>, 2005.
 #
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder trunk\n"
+"Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-14 16:55+0200\n"
-"PO-Revision-Date: 2005-07-02 00:25:02+0900\n"
-"Last-Translator: ByungHyun Choi<byunghyunchoi@hotmail.com>\n"
+"POT-Creation-Date: 2005-10-15 01:59+0900\n"
+"PO-Revision-Date: 2005-10-15 01:49+0900\n"
+"Last-Translator: ByungHyun Choi <byunghyunchoi@hotmail.com>\n"
 "Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge."
 "net>\n"
 "MIME-Version: 1.0\n"
@@ -25,11 +24,6 @@ msgstr ""
 msgid "Xfce 4 Appfinder"
 msgstr ""
 
-#: ../src/main.c:272
-#, fuzzy
-msgid "<b>Name</b>"
-msgstr "<b>검색:</b>"
-
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
 msgstr ""
@@ -37,11 +31,6 @@ msgstr ""
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
 msgstr ""
-
-#: ../src/main.c:329
-#, fuzzy
-msgid "<b>Categories</b>"
-msgstr "분류"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
@@ -58,11 +47,6 @@ msgstr ""
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>검색:</b>"
-
-#: ../src/main.c:466
-#, fuzzy
-msgid "Show Categories"
-msgstr "분류"
 
 #: ../src/xfce4-appfinder.c:114
 msgid "All"
@@ -131,12 +115,3 @@ msgstr "응용프로그램 검색"
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
 msgstr "응용프로그램 검색"
-
-#~ msgid "Now starting"
-#~ msgstr "기동 중입니다."
-
-#~ msgid "Cannot execute"
-#~ msgstr "실행할 수 없군요."
-
-#~ msgid "Recently Used"
-#~ msgstr "최근 사용한 것"

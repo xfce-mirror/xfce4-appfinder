@@ -1,17 +1,16 @@
-# translation of xfce4-appfinder-fa.po to Persian
-# translation of xfce4-appfinder.po to Persian
-# This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Persian translations for xfce4-appfinder package.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
 # Abbas Izad <abbasizad@hotmail.com>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder-fa\n"
+"Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-14 16:55+0200\n"
-"PO-Revision-Date: 2004-09-29 12:58+0330\n"
+"POT-Creation-Date: 2005-10-15 01:59+0900\n"
+"PO-Revision-Date: 2005-10-15 01:39+0900\n"
 "Last-Translator: Abbas Izad <abbasizad@hotmail.com>\n"
-"Language-Team: Persian\n"
+"Language-Team: Persian <translation-team-fa@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,11 +24,6 @@ msgstr ""
 msgid "Xfce 4 Appfinder"
 msgstr ""
 
-#: ../src/main.c:272
-#, fuzzy
-msgid "<b>Name</b>"
-msgstr "<b>جستجو:</b>"
-
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
 msgstr ""
@@ -37,11 +31,6 @@ msgstr ""
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
 msgstr ""
-
-#: ../src/main.c:329
-#, fuzzy
-msgid "<b>Categories</b>"
-msgstr "رده‌ها"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
@@ -58,11 +47,6 @@ msgstr ""
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>جستجو:</b>"
-
-#: ../src/main.c:466
-#, fuzzy
-msgid "Show Categories"
-msgstr "رده‌ها"
 
 #: ../src/xfce4-appfinder.c:114
 msgid "All"
@@ -131,12 +115,3 @@ msgstr ""
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
 msgstr ""
-
-#~ msgid "Now starting"
-#~ msgstr "اکنون شروع میشود"
-
-#~ msgid "Cannot execute"
-#~ msgstr "نمیتوان اجرا کرد"
-
-#~ msgid "Recently Used"
-#~ msgstr "اخیرا استفاده شده"
