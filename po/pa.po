@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-08 06:13+0900\n"
+"POT-Creation-Date: 2005-10-15 07:46+0900\n"
 "PO-Revision-Date: 2005-09-27 14:26+0900\n"
 "Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
@@ -17,22 +17,6 @@ msgstr ""
 "X-Generator: KBabel 1.3.1\n"
 "Plural-Forms: Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
-
-#: src/main.c:99 src/main.c:105
-msgid "Now starting"
-msgstr "ਹੁਣ ਸ਼ੁਰੂ"
-
-#: src/main.c:113
-msgid "Cannot execute"
-msgstr "ਚਲਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
-
-#: src/main.c:149
-msgid "<b>Search:</b>"
-msgstr "<b>ਖੋਜ:</b>"
-
-#: src/main.c:206
-msgid "Categories"
-msgstr "ਸ਼੍ਰੇਣੀਆਂ"
 
 #: src/af-constants.h:54
 msgid "All"
@@ -85,3 +69,73 @@ msgstr "ਫਾਇਲ਼-ਪ੍ਰਬੰਧਕ"
 #: src/af-constants.h:66
 msgid "Utility"
 msgstr "ਉਪਯੋਗਤਾ"
+
+#: src/callbacks.c:79
+msgid "Sorry, no match for searched text."
+msgstr ""
+
+#: src/callbacks.c:166
+msgid "No items available"
+msgstr ""
+
+#: src/callbacks.c:213
+msgid "Appfinder InfoBox"
+msgstr ""
+
+#: src/callbacks.c:219
+msgid "Information about \""
+msgstr ""
+
+#: src/callbacks.c:232
+msgid "Icon"
+msgstr ""
+
+#: src/callbacks.c:261
+#, fuzzy
+msgid "<b>Name:</b> "
+msgstr "<b>ਖੋਜ:</b>"
+
+#: src/callbacks.c:266
+msgid "Comment"
+msgstr ""
+
+#: src/callbacks.c:269 src/callbacks.c:283 src/callbacks.c:303
+msgid "N/A"
+msgstr ""
+
+#: src/callbacks.c:274
+msgid "<b>Comment:</b> "
+msgstr ""
+
+#: src/callbacks.c:294
+#, fuzzy
+msgid "<b>Categories:</b> "
+msgstr "ਸ਼੍ਰੇਣੀਆਂ"
+
+#: src/callbacks.c:306
+msgid "<b>Command:</b> "
+msgstr ""
+
+#: src/callbacks.c:362
+msgid "Run program"
+msgstr ""
+
+#: src/callbacks.c:370
+msgid "Information..."
+msgstr ""
+
+#: src/main.c:99 src/main.c:105
+msgid "Now starting"
+msgstr "ਹੁਣ ਸ਼ੁਰੂ"
+
+#: src/main.c:113
+msgid "Cannot execute"
+msgstr "ਚਲਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
+
+#: src/main.c:149
+msgid "<b>Search:</b>"
+msgstr "<b>ਖੋਜ:</b>"
+
+#: src/main.c:206
+msgid "Categories"
+msgstr "ਸ਼੍ਰੇਣੀਆਂ"

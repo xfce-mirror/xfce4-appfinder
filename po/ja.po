@@ -9,29 +9,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-08 06:13+0900\n"
-"PO-Revision-Date: 2005-10-06 15:07+0900\n"
+"POT-Creation-Date: 2005-10-15 07:46+0900\n"
+"PO-Revision-Date: 2005-10-15 08:41+0900\n"
 "Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: src/main.c:99 src/main.c:105
-msgid "Now starting"
-msgstr "起動しています"
-
-#: src/main.c:113
-msgid "Cannot execute"
-msgstr "実行できません"
-
-#: src/main.c:149
-msgid "<b>Search:</b>"
-msgstr "<b>検索:</b>"
-
-#: src/main.c:206
-msgid "Categories"
-msgstr "分類"
 
 #: src/af-constants.h:54
 msgid "All"
@@ -79,8 +63,80 @@ msgstr "システム"
 
 #: src/af-constants.h:65
 msgid "Filemanager"
-msgstr "ファイルマネージャ"
+msgstr "ファイルマネージャー"
 
 #: src/af-constants.h:66
 msgid "Utility"
 msgstr "ユーティリティ"
+
+#: src/callbacks.c:79
+msgid "Sorry, no match for searched text."
+msgstr "検索内容に該当するものはありません。"
+
+#: src/callbacks.c:166
+msgid "No items available"
+msgstr "利用可能なアイテムがありません"
+
+#: src/callbacks.c:213
+msgid "Appfinder InfoBox"
+msgstr "Appfinder InfoBox"
+
+# FIXME: C
+#: src/callbacks.c:219
+msgid "Information about \""
+msgstr "次に関する情報 \""
+
+#: src/callbacks.c:232
+msgid "Icon"
+msgstr "アイコン"
+
+#: src/callbacks.c:261
+msgid "<b>Name:</b> "
+msgstr "<b>名前:</b> "
+
+#: src/callbacks.c:266
+msgid "Comment"
+msgstr "コメント"
+
+#: src/callbacks.c:269 src/callbacks.c:283 src/callbacks.c:303
+msgid "N/A"
+msgstr "利用不可"
+
+#: src/callbacks.c:274
+msgid "<b>Comment:</b> "
+msgstr "<b>コメント:</b> "
+
+#: src/callbacks.c:294
+msgid "<b>Categories:</b> "
+msgstr "<b>分類:</b> "
+
+#: src/callbacks.c:306
+msgid "<b>Command:</b> "
+msgstr "<b>コマンド:</b> "
+
+#: src/callbacks.c:362
+msgid "Run program"
+msgstr "プログラムを実行"
+
+#: src/callbacks.c:370
+msgid "Information..."
+msgstr "情報..."
+
+# FIXME: C
+# FIXME: UTF-8 output
+#: src/main.c:99 src/main.c:105
+msgid "Now starting"
+msgstr "起動しています"
+
+# FIXME: C
+#: src/main.c:113
+msgid "Cannot execute"
+msgstr "実行できません"
+
+#: src/main.c:149
+msgid "<b>Search:</b>"
+msgstr "<b>検索:</b>"
+
+#: src/main.c:206
+msgid "Categories"
+msgstr "分類"
