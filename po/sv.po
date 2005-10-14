@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xcfe4-appfinder HEAD\n"
-"POT-Creation-Date: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-10-14 16:55+0200\n"
 "PO-Revision-Date: 2005-03-21 19:38+0100\n"
 "Last-Translator: Aron Stansvik <elvstone@gmail.com>\n"
 "Language-Team: Swedish <elvstone@gmail.com>\n"
@@ -12,72 +13,126 @@ msgstr ""
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
 
-#: src/main.c:99
-#: src/main.c:105
-msgid "Now starting"
-msgstr "Startar nu"
+#: ../src/main.c:163
+msgid "Cannot execute the selected application"
+msgstr ""
 
-#: src/main.c:113
-msgid "Cannot execute"
-msgstr "Kan inte köra"
+#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr ""
 
-#: src/main.c:149
+#: ../src/main.c:272
+#, fuzzy
+msgid "<b>Name</b>"
+msgstr "<b>Sök:</b>"
+
+#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+msgid "N/A"
+msgstr ""
+
+#: ../src/main.c:296
+msgid "<b>Comment</b>"
+msgstr ""
+
+#: ../src/main.c:329
+#, fuzzy
+msgid "<b>Categories</b>"
+msgstr "Kategorier"
+
+#: ../src/main.c:354
+msgid "<b>Command</b>"
+msgstr ""
+
+#: ../src/main.c:389
+msgid "Run program"
+msgstr ""
+
+#: ../src/main.c:397
+msgid "More Information..."
+msgstr ""
+
+#: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>Sök:</b>"
 
-#: src/main.c:206
-msgid "Categories"
+#: ../src/main.c:466
+#, fuzzy
+msgid "Show Categories"
 msgstr "Kategorier"
 
-#: src/af-constants.h:54
+#: ../src/xfce4-appfinder.c:114
 msgid "All"
 msgstr "Alla"
 
-#: src/af-constants.h:55
-msgid "Recently Used"
-msgstr "Senast Använda"
-
-#: src/af-constants.h:56
+#: ../src/xfce4-appfinder.c:115
 msgid "Core"
 msgstr "Standard"
 
-#: src/af-constants.h:57
+#: ../src/xfce4-appfinder.c:116
 msgid "Development"
 msgstr "Utveckling"
 
-#: src/af-constants.h:58
+#: ../src/xfce4-appfinder.c:117
 msgid "Office"
 msgstr "Kontor"
 
-#: src/af-constants.h:59
+#: ../src/xfce4-appfinder.c:118
 msgid "Graphics"
 msgstr "Grafik"
 
-#: src/af-constants.h:60
+#: ../src/xfce4-appfinder.c:119
 msgid "Network"
 msgstr "Nätverk"
 
-#: src/af-constants.h:61
+#: ../src/xfce4-appfinder.c:120
 msgid "AudioVideo"
 msgstr "LjudBild"
 
-#: src/af-constants.h:62
+#: ../src/xfce4-appfinder.c:121
 msgid "Game"
 msgstr "Spel"
 
-#: src/af-constants.h:63
+#: ../src/xfce4-appfinder.c:122
 msgid "Education"
 msgstr "Utbildning"
 
-#: src/af-constants.h:64
+#: ../src/xfce4-appfinder.c:123
 msgid "System"
 msgstr "System"
 
-#: src/af-constants.h:65
+#: ../src/xfce4-appfinder.c:124
 msgid "Filemanager"
 msgstr "Filhanterare"
 
-#: src/af-constants.h:66
+#: ../src/xfce4-appfinder.c:125
 msgid "Utility"
 msgstr "Verktyg"
 
+#: ../src/xfce4-appfinder.c:269
+msgid "Categories"
+msgstr "Kategorier"
+
+#: ../src/xfce4-appfinder.c:561
+msgid "No items available"
+msgstr ""
+
+#: ../src/xfce4-appfinder.c:601
+msgid "Sorry, no match for searched text."
+msgstr ""
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr ""
+
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr ""
+
+#~ msgid "Now starting"
+#~ msgstr "Startar nu"
+
+#~ msgid "Cannot execute"
+#~ msgstr "Kan inte köra"
+
+#~ msgid "Recently Used"
+#~ msgstr "Senast Använda"

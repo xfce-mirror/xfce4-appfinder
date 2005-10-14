@@ -89,7 +89,7 @@ enum
 GtkType        xfce_appfinder_get_type          (void);
 GtkWidget*     xfce_appfinder_new               (void);
 void           xfce_appfinder_search            (XfceAppfinder  *appfinder, 
-                                                 gchar          *pattern);
+                                                 const gchar    *pattern);
 void           xfce_appfinder_view_categories   (XfceAppfinder  *appfinder,
                                                  gboolean        visible);
 void           xfce_appfinder_clean             (XfceAppfinder  *appfinder);

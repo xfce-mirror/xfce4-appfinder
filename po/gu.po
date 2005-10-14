@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-11 18:28+0200\n"
+"POT-Creation-Date: 2005-10-14 16:55+0200\n"
 "PO-Revision-Date: 2004-09-22 15:48+0530\n"
 "Last-Translator: Ankit Patel <ankit@redhat.com>\n"
 "Language-Team: Gujarati\n"
@@ -18,70 +18,126 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "\n"
 
-#: src/main.c:98 src/main.c:104
-msgid "Now starting"
-msgstr "હમણાં શરુ કરી રહ્યા છીએ"
+#: ../src/main.c:163
+msgid "Cannot execute the selected application"
+msgstr ""
 
-#: src/main.c:112
-msgid "Cannot execute"
-msgstr "ચલાવી શકતા નથી"
+#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr ""
 
-#: src/main.c:148
+#: ../src/main.c:272
+#, fuzzy
+msgid "<b>Name</b>"
+msgstr "<b>શોધો:</b>"
+
+#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+msgid "N/A"
+msgstr ""
+
+#: ../src/main.c:296
+msgid "<b>Comment</b>"
+msgstr ""
+
+#: ../src/main.c:329
+#, fuzzy
+msgid "<b>Categories</b>"
+msgstr "વર્ગો"
+
+#: ../src/main.c:354
+msgid "<b>Command</b>"
+msgstr ""
+
+#: ../src/main.c:389
+msgid "Run program"
+msgstr ""
+
+#: ../src/main.c:397
+msgid "More Information..."
+msgstr ""
+
+#: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>શોધો:</b>"
 
-#: src/main.c:205
-msgid "Categories"
+#: ../src/main.c:466
+#, fuzzy
+msgid "Show Categories"
 msgstr "વર્ગો"
 
-#: src/af-constants.h:72
+#: ../src/xfce4-appfinder.c:114
 msgid "All"
 msgstr "બધું"
 
-#: src/af-constants.h:73
-msgid "Recently Used"
-msgstr "છેલ્લે વપરાયેલ"
-
-#: src/af-constants.h:74
+#: ../src/xfce4-appfinder.c:115
 msgid "Core"
 msgstr "મુખ્ય"
 
-#: src/af-constants.h:75
+#: ../src/xfce4-appfinder.c:116
 msgid "Development"
 msgstr "વિકાસ"
 
-#: src/af-constants.h:76
+#: ../src/xfce4-appfinder.c:117
 msgid "Office"
 msgstr "ઓફિસ"
 
-#: src/af-constants.h:77
+#: ../src/xfce4-appfinder.c:118
 msgid "Graphics"
 msgstr "ગ્રાફિક્સ"
 
-#: src/af-constants.h:78
+#: ../src/xfce4-appfinder.c:119
 msgid "Network"
 msgstr "નેટવર્ક"
 
-#: src/af-constants.h:79
+#: ../src/xfce4-appfinder.c:120
 msgid "AudioVideo"
 msgstr "ઓડિયોવિડીયો"
 
-#: src/af-constants.h:80
+#: ../src/xfce4-appfinder.c:121
 msgid "Game"
 msgstr "રમત"
 
-#: src/af-constants.h:81
+#: ../src/xfce4-appfinder.c:122
 msgid "Education"
 msgstr "ભણતર"
 
-#: src/af-constants.h:82
+#: ../src/xfce4-appfinder.c:123
 msgid "System"
 msgstr "સિસ્ટમ"
 
-#: src/af-constants.h:83
+#: ../src/xfce4-appfinder.c:124
 msgid "Filemanager"
 msgstr "ફાઈલ વ્યવસ્થાપક"
 
-#: src/af-constants.h:84
+#: ../src/xfce4-appfinder.c:125
 msgid "Utility"
 msgstr "ઉપયોગિતા"
+
+#: ../src/xfce4-appfinder.c:269
+msgid "Categories"
+msgstr "વર્ગો"
+
+#: ../src/xfce4-appfinder.c:561
+msgid "No items available"
+msgstr ""
+
+#: ../src/xfce4-appfinder.c:601
+msgid "Sorry, no match for searched text."
+msgstr ""
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr ""
+
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr ""
+
+#~ msgid "Now starting"
+#~ msgstr "હમણાં શરુ કરી રહ્યા છીએ"
+
+#~ msgid "Cannot execute"
+#~ msgstr "ચલાવી શકતા નથી"
+
+#~ msgid "Recently Used"
+#~ msgstr "છેલ્લે વપરાયેલ"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.0svn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-08 00:42+0900\n"
+"POT-Creation-Date: 2005-10-14 16:55+0200\n"
 "PO-Revision-Date: 2005-09-13 23:25+0900\n"
 "Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
@@ -17,125 +17,113 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# FIXME: C
-#: ../src/main.c:152
-msgid "Now starting"
-msgstr "起動しています"
-
-#: ../src/main.c:161
+#: ../src/main.c:163
 msgid "Cannot execute the selected application"
 msgstr "選択したアプリケーションを実行できません"
 
-#: ../src/main.c:190
-msgid "Appfinder InfoBox"
-msgstr "アプリファインダー 情報ボックス"
+#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr "Xfce 4 アプリファインダー"
 
-# FIXME: C
-#: ../src/main.c:197
-msgid "Informations about \""
-msgstr "次に関する情報 \""
-
-#: ../src/main.c:210
-msgid "Icon"
-msgstr "アイコン"
-
-#: ../src/main.c:239
-msgid "<b>Name:</b> "
+#: ../src/main.c:272
+#, fuzzy
+msgid "<b>Name</b>"
 msgstr "<b>名前:</b> "
 
-#: ../src/main.c:244
-msgid "Comment"
-msgstr "コメント"
-
-#: ../src/main.c:247 ../src/main.c:261 ../src/main.c:281
+#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
 msgstr "利用不可"
 
-#: ../src/main.c:252
-msgid "<b>Comment:</b> "
+#: ../src/main.c:296
+#, fuzzy
+msgid "<b>Comment</b>"
 msgstr "<b>コメント:</b> "
 
-#: ../src/main.c:272
-msgid "<b>Categories:</b> "
+#: ../src/main.c:329
+#, fuzzy
+msgid "<b>Categories</b>"
 msgstr "<b>分類:</b> "
 
-#: ../src/main.c:284
-msgid "<b>Command:</b> "
+#: ../src/main.c:354
+#, fuzzy
+msgid "<b>Command</b>"
 msgstr "<b>コマンド:</b> "
 
-#: ../src/main.c:326
+#: ../src/main.c:389
 msgid "Run program"
 msgstr "プログラムを実行"
 
-#: ../src/main.c:334
-msgid "Informations..."
+#: ../src/main.c:397
+#, fuzzy
+msgid "More Information..."
 msgstr "情報..."
 
-#: ../src/main.c:395
+#: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>検索:</b>"
 
-#: ../src/main.c:402
-msgid "Show categories"
+#: ../src/main.c:466
+#, fuzzy
+msgid "Show Categories"
 msgstr "分類を表示"
 
-#: ../src/xfce4-appfinder.c:110
+#: ../src/xfce4-appfinder.c:114
 msgid "All"
 msgstr "すべて"
 
-#: ../src/xfce4-appfinder.c:111
+#: ../src/xfce4-appfinder.c:115
 msgid "Core"
 msgstr "コア"
 
-#: ../src/xfce4-appfinder.c:112
+#: ../src/xfce4-appfinder.c:116
 msgid "Development"
 msgstr "開発"
 
-#: ../src/xfce4-appfinder.c:113
+#: ../src/xfce4-appfinder.c:117
 msgid "Office"
 msgstr "オフィス"
 
-#: ../src/xfce4-appfinder.c:114
+#: ../src/xfce4-appfinder.c:118
 msgid "Graphics"
 msgstr "グラフィックス"
 
-#: ../src/xfce4-appfinder.c:115
+#: ../src/xfce4-appfinder.c:119
 msgid "Network"
 msgstr "ネットワーク"
 
-#: ../src/xfce4-appfinder.c:116
+#: ../src/xfce4-appfinder.c:120
 msgid "AudioVideo"
 msgstr "音楽・映像"
 
-#: ../src/xfce4-appfinder.c:117
+#: ../src/xfce4-appfinder.c:121
 msgid "Game"
 msgstr "ゲーム"
 
-#: ../src/xfce4-appfinder.c:118
+#: ../src/xfce4-appfinder.c:122
 msgid "Education"
 msgstr "教育"
 
-#: ../src/xfce4-appfinder.c:119
+#: ../src/xfce4-appfinder.c:123
 msgid "System"
 msgstr "システム"
 
-#: ../src/xfce4-appfinder.c:120
+#: ../src/xfce4-appfinder.c:124
 msgid "Filemanager"
 msgstr "ファイルマネージャ"
 
-#: ../src/xfce4-appfinder.c:121
+#: ../src/xfce4-appfinder.c:125
 msgid "Utility"
 msgstr "ユーティリティ"
 
-#: ../src/xfce4-appfinder.c:265
+#: ../src/xfce4-appfinder.c:269
 msgid "Categories"
 msgstr "分類"
 
-#: ../src/xfce4-appfinder.c:562
+#: ../src/xfce4-appfinder.c:561
 msgid "No items available"
 msgstr "利用できるアイテムはありません"
 
-#: ../src/xfce4-appfinder.c:599
+#: ../src/xfce4-appfinder.c:601
 msgid "Sorry, no match for searched text."
 msgstr "検索したテキストに該当するものはありません。"
 
@@ -147,6 +135,19 @@ msgstr "アプリファインダー"
 msgid "Application Finder for Xfce 4"
 msgstr "Xfce 4 のアプリケーション・ファインダーです"
 
-#: ../src/xfce4-appfinder.desktop.in.h:3
-msgid "Xfce 4 Appfinder"
-msgstr "Xfce 4 アプリファインダー"
+# FIXME: C
+#~ msgid "Now starting"
+#~ msgstr "起動しています"
+
+#~ msgid "Appfinder InfoBox"
+#~ msgstr "アプリファインダー 情報ボックス"
+
+# FIXME: C
+#~ msgid "Informations about \""
+#~ msgstr "次に関する情報 \""
+
+#~ msgid "Icon"
+#~ msgstr "アイコン"
+
+#~ msgid "Comment"
+#~ msgstr "コメント"

@@ -36,6 +36,8 @@
 #include "xfce4-appfinder.h"
 #include "inline-icon.h"
 
+#define BORDER  8
+
 void    callbackExecuteApplication      (GtkWidget         *widget,
                                          gchar             *path,
                                          gpointer           data);
@@ -149,7 +151,7 @@ callbackExecuteApplication (GtkWidget *widget, gchar *path, gpointer data)
                 }
             }
             
-            g_printf(g_strconcat(_("Now starting"), " \"", exec, "\"...\n", NULL));
+            DBG ("Now starting \"%s\"",  exec);
             g_spawn_command_line_async (exec, NULL);
             
             g_free(exec);
@@ -163,15 +165,26 @@ callbackExecuteApplication (GtkWidget *widget, gchar *path, gpointer data)
 }
 
 void
-callbackRunMenuActivate (GtkMenuItem *menuitem, gpointer path)
+callbackRunMenuActivate (GtkMenuItem *menuitem, gpointer menu)
 {
+    gchar *path = g_object_get_data (G_OBJECT (menu), "path");
+    
     callbackExecuteApplication (NULL, path, NULL);
+
+    g_free (path);
 }
 
 void
-callbackInformationMenuActivate (GtkMenuItem *menuitem, gpointer path)
+callbackInformationMenuActivate (GtkMenuItem *menuitem, gpointer menu)
 {
-    AfDialog *dlg;
+    GtkWidget *dialog;
+    GtkWidget *header;
+    GtkWidget *vbox;
+    GtkWidget *hbox;
+    GtkWidget *frame;
+    GtkWidget *img;
+    GtkWidget *table;
+    GtkWidget *label;
     GdkPixbuf *icon;
     GdkPixbuf *icon2;
     gchar *iconpath = NULL;
@@ -179,37 +192,43 @@ callbackInformationMenuActivate (GtkMenuItem *menuitem, gpointer path)
     gchar *cats = NULL;
     gchar *name = NULL;
     gchar *exec = NULL;
+    gchar *path;
     gchar **catsarray = NULL;
     XfceDesktopEntry *dentry;
 
+    path = g_object_get_data (G_OBJECT (menu), "path");
+    
+    DBG ("Information about: %s", (char *)path);
+    
     if (path && XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (path, keys, 7)))
     {
-        dlg = g_new (AfDialog, 1);
-        dlg->dialog = gtk_dialog_new ();
-        gtk_window_set_modal (GTK_WINDOW (dlg->dialog), TRUE);
-        gtk_window_set_title (GTK_WINDOW (dlg->dialog), _("Appfinder InfoBox"));
-        gtk_dialog_set_has_separator (GTK_DIALOG (dlg->dialog), FALSE);
-        icon = xfce_inline_icon_at_size (default_icon_data_48_48, 32, 32);
-        gtk_window_set_icon (GTK_WINDOW (dlg->dialog), icon);
+        dialog = gtk_dialog_new_with_buttons (_("Xfce 4 Appfinder"), NULL, 
+                                              GTK_DIALOG_NO_SEPARATOR,
+                                              GTK_STOCK_CLOSE, GTK_RESPONSE_OK,
+                                              NULL);
 
-        dlg->vbox = GTK_DIALOG (dlg->dialog)->vbox;
+        icon = xfce_inline_icon_at_size (default_icon_data_48_48, 32, 32);
+        gtk_window_set_icon (GTK_WINDOW (dialog), icon);
+
+        vbox = GTK_DIALOG (dialog)->vbox;
+        gtk_container_set_border_width (GTK_CONTAINER (vbox), 2);
+
         xfce_desktop_entry_get_string (dentry, "Name", TRUE, &name);
-        dlg->header = xfce_create_header (icon, g_strconcat(_("Informations about \""), name, "\"", NULL));
-        gtk_widget_show (dlg->header);
-        gtk_box_pack_start (GTK_BOX (dlg->vbox), dlg->header, FALSE, TRUE, 0);
+        header = xfce_create_header (icon, name);
+        gtk_container_set_border_width (GTK_CONTAINER (header), BORDER - 2);
+        gtk_widget_show (header);
+        gtk_box_pack_start (GTK_BOX (vbox), header, FALSE, TRUE, 0);
         g_object_unref(icon);
 
-        dlg->hbox = gtk_hbox_new(FALSE, 0);
-        gtk_widget_show(dlg->hbox);
-        gtk_box_pack_start (GTK_BOX (dlg->vbox), dlg->hbox, TRUE, TRUE, 10);
+        hbox = gtk_hbox_new(FALSE, BORDER);
+        gtk_container_set_border_width (GTK_CONTAINER (hbox), BORDER - 2);
+        gtk_widget_show(hbox);
+        gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, 0);
 
-        dlg->vboxl = gtk_vbox_new(FALSE, 0);
-        gtk_widget_show(dlg->vboxl);
-        gtk_box_pack_start (GTK_BOX (dlg->hbox), dlg->vboxl, TRUE, TRUE, 10);
-
-        dlg->frame = gtk_aspect_frame_new (_("Icon"), 0.5, 0.5, 1.8, TRUE);
-        gtk_widget_show(dlg->frame);
-        gtk_box_pack_start (GTK_BOX (dlg->hbox), dlg->frame, FALSE, TRUE, 10);
+        frame = gtk_frame_new (NULL);
+        gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_NONE);
+        gtk_widget_show(frame);
+        gtk_box_pack_start (GTK_BOX (hbox), frame, FALSE, FALSE, 0);
 
         xfce_desktop_entry_get_string (dentry, "Icon", TRUE, &iconpath);
         
@@ -231,79 +250,129 @@ callbackInformationMenuActivate (GtkMenuItem *menuitem, gpointer path)
             icon = xfce_inline_icon_at_size (default_icon_data_48_48, 48, 48);
         }
 
-        dlg->img = gtk_image_new_from_pixbuf (icon);
-        gtk_widget_show(dlg->img);
-        gtk_container_add (GTK_CONTAINER (dlg->frame), dlg->img);
+        img = gtk_image_new_from_pixbuf (icon);
+        gtk_misc_set_padding (GTK_MISC (img), 4, 4);
+        gtk_widget_show(img);
+        gtk_container_add (GTK_CONTAINER (frame), img);
 
-        dlg->name = gtk_label_new(NULL);
-        gtk_label_set_markup (GTK_LABEL(dlg->name), g_strconcat(_("<b>Name:</b> "), name, NULL));
-        gtk_misc_set_alignment (GTK_MISC(dlg->name), 0, 0);
-        gtk_widget_show(dlg->name);
-        gtk_box_pack_start (GTK_BOX (dlg->vboxl), dlg->name, FALSE, FALSE, 0);
+        /* table */
+        table = gtk_table_new (4, 2, FALSE);
+        gtk_table_set_row_spacings (GTK_TABLE (table), BORDER / 2);
+        gtk_table_set_col_spacings (GTK_TABLE (table), BORDER);
+        gtk_widget_show (table);
+        gtk_box_pack_start (GTK_BOX (hbox), table, TRUE, TRUE, 0);
 
-        xfce_desktop_entry_get_string (dentry, _("Comment"), TRUE, &comment);
+        /* name */
+        label = gtk_label_new(NULL);
+        gtk_misc_set_alignment (GTK_MISC(label), 0, 0);
+        gtk_widget_show(label);
+        gtk_table_attach_defaults (GTK_TABLE (table), label,
+                                   0, 1, 0, 1);
+        
+        gtk_label_set_markup (GTK_LABEL(label), _("<b>Name</b>"));
+
+        label = gtk_label_new(NULL);
+        gtk_misc_set_alignment (GTK_MISC(label), 0, 0);
+        gtk_widget_show(label);
+        gtk_table_attach_defaults (GTK_TABLE (table), label,
+                                   1, 2, 0, 1);
+
+        gtk_label_set_markup (GTK_LABEL(label), name);
+        
+
+        /* comment */
+        xfce_desktop_entry_get_string (dentry, "Comment", TRUE, &comment);
         if (!comment)
         {
-            comment = _("N/A");
+            comment = g_strdup (_("N/A"));
         }
-        
-        dlg->comment = gtk_label_new(NULL);
-        gtk_label_set_line_wrap (GTK_LABEL(dlg->comment), TRUE);
-        gtk_label_set_markup (GTK_LABEL(dlg->comment), g_strconcat(_("<b>Comment:</b> "), comment, NULL));
-        g_free(comment);
-        gtk_misc_set_alignment (GTK_MISC(dlg->comment), 0, 0);
-        gtk_widget_show(dlg->comment);
-        gtk_box_pack_start (GTK_BOX (dlg->vboxl), dlg->comment, FALSE, FALSE, 0);
 
+        label = gtk_label_new(NULL);
+        gtk_misc_set_alignment (GTK_MISC(label), 0, 0);
+        gtk_widget_show(label);
+        gtk_table_attach_defaults (GTK_TABLE (table), label,
+                                   0, 1, 1, 2);
+        
+        gtk_label_set_markup (GTK_LABEL(label), _("<b>Comment</b>"));
+
+        label = gtk_label_new(NULL);
+        gtk_misc_set_alignment (GTK_MISC(label), 0, 0);
+        gtk_widget_show(label);
+        gtk_table_attach_defaults (GTK_TABLE (table), label,
+                                   1, 2, 1, 2);
+
+        gtk_label_set_markup (GTK_LABEL(label), comment);
+        
+        g_free (comment);
+
+        /* categories */
         xfce_desktop_entry_get_string (dentry, "Categories", TRUE, &cats);
         if (!cats)
         {
-            cats = _("N/A");
+            cats = g_strdup (_("N/A"));
         }
         else
         {
             catsarray = g_strsplit (cats, ";", 0);
+            g_free (cats);
             cats = g_strchomp (g_strjoinv (", ", catsarray));
             cats[strlen(cats)-1] = '\0';
             g_strfreev (catsarray);
         }
 
-        dlg->cats = gtk_label_new(NULL);
-        gtk_label_set_markup (GTK_LABEL(dlg->cats), g_strconcat(_("<b>Categories:</b> "), cats, NULL));
-        g_free(cats);
-        gtk_misc_set_alignment (GTK_MISC(dlg->cats), 0, 0);
-        gtk_widget_show(dlg->cats);
-        gtk_box_pack_start (GTK_BOX (dlg->vboxl), dlg->cats, FALSE, FALSE, 0);
+        label = gtk_label_new(NULL);
+        gtk_misc_set_alignment (GTK_MISC(label), 0, 0);
+        gtk_widget_show(label);
+        gtk_table_attach_defaults (GTK_TABLE (table), label,
+                                   0, 1, 2, 3);
+        
+        gtk_label_set_markup (GTK_LABEL(label), _("<b>Categories</b>"));
 
+        label = gtk_label_new(NULL);
+        gtk_misc_set_alignment (GTK_MISC(label), 0, 0);
+        gtk_widget_show(label);
+        gtk_table_attach_defaults (GTK_TABLE (table), label,
+                                   1, 2, 2, 3);
+
+        gtk_label_set_markup (GTK_LABEL(label), cats);
+        
+        g_free (cats);
+
+        /* exec */
         xfce_desktop_entry_get_string (dentry, "Exec", TRUE, &exec);
         if (!exec)
         {
-            exec = _("N/A");
+            exec = g_strdup (_("N/A"));
         }
-        dlg->exec = gtk_label_new(NULL);
-        gtk_label_set_markup (GTK_LABEL(dlg->exec), g_strconcat(_("<b>Command:</b> "), exec, NULL));
-        gtk_misc_set_alignment (GTK_MISC(dlg->exec), 0, 0);
-        g_free(exec);
-        gtk_widget_show(dlg->exec);
-        gtk_box_pack_start (GTK_BOX (dlg->vboxl), dlg->exec, FALSE, FALSE, 0);
 
-        dlg->separator = gtk_hseparator_new();
-        gtk_widget_show(dlg->separator);
-        gtk_box_pack_start (GTK_BOX (dlg->vbox), dlg->separator, FALSE, TRUE, 0);
+        label = gtk_label_new(NULL);
+        gtk_misc_set_alignment (GTK_MISC(label), 0, 0);
+        gtk_widget_show(label);
+        gtk_table_attach_defaults (GTK_TABLE (table), label,
+                                   0, 1, 3, 4);
+        
+        gtk_label_set_markup (GTK_LABEL(label), _("<b>Command</b>"));
 
-        dlg->btnClose = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
-        gtk_dialog_add_action_widget (GTK_DIALOG (dlg->dialog), dlg->btnClose, GTK_RESPONSE_CLOSE);
-        GTK_WIDGET_SET_FLAGS (dlg->btnClose, GTK_CAN_DEFAULT);
-        gtk_widget_show(dlg->btnClose);
+        label = gtk_label_new(NULL);
+        gtk_misc_set_alignment (GTK_MISC(label), 0, 0);
+        gtk_widget_show(label);
+        gtk_table_attach_defaults (GTK_TABLE (table), label,
+                                   1, 2, 3, 4);
 
-        g_signal_connect_swapped (GTK_OBJECT (dlg->dialog), "response",
-                                G_CALLBACK (gtk_widget_destroy), GTK_OBJECT (dlg->dialog));
+        gtk_label_set_markup (GTK_LABEL(label), exec);
+        
+        g_free (exec);
+
+        g_signal_connect_swapped (GTK_OBJECT (dialog), "response",
+                                  G_CALLBACK (gtk_widget_destroy), GTK_OBJECT (dialog));
                                 
-        gtk_widget_grab_focus (dlg->btnClose);
-        gtk_widget_show(dlg->dialog);
+        gtk_widget_show(dialog);
         g_free(name);
+
+        g_object_unref (dentry);
     }
 
+    g_free (path);
 }
 
 void
@@ -312,40 +381,35 @@ callbackRightClickMenu (GtkWidget *widget, gchar *path, gpointer data)
     GtkWidget    *menu;
     GtkWidget    *menuitem;
     GtkWidget    *icon;
-               
-    menu = gtk_menu_new();
-    menuitem = gtk_image_menu_item_new_with_label ("Xfce4 Appfinder");
-    gtk_widget_show (menuitem);
-    gtk_widget_set_sensitive (menuitem, FALSE);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 
-    menuitem = gtk_separator_menu_item_new ();
-    gtk_widget_show (menuitem);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
+    DBG ("Open menu for: %s", path);
+
+    menu = gtk_menu_new();
 
     menuitem = gtk_image_menu_item_new_with_label (_("Run program"));
     icon = gtk_image_new_from_stock (GTK_STOCK_EXECUTE, GTK_ICON_SIZE_MENU);
     gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM(menuitem), icon);
-    g_signal_connect (G_OBJECT(menuitem), "activate", G_CALLBACK(callbackRunMenuActivate), (gpointer) g_strdup(path));
+    g_signal_connect (G_OBJECT(menuitem), "activate", G_CALLBACK(callbackRunMenuActivate), menu);
     gtk_widget_show (icon);
     gtk_widget_show (menuitem);
     gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 
-    menuitem = gtk_image_menu_item_new_with_label (_("Informations..."));
+    menuitem = gtk_image_menu_item_new_with_label (_("More Information..."));
     icon = gtk_image_new_from_stock (GTK_STOCK_DIALOG_INFO, GTK_ICON_SIZE_MENU);
     gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM(menuitem), icon);
-    g_signal_connect (G_OBJECT(menuitem), "activate", G_CALLBACK(callbackInformationMenuActivate), (gpointer) g_strdup(path));
+    g_signal_connect (G_OBJECT(menuitem), "activate", G_CALLBACK(callbackInformationMenuActivate), menu);
     gtk_widget_show (icon);
     gtk_widget_show (menuitem);
     gtk_menu_shell_append (GTK_MENU_SHELL (menu), menuitem);
 
+    g_object_set_data (G_OBJECT (menu), "path", g_strdup (path));
     gtk_menu_popup (GTK_MENU(menu), NULL, NULL, NULL, NULL, 0, gtk_get_current_event_time());
 }
 
 void
 callbackSearchApplication (GtkEntry *entry, gpointer appfinder)
 {
-    xfce_appfinder_search(XFCE_APPFINDER(appfinder), g_strdup(gtk_entry_get_text(entry)));
+    xfce_appfinder_search(XFCE_APPFINDER(appfinder), gtk_entry_get_text(entry));
 }
 
 void
@@ -399,7 +463,7 @@ main (gint argc, gchar **argv)
     g_signal_connect(searchEntry, "activate", G_CALLBACK(callbackSearchApplication), (gpointer) af);
     gtk_box_pack_start(GTK_BOX(searchBox), searchEntry, TRUE, TRUE, 0);        
 
-    categoriesCheck = gtk_check_button_new_with_label ("Show categories");
+    categoriesCheck = gtk_check_button_new_with_label (_("Show Categories"));
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (categoriesCheck), TRUE);
     g_signal_connect (G_OBJECT(categoriesCheck), "toggled", G_CALLBACK (callbackCategoriesCheck), (gpointer) af);
     gtk_box_pack_start(GTK_BOX(searchBox), categoriesCheck, FALSE, TRUE, 0);        

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-02 10:57+0100\n"
+"POT-Creation-Date: 2005-10-14 16:55+0200\n"
 "PO-Revision-Date: 2005-01-08 11:05+0500\n"
 "Last-Translator: Anthony Ivanoff <a-i@bk.ru>\n"
 "Language-Team: Russian\n"
@@ -16,71 +16,126 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10\n"
 
-#: src/main.c:99 src/main.c:105
-msgid "Now starting"
-msgstr "Запуск"
+#: ../src/main.c:163
+msgid "Cannot execute the selected application"
+msgstr ""
 
-#: src/main.c:113
-msgid "Cannot execute"
-msgstr "Ошибка запуска"
+#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr ""
 
-#: src/main.c:149
+#: ../src/main.c:272
+#, fuzzy
+msgid "<b>Name</b>"
+msgstr "<b>Найти:</b>"
+
+#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+msgid "N/A"
+msgstr ""
+
+#: ../src/main.c:296
+msgid "<b>Comment</b>"
+msgstr ""
+
+#: ../src/main.c:329
+#, fuzzy
+msgid "<b>Categories</b>"
+msgstr "Категории"
+
+#: ../src/main.c:354
+msgid "<b>Command</b>"
+msgstr ""
+
+#: ../src/main.c:389
+msgid "Run program"
+msgstr ""
+
+#: ../src/main.c:397
+msgid "More Information..."
+msgstr ""
+
+#: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>Найти:</b>"
 
-#: src/main.c:206
-msgid "Categories"
+#: ../src/main.c:466
+#, fuzzy
+msgid "Show Categories"
 msgstr "Категории"
 
-#: src/af-constants.h:54
+#: ../src/xfce4-appfinder.c:114
 msgid "All"
 msgstr "Все"
 
-#: src/af-constants.h:55
-msgid "Recently Used"
-msgstr "Недавно использованные"
-
-#: src/af-constants.h:56
+#: ../src/xfce4-appfinder.c:115
 msgid "Core"
 msgstr "Основные"
 
-#: src/af-constants.h:57
+#: ../src/xfce4-appfinder.c:116
 msgid "Development"
 msgstr "Разработка"
 
-#: src/af-constants.h:58
+#: ../src/xfce4-appfinder.c:117
 msgid "Office"
 msgstr "Офис"
 
-#: src/af-constants.h:59
+#: ../src/xfce4-appfinder.c:118
 msgid "Graphics"
 msgstr "Графика"
 
-#: src/af-constants.h:60
+#: ../src/xfce4-appfinder.c:119
 msgid "Network"
 msgstr "Сеть"
 
-#: src/af-constants.h:61
+#: ../src/xfce4-appfinder.c:120
 msgid "AudioVideo"
 msgstr "Аудио/Видео"
 
-#: src/af-constants.h:62
+#: ../src/xfce4-appfinder.c:121
 msgid "Game"
 msgstr "Игры"
 
-#: src/af-constants.h:63
+#: ../src/xfce4-appfinder.c:122
 msgid "Education"
 msgstr "Образование"
 
-#: src/af-constants.h:64
+#: ../src/xfce4-appfinder.c:123
 msgid "System"
 msgstr "Система"
 
-#: src/af-constants.h:65
+#: ../src/xfce4-appfinder.c:124
 msgid "Filemanager"
 msgstr "Файловые менеджеры"
 
-#: src/af-constants.h:66
+#: ../src/xfce4-appfinder.c:125
 msgid "Utility"
 msgstr "Утилиты"
 
+#: ../src/xfce4-appfinder.c:269
+msgid "Categories"
+msgstr "Категории"
+
+#: ../src/xfce4-appfinder.c:561
+msgid "No items available"
+msgstr ""
+
+#: ../src/xfce4-appfinder.c:601
+msgid "Sorry, no match for searched text."
+msgstr ""
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr "Поиск программ"
+
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr "Список установленных приложений"
+
+#~ msgid "Now starting"
+#~ msgstr "Запуск"
+
+#~ msgid "Cannot execute"
+#~ msgstr "Ошибка запуска"
+
+#~ msgid "Recently Used"
+#~ msgstr "Недавно использованные"

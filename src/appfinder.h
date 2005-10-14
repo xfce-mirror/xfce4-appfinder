@@ -36,25 +36,6 @@ enum
 };
 
 
-typedef struct _afdialog AfDialog;
-struct _afdialog
-{
-    GtkWidget *dialog;
-    GtkWidget *frame;
-    GtkWidget *vbox;
-    GtkWidget *vboxl;
-    GtkWidget *header;
-    GtkWidget *hbox;
-    GtkWidget *img;
-    GtkWidget *name;
-    GtkWidget *comment;
-    GtkWidget *cats;
-    GtkWidget *exec;
-    GtkWidget *bbox;
-    GtkWidget *btnClose;
-    GtkWidget *separator;
-};
-
 int showedcat;
 int npaths;
 const char *configfile;

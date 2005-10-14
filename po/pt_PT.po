@@ -9,79 +9,134 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce-appfinder 4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-02 10:35+0200\n"
+"POT-Creation-Date: 2005-10-14 16:55+0200\n"
 "PO-Revision-Date: 2004-10-09 21:28+0100\n"
 "Last-Translator: Nuno Donato <nunodonato@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:98 src/main.c:104
-msgid "Now starting"
-msgstr "A iniciar"
+#: ../src/main.c:163
+msgid "Cannot execute the selected application"
+msgstr ""
 
-#: src/main.c:112
-msgid "Cannot execute"
-msgstr "Não foi possível executar"
+#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr ""
 
-#: src/main.c:148
+#: ../src/main.c:272
+#, fuzzy
+msgid "<b>Name</b>"
+msgstr "<b>Procurar:</b>"
+
+#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+msgid "N/A"
+msgstr ""
+
+#: ../src/main.c:296
+msgid "<b>Comment</b>"
+msgstr ""
+
+#: ../src/main.c:329
+#, fuzzy
+msgid "<b>Categories</b>"
+msgstr "Categorias"
+
+#: ../src/main.c:354
+msgid "<b>Command</b>"
+msgstr ""
+
+#: ../src/main.c:389
+msgid "Run program"
+msgstr ""
+
+#: ../src/main.c:397
+msgid "More Information..."
+msgstr ""
+
+#: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>Procurar:</b>"
 
-#: src/main.c:205
-msgid "Categories"
+#: ../src/main.c:466
+#, fuzzy
+msgid "Show Categories"
 msgstr "Categorias"
 
-#: src/af-constants.h:69
+#: ../src/xfce4-appfinder.c:114
 msgid "All"
 msgstr "Tudo"
 
-#: src/af-constants.h:70
-msgid "Recently Used"
-msgstr "Recentemente Usadas"
-
-#: src/af-constants.h:71
+#: ../src/xfce4-appfinder.c:115
 msgid "Core"
 msgstr "Núcleo"
 
-#: src/af-constants.h:72
+#: ../src/xfce4-appfinder.c:116
 msgid "Development"
 msgstr "Desenvolvimento"
 
-#: src/af-constants.h:73
+#: ../src/xfce4-appfinder.c:117
 msgid "Office"
 msgstr "Escritório"
 
-#: src/af-constants.h:74
+#: ../src/xfce4-appfinder.c:118
 msgid "Graphics"
 msgstr "Gráficos"
 
-#: src/af-constants.h:75
+#: ../src/xfce4-appfinder.c:119
 msgid "Network"
 msgstr "Rede"
 
-#: src/af-constants.h:76
+#: ../src/xfce4-appfinder.c:120
 msgid "AudioVideo"
 msgstr "Aúdio/Video"
 
-#: src/af-constants.h:77
+#: ../src/xfce4-appfinder.c:121
 msgid "Game"
 msgstr "Jogos"
 
-#: src/af-constants.h:78
+#: ../src/xfce4-appfinder.c:122
 msgid "Education"
 msgstr "Educação"
 
-#: src/af-constants.h:79
+#: ../src/xfce4-appfinder.c:123
 msgid "System"
 msgstr "Sistema"
 
-#: src/af-constants.h:80
+#: ../src/xfce4-appfinder.c:124
 msgid "Filemanager"
 msgstr "Gestor de Ficheiros"
 
-#: src/af-constants.h:81
+#: ../src/xfce4-appfinder.c:125
 msgid "Utility"
 msgstr "Utilitários"
 
+#: ../src/xfce4-appfinder.c:269
+msgid "Categories"
+msgstr "Categorias"
+
+#: ../src/xfce4-appfinder.c:561
+msgid "No items available"
+msgstr ""
+
+#: ../src/xfce4-appfinder.c:601
+msgid "Sorry, no match for searched text."
+msgstr ""
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr ""
+
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr ""
+
+#~ msgid "Now starting"
+#~ msgstr "A iniciar"
+
+#~ msgid "Cannot execute"
+#~ msgstr "Não foi possível executar"
+
+#~ msgid "Recently Used"
+#~ msgstr "Recentemente Usadas"

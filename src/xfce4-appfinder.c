@@ -19,6 +19,10 @@
  *  This application is dedicated to DarkAngel (ILY!).
  */
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include <gtk/gtk.h>
 #include <libxfce4util/libxfce4util.h>
 #include <libxfcegui4/libxfcegui4.h>
@@ -42,49 +46,49 @@ struct _XfceAppfinderListParam
     GPatternSpec         *pcat;
 };
 
-static void    xfce_appfinder_class_init      (XfceAppfinderClass     *klass);
+static void           xfce_appfinder_class_init      (XfceAppfinderClass     *klass);
 
-static void    xfce_appfinder_init            (XfceAppfinder          *appfinder);
+static void           xfce_appfinder_init            (XfceAppfinder          *appfinder);
 
-GtkWidget*     create_categories_treeview     (void);
+static GtkWidget*     create_categories_treeview     (void);
 
-GtkWidget*     create_applications_treeview   (XfceAppfinder          *appfinder);
+static GtkWidget*     create_applications_treeview   (XfceAppfinder          *appfinder);
 
-GtkListStore*  load_desktop_resources         (gint                    category, 
-                                               gchar                  *pattern,
-                                               XfceAppfinder          *appfinder);
+static GtkListStore*  load_desktop_resources         (gint                    category, 
+                                                      gchar                  *pattern,
+                                                      XfceAppfinder          *appfinder);
 
                                                
-void           xfce_appfinder_list_add        (gchar                   *name,
-                                               XfceAppfinderCacheEntry *entry,
-                                               XfceAppfinderListParam  *param);
+static void           xfce_appfinder_list_add        (gchar                   *name,
+                                                      XfceAppfinderCacheEntry *entry,
+                                                      XfceAppfinderListParam  *param);
                                                
-static void    build_desktop_paths            (void);
+static void           build_desktop_paths            (void);
 
-gchar *        get_path_from_name             (gchar                  *name,
-                                               XfceAppfinder          *appfinder);
+static gchar *        get_path_from_name             (gchar                  *name,
+                                                      XfceAppfinder          *appfinder);
 
-void           callbackApplicationActivate    (GtkTreeView            *treeview,
-                                               GtkTreePath            *path,
-                                               GtkTreeViewColumn      *col,
-                                               gpointer                appfinder);
+static void           callbackApplicationActivate    (GtkTreeView            *treeview,
+                                                      GtkTreePath            *path,
+                                                      GtkTreeViewColumn      *col,
+                                                      gpointer                appfinder);
                                                
-gboolean       callbackCategoryTreeClick      (GtkTreeSelection       *selection,
-                                               GtkTreeModel           *model,
-                                               GtkTreePath            *path,
-                                               gboolean                path_currently_selected,
-                                               gpointer                userdata);
+static gboolean       callbackCategoryTreeClick      (GtkTreeSelection       *selection,
+                                                      GtkTreeModel           *model,
+                                                      GtkTreePath            *path,
+                                                      gboolean                path_currently_selected,
+                                                      gpointer                userdata);
 
-gboolean       callbackApplicationRightClick  (GtkWidget              *treeview,
-                                               GdkEventButton         *event,
-                                               gpointer                appfinder);
+static gboolean       callbackApplicationRightClick  (GtkWidget              *treeview,
+                                                      GdkEventButton         *event,
+                                                      gpointer                appfinder);
 
-gint           sort_compare_func              (GtkTreeModel           *model,
-                                               GtkTreeIter            *a,
-                                               GtkTreeIter            *b,
-                                               gpointer                userdata);
+static gint           sort_compare_func              (GtkTreeModel           *model,
+                                                      GtkTreeIter            *a,
+                                                      GtkTreeIter            *b,
+                                                      gpointer                userdata);
                                                
-GHashTable *   createDesktopCache             ();
+static GHashTable *   createDesktopCache             ();
                                                
                                                                                               
 static gint           xfce_appfinder_signals[LAST_SIGNAL] = { 0 };
@@ -107,18 +111,18 @@ static const char *dotDesktopKeys [] =
 
 static const char *dotDesktopCategories [] =
 {
-    "All",
-    "Core",
-    "Development",
-    "Office",
-    "Graphics",
-    "Network",
-    "AudioVideo",
-    "Game",
-    "Education",
-    "System",
-    "Filemanager",
-    "Utility",
+    N_("All"),
+    N_("Core"),
+    N_("Development"),
+    N_("Office"),
+    N_("Graphics"),
+    N_("Network"),
+    N_("AudioVideo"),
+    N_("Game"),
+    N_("Education"),
+    N_("System"),
+    N_("Filemanager"),
+    N_("Utility"),
     NULL
 };
 
@@ -177,12 +181,12 @@ xfce_appfinder_class_init (XfceAppfinderClass *class)
                                                                 1,
                                                                 G_TYPE_POINTER);
     class->xfce_appfinder = NULL;                        
+    build_desktop_paths ();
 }
 
 static void
 xfce_appfinder_init (XfceAppfinder *appfinder)
 {
-    build_desktop_paths ();
     appfinder->cache = createDesktopCache();
     
     appfinder->hpaned = GTK_WIDGET(gtk_hpaned_new ());
@@ -206,7 +210,7 @@ xfce_appfinder_init (XfceAppfinder *appfinder)
     gtk_widget_show_all(GTK_WIDGET(appfinder));
 }
 
-void
+static void
 callbackApplicationActivate (GtkTreeView        *treeview,
                              GtkTreePath        *path,
                              GtkTreeViewColumn  *col,
@@ -241,7 +245,7 @@ xfce_appfinder_new ()
     return GTK_WIDGET (g_object_new(xfce_appfinder_get_type(), NULL));
 }
 
-GtkWidget*
+static GtkWidget*
 create_categories_treeview (void)
 {
     GtkTreeViewColumn *col;
@@ -275,10 +279,9 @@ create_categories_treeview (void)
     return view;
 }
 
-gint
+static gint
 sort_compare_func (GtkTreeModel *model, GtkTreeIter  *a, GtkTreeIter  *b, gpointer userdata)
 {
-    gint sortcol = GPOINTER_TO_INT(userdata);
     gint ret = 0;
     gchar *name1, *name2;
 
@@ -303,7 +306,7 @@ sort_compare_func (GtkTreeModel *model, GtkTreeIter  *a, GtkTreeIter  *b, gpoint
     return ret;
 }
 
-GtkWidget*
+static GtkWidget*
 create_applications_treeview (XfceAppfinder *appfinder)
 {
     GtkTreeViewColumn *col;
@@ -341,7 +344,7 @@ create_applications_treeview (XfceAppfinder *appfinder)
     return view;
 }
 
-void
+static void
 xfce_appfinder_list_add (gchar *name, XfceAppfinderCacheEntry *entry, XfceAppfinderListParam *param)
 {
     GtkTreeIter     iter;
@@ -378,7 +381,7 @@ xfce_appfinder_list_add (gchar *name, XfceAppfinderCacheEntry *entry, XfceAppfin
  * @param pattern - the pattern of the text to search for (set to NULL if any text is ok)
  * @returns GtkListStore * - a pointer to a new list store with the items
  */
-GtkListStore*
+static GtkListStore*
 load_desktop_resources (gint category, gchar *pattern, XfceAppfinder *appfinder)
 {
     XfceAppfinderListParam      *param     = NULL;
@@ -449,7 +452,7 @@ build_desktop_paths (void)
     desktop_entries_paths = g_new0 (gchar *, 2 * napplications + napps + napplnk + 6);
     i = 0;
     
-    desktop_entries_paths[i++] = xfce_get_homefile (".kde", "share", "apps", NULL);
+    desktop_entries_paths[i++] = xfce_get_homefile (".gnome", "share", "apps", NULL);
     desktop_entries_paths[i++] = xfce_get_homefile (".kde", "share", "applnk", NULL);
     if ((kdedir = g_getenv("KDEDIR")) != NULL)
     {
@@ -481,16 +484,10 @@ build_desktop_paths (void)
     }
     g_free (applnk);
     
-    g_print ("\nPATHS:\n");
-    for (n = 0; desktop_entries_paths[n] != NULL; ++n)
-    {
-        g_print ("  %s\n", desktop_entries_paths[n]);
-    }
     desktop_path_number = n;
-    g_print ("\n\n");
 }
 
-gchar *get_path_from_name(gchar *name, XfceAppfinder *appfinder)
+static gchar *get_path_from_name(gchar *name, XfceAppfinder *appfinder)
 {
     XfceAppfinderCacheEntry *entry;
 
@@ -506,7 +503,7 @@ gchar *get_path_from_name(gchar *name, XfceAppfinder *appfinder)
     return NULL;
 }
 
-gboolean
+static gboolean
 callbackCategoryTreeClick  (GtkTreeSelection *selection,
                             GtkTreeModel     *model,
                             GtkTreePath      *path,
@@ -543,7 +540,9 @@ callbackCategoryTreeClick  (GtkTreeSelection *selection,
         GtkListStore      *liststore;
         
         showedcat = next;
-        gtk_list_store_clear (GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appsTree))));
+        liststore = GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appsTree)));
+        gtk_list_store_clear (liststore);
+        g_object_unref (liststore);
 
         liststore = load_desktop_resources(showedcat, NULL, af);
         sortable = GTK_TREE_SORTABLE(liststore);
@@ -572,7 +571,7 @@ callbackCategoryTreeClick  (GtkTreeSelection *selection,
 }
 
 void
-xfce_appfinder_search (XfceAppfinder *appfinder, gchar *pattern)
+xfce_appfinder_search (XfceAppfinder *appfinder, const gchar *pattern)
 {
     GtkTreeSortable   *sortable;
     GtkListStore      *liststore;    
@@ -580,7 +579,10 @@ xfce_appfinder_search (XfceAppfinder *appfinder, gchar *pattern)
     gchar *text = g_utf8_strdown(pattern, -1);
     showedcat = APPFINDER_ALL;
     
-    gtk_list_store_clear (GTK_LIST_STORE(gtk_tree_view_get_model(GTK_TREE_VIEW(appfinder->appsTree))));
+    liststore = GTK_LIST_STORE(gtk_tree_view_get_model(GTK_TREE_VIEW(appfinder->appsTree)));
+    gtk_list_store_clear (liststore);
+    g_object_unref (liststore);
+
     liststore = load_desktop_resources(APPFINDER_ALL, text, appfinder);
     sortable = GTK_TREE_SORTABLE(liststore);
 
@@ -616,8 +618,16 @@ xfce_appfinder_search (XfceAppfinder *appfinder, gchar *pattern)
 void
 xfce_appfinder_clean (XfceAppfinder  *appfinder)
 {
+    GtkListStore *liststore;
+    
     showedcat = APPFINDER_ALL;
-    gtk_list_store_clear (GTK_LIST_STORE(gtk_tree_view_get_model(GTK_TREE_VIEW(appfinder->appsTree))));
+    
+    gtk_widget_set_sensitive(appfinder->appsTree, TRUE);
+    
+    liststore = GTK_LIST_STORE(gtk_tree_view_get_model(GTK_TREE_VIEW(appfinder->appsTree)));
+    gtk_list_store_clear (liststore);
+    g_object_unref (liststore);
+    
     gtk_tree_view_set_model (GTK_TREE_VIEW(appfinder->appsTree), GTK_TREE_MODEL(load_desktop_resources (APPFINDER_ALL, NULL, appfinder)));
 }
 
@@ -625,12 +635,15 @@ void
 xfce_appfinder_view_categories (XfceAppfinder *appfinder, gboolean visible)
 {
     if (!visible)
+    {
         gtk_widget_hide(appfinder->categoriesTree);
+        xfce_appfinder_clean (appfinder);
+    }
     else
         gtk_widget_show_all(appfinder->categoriesTree);
 }
 
-gboolean
+static gboolean
 callbackApplicationRightClick (GtkWidget *treeview, GdkEventButton *event, gpointer appfinder)
 {
     GtkTreeSelection    *selection;
@@ -671,7 +684,7 @@ callbackApplicationRightClick (GtkWidget *treeview, GdkEventButton *event, gpoin
     return FALSE;
 }
 
-GHashTable *
+static GHashTable *
 createDesktopCache()
 {
     XfceAppfinderCacheEntry  *cent      = NULL;
@@ -747,3 +760,4 @@ createDesktopCache()
     
     return hash;
 }
+

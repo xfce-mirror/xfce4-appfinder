@@ -1,12 +1,12 @@
 bin_PROGRAMS = xfce4-appfinder
 
-xfce4_appfinder_SOURCES = 					\
-    xfce4-appfinder.h                       \
-    xfce4-appfinder.c                       \
+xfce4_appfinder_SOURCES = 						\
+	xfce4-appfinder.h                       			\
+	xfce4-appfinder.c                       			\
 	appfinder.h							\
 	inline-icon.h							\
 	main.c								\
-    main.h
+	main.h
 
 xfce4_appfinder_CFLAGS =						\
 	-I$(top_srcdir)							\
@@ -17,7 +17,9 @@ xfce4_appfinder_LDADD =							\
 	@LIBXFCEGUI4_LIBS@
 
 appsdir = $(datadir)/applications
-apps_DATA = xfce4-appfinder.desktop
+apps_in_files = xfce4-appfinder.desktop.in
+apps_DATA = $(apps_in_files:.desktop.in=.desktop)
+@INTLTOOL_DESKTOP_RULE@
 
 icondir = $(datadir)/pixmaps
 icon_DATA =								\
@@ -28,5 +30,8 @@ inline-icon.h: $(srcdir)/xfce4-appfinder.png
 	default_icon_data_48_48 xfce4-appfinder.png > $(srcdir)/inline-icon.h
 
 EXTRA_DIST = $(icon_DATA) $(apps_DATA)
+
+DISTCLEANFILES = $(apps_DATA)
+
 
 

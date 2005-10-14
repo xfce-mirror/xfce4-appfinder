@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-11 18:28+0200\n"
+"POT-Creation-Date: 2005-10-14 16:55+0200\n"
 "PO-Revision-Date: 2005-08-17 21:46+0900\n"
 "Last-Translator: Yongtao Yang <yongtao.yang@telia.com>\n"
 "Language-Team: Chinese <i18n-translation@lists.linux.net.cn>\n"
@@ -16,70 +16,126 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:98 src/main.c:104
-msgid "Now starting"
-msgstr "现在开始"
+#: ../src/main.c:163
+msgid "Cannot execute the selected application"
+msgstr ""
 
-#: src/main.c:112
-msgid "Cannot execute"
-msgstr "无法执行"
+#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr ""
 
-#: src/main.c:148
+#: ../src/main.c:272
+#, fuzzy
+msgid "<b>Name</b>"
+msgstr "<b>搜寻：</b>"
+
+#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+msgid "N/A"
+msgstr ""
+
+#: ../src/main.c:296
+msgid "<b>Comment</b>"
+msgstr ""
+
+#: ../src/main.c:329
+#, fuzzy
+msgid "<b>Categories</b>"
+msgstr "类别"
+
+#: ../src/main.c:354
+msgid "<b>Command</b>"
+msgstr ""
+
+#: ../src/main.c:389
+msgid "Run program"
+msgstr ""
+
+#: ../src/main.c:397
+msgid "More Information..."
+msgstr ""
+
+#: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>搜寻：</b>"
 
-#: src/main.c:205
-msgid "Categories"
+#: ../src/main.c:466
+#, fuzzy
+msgid "Show Categories"
 msgstr "类别"
 
-#: src/af-constants.h:72
+#: ../src/xfce4-appfinder.c:114
 msgid "All"
 msgstr "全部"
 
-#: src/af-constants.h:73
-msgid "Recently Used"
-msgstr "最近使用过的"
-
-#: src/af-constants.h:74
+#: ../src/xfce4-appfinder.c:115
 msgid "Core"
 msgstr "核心"
 
-#: src/af-constants.h:75
+#: ../src/xfce4-appfinder.c:116
 msgid "Development"
 msgstr "开发"
 
-#: src/af-constants.h:76
+#: ../src/xfce4-appfinder.c:117
 msgid "Office"
 msgstr "办公"
 
-#: src/af-constants.h:77
+#: ../src/xfce4-appfinder.c:118
 msgid "Graphics"
 msgstr "图形"
 
-#: src/af-constants.h:78
+#: ../src/xfce4-appfinder.c:119
 msgid "Network"
 msgstr "网络"
 
-#: src/af-constants.h:79
+#: ../src/xfce4-appfinder.c:120
 msgid "AudioVideo"
 msgstr "声音和图象"
 
-#: src/af-constants.h:80
+#: ../src/xfce4-appfinder.c:121
 msgid "Game"
 msgstr "游戏"
 
-#: src/af-constants.h:81
+#: ../src/xfce4-appfinder.c:122
 msgid "Education"
 msgstr "教育"
 
-#: src/af-constants.h:82
+#: ../src/xfce4-appfinder.c:123
 msgid "System"
 msgstr "系统"
 
-#: src/af-constants.h:83
+#: ../src/xfce4-appfinder.c:124
 msgid "Filemanager"
 msgstr "文件管理器"
 
-#: src/af-constants.h:84
+#: ../src/xfce4-appfinder.c:125
 msgid "Utility"
 msgstr "工具程序"
+
+#: ../src/xfce4-appfinder.c:269
+msgid "Categories"
+msgstr "类别"
+
+#: ../src/xfce4-appfinder.c:561
+msgid "No items available"
+msgstr ""
+
+#: ../src/xfce4-appfinder.c:601
+msgid "Sorry, no match for searched text."
+msgstr ""
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr ""
+
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr ""
+
+#~ msgid "Now starting"
+#~ msgstr "现在开始"
+
+#~ msgid "Cannot execute"
+#~ msgstr "无法执行"
+
+#~ msgid "Recently Used"
+#~ msgstr "最近使用过的"

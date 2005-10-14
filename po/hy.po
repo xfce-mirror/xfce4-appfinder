@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder.hy\n"
-"Report-Msgid-Bugs-To: norik@oric.org\n"
-"POT-Creation-Date: 2005-03-12 10:05+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-10-14 16:55+0200\n"
 "PO-Revision-Date: 2005-08-04 18:04+0500\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
@@ -15,71 +15,126 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: src/main.c:99 src/main.c:105
-msgid "Now starting"
-msgstr "Անցնենք գործի"
+#: ../src/main.c:163
+msgid "Cannot execute the selected application"
+msgstr ""
 
-#: src/main.c:113
-msgid "Cannot execute"
-msgstr "Հնարավոր չէ աշխատացնել"
+#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr ""
 
-#: src/main.c:149
+#: ../src/main.c:272
+#, fuzzy
+msgid "<b>Name</b>"
+msgstr "<b>Փնտրել՝</b>"
+
+#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+msgid "N/A"
+msgstr ""
+
+#: ../src/main.c:296
+msgid "<b>Comment</b>"
+msgstr ""
+
+#: ../src/main.c:329
+#, fuzzy
+msgid "<b>Categories</b>"
+msgstr "Դասեր"
+
+#: ../src/main.c:354
+msgid "<b>Command</b>"
+msgstr ""
+
+#: ../src/main.c:389
+msgid "Run program"
+msgstr ""
+
+#: ../src/main.c:397
+msgid "More Information..."
+msgstr ""
+
+#: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>Փնտրել՝</b>"
 
-#: src/main.c:206
-msgid "Categories"
+#: ../src/main.c:466
+#, fuzzy
+msgid "Show Categories"
 msgstr "Դասեր"
 
-#: src/af-constants.h:54
+#: ../src/xfce4-appfinder.c:114
 msgid "All"
 msgstr "Բոլոր"
 
-#: src/af-constants.h:55
-msgid "Recently Used"
-msgstr "Վերջերս Գործածված"
-
-#: src/af-constants.h:56
+#: ../src/xfce4-appfinder.c:115
 msgid "Core"
 msgstr "Հիմնական"
 
-#: src/af-constants.h:57
+#: ../src/xfce4-appfinder.c:116
 msgid "Development"
 msgstr "Մշակում"
 
-#: src/af-constants.h:58
+#: ../src/xfce4-appfinder.c:117
 msgid "Office"
 msgstr "Գրասենյակ"
 
-#: src/af-constants.h:59
+#: ../src/xfce4-appfinder.c:118
 msgid "Graphics"
 msgstr "Պատկերավոր"
 
-#: src/af-constants.h:60
+#: ../src/xfce4-appfinder.c:119
 msgid "Network"
 msgstr "Ցանց"
 
-#: src/af-constants.h:61
+#: ../src/xfce4-appfinder.c:120
 msgid "AudioVideo"
 msgstr "Համասփյուռ"
 
-#: src/af-constants.h:62
+#: ../src/xfce4-appfinder.c:121
 msgid "Game"
 msgstr "Խաղեր"
 
-#: src/af-constants.h:63
+#: ../src/xfce4-appfinder.c:122
 msgid "Education"
 msgstr "Կրթություն"
 
-#: src/af-constants.h:64
+#: ../src/xfce4-appfinder.c:123
 msgid "System"
 msgstr "Համակարգ"
 
-#: src/af-constants.h:65
+#: ../src/xfce4-appfinder.c:124
 msgid "Filemanager"
 msgstr "Ֆայլային կառավարիչ"
 
-#: src/af-constants.h:66
+#: ../src/xfce4-appfinder.c:125
 msgid "Utility"
 msgstr "Սպասարկող ծրագրեր"
 
+#: ../src/xfce4-appfinder.c:269
+msgid "Categories"
+msgstr "Դասեր"
+
+#: ../src/xfce4-appfinder.c:561
+msgid "No items available"
+msgstr ""
+
+#: ../src/xfce4-appfinder.c:601
+msgid "Sorry, no match for searched text."
+msgstr ""
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr ""
+
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr ""
+
+#~ msgid "Now starting"
+#~ msgstr "Անցնենք գործի"
+
+#~ msgid "Cannot execute"
+#~ msgstr "Հնարավոր չէ աշխատացնել"
+
+#~ msgid "Recently Used"
+#~ msgstr "Վերջերս Գործածված"

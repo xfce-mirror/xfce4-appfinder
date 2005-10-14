@@ -1,0 +1,8 @@
+
+#: src/xfce4-appfinder.desktop.in:4
+msgid "Xfce 4 Appfinder"
+msgstr "Xfce 4 Appfinder"
+
+#: src/xfce4-appfinder.desktop.in:5
+msgid "Application Finder for Xfce 4"
+msgstr "Liste des applications installées"
