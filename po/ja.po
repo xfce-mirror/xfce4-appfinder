@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-15 01:59+0900\n"
-"PO-Revision-Date: 2005-10-15 02:03+0900\n"
+"PO-Revision-Date: 2005-10-15 02:21+0900\n"
 "Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "プログラムを実行"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr "さらなる情報..."
+msgstr "詳しい情報..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
@@ -119,7 +119,7 @@ msgstr "利用できるアイテムはありません"
 
 #: ../src/xfce4-appfinder.c:601
 msgid "Sorry, no match for searched text."
-msgstr "検索したテキストに該当するものはありません。"
+msgstr "検索内容に該当するものはありません。"
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
