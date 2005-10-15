@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-15 01:59+0900\n"
+"POT-Creation-Date: 2005-10-15 21:28+0900\n"
 "PO-Revision-Date: 2005-10-15 01:34+0900\n"
 "Last-Translator: Translate.org.za <info@translate.org.za>\n"
 "Language-Team: British English <en_gb@li.org>\n"
@@ -24,6 +24,11 @@ msgstr ""
 msgid "Xfce 4 Appfinder"
 msgstr ""
 
+#: ../src/main.c:272
+#, fuzzy
+msgid "<b>Name</b>"
+msgstr "<b>Search:</b>"
+
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
 msgstr ""
@@ -31,6 +36,11 @@ msgstr ""
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
 msgstr ""
+
+#: ../src/main.c:329
+#, fuzzy
+msgid "<b>Categories</b>"
+msgstr "Categories"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
@@ -47,6 +57,11 @@ msgstr ""
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>Search:</b>"
+
+#: ../src/main.c:466
+#, fuzzy
+msgid "Show Categories"
+msgstr "Categories"
 
 #: ../src/xfce4-appfinder.c:114
 msgid "All"
