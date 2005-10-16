@@ -65,61 +65,61 @@ msgstr "Menadżer plików"
 
 #: src/af-constants.h:66
 msgid "Utility"
-msgstr "Narzędzie"
+msgstr "Narzędzia"
 
 #: src/callbacks.c:79
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "Nic nie znaleziono"
 
 #: src/callbacks.c:166
 msgid "No items available"
-msgstr ""
+msgstr "Brak dostępnych elementów"
 
 #: src/callbacks.c:213
 msgid "Appfinder InfoBox"
-msgstr ""
+msgstr "Informacje"
 
 #: src/callbacks.c:219
 msgid "Information about \""
-msgstr ""
+msgstr "Informacje o"
 
 #: src/callbacks.c:232
 msgid "Icon"
-msgstr ""
+msgstr "Ikona"
 
 #: src/callbacks.c:261
 #, fuzzy
 msgid "<b>Name:</b> "
-msgstr "<b>Szukaj</b>"
+msgstr "<b>Nazwa:</b>"
 
 #: src/callbacks.c:266
 msgid "Comment"
-msgstr ""
+msgstr "Komentarz"
 
 #: src/callbacks.c:269 src/callbacks.c:283 src/callbacks.c:303
 msgid "N/A"
-msgstr ""
+msgstr "Brak"
 
 #: src/callbacks.c:274
 msgid "<b>Comment:</b> "
-msgstr ""
+msgstr "<b>Komentarz:</b>"
 
 #: src/callbacks.c:294
 #, fuzzy
 msgid "<b>Categories:</b> "
-msgstr "Kategorie"
+msgstr "<b>Kategorie:</b>"
 
 #: src/callbacks.c:306
 msgid "<b>Command:</b> "
-msgstr ""
+msgstr "<b>Polecenie:</b>"
 
 #: src/callbacks.c:362
 msgid "Run program"
-msgstr ""
+msgstr "Uruchom Program"
 
 #: src/callbacks.c:370
 msgid "Information..."
-msgstr ""
+msgstr "Informacje..."
 
 #: src/main.c:99 src/main.c:105
 msgid "Now starting"
@@ -131,7 +131,7 @@ msgstr "Nie mogę wykonać"
 
 #: src/main.c:149
 msgid "<b>Search:</b>"
-msgstr "<b>Szukaj</b>"
+msgstr "<b>Szukaj:</b>"
 
 #: src/main.c:206
 msgid "Categories"
