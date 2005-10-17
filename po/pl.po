@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-15 07:46+0900\n"
-"PO-Revision-Date: 2005-09-21 05:59+0900\n"
+"PO-Revision-Date: 2005-10-17 16:56+0900\n"
 "Last-Translator: Piotr Maliński <admin@rk.edu.pl>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -88,7 +88,6 @@ msgid "Icon"
 msgstr "Ikona"
 
 #: src/callbacks.c:261
-#, fuzzy
 msgid "<b>Name:</b> "
 msgstr "<b>Nazwa:</b>"
 
@@ -105,7 +104,6 @@ msgid "<b>Comment:</b> "
 msgstr "<b>Komentarz:</b>"
 
 #: src/callbacks.c:294
-#, fuzzy
 msgid "<b>Categories:</b> "
 msgstr "<b>Kategorie:</b>"
 
