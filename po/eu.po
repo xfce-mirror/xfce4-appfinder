@@ -1,14 +1,14 @@
 # Euskara translations for xfce4-appfinder package.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-# Piarres Beobide Egaña <pi@beobide.net>, 2004.
+# Piarres Beobide Egaña <pi@beobide.net>, 2004, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-15 07:46+0900\n"
-"PO-Revision-Date: 2005-09-27 14:13+0900\n"
+"PO-Revision-Date: 2005-10-19 00:33+0900\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <librezale@librezale.org>\n"
 "MIME-Version: 1.0\n"
@@ -71,57 +71,55 @@ msgstr "Utilitatea"
 
 #: src/callbacks.c:79
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "Barkatu, ez da emandako testua aurkitu"
 
 #: src/callbacks.c:166
 msgid "No items available"
-msgstr ""
+msgstr "Ez dago elementu erabilgarririk"
 
 #: src/callbacks.c:213
 msgid "Appfinder InfoBox"
-msgstr ""
+msgstr "Aplikazio bilatzaile IkonoKutxa"
 
 #: src/callbacks.c:219
 msgid "Information about \""
-msgstr ""
+msgstr "Honi buruz \""
 
 #: src/callbacks.c:232
 msgid "Icon"
-msgstr ""
+msgstr "Ikonoa"
 
 #: src/callbacks.c:261
-#, fuzzy
 msgid "<b>Name:</b> "
-msgstr "<b>Bilatu:</b>"
+msgstr "<b>Izena:</b>"
 
 #: src/callbacks.c:266
 msgid "Comment"
-msgstr ""
+msgstr "Iruzkina"
 
 #: src/callbacks.c:269 src/callbacks.c:283 src/callbacks.c:303
 msgid "N/A"
-msgstr ""
+msgstr "E/G"
 
 #: src/callbacks.c:274
 msgid "<b>Comment:</b> "
-msgstr ""
+msgstr "<b>Iruzkina:</b> "
 
 #: src/callbacks.c:294
-#, fuzzy
 msgid "<b>Categories:</b> "
-msgstr "Kategoriak"
+msgstr "<b>Kategoriak:</b>"
 
 #: src/callbacks.c:306
 msgid "<b>Command:</b> "
-msgstr ""
+msgstr "<b>Komandoa:</b>"
 
 #: src/callbacks.c:362
 msgid "Run program"
-msgstr ""
+msgstr "Programa abiarazi"
 
 #: src/callbacks.c:370
 msgid "Information..."
-msgstr ""
+msgstr "Argibideak..."
 
 #: src/main.c:99 src/main.c:105
 msgid "Now starting"
