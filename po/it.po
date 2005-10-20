@@ -2,6 +2,7 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Eduard Roccatello <eduard@xfce.org>, 2004.
+# Alex Dupre <ale@FreeBSD.org>, 2005.
 #
 msgid ""
 msgstr ""
