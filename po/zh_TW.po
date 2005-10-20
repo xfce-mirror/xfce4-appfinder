@@ -1,0 +1,136 @@
+# Traditional Chinese translations for xfce4-appfinder package.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# hydonsingore Cia <hydonsingore@mail.educities.edu.tw>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.2.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-10-15 07:46+0900\n"
+"PO-Revision-Date: 2005-10-20 20:29+0800\n"
+"Last-Translator: Hydonsingore Cia <hydonsingore@mail.educities.edu.tw>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/af-constants.h:54
+msgid "All"
+msgstr "全部"
+
+#: src/af-constants.h:55
+msgid "Recently Used"
+msgstr "最近使用"
+
+#: src/af-constants.h:56
+msgid "Core"
+msgstr "核心"
+
+#: src/af-constants.h:57
+msgid "Development"
+msgstr "開發"
+
+#: src/af-constants.h:58
+msgid "Office"
+msgstr "Office"
+
+#: src/af-constants.h:59
+msgid "Graphics"
+msgstr "繪圖"
+
+#: src/af-constants.h:60
+msgid "Network"
+msgstr "網路"
+
+#: src/af-constants.h:61
+msgid "AudioVideo"
+msgstr "影音"
+
+#: src/af-constants.h:62
+msgid "Game"
+msgstr "遊戲"
+
+#: src/af-constants.h:63
+msgid "Education"
+msgstr "教育"
+
+#: src/af-constants.h:64
+msgid "System"
+msgstr "系統"
+
+#: src/af-constants.h:65
+msgid "Filemanager"
+msgstr "檔案管理程式"
+
+#: src/af-constants.h:66
+msgid "Utility"
+msgstr "公用程式"
+
+#: src/callbacks.c:79
+msgid "Sorry, no match for searched text."
+msgstr "抱歉，沒有符合該搜尋文字的項目"
+
+#: src/callbacks.c:166
+msgid "No items available"
+msgstr "沒有可用的項目"
+
+#: src/callbacks.c:213
+msgid "Appfinder InfoBox"
+msgstr "Appfinder InfoBox"
+
+#: src/callbacks.c:219
+msgid "Information about \""
+msgstr "關於 \""
+
+#: src/callbacks.c:232
+msgid "Icon"
+msgstr "圖示"
+
+#: src/callbacks.c:261
+msgid "<b>Name:</b> "
+msgstr "<b>名稱：</b> "
+
+#: src/callbacks.c:266
+msgid "Comment"
+msgstr "附註"
+
+#: src/callbacks.c:269 src/callbacks.c:283 src/callbacks.c:303
+msgid "N/A"
+msgstr "無"
+
+#: src/callbacks.c:274
+msgid "<b>Comment:</b> "
+msgstr "<b>附註：</b> "
+
+#: src/callbacks.c:294
+msgid "<b>Categories:</b> "
+msgstr "<b>分類：</b> "
+
+#: src/callbacks.c:306
+msgid "<b>Command:</b> "
+msgstr "<b>指令：</b> "
+
+#: src/callbacks.c:362
+msgid "Run program"
+msgstr "執行程式"
+
+#: src/callbacks.c:370
+msgid "Information..."
+msgstr "資訊..."
+
+#: src/main.c:99 src/main.c:105
+msgid "Now starting"
+msgstr "現正啟動"
+
+#: src/main.c:113
+msgid "Cannot execute"
+msgstr "無法執行"
+
+#: src/main.c:149
+msgid "<b>Search:</b>"
+msgstr "<b>搜尋：</b>"
+
+#: src/main.c:206
+msgid "Categories"
+msgstr "分類"
