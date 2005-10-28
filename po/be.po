@@ -1,14 +1,14 @@
 # Беларускі пераклад xfce4-appfinder.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-# Ales Nyakhaychyk <nab@mail.by>, 2004.
+# Ales Nyakhaychyk <nab@mail.by>, 2004-2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-15 07:46+0900\n"
-"PO-Revision-Date: 2005-09-27 14:03+0900\n"
+"POT-Creation-Date: 2005-10-28 20:56+0900\n"
+"PO-Revision-Date: 2005-10-27 18:56+0900\n"
 "Last-Translator: Ales Nyakhaychyk <nab@mail.by>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
 "MIME-Version: 1.0\n"
