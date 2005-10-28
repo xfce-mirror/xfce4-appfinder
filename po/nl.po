@@ -8,12 +8,12 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-15 07:46+0900\n"
-"PO-Revision-Date: 2005-08-19 23:28+0900\n"
+"PO-Revision-Date: 2005-10-28 11:12+0200\n"
 "Last-Translator: Jasper Huijsmans <jasper@xfce.org>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: src/af-constants.h:54
 msgid "All"
@@ -69,57 +69,55 @@ msgstr "Hulpmiddelen"
 
 #: src/callbacks.c:79
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "Sorry, geen resultaten gevonden"
 
 #: src/callbacks.c:166
 msgid "No items available"
-msgstr ""
+msgstr "Geen items beschikbaar"
 
 #: src/callbacks.c:213
 msgid "Appfinder InfoBox"
-msgstr ""
+msgstr "Appfinder Infobox"
 
 #: src/callbacks.c:219
 msgid "Information about \""
-msgstr ""
+msgstr "Informatie over "
 
 #: src/callbacks.c:232
 msgid "Icon"
-msgstr ""
+msgstr "Pictogram"
 
 #: src/callbacks.c:261
-#, fuzzy
 msgid "<b>Name:</b> "
-msgstr "<b>Zoeken:</b>"
+msgstr "<b>Naam:</b>"
 
 #: src/callbacks.c:266
 msgid "Comment"
-msgstr ""
+msgstr "Beschrijving"
 
 #: src/callbacks.c:269 src/callbacks.c:283 src/callbacks.c:303
 msgid "N/A"
-msgstr ""
+msgstr "Niet beschikbaar"
 
 #: src/callbacks.c:274
 msgid "<b>Comment:</b> "
-msgstr ""
+msgstr "<b>Beschrijving:</b>"
 
 #: src/callbacks.c:294
-#, fuzzy
 msgid "<b>Categories:</b> "
-msgstr "Categoriën"
+msgstr "<b>Categorieën:</b>"
 
 #: src/callbacks.c:306
 msgid "<b>Command:</b> "
-msgstr ""
+msgstr "<b>Commando:</b>"
 
 #: src/callbacks.c:362
 msgid "Run program"
-msgstr ""
+msgstr "Programma uitvoeren"
 
 #: src/callbacks.c:370
 msgid "Information..."
-msgstr ""
+msgstr "Informatie..."
 
 #: src/main.c:99 src/main.c:105
 msgid "Now starting"
@@ -135,4 +133,5 @@ msgstr "<b>Zoeken:</b>"
 
 #: src/main.c:206
 msgid "Categories"
-msgstr "Categoriën"
+msgstr "Categorieën"
+
