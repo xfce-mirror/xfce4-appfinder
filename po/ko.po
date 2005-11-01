@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-15 07:46+0900\n"
-"PO-Revision-Date: 2005-09-27 14:23+0900\n"
+"POT-Creation-Date: 2005-10-28 20:56+0900\n"
+"PO-Revision-Date: 2005-10-31 17:32+0900\n"
 "Last-Translator: ByungHyun Choi <byunghyunchoi@hotmail.com>\n"
 "Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge."
 "net>\n"
@@ -42,7 +42,7 @@ msgstr "그래픽용"
 
 #: src/af-constants.h:60
 msgid "Network"
-msgstr "네트워크용"
+msgstr "네트워크"
 
 #: src/af-constants.h:61
 msgid "AudioVideo"
@@ -70,57 +70,55 @@ msgstr "도구"
 
 #: src/callbacks.c:79
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "일치하는 문장을 못 찾았습니다."
 
 #: src/callbacks.c:166
 msgid "No items available"
-msgstr ""
+msgstr "없음"
 
 #: src/callbacks.c:213
 msgid "Appfinder InfoBox"
-msgstr ""
+msgstr "검색 정보"
 
 #: src/callbacks.c:219
 msgid "Information about \""
-msgstr ""
+msgstr "정보 보기\""
 
 #: src/callbacks.c:232
 msgid "Icon"
-msgstr ""
+msgstr "아이콘"
 
 #: src/callbacks.c:261
-#, fuzzy
 msgid "<b>Name:</b> "
-msgstr "<b>검색:</b>"
+msgstr "<b>이름:</b> "
 
 #: src/callbacks.c:266
 msgid "Comment"
-msgstr ""
+msgstr "<b>설명:</b> "
 
 #: src/callbacks.c:269 src/callbacks.c:283 src/callbacks.c:303
 msgid "N/A"
-msgstr ""
+msgstr "없음"
 
 #: src/callbacks.c:274
 msgid "<b>Comment:</b> "
-msgstr ""
+msgstr "<b>설명:</b> "
 
 #: src/callbacks.c:294
-#, fuzzy
 msgid "<b>Categories:</b> "
-msgstr "분류"
+msgstr "<b>분류:</b> "
 
 #: src/callbacks.c:306
 msgid "<b>Command:</b> "
-msgstr ""
+msgstr "<b>명령:</b> "
 
 #: src/callbacks.c:362
 msgid "Run program"
-msgstr ""
+msgstr "프로그램실행"
 
 #: src/callbacks.c:370
 msgid "Information..."
-msgstr ""
+msgstr "정보..."
 
 #: src/main.c:99 src/main.c:105
 msgid "Now starting"
