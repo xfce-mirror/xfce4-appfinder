@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-15 07:46+0900\n"
-"PO-Revision-Date: 2005-10-10 22:48+0300\n"
+"POT-Creation-Date: 2005-10-28 20:56+0900\n"
+"PO-Revision-Date: 2005-11-02 20:24+0200\n"
 "Last-Translator: Mişu Moldovan <dumol@gnome.ro>\n"
 "Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "Dezvoltare"
 
 #: src/af-constants.h:58
 msgid "Office"
-msgstr "Office"
+msgstr "Birou"
 
 #: src/af-constants.h:59
 msgid "Graphics"
@@ -47,7 +47,7 @@ msgstr "Reţea"
 
 #: src/af-constants.h:61
 msgid "AudioVideo"
-msgstr "Audio/Video"
+msgstr "Multimedia"
 
 #: src/af-constants.h:62
 msgid "Game"
@@ -71,57 +71,55 @@ msgstr "Utilitare"
 
 #: src/callbacks.c:79
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "Scuze, nu există potriviri pentru textul căutat."
 
 #: src/callbacks.c:166
 msgid "No items available"
-msgstr ""
+msgstr "Nimic disponibil"
 
 #: src/callbacks.c:213
 msgid "Appfinder InfoBox"
-msgstr ""
+msgstr "Detalii Appfinder"
 
 #: src/callbacks.c:219
 msgid "Information about \""
-msgstr ""
+msgstr "Detalii despre \""
 
 #: src/callbacks.c:232
 msgid "Icon"
-msgstr ""
+msgstr "Iconiţă"
 
 #: src/callbacks.c:261
-#, fuzzy
 msgid "<b>Name:</b> "
-msgstr "<b>Caută:</b>"
+msgstr "<b>Nume:</b>"
 
 #: src/callbacks.c:266
 msgid "Comment"
-msgstr ""
+msgstr "Comentariu"
 
 #: src/callbacks.c:269 src/callbacks.c:283 src/callbacks.c:303
 msgid "N/A"
-msgstr ""
+msgstr "N/D"
 
 #: src/callbacks.c:274
 msgid "<b>Comment:</b> "
-msgstr ""
+msgstr "<b>Comentariu:</b> "
 
 #: src/callbacks.c:294
-#, fuzzy
 msgid "<b>Categories:</b> "
-msgstr "Categorii"
+msgstr "<b>Categorii:</b> "
 
 #: src/callbacks.c:306
 msgid "<b>Command:</b> "
-msgstr ""
+msgstr "<b>Comandă:</b> "
 
 #: src/callbacks.c:362
 msgid "Run program"
-msgstr ""
+msgstr "Pornire program"
 
 #: src/callbacks.c:370
 msgid "Information..."
-msgstr ""
+msgstr "Detalii..."
 
 #: src/main.c:99 src/main.c:105
 msgid "Now starting"
@@ -133,7 +131,7 @@ msgstr "Nu poate fi pornit"
 
 #: src/main.c:149
 msgid "<b>Search:</b>"
-msgstr "<b>Caută:</b>"
+msgstr "<b>Căutare:</b>"
 
 #: src/main.c:206
 msgid "Categories"
