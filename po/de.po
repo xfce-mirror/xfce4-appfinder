@@ -2,13 +2,13 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Moritz Heiber <moe@xfce.org>, 2004.
-#
+
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-15 07:46+0900\n"
-"PO-Revision-Date: 2005-09-27 14:09+0900\n"
+"PO-Revision-Date: 2005-11-05 11:53+0200\n"
 "Last-Translator: Moritz Heiber <moe@xfce.org>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -69,57 +69,55 @@ msgstr "Werkzeuge"
 
 #: src/callbacks.c:79
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "Leider keine Übereinstimmungen gefunden"
 
 #: src/callbacks.c:166
 msgid "No items available"
-msgstr ""
+msgstr "Keine Objekte verfügbar"
 
 #: src/callbacks.c:213
 msgid "Appfinder InfoBox"
-msgstr ""
+msgstr "Appfinder InfoBox"
 
 #: src/callbacks.c:219
 msgid "Information about \""
-msgstr ""
+msgstr "Informationen über \""
 
 #: src/callbacks.c:232
 msgid "Icon"
-msgstr ""
+msgstr "Icon"
 
 #: src/callbacks.c:261
-#, fuzzy
 msgid "<b>Name:</b> "
-msgstr "<b>Suche:</b>"
+msgstr "<b>Name:</b>"
 
 #: src/callbacks.c:266
 msgid "Comment"
-msgstr ""
+msgstr "Kommentar"
 
 #: src/callbacks.c:269 src/callbacks.c:283 src/callbacks.c:303
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: src/callbacks.c:274
 msgid "<b>Comment:</b> "
-msgstr ""
+msgstr "<b>Kommentar:</b>"
 
 #: src/callbacks.c:294
-#, fuzzy
 msgid "<b>Categories:</b> "
-msgstr "Kategorien"
+msgstr "<b>Kategorien:</b>"
 
 #: src/callbacks.c:306
 msgid "<b>Command:</b> "
-msgstr ""
+msgstr "<b>Kommando:</b> "
 
 #: src/callbacks.c:362
 msgid "Run program"
-msgstr ""
+msgstr "Ausführen"
 
 #: src/callbacks.c:370
 msgid "Information..."
-msgstr ""
+msgstr "Informationen..."
 
 #: src/main.c:99 src/main.c:105
 msgid "Now starting"
