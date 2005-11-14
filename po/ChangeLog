@@ -1,7 +1,49 @@
+2005-11-05 13:13  Moritz Heiber <moe@xfce.org>
+
+	* de.po: Updated german translations for the upcoming release.
+
+2005-11-04 23:39  Daichi Kawahata <daichi@xfce.org>
+
+	* pt_BR.po: Updated Brazilian Portuguese translations by Adriano
+	  Winter Bess <awbess@gmail.com>.
+
+2005-11-03 13:31  Daichi Kawahata <daichi@xfce.org>
+
+	* ro.po: Updated Romanian translations by Misu Moldovan
+	  <dumol@gnome.ro>.
+
+2005-11-03 13:25  Daichi Kawahata <daichi@xfce.org>
+
+	* sl.po: Added Slovenian translations by Bostjan Spetic
+	  <igzebedze@auch.eu.org>.
+
+2005-11-01 16:30  Daichi Kawahata <daichi@xfce.org>
+
+	* ko.po: Updated Korean translations by Choi Dayle
+	  <dayle_good_man@yahoo.co.jp>.
+
+2005-10-28 12:10  Daichi Kawahata <daichi@xfce.org>
+
+	* fi.po: Updated Finnish translations by Jari Rahkonen
+	  <jari.rahkonen@pp1.inet.fi>.
+
+2005-10-28 12:08  Daichi Kawahata <daichi@xfce.org>
+
+	* be.po: Updated Belorussian translations by Ales Nyakhaychyk
+	  <nab@mail.by>.
+
+2005-10-28 09:12  Jasper Huijsmans <jasper@xfce.org>
+
+	* nl.po: Add missing translations
+
+2005-10-27 19:30  Pau Rullan Ferragut <paurullan@bulma.net>
+
+	* ca.po: updated xfce4-appfinder, now fully translated --
+	  paurullan@bulma.net (ca translator)
+
 2005-10-20 23:30  Daichi Kawahata <daichi@xfce.org>
 
-	* it.po: Modified initial header strings. Modified initial
-	  comment strings.
+	* it.po: Modified initial header/comment strings.
 
 2005-10-20 12:37  Alex Dupre <ale@FreeBSD.org>
 
