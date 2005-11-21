@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-17 06:59+0900\n"
+"POT-Creation-Date: 2005-11-22 00:15+0900\n"
 "PO-Revision-Date: 2005-10-23 23:38+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: librezale.org <librezale@librezale.org>\n"
@@ -129,4 +129,3 @@ msgstr "Aplikazio Bilatzailea"
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
 msgstr "Xfce 4-ren aplikazio bilatzailea"
-

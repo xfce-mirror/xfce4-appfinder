@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-17 06:59+0900\n"
+"POT-Creation-Date: 2005-11-22 00:15+0900\n"
 "PO-Revision-Date: 2005-10-20 12:03+0100\n"
 "Last-Translator: Alex Dupre <ale@FreeBSD.org>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -19,8 +19,7 @@ msgstr ""
 msgid "Cannot execute the selected application"
 msgstr "Impossibile eseguire l'applicazione selezionata"
 
-#: ../src/main.c:205
-#: ../src/xfce4-appfinder.desktop.in.h:3
+#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
 msgstr ""
 
@@ -28,9 +27,7 @@ msgstr ""
 msgid "<b>Name</b>"
 msgstr "<b>Nome</b>"
 
-#: ../src/main.c:287
-#: ../src/main.c:312
-#: ../src/main.c:345
+#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
 msgstr "N/D"
 
@@ -129,4 +126,3 @@ msgstr ""
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
 msgstr ""
-
