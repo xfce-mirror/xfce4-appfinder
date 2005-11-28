@@ -1,3 +1,32 @@
+2005-11-21 17:14  Daichi Kawahata <daichi@xfce.org>
+
+	* be.po, bn_IN.po, cs.po, de.po, en_GB.po, es.po, es_MX.po, et.po,
+	  eu.po, fa.po, fi.po, fr.po, gu.po, he.po, hy.po, it.po, ja.po,
+	  ko.po, lt.po, mr.po, nl.po, pa.po, pl.po, pt_BR.po, pt_PT.po,
+	  ro.po, ru.po, sv.po, tr.po, uk.po, xfce4-appfinder.pot,
+	  zh_CN.po, zh_TW.po: Updated.
+
+2005-11-21 16:34  Stavros Giannouris <stavrosg2002@freemail.gr>
+
+	* el.po: Added Greek translation
+
+2005-11-21 16:06  Daichi Kawahata <daichi@xfce.org>
+
+	* POTFILES.in: Updated POTFILES.in file.
+
+2005-11-07 13:13  Daichi Kawahata <daichi@xfce.org>
+
+	* es.po: Updated Spanish translations by Rudy Godoy
+	  <rudy@kernel-panik.org>.
+
+2005-11-05 14:59  Daichi Kawahata <daichi@xfce.org>
+
+	* ChangeLog: Deciphering.
+
+2005-11-05 14:38  Daichi Kawahata <daichi@xfce.org>
+
+	* ChangeLog: Trimmed and updated.
+
 2005-11-03 13:48  Daichi Kawahata <daichi@xfce.org>
 
 	* ko.po: Updated Korean translations by ByungHyun Choi
