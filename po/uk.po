@@ -1,5 +1,5 @@
 # Ukrainian translation to xfce4-appfinder.
-# Copyright (C) 2004-2005 Eduard Roccatello, Inc.
+# Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Maxim V. Dziumanenko <mvd@mylinux.com.ua>, 2005.
 #

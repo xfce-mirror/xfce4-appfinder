@@ -1,5 +1,5 @@
 # Greek translations for xfce4-appfinder package.
-# Copyright (C) 2005 THE xfce4-appfinder'S COPYRIGHT HOLDER
+# Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Stavros Giannouris <stavrosg2002@freemail.gr>, 2005.
 #
@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-29 16:36+0900\n"
+"POT-Creation-Date: 2005-11-22 00:15+0900\n"
 "PO-Revision-Date: 2005-11-21 18:31+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -20,8 +20,7 @@ msgstr ""
 msgid "Cannot execute the selected application"
 msgstr "Δεν ήταν δυνατή η εκτέλεση της επιλεγμένης εφαρμογής"
 
-#: ../src/main.c:205
-#: ../src/xfce4-appfinder.desktop.in.h:3
+#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
 msgstr ""
 
@@ -29,9 +28,7 @@ msgstr ""
 msgid "<b>Name</b>"
 msgstr "<b>Όνομα</b>"
 
-#: ../src/main.c:287
-#: ../src/main.c:312
-#: ../src/main.c:345
+#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
 msgstr "N/A"
 
@@ -130,4 +127,3 @@ msgstr ""
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
 msgstr "Αναζήτηση Εφαρμογών για το Xfce 4"
-
