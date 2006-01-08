@@ -83,6 +83,13 @@ static gboolean       callbackApplicationRightClick  (GtkWidget              *tr
                                                       GdkEventButton         *event,
                                                       gpointer                appfinder);
 
+static void           callbackDragFromAppsTree       (GtkWidget              *widget,
+                                                      GdkDragContext         *dragContext,
+                                                      GtkSelectionData       *data,
+                                                      guint                   info,
+                                                      guint                   time,
+                                                      gpointer                appfinder);
+
 static gint           sort_compare_func              (GtkTreeModel           *model,
                                                       GtkTreeIter            *a,
                                                       GtkTreeIter            *b,
@@ -124,6 +131,16 @@ static const char *dotDesktopCategories [] =
     N_("Filemanager"),
     N_("Utility"),
     NULL
+};
+
+/* Places where i can drop things */
+static const GtkTargetEntry dotDesktopDropTarget[] =
+{
+    {"DESKTOP_PATH_ENTRY", 0, 0},
+    {"text/plain", 0, 1},
+    {"application/x-desktop", 0, 2},
+    {"STRING", 0, 3},
+    {"UTF8_STRING", 0, 4}
 };
 
 GType
@@ -203,8 +220,13 @@ xfce_appfinder_init (XfceAppfinder *appfinder)
     gtk_paned_pack2(GTK_PANED(appfinder->hpaned), appfinder->appScroll, TRUE, TRUE);    
     
     appfinder->appsTree = create_applications_treeview(appfinder);
+    gtk_tree_view_enable_model_drag_source( GTK_TREE_VIEW(appfinder->appsTree),
+                                            GDK_BUTTON1_MASK, dotDesktopDropTarget,
+                                            5, GDK_ACTION_COPY);
+
     g_signal_connect(appfinder->appsTree, "row-activated", G_CALLBACK(callbackApplicationActivate), (gpointer) appfinder);
     g_signal_connect(appfinder->appsTree, "button-press-event", G_CALLBACK(callbackApplicationRightClick), (gpointer) appfinder);    
+    g_signal_connect(appfinder->appsTree, "drag-data-get", G_CALLBACK(callbackDragFromAppsTree), (gpointer) appfinder);
 
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(appfinder->appScroll), appfinder->appsTree);        
     gtk_widget_show_all(GTK_WIDGET(appfinder));
@@ -683,6 +705,35 @@ callbackApplicationRightClick (GtkWidget *treeview, GdkEventButton *event, gpoin
     /* If hasn't been clicked with right button let's propagate the event */
     return FALSE;
 }
+
+static void
+callbackDragFromAppsTree (GtkWidget *widget, GdkDragContext *dragContext,
+                          GtkSelectionData *data, guint info,
+                          guint time, gpointer appfinder)
+{
+    GtkTreeModel *model;
+    GtkTreeIter   iter;
+    gchar *name = NULL;
+    gchar *path = NULL;
+    
+        model = gtk_tree_view_get_model(GTK_TREE_VIEW(widget));
+        if (gtk_tree_model_get_iter(model, &iter,
+                    gtk_tree_row_reference_get_path(g_object_get_data(G_OBJECT(dragContext), "gtk-tree-view-source-row"))))
+        {
+            gtk_tree_model_get(model, &iter, APPLICATION_TREE_TEXT, &name, -1);
+            if (name)
+            {
+                if ((path = get_path_from_name(name, XFCE_APPFINDER(appfinder))) != NULL)
+                {
+                    gtk_selection_data_set (data, gdk_atom_intern ("text/plain", FALSE), 8, (guchar *)path, strlen(path));
+                    g_free(path);
+                }
+                g_free(name);
+            }
+        }
+}
+
+
 
 static GHashTable *
 createDesktopCache()

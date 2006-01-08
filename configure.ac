@@ -30,7 +30,7 @@ XDT_I18N([be bn_IN cs de el en_GB es es_MX et eu fa fi fr gu he hy it ja ko lt
 	  mr nl pa pl pt_BR pt_PT ro ru sv tr uk zh_CN zh_TW])
 
 dnl Check for required packages
-XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.2.0])
+XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.3.6])
 
 dnl Check for debugging support
 XDT_FEATURE_DEBUG()
