@@ -1,7 +1,7 @@
 dnl configure.ac
 dnl
 
-m4_define([appfinder_version],[4.3.1])
+m4_define([appfinder_version],[4.3.2])
 
 AC_INIT([xfce4-appfinder], [appfinder_version()], 
 	[xfce4-dev@xfce.org])
