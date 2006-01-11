@@ -26,8 +26,8 @@ dnl check for standard header files
 AC_HEADER_STDC
 
 dnl Check for i18n support
-XDT_I18N([be bn_IN cs de el en_GB es es_MX et eu fa fi fr gu he hy it ja ko lt 
-	  mr nl pa pl pt_BR pt_PT ro ru sv tr uk zh_CN zh_TW])
+XDT_I18N([be bn_IN ca cs de el en_GB es es_MX et eu fa fi fr gu he hy it
+	  ja ko lt mr nl pa pl pt_BR pt_PT ro ru sv tr uk zh_CN zh_TW])
 
 dnl Check for required packages
 XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.3.6])
