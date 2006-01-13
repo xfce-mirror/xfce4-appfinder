@@ -2,6 +2,7 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-apfinder package.
 # Marek Piechut <mco@o2.pl>, 2005.
+# Piotr Maliński <riklaunim@gmail.com>, 2006.
 #
 msgid ""
 msgstr ""
@@ -9,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-22 00:15+0900\n"
 "PO-Revision-Date: 2005-10-15 01:51+0900\n"
-"Last-Translator: Marek Piechut <mco@o2.pl>\n"
+"Last-Translator: Piotr Maliński <riklaunim@gmail.com>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,45 +20,45 @@ msgstr ""
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
-msgstr ""
+msgstr "Nie mogę wykonać wybranej aplikacji"
 
 #: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr ""
+msgstr "Wyszukiwacz aplikacji"
 
 #: ../src/main.c:272
 #, fuzzy
 msgid "<b>Name</b>"
-msgstr "Wyszukaj:"
+msgstr "<b>Nazwa</b>:"
 
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
-msgstr ""
+msgstr "Brak"
 
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
-msgstr ""
+msgstr "<b>Komentarz</b>"
 
 #: ../src/main.c:329
 #, fuzzy
 msgid "<b>Categories</b>"
-msgstr "Kategorie"
+msgstr "<b>Kategorie</b>"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
-msgstr ""
+msgstr "<b>Polecenie</b>"
 
 #: ../src/main.c:389
 msgid "Run program"
-msgstr ""
+msgstr "Uruchom Program"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr ""
+msgstr "Więcej Informacji..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
-msgstr "Wyszukaj:"
+msgstr "<b>Wyszukaj:</b>"
 
 #: ../src/main.c:466
 #, fuzzy
@@ -118,16 +119,16 @@ msgstr "Kategorie"
 
 #: ../src/xfce4-appfinder.c:561
 msgid "No items available"
-msgstr ""
+msgstr "Brak elementów"
 
 #: ../src/xfce4-appfinder.c:601
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "Brak rezultatów"
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
-msgstr ""
+msgstr "Wyszukiwacz aplikacji"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr ""
+msgstr "Wyszukiwacz aplikacji"
