@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-22 00:15+0900\n"
-"PO-Revision-Date: 2006-01-09 00:23+0100\n"
+"PO-Revision-Date: 2006-01-15 00:32+0100\n"
 "Last-Translator:  Pau Rul�lan Ferragut <paurullan@bulma.net>\n"
 "Language-Team: catalan\n"
 "MIME-Version: 1.0\n"
@@ -17,112 +17,112 @@ msgstr ""
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
-msgstr ""
+msgstr "No s'ha pogut executar l'aplicació"
 
 #: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr ""
+msgstr "Xfce4 Appfinder"
 
 #: ../src/main.c:272
 msgid "<b>Name</b>"
-msgstr ""
+msgstr "<b>Nom</b>"
 
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
-msgstr ""
+msgstr "<b>Comentari</b>"
 
 #: ../src/main.c:329
 msgid "<b>Categories</b>"
-msgstr ""
+msgstr "<b>Categories</b>"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
-msgstr ""
+msgstr "<b>Ordre</b>"
 
 #: ../src/main.c:389
 msgid "Run program"
-msgstr ""
+msgstr "Executa el programa"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr ""
+msgstr "Més informació..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
-msgstr ""
+msgstr "<b>Cerca:</b>"
 
 #: ../src/main.c:466
 msgid "Show Categories"
-msgstr ""
+msgstr "Mostra categories"
 
 #: ../src/xfce4-appfinder.c:114
 msgid "All"
-msgstr ""
+msgstr "Totes"
 
 #: ../src/xfce4-appfinder.c:115
 msgid "Core"
-msgstr ""
+msgstr "Principal"
 
 #: ../src/xfce4-appfinder.c:116
 msgid "Development"
-msgstr ""
+msgstr "Desenvolupament"
 
 #: ../src/xfce4-appfinder.c:117
 msgid "Office"
-msgstr ""
+msgstr "Ofimàtica"
 
 #: ../src/xfce4-appfinder.c:118
 msgid "Graphics"
-msgstr ""
+msgstr "Gràfics"
 
 #: ../src/xfce4-appfinder.c:119
 msgid "Network"
-msgstr ""
+msgstr "Xarxa"
 
 #: ../src/xfce4-appfinder.c:120
 msgid "AudioVideo"
-msgstr ""
+msgstr "AudioVideo"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "Game"
-msgstr ""
+msgstr "Jocs"
 
 #: ../src/xfce4-appfinder.c:122
 msgid "Education"
-msgstr ""
+msgstr "Educació"
 
 #: ../src/xfce4-appfinder.c:123
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: ../src/xfce4-appfinder.c:124
 msgid "Filemanager"
-msgstr ""
+msgstr "Gestor de fitxers"
 
 #: ../src/xfce4-appfinder.c:125
 msgid "Utility"
-msgstr ""
+msgstr "Utilitats"
 
 #: ../src/xfce4-appfinder.c:269
 msgid "Categories"
-msgstr ""
+msgstr "Categories"
 
 #: ../src/xfce4-appfinder.c:561
 msgid "No items available"
-msgstr ""
+msgstr "Sense elements disponibles"
 
 #: ../src/xfce4-appfinder.c:601
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "No s'han trobat coincidències."
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
-msgstr ""
+msgstr "Appfinder"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr ""
+msgstr "Cercador d'aplicacions per Xfce 4"
