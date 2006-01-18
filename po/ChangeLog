@@ -1,3 +1,33 @@
+2006-01-15 00:46  Pau Rullan Ferragut <paurullan@bulma.net>
+
+	* ca.po: some work on catalan translation (trunk)
+
+2006-01-13 05:52  Daichi Kawahata <daichi@xfce.org>
+
+	* pl.po: Updated Polish translations by Piotr Malinski
+	  <riklaunim@gmail.com>.
+
+2006-01-11 12:02  Daichi Kawahata <daichi@xfce.org>
+
+	* ca.po, ca.po: Fixed an error.
+
+2006-01-08 23:25  Pau Rullan Ferragut <paurullan@bulma.net>
+
+	* ca.po: new file created
+
+2006-01-07 09:40  Daichi Kawahata <daichi@xfce.org>
+
+	* el.po, eu.po, pt_BR.po, uk.po: Updated copyright information.
+
+2005-12-21 07:50  Daichi Kawahata <daichi@xfce.org>
+
+	* pt_BR.po: Updated Brazilian Portuguese translations by Adriano
+	  Winter Bess <awbess@gmail.com>.
+
+2005-11-28 15:19  Daichi Kawahata <daichi@xfce.org>
+
+	* ChangeLog: Updated.
+
 2005-11-21 17:14  Daichi Kawahata <daichi@xfce.org>
 
 	* be.po, bn_IN.po, cs.po, de.po, en_GB.po, es.po, es_MX.po, et.po,
