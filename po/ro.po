@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-22 00:15+0900\n"
+"POT-Creation-Date: 2006-01-26 20:03+0900\n"
 "PO-Revision-Date: 2005-10-15 01:54+0900\n"
 "Last-Translator: Mişu Moldovan <dumol@gnome.ro>\n"
 "Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
@@ -63,63 +63,63 @@ msgstr "<b>Caută:</b>"
 msgid "Show Categories"
 msgstr "Categorii"
 
-#: ../src/xfce4-appfinder.c:114
+#: ../src/xfce4-appfinder.c:121
 msgid "All"
 msgstr "Toate"
 
-#: ../src/xfce4-appfinder.c:115
+#: ../src/xfce4-appfinder.c:122
 msgid "Core"
 msgstr "Esenţiale"
 
-#: ../src/xfce4-appfinder.c:116
+#: ../src/xfce4-appfinder.c:123
 msgid "Development"
 msgstr "Dezvoltare"
 
-#: ../src/xfce4-appfinder.c:117
+#: ../src/xfce4-appfinder.c:124
 msgid "Office"
 msgstr "Office"
 
-#: ../src/xfce4-appfinder.c:118
+#: ../src/xfce4-appfinder.c:125
 msgid "Graphics"
 msgstr "Grafică"
 
-#: ../src/xfce4-appfinder.c:119
+#: ../src/xfce4-appfinder.c:126
 msgid "Network"
 msgstr "Reţea"
 
-#: ../src/xfce4-appfinder.c:120
+#: ../src/xfce4-appfinder.c:127
 msgid "AudioVideo"
 msgstr "Audio/Video"
 
-#: ../src/xfce4-appfinder.c:121
+#: ../src/xfce4-appfinder.c:128
 msgid "Game"
 msgstr "Jocuri"
 
-#: ../src/xfce4-appfinder.c:122
+#: ../src/xfce4-appfinder.c:129
 msgid "Education"
 msgstr "Educaţionale"
 
-#: ../src/xfce4-appfinder.c:123
+#: ../src/xfce4-appfinder.c:130
 msgid "System"
 msgstr "Sistem"
 
-#: ../src/xfce4-appfinder.c:124
+#: ../src/xfce4-appfinder.c:131
 msgid "Filemanager"
 msgstr "Administrator fişiere"
 
-#: ../src/xfce4-appfinder.c:125
+#: ../src/xfce4-appfinder.c:132
 msgid "Utility"
 msgstr "Utilitare"
 
-#: ../src/xfce4-appfinder.c:269
+#: ../src/xfce4-appfinder.c:291
 msgid "Categories"
 msgstr "Categorii"
 
-#: ../src/xfce4-appfinder.c:561
+#: ../src/xfce4-appfinder.c:583
 msgid "No items available"
 msgstr ""
 
-#: ../src/xfce4-appfinder.c:601
+#: ../src/xfce4-appfinder.c:623
 msgid "Sorry, no match for searched text."
 msgstr ""
 

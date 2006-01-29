@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-22 00:15+0900\n"
+"POT-Creation-Date: 2006-01-26 20:03+0900\n"
 "PO-Revision-Date: 2005-10-15 01:51+0900\n"
 "Last-Translator: Piotr Maliński <riklaunim@gmail.com>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -65,63 +65,63 @@ msgstr "<b>Wyszukaj:</b>"
 msgid "Show Categories"
 msgstr "Kategorie"
 
-#: ../src/xfce4-appfinder.c:114
+#: ../src/xfce4-appfinder.c:121
 msgid "All"
 msgstr "Wszystkie"
 
-#: ../src/xfce4-appfinder.c:115
+#: ../src/xfce4-appfinder.c:122
 msgid "Core"
 msgstr "Główne"
 
-#: ../src/xfce4-appfinder.c:116
+#: ../src/xfce4-appfinder.c:123
 msgid "Development"
 msgstr "Programowanie"
 
-#: ../src/xfce4-appfinder.c:117
+#: ../src/xfce4-appfinder.c:124
 msgid "Office"
 msgstr "Biuro"
 
-#: ../src/xfce4-appfinder.c:118
+#: ../src/xfce4-appfinder.c:125
 msgid "Graphics"
 msgstr "Grafika"
 
-#: ../src/xfce4-appfinder.c:119
+#: ../src/xfce4-appfinder.c:126
 msgid "Network"
 msgstr "Sieć"
 
-#: ../src/xfce4-appfinder.c:120
+#: ../src/xfce4-appfinder.c:127
 msgid "AudioVideo"
 msgstr "Multimedia"
 
-#: ../src/xfce4-appfinder.c:121
+#: ../src/xfce4-appfinder.c:128
 msgid "Game"
 msgstr "Gry"
 
-#: ../src/xfce4-appfinder.c:122
+#: ../src/xfce4-appfinder.c:129
 msgid "Education"
 msgstr "Edukacyjne"
 
-#: ../src/xfce4-appfinder.c:123
+#: ../src/xfce4-appfinder.c:130
 msgid "System"
 msgstr "Systemowe"
 
-#: ../src/xfce4-appfinder.c:124
+#: ../src/xfce4-appfinder.c:131
 msgid "Filemanager"
 msgstr "Menedżery Plików"
 
-#: ../src/xfce4-appfinder.c:125
+#: ../src/xfce4-appfinder.c:132
 msgid "Utility"
 msgstr "Narzędzia"
 
-#: ../src/xfce4-appfinder.c:269
+#: ../src/xfce4-appfinder.c:291
 msgid "Categories"
 msgstr "Kategorie"
 
-#: ../src/xfce4-appfinder.c:561
+#: ../src/xfce4-appfinder.c:583
 msgid "No items available"
 msgstr "Brak elementów"
 
-#: ../src/xfce4-appfinder.c:601
+#: ../src/xfce4-appfinder.c:623
 msgid "Sorry, no match for searched text."
 msgstr "Brak rezultatów"
 

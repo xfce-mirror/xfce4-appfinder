@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-22 00:15+0900\n"
+"POT-Creation-Date: 2006-01-26 20:03+0900\n"
 "PO-Revision-Date: 2005-10-20 12:03+0100\n"
 "Last-Translator: Alex Dupre <ale@FreeBSD.org>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -59,63 +59,63 @@ msgstr "<b>Cerca:</b>"
 msgid "Show Categories"
 msgstr "Mostra Categorie"
 
-#: ../src/xfce4-appfinder.c:114
+#: ../src/xfce4-appfinder.c:121
 msgid "All"
 msgstr "Tutte"
 
-#: ../src/xfce4-appfinder.c:115
+#: ../src/xfce4-appfinder.c:122
 msgid "Core"
 msgstr "Principali"
 
-#: ../src/xfce4-appfinder.c:116
+#: ../src/xfce4-appfinder.c:123
 msgid "Development"
 msgstr "Sviluppo"
 
-#: ../src/xfce4-appfinder.c:117
+#: ../src/xfce4-appfinder.c:124
 msgid "Office"
 msgstr "Ufficio"
 
-#: ../src/xfce4-appfinder.c:118
+#: ../src/xfce4-appfinder.c:125
 msgid "Graphics"
 msgstr "Grafica"
 
-#: ../src/xfce4-appfinder.c:119
+#: ../src/xfce4-appfinder.c:126
 msgid "Network"
 msgstr "Rete ed internet"
 
-#: ../src/xfce4-appfinder.c:120
+#: ../src/xfce4-appfinder.c:127
 msgid "AudioVideo"
 msgstr "Multimedia"
 
-#: ../src/xfce4-appfinder.c:121
+#: ../src/xfce4-appfinder.c:128
 msgid "Game"
 msgstr "Gioco"
 
-#: ../src/xfce4-appfinder.c:122
+#: ../src/xfce4-appfinder.c:129
 msgid "Education"
 msgstr "Educativi"
 
-#: ../src/xfce4-appfinder.c:123
+#: ../src/xfce4-appfinder.c:130
 msgid "System"
 msgstr "Sistema"
 
-#: ../src/xfce4-appfinder.c:124
+#: ../src/xfce4-appfinder.c:131
 msgid "Filemanager"
 msgstr ""
 
-#: ../src/xfce4-appfinder.c:125
+#: ../src/xfce4-appfinder.c:132
 msgid "Utility"
 msgstr ""
 
-#: ../src/xfce4-appfinder.c:269
+#: ../src/xfce4-appfinder.c:291
 msgid "Categories"
 msgstr "Categorie"
 
-#: ../src/xfce4-appfinder.c:561
+#: ../src/xfce4-appfinder.c:583
 msgid "No items available"
 msgstr "Nessun elemento disponibile"
 
-#: ../src/xfce4-appfinder.c:601
+#: ../src/xfce4-appfinder.c:623
 msgid "Sorry, no match for searched text."
 msgstr "Nessun risultato trovato."
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-22 00:15+0900\n"
+"POT-Creation-Date: 2006-01-26 20:03+0900\n"
 "PO-Revision-Date: 2005-10-15 01:57+0900\n"
 "Last-Translator: Yongtao Yang <yongtao.yang@telia.com>\n"
 "Language-Team: Simplified Chinese <i18n-translation@lists.linux.net.cn>\n"
@@ -63,63 +63,63 @@ msgstr "<b>搜寻：</b>"
 msgid "Show Categories"
 msgstr "类别"
 
-#: ../src/xfce4-appfinder.c:114
+#: ../src/xfce4-appfinder.c:121
 msgid "All"
 msgstr "全部"
 
-#: ../src/xfce4-appfinder.c:115
+#: ../src/xfce4-appfinder.c:122
 msgid "Core"
 msgstr "核心"
 
-#: ../src/xfce4-appfinder.c:116
+#: ../src/xfce4-appfinder.c:123
 msgid "Development"
 msgstr "开发"
 
-#: ../src/xfce4-appfinder.c:117
+#: ../src/xfce4-appfinder.c:124
 msgid "Office"
 msgstr "办公"
 
-#: ../src/xfce4-appfinder.c:118
+#: ../src/xfce4-appfinder.c:125
 msgid "Graphics"
 msgstr "图形"
 
-#: ../src/xfce4-appfinder.c:119
+#: ../src/xfce4-appfinder.c:126
 msgid "Network"
 msgstr "网络"
 
-#: ../src/xfce4-appfinder.c:120
+#: ../src/xfce4-appfinder.c:127
 msgid "AudioVideo"
 msgstr "声音和图象"
 
-#: ../src/xfce4-appfinder.c:121
+#: ../src/xfce4-appfinder.c:128
 msgid "Game"
 msgstr "游戏"
 
-#: ../src/xfce4-appfinder.c:122
+#: ../src/xfce4-appfinder.c:129
 msgid "Education"
 msgstr "教育"
 
-#: ../src/xfce4-appfinder.c:123
+#: ../src/xfce4-appfinder.c:130
 msgid "System"
 msgstr "系统"
 
-#: ../src/xfce4-appfinder.c:124
+#: ../src/xfce4-appfinder.c:131
 msgid "Filemanager"
 msgstr "文件管理器"
 
-#: ../src/xfce4-appfinder.c:125
+#: ../src/xfce4-appfinder.c:132
 msgid "Utility"
 msgstr "工具程序"
 
-#: ../src/xfce4-appfinder.c:269
+#: ../src/xfce4-appfinder.c:291
 msgid "Categories"
 msgstr "类别"
 
-#: ../src/xfce4-appfinder.c:561
+#: ../src/xfce4-appfinder.c:583
 msgid "No items available"
 msgstr ""
 
-#: ../src/xfce4-appfinder.c:601
+#: ../src/xfce4-appfinder.c:623
 msgid "Sorry, no match for searched text."
 msgstr ""
 
