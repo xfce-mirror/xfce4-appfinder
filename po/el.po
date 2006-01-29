@@ -12,13 +12,13 @@ msgstr ""
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-7\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
-msgstr "Δεν ήταν δυνατή η εκτέλεση της επιλεγμένης εφαρμογής"
+msgstr "Ξ”ΞµΞ½ Ξ®Ο„Ξ±Ξ½ Ξ΄Ο…Ξ½Ξ±Ο„Ξ® Ξ· ΞµΞΊΟ„Ξ­Ξ»ΞµΟƒΞ· Ο„Ξ·Ο‚ ΞµΟ€ΞΉΞ»ΞµΞ³ΞΌΞ­Ξ½Ξ·Ο‚ ΞµΟ†Ξ±ΟΞΌΞΏΞ³Ξ®Ο‚"
 
 #: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: ../src/main.c:272
 msgid "<b>Name</b>"
-msgstr "<b>Όνομα</b>"
+msgstr "<b>ΞΞ½ΞΏΞΌΞ±</b>"
 
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
@@ -34,35 +34,35 @@ msgstr "N/A"
 
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
-msgstr "<b>Σχόλιο</b>"
+msgstr "<b>Ξ£Ο‡ΟΞ»ΞΉΞΏ</b>"
 
 #: ../src/main.c:329
 msgid "<b>Categories</b>"
-msgstr "<b>Κατηγορίες</b>"
+msgstr "<b>ΞΞ±Ο„Ξ·Ξ³ΞΏΟΞ―ΞµΟ‚</b>"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
-msgstr "<b>Εντολή</b>"
+msgstr "<b>Ξ•Ξ½Ο„ΞΏΞ»Ξ®</b>"
 
 #: ../src/main.c:389
 msgid "Run program"
-msgstr "Εκτέλεση προγράμματος"
+msgstr "Ξ•ΞΊΟ„Ξ­Ξ»ΞµΟƒΞ· Ο€ΟΞΏΞ³ΟΞ¬ΞΌΞΌΞ±Ο„ΞΏΟ‚"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr "Περισσότερες Πληροφορίες..."
+msgstr "Ξ ΞµΟΞΉΟƒΟƒΟΟ„ΞµΟΞµΟ‚ Ξ Ξ»Ξ·ΟΞΏΟ†ΞΏΟΞ―ΞµΟ‚..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
-msgstr "<b>Αναζήτηση:</b>"
+msgstr "<b>Ξ‘Ξ½Ξ±Ξ¶Ξ®Ο„Ξ·ΟƒΞ·:</b>"
 
 #: ../src/main.c:466
 msgid "Show Categories"
-msgstr "Προβολή Κατηγοριών"
+msgstr "Ξ ΟΞΏΞ²ΞΏΞ»Ξ® ΞΞ±Ο„Ξ·Ξ³ΞΏΟΞΉΟΞ½"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
-msgstr "Όλα"
+msgstr "ΞΞ»Ξ±"
 
 #: ../src/xfce4-appfinder.c:122
 msgid "Core"
@@ -70,55 +70,55 @@ msgstr ""
 
 #: ../src/xfce4-appfinder.c:123
 msgid "Development"
-msgstr "Ανάπτυξη Εφαρμογών"
+msgstr "Ξ‘Ξ½Ξ¬Ο€Ο„Ο…ΞΎΞ· Ξ•Ο†Ξ±ΟΞΌΞΏΞ³ΟΞ½"
 
 #: ../src/xfce4-appfinder.c:124
 msgid "Office"
-msgstr "Γραφείο"
+msgstr "Ξ“ΟΞ±Ο†ΞµΞ―ΞΏ"
 
 #: ../src/xfce4-appfinder.c:125
 msgid "Graphics"
-msgstr "Γραφικά"
+msgstr "Ξ“ΟΞ±Ο†ΞΉΞΊΞ¬"
 
 #: ../src/xfce4-appfinder.c:126
 msgid "Network"
-msgstr "Δίκτυο"
+msgstr "Ξ”Ξ―ΞΊΟ„Ο…ΞΏ"
 
 #: ../src/xfce4-appfinder.c:127
 msgid "AudioVideo"
-msgstr "ΉχοςΒίντεο"
+msgstr "Ξ‰Ο‡ΞΏΟ‚Ξ’Ξ―Ξ½Ο„ΞµΞΏ"
 
 #: ../src/xfce4-appfinder.c:128
 msgid "Game"
-msgstr "Παιχνίδια"
+msgstr "Ξ Ξ±ΞΉΟ‡Ξ½Ξ―Ξ΄ΞΉΞ±"
 
 #: ../src/xfce4-appfinder.c:129
 msgid "Education"
-msgstr "Εκπαιδευτικές Εφαρμογές"
+msgstr "Ξ•ΞΊΟ€Ξ±ΞΉΞ΄ΞµΟ…Ο„ΞΉΞΊΞ­Ο‚ Ξ•Ο†Ξ±ΟΞΌΞΏΞ³Ξ­Ο‚"
 
 #: ../src/xfce4-appfinder.c:130
 msgid "System"
-msgstr "Σύστημα"
+msgstr "Ξ£ΟΟƒΟ„Ξ·ΞΌΞ±"
 
 #: ../src/xfce4-appfinder.c:131
 msgid "Filemanager"
-msgstr "Διαχειριστής Αρχείων"
+msgstr "Ξ”ΞΉΞ±Ο‡ΞµΞΉΟΞΉΟƒΟ„Ξ®Ο‚ Ξ‘ΟΟ‡ΞµΞ―Ο‰Ξ½"
 
 #: ../src/xfce4-appfinder.c:132
 msgid "Utility"
-msgstr "Βοηθητικά"
+msgstr "Ξ’ΞΏΞ·ΞΈΞ·Ο„ΞΉΞΊΞ¬"
 
 #: ../src/xfce4-appfinder.c:291
 msgid "Categories"
-msgstr "Κατηγορίες"
+msgstr "ΞΞ±Ο„Ξ·Ξ³ΞΏΟΞ―ΞµΟ‚"
 
 #: ../src/xfce4-appfinder.c:583
 msgid "No items available"
-msgstr "Δεν υπάρχουν διαθέσιμα αντικείμενα"
+msgstr "Ξ”ΞµΞ½ Ο…Ο€Ξ¬ΟΟ‡ΞΏΟ…Ξ½ Ξ΄ΞΉΞ±ΞΈΞ­ΟƒΞΉΞΌΞ± Ξ±Ξ½Ο„ΞΉΞΊΞµΞ―ΞΌΞµΞ½Ξ±"
 
 #: ../src/xfce4-appfinder.c:623
 msgid "Sorry, no match for searched text."
-msgstr "Λυπάμαι, δεν βρέθηκε ταίρι."
+msgstr "Ξ›Ο…Ο€Ξ¬ΞΌΞ±ΞΉ, Ξ΄ΞµΞ½ Ξ²ΟΞ­ΞΈΞ·ΞΊΞµ Ο„Ξ±Ξ―ΟΞΉ."
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
@@ -126,4 +126,4 @@ msgstr ""
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr "Αναζήτηση Εφαρμογών για το Xfce 4"
+msgstr "Ξ‘Ξ½Ξ±Ξ¶Ξ®Ο„Ξ·ΟƒΞ· Ξ•Ο†Ξ±ΟΞΌΞΏΞ³ΟΞ½ Ξ³ΞΉΞ± Ο„ΞΏ Xfce 4"
