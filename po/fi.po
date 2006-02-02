@@ -1,15 +1,15 @@
-# translation of Xfce4-appfinder to Finnish
+# translation of Xfce4-appfinder into Finnish
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Juha Kautto <juha@xfce.org>, 2004.
-# Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2005.
+# Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2005-2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-26 20:03+0900\n"
-"PO-Revision-Date: 2005-10-15 01:40+0900\n"
+"POT-Creation-Date: 2006-02-01 11:06+0200\n"
+"PO-Revision-Date: 2006-02-01 11:09+0900\n"
 "Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -18,50 +18,47 @@ msgstr ""
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
-msgstr ""
+msgstr "Valittua sovellusta ei voi suorittaa"
 
 #: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr ""
+msgstr "Xfce 4 Sovellusetsin"
 
 #: ../src/main.c:272
-#, fuzzy
 msgid "<b>Name</b>"
-msgstr "<b>Etsi:</b>"
+msgstr "<b>Nimi</b>"
 
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
-msgstr ""
+msgstr "-"
 
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
-msgstr ""
+msgstr "<b>Kommentti</b>"
 
 #: ../src/main.c:329
-#, fuzzy
 msgid "<b>Categories</b>"
-msgstr "Kategoriat"
+msgstr "<b>Kategoriat</b>"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
-msgstr ""
+msgstr "<b>Komento</b>"
 
 #: ../src/main.c:389
 msgid "Run program"
-msgstr ""
+msgstr "Suorita sovellus"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr ""
+msgstr "Lisätietoja..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>Etsi:</b>"
 
 #: ../src/main.c:466
-#, fuzzy
 msgid "Show Categories"
-msgstr "Kategoriat"
+msgstr "Näytä kategoriat"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
@@ -117,11 +114,11 @@ msgstr "Kategoriat"
 
 #: ../src/xfce4-appfinder.c:583
 msgid "No items available"
-msgstr ""
+msgstr "Ei kohteita saatavilla"
 
 #: ../src/xfce4-appfinder.c:623
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "Haku ei tuottanut tuloksia"
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
@@ -129,4 +126,4 @@ msgstr "Appfinder"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr "Etsi asennettuja ohjelmia koneesta"
+msgstr "Sovellusten hakutyökalu Xfce 4:lle"
