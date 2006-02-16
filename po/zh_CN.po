@@ -1,33 +1,33 @@
-# #-#-#-#-#  zh_CN.po (xfce4-appfinder 4.3.1)  #-#-#-#-#
-# Simplified Chinese translations for xfce4-appfinder package.
+# ----zh_CN.po (xfce4-appfinder 4.3.1)  ----Simplified Chinese translations for xfce4-appfinder package.
 # Copyright (C) 2002-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Yongtao Yang <yongtao.yang@telia.com>, 2004.
-#
+# Huang Huan <unicon221@gmail.com>, 2006.
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-26 20:03+0900\n"
-"PO-Revision-Date: 2005-10-15 01:57+0900\n"
-"Last-Translator: Yongtao Yang <yongtao.yang@telia.com>\n"
-"Language-Team: Simplified Chinese <i18n-translation@lists.linux.net.cn>\n"
+"PO-Revision-Date: 2006-02-16 22:20+0800\n"
+"Last-Translator: Huang Huan <unicon221@gmail.com>\n"
+"Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
-msgstr ""
+msgstr "不能执行所选程序"
 
 #: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr ""
+msgstr "Xfce 4 程序查找工具"
 
 #: ../src/main.c:272
-#, fuzzy
 msgid "<b>Name</b>"
-msgstr "<b>搜寻：</b>"
+msgstr "<b>名称</b>"
 
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
@@ -35,33 +35,31 @@ msgstr ""
 
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
-msgstr ""
+msgstr "<b>注释</b>"
 
 #: ../src/main.c:329
-#, fuzzy
 msgid "<b>Categories</b>"
-msgstr "类别"
+msgstr "<b>类别</b>"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
-msgstr ""
+msgstr "<b>命令</b>"
 
 #: ../src/main.c:389
 msgid "Run program"
-msgstr ""
+msgstr "运行程序"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr ""
+msgstr "更多信息..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>搜寻：</b>"
 
 #: ../src/main.c:466
-#, fuzzy
 msgid "Show Categories"
-msgstr "类别"
+msgstr "显示类别"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
@@ -117,16 +115,17 @@ msgstr "类别"
 
 #: ../src/xfce4-appfinder.c:583
 msgid "No items available"
-msgstr ""
+msgstr "无可用项目"
 
 #: ../src/xfce4-appfinder.c:623
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "抱歉，没有找到。"
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
-msgstr ""
+msgstr "程序查找工具"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr ""
+msgstr "Xfce 4的程序查找工具"
+
