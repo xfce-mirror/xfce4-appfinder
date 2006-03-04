@@ -14,7 +14,7 @@ msgstr ""
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
@@ -127,4 +127,3 @@ msgstr "Appfinder"
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
 msgstr "Näitab paigaldatud rakenduste nimekirja"
-
