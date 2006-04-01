@@ -2,14 +2,15 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Stavros Giannouris <stavrosg2002@freemail.gr>, 2005.
+# Stathis Kamperis <ekamperi@auth.gr>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.3.1\n"
+"Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-26 20:03+0900\n"
-"PO-Revision-Date: 2005-11-21 18:31+0200\n"
-"Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
+"PO-Revision-Date: 2006-03-30 14:16+0300\n"
+"Last-Translator: Stathis Kamperis <ekamperi@auth.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,7 +51,7 @@ msgstr "Εκτέλεση προγράμματος"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr "Περισσότερες Πληροφορίες..."
+msgstr "Περισσότερες πληροφορίες..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
@@ -58,7 +59,7 @@ msgstr "<b>Αναζήτηση:</b>"
 
 #: ../src/main.c:466
 msgid "Show Categories"
-msgstr "Προβολή Κατηγοριών"
+msgstr "Προβολή κατηγοριών"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
@@ -66,11 +67,11 @@ msgstr "Όλα"
 
 #: ../src/xfce4-appfinder.c:122
 msgid "Core"
-msgstr ""
+msgstr "Πυρήνας"
 
 #: ../src/xfce4-appfinder.c:123
 msgid "Development"
-msgstr "Ανάπτυξη Εφαρμογών"
+msgstr "Ανάπτυξη εφαρμογών"
 
 #: ../src/xfce4-appfinder.c:124
 msgid "Office"
@@ -94,7 +95,7 @@ msgstr "Παιχνίδια"
 
 #: ../src/xfce4-appfinder.c:129
 msgid "Education"
-msgstr "Εκπαιδευτικές Εφαρμογές"
+msgstr "Εκπαιδευτικές εφαρμογές"
 
 #: ../src/xfce4-appfinder.c:130
 msgid "System"
@@ -102,7 +103,7 @@ msgstr "Σύστημα"
 
 #: ../src/xfce4-appfinder.c:131
 msgid "Filemanager"
-msgstr "Διαχειριστής Αρχείων"
+msgstr "Διαχειριστής αρχείων"
 
 #: ../src/xfce4-appfinder.c:132
 msgid "Utility"
@@ -118,7 +119,7 @@ msgstr "Δεν υπάρχουν διαθέσιμα αντικείμενα"
 
 #: ../src/xfce4-appfinder.c:623
 msgid "Sorry, no match for searched text."
-msgstr "Λυπάμαι, δεν βρέθηκε ταίρι."
+msgstr "Λυπάμαι, δε βρέθηκε ταίρι."
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
@@ -126,4 +127,4 @@ msgstr ""
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr "Αναζήτηση Εφαρμογών για το Xfce 4"
+msgstr "Αναζήτηση εφαρμογών για το Xfce 4"
