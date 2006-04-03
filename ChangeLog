@@ -1,3 +1,110 @@
+2006-03-05 06:23  daichi
+
+	* libxfcegui4/branches/xfce_4_2/configure.ac,
+	  libxfcegui4/branches/xfce_4_2/po/sq.po,
+	  xfcalendar/branches/xfce_4_2/configure.ac,
+	  xfcalendar/branches/xfce_4_2/po/sq.po,
+	  xfce-mcs-manager/branches/xfce_4_2/configure.ac,
+	  xfce-mcs-manager/branches/xfce_4_2/po/sq.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/configure.ac,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/sq.po,
+	  xfce-utils/branches/xfce_4_2/configure.ac,
+	  xfce-utils/branches/xfce_4_2/po/sq.po,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.az,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.ca,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.de,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.es,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.eu,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.fi,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.fr,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.he,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.az,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.ca,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.de,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.es,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.eu,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.fi,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.fr,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.it,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.ja,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.lt,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.ro,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.ru,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.sk,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.vi,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.zh_TW,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.it,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.ja,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.lt,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.ro,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.ru,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.sk,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.uk,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.vi,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.zh_TW,
+	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
+	  xfce4-appfinder/branches/xfce_4_2/po/sq.po,
+	  xfce4-iconbox/branches/xfce_4_2/configure.ac,
+	  xfce4-iconbox/branches/xfce_4_2/po/sq.po,
+	  xfce4-mixer/branches/xfce_4_2/configure.ac,
+	  xfce4-mixer/branches/xfce_4_2/po/sq.po,
+	  xfce4-panel/branches/xfce_4_2/configure.ac,
+	  xfce4-panel/branches/xfce_4_2/po/sq.po,
+	  xfce4-session/branches/xfce_4_2/configure.ac,
+	  xfce4-session/branches/xfce_4_2/po/sq.po,
+	  xfce4-toys/branches/xfce_4_2/configure.ac,
+	  xfce4-toys/branches/xfce_4_2/po/sq.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/configure.ac,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/sq.po,
+	  xfdesktop/branches/xfce_4_2/configure.ac,
+	  xfdesktop/branches/xfce_4_2/po/sq.po,
+	  xffm/branches/xfce_4_2/configure.ac,
+	  xffm/branches/xfce_4_2/po/sq.po,
+	  xfprint/branches/xfce_4_2/configure.ac,
+	  xfprint/branches/xfce_4_2/po/sq.po,
+	  xfwm4/branches/xfce_4_2/configure.ac,
+	  xfwm4/branches/xfce_4_2/po/sq.po: Added Albanian translations by
+	  Besnik Bleta <besnik@spymac.com>.
+
+2005-11-14 23:54  daichi
+
+	* libxfcegui4/branches/xfce_4_2/po/ChangeLog,
+	  xfcalendar/branches/xfce_4_2/po/ChangeLog,
+	  xfce-mcs-manager/branches/xfce_4_2/po/ChangeLog,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/ChangeLog,
+	  xfce-utils/branches/xfce_4_2/po/ChangeLog,
+	  xfce4-appfinder/branches/xfce_4_2/po/ChangeLog,
+	  xfce4-iconbox/branches/xfce_4_2/po/ChangeLog,
+	  xfce4-mixer/branches/xfce_4_2/po/ChangeLog,
+	  xfce4-panel/branches/xfce_4_2/po/ChangeLog,
+	  xfce4-session/branches/xfce_4_2/po/ChangeLog,
+	  xfce4-toys/branches/xfce_4_2/po/ChangeLog,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/ChangeLog,
+	  xfdesktop/branches/xfce_4_2/po/ChangeLog,
+	  xffm/branches/xfce_4_2/po/ChangeLog,
+	  xfprint/branches/xfce_4_2/po/ChangeLog,
+	  xfwm4/branches/xfce_4_2/po/ChangeLog: Updated.
+
+2005-11-05 14:18  olivier
+
+	* xfce4-appfinder/branches/xfce_4_2/ChangeLog: Update ChangeLog
+
+2005-11-05 13:13  moe
+
+	* xfce4-appfinder/branches/xfce_4_2/po/de.po,
+	  xfce4-mixer/branches/xfce_4_2/po/de.po,
+	  xfprint/branches/xfce_4_2/po/de.po,
+	  xfwm4/branches/xfce_4_2/po/de.po: Updated german translations
+	  for the upcoming release.
+
+2005-11-04 23:39  daichi
+
+	* xfce4-appfinder/branches/xfce_4_2/po/pt_BR.po: Updated Brazilian
+	  Portuguese translations by
+	  Adriano Winter Bess <awbess@gmail.com>.
+
 2005-11-03 13:31  daichi
 
 	* xfce4-appfinder/branches/xfce_4_2/po/ro.po: Updated Romanian
@@ -52,8 +159,8 @@
 2005-10-27 19:30  paurullan
 
 	* xfce4-appfinder/branches/xfce_4_2/po/ca.po: updated
-	  xfce4-appfinder, now fully translated -- paurullan@bulma.net (ca
-	  translator)
+	  xfce4-appfinder, now fully translated
+	  -- paurullan@bulma.net (ca translator)
 
 2005-10-21 14:46  daichi
 
@@ -72,8 +179,9 @@
 	  xfce4-mailwatch-plugin/trunk/po/eu.po,
 	  xfce4-panel/branches/xfce_4_2/po/it.po,
 	  xfce4-session/branches/xfce_4_2/po/it.po: * Modified initial
-	  header strings using template by `msginit'. * Modified initial
-	  comment strings using template by `msginit'.
+	  header strings using template by `msginit'.
+	  
+	  * Modified initial comment strings using template by `msginit'.
 
 2005-10-20 22:37  daichi
 
@@ -244,7 +352,9 @@
 2005-10-11 16:41  daichi
 
 	* xfce4-appfinder/branches/xfce_4_2/src/main.c: * Corrected a
-	  misspelling. (bug #1164) * Removed executable attribute.
+	  misspelling. (bug #1164)
+	  
+	  * Removed executable attribute.
 
 2005-10-11 08:56  daichi
 
@@ -301,20 +411,29 @@
 2005-10-09 09:13  daichi
 
 	* xfce-mcs-manager/branches/xfce_4_2/xfce-setting-show/xfce-settings-manager.desktop,
+	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/display_plugin/xfce-display-settings.desktop,
+	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/keyboard_plugin/xfce-keyboard-settings.desktop,
+	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/mouse_plugin/xfce-mouse-settings.desktop,
+	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/ui_plugin/xfce-ui-settings.desktop,
 	  xfce-utils/branches/xfce_4_2/gdm/xfce.desktop,
 	  xfce-utils/branches/xfce_4_2/xftaskbar/plugin/xfce-taskbar-settings.desktop,
 	  xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop,
 	  xfce4-iconbox/branches/xfce_4_2/settings/xfce-iconbox-settings.desktop,
+	  
 	  xfce4-mixer/branches/xfce_4_2/settings/xfce-mixer-settings.desktop,
+	  
 	  xfce4-panel/branches/xfce_4_2/settings/xfce-panel-settings.desktop,
+	  
 	  xfce4-session/branches/xfce_4_2/settings/session/xfce-session-settings.desktop,
+	  
 	  xfce4-session/branches/xfce_4_2/settings/splash/xfce-splash-settings.desktop,
 	  xfdesktop/branches/xfce_4_2/menueditor/xfce-menueditor.desktop,
 	  xfdesktop/branches/xfce_4_2/settings/xfce-backdrop-settings.desktop,
+	  
 	  xffm/branches/xfce_4_2/plugin-mcs/xfce-filemanager-settings.desktop,
 	  xffm/branches/xfce_4_2/src/Xfbook.desktop,
 	  xffm/branches/xfce_4_2/src/Xfdiff.desktop,
@@ -325,21 +444,35 @@
 	  xffm/branches/xfce_4_2/src/Xfsamba.desktop,
 	  xffm/branches/xfce_4_2/src/Xftree.desktop,
 	  xfprint/branches/xfce_4_2/mcs-plugin/xfce-xfprint-settings.desktop,
+	  
 	  xfprint/branches/xfce_4_2/xfprint-manager/xfprint-manager.desktop,
 	  xfprint/branches/xfce_4_2/xfprint/xfprint.desktop,
 	  xfwm4/branches/xfce_4_2/mcs-plugin/xfce-wm-settings.desktop,
 	  xfwm4/branches/xfce_4_2/mcs-plugin/xfce-workspaces-settings.desktop:
-	  .desktop * Added Swedish translations by Alexander Toresson
-	  <alexander.toresson@gmail.com>. * Added Japanese translations by
-	  Daichi Kawahata <daichi@xfce.org>. * Changed orders
-	  alphabetically at each places. * Fixed errors emitted by
-	  'desktop-file-validate', however there're still errors:
-	  Xfmime_edit.desktop: warning: the fields "Name" and "Comment"
-	  have the same value xfce-settings-manager.desktop: warning: the
-	  fields "Name" and "Comment" have the same value
+	  .desktop
+	  
+	  * Added Swedish translations by
+	  Alexander Toresson <alexander.toresson@gmail.com>.
+	  
+	  * Added Japanese translations by
+	  Daichi Kawahata <daichi@xfce.org>.
+	  
+	  * Changed orders alphabetically at each places.
+	  
+	  * Fixed errors emitted by 'desktop-file-validate', however
+	  there're
+	  still errors:
+	  
+	  Xfmime_edit.desktop: warning: the fields "Name" and
+	  "Comment" have the same value
+	  xfce-settings-manager.desktop: warning: the fields "Name"
+	  and "Comment" have the same value
 	  xfce4-appfinder.desktop: warning: the fields "Name" and
-	  "Comment" have the same value xfce.desktop * Removed executable
-	  attribute.
+	  "Comment" have the same value
+	  
+	  xfce.desktop
+	  
+	  * Removed executable attribute.
 
 2005-10-09 07:00  daichi
 
@@ -362,8 +495,8 @@
 	  xffm/branches/xfce_4_2/po/sv.po,
 	  xfprint/branches/xfce_4_2/po/sv.po,
 	  xfwm4/branches/xfce_4_2/po/sv.po: Added and updated Swedish
-	  translations by Alexander Toresson
-	  <alexander.toresson@gmail.com>.
+	  translations by
+	  Alexander Toresson <alexander.toresson@gmail.com>.
 
 2005-10-07 21:46  daichi
 
@@ -1121,8 +1254,11 @@
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/images,
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/images/Makefile.am,
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/images/settings_manager.png,
+	  
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/images/smgr_from_root_menu.png,
+	  
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/images/smgr_from_setup_button.png,
+	  
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/xfce-mcs-manager.html,
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/xfce-mcs-manager.xml,
 	  xfce-mcs-plugins/branches/xfce_4_2/configure.ac,
@@ -1132,10 +1268,15 @@
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images,
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images/Makefile.am,
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images/display_preferences.png,
+	  
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images/font_selection.png,
+	  
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images/keyboard_settings.png,
+	  
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images/mouse_settings.png,
+	  
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images/user_interface_settings.png,
+	  
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/xfce-mcs-plugins.html,
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/xfce-mcs-plugins.xml,
 	  xfce-utils/branches/xfce_4_2/configure.ac,
@@ -1148,8 +1289,11 @@
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/Makefile.am,
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/images,
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/images/Makefile.am,
+	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/images/about-dialog.png,
+	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/images/run-dialog.png,
+	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/images/taskbar_settings.png,
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/xfce-utils.html,
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/xfce-utils.xml,
@@ -1162,17 +1306,27 @@
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/LGPL.html,
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/LGPL.xml,
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/Makefile.am,
+	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/copyright.xml,
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/images,
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/images/Makefile.am,
+	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/images/default-session.png,
+	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/images/link_xfce.jpg,
+	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-components.html,
+	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-copyright.html,
+	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-install.html,
+	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-intro.html,
+	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-use.html,
+	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-user-guide.html,
+	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-user-guide.xml,
 	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
 	  xfce4-appfinder/branches/xfce_4_2/doc/Makefile.am,
@@ -1181,7 +1335,9 @@
 	  xfce4-appfinder/branches/xfce_4_2/doc/he/images,
 	  xfce4-appfinder/branches/xfce_4_2/doc/he/images/Makefile.am,
 	  xfce4-appfinder/branches/xfce_4_2/doc/he/images/appfinder-handle-popup.png,
+	  
 	  xfce4-appfinder/branches/xfce_4_2/doc/he/images/appfinder-item-popup.png,
+	  
 	  xfce4-appfinder/branches/xfce_4_2/doc/he/images/default_appfinder.png,
 	  xfce4-appfinder/branches/xfce_4_2/doc/he/xfce4-appfinder.html,
 	  xfce4-appfinder/branches/xfce_4_2/doc/he/xfce4-appfinder.xml,
@@ -1197,9 +1353,13 @@
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/handle-popup.png,
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/item-popup.png,
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/launcher-properties.png,
+	  
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/mailcheck-properties.png,
+	  
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/menuitem-properties.png,
+	  
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/nooptions-properties.png,
+	  
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/pager-properties.png,
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/panel-settings.png,
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/systembuttons-properties.png,
@@ -1321,9 +1481,13 @@
 	  xfce4-appfinder/branches/xfce_4_2/po/tr.po,
 	  xfce4-appfinder/branches/xfce_4_2/po/uk.po,
 	  xfce4-appfinder/branches/xfce_4_2/po/zh_CN.po: * Bumped version
-	  at the "Project-Id-Version: " for the next release. * Added fall
-	  back address at the "Language-Team: ", according to the
+	  at the "Project-Id-Version: " for the next release.
+	  
+	  * Added fall back address at the "Language-Team: ", according to
+	  the
+	  
 	  http://www.iro.umontreal.ca/translation/registry.cgi?team=index
+	  
 	  * Modified initial comment strings using template by "msginit".
 
 2005-09-26 03:24  daichi
@@ -2035,7 +2199,9 @@
 	  xfwm4/branches/xfce_4_2/po/vi.po,
 	  xfwm4/branches/xfce_4_2/po/zh_CN.po,
 	  xfwm4/branches/xfce_4_2/po/zh_TW.po: Sorry, I really hope this
-	  doesn't cause disaster. * Updated with the re-created POT files.
+	  doesn't cause disaster.
+	  
+	  * Updated with the re-created POT files.
 	  * Discarded obsolete translations.
 
 2005-09-21 02:20  daichi
@@ -2055,8 +2221,10 @@
 	  xfdesktop/branches/xfce_4_2/po/ja.po,
 	  xffm/branches/xfce_4_2/po/ja.po,
 	  xfprint/branches/xfce_4_2/po/ja.po,
-	  xfwm4/branches/xfce_4_2/po/ja.po: Added initial '$Id$'. Bumped
-	  version at the 'Project-Id-Version: ' for the next release.
+	  xfwm4/branches/xfce_4_2/po/ja.po: Added initial '$Id$'.
+	  
+	  Bumped version at the 'Project-Id-Version: ' for the next
+	  release.
 
 2005-09-21 02:04  daichi
 
@@ -2077,12 +2245,19 @@
 	  xffm/branches/xfce_4_2/po/pl.po,
 	  xfprint/branches/xfce_4_2/po/pl.po,
 	  xfwm4/branches/xfce_4_2/po/pl.po: Added Polish translations by
-	  by Piotr Malinski. Updated Polish translations by Piotr
-	  Malinski. Added fall back address at the 'Language-Team: ',
-	  according to the
+	  by Piotr Malinski.
+	  
+	  Updated Polish translations by Piotr Malinski.
+	  
+	  Added fall back address at the 'Language-Team: ', according to
+	  the
+	  
 	  http://www.iro.umontreal.ca/translation/registry.cgi?team=index
+	  
 	  Bumped version at the 'Project-Id-Version: ' for the next
-	  release. Modified initial comment strings.
+	  release.
+	  
+	  Modified initial comment strings.
 
 2005-09-10 16:57  daichi
 
@@ -2101,26 +2276,37 @@
 	  xfdesktop/branches/xfce_4_2/po/pt_BR.po,
 	  xffm/branches/xfce_4_2/po/pt_BR.po,
 	  xfprint/branches/xfce_4_2/po/pt_BR.po,
-	  xfwm4/branches/xfce_4_2/po/pt_BR.po: Corrected a typo. Bumped
-	  version at the 'Project-Id-Version: ' for the next release.
+	  xfwm4/branches/xfce_4_2/po/pt_BR.po: Corrected a typo.
+	  
+	  Bumped version at the 'Project-Id-Version: ' for the next
+	  release.
+	  
 	  Modified initial comment strings.
 
 2005-09-02 16:26  pollux
 
 	* xfce-mcs-manager/branches/xfce_4_2/xfce-setting-show/xfce-settings-manager.desktop,
+	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/display_plugin/xfce-display-settings.desktop,
+	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/keyboard_plugin/xfce-keyboard-settings.desktop,
+	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/mouse_plugin/xfce-mouse-settings.desktop,
+	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/ui_plugin/xfce-ui-settings.desktop,
 	  xfce-utils/branches/xfce_4_2/gdm/xfce.desktop,
 	  xfce-utils/branches/xfce_4_2/xftaskbar/plugin/xfce-taskbar-settings.desktop,
 	  xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop,
 	  xfce4-mixer/branches/xfce_4_2/settings/xfce-mixer-settings.desktop,
+	  
 	  xfce4-panel/branches/xfce_4_2/settings/xfce-panel-settings.desktop,
+	  
 	  xfce4-session/branches/xfce_4_2/settings/session/xfce-session-settings.desktop,
+	  
 	  xfce4-session/branches/xfce_4_2/settings/splash/xfce-splash-settings.desktop,
 	  xfdesktop/branches/xfce_4_2/menueditor/xfce-menueditor.desktop,
 	  xfdesktop/branches/xfce_4_2/settings/xfce-backdrop-settings.desktop,
+	  
 	  xffm/branches/xfce_4_2/plugin-mcs/xfce-filemanager-settings.desktop,
 	  xffm/branches/xfce_4_2/src/Xfbook.desktop,
 	  xffm/branches/xfce_4_2/src/Xfdiff.desktop,
@@ -2133,9 +2319,9 @@
 	  xfprint/branches/xfce_4_2/xfprint-manager/xfprint-manager.desktop,
 	  xfwm4/branches/xfce_4_2/mcs-plugin/xfce-wm-settings.desktop,
 	  xfwm4/branches/xfce_4_2/mcs-plugin/xfce-workspaces-settings.desktop:
-	  * Added Greek translations by Stavros Giannouris. * Changed
-	  language order alphabetically. * Removed extra trailer white
-	  space.
+	  * Added Greek translations by Stavros Giannouris.
+	  * Changed language order alphabetically.
+	  * Removed extra trailer white space.
 
 2005-08-29 21:42  daichi
 
@@ -2155,8 +2341,8 @@
 	  xffm/branches/xfce_4_2/po/ku.po,
 	  xfprint/branches/xfce_4_2/po/ku.po,
 	  xfwm4/branches/xfce_4_2/po/ku.po: Added Kurdish translations by
-	  Erdal Ronahi, in which removed unnecessary strings from initial
-	  comments.
+	  Erdal Ronahi, in which
+	  removed unnecessary strings from initial comments.
 
 2005-08-29 21:34  daichi
 
@@ -2175,8 +2361,8 @@
 	  xffm/branches/xfce_4_2/configure.ac,
 	  xfprint/branches/xfce_4_2/configure.ac,
 	  xfwm4/branches/xfce_4_2/configure.ac: Added 'ku' at BM_I18N().
-	  Changed language code order alphabetically. Wrapped lines so
-	  they're within the 72 characters per line.
+	  Changed language code order alphabetically.
+	  Wrapped lines so they're within the 72 characters per line.
 
 2005-08-19 14:35  daichi
 
@@ -2192,9 +2378,13 @@
 	  xfce4-appfinder/branches/xfce_4_2/po/nl.po,
 	  xfce4-appfinder/branches/xfce_4_2/po/pt_BR.po,
 	  xfce4-appfinder/branches/xfce_4_2/po/zh_CN.po: Fixed errors
-	  emitted by 'msgfmt -c'. Added fall back address at the
-	  'Language-Team: ', according to the
+	  emitted by 'msgfmt -c'.
+	  
+	  Added fall back address at the 'Language-Team: ', according to
+	  the
+	  
 	  http://www.iro.umontreal.ca/translation/registry.cgi?team=index
+	  
 	  Modified initial comment strings with template by 'msginit'.
 
 2005-08-18 12:08  daichi
@@ -2447,10 +2637,13 @@
 	  xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop,
 	  xfce4-panel/branches/xfce_4_2/contents.xml.ro,
 	  xfce4-panel/branches/xfce_4_2/settings/xfce-panel-settings.desktop,
+	  
 	  xfce4-session/branches/xfce_4_2/settings/session/xfce-session-settings.desktop,
+	  
 	  xfce4-session/branches/xfce_4_2/settings/splash/xfce-splash-settings.desktop,
 	  xfdesktop/branches/xfce_4_2/po/ro.po,
 	  xfprint/branches/xfce_4_2/mcs-plugin/xfce-xfprint-settings.desktop,
+	  
 	  xfprint/branches/xfce_4_2/xfprint-manager/xfprint-manager.desktop,
 	  xfprint/branches/xfce_4_2/xfprint/xfprint.desktop,
 	  xfwm4/branches/xfce_4_2/mcs-plugin/xfce-wm-settings.desktop,
@@ -2607,7 +2800,9 @@
 	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/Makefile.am,
 	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/Makefile.in,
 	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/appfinder-handle-popup.png,
+	  
 	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/appfinder-item-popup.png,
+	  
 	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/default_appfinder.png,
 	  xfce4-appfinder/branches/xfce_4_2/doc/fr/xfce4-appfinder.html,
 	  xfce4-appfinder/branches/xfce_4_2/doc/fr/xfce4-appfinder.xml:
@@ -3025,8 +3220,9 @@
 	  xfce4-appfinder/trunk/missing,
 	  xfce4-appfinder/trunk/src/Makefile.in: Update
 	  automake/autoconf/libtool/gettext versions to generate the
-	  configure scripts and Makefiles, Update versions of all packages
-	  to 4.1.99.1 (ie 4.2 RC1), Update ChangeLogs.
+	  configure scripts and Makefiles,
+	  Update versions of all packages to 4.1.99.1 (ie 4.2 RC1),
+	  Update ChangeLogs.
 
 2004-10-30 19:03  olivier
 
@@ -3130,7 +3326,8 @@
 	  xfce4-appfinder/trunk/m4/glib-gettext.m4,
 	  xfce4-appfinder/trunk/m4/pkg.m4,
 	  xfce4-appfinder/trunk/src/Makefile.in: Added --enable-final (-O1
-	  for GNU ld) as per Jaspers request. Added missing m4 files.
+	  for GNU ld) as per Jaspers request. Added missing
+	  m4 files.
 
 2004-10-03 16:14  pollux
 
@@ -3310,7 +3507,8 @@
 2004-07-28 21:22  benny
 
 	* xfce4-appfinder/trunk/m4/depends.m4: Fixed (module)_FOUND bug
-	  reported by brian. Hopefully nothing else broke this time.
+	  reported by brian. Hopefully nothing else broke
+	  this time.
 
 2004-07-26 19:46  eduard
 
@@ -3326,8 +3524,8 @@
 2004-07-24 18:52  benny
 
 	* xfce4-appfinder/trunk/m4/depends.m4: Readded XFCE_MCS_PLUGIN()
-	  again, dunno how I manage to remove it everytime I edit
-	  depends.m4!
+	  again, dunno how I manage to remove it everytime
+	  I edit depends.m4!
 
 2004-07-24 17:30  benny
 
@@ -3348,8 +3546,8 @@
 2004-07-20 20:58  benny
 
 	* xfce4-appfinder/trunk/m4/depends.m4: Modifed panel plugin check,
-	  so one (the installer) can choose to install into a different
-	  plugin dir.
+	  so one (the installer) can choose to install
+	  into a different plugin dir.
 
 2004-07-18 14:19  pollux
 
@@ -3407,7 +3605,8 @@
 	* xfce4-appfinder/trunk/src/Makefile.am,
 	  xfce4-appfinder/trunk/src/af-constants.h,
 	  xfce4-appfinder/trunk/src/main.c: Fix make dist. First attempt
-	  to use XDG basedir spec, Eduard please have a look and fix it.
+	  to use XDG basedir spec, Eduard please have
+	  a look and fix it.
 
 2004-06-27 09:45  eduard
 
@@ -3429,9 +3628,9 @@
 	  xfce4-appfinder/trunk/TODO,
 	  xfce4-appfinder/trunk/src/af-constants.h,
 	  xfce4-appfinder/trunk/src/appfinder.h,
-	  xfce4-appfinder/trunk/src/main.c: No item report added. A lot of
-	  small fixes and cleanup. Support for right click on treeview
-	  (just the callback for now).
+	  xfce4-appfinder/trunk/src/main.c: No item report added.
+	  A lot of small fixes and cleanup.
+	  Support for right click on treeview (just the callback for now).
 
 2004-06-21 19:13  eduard
 
@@ -3444,8 +3643,10 @@
 	  xfce4-appfinder/trunk/src/inline-icon.h,
 	  xfce4-appfinder/trunk/src/main.c,
 	  xfce4-appfinder/trunk/src/xfce4-appfinder.png: It doesn't
-	  flicker anymore. Code clean. Icon added. Some bug fixed
-	  (segfaults ;-)
+	  flicker anymore.
+	  Code clean.
+	  Icon added.
+	  Some bug fixed (segfaults ;-)
 
 2004-06-19 23:57  eduard
 
@@ -3500,8 +3701,8 @@
 2004-06-13 16:48  eduard
 
 	* xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/src/main.c: Drag and drop support Some bug
-	  fixed
+	  xfce4-appfinder/trunk/src/main.c: Drag and drop support
+	  Some bug fixed
 
 2004-05-19 20:13  eduard
 
