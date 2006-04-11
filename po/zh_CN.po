@@ -1,4 +1,4 @@
-# #-#-#-#-#  zh_CN.po (xfce4-appfinder 4.2.3)  #-#-#-#-#
+# #-#-#-#-#  zh_CN.po (xfce4-appfinder 4.2.4)  #-#-#-#-#
 # Simplified Chinese translations for xfce4-appfinder package.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.2.3\n"
+"Project-Id-Version: xfce4-appfinder 4.2.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-15 07:46+0900\n"
+"POT-Creation-Date: 2005-10-28 20:56+0900\n"
 "PO-Revision-Date: 2005-08-19 23:31+0900\n"
 "Last-Translator: Yongtao Yang <yongtao.yang@telia.com>\n"
 "Language-Team: Simplified Chinese <i18n-translation@lists.linux.net.cn>\n"
