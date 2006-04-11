@@ -6,10 +6,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.2.3\n"
+"Project-Id-Version: xfce4-appfinder 4.2.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-15 07:46+0900\n"
-"PO-Revision-Date: 2005-09-27 14:17+0900\n"
+"POT-Creation-Date: 2005-10-28 20:56+0900\n"
+"PO-Revision-Date: 2006-04-10 23:13+0100\n"
 "Last-Translator: SZERVÑC Attila <sas@321.hu>\n"
 "Language-Team: hungarian <translation-team-hu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -70,57 +70,55 @@ msgstr "Eszközök"
 
 #: src/callbacks.c:79
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "Bocs, nem leltem a keresett szöveget"
 
 #: src/callbacks.c:166
 msgid "No items available"
-msgstr ""
+msgstr "Nincsenek elérhető elemek"
 
 #: src/callbacks.c:213
 msgid "Appfinder InfoBox"
-msgstr ""
+msgstr "Alkalmazáskereső Infódoboz"
 
 #: src/callbacks.c:219
 msgid "Information about \""
-msgstr ""
+msgstr "Információ erről: \""
 
 #: src/callbacks.c:232
 msgid "Icon"
-msgstr ""
+msgstr "Ikon"
 
 #: src/callbacks.c:261
-#, fuzzy
 msgid "<b>Name:</b> "
-msgstr "<b>Keresés:</b>"
+msgstr "<b>Név:</b>"
 
 #: src/callbacks.c:266
 msgid "Comment"
-msgstr ""
+msgstr "Megjegyzés"
 
 #: src/callbacks.c:269 src/callbacks.c:283 src/callbacks.c:303
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: src/callbacks.c:274
 msgid "<b>Comment:</b> "
-msgstr ""
+msgstr "<b>Megjegyzés:</b> "
 
 #: src/callbacks.c:294
-#, fuzzy
 msgid "<b>Categories:</b> "
-msgstr "Kategóriák"
+msgstr "<b>Kategóriák:</b>"
 
 #: src/callbacks.c:306
 msgid "<b>Command:</b> "
-msgstr ""
+msgstr "<b>Parancs:</b> "
 
 #: src/callbacks.c:362
 msgid "Run program"
-msgstr ""
+msgstr "Program futtatása"
 
 #: src/callbacks.c:370
 msgid "Information..."
-msgstr ""
+msgstr "Információ..."
 
 #: src/main.c:99 src/main.c:105
 msgid "Now starting"
