@@ -6,7 +6,7 @@
 # Pau Rul·lan Ferragut <paurullan@bulma.net>, 2005, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: ca\n"
+"Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-26 20:03+0900\n"
 "PO-Revision-Date: 2006-03-19 17:34+0100\n"
@@ -128,4 +128,3 @@ msgstr "Appfinder"
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
 msgstr "Cercador d'aplicacions per Xfce 4"
-
