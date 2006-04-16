@@ -1,7 +1,7 @@
 dnl configure.ac
 dnl
 
-m4_define([appfinder_version],[4.3.2])
+m4_define([appfinder_version],[4.3.90.1])
 
 AC_INIT([xfce4-appfinder], [appfinder_version()], 
 	[xfce4-dev@xfce.org])
@@ -30,7 +30,7 @@ XDT_I18N([be bn_IN ca cs de el en_GB es es_MX et eu fa fi fr gu he hu hy
 	  it ja ko lt mr nl pa pl pt_BR pt_PT ro ru sk sv tr uk zh_CN zh_TW])
 
 dnl Check for required packages
-XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.3.6])
+XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.3.90.1])
 
 dnl Check for debugging support
 XDT_FEATURE_DEBUG()

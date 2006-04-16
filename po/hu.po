@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.1\n"
-"POT-Creation-Date: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-04-16 11:54+0200\n"
 "PO-Revision-Date: 2006-04-13 12:03+0100\n"
 "Last-Translator: SZERVÑC Attila <sas@321.hu>\n"
 "Language-Team: hu\n"
@@ -16,8 +17,7 @@ msgstr ""
 msgid "Cannot execute the selected application"
 msgstr "A kijelölt alkalmazás nem futtatható"
 
-#: ../src/main.c:205
-#: ../src/xfce4-appfinder.desktop.in.h:3
+#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
 msgstr "Xfce 4 Alkalmazáskereső"
 
@@ -25,9 +25,7 @@ msgstr "Xfce 4 Alkalmazáskereső"
 msgid "<b>Name</b>"
 msgstr "<b>Név</b>"
 
-#: ../src/main.c:287
-#: ../src/main.c:312
-#: ../src/main.c:345
+#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
 msgstr "N/A"
 
@@ -126,4 +124,3 @@ msgstr "Alkalmazáskereső"
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
 msgstr "Xfce 4 Alkalmazáskereső"
-

@@ -1,4 +1,4 @@
-Summary: 	Appfinder for the XFce4 Desktop Environment
+Summary: 	Appfinder for the Xfce Desktop Environment
 Name: 		xfce4-appfinder
 Version: 	@VERSION@
 Release: 	1
@@ -11,13 +11,13 @@ Requires:	libxfcegui4 >= @LIBXFCEGUI4_REQUIRED_VERSION@
 BuildRequires: 	libxfcegui4-devel >= @LIBXFCEGUI4_REQUIRED_VERSION@
 
 %description
-xfce-appfinder shows system wide installed applications
+xfce4-appfinder shows system wide installed applications
 
 %prep
 %setup -q
 
 %build
-%configure
+%configure --enable-final
 make
 
 %install
@@ -26,6 +26,18 @@ make install DESTDIR=$RPM_BUILD_ROOT mandir=%{_mandir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+touch --no-create %{_datadir}/icons/hicolor || :
+if [ -x %{_bindir}/gtk-update-icon-cache ]; then
+   %{_bindir}/gtk-update-icon-cache --quiet %{_datadir}/icons/hicolor || :
+fi
+
+%postun
+touch --no-create %{_datadir}/icons/hicolor || :
+if [ -x %{_bindir}/gtk-update-icon-cache ]; then
+   %{_bindir}/gtk-update-icon-cache --quiet %{_datadir}/icons/hicolor || :
+fi
 
 %files
 %defattr(-,root,root)
