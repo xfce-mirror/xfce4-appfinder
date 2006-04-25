@@ -1,7 +1,7 @@
 # Ukrainian translation to xfce4-appfinder.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-# Maxim V. Dziumanenko <mvd@mylinux.com.ua>, 2005.
+# Maxim V. Dziumanenko <mvd@mylinux.ua>, 2005-2006.
 #
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-16 11:54+0200\n"
 "PO-Revision-Date: 2005-10-15 01:57+0900\n"
-"Last-Translator: Maxim V. Dziumanenko <mvd@mylinux.com.ua>\n"
+"Last-Translator: Maxim V. Dziumanenko <mvd@mylinux.ua>\n"
 "Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,50 +17,47 @@ msgstr ""
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
-msgstr ""
+msgstr "Не вдається виконати вибрану програму"
 
 #: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr ""
+msgstr "Пошук програм"
 
 #: ../src/main.c:272
-#, fuzzy
 msgid "<b>Name</b>"
-msgstr "<b>Шукати:</b>"
+msgstr "<b>Назва</b>"
 
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
-msgstr ""
+msgstr "Н/Д"
 
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
-msgstr ""
+msgstr "<b>Коментар</b>"
 
 #: ../src/main.c:329
-#, fuzzy
 msgid "<b>Categories</b>"
-msgstr "Категорії"
+msgstr "<b>Категорії</b>"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
-msgstr ""
+msgstr "<b>Команда</b>"
 
 #: ../src/main.c:389
 msgid "Run program"
-msgstr ""
+msgstr "Запустити програму"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr ""
+msgstr "Більше інформації..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>Шукати:</b>"
 
 #: ../src/main.c:466
-#, fuzzy
 msgid "Show Categories"
-msgstr "Категорії"
+msgstr "Показати категорії"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
@@ -116,16 +113,16 @@ msgstr "Категорії"
 
 #: ../src/xfce4-appfinder.c:583
 msgid "No items available"
-msgstr ""
+msgstr "Пункт недоступний"
 
 #: ../src/xfce4-appfinder.c:623
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "Немає відповідності тексту вказаному критерію."
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
-msgstr ""
+msgstr "Пошук програм"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr ""
+msgstr "Пошук серед встановлених програм для Xfce 4"
