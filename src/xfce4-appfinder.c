@@ -380,8 +380,14 @@ xfce_appfinder_list_add (gchar *name, XfceAppfinderCacheEntry *entry, XfceAppfin
     
     if (param->psearch)
     {
-        if (!(entry->comment && g_pattern_match_string (param->psearch, g_utf8_casefold(entry->comment, -1))) &&
-                    !g_pattern_match_string (param->psearch, name))
+        if (!(
+             entry->comment &&
+                (
+                g_pattern_match_string (param->psearch, g_utf8_casefold(entry->comment, -1)) ||
+                g_pattern_match_string (param->psearch, g_utf8_casefold(name, -1)) ||
+                g_pattern_match_string (param->psearch, g_utf8_casefold(entry->exec, -1))
+                )
+             ))
         {
             return;
         }
@@ -417,7 +423,7 @@ load_desktop_resources (gint category, gchar *pattern, XfceAppfinder *appfinder)
 
     if (pattern != NULL)
     {
-        tmp = g_strconcat("*", g_utf8_casefold(pattern, -1), "*", NULL);
+        tmp = g_strconcat("*", pattern, "*", NULL);
         psearch = g_pattern_spec_new (tmp);
         g_free(tmp);
     }
@@ -599,7 +605,7 @@ xfce_appfinder_search (XfceAppfinder *appfinder, const gchar *pattern)
     GtkTreeSortable   *sortable;
     GtkListStore      *liststore;    
     GtkTreeIter iter;
-    gchar *text = g_utf8_strdown(pattern, -1);
+    gchar *text = g_utf8_casefold(pattern, -1);
     showedcat = APPFINDER_ALL;
     
     liststore = GTK_LIST_STORE(gtk_tree_view_get_model(GTK_TREE_VIEW(appfinder->appsTree)));
