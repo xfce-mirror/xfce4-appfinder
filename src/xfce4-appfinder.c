@@ -380,14 +380,10 @@ xfce_appfinder_list_add (gchar *name, XfceAppfinderCacheEntry *entry, XfceAppfin
     
     if (param->psearch)
     {
-        if (!(
-             entry->comment &&
-                (
-                g_pattern_match_string (param->psearch, g_utf8_casefold(entry->comment, -1)) ||
-                g_pattern_match_string (param->psearch, g_utf8_casefold(name, -1)) ||
-                g_pattern_match_string (param->psearch, g_utf8_casefold(entry->exec, -1))
-                )
-             ))
+        if (!((entry->comment && g_pattern_match_string (param->psearch, g_utf8_casefold(entry->comment, -1))) ||
+               (entry->exec && g_pattern_match_string (param->psearch, g_utf8_casefold(entry->exec, -1))) ||
+                g_pattern_match_string (param->psearch, g_utf8_casefold(name, -1))
+              ))
         {
             return;
         }
