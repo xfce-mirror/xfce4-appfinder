@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.90.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-16 11:54+0200\n"
-"PO-Revision-Date: 2005-10-15 01:59+0900\n"
+"PO-Revision-Date: 2006-04-29 07:51+0800\n"
 "Last-Translator: Hydonsingore Cia <hydonsingore@nauk.educities.edu.tw>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
 "MIME-Version: 1.0\n"
@@ -17,41 +17,39 @@ msgstr ""
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
-msgstr ""
+msgstr "無法執行所選取的應用程式"
 
 #: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr ""
+msgstr "Xfce 4 Appfinder"
 
 #: ../src/main.c:272
-#, fuzzy
 msgid "<b>Name</b>"
-msgstr "<b>搜尋：</b>"
+msgstr "<b>名稱</b>"
 
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
-msgstr ""
+msgstr "無"
 
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
-msgstr ""
+msgstr "<b>備註</b>"
 
 #: ../src/main.c:329
-#, fuzzy
 msgid "<b>Categories</b>"
-msgstr "類別"
+msgstr "<b>類別</b>"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
-msgstr ""
+msgstr "<b>指令</b>"
 
 #: ../src/main.c:389
 msgid "Run program"
-msgstr ""
+msgstr "執行程式"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr ""
+msgstr "更多資訊..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
@@ -116,16 +114,16 @@ msgstr "類別"
 
 #: ../src/xfce4-appfinder.c:583
 msgid "No items available"
-msgstr ""
+msgstr "沒有可用的項目"
 
 #: ../src/xfce4-appfinder.c:623
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "抱歉，找不到相符的程式"
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
-msgstr ""
+msgstr "Appfinder"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr ""
+msgstr "Xfce 4 的應用程式搜尋器"
