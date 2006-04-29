@@ -1,6 +1,6 @@
 /*  xfce4-appfinder
  *
- *  Copyright (C) 2004-2005 Eduard Roccatello (eduard@xfce.org)
+ *  Copyright (C) 2004-2006 Eduard Roccatello (eduard@xfce.org)
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -140,7 +140,8 @@ static const GtkTargetEntry dotDesktopDropTarget[] =
     {"text/plain", 0, 1},
     {"application/x-desktop", 0, 2},
     {"STRING", 0, 3},
-    {"UTF8_STRING", 0, 4}
+    {"UTF8_STRING", 0, 4},
+    {"text/uri-list", 0, 5}
 };
 
 GType
@@ -222,7 +223,7 @@ xfce_appfinder_init (XfceAppfinder *appfinder)
     appfinder->appsTree = create_applications_treeview(appfinder);
     gtk_tree_view_enable_model_drag_source( GTK_TREE_VIEW(appfinder->appsTree),
                                             GDK_BUTTON1_MASK, dotDesktopDropTarget,
-                                            5, GDK_ACTION_COPY);
+                                            6, GDK_ACTION_COPY);
 
     g_signal_connect(appfinder->appsTree, "row-activated", G_CALLBACK(callbackApplicationActivate), (gpointer) appfinder);
     g_signal_connect(appfinder->appsTree, "button-press-event", G_CALLBACK(callbackApplicationRightClick), (gpointer) appfinder);    
