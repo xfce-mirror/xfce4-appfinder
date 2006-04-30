@@ -27,9 +27,8 @@ msgid "Xfce 4 Appfinder"
 msgstr "Wyszukiwacz aplikacji"
 
 #: ../src/main.c:272
-#, fuzzy
 msgid "<b>Name</b>"
-msgstr "<b>Nazwa</b>:"
+msgstr "<b>Nazwa</b>"
 
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
@@ -40,7 +39,6 @@ msgid "<b>Comment</b>"
 msgstr "<b>Komentarz</b>"
 
 #: ../src/main.c:329
-#, fuzzy
 msgid "<b>Categories</b>"
 msgstr "<b>Kategorie</b>"
 
@@ -61,9 +59,8 @@ msgid "<b>Search:</b>"
 msgstr "<b>Wyszukaj:</b>"
 
 #: ../src/main.c:466
-#, fuzzy
 msgid "Show Categories"
-msgstr "Kategorie"
+msgstr "Pokaż Kategorie"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
@@ -107,7 +104,7 @@ msgstr "Systemowe"
 
 #: ../src/xfce4-appfinder.c:131
 msgid "Filemanager"
-msgstr "Menedżery Plików"
+msgstr "Menedżer Plików"
 
 #: ../src/xfce4-appfinder.c:132
 msgid "Utility"
