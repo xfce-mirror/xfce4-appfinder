@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.90.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-16 11:54+0200\n"
+"POT-Creation-Date: 2006-04-30 17:29+0900\n"
 "PO-Revision-Date: 2005-10-20 12:03+0100\n"
 "Last-Translator: Alex Dupre <ale@FreeBSD.org>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -107,15 +107,15 @@ msgstr ""
 msgid "Utility"
 msgstr ""
 
-#: ../src/xfce4-appfinder.c:291
+#: ../src/xfce4-appfinder.c:292
 msgid "Categories"
 msgstr "Categorie"
 
-#: ../src/xfce4-appfinder.c:583
+#: ../src/xfce4-appfinder.c:586
 msgid "No items available"
 msgstr "Nessun elemento disponibile"
 
-#: ../src/xfce4-appfinder.c:623
+#: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
 msgstr "Nessun risultato trovato."
 

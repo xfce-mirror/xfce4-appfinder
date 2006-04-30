@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-16 11:54+0200\n"
+"POT-Creation-Date: 2006-04-30 17:29+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,15 +108,15 @@ msgstr ""
 msgid "Utility"
 msgstr ""
 
-#: ../src/xfce4-appfinder.c:291
+#: ../src/xfce4-appfinder.c:292
 msgid "Categories"
 msgstr ""
 
-#: ../src/xfce4-appfinder.c:583
+#: ../src/xfce4-appfinder.c:586
 msgid "No items available"
 msgstr ""
 
-#: ../src/xfce4-appfinder.c:623
+#: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
 msgstr ""
 

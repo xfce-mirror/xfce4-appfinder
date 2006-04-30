@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.90.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-16 11:54+0200\n"
+"POT-Creation-Date: 2006-04-30 17:29+0900\n"
 "PO-Revision-Date: 2005-10-23 23:38+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: librezale.org <librezale@librezale.org>\n"
@@ -110,15 +110,15 @@ msgstr "Fitxategi-kudeatzailea"
 msgid "Utility"
 msgstr "Utilitatea"
 
-#: ../src/xfce4-appfinder.c:291
+#: ../src/xfce4-appfinder.c:292
 msgid "Categories"
 msgstr "Kategoriak"
 
-#: ../src/xfce4-appfinder.c:583
+#: ../src/xfce4-appfinder.c:586
 msgid "No items available"
 msgstr "Ez dago elementu erabilgarririk"
 
-#: ../src/xfce4-appfinder.c:623
+#: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
 msgstr "Barkatu, ez da bilatutako testauren parekorik aurkitu."
 

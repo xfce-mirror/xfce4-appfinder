@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.90.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-16 11:54+0200\n"
+"POT-Creation-Date: 2006-04-30 17:29+0900\n"
 "PO-Revision-Date: 2006-04-20 21:40+0800\n"
 "Last-Translator: Jick Nan <jick.nan@gmail.com>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
@@ -110,15 +110,15 @@ msgstr "文件管理器"
 msgid "Utility"
 msgstr "工具程序"
 
-#: ../src/xfce4-appfinder.c:291
+#: ../src/xfce4-appfinder.c:292
 msgid "Categories"
 msgstr "类别"
 
-#: ../src/xfce4-appfinder.c:583
+#: ../src/xfce4-appfinder.c:586
 msgid "No items available"
 msgstr "无可用项目"
 
-#: ../src/xfce4-appfinder.c:623
+#: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
 msgstr "抱歉，没有找到。"
 

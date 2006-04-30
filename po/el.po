@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.90.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-16 11:54+0200\n"
+"POT-Creation-Date: 2006-04-30 17:29+0900\n"
 "PO-Revision-Date: 2006-04-17 20:03+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -109,15 +109,15 @@ msgstr "Διαχειριστής αρχείων"
 msgid "Utility"
 msgstr "Βοηθητικά"
 
-#: ../src/xfce4-appfinder.c:291
+#: ../src/xfce4-appfinder.c:292
 msgid "Categories"
 msgstr "Κατηγορίες"
 
-#: ../src/xfce4-appfinder.c:583
+#: ../src/xfce4-appfinder.c:586
 msgid "No items available"
 msgstr "Δεν υπάρχουν διαθέσιμα αντικείμενα"
 
-#: ../src/xfce4-appfinder.c:623
+#: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
 msgstr "Λυπάμαι, δε βρέθηκε ταίρι."
 
