@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.90.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-30 17:29+0900\n"
-"PO-Revision-Date: 2006-04-29 07:51+0800\n"
+"PO-Revision-Date: 2006-05-02 20:39+0800\n"
 "Last-Translator: Hydonsingore Cia <hydonsingore@nauk.educities.edu.tw>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
 "MIME-Version: 1.0\n"
@@ -56,9 +56,8 @@ msgid "<b>Search:</b>"
 msgstr "<b>搜尋：</b>"
 
 #: ../src/main.c:466
-#, fuzzy
 msgid "Show Categories"
-msgstr "類別"
+msgstr "顯示類別"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
