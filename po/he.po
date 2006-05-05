@@ -8,7 +8,7 @@
 # Yuval Tanny <tanai@int.gov.il>, 2004.
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.3.90.1\n"
+"Project-Id-Version: xfce4-appfinder 4.3.90.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-30 17:29+0900\n"
 "PO-Revision-Date: 2006-01-29 01:23+0200\n"
