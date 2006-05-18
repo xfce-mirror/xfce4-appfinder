@@ -209,6 +209,7 @@ callbackInformationMenuActivate (GtkMenuItem *menuitem, gpointer menu)
 
         icon = xfce_inline_icon_at_size (default_icon_data_48_48, 32, 32);
         gtk_window_set_icon (GTK_WINDOW (dialog), icon);
+	gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
 
         vbox = GTK_DIALOG (dialog)->vbox;
         gtk_container_set_border_width (GTK_CONTAINER (vbox), 2);
