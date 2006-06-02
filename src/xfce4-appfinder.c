@@ -788,9 +788,12 @@ createDesktopCache()
                                 cent->icon = g_strdup(icon);
                                 g_hash_table_insert(hash, cent->name, cent);
                                 
-                                g_free(name);
-                                g_free(categories);
-                                g_free(exec);
+				if (name)
+                                    g_free(name);
+				if (categories)
+                                    g_free(categories);
+				if (exec)
+                                    g_free(exec);
                                 if (comment)
                                     g_free(comment);
                                 if (icon)
