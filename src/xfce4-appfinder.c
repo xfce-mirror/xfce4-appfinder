@@ -784,15 +784,29 @@ createDesktopCache()
                                 cent->categories = g_strdup(categories);
                                 cent->path = g_strdup(fullpath);
                                 cent->exec = g_strdup(exec);
-                                cent->comment = g_strdup(comment);
-                                cent->icon = g_strdup(icon);
+
+				if (comment)
+				{
+                                    cent->comment = g_strdup(comment);
+				}
+				else
+				{
+				    cent->comment = NULL;
+				}
+				
+				if (icon)
+			        {
+                                    cent->icon = g_strdup(icon);
+				}
+				else
+				{
+				   cent->icon = NULL;
+				}
+				
                                 g_hash_table_insert(hash, cent->name, cent);
                                 
-				if (name)
                                     g_free(name);
-				if (categories)
                                     g_free(categories);
-				if (exec)
                                     g_free(exec);
                                 if (comment)
                                     g_free(comment);
