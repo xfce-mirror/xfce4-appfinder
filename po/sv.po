@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Aron Stansvik <elvstone@gmail.com>, 2005.
 # Alexander Toresson <alexander.toresson@gmail.com>, 2005.
+# Jens Hagerman <godhet@gmail.com>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.3.90.2\n"
+"Project-Id-Version: xfce4-appfinder 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-30 17:29+0900\n"
-"PO-Revision-Date: 2005-10-15 01:56+0900\n"
-"Last-Translator: Alexander Toresson <alexander.toresson@gmail.com>\n"
+"POT-Creation-Date: 2006-06-02 22:16+0200\n"
+"PO-Revision-Date: 2006-02-19 00:39+0100\n"
+"Last-Translator: Jens Hagerman <godhet@gmail.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -21,50 +22,48 @@ msgstr ""
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
-msgstr ""
+msgstr "Kunde inte starta programmet"
 
 #: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr ""
+msgstr "Programlista"
 
-#: ../src/main.c:272
-#, fuzzy
+#: ../src/main.c:273
 msgid "<b>Name</b>"
-msgstr "<b>Sök:</b>"
+msgstr "<b>Namn</b>"
 
-#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
-msgid "N/A"
-msgstr ""
-
-#: ../src/main.c:296
-msgid "<b>Comment</b>"
-msgstr ""
-
-#: ../src/main.c:329
+#: ../src/main.c:288 ../src/main.c:313 ../src/main.c:346
 #, fuzzy
+msgid "N/A"
+msgstr "N/A"
+
+#: ../src/main.c:297
+msgid "<b>Comment</b>"
+msgstr "<b>Kommentar</b>"
+
+#: ../src/main.c:330
 msgid "<b>Categories</b>"
-msgstr "Kategorier"
+msgstr "<b>Kategorier</b>"
 
-#: ../src/main.c:354
+#: ../src/main.c:355
 msgid "<b>Command</b>"
-msgstr ""
+msgstr "<b>Kommando</b>"
 
-#: ../src/main.c:389
+#: ../src/main.c:390
 msgid "Run program"
-msgstr ""
+msgstr "Kör programmet"
 
-#: ../src/main.c:397
+#: ../src/main.c:398
 msgid "More Information..."
-msgstr ""
+msgstr "Mer information..."
 
-#: ../src/main.c:459
+#: ../src/main.c:460
 msgid "<b>Search:</b>"
 msgstr "<b>Sök:</b>"
 
-#: ../src/main.c:466
-#, fuzzy
+#: ../src/main.c:467
 msgid "Show Categories"
-msgstr "Kategorier"
+msgstr "Visa kategorier"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
@@ -92,7 +91,7 @@ msgstr "Nätverk"
 
 #: ../src/xfce4-appfinder.c:127
 msgid "AudioVideo"
-msgstr "LjudBild"
+msgstr "Ljud och Bild"
 
 #: ../src/xfce4-appfinder.c:128
 msgid "Game"
@@ -120,16 +119,16 @@ msgstr "Kategorier"
 
 #: ../src/xfce4-appfinder.c:586
 msgid "No items available"
-msgstr ""
+msgstr "Inga program i denna kategori"
 
 #: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "Tyvärr, inga sökträffar."
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
-msgstr ""
+msgstr "Programlista"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr ""
+msgstr "Programlista för Xfce 4"
