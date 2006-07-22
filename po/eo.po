@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.90.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-30 17:29+0900\n"
-"PO-Revision-Date: 2006-07-19 22:00+0100\n"
+"PO-Revision-Date: 2006-07-22 12:14+0200\n"
 "Last-Translator: Jarbas Araujo Jr. <jarbasaraujojr@yahoo.com.br>\n"
 "Language-Team: Debian-l10n-esperanto <debian-l10n-esperanto@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "Ne eblas ekzekuti la elektitan aplikaĵon"
 
 #: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr "Xfce 4 ApSerĉilo"
+msgstr "Xfce 4 Apserĉilo"
 
 #: ../src/main.c:272
 msgid "<b>Name</b>"
@@ -31,7 +31,7 @@ msgstr "<b>Nomo</b>"
 
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
-msgstr "Neniu"
+msgstr "N/A"
 
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
@@ -71,7 +71,7 @@ msgstr "Bazo"
 
 #: ../src/xfce4-appfinder.c:123
 msgid "Development"
-msgstr "Disvolviĝo"
+msgstr "Programado"
 
 #: ../src/xfce4-appfinder.c:124
 msgid "Office"
@@ -86,8 +86,9 @@ msgid "Network"
 msgstr "Reto"
 
 #: ../src/xfce4-appfinder.c:127
+#, fuzzy
 msgid "AudioVideo"
-msgstr "AuxdVideo"
+msgstr "Sono-Video"
 
 #: ../src/xfce4-appfinder.c:128
 msgid "Game"
@@ -103,7 +104,7 @@ msgstr "Sistemo"
 
 #: ../src/xfce4-appfinder.c:131
 msgid "Filemanager"
-msgstr "Dosiermanaĝilo"
+msgstr "Dosieradministrilo"
 
 #: ../src/xfce4-appfinder.c:132
 msgid "Utility"
@@ -115,7 +116,7 @@ msgstr "Kategorioj"
 
 #: ../src/xfce4-appfinder.c:586
 msgid "No items available"
-msgstr "Neniu programero disponebla"
+msgstr "Neniu programo disponebla"
 
 #: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
@@ -123,8 +124,8 @@ msgstr "Pardonon, nenia serĉrezulto por la teksto."
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
-msgstr "ApSerĉilo"
+msgstr "Apserĉilo"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr "AplikaĵSerĉilo por Xfce 4"
+msgstr "Aplikaĵserĉilo por Xfce 4"
