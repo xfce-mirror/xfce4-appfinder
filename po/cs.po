@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.90.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-30 17:29+0900\n"
-"PO-Revision-Date: 2006-05-06 16:44+0100\n"
+"PO-Revision-Date: 2006-07-30 00:59+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -23,17 +23,20 @@ msgstr ""
 msgid "Cannot execute the selected application"
 msgstr "Nelze spustit vybranou aplikaci"
 
-#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+#: ../src/main.c:205
+#: ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr "Xfce 4 Appfinder"
+msgstr "Vyhledávač aplikací pro Xfce 4"
 
 #: ../src/main.c:272
 msgid "<b>Name</b>"
 msgstr "<b>Název</b>"
 
-#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+#: ../src/main.c:287
+#: ../src/main.c:312
+#: ../src/main.c:345
 msgid "N/A"
-msgstr "N/A"
+msgstr "nedostupný"
 
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
@@ -109,7 +112,7 @@ msgstr "Správce souborů"
 
 #: ../src/xfce4-appfinder.c:132
 msgid "Utility"
-msgstr "Utility"
+msgstr "Nástroje"
 
 #: ../src/xfce4-appfinder.c:292
 msgid "Categories"
@@ -121,7 +124,7 @@ msgstr "Žádné položky nejsou k dispozici"
 
 #: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
-msgstr "Omlouváme se, nic se neshoduje s hledaným textem"
+msgstr "Shoda s hledaným textem nebyla nalezena "
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
@@ -130,3 +133,4 @@ msgstr "Appfinder"
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
 msgstr "Vyhledávač aplikací pro Xfce 4"
+
