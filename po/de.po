@@ -2,14 +2,15 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Moritz Heiber <moe@xfce.org>, 2004.
+# Enrico Tröger <enrico.troeger@uvena.de>, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.90.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-30 17:29+0900\n"
-"PO-Revision-Date: 2005-10-15 01:33+0900\n"
-"Last-Translator: Moritz Heiber <moe@xfce.org>\n"
+"PO-Revision-Date: 2006-08-29 16:33+0100\n"
+"Last-Translator: Enrico Tröger <enrico.troeger@uvena.de>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,50 +18,47 @@ msgstr ""
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
-msgstr ""
+msgstr "Kann die ausgewählte Anwendung nicht ausführen"
 
 #: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr ""
+msgstr "Xfce 4 Anwendungsfinder"
 
 #: ../src/main.c:272
-#, fuzzy
 msgid "<b>Name</b>"
-msgstr "<b>Suche:</b>"
+msgstr "<b>Name</b>"
 
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
-msgstr ""
+msgstr "(nicht verfügbar)"
 
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
-msgstr ""
+msgstr "<b>Kommentar</b>"
 
 #: ../src/main.c:329
-#, fuzzy
 msgid "<b>Categories</b>"
-msgstr "Kategorien"
+msgstr "<b>Kategorien</b>"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
-msgstr ""
+msgstr "<b>Befehl</b>"
 
 #: ../src/main.c:389
 msgid "Run program"
-msgstr ""
+msgstr "Programm ausführen"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr ""
+msgstr "Mehr Informationen..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>Suche:</b>"
 
 #: ../src/main.c:466
-#, fuzzy
 msgid "Show Categories"
-msgstr "Kategorien"
+msgstr "Kategorien anzeigen"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
@@ -116,16 +114,16 @@ msgstr "Kategorien"
 
 #: ../src/xfce4-appfinder.c:586
 msgid "No items available"
-msgstr ""
+msgstr "Keine Einträge vorhanden"
 
 #: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "Keine Übereinstimmung für gesuchten Text"
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
-msgstr ""
+msgstr "Appfinder"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr ""
+msgstr "Anwendungsfinder für Xfce 4"
