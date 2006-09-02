@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-30 17:29+0900\n"
+"POT-Creation-Date: 2006-09-02 17:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,39 +24,39 @@ msgstr ""
 msgid "Xfce 4 Appfinder"
 msgstr ""
 
-#: ../src/main.c:272
+#: ../src/main.c:273
 msgid "<b>Name</b>"
 msgstr ""
 
-#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+#: ../src/main.c:288 ../src/main.c:313 ../src/main.c:346
 msgid "N/A"
 msgstr ""
 
-#: ../src/main.c:296
+#: ../src/main.c:297
 msgid "<b>Comment</b>"
 msgstr ""
 
-#: ../src/main.c:329
+#: ../src/main.c:330
 msgid "<b>Categories</b>"
 msgstr ""
 
-#: ../src/main.c:354
+#: ../src/main.c:355
 msgid "<b>Command</b>"
 msgstr ""
 
-#: ../src/main.c:389
+#: ../src/main.c:390
 msgid "Run program"
 msgstr ""
 
-#: ../src/main.c:397
+#: ../src/main.c:398
 msgid "More Information..."
 msgstr ""
 
-#: ../src/main.c:459
+#: ../src/main.c:460
 msgid "<b>Search:</b>"
 msgstr ""
 
-#: ../src/main.c:466
+#: ../src/main.c:467
 msgid "Show Categories"
 msgstr ""
 
