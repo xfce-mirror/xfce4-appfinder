@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.99.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-30 17:29+0900\n"
-"PO-Revision-Date: 2006-07-22 12:14+0200\n"
+"PO-Revision-Date: 2006-09-08 21:52+0200\n"
 "Last-Translator: Jarbas Araujo Jr. <jarbasaraujojr@yahoo.com.br>\n"
 "Language-Team: Debian-l10n-esperanto <debian-l10n-esperanto@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -86,7 +86,6 @@ msgid "Network"
 msgstr "Reto"
 
 #: ../src/xfce4-appfinder.c:127
-#, fuzzy
 msgid "AudioVideo"
 msgstr "Sono-Video"
 
