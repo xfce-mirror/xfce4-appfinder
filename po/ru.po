@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.3.99.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-30 17:29+0900\n"
-"PO-Revision-Date: 2006-04-20 19:53+0600\n"
+"POT-Creation-Date: 2006-09-02 17:42+0200\n"
+"PO-Revision-Date: 2006-05-08 13:37+0600\n"
 "Last-Translator: Sergey Fedoseev <fedoseev.sergey@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,39 +27,39 @@ msgstr "Не удается запустить выбранное приложе
 msgid "Xfce 4 Appfinder"
 msgstr "Поиск приложений"
 
-#: ../src/main.c:272
+#: ../src/main.c:273
 msgid "<b>Name</b>"
 msgstr "<b>Имя:</b>"
 
-#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+#: ../src/main.c:288 ../src/main.c:313 ../src/main.c:346
 msgid "N/A"
 msgstr "N/A"
 
-#: ../src/main.c:296
+#: ../src/main.c:297
 msgid "<b>Comment</b>"
 msgstr "<b>Комментарий</b>"
 
-#: ../src/main.c:329
+#: ../src/main.c:330
 msgid "<b>Categories</b>"
 msgstr "<b>Категории</b>"
 
-#: ../src/main.c:354
+#: ../src/main.c:355
 msgid "<b>Command</b>"
 msgstr "<b>Команда</b>"
 
-#: ../src/main.c:389
+#: ../src/main.c:390
 msgid "Run program"
 msgstr "Запустить программу"
 
-#: ../src/main.c:397
+#: ../src/main.c:398
 msgid "More Information..."
 msgstr "Больше информации..."
 
-#: ../src/main.c:459
+#: ../src/main.c:460
 msgid "<b>Search:</b>"
 msgstr "<b>Найти:</b>"
 
-#: ../src/main.c:466
+#: ../src/main.c:467
 msgid "Show Categories"
 msgstr "Показать категории"
 
@@ -117,7 +117,7 @@ msgstr "Категории"
 
 #: ../src/xfce4-appfinder.c:586
 msgid "No items available"
-msgstr ""
+msgstr "Нет доступных элементов"
 
 #: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
