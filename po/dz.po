@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce/xfce4-appfinder.po\n"
+"Project-Id-Version: xfce4-appfinder 4.3.99.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-02 17:42+0200\n"
 "PO-Revision-Date: 2006-10-24 16:55+0530\n"
