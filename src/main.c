@@ -34,8 +34,6 @@
 #include "main.h"
 #include "appfinder.h"
 #include "xfce4-appfinder.h"
-#include "inline-icon.h"
-
 #define BORDER  8
 
 void    callbackExecuteApplication      (GtkWidget         *widget,
@@ -206,10 +204,9 @@ callbackInformationMenuActivate (GtkMenuItem *menuitem, gpointer menu)
                                               GTK_DIALOG_NO_SEPARATOR,
                                               GTK_STOCK_CLOSE, GTK_RESPONSE_OK,
                                               NULL);
-
-        icon = xfce_inline_icon_at_size (default_icon_data_48_48, 32, 32);
-        gtk_window_set_icon (GTK_WINDOW (dialog), icon);
-	gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
+		icon = xfce_themed_icon_load("xfce4-appfinder", 48);
+        gtk_window_set_icon_name (GTK_WINDOW (dialog), "xfce4-appfinder");
+		gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
 
         vbox = GTK_DIALOG (dialog)->vbox;
         gtk_container_set_border_width (GTK_CONTAINER (vbox), 2);
@@ -238,7 +235,7 @@ callbackInformationMenuActivate (GtkMenuItem *menuitem, gpointer menu)
             icon = xfce_themed_icon_load(iconpath, 48);
             if (!icon)
             {
-                icon = xfce_inline_icon_at_size (default_icon_data_48_48, 48, 48);
+                icon = xfce_themed_icon_load("xfce4-appfinder", 48);
                 icon2 = gdk_pixbuf_copy (icon);
                 gdk_pixbuf_saturate_and_pixelate(icon, icon2, 0.0, TRUE);
                 g_object_unref(icon);
@@ -248,7 +245,7 @@ callbackInformationMenuActivate (GtkMenuItem *menuitem, gpointer menu)
         }
         else
         {
-            icon = xfce_inline_icon_at_size (default_icon_data_48_48, 48, 48);
+            xfce_themed_icon_load("xfce4-appfinder", 48);
         }
 
         img = gtk_image_new_from_pixbuf (icon);
@@ -439,7 +436,8 @@ main (gint argc, gchar **argv)
     afWnd = gtk_window_new (GTK_WINDOW_TOPLEVEL);
     g_signal_connect (G_OBJECT(afWnd), "delete_event", G_CALLBACK(gtk_main_quit), NULL);
     gtk_window_set_title (GTK_WINDOW(afWnd), "Xfce4 Appfinder");
-    gtk_window_set_icon (GTK_WINDOW(afWnd), xfce_inline_icon_at_size (default_icon_data_48_48, 48, 48));
+    gtk_window_set_icon_name (GTK_WINDOW (afWnd), "xfce4-appfinder");
+    //gtk_window_set_icon (GTK_WINDOW(afWnd), xfce_inline_icon_at_size (default_icon_data_48_48, 48, 48));
     gtk_window_set_position (GTK_WINDOW(afWnd), GTK_WIN_POS_CENTER_ALWAYS);
     gtk_window_set_default_size (GTK_WINDOW(afWnd), gdk_screen_width ()/2, gdk_screen_height()/2);
 

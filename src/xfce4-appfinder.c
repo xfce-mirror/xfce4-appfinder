@@ -27,8 +27,6 @@
 #include <libxfce4util/libxfce4util.h>
 #include <libxfcegui4/libxfcegui4.h>
 #include <string.h>
-
-#include "inline-icon.h"
 #include "xfce4-appfinder.h"
 
 enum {
@@ -582,7 +580,7 @@ callbackCategoryTreeClick  (GtkTreeSelection *selection,
         {
             gtk_list_store_append(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appsTree))), &iter);
             gtk_list_store_set(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(af->appsTree))),
-                                &iter, APPLICATION_TREE_ICON, xfce_inline_icon_at_size (default_icon_data_48_48, 24, 24),
+                                &iter, APPLICATION_TREE_ICON, xfce_themed_icon_load("xfce4-appfinder", 24),
                                 APPLICATION_TREE_TEXT, _("No items available"), -1);
             gtk_widget_set_sensitive(af->appsTree, FALSE);
         }
@@ -622,7 +620,7 @@ xfce_appfinder_search (XfceAppfinder *appfinder, const gchar *pattern)
     {
         gtk_list_store_append(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(appfinder->appsTree))), &iter);
         gtk_list_store_set(GTK_LIST_STORE(gtk_tree_view_get_model (GTK_TREE_VIEW(appfinder->appsTree))),
-                            &iter, APPLICATION_TREE_ICON, xfce_inline_icon_at_size (default_icon_data_48_48, 24, 24),
+                            &iter, APPLICATION_TREE_ICON, xfce_themed_icon_load("xfce4-appfinder", 24),
                             APPLICATION_TREE_TEXT, _("Sorry, no match for searched text."), -1);
         gtk_widget_set_sensitive(appfinder->appsTree, FALSE);
     }
