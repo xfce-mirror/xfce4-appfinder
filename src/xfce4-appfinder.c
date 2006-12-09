@@ -97,8 +97,7 @@ static GHashTable *   createDesktopCache             ();
                                                
                                                                                               
 static gint           xfce_appfinder_signals[LAST_SIGNAL] = { 0 };
-static gchar        **desktop_entries_paths;
-static gint           desktop_path_number = 0;
+static GPtrArray *    desktop_entries_paths;
 static gint           showedcat = APPFINDER_ALL;
 
 /* What to search for in .desktop files */
@@ -461,53 +460,47 @@ build_desktop_paths (void)
     gint    napps;
     gchar **applnk;
     gint    napplnk;
-    gint    i, n;
+    gint    n;
     
     applications = xfce_resource_lookup_all (XFCE_RESOURCE_DATA, "applications/");
-    for (napplications = 0; applications[napplications] != NULL; ++napplications);
     
     apps = xfce_resource_lookup_all (XFCE_RESOURCE_DATA, "apps/");
-    for (napps = 0; apps[napps] != NULL; ++napps);
     
     applnk = xfce_resource_lookup_all (XFCE_RESOURCE_DATA, "applnk/");
-    for (napplnk = 0; applnk[napplnk] != NULL; ++napplnk);
     
-    desktop_entries_paths = g_new0 (gchar *, 2 * napplications + napps + napplnk + 6);
-    i = 0;
+    desktop_entries_paths = g_ptr_array_new ();
     
-    desktop_entries_paths[i++] = xfce_get_homefile (".gnome", "share", "apps", NULL);
-    desktop_entries_paths[i++] = xfce_get_homefile (".kde", "share", "applnk", NULL);
+    g_ptr_array_add (desktop_entries_paths, (gpointer) xfce_get_homefile (".gnome", "share", "apps", NULL));
+    g_ptr_array_add (desktop_entries_paths,  (gpointer) xfce_get_homefile (".kde", "share", "applnk", NULL));
     if ((kdedir = g_getenv("KDEDIR")) != NULL)
     {
-        desktop_entries_paths[i++] = g_build_filename (kdedir, "share",  "applications",  "kde", NULL); 
+        g_ptr_array_add (desktop_entries_paths, (gpointer) g_build_filename (kdedir, "share",  "applications",  "kde", NULL)); 
     }
 
     /* FreeBSD Gnome stuff */
-    desktop_entries_paths[i++] = g_build_filename ("/usr", "X11R6", "share", "gnome", "applications", NULL);
+    g_ptr_array_add (desktop_entries_paths, (gpointer) g_build_filename ("/usr", "X11R6", "share", "gnome", "applications", NULL));
 
     /* /usr/global stuff */
-    desktop_entries_paths[i++] = g_build_filename ("/usr", "global", "share", "applications", NULL);
+    g_ptr_array_add (desktop_entries_paths, (gpointer) g_build_filename ("/usr", "global", "share", "applications", NULL));
     
-    for (n = 0; n < napplications; ++n)
+    for (n = 0; applications[n] != NULL; ++n)
     {
-        desktop_entries_paths[i++] = applications[n];
-        desktop_entries_paths[i++] = g_build_filename (applications[n], "kde", NULL);
+        g_ptr_array_add (desktop_entries_paths, (gpointer) applications[n]);
+        g_ptr_array_add (desktop_entries_paths, (gpointer) g_build_filename (applications[n], "kde", NULL));
     }
     g_free (applications);
     
-    for (n = 0; n < napps; ++i, ++n)
+    for (n = 0; apps[n] != NULL; ++n)
     {
-        desktop_entries_paths[i] = apps[n];
+        g_ptr_array_add (desktop_entries_paths, (gpointer) apps[n]);
     }
     g_free (apps);
     
-    for (n = 0; n < napplnk; ++i, ++n)
+    for (n = 0; applnk[n] != NULL; ++n)
     {
-        desktop_entries_paths[i] = applnk[n];
+        g_ptr_array_add (desktop_entries_paths, (gpointer) applnk[n]);
     }
     g_free (applnk);
-    
-    desktop_path_number = n;
 }
 
 static gchar *get_path_from_name(gchar *name, XfceAppfinder *appfinder)
@@ -745,18 +738,17 @@ createDesktopCache()
     gchar                    *filename  = NULL;
     gchar                    *fullpath  = NULL;
     GDir                     *dir;
-    gint                      n         = desktop_path_number - 1;
     gint                      i         = 0; /* A counter for general use */
     
     hash = g_hash_table_new ((GHashFunc) g_str_hash, (GEqualFunc) g_str_equal);
     
-    while (desktop_entries_paths[i]!=NULL)
+    while (i<desktop_entries_paths->len)
     {
-        if ((dir = g_dir_open (desktop_entries_paths[i], 0, NULL))!=NULL)
+        if ((dir = g_dir_open ((gchar *) g_ptr_array_index(desktop_entries_paths,i), 0, NULL))!=NULL)
         {
             while ((filename = (gchar *)g_dir_read_name(dir))!=NULL)
             {
-                fullpath = g_build_filename(desktop_entries_paths[i], filename, NULL);
+                fullpath = g_build_filename(g_ptr_array_index(desktop_entries_paths,i), filename, NULL);
                 if (g_str_has_suffix(filename, ".desktop"))
                 {
                     dentry = xfce_desktop_entry_new (fullpath, dotDesktopKeys, 7);
@@ -818,8 +810,7 @@ createDesktopCache()
                 }
                 else if (g_file_test(fullpath, G_FILE_TEST_IS_DIR))
                 {
-                    desktop_entries_paths[n] = fullpath;
-                    desktop_entries_paths[n] = NULL;
+                    g_ptr_array_add(desktop_entries_paths, (gpointer) fullpath);
                 }
             }
             g_dir_close(dir);
