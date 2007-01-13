@@ -1,3 +1,822 @@
+2006-05-23 02:45  daichi
+
+	* libexo/trunk/po/ChangeLog, libexo/trunk/po/fi.po,
+	  libxfce4util/trunk/po/ChangeLog, libxfce4util/trunk/po/fi.po,
+	  libxfcegui4/branches/xfce_4_2/po/ChangeLog,
+	  libxfcegui4/branches/xfce_4_2/po/fi.po,
+	  libxfcegui4/trunk/po/ChangeLog, libxfcegui4/trunk/po/fi.po,
+	  mousepad/trunk/po/ChangeLog, mousepad/trunk/po/fi.po,
+	  terminal/trunk/po/ChangeLog, terminal/trunk/po/fi.po,
+	  thunar/trunk/po/ChangeLog, thunar/trunk/po/fi.po,
+	  xfcalendar/branches/xfce_4_2/po/ChangeLog,
+	  xfcalendar/trunk/po/ChangeLog, xfcalendar/trunk/po/fi.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/ChangeLog,
+	  xfce-mcs-manager/branches/xfce_4_2/po/fi.po,
+	  xfce-mcs-manager/trunk/po/ChangeLog,
+	  xfce-mcs-manager/trunk/po/fi.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/ChangeLog,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/fi.po,
+	  xfce-mcs-plugins/trunk/po/ChangeLog,
+	  xfce-mcs-plugins/trunk/po/fi.po,
+	  xfce-utils/branches/xfce_4_2/po/ChangeLog,
+	  xfce-utils/branches/xfce_4_2/po/fi.po,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.az,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.ca,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.de,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.es,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.eu,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.fi,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.fr,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.he,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.az,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.ca,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.de,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.es,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.eu,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.fi,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.fr,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.it,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.ja,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.lt,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.ro,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.ru,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.sk,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.vi,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.html.zh_TW,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.it,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.ja,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.lt,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.ro,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.ru,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.sk,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.uk,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.vi,
+	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.zh_TW,
+	  xfce-utils/trunk/po/ChangeLog, xfce-utils/trunk/po/fi.po,
+	  xfce-utils/trunk/xfce4-about/AUTHORS, po/ChangeLog, po/fi.po,
+	  xfce4-appfinder/trunk/po/ChangeLog,
+	  xfce4-appfinder/trunk/po/fi.po,
+	  xfce4-icon-theme/trunk/po/ChangeLog,
+	  xfce4-icon-theme/trunk/po/fi.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/fi.po,
+	  xfce4-mailwatch-plugin/trunk/po/fi.po,
+	  xfce4-mixer/branches/xfce_4_2/po/ChangeLog,
+	  xfce4-mixer/branches/xfce_4_2/po/fi.po,
+	  xfce4-mixer/trunk/po/ChangeLog, xfce4-mixer/trunk/po/fi.po,
+	  xfce4-panel/branches/xfce_4_2/po/ChangeLog,
+	  xfce4-panel/branches/xfce_4_2/po/fi.po,
+	  xfce4-panel/trunk/po/ChangeLog, xfce4-panel/trunk/po/fi.po,
+	  xfce4-session/branches/xfce_4_2/po/ChangeLog,
+	  xfce4-session/branches/xfce_4_2/po/fi.po,
+	  xfce4-session/trunk/po/ChangeLog, xfce4-session/trunk/po/fi.po,
+	  xfce4-toys/branches/xfce_4_2/po/ChangeLog,
+	  xfce4-toys/branches/xfce_4_2/po/fi.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/ChangeLog,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/fi.po,
+	  xfce4-trigger-launcher/trunk/po/ChangeLog,
+	  xfce4-trigger-launcher/trunk/po/fi.po,
+	  xfdesktop/branches/xfce_4_2/po/ChangeLog,
+	  xfdesktop/branches/xfce_4_2/po/fi.po,
+	  xfdesktop/trunk/po/ChangeLog, xfdesktop/trunk/po/fi.po,
+	  xffm/branches/xfce_4_2/po/ChangeLog,
+	  xffm/branches/xfce_4_2/po/fi.po, xfmedia/trunk/po/fi.po,
+	  xfprint/branches/xfce_4_2/po/ChangeLog,
+	  xfprint/branches/xfce_4_2/po/fi.po, xfprint/trunk/po/ChangeLog,
+	  xfprint/trunk/po/fi.po, xfwm4/branches/xfce_4_2/po/ChangeLog,
+	  xfwm4/branches/xfce_4_2/po/fi.po, xfwm4/trunk/po/ChangeLog,
+	  xfwm4/trunk/po/fi.po: Changed an address.
+
+2006-04-11 12:00  daichi
+
+	* libxfcegui4/branches/xfce_4_2/po/af.po,
+	  libxfcegui4/branches/xfce_4_2/po/be.po,
+	  libxfcegui4/branches/xfce_4_2/po/bn_IN.po,
+	  libxfcegui4/branches/xfce_4_2/po/ca.po,
+	  libxfcegui4/branches/xfce_4_2/po/cs.po,
+	  libxfcegui4/branches/xfce_4_2/po/da.po,
+	  libxfcegui4/branches/xfce_4_2/po/de.po,
+	  libxfcegui4/branches/xfce_4_2/po/el.po,
+	  libxfcegui4/branches/xfce_4_2/po/en_GB.po,
+	  libxfcegui4/branches/xfce_4_2/po/eo.po,
+	  libxfcegui4/branches/xfce_4_2/po/es.po,
+	  libxfcegui4/branches/xfce_4_2/po/et.po,
+	  libxfcegui4/branches/xfce_4_2/po/eu.po,
+	  libxfcegui4/branches/xfce_4_2/po/fa.po,
+	  libxfcegui4/branches/xfce_4_2/po/fi.po,
+	  libxfcegui4/branches/xfce_4_2/po/fr.po,
+	  libxfcegui4/branches/xfce_4_2/po/gu.po,
+	  libxfcegui4/branches/xfce_4_2/po/he.po,
+	  libxfcegui4/branches/xfce_4_2/po/hy.po,
+	  libxfcegui4/branches/xfce_4_2/po/it.po,
+	  libxfcegui4/branches/xfce_4_2/po/ja.po,
+	  libxfcegui4/branches/xfce_4_2/po/ko.po,
+	  libxfcegui4/branches/xfce_4_2/po/ku.po,
+	  libxfcegui4/branches/xfce_4_2/po/libxfcegui4.pot,
+	  libxfcegui4/branches/xfce_4_2/po/lt.po,
+	  libxfcegui4/branches/xfce_4_2/po/mr.po,
+	  libxfcegui4/branches/xfce_4_2/po/nl.po,
+	  libxfcegui4/branches/xfce_4_2/po/pa.po,
+	  libxfcegui4/branches/xfce_4_2/po/pl.po,
+	  libxfcegui4/branches/xfce_4_2/po/pt_BR.po,
+	  libxfcegui4/branches/xfce_4_2/po/ro.po,
+	  libxfcegui4/branches/xfce_4_2/po/ru.po,
+	  libxfcegui4/branches/xfce_4_2/po/sk.po,
+	  libxfcegui4/branches/xfce_4_2/po/sl.po,
+	  libxfcegui4/branches/xfce_4_2/po/sq.po,
+	  libxfcegui4/branches/xfce_4_2/po/sv.po,
+	  libxfcegui4/branches/xfce_4_2/po/ta.po,
+	  libxfcegui4/branches/xfce_4_2/po/uk.po,
+	  libxfcegui4/branches/xfce_4_2/po/zh_CN.po,
+	  libxfcegui4/branches/xfce_4_2/po/zh_TW.po,
+	  xfcalendar/branches/xfce_4_2/po/af.po,
+	  xfcalendar/branches/xfce_4_2/po/ar.po,
+	  xfcalendar/branches/xfce_4_2/po/az.po,
+	  xfcalendar/branches/xfce_4_2/po/be.po,
+	  xfcalendar/branches/xfce_4_2/po/bg.po,
+	  xfcalendar/branches/xfce_4_2/po/bn_IN.po,
+	  xfcalendar/branches/xfce_4_2/po/ca.po,
+	  xfcalendar/branches/xfce_4_2/po/cs.po,
+	  xfcalendar/branches/xfce_4_2/po/da.po,
+	  xfcalendar/branches/xfce_4_2/po/de.po,
+	  xfcalendar/branches/xfce_4_2/po/el.po,
+	  xfcalendar/branches/xfce_4_2/po/en_GB.po,
+	  xfcalendar/branches/xfce_4_2/po/eo.po,
+	  xfcalendar/branches/xfce_4_2/po/es.po,
+	  xfcalendar/branches/xfce_4_2/po/et.po,
+	  xfcalendar/branches/xfce_4_2/po/eu.po,
+	  xfcalendar/branches/xfce_4_2/po/fa.po,
+	  xfcalendar/branches/xfce_4_2/po/fi.po,
+	  xfcalendar/branches/xfce_4_2/po/fr.po,
+	  xfcalendar/branches/xfce_4_2/po/gu.po,
+	  xfcalendar/branches/xfce_4_2/po/he.po,
+	  xfcalendar/branches/xfce_4_2/po/hi.po,
+	  xfcalendar/branches/xfce_4_2/po/hu.po,
+	  xfcalendar/branches/xfce_4_2/po/hy.po,
+	  xfcalendar/branches/xfce_4_2/po/it.po,
+	  xfcalendar/branches/xfce_4_2/po/ja.po,
+	  xfcalendar/branches/xfce_4_2/po/ko.po,
+	  xfcalendar/branches/xfce_4_2/po/ku.po,
+	  xfcalendar/branches/xfce_4_2/po/lt.po,
+	  xfcalendar/branches/xfce_4_2/po/mr.po,
+	  xfcalendar/branches/xfce_4_2/po/ms.po,
+	  xfcalendar/branches/xfce_4_2/po/nb_NO.po,
+	  xfcalendar/branches/xfce_4_2/po/nl.po,
+	  xfcalendar/branches/xfce_4_2/po/pa.po,
+	  xfcalendar/branches/xfce_4_2/po/pl.po,
+	  xfcalendar/branches/xfce_4_2/po/pt_BR.po,
+	  xfcalendar/branches/xfce_4_2/po/pt_PT.po,
+	  xfcalendar/branches/xfce_4_2/po/ro.po,
+	  xfcalendar/branches/xfce_4_2/po/ru.po,
+	  xfcalendar/branches/xfce_4_2/po/sk.po,
+	  xfcalendar/branches/xfce_4_2/po/sl.po,
+	  xfcalendar/branches/xfce_4_2/po/sq.po,
+	  xfcalendar/branches/xfce_4_2/po/sv.po,
+	  xfcalendar/branches/xfce_4_2/po/ta.po,
+	  xfcalendar/branches/xfce_4_2/po/tr.po,
+	  xfcalendar/branches/xfce_4_2/po/uk.po,
+	  xfcalendar/branches/xfce_4_2/po/vi.po,
+	  xfcalendar/branches/xfce_4_2/po/zh_CN.po,
+	  xfcalendar/branches/xfce_4_2/po/zh_TW.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/af.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/ar.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/az.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/be.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/bg.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/bn_IN.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/ca.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/cs.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/da.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/de.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/el.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/en_GB.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/eo.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/es.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/es_MX.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/et.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/eu.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/fa.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/fi.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/fr.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/gu.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/he.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/hi.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/hu.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/it.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/ja.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/ko.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/ku.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/lt.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/mr.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/ms.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/nb_NO.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/nl.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/pa.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/pl.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/pt_BR.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/pt_PT.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/ro.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/ru.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/sk.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/sl.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/sq.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/sv.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/ta.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/tr.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/uk.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/vi.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/xfce-mcs-manager.pot,
+	  xfce-mcs-manager/branches/xfce_4_2/po/zh_CN.po,
+	  xfce-mcs-manager/branches/xfce_4_2/po/zh_TW.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/af.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/ar.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/az.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/be.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/bg.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/bn_IN.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/ca.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/cs.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/da.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/de.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/el.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/en_GB.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/eo.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/es.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/es_MX.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/et.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/eu.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/fa.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/fi.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/fr.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/gu.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/he.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/hi.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/it.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/ja.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/ko.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/ku.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/lt.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/mr.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/ms.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/nl.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/pa.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/pl.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/pt_BR.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/pt_PT.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/ro.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/ru.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/sk.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/sl.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/sq.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/sv.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/ta.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/tr.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/uk.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/vi.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/zh_CN.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/zh_TW.po,
+	  xfce-utils/branches/xfce_4_2/po/af.po,
+	  xfce-utils/branches/xfce_4_2/po/ar.po,
+	  xfce-utils/branches/xfce_4_2/po/az.po,
+	  xfce-utils/branches/xfce_4_2/po/be.po,
+	  xfce-utils/branches/xfce_4_2/po/bg.po,
+	  xfce-utils/branches/xfce_4_2/po/bn_IN.po,
+	  xfce-utils/branches/xfce_4_2/po/ca.po,
+	  xfce-utils/branches/xfce_4_2/po/cs.po,
+	  xfce-utils/branches/xfce_4_2/po/da.po,
+	  xfce-utils/branches/xfce_4_2/po/de.po,
+	  xfce-utils/branches/xfce_4_2/po/el.po,
+	  xfce-utils/branches/xfce_4_2/po/en_GB.po,
+	  xfce-utils/branches/xfce_4_2/po/eo.po,
+	  xfce-utils/branches/xfce_4_2/po/es.po,
+	  xfce-utils/branches/xfce_4_2/po/es_MX.po,
+	  xfce-utils/branches/xfce_4_2/po/et.po,
+	  xfce-utils/branches/xfce_4_2/po/eu.po,
+	  xfce-utils/branches/xfce_4_2/po/fa.po,
+	  xfce-utils/branches/xfce_4_2/po/fi.po,
+	  xfce-utils/branches/xfce_4_2/po/fr.po,
+	  xfce-utils/branches/xfce_4_2/po/gu.po,
+	  xfce-utils/branches/xfce_4_2/po/he.po,
+	  xfce-utils/branches/xfce_4_2/po/hi.po,
+	  xfce-utils/branches/xfce_4_2/po/hy.po,
+	  xfce-utils/branches/xfce_4_2/po/it.po,
+	  xfce-utils/branches/xfce_4_2/po/ja.po,
+	  xfce-utils/branches/xfce_4_2/po/ko.po,
+	  xfce-utils/branches/xfce_4_2/po/ku.po,
+	  xfce-utils/branches/xfce_4_2/po/lt.po,
+	  xfce-utils/branches/xfce_4_2/po/mr.po,
+	  xfce-utils/branches/xfce_4_2/po/ms.po,
+	  xfce-utils/branches/xfce_4_2/po/nl.po,
+	  xfce-utils/branches/xfce_4_2/po/pa.po,
+	  xfce-utils/branches/xfce_4_2/po/pl.po,
+	  xfce-utils/branches/xfce_4_2/po/pt_BR.po,
+	  xfce-utils/branches/xfce_4_2/po/pt_PT.po,
+	  xfce-utils/branches/xfce_4_2/po/ro.po,
+	  xfce-utils/branches/xfce_4_2/po/ru.po,
+	  xfce-utils/branches/xfce_4_2/po/sk.po,
+	  xfce-utils/branches/xfce_4_2/po/sl.po,
+	  xfce-utils/branches/xfce_4_2/po/sq.po,
+	  xfce-utils/branches/xfce_4_2/po/sv.po,
+	  xfce-utils/branches/xfce_4_2/po/ta.po,
+	  xfce-utils/branches/xfce_4_2/po/tr.po,
+	  xfce-utils/branches/xfce_4_2/po/uk.po,
+	  xfce-utils/branches/xfce_4_2/po/vi.po,
+	  xfce-utils/branches/xfce_4_2/po/xfce-utils.pot,
+	  xfce-utils/branches/xfce_4_2/po/zh_CN.po,
+	  xfce-utils/branches/xfce_4_2/po/zh_TW.po, po/af.po, po/be.po,
+	  po/bn_IN.po, po/ca.po, po/cs.po, po/da.po, po/de.po, po/el.po,
+	  po/en_GB.po, po/es.po, po/es_MX.po, po/et.po, po/eu.po, po/fa.po,
+	  po/fi.po, po/gu.po, po/he.po, po/hy.po, po/it.po, po/ja.po,
+	  po/ko.po, po/ku.po, po/lt.po, po/mr.po, po/nl.po, po/pa.po,
+	  po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po, po/sk.po,
+	  po/sl.po, po/sq.po, po/sv.po, po/tr.po, po/uk.po,
+	  po/xfce4-appfinder.pot, po/zh_CN.po, po/zh_TW.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/af.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/ar.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/az.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/be.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/bg.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/bn_IN.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/ca.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/cs.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/da.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/de.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/el.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/en_GB.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/es.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/es_MX.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/et.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/eu.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/fa.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/fi.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/fr.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/gu.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/he.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/hi.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/it.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/ja.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/ko.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/ku.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/lt.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/ms.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/nb_NO.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/nl.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/pa.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/pl.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/pt_BR.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/pt_PT.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/ro.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/ru.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/sk.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/sq.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/sv.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/ta.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/tr.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/uk.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/vi.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/xfce4-iconbox.pot,
+	  xfce4-iconbox/branches/xfce_4_2/po/zh_CN.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/zh_TW.po,
+	  xfce4-mixer/branches/xfce_4_2/po/af.po,
+	  xfce4-mixer/branches/xfce_4_2/po/ar.po,
+	  xfce4-mixer/branches/xfce_4_2/po/az.po,
+	  xfce4-mixer/branches/xfce_4_2/po/be.po,
+	  xfce4-mixer/branches/xfce_4_2/po/bg.po,
+	  xfce4-mixer/branches/xfce_4_2/po/bn_IN.po,
+	  xfce4-mixer/branches/xfce_4_2/po/ca.po,
+	  xfce4-mixer/branches/xfce_4_2/po/cs.po,
+	  xfce4-mixer/branches/xfce_4_2/po/da.po,
+	  xfce4-mixer/branches/xfce_4_2/po/de.po,
+	  xfce4-mixer/branches/xfce_4_2/po/el.po,
+	  xfce4-mixer/branches/xfce_4_2/po/en_GB.po,
+	  xfce4-mixer/branches/xfce_4_2/po/es.po,
+	  xfce4-mixer/branches/xfce_4_2/po/es_MX.po,
+	  xfce4-mixer/branches/xfce_4_2/po/et.po,
+	  xfce4-mixer/branches/xfce_4_2/po/eu.po,
+	  xfce4-mixer/branches/xfce_4_2/po/fa.po,
+	  xfce4-mixer/branches/xfce_4_2/po/fi.po,
+	  xfce4-mixer/branches/xfce_4_2/po/fr.po,
+	  xfce4-mixer/branches/xfce_4_2/po/gu.po,
+	  xfce4-mixer/branches/xfce_4_2/po/he.po,
+	  xfce4-mixer/branches/xfce_4_2/po/hi.po,
+	  xfce4-mixer/branches/xfce_4_2/po/hu.po,
+	  xfce4-mixer/branches/xfce_4_2/po/hy.po,
+	  xfce4-mixer/branches/xfce_4_2/po/it.po,
+	  xfce4-mixer/branches/xfce_4_2/po/ja.po,
+	  xfce4-mixer/branches/xfce_4_2/po/ko.po,
+	  xfce4-mixer/branches/xfce_4_2/po/ku.po,
+	  xfce4-mixer/branches/xfce_4_2/po/lt.po,
+	  xfce4-mixer/branches/xfce_4_2/po/mr.po,
+	  xfce4-mixer/branches/xfce_4_2/po/ms.po,
+	  xfce4-mixer/branches/xfce_4_2/po/nb_NO.po,
+	  xfce4-mixer/branches/xfce_4_2/po/nl.po,
+	  xfce4-mixer/branches/xfce_4_2/po/pa.po,
+	  xfce4-mixer/branches/xfce_4_2/po/pl.po,
+	  xfce4-mixer/branches/xfce_4_2/po/pt_BR.po,
+	  xfce4-mixer/branches/xfce_4_2/po/pt_PT.po,
+	  xfce4-mixer/branches/xfce_4_2/po/ro.po,
+	  xfce4-mixer/branches/xfce_4_2/po/ru.po,
+	  xfce4-mixer/branches/xfce_4_2/po/sk.po,
+	  xfce4-mixer/branches/xfce_4_2/po/sl.po,
+	  xfce4-mixer/branches/xfce_4_2/po/sq.po,
+	  xfce4-mixer/branches/xfce_4_2/po/sv.po,
+	  xfce4-mixer/branches/xfce_4_2/po/ta.po,
+	  xfce4-mixer/branches/xfce_4_2/po/tr.po,
+	  xfce4-mixer/branches/xfce_4_2/po/uk.po,
+	  xfce4-mixer/branches/xfce_4_2/po/vi.po,
+	  xfce4-mixer/branches/xfce_4_2/po/xfce4-mixer.pot,
+	  xfce4-mixer/branches/xfce_4_2/po/zh_CN.po,
+	  xfce4-mixer/branches/xfce_4_2/po/zh_TW.po,
+	  xfce4-panel/branches/xfce_4_2/po/af.po,
+	  xfce4-panel/branches/xfce_4_2/po/ar.po,
+	  xfce4-panel/branches/xfce_4_2/po/az.po,
+	  xfce4-panel/branches/xfce_4_2/po/be.po,
+	  xfce4-panel/branches/xfce_4_2/po/bg.po,
+	  xfce4-panel/branches/xfce_4_2/po/bn_IN.po,
+	  xfce4-panel/branches/xfce_4_2/po/ca.po,
+	  xfce4-panel/branches/xfce_4_2/po/cs.po,
+	  xfce4-panel/branches/xfce_4_2/po/da.po,
+	  xfce4-panel/branches/xfce_4_2/po/de.po,
+	  xfce4-panel/branches/xfce_4_2/po/el.po,
+	  xfce4-panel/branches/xfce_4_2/po/en_GB.po,
+	  xfce4-panel/branches/xfce_4_2/po/eo.po,
+	  xfce4-panel/branches/xfce_4_2/po/es.po,
+	  xfce4-panel/branches/xfce_4_2/po/es_MX.po,
+	  xfce4-panel/branches/xfce_4_2/po/et.po,
+	  xfce4-panel/branches/xfce_4_2/po/eu.po,
+	  xfce4-panel/branches/xfce_4_2/po/fa.po,
+	  xfce4-panel/branches/xfce_4_2/po/fi.po,
+	  xfce4-panel/branches/xfce_4_2/po/fr.po,
+	  xfce4-panel/branches/xfce_4_2/po/gu.po,
+	  xfce4-panel/branches/xfce_4_2/po/he.po,
+	  xfce4-panel/branches/xfce_4_2/po/hi.po,
+	  xfce4-panel/branches/xfce_4_2/po/hy.po,
+	  xfce4-panel/branches/xfce_4_2/po/it.po,
+	  xfce4-panel/branches/xfce_4_2/po/ja.po,
+	  xfce4-panel/branches/xfce_4_2/po/ko.po,
+	  xfce4-panel/branches/xfce_4_2/po/ku.po,
+	  xfce4-panel/branches/xfce_4_2/po/lt.po,
+	  xfce4-panel/branches/xfce_4_2/po/mr.po,
+	  xfce4-panel/branches/xfce_4_2/po/ms.po,
+	  xfce4-panel/branches/xfce_4_2/po/nb_NO.po,
+	  xfce4-panel/branches/xfce_4_2/po/nl.po,
+	  xfce4-panel/branches/xfce_4_2/po/pa.po,
+	  xfce4-panel/branches/xfce_4_2/po/pl.po,
+	  xfce4-panel/branches/xfce_4_2/po/pt_BR.po,
+	  xfce4-panel/branches/xfce_4_2/po/pt_PT.po,
+	  xfce4-panel/branches/xfce_4_2/po/ro.po,
+	  xfce4-panel/branches/xfce_4_2/po/ru.po,
+	  xfce4-panel/branches/xfce_4_2/po/sk.po,
+	  xfce4-panel/branches/xfce_4_2/po/sl.po,
+	  xfce4-panel/branches/xfce_4_2/po/sq.po,
+	  xfce4-panel/branches/xfce_4_2/po/sv.po,
+	  xfce4-panel/branches/xfce_4_2/po/ta.po,
+	  xfce4-panel/branches/xfce_4_2/po/tr.po,
+	  xfce4-panel/branches/xfce_4_2/po/uk.po,
+	  xfce4-panel/branches/xfce_4_2/po/vi.po,
+	  xfce4-panel/branches/xfce_4_2/po/zh_CN.po,
+	  xfce4-panel/branches/xfce_4_2/po/zh_TW.po,
+	  xfce4-session/branches/xfce_4_2/po/af.po,
+	  xfce4-session/branches/xfce_4_2/po/ar.po,
+	  xfce4-session/branches/xfce_4_2/po/az.po,
+	  xfce4-session/branches/xfce_4_2/po/be.po,
+	  xfce4-session/branches/xfce_4_2/po/bn_IN.po,
+	  xfce4-session/branches/xfce_4_2/po/ca.po,
+	  xfce4-session/branches/xfce_4_2/po/cs.po,
+	  xfce4-session/branches/xfce_4_2/po/da.po,
+	  xfce4-session/branches/xfce_4_2/po/de.po,
+	  xfce4-session/branches/xfce_4_2/po/el.po,
+	  xfce4-session/branches/xfce_4_2/po/en_GB.po,
+	  xfce4-session/branches/xfce_4_2/po/eo.po,
+	  xfce4-session/branches/xfce_4_2/po/es.po,
+	  xfce4-session/branches/xfce_4_2/po/es_MX.po,
+	  xfce4-session/branches/xfce_4_2/po/et.po,
+	  xfce4-session/branches/xfce_4_2/po/eu.po,
+	  xfce4-session/branches/xfce_4_2/po/fa.po,
+	  xfce4-session/branches/xfce_4_2/po/fi.po,
+	  xfce4-session/branches/xfce_4_2/po/fr.po,
+	  xfce4-session/branches/xfce_4_2/po/gu.po,
+	  xfce4-session/branches/xfce_4_2/po/he.po,
+	  xfce4-session/branches/xfce_4_2/po/hi.po,
+	  xfce4-session/branches/xfce_4_2/po/hu.po,
+	  xfce4-session/branches/xfce_4_2/po/it.po,
+	  xfce4-session/branches/xfce_4_2/po/ja.po,
+	  xfce4-session/branches/xfce_4_2/po/ko.po,
+	  xfce4-session/branches/xfce_4_2/po/ku.po,
+	  xfce4-session/branches/xfce_4_2/po/lt.po,
+	  xfce4-session/branches/xfce_4_2/po/mr.po,
+	  xfce4-session/branches/xfce_4_2/po/ms.po,
+	  xfce4-session/branches/xfce_4_2/po/nb_NO.po,
+	  xfce4-session/branches/xfce_4_2/po/nl.po,
+	  xfce4-session/branches/xfce_4_2/po/pa.po,
+	  xfce4-session/branches/xfce_4_2/po/pl.po,
+	  xfce4-session/branches/xfce_4_2/po/pt_BR.po,
+	  xfce4-session/branches/xfce_4_2/po/pt_PT.po,
+	  xfce4-session/branches/xfce_4_2/po/ro.po,
+	  xfce4-session/branches/xfce_4_2/po/ru.po,
+	  xfce4-session/branches/xfce_4_2/po/sk.po,
+	  xfce4-session/branches/xfce_4_2/po/sl.po,
+	  xfce4-session/branches/xfce_4_2/po/sq.po,
+	  xfce4-session/branches/xfce_4_2/po/sv.po,
+	  xfce4-session/branches/xfce_4_2/po/ta.po,
+	  xfce4-session/branches/xfce_4_2/po/tr.po,
+	  xfce4-session/branches/xfce_4_2/po/uk.po,
+	  xfce4-session/branches/xfce_4_2/po/vi.po,
+	  xfce4-session/branches/xfce_4_2/po/xfce4-session.pot,
+	  xfce4-session/branches/xfce_4_2/po/zh_CN.po,
+	  xfce4-session/branches/xfce_4_2/po/zh_TW.po,
+	  xfce4-toys/branches/xfce_4_2/po/af.po,
+	  xfce4-toys/branches/xfce_4_2/po/ar.po,
+	  xfce4-toys/branches/xfce_4_2/po/az.po,
+	  xfce4-toys/branches/xfce_4_2/po/be.po,
+	  xfce4-toys/branches/xfce_4_2/po/bg.po,
+	  xfce4-toys/branches/xfce_4_2/po/bn_IN.po,
+	  xfce4-toys/branches/xfce_4_2/po/ca.po,
+	  xfce4-toys/branches/xfce_4_2/po/cs.po,
+	  xfce4-toys/branches/xfce_4_2/po/da.po,
+	  xfce4-toys/branches/xfce_4_2/po/de.po,
+	  xfce4-toys/branches/xfce_4_2/po/el.po,
+	  xfce4-toys/branches/xfce_4_2/po/en_GB.po,
+	  xfce4-toys/branches/xfce_4_2/po/eo.po,
+	  xfce4-toys/branches/xfce_4_2/po/es.po,
+	  xfce4-toys/branches/xfce_4_2/po/es_MX.po,
+	  xfce4-toys/branches/xfce_4_2/po/et.po,
+	  xfce4-toys/branches/xfce_4_2/po/eu.po,
+	  xfce4-toys/branches/xfce_4_2/po/fa.po,
+	  xfce4-toys/branches/xfce_4_2/po/fi.po,
+	  xfce4-toys/branches/xfce_4_2/po/fr.po,
+	  xfce4-toys/branches/xfce_4_2/po/gu.po,
+	  xfce4-toys/branches/xfce_4_2/po/he.po,
+	  xfce4-toys/branches/xfce_4_2/po/hi.po,
+	  xfce4-toys/branches/xfce_4_2/po/hu.po,
+	  xfce4-toys/branches/xfce_4_2/po/it.po,
+	  xfce4-toys/branches/xfce_4_2/po/ja.po,
+	  xfce4-toys/branches/xfce_4_2/po/ko.po,
+	  xfce4-toys/branches/xfce_4_2/po/ku.po,
+	  xfce4-toys/branches/xfce_4_2/po/lt.po,
+	  xfce4-toys/branches/xfce_4_2/po/mr.po,
+	  xfce4-toys/branches/xfce_4_2/po/ms.po,
+	  xfce4-toys/branches/xfce_4_2/po/nb_NO.po,
+	  xfce4-toys/branches/xfce_4_2/po/nl.po,
+	  xfce4-toys/branches/xfce_4_2/po/pa.po,
+	  xfce4-toys/branches/xfce_4_2/po/pl.po,
+	  xfce4-toys/branches/xfce_4_2/po/pt_BR.po,
+	  xfce4-toys/branches/xfce_4_2/po/pt_PT.po,
+	  xfce4-toys/branches/xfce_4_2/po/ro.po,
+	  xfce4-toys/branches/xfce_4_2/po/ru.po,
+	  xfce4-toys/branches/xfce_4_2/po/sk.po,
+	  xfce4-toys/branches/xfce_4_2/po/sl.po,
+	  xfce4-toys/branches/xfce_4_2/po/sq.po,
+	  xfce4-toys/branches/xfce_4_2/po/sv.po,
+	  xfce4-toys/branches/xfce_4_2/po/ta.po,
+	  xfce4-toys/branches/xfce_4_2/po/tr.po,
+	  xfce4-toys/branches/xfce_4_2/po/uk.po,
+	  xfce4-toys/branches/xfce_4_2/po/vi.po,
+	  xfce4-toys/branches/xfce_4_2/po/zh_CN.po,
+	  xfce4-toys/branches/xfce_4_2/po/zh_TW.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/af.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/ar.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/az.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/be.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/bg.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/bn_IN.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/ca.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/cs.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/da.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/de.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/el.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/en_GB.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/eo.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/es.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/es_MX.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/et.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/eu.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/fa.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/fi.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/fr.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/gu.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/he.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/hi.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/hu.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/it.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/ja.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/ko.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/ku.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/lt.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/mr.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/ms.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/nl.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/pa.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/pl.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/pt_BR.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/pt_PT.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/ro.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/ru.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/sk.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/sl.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/sq.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/sv.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/ta.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/tr.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/uk.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/vi.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/xfce4-trigger-launcher.pot,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/zh_CN.po,
+	  xfce4-trigger-launcher/branches/xfce_4_2/po/zh_TW.po,
+	  xfdesktop/branches/xfce_4_2/po/af.po,
+	  xfdesktop/branches/xfce_4_2/po/ar.po,
+	  xfdesktop/branches/xfce_4_2/po/az.po,
+	  xfdesktop/branches/xfce_4_2/po/be.po,
+	  xfdesktop/branches/xfce_4_2/po/bg.po,
+	  xfdesktop/branches/xfce_4_2/po/bn_IN.po,
+	  xfdesktop/branches/xfce_4_2/po/ca.po,
+	  xfdesktop/branches/xfce_4_2/po/cs.po,
+	  xfdesktop/branches/xfce_4_2/po/da.po,
+	  xfdesktop/branches/xfce_4_2/po/de.po,
+	  xfdesktop/branches/xfce_4_2/po/el.po,
+	  xfdesktop/branches/xfce_4_2/po/en_GB.po,
+	  xfdesktop/branches/xfce_4_2/po/eo.po,
+	  xfdesktop/branches/xfce_4_2/po/es.po,
+	  xfdesktop/branches/xfce_4_2/po/es_MX.po,
+	  xfdesktop/branches/xfce_4_2/po/et.po,
+	  xfdesktop/branches/xfce_4_2/po/eu.po,
+	  xfdesktop/branches/xfce_4_2/po/fa.po,
+	  xfdesktop/branches/xfce_4_2/po/fi.po,
+	  xfdesktop/branches/xfce_4_2/po/fr.po,
+	  xfdesktop/branches/xfce_4_2/po/gu.po,
+	  xfdesktop/branches/xfce_4_2/po/he.po,
+	  xfdesktop/branches/xfce_4_2/po/hi.po,
+	  xfdesktop/branches/xfce_4_2/po/hu.po,
+	  xfdesktop/branches/xfce_4_2/po/hy.po,
+	  xfdesktop/branches/xfce_4_2/po/it.po,
+	  xfdesktop/branches/xfce_4_2/po/ja.po,
+	  xfdesktop/branches/xfce_4_2/po/ko.po,
+	  xfdesktop/branches/xfce_4_2/po/ku.po,
+	  xfdesktop/branches/xfce_4_2/po/lt.po,
+	  xfdesktop/branches/xfce_4_2/po/mr.po,
+	  xfdesktop/branches/xfce_4_2/po/ms.po,
+	  xfdesktop/branches/xfce_4_2/po/nb_NO.po,
+	  xfdesktop/branches/xfce_4_2/po/nl.po,
+	  xfdesktop/branches/xfce_4_2/po/pa.po,
+	  xfdesktop/branches/xfce_4_2/po/pl.po,
+	  xfdesktop/branches/xfce_4_2/po/pt_BR.po,
+	  xfdesktop/branches/xfce_4_2/po/pt_PT.po,
+	  xfdesktop/branches/xfce_4_2/po/ro.po,
+	  xfdesktop/branches/xfce_4_2/po/ru.po,
+	  xfdesktop/branches/xfce_4_2/po/sk.po,
+	  xfdesktop/branches/xfce_4_2/po/sl.po,
+	  xfdesktop/branches/xfce_4_2/po/sq.po,
+	  xfdesktop/branches/xfce_4_2/po/sv.po,
+	  xfdesktop/branches/xfce_4_2/po/ta.po,
+	  xfdesktop/branches/xfce_4_2/po/tr.po,
+	  xfdesktop/branches/xfce_4_2/po/uk.po,
+	  xfdesktop/branches/xfce_4_2/po/vi.po,
+	  xfdesktop/branches/xfce_4_2/po/xfdesktop.pot,
+	  xfdesktop/branches/xfce_4_2/po/zh_CN.po,
+	  xfdesktop/branches/xfce_4_2/po/zh_TW.po,
+	  xffm/branches/xfce_4_2/po/af.po, xffm/branches/xfce_4_2/po/ar.po,
+	  xffm/branches/xfce_4_2/po/az.po, xffm/branches/xfce_4_2/po/bg.po,
+	  xffm/branches/xfce_4_2/po/bn_IN.po,
+	  xffm/branches/xfce_4_2/po/ca.po, xffm/branches/xfce_4_2/po/cs.po,
+	  xffm/branches/xfce_4_2/po/de.po,
+	  xffm/branches/xfce_4_2/po/en_GB.po,
+	  xffm/branches/xfce_4_2/po/es.po,
+	  xffm/branches/xfce_4_2/po/es_MX.po,
+	  xffm/branches/xfce_4_2/po/et.po, xffm/branches/xfce_4_2/po/eu.po,
+	  xffm/branches/xfce_4_2/po/fa.po, xffm/branches/xfce_4_2/po/fi.po,
+	  xffm/branches/xfce_4_2/po/fr.po, xffm/branches/xfce_4_2/po/gu.po,
+	  xffm/branches/xfce_4_2/po/he.po, xffm/branches/xfce_4_2/po/hi.po,
+	  xffm/branches/xfce_4_2/po/hu.po, xffm/branches/xfce_4_2/po/it.po,
+	  xffm/branches/xfce_4_2/po/ja.po, xffm/branches/xfce_4_2/po/ko.po,
+	  xffm/branches/xfce_4_2/po/ku.po, xffm/branches/xfce_4_2/po/lt.po,
+	  xffm/branches/xfce_4_2/po/mr.po, xffm/branches/xfce_4_2/po/ms.po,
+	  xffm/branches/xfce_4_2/po/nb_NO.po,
+	  xffm/branches/xfce_4_2/po/nl.po, xffm/branches/xfce_4_2/po/pa.po,
+	  xffm/branches/xfce_4_2/po/pl.po,
+	  xffm/branches/xfce_4_2/po/pt_BR.po,
+	  xffm/branches/xfce_4_2/po/pt_PT.po,
+	  xffm/branches/xfce_4_2/po/sk.po, xffm/branches/xfce_4_2/po/sl.po,
+	  xffm/branches/xfce_4_2/po/sq.po, xffm/branches/xfce_4_2/po/sv.po,
+	  xffm/branches/xfce_4_2/po/ta.po, xffm/branches/xfce_4_2/po/tr.po,
+	  xffm/branches/xfce_4_2/po/uk.po, xffm/branches/xfce_4_2/po/vi.po,
+	  xffm/branches/xfce_4_2/po/xffm.pot,
+	  xffm/branches/xfce_4_2/po/zh_CN.po,
+	  xffm/branches/xfce_4_2/po/zh_TW.po,
+	  xfprint/branches/xfce_4_2/po/af.po,
+	  xfprint/branches/xfce_4_2/po/ar.po,
+	  xfprint/branches/xfce_4_2/po/az.po,
+	  xfprint/branches/xfce_4_2/po/be.po,
+	  xfprint/branches/xfce_4_2/po/bg.po,
+	  xfprint/branches/xfce_4_2/po/bn_IN.po,
+	  xfprint/branches/xfce_4_2/po/ca.po,
+	  xfprint/branches/xfce_4_2/po/cs.po,
+	  xfprint/branches/xfce_4_2/po/de.po,
+	  xfprint/branches/xfce_4_2/po/el.po,
+	  xfprint/branches/xfce_4_2/po/en_GB.po,
+	  xfprint/branches/xfce_4_2/po/es.po,
+	  xfprint/branches/xfce_4_2/po/es_MX.po,
+	  xfprint/branches/xfce_4_2/po/et.po,
+	  xfprint/branches/xfce_4_2/po/eu.po,
+	  xfprint/branches/xfce_4_2/po/fa.po,
+	  xfprint/branches/xfce_4_2/po/fi.po,
+	  xfprint/branches/xfce_4_2/po/fr.po,
+	  xfprint/branches/xfce_4_2/po/gu.po,
+	  xfprint/branches/xfce_4_2/po/he.po,
+	  xfprint/branches/xfce_4_2/po/hi.po,
+	  xfprint/branches/xfce_4_2/po/hu.po,
+	  xfprint/branches/xfce_4_2/po/it.po,
+	  xfprint/branches/xfce_4_2/po/ja.po,
+	  xfprint/branches/xfce_4_2/po/ko.po,
+	  xfprint/branches/xfce_4_2/po/ku.po,
+	  xfprint/branches/xfce_4_2/po/lt.po,
+	  xfprint/branches/xfce_4_2/po/mr.po,
+	  xfprint/branches/xfce_4_2/po/ms.po,
+	  xfprint/branches/xfce_4_2/po/nl.po,
+	  xfprint/branches/xfce_4_2/po/pa.po,
+	  xfprint/branches/xfce_4_2/po/pl.po,
+	  xfprint/branches/xfce_4_2/po/pt_BR.po,
+	  xfprint/branches/xfce_4_2/po/pt_PT.po,
+	  xfprint/branches/xfce_4_2/po/ro.po,
+	  xfprint/branches/xfce_4_2/po/ru.po,
+	  xfprint/branches/xfce_4_2/po/sk.po,
+	  xfprint/branches/xfce_4_2/po/sl.po,
+	  xfprint/branches/xfce_4_2/po/sq.po,
+	  xfprint/branches/xfce_4_2/po/sv.po,
+	  xfprint/branches/xfce_4_2/po/ta.po,
+	  xfprint/branches/xfce_4_2/po/tr.po,
+	  xfprint/branches/xfce_4_2/po/uk.po,
+	  xfprint/branches/xfce_4_2/po/vi.po,
+	  xfprint/branches/xfce_4_2/po/xfprint.pot,
+	  xfprint/branches/xfce_4_2/po/zh_CN.po,
+	  xfprint/branches/xfce_4_2/po/zh_TW.po,
+	  xfwm4/branches/xfce_4_2/po/af.po,
+	  xfwm4/branches/xfce_4_2/po/ar.po,
+	  xfwm4/branches/xfce_4_2/po/az.po,
+	  xfwm4/branches/xfce_4_2/po/be.po,
+	  xfwm4/branches/xfce_4_2/po/bg.po,
+	  xfwm4/branches/xfce_4_2/po/bn_IN.po,
+	  xfwm4/branches/xfce_4_2/po/ca.po,
+	  xfwm4/branches/xfce_4_2/po/cs.po,
+	  xfwm4/branches/xfce_4_2/po/de.po,
+	  xfwm4/branches/xfce_4_2/po/el.po,
+	  xfwm4/branches/xfce_4_2/po/en_GB.po,
+	  xfwm4/branches/xfce_4_2/po/eo.po,
+	  xfwm4/branches/xfce_4_2/po/es.po,
+	  xfwm4/branches/xfce_4_2/po/es_MX.po,
+	  xfwm4/branches/xfce_4_2/po/et.po,
+	  xfwm4/branches/xfce_4_2/po/eu.po,
+	  xfwm4/branches/xfce_4_2/po/fa.po,
+	  xfwm4/branches/xfce_4_2/po/fi.po,
+	  xfwm4/branches/xfce_4_2/po/fr.po,
+	  xfwm4/branches/xfce_4_2/po/gu.po,
+	  xfwm4/branches/xfce_4_2/po/he.po,
+	  xfwm4/branches/xfce_4_2/po/hi.po,
+	  xfwm4/branches/xfce_4_2/po/hu.po,
+	  xfwm4/branches/xfce_4_2/po/it.po,
+	  xfwm4/branches/xfce_4_2/po/ja.po,
+	  xfwm4/branches/xfce_4_2/po/ko.po,
+	  xfwm4/branches/xfce_4_2/po/ku.po,
+	  xfwm4/branches/xfce_4_2/po/lt.po,
+	  xfwm4/branches/xfce_4_2/po/mr.po,
+	  xfwm4/branches/xfce_4_2/po/ms.po,
+	  xfwm4/branches/xfce_4_2/po/nb_NO.po,
+	  xfwm4/branches/xfce_4_2/po/nl.po,
+	  xfwm4/branches/xfce_4_2/po/pa.po,
+	  xfwm4/branches/xfce_4_2/po/pl.po,
+	  xfwm4/branches/xfce_4_2/po/pt_BR.po,
+	  xfwm4/branches/xfce_4_2/po/pt_PT.po,
+	  xfwm4/branches/xfce_4_2/po/ro.po,
+	  xfwm4/branches/xfce_4_2/po/ru.po,
+	  xfwm4/branches/xfce_4_2/po/sk.po,
+	  xfwm4/branches/xfce_4_2/po/sl.po,
+	  xfwm4/branches/xfce_4_2/po/sq.po,
+	  xfwm4/branches/xfce_4_2/po/sv.po,
+	  xfwm4/branches/xfce_4_2/po/ta.po,
+	  xfwm4/branches/xfce_4_2/po/tr.po,
+	  xfwm4/branches/xfce_4_2/po/uk.po,
+	  xfwm4/branches/xfce_4_2/po/vi.po,
+	  xfwm4/branches/xfce_4_2/po/zh_CN.po,
+	  xfwm4/branches/xfce_4_2/po/zh_TW.po: Bump.
+
+2006-04-11 11:52  daichi
+
+	* libxfcegui4/branches/xfce_4_2/po/hu.po,
+	  xfce-mcs-plugins/branches/xfce_4_2/po/hu.po,
+	  xfce-utils/branches/xfce_4_2/po/hu.po, po/hu.po,
+	  xfce4-iconbox/branches/xfce_4_2/po/hu.po,
+	  xfce4-panel/branches/xfce_4_2/po/hu.po,
+	  xfce4-session/branches/xfce_4_2/settings/splash/xfce-splash-settings.desktop:
+	  Updated Hungarian translations by Szervac Attila <sas@321.hu>.
+
+2006-04-03 20:43  olivier
+
+	* ChangeLog: Update ChangeLog
+
+2006-04-03 20:18  olivier
+
+	* configure.ac: Update version.
+
 2006-03-05 06:23  daichi
 
 	* libxfcegui4/branches/xfce_4_2/configure.ac,
@@ -44,8 +863,7 @@
 	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.uk,
 	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.vi,
 	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.zh_TW,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/sq.po,
+	  configure.ac, po/sq.po,
 	  xfce4-iconbox/branches/xfce_4_2/configure.ac,
 	  xfce4-iconbox/branches/xfce_4_2/po/sq.po,
 	  xfce4-mixer/branches/xfce_4_2/configure.ac,
@@ -74,8 +892,7 @@
 	  xfcalendar/branches/xfce_4_2/po/ChangeLog,
 	  xfce-mcs-manager/branches/xfce_4_2/po/ChangeLog,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/ChangeLog,
-	  xfce-utils/branches/xfce_4_2/po/ChangeLog,
-	  xfce4-appfinder/branches/xfce_4_2/po/ChangeLog,
+	  xfce-utils/branches/xfce_4_2/po/ChangeLog, po/ChangeLog,
 	  xfce4-iconbox/branches/xfce_4_2/po/ChangeLog,
 	  xfce4-mixer/branches/xfce_4_2/po/ChangeLog,
 	  xfce4-panel/branches/xfce_4_2/po/ChangeLog,
@@ -89,48 +906,43 @@
 
 2005-11-05 14:18  olivier
 
-	* xfce4-appfinder/branches/xfce_4_2/ChangeLog: Update ChangeLog
+	* ChangeLog: Update ChangeLog
 
 2005-11-05 13:13  moe
 
-	* xfce4-appfinder/branches/xfce_4_2/po/de.po,
-	  xfce4-mixer/branches/xfce_4_2/po/de.po,
+	* po/de.po, xfce4-mixer/branches/xfce_4_2/po/de.po,
 	  xfprint/branches/xfce_4_2/po/de.po,
-	  xfwm4/branches/xfce_4_2/po/de.po: Updated german translations
-	  for the upcoming release.
+	  xfwm4/branches/xfce_4_2/po/de.po: Updated german translations for
+	  the upcoming release.
 
 2005-11-04 23:39  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/pt_BR.po: Updated Brazilian
-	  Portuguese translations by
+	* po/pt_BR.po: Updated Brazilian Portuguese translations by
 	  Adriano Winter Bess <awbess@gmail.com>.
 
 2005-11-03 13:31  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/ro.po: Updated Romanian
-	  translations by Misu Moldovan <dumol@gnome.ro>.
+	* po/ro.po: Updated Romanian translations by Misu Moldovan
+	  <dumol@gnome.ro>.
 
 2005-11-03 13:25  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/sl.po: Added Slovenian
-	  translations by Bostjan Spetic <igzebedze@auch.eu.org>.
+	* configure.ac, po/sl.po: Added Slovenian translations by Bostjan
+	  Spetic <igzebedze@auch.eu.org>.
 
 2005-11-01 16:30  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/ko.po,
-	  xfdesktop/branches/xfce_4_2/po/ko.po: Updated Korean
+	* po/ko.po, xfdesktop/branches/xfce_4_2/po/ko.po: Updated Korean
 	  translations by Choi Dayle <dayle_good_man@yahoo.co.jp>.
 
 2005-10-30 03:57  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/ChangeLog: Trimmed and
-	  updated.
+	* po/ChangeLog: Trimmed and updated.
 
 2005-10-28 12:10  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/fi.po: Updated Finnish
-	  translations by Jari Rahkonen <jari.rahkonen@pp1.inet.fi>.
+	* po/fi.po: Updated Finnish translations by Jari Rahkonen
+	  <jari.rahkonen@pp1.inet.fi>.
 
 2005-10-28 12:08  daichi
 
@@ -138,8 +950,7 @@
 	  xfcalendar/branches/xfce_4_2/po/be.po,
 	  xfce-mcs-manager/branches/xfce_4_2/po/be.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/be.po,
-	  xfce-utils/branches/xfce_4_2/po/be.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/be.po,
+	  xfce-utils/branches/xfce_4_2/po/be.po, po/be.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/be.po,
 	  xfce4-mixer/branches/xfce_4_2/po/be.po,
 	  xfce4-panel/branches/xfce_4_2/po/be.po,
@@ -153,29 +964,28 @@
 
 2005-10-28 09:12  jasper
 
-	* xfce4-appfinder/branches/xfce_4_2/po/nl.po: Add missing
-	  translations
+	* po/nl.po: Add missing translations
 
 2005-10-27 19:30  paurullan
 
-	* xfce4-appfinder/branches/xfce_4_2/po/ca.po: updated
-	  xfce4-appfinder, now fully translated
+	* po/ca.po: updated xfce4-appfinder, now fully translated
 	  -- paurullan@bulma.net (ca translator)
 
 2005-10-21 14:46  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/ChangeLog: Updated (in
-	  which unnecessary logs are removed).
+	* po/ChangeLog: Updated (in which unnecessary logs are removed).
 
 2005-10-21 10:08  hydonsingore
 
-	* xfce4-appfinder/branches/xfce_4_2/configure.ac: Permission Test
-	* xfce4-appfinder/branches/xfce_4_2/configure.ac: Permission Test
+	* configure.ac: Permission Test
+
+2005-10-21 10:08  hydonsingore
+
+	* configure.ac: Permission Test
 
 2005-10-20 23:30  daichi
 
-	* libxfcegui4/trunk/po/it.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/it.po,
+	* libxfcegui4/trunk/po/it.po, po/it.po,
 	  xfce4-mailwatch-plugin/trunk/po/eu.po,
 	  xfce4-panel/branches/xfce_4_2/po/it.po,
 	  xfce4-session/branches/xfce_4_2/po/it.po: * Modified initial
@@ -185,14 +995,12 @@
 
 2005-10-20 22:37  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/configure.ac: Added `zh_TW' at
-	  BM_I18N().
+	* configure.ac: Added `zh_TW' at BM_I18N().
 
 2005-10-20 12:37  alex
 
 	* mousepad/trunk/po/it.po, xfce-mcs-manager/trunk/po/it.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/it.po,
-	  xfce4-appfinder/trunk/po/it.po,
+	  po/it.po, xfce4-appfinder/trunk/po/it.po,
 	  xfce4-mixer/branches/xfce_4_2/po/it.po,
 	  xfce4-mixer/trunk/po/it.po,
 	  xfce4-panel/branches/xfce_4_2/po/it.po,
@@ -202,8 +1010,7 @@
 
 2005-10-20 12:29  hydonsingore
 
-	* xfce4-appfinder/branches/xfce_4_2/po/zh_TW.po: appfinder zh_TW
-	  translation added.
+	* po/zh_TW.po: appfinder zh_TW translation added.
 
 2005-10-19 20:51  daichi
 
@@ -214,10 +1021,8 @@
 	  xfce-mcs-manager/trunk/po/lt.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/lt.po,
 	  xfce-mcs-plugins/trunk/po/lt.po,
-	  xfce-utils/branches/xfce_4_2/po/lt.po,
-	  xfce-utils/trunk/po/lt.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/lt.po,
-	  xfce4-appfinder/trunk/po/lt.po,
+	  xfce-utils/branches/xfce_4_2/po/lt.po, xfce-utils/trunk/po/lt.po,
+	  po/lt.po, xfce4-appfinder/trunk/po/lt.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/lt.po,
 	  xfce4-mixer/branches/xfce_4_2/po/lt.po,
 	  xfce4-mixer/trunk/po/lt.po,
@@ -242,9 +1047,7 @@
 	  xfce-mcs-plugins/branches/xfce_4_2/po/ku.po,
 	  xfce-utils/branches/xfce_4_2/po/bg.po,
 	  xfce-utils/branches/xfce_4_2/po/hu.po,
-	  xfce-utils/branches/xfce_4_2/po/ku.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/hu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ku.po,
+	  xfce-utils/branches/xfce_4_2/po/ku.po, po/hu.po, po/ku.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/bg.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/hu.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/ku.po,
@@ -262,8 +1065,7 @@
 	  xfce4-trigger-launcher/branches/xfce_4_2/po/bg.po,
 	  xfce4-trigger-launcher/branches/xfce_4_2/po/hu.po,
 	  xfce4-trigger-launcher/branches/xfce_4_2/po/ku.po,
-	  xffm/branches/xfce_4_2/po/bg.po,
-	  xffm/branches/xfce_4_2/po/hu.po,
+	  xffm/branches/xfce_4_2/po/bg.po, xffm/branches/xfce_4_2/po/hu.po,
 	  xffm/branches/xfce_4_2/po/ku.po,
 	  xfprint/branches/xfce_4_2/po/bg.po,
 	  xfprint/branches/xfce_4_2/po/hu.po,
@@ -274,21 +1076,18 @@
 
 2005-10-18 15:39  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/eu.po,
-	  xfprint/branches/xfce_4_2/po/eu.po,
+	* po/eu.po, xfprint/branches/xfce_4_2/po/eu.po,
 	  xfwm4/branches/xfce_4_2/po/eu.po: Updated Basque translations by
 	  Piarres Beobide Egana <pi@beobide.net>.
 
 2005-10-17 07:58  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/pl.po,
-	  xfce4-toys/branches/xfce_4_2/po/pl.po: Removed unnecessary
-	  `fuzzy' marks.
+	* po/pl.po, xfce4-toys/branches/xfce_4_2/po/pl.po: Removed
+	  unnecessary `fuzzy' marks.
 
 2005-10-16 17:33  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/pl.po,
-	  xfce4-panel/branches/xfce_4_2/Makefile.am,
+	* po/pl.po, xfce4-panel/branches/xfce_4_2/Makefile.am,
 	  xfce4-panel/branches/xfce_4_2/contents.xml.pl,
 	  xfdesktop/branches/xfce_4_2/Makefile.am,
 	  xfdesktop/branches/xfce_4_2/menu.xml.pl,
@@ -300,59 +1099,25 @@
 
 2005-10-14 23:43  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/af.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/be.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/bn_IN.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ca.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/cs.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/da.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/de.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/el.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/en_GB.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es_MX.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/et.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/eu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/fa.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/fi.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/gu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/he.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/hu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/hy.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/it.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ko.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ku.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/lt.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/mr.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/nl.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pa.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pl.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_BR.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_PT.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ro.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ru.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/sk.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/sv.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/tr.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/uk.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/xfce4-appfinder.pot,
-	  xfce4-appfinder/branches/xfce_4_2/po/zh_CN.po: Updated.
+	* po/af.po, po/be.po, po/bn_IN.po, po/ca.po, po/cs.po, po/da.po,
+	  po/de.po, po/el.po, po/en_GB.po, po/es.po, po/es_MX.po, po/et.po,
+	  po/eu.po, po/fa.po, po/fi.po, po/gu.po, po/he.po, po/hu.po,
+	  po/hy.po, po/it.po, po/ja.po, po/ko.po, po/ku.po, po/lt.po,
+	  po/mr.po, po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po,
+	  po/ro.po, po/ru.po, po/sk.po, po/sv.po, po/tr.po, po/uk.po,
+	  po/xfce4-appfinder.pot, po/zh_CN.po: Updated.
 
 2005-10-14 22:45  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/POTFILES.in: Added a
-	  missing file.
+	* po/POTFILES.in: Added a missing file.
 
 2005-10-11 17:21  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/src/callbacks.c: * Corrected a
-	  misspelling. (bug #1164)
+	* src/callbacks.c: * Corrected a misspelling. (bug #1164)
 
 2005-10-11 16:41  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/src/main.c: * Corrected a
-	  misspelling. (bug #1164)
+	* src/main.c: * Corrected a misspelling. (bug #1164)
 	  
 	  * Removed executable attribute.
 
@@ -360,15 +1125,13 @@
 
 	* libxfcegui4/branches/xfce_4_2/po/fi.po,
 	  libxfcegui4/trunk/po/fi.po,
-	  xfcalendar/branches/xfce_4_2/po/fi.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/fi.po,
+	  xfcalendar/branches/xfce_4_2/po/fi.po, po/fi.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/fi.po,
 	  xfce4-mixer/branches/xfce_4_2/po/fi.po,
 	  xfce4-mixer/trunk/po/fi.po,
 	  xfce4-session/branches/xfce_4_2/po/fi.po,
 	  xfce4-session/trunk/po/fi.po,
-	  xfce4-toys/branches/xfce_4_2/po/fi.po,
-	  xfce4-toys/trunk/po/fi.po,
+	  xfce4-toys/branches/xfce_4_2/po/fi.po, xfce4-toys/trunk/po/fi.po,
 	  xfce4-trigger-launcher/branches/xfce_4_2/po/fi.po,
 	  xfce4-trigger-launcher/trunk/po/fi.po,
 	  xffm/branches/xfce_4_2/po/fi.po,
@@ -381,9 +1144,8 @@
 	  xfcalendar/branches/xfce_4_2/po/ro.po,
 	  xfce-mcs-manager/branches/xfce_4_2/po/ro.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/ro.po,
-	  xfce-utils/branches/xfce_4_2/po/ro.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ro.po,
-	  xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop,
+	  xfce-utils/branches/xfce_4_2/po/ro.po, po/ro.po,
+	  src/xfce4-appfinder.desktop,
 	  xfce4-iconbox/branches/xfce_4_2/po/ro.po,
 	  xfce4-mixer/branches/xfce_4_2/po/ro.po,
 	  xfce4-panel/branches/xfce_4_2/po/ro.po,
@@ -400,7 +1162,7 @@
 
 2005-10-09 09:27  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop,
+	* src/xfce4-appfinder.desktop,
 	  xfdesktop/branches/xfce_4_2/menueditor/xfce-menueditor.desktop,
 	  xfdesktop/branches/xfce_4_2/settings/xfce-backdrop-settings.desktop,
 	  xffm/branches/xfce_4_2/src/Xfbook.desktop,
@@ -411,29 +1173,20 @@
 2005-10-09 09:13  daichi
 
 	* xfce-mcs-manager/branches/xfce_4_2/xfce-setting-show/xfce-settings-manager.desktop,
-	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/display_plugin/xfce-display-settings.desktop,
-	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/keyboard_plugin/xfce-keyboard-settings.desktop,
-	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/mouse_plugin/xfce-mouse-settings.desktop,
-	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/ui_plugin/xfce-ui-settings.desktop,
 	  xfce-utils/branches/xfce_4_2/gdm/xfce.desktop,
 	  xfce-utils/branches/xfce_4_2/xftaskbar/plugin/xfce-taskbar-settings.desktop,
-	  xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop,
+	  src/xfce4-appfinder.desktop,
 	  xfce4-iconbox/branches/xfce_4_2/settings/xfce-iconbox-settings.desktop,
-	  
 	  xfce4-mixer/branches/xfce_4_2/settings/xfce-mixer-settings.desktop,
-	  
 	  xfce4-panel/branches/xfce_4_2/settings/xfce-panel-settings.desktop,
-	  
 	  xfce4-session/branches/xfce_4_2/settings/session/xfce-session-settings.desktop,
-	  
 	  xfce4-session/branches/xfce_4_2/settings/splash/xfce-splash-settings.desktop,
 	  xfdesktop/branches/xfce_4_2/menueditor/xfce-menueditor.desktop,
 	  xfdesktop/branches/xfce_4_2/settings/xfce-backdrop-settings.desktop,
-	  
 	  xffm/branches/xfce_4_2/plugin-mcs/xfce-filemanager-settings.desktop,
 	  xffm/branches/xfce_4_2/src/Xfbook.desktop,
 	  xffm/branches/xfce_4_2/src/Xfdiff.desktop,
@@ -444,7 +1197,6 @@
 	  xffm/branches/xfce_4_2/src/Xfsamba.desktop,
 	  xffm/branches/xfce_4_2/src/Xftree.desktop,
 	  xfprint/branches/xfce_4_2/mcs-plugin/xfce-xfprint-settings.desktop,
-	  
 	  xfprint/branches/xfce_4_2/xfprint-manager/xfprint-manager.desktop,
 	  xfprint/branches/xfce_4_2/xfprint/xfprint.desktop,
 	  xfwm4/branches/xfce_4_2/mcs-plugin/xfce-wm-settings.desktop,
@@ -463,12 +1215,12 @@
 	  there're
 	  still errors:
 	  
-	  Xfmime_edit.desktop: warning: the fields "Name" and
+	  Xfmime_edit.desktop: warning: the fields "Name" and "Comment"
+	  have the same value
+	  xfce-settings-manager.desktop: warning: the fields "Name" and
 	  "Comment" have the same value
-	  xfce-settings-manager.desktop: warning: the fields "Name"
-	  and "Comment" have the same value
-	  xfce4-appfinder.desktop: warning: the fields "Name" and
-	  "Comment" have the same value
+	  xfce4-appfinder.desktop: warning: the fields "Name" and "Comment"
+	  have the same value
 	  
 	  xfce.desktop
 	  
@@ -481,9 +1233,7 @@
 	  xfcalendar/branches/xfce_4_2/po/sv.po,
 	  xfce-mcs-manager/branches/xfce_4_2/po/sv.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/sv.po,
-	  xfce-utils/branches/xfce_4_2/po/sv.po,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/sv.po,
+	  xfce-utils/branches/xfce_4_2/po/sv.po, configure.ac, po/sv.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/sv.po,
 	  xfce4-mixer/branches/xfce_4_2/configure.ac,
 	  xfce4-mixer/branches/xfce_4_2/po/sv.po,
@@ -712,42 +1462,13 @@
 	  xfce-utils/branches/xfce_4_2/po/uk.po,
 	  xfce-utils/branches/xfce_4_2/po/vi.po,
 	  xfce-utils/branches/xfce_4_2/po/zh_CN.po,
-	  xfce-utils/branches/xfce_4_2/po/zh_TW.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/af.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/be.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/bn_IN.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ca.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/cs.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/da.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/de.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/el.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/en_GB.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es_MX.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/et.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/eu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/fa.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/fi.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/gu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/he.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/hu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/hy.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/it.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ko.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ku.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/lt.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/mr.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/nl.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pa.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_BR.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_PT.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ro.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ru.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/sk.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/tr.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/uk.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/zh_CN.po,
+	  xfce-utils/branches/xfce_4_2/po/zh_TW.po, po/af.po, po/be.po,
+	  po/bn_IN.po, po/ca.po, po/cs.po, po/da.po, po/de.po, po/el.po,
+	  po/en_GB.po, po/es.po, po/es_MX.po, po/et.po, po/eu.po, po/fa.po,
+	  po/fi.po, po/gu.po, po/he.po, po/hu.po, po/hy.po, po/it.po,
+	  po/ja.po, po/ko.po, po/ku.po, po/lt.po, po/mr.po, po/nl.po,
+	  po/pa.po, po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po, po/sk.po,
+	  po/tr.po, po/uk.po, po/zh_CN.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/af.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/ar.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/az.po,
@@ -1066,44 +1787,29 @@
 	  xfdesktop/branches/xfce_4_2/po/vi.po,
 	  xfdesktop/branches/xfce_4_2/po/zh_CN.po,
 	  xfdesktop/branches/xfce_4_2/po/zh_TW.po,
-	  xffm/branches/xfce_4_2/po/af.po,
-	  xffm/branches/xfce_4_2/po/ar.po,
-	  xffm/branches/xfce_4_2/po/az.po,
-	  xffm/branches/xfce_4_2/po/bg.po,
+	  xffm/branches/xfce_4_2/po/af.po, xffm/branches/xfce_4_2/po/ar.po,
+	  xffm/branches/xfce_4_2/po/az.po, xffm/branches/xfce_4_2/po/bg.po,
 	  xffm/branches/xfce_4_2/po/bn_IN.po,
-	  xffm/branches/xfce_4_2/po/ca.po,
-	  xffm/branches/xfce_4_2/po/cs.po,
+	  xffm/branches/xfce_4_2/po/ca.po, xffm/branches/xfce_4_2/po/cs.po,
 	  xffm/branches/xfce_4_2/po/de.po,
 	  xffm/branches/xfce_4_2/po/en_GB.po,
 	  xffm/branches/xfce_4_2/po/es.po,
 	  xffm/branches/xfce_4_2/po/es_MX.po,
-	  xffm/branches/xfce_4_2/po/et.po,
-	  xffm/branches/xfce_4_2/po/eu.po,
-	  xffm/branches/xfce_4_2/po/fa.po,
-	  xffm/branches/xfce_4_2/po/fi.po,
-	  xffm/branches/xfce_4_2/po/fr.po,
-	  xffm/branches/xfce_4_2/po/gu.po,
-	  xffm/branches/xfce_4_2/po/he.po,
-	  xffm/branches/xfce_4_2/po/hi.po,
-	  xffm/branches/xfce_4_2/po/hu.po,
-	  xffm/branches/xfce_4_2/po/it.po,
-	  xffm/branches/xfce_4_2/po/ja.po,
-	  xffm/branches/xfce_4_2/po/ko.po,
-	  xffm/branches/xfce_4_2/po/ku.po,
-	  xffm/branches/xfce_4_2/po/lt.po,
-	  xffm/branches/xfce_4_2/po/mr.po,
-	  xffm/branches/xfce_4_2/po/ms.po,
+	  xffm/branches/xfce_4_2/po/et.po, xffm/branches/xfce_4_2/po/eu.po,
+	  xffm/branches/xfce_4_2/po/fa.po, xffm/branches/xfce_4_2/po/fi.po,
+	  xffm/branches/xfce_4_2/po/fr.po, xffm/branches/xfce_4_2/po/gu.po,
+	  xffm/branches/xfce_4_2/po/he.po, xffm/branches/xfce_4_2/po/hi.po,
+	  xffm/branches/xfce_4_2/po/hu.po, xffm/branches/xfce_4_2/po/it.po,
+	  xffm/branches/xfce_4_2/po/ja.po, xffm/branches/xfce_4_2/po/ko.po,
+	  xffm/branches/xfce_4_2/po/ku.po, xffm/branches/xfce_4_2/po/lt.po,
+	  xffm/branches/xfce_4_2/po/mr.po, xffm/branches/xfce_4_2/po/ms.po,
 	  xffm/branches/xfce_4_2/po/nb_NO.po,
-	  xffm/branches/xfce_4_2/po/nl.po,
-	  xffm/branches/xfce_4_2/po/pa.po,
+	  xffm/branches/xfce_4_2/po/nl.po, xffm/branches/xfce_4_2/po/pa.po,
 	  xffm/branches/xfce_4_2/po/pt_BR.po,
 	  xffm/branches/xfce_4_2/po/pt_PT.po,
-	  xffm/branches/xfce_4_2/po/sk.po,
-	  xffm/branches/xfce_4_2/po/sv.po,
-	  xffm/branches/xfce_4_2/po/ta.po,
-	  xffm/branches/xfce_4_2/po/tr.po,
-	  xffm/branches/xfce_4_2/po/uk.po,
-	  xffm/branches/xfce_4_2/po/vi.po,
+	  xffm/branches/xfce_4_2/po/sk.po, xffm/branches/xfce_4_2/po/sv.po,
+	  xffm/branches/xfce_4_2/po/ta.po, xffm/branches/xfce_4_2/po/tr.po,
+	  xffm/branches/xfce_4_2/po/uk.po, xffm/branches/xfce_4_2/po/vi.po,
 	  xffm/branches/xfce_4_2/po/zh_CN.po,
 	  xffm/branches/xfce_4_2/po/zh_TW.po,
 	  xfprint/branches/xfce_4_2/po/af.po,
@@ -1203,7 +1909,7 @@
 	  xfce-mcs-manager/branches/xfce_4_2/po/xfce-mcs-manager.pot,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/xfce-mcs-plugins.pot,
 	  xfce-utils/branches/xfce_4_2/po/xfce-utils.pot,
-	  xfce4-appfinder/branches/xfce_4_2/po/xfce4-appfinder.pot,
+	  po/xfce4-appfinder.pot,
 	  xfce4-iconbox/branches/xfce_4_2/po/xfce4-iconbox.pot,
 	  xfce4-mixer/branches/xfce_4_2/po/xfce4-mixer.pot,
 	  xfce4-panel/branches/xfce_4_2/po/xfce4-panel.pot,
@@ -1222,8 +1928,7 @@
 	  xfcalendar/branches/xfce_4_2/po/pl.po,
 	  xfce-mcs-manager/branches/xfce_4_2/po/pl.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/pl.po,
-	  xfce-utils/branches/xfce_4_2/po/pl.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pl.po,
+	  xfce-utils/branches/xfce_4_2/po/pl.po, po/pl.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/pl.po,
 	  xfce4-mixer/branches/xfce_4_2/po/pl.po,
 	  xfce4-panel/branches/xfce_4_2/po/pl.po,
@@ -1241,8 +1946,7 @@
 	* libxfcegui4/branches/xfce_4_2/po/ja.po,
 	  xfcalendar/branches/xfce_4_2/po/ja.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/ja.po,
-	  xfce-utils/branches/xfce_4_2/po/ja.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.po,
+	  xfce-utils/branches/xfce_4_2/po/ja.po, po/ja.po,
 	  xfdesktop/branches/xfce_4_2/po/ja.po: Minor updates.
 
 2005-10-04 14:51  daichi
@@ -1254,11 +1958,8 @@
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/images,
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/images/Makefile.am,
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/images/settings_manager.png,
-	  
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/images/smgr_from_root_menu.png,
-	  
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/images/smgr_from_setup_button.png,
-	  
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/xfce-mcs-manager.html,
 	  xfce-mcs-manager/branches/xfce_4_2/doc/he/xfce-mcs-manager.xml,
 	  xfce-mcs-plugins/branches/xfce_4_2/configure.ac,
@@ -1268,15 +1969,10 @@
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images,
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images/Makefile.am,
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images/display_preferences.png,
-	  
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images/font_selection.png,
-	  
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images/keyboard_settings.png,
-	  
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images/mouse_settings.png,
-	  
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/images/user_interface_settings.png,
-	  
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/xfce-mcs-plugins.html,
 	  xfce-mcs-plugins/branches/xfce_4_2/doc/he/xfce-mcs-plugins.xml,
 	  xfce-utils/branches/xfce_4_2/configure.ac,
@@ -1289,11 +1985,8 @@
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/Makefile.am,
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/images,
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/images/Makefile.am,
-	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/images/about-dialog.png,
-	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/images/run-dialog.png,
-	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/images/taskbar_settings.png,
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/xfce-utils.html,
 	  xfce-utils/branches/xfce_4_2/doc/xfce-utils/he/xfce-utils.xml,
@@ -1306,41 +1999,24 @@
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/LGPL.html,
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/LGPL.xml,
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/Makefile.am,
-	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/copyright.xml,
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/images,
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/images/Makefile.am,
-	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/images/default-session.png,
-	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/images/link_xfce.jpg,
-	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-components.html,
-	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-copyright.html,
-	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-install.html,
-	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-intro.html,
-	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-use.html,
-	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-user-guide.html,
-	  
 	  xfce-utils/branches/xfce_4_2/doc/xfce4-user-guide/he/xfce4-user-guide.xml,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/doc/Makefile.am,
-	  xfce4-appfinder/branches/xfce_4_2/doc/he,
-	  xfce4-appfinder/branches/xfce_4_2/doc/he/Makefile.am,
-	  xfce4-appfinder/branches/xfce_4_2/doc/he/images,
-	  xfce4-appfinder/branches/xfce_4_2/doc/he/images/Makefile.am,
-	  xfce4-appfinder/branches/xfce_4_2/doc/he/images/appfinder-handle-popup.png,
-	  
-	  xfce4-appfinder/branches/xfce_4_2/doc/he/images/appfinder-item-popup.png,
-	  
-	  xfce4-appfinder/branches/xfce_4_2/doc/he/images/default_appfinder.png,
-	  xfce4-appfinder/branches/xfce_4_2/doc/he/xfce4-appfinder.html,
-	  xfce4-appfinder/branches/xfce_4_2/doc/he/xfce4-appfinder.xml,
+	  configure.ac, doc/Makefile.am, doc/he, doc/he/Makefile.am,
+	  doc/he/images, doc/he/images/Makefile.am,
+	  doc/he/images/appfinder-handle-popup.png,
+	  doc/he/images/appfinder-item-popup.png,
+	  doc/he/images/default_appfinder.png, doc/he/xfce4-appfinder.html,
+	  doc/he/xfce4-appfinder.xml,
 	  xfce4-panel/branches/xfce_4_2/configure.ac,
 	  xfce4-panel/branches/xfce_4_2/doc/Makefile.am,
 	  xfce4-panel/branches/xfce_4_2/doc/he,
@@ -1353,13 +2029,9 @@
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/handle-popup.png,
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/item-popup.png,
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/launcher-properties.png,
-	  
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/mailcheck-properties.png,
-	  
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/menuitem-properties.png,
-	  
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/nooptions-properties.png,
-	  
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/pager-properties.png,
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/panel-settings.png,
 	  xfce4-panel/branches/xfce_4_2/doc/he/images/systembuttons-properties.png,
@@ -1440,52 +2112,21 @@
 
 2005-09-30 14:15  dannym
 
-	* xfce4-appfinder/branches/xfce_4_2/configure.ac: 4.2.3
-	  xfce4-appfinder version
+	* configure.ac: 4.2.3 xfce4-appfinder version
 
 2005-09-27 05:47  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/af.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/be.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/bn_IN.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ca.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/cs.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/da.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/de.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/el.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/en_GB.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es_MX.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/et.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/eu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/fa.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/fi.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/gu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/he.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/hu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/hy.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/it.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ko.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ku.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/lt.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/mr.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/nl.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pa.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pl.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_BR.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_PT.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ro.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ru.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/sk.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/tr.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/uk.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/zh_CN.po: * Bumped version
-	  at the "Project-Id-Version: " for the next release.
+	* po/af.po, po/be.po, po/bn_IN.po, po/ca.po, po/cs.po, po/da.po,
+	  po/de.po, po/el.po, po/en_GB.po, po/es.po, po/es_MX.po, po/et.po,
+	  po/eu.po, po/fa.po, po/fi.po, po/gu.po, po/he.po, po/hu.po,
+	  po/hy.po, po/it.po, po/ja.po, po/ko.po, po/ku.po, po/lt.po,
+	  po/mr.po, po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po,
+	  po/ro.po, po/ru.po, po/sk.po, po/tr.po, po/uk.po, po/zh_CN.po: *
+	  Bumped version at the "Project-Id-Version: " for the next
+	  release.
 	  
 	  * Added fall back address at the "Language-Team: ", according to
 	  the
-	  
 	  http://www.iro.umontreal.ca/translation/registry.cgi?team=index
 	  
 	  * Modified initial comment strings using template by "msginit".
@@ -1710,43 +2351,13 @@
 	  xfce-utils/branches/xfce_4_2/po/uk.po,
 	  xfce-utils/branches/xfce_4_2/po/vi.po,
 	  xfce-utils/branches/xfce_4_2/po/zh_CN.po,
-	  xfce-utils/branches/xfce_4_2/po/zh_TW.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/af.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/be.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/bn_IN.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ca.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/cs.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/da.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/de.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/el.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/en_GB.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es_MX.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/et.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/eu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/fa.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/fi.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/gu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/he.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/hu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/hy.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/it.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ko.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ku.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/lt.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/mr.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/nl.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pa.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pl.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_BR.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_PT.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ro.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ru.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/sk.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/tr.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/uk.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/zh_CN.po,
+	  xfce-utils/branches/xfce_4_2/po/zh_TW.po, po/af.po, po/be.po,
+	  po/bn_IN.po, po/ca.po, po/cs.po, po/da.po, po/de.po, po/el.po,
+	  po/en_GB.po, po/es.po, po/es_MX.po, po/et.po, po/eu.po, po/fa.po,
+	  po/fi.po, po/gu.po, po/he.po, po/hu.po, po/hy.po, po/it.po,
+	  po/ja.po, po/ko.po, po/ku.po, po/lt.po, po/mr.po, po/nl.po,
+	  po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po,
+	  po/sk.po, po/tr.po, po/uk.po, po/zh_CN.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/af.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/ar.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/az.po,
@@ -2068,45 +2679,30 @@
 	  xfdesktop/branches/xfce_4_2/po/vi.po,
 	  xfdesktop/branches/xfce_4_2/po/zh_CN.po,
 	  xfdesktop/branches/xfce_4_2/po/zh_TW.po,
-	  xffm/branches/xfce_4_2/po/af.po,
-	  xffm/branches/xfce_4_2/po/ar.po,
-	  xffm/branches/xfce_4_2/po/az.po,
-	  xffm/branches/xfce_4_2/po/bg.po,
+	  xffm/branches/xfce_4_2/po/af.po, xffm/branches/xfce_4_2/po/ar.po,
+	  xffm/branches/xfce_4_2/po/az.po, xffm/branches/xfce_4_2/po/bg.po,
 	  xffm/branches/xfce_4_2/po/bn_IN.po,
-	  xffm/branches/xfce_4_2/po/ca.po,
-	  xffm/branches/xfce_4_2/po/cs.po,
+	  xffm/branches/xfce_4_2/po/ca.po, xffm/branches/xfce_4_2/po/cs.po,
 	  xffm/branches/xfce_4_2/po/de.po,
 	  xffm/branches/xfce_4_2/po/en_GB.po,
 	  xffm/branches/xfce_4_2/po/es.po,
 	  xffm/branches/xfce_4_2/po/es_MX.po,
-	  xffm/branches/xfce_4_2/po/et.po,
-	  xffm/branches/xfce_4_2/po/eu.po,
-	  xffm/branches/xfce_4_2/po/fa.po,
-	  xffm/branches/xfce_4_2/po/fi.po,
-	  xffm/branches/xfce_4_2/po/fr.po,
-	  xffm/branches/xfce_4_2/po/gu.po,
-	  xffm/branches/xfce_4_2/po/he.po,
-	  xffm/branches/xfce_4_2/po/hi.po,
-	  xffm/branches/xfce_4_2/po/hu.po,
-	  xffm/branches/xfce_4_2/po/it.po,
-	  xffm/branches/xfce_4_2/po/ja.po,
-	  xffm/branches/xfce_4_2/po/ko.po,
-	  xffm/branches/xfce_4_2/po/ku.po,
-	  xffm/branches/xfce_4_2/po/lt.po,
-	  xffm/branches/xfce_4_2/po/mr.po,
-	  xffm/branches/xfce_4_2/po/ms.po,
+	  xffm/branches/xfce_4_2/po/et.po, xffm/branches/xfce_4_2/po/eu.po,
+	  xffm/branches/xfce_4_2/po/fa.po, xffm/branches/xfce_4_2/po/fi.po,
+	  xffm/branches/xfce_4_2/po/fr.po, xffm/branches/xfce_4_2/po/gu.po,
+	  xffm/branches/xfce_4_2/po/he.po, xffm/branches/xfce_4_2/po/hi.po,
+	  xffm/branches/xfce_4_2/po/hu.po, xffm/branches/xfce_4_2/po/it.po,
+	  xffm/branches/xfce_4_2/po/ja.po, xffm/branches/xfce_4_2/po/ko.po,
+	  xffm/branches/xfce_4_2/po/ku.po, xffm/branches/xfce_4_2/po/lt.po,
+	  xffm/branches/xfce_4_2/po/mr.po, xffm/branches/xfce_4_2/po/ms.po,
 	  xffm/branches/xfce_4_2/po/nb_NO.po,
-	  xffm/branches/xfce_4_2/po/nl.po,
-	  xffm/branches/xfce_4_2/po/pa.po,
+	  xffm/branches/xfce_4_2/po/nl.po, xffm/branches/xfce_4_2/po/pa.po,
 	  xffm/branches/xfce_4_2/po/pl.po,
 	  xffm/branches/xfce_4_2/po/pt_BR.po,
 	  xffm/branches/xfce_4_2/po/pt_PT.po,
-	  xffm/branches/xfce_4_2/po/sk.po,
-	  xffm/branches/xfce_4_2/po/sv.po,
-	  xffm/branches/xfce_4_2/po/ta.po,
-	  xffm/branches/xfce_4_2/po/tr.po,
-	  xffm/branches/xfce_4_2/po/uk.po,
-	  xffm/branches/xfce_4_2/po/vi.po,
+	  xffm/branches/xfce_4_2/po/sk.po, xffm/branches/xfce_4_2/po/sv.po,
+	  xffm/branches/xfce_4_2/po/ta.po, xffm/branches/xfce_4_2/po/tr.po,
+	  xffm/branches/xfce_4_2/po/uk.po, xffm/branches/xfce_4_2/po/vi.po,
 	  xffm/branches/xfce_4_2/po/zh_CN.po,
 	  xffm/branches/xfce_4_2/po/zh_TW.po,
 	  xfprint/branches/xfce_4_2/po/af.po,
@@ -2210,8 +2806,7 @@
 	  xfcalendar/branches/xfce_4_2/po/ja.po,
 	  xfce-mcs-manager/branches/xfce_4_2/po/ja.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/ja.po,
-	  xfce-utils/branches/xfce_4_2/po/ja.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.po,
+	  xfce-utils/branches/xfce_4_2/po/ja.po, po/ja.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/ja.po,
 	  xfce4-mixer/branches/xfce_4_2/po/ja.po,
 	  xfce4-panel/branches/xfce_4_2/po/ja.po,
@@ -2232,9 +2827,7 @@
 	  xfcalendar/branches/xfce_4_2/po/pl.po,
 	  xfce-mcs-manager/branches/xfce_4_2/po/pl.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/pl.po,
-	  xfce-utils/branches/xfce_4_2/po/pl.po,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/pl.po,
+	  xfce-utils/branches/xfce_4_2/po/pl.po, configure.ac, po/pl.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/pl.po,
 	  xfce4-mixer/branches/xfce_4_2/po/pl.po,
 	  xfce4-panel/branches/xfce_4_2/po/pl.po,
@@ -2244,14 +2837,13 @@
 	  xfdesktop/branches/xfce_4_2/po/pl.po,
 	  xffm/branches/xfce_4_2/po/pl.po,
 	  xfprint/branches/xfce_4_2/po/pl.po,
-	  xfwm4/branches/xfce_4_2/po/pl.po: Added Polish translations by
-	  by Piotr Malinski.
+	  xfwm4/branches/xfce_4_2/po/pl.po: Added Polish translations by by
+	  Piotr Malinski.
 	  
 	  Updated Polish translations by Piotr Malinski.
 	  
 	  Added fall back address at the 'Language-Team: ', according to
 	  the
-	  
 	  http://www.iro.umontreal.ca/translation/registry.cgi?team=index
 	  
 	  Bumped version at the 'Project-Id-Version: ' for the next
@@ -2265,8 +2857,7 @@
 	  xfcalendar/branches/xfce_4_2/po/pt_BR.po,
 	  xfce-mcs-manager/branches/xfce_4_2/po/pt_BR.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/pt_BR.po,
-	  xfce-utils/branches/xfce_4_2/po/pt_BR.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_BR.po,
+	  xfce-utils/branches/xfce_4_2/po/pt_BR.po, po/pt_BR.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/pt_BR.po,
 	  xfce4-mixer/branches/xfce_4_2/po/pt_BR.po,
 	  xfce4-panel/branches/xfce_4_2/po/pt_BR.po,
@@ -2286,27 +2877,19 @@
 2005-09-02 16:26  pollux
 
 	* xfce-mcs-manager/branches/xfce_4_2/xfce-setting-show/xfce-settings-manager.desktop,
-	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/display_plugin/xfce-display-settings.desktop,
-	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/keyboard_plugin/xfce-keyboard-settings.desktop,
-	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/mouse_plugin/xfce-mouse-settings.desktop,
-	  
 	  xfce-mcs-plugins/branches/xfce_4_2/plugins/ui_plugin/xfce-ui-settings.desktop,
 	  xfce-utils/branches/xfce_4_2/gdm/xfce.desktop,
 	  xfce-utils/branches/xfce_4_2/xftaskbar/plugin/xfce-taskbar-settings.desktop,
-	  xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop,
+	  src/xfce4-appfinder.desktop,
 	  xfce4-mixer/branches/xfce_4_2/settings/xfce-mixer-settings.desktop,
-	  
 	  xfce4-panel/branches/xfce_4_2/settings/xfce-panel-settings.desktop,
-	  
 	  xfce4-session/branches/xfce_4_2/settings/session/xfce-session-settings.desktop,
-	  
 	  xfce4-session/branches/xfce_4_2/settings/splash/xfce-splash-settings.desktop,
 	  xfdesktop/branches/xfce_4_2/menueditor/xfce-menueditor.desktop,
 	  xfdesktop/branches/xfce_4_2/settings/xfce-backdrop-settings.desktop,
-	  
 	  xffm/branches/xfce_4_2/plugin-mcs/xfce-filemanager-settings.desktop,
 	  xffm/branches/xfce_4_2/src/Xfbook.desktop,
 	  xffm/branches/xfce_4_2/src/Xfdiff.desktop,
@@ -2329,8 +2912,7 @@
 	  xfcalendar/branches/xfce_4_2/po/ku.po,
 	  xfce-mcs-manager/branches/xfce_4_2/po/ku.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/ku.po,
-	  xfce-utils/branches/xfce_4_2/po/ku.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ku.po,
+	  xfce-utils/branches/xfce_4_2/po/ku.po, po/ku.po,
 	  xfce4-iconbox/branches/xfce_4_2/po/ku.po,
 	  xfce4-mixer/branches/xfce_4_2/po/ku.po,
 	  xfce4-panel/branches/xfce_4_2/po/ku.po,
@@ -2350,8 +2932,7 @@
 	  xfcalendar/branches/xfce_4_2/configure.ac,
 	  xfce-mcs-manager/branches/xfce_4_2/configure.ac,
 	  xfce-mcs-plugins/branches/xfce_4_2/configure.ac,
-	  xfce-utils/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
+	  xfce-utils/branches/xfce_4_2/configure.ac, configure.ac,
 	  xfce4-mixer/branches/xfce_4_2/configure.ac,
 	  xfce4-panel/branches/xfce_4_2/configure.ac,
 	  xfce4-session/branches/xfce_4_2/configure.ac,
@@ -2366,23 +2947,15 @@
 
 2005-08-19 14:35  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/el.po: Removed executable
-	  attribute.
+	* po/el.po: Removed executable attribute.
 
 2005-08-19 14:33  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/af.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es_MX.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/it.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/nl.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_BR.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/zh_CN.po: Fixed errors
-	  emitted by 'msgfmt -c'.
+	* po/af.po, po/es.po, po/es_MX.po, po/it.po, po/nl.po, po/pt_BR.po,
+	  po/zh_CN.po: Fixed errors emitted by 'msgfmt -c'.
 	  
 	  Added fall back address at the 'Language-Team: ', according to
 	  the
-	  
 	  http://www.iro.umontreal.ca/translation/registry.cgi?team=index
 	  
 	  Modified initial comment strings with template by 'msginit'.
@@ -2393,8 +2966,7 @@
 	  xfcalendar/branches/xfce_4_2/po/ja.po,
 	  xfce-mcs-manager/branches/xfce_4_2/po/ja.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/ja.po,
-	  xfce-utils/branches/xfce_4_2/po/ja.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.po,
+	  xfce-utils/branches/xfce_4_2/po/ja.po, po/ja.po,
 	  xfce4-mixer/branches/xfce_4_2/po/ja.po,
 	  xfce4-panel/branches/xfce_4_2/po/ja.po,
 	  xfce4-session/branches/xfce_4_2/po/ja.po,
@@ -2407,13 +2979,11 @@
 
 2005-08-17 15:03  daichi
 
-	* xfce4-appfinder/branches/xfce_4_2/po/en_GB.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es_MX.po,
-	  xfce4-mixer/trunk/po/bg.po, xfce4-mixer/trunk/po/lt.po,
-	  xfce4-panel/trunk/po/en_GB.po, xfce4-panel/trunk/po/lt.po,
-	  xfce4-session/trunk/po/cs.po, xfce4-session/trunk/po/en_GB.po,
-	  xfce4-toys/trunk/po/en_GB.po, xfce4-toys/trunk/po/lt.po,
+	* po/en_GB.po, po/es.po, po/es_MX.po, xfce4-mixer/trunk/po/bg.po,
+	  xfce4-mixer/trunk/po/lt.po, xfce4-panel/trunk/po/en_GB.po,
+	  xfce4-panel/trunk/po/lt.po, xfce4-session/trunk/po/cs.po,
+	  xfce4-session/trunk/po/en_GB.po, xfce4-toys/trunk/po/en_GB.po,
+	  xfce4-toys/trunk/po/lt.po,
 	  xfce4-trigger-launcher/trunk/po/en_GB.po,
 	  xfce4-trigger-launcher/trunk/po/lt.po,
 	  xfdesktop/trunk/po/en_GB.po, xfdesktop/trunk/po/lt.po,
@@ -2427,8 +2997,7 @@
 	  xfcalendar/branches/xfce_4_2/po/ja.po,
 	  xfce-mcs-manager/branches/xfce_4_2/po/ja.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/ja.po,
-	  xfce-utils/branches/xfce_4_2/po/ja.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.po,
+	  xfce-utils/branches/xfce_4_2/po/ja.po, po/ja.po,
 	  xfce4-mixer/branches/xfce_4_2/po/ja.po,
 	  xfce4-panel/branches/xfce_4_2/po/ja.po,
 	  xfce4-session/branches/xfce_4_2/po/ja.po,
@@ -2446,8 +3015,7 @@
 	  xfcalendar/branches/xfce_4_2/po/ChangeLog,
 	  xfce-mcs-manager/branches/xfce_4_2/po/ChangeLog,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/ChangeLog,
-	  xfce-utils/branches/xfce_4_2/po/ChangeLog,
-	  xfce4-appfinder/branches/xfce_4_2/po/ChangeLog,
+	  xfce-utils/branches/xfce_4_2/po/ChangeLog, po/ChangeLog,
 	  xfce4-mixer/branches/xfce_4_2/po/ChangeLog,
 	  xfce4-panel/branches/xfce_4_2/po/ChangeLog,
 	  xfce4-session/branches/xfce_4_2/po/ChangeLog,
@@ -2456,8 +3024,8 @@
 	  xfdesktop/branches/xfce_4_2/po/ChangeLog,
 	  xffm/branches/xfce_4_2/po/ChangeLog,
 	  xfprint/branches/xfce_4_2/po/ChangeLog,
-	  xfwm4/branches/xfce_4_2/po/ChangeLog: Updated Finnish
-	  translation by Jari Rahkonen.
+	  xfwm4/branches/xfce_4_2/po/ChangeLog: Updated Finnish translation
+	  by Jari Rahkonen.
 
 2005-08-12 14:14  daichi
 
@@ -2465,8 +3033,7 @@
 	  xfcalendar/branches/xfce_4_2/po/fi.po,
 	  xfce-mcs-manager/branches/xfce_4_2/po/fi.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/fi.po,
-	  xfce-utils/branches/xfce_4_2/po/fi.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/fi.po,
+	  xfce-utils/branches/xfce_4_2/po/fi.po, po/fi.po,
 	  xfce4-mixer/branches/xfce_4_2/po/fi.po,
 	  xfce4-panel/branches/xfce_4_2/po/fi.po,
 	  xfce4-session/branches/xfce_4_2/po/fi.po,
@@ -2504,9 +3071,7 @@
 	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.uk,
 	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.vi,
 	  xfce-utils/trunk/configure.ac, xfce-utils/trunk/po/hy.po,
-	  xfce-utils/trunk/xfce4-about/AUTHORS,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/hy.po,
+	  xfce-utils/trunk/xfce4-about/AUTHORS, configure.ac, po/hy.po,
 	  xfce4-appfinder/trunk/configure.ac,
 	  xfce4-appfinder/trunk/po/hy.po,
 	  xfce4-mixer/branches/xfce_4_2/configure.ac,
@@ -2560,8 +3125,7 @@
 	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.sk,
 	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.uk,
 	  xfce-utils/branches/xfce_4_2/xfce4-about/AUTHORS.vi,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/af.po,
+	  configure.ac, po/af.po,
 	  xfce4-iconbox/branches/xfce_4_2/configure.ac,
 	  xfce4-iconbox/branches/xfce_4_2/po/af.po,
 	  xfce4-panel/branches/xfce_4_2/configure.ac,
@@ -2583,8 +3147,7 @@
 	  xfcalendar/branches/xfce_4_2/po/ko.po,
 	  xfce-mcs-manager/branches/xfce_4_2/po/ko.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/ko.po,
-	  xfce-utils/branches/xfce_4_2/po/ko.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ko.po,
+	  xfce-utils/branches/xfce_4_2/po/ko.po, po/ko.po,
 	  xfce4-mixer/branches/xfce_4_2/po/ko.po,
 	  xfce4-panel/branches/xfce_4_2/po/ko.po,
 	  xfce4-session/branches/xfce_4_2/po/ko.po,
@@ -2596,54 +3159,31 @@
 
 2005-05-14 19:47  olivier
 
-	* xfce4-appfinder/branches/xfce_4_2/po/ChangeLog: Update ChangeLog
-	* xfce4-appfinder/branches/xfce_4_2/ChangeLog: Update ChangeLog
+	* po/ChangeLog: Update ChangeLog
+
+2005-05-14 19:47  olivier
+
+	* ChangeLog: Update ChangeLog
 
 2005-05-13 22:11  olivier
 
-	* xfce4-appfinder/branches/xfce_4_2/po/be.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/cs.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/da.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/de.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/en_GB.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/es_MX.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/et.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/eu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/fa.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/fi.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/gu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/he.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/hu.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/it.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ko.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/lt.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/nl.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pa.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_BR.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_PT.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ro.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ru.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/sk.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/tr.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/uk.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/zh_CN.po: Prepare 4.2.2
+	* po/be.po, po/cs.po, po/da.po, po/de.po, po/en_GB.po, po/es.po,
+	  po/es_MX.po, po/et.po, po/eu.po, po/fa.po, po/fi.po, po/gu.po,
+	  po/he.po, po/hu.po, po/it.po, po/ja.po, po/ko.po, po/lt.po,
+	  po/nl.po, po/pa.po, po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po,
+	  po/sk.po, po/tr.po, po/uk.po, po/zh_CN.po: Prepare 4.2.2
 
 2005-05-13 15:10  pollux
 
 	* xfcalendar/branches/xfce_4_2/po/ro.po,
 	  xfce-utils/branches/xfce_4_2/xftaskbar/plugin/xfce-taskbar-settings.desktop,
-	  xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop,
+	  src/xfce4-appfinder.desktop,
 	  xfce4-panel/branches/xfce_4_2/contents.xml.ro,
 	  xfce4-panel/branches/xfce_4_2/settings/xfce-panel-settings.desktop,
-	  
 	  xfce4-session/branches/xfce_4_2/settings/session/xfce-session-settings.desktop,
-	  
 	  xfce4-session/branches/xfce_4_2/settings/splash/xfce-splash-settings.desktop,
 	  xfdesktop/branches/xfce_4_2/po/ro.po,
 	  xfprint/branches/xfce_4_2/mcs-plugin/xfce-xfprint-settings.desktop,
-	  
 	  xfprint/branches/xfce_4_2/xfprint-manager/xfprint-manager.desktop,
 	  xfprint/branches/xfce_4_2/xfprint/xfprint.desktop,
 	  xfwm4/branches/xfce_4_2/mcs-plugin/xfce-wm-settings.desktop,
@@ -2655,8 +3195,7 @@
 	  xfcalendar/branches/xfce_4_2/po/ja.po,
 	  xfce-mcs-manager/branches/xfce_4_2/po/ja.po,
 	  xfce-mcs-plugins/branches/xfce_4_2/po/ja.po,
-	  xfce-utils/branches/xfce_4_2/po/ja.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.po,
+	  xfce-utils/branches/xfce_4_2/po/ja.po, po/ja.po,
 	  xfce4-mixer/branches/xfce_4_2/po/ja.po,
 	  xfce4-panel/branches/xfce_4_2/po/ja.po,
 	  xfce4-session/branches/xfce_4_2/po/ja.po,
@@ -2669,346 +3208,210 @@
 
 2005-05-06 18:32  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/mr.po: add MR translations
+	* configure.ac, po/mr.po: add MR translations
 
 2005-05-04 21:00  olivier
 
-	* xfce4-appfinder/branches/xfce_4_2/ChangeLog: Update ChangeLog
-	* xfce4-appfinder/branches/xfce_4_2/po/ChangeLog: Update ChangeLog
+	* ChangeLog: Update ChangeLog
+
+2005-05-04 21:00  olivier
+
+	* po/ChangeLog: Update ChangeLog
 
 2005-04-24 16:01  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/po/ca.po: update CA
-	  translations
+	* po/ca.po: update CA translations
 
 2005-04-23 17:32  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/ca.po: update CA
-	  translations
+	* configure.ac, po/ca.po: update CA translations
 
 2005-04-23 17:17  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/el.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/el_GR.po: update EL
-	  translations
+	* configure.ac, po/el.po, po/el_GR.po: update EL translations
 
 2005-04-16 16:05  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/bn_IN.po: add bn_IN
-	  translations
+	* configure.ac, po/bn_IN.po: add bn_IN translations
 
 2005-04-12 14:58  jasper
 
-	* xfce4-appfinder/branches/xfce_4_2/Makefile.in,
-	  xfce4-appfinder/branches/xfce_4_2/aclocal.m4,
-	  xfce4-appfinder/branches/xfce_4_2/autogen.sh,
-	  xfce4-appfinder/branches/xfce_4_2/compile,
-	  xfce4-appfinder/branches/xfce_4_2/config.guess,
-	  xfce4-appfinder/branches/xfce_4_2/config.h.in,
-	  xfce4-appfinder/branches/xfce_4_2/config.sub,
-	  xfce4-appfinder/branches/xfce_4_2/configure,
-	  xfce4-appfinder/branches/xfce_4_2/depcomp,
-	  xfce4-appfinder/branches/xfce_4_2/doc/C/Makefile.in,
-	  xfce4-appfinder/branches/xfce_4_2/doc/C/images/Makefile.in,
-	  xfce4-appfinder/branches/xfce_4_2/doc/Makefile.in,
-	  xfce4-appfinder/branches/xfce_4_2/doc/fr/Makefile.in,
-	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/Makefile.in,
-	  xfce4-appfinder/branches/xfce_4_2/install-sh,
-	  xfce4-appfinder/branches/xfce_4_2/ltmain.sh,
-	  xfce4-appfinder/branches/xfce_4_2/missing,
-	  xfce4-appfinder/branches/xfce_4_2/mkinstalldirs,
-	  xfce4-appfinder/branches/xfce_4_2/po/Makefile.in.in,
-	  xfce4-appfinder/branches/xfce_4_2/po/be.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/cs.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/da.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/de.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/el_GR.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/en_GB.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/es.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/es_MX.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/et.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/eu.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/fa.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/fi.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/gu.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/he.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/hu.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/it.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/ko.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/lt.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/nl.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/pa.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_BR.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_PT.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/ro.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/ru.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/sk.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/tr.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/uk.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/zh_CN.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/src/Makefile.in: Make xfce_4_2
-	  branch use dev tools and remove generated files
+	* Makefile.in, aclocal.m4, autogen.sh, compile, config.guess,
+	  config.h.in, config.sub, configure, depcomp, doc/C/Makefile.in,
+	  doc/C/images/Makefile.in, doc/Makefile.in, doc/fr/Makefile.in,
+	  doc/fr/images/Makefile.in, install-sh, ltmain.sh, missing,
+	  mkinstalldirs, po/Makefile.in.in, po/be.gmo, po/cs.gmo,
+	  po/da.gmo, po/de.gmo, po/el_GR.gmo, po/en_GB.gmo, po/es.gmo,
+	  po/es_MX.gmo, po/et.gmo, po/eu.gmo, po/fa.gmo, po/fi.gmo,
+	  po/gu.gmo, po/he.gmo, po/hu.gmo, po/it.gmo, po/ja.gmo, po/ko.gmo,
+	  po/lt.gmo, po/nl.gmo, po/pa.gmo, po/pt_BR.gmo, po/pt_PT.gmo,
+	  po/ro.gmo, po/ru.gmo, po/sk.gmo, po/tr.gmo, po/uk.gmo,
+	  po/zh_CN.gmo, src/Makefile.in: Make xfce_4_2 branch use dev tools
+	  and remove generated files
 
 2005-04-07 17:02  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/po/be.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/cs.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/cs.po,
-	  xfce4-appfinder/branches/xfce_4_2/po/da.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/de.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/el_GR.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/en_GB.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/es.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/es_MX.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/et.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/eu.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/fa.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/fi.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/gu.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/he.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/hu.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/it.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/ko.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/lt.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/nl.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/pa.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_BR.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/pt_PT.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/ro.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/ru.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/sk.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/tr.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/uk.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/zh_CN.gmo: update CS
-	  translations
+	* po/be.gmo, po/cs.gmo, po/cs.po, po/da.gmo, po/de.gmo,
+	  po/el_GR.gmo, po/en_GB.gmo, po/es.gmo, po/es_MX.gmo, po/et.gmo,
+	  po/eu.gmo, po/fa.gmo, po/fi.gmo, po/gu.gmo, po/he.gmo, po/hu.gmo,
+	  po/it.gmo, po/ja.gmo, po/ko.gmo, po/lt.gmo, po/nl.gmo, po/pa.gmo,
+	  po/pt_BR.gmo, po/pt_PT.gmo, po/ro.gmo, po/ru.gmo, po/sk.gmo,
+	  po/tr.gmo, po/uk.gmo, po/zh_CN.gmo: update CS translations
 
 2005-03-28 08:59  jasper
 
-	* xfce4-appfinder/branches/xfce_4_2/configure,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/doc/C/xfce4-appfinder.html,
-	  xfce4-appfinder/branches/xfce_4_2/doc/Makefile.am,
-	  xfce4-appfinder/branches/xfce_4_2/doc/Makefile.in,
-	  xfce4-appfinder/branches/xfce_4_2/doc/fr/Makefile.am,
-	  xfce4-appfinder/branches/xfce_4_2/doc/fr/Makefile.in,
-	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/Makefile.am,
-	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/Makefile.in,
-	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/appfinder-handle-popup.png,
-	  
-	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/appfinder-item-popup.png,
-	  
-	  xfce4-appfinder/branches/xfce_4_2/doc/fr/images/default_appfinder.png,
-	  xfce4-appfinder/branches/xfce_4_2/doc/fr/xfce4-appfinder.html,
-	  xfce4-appfinder/branches/xfce_4_2/doc/fr/xfce4-appfinder.xml:
-	  Add French docs
+	* configure, configure.ac, doc/C/xfce4-appfinder.html,
+	  doc/Makefile.am, doc/Makefile.in, doc/fr/Makefile.am,
+	  doc/fr/Makefile.in, doc/fr/images/Makefile.am,
+	  doc/fr/images/Makefile.in,
+	  doc/fr/images/appfinder-handle-popup.png,
+	  doc/fr/images/appfinder-item-popup.png,
+	  doc/fr/images/default_appfinder.png, doc/fr/xfce4-appfinder.html,
+	  doc/fr/xfce4-appfinder.xml: Add French docs
 
 2005-03-28 08:58  
 
-	* xfce4-appfinder/branches/xfce_4_2/doc/fr: This commit was
-	  manufactured by cvs2svn to create branch 'xfce_4_2'.
+	* doc/fr: This commit was manufactured by cvs2svn to create branch
+	  'xfce_4_2'.
 
 2005-03-26 11:08  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/configure,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/ltmain.sh,
-	  xfce4-appfinder/branches/xfce_4_2/po/el_GR.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/el_GR.po: ADD el_GR
-	  translations from Stavros Giannouris <StavrosG2002@freemail.gr>
+	* configure, configure.ac, ltmain.sh, po/el_GR.gmo, po/el_GR.po:
+	  ADD el_GR translations from Stavros Giannouris
+	  <StavrosG2002@freemail.gr>
 
 2005-03-26 10:38  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/po/eu.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/eu.po: update EU
-	  translations
+	* po/eu.gmo, po/eu.po: update EU translations
 
 2005-03-12 14:53  olivier
 
-	* xfce4-appfinder/branches/xfce_4_2/ChangeLog: Update ChangeLog
+	* ChangeLog: Update ChangeLog
 
 2005-03-12 14:19  olivier
 
-	* xfce4-appfinder/branches/xfce_4_2/configure,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/ltmain.sh,
-	  xfce4-appfinder/branches/xfce_4_2/po/xfce4-appfinder.pot: Mass
+	* configure, configure.ac, ltmain.sh, po/xfce4-appfinder.pot: Mass
 	  update for 4.2.1
 
 2005-03-09 22:42  eduard
 
-	* xfce4-appfinder/branches/xfce_4_2/AUTHORS,
-	  xfce4-appfinder/branches/xfce_4_2/src/main.c: Lowercase patch to
-	  fix 710
+	* AUTHORS, src/main.c: Lowercase patch to fix 710
 
 2005-03-09 15:40  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
-	  update SK translations
+	* src/xfce4-appfinder.desktop: update SK translations
 
 2005-03-05 14:55  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/configure,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/sk.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/sk.po: update SK
+	* configure, configure.ac, po/sk.gmo, po/sk.po: update SK
 	  translations
 
 2005-03-05 11:21  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/configure,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/da.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/da.po: add DA translations
+	* configure, configure.ac, po/da.gmo, po/da.po: add DA translations
 	  from Jesper Berth <big@santaz.dk>
 
 2005-03-05 10:52  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
-	  update HU translations
+	* src/xfce4-appfinder.desktop: update HU translations
 
 2005-03-05 10:42  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
-	  update EU translations
+	* src/xfce4-appfinder.desktop: update EU translations
 
 2005-03-04 17:43  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/po/ja.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.po: update JA
-	  translations
+	* po/ja.gmo, po/ja.po: update JA translations
 
 2005-02-21 08:57  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/configure,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/ja.po: update JA
+	* configure, configure.ac, po/ja.gmo, po/ja.po: update JA
 	  translations
 
 2005-02-21 08:57  
 
-	* xfce4-appfinder/branches/xfce_4_2/po/ja.po: This commit was
-	  manufactured by cvs2svn to create branch 'xfce_4_2'.
+	* po/ja.po: This commit was manufactured by cvs2svn to create
+	  branch 'xfce_4_2'.
 
 2005-02-01 17:25  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
-	  update zh_CN translations
+	* src/xfce4-appfinder.desktop: update zh_CN translations
 
 2005-01-23 17:09  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/po/lt.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/lt.po: update LT
-	  translations
+	* po/lt.gmo, po/lt.po: update LT translations
 
 2005-01-23 16:48  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/po/fi.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/fi.po,
-	  xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
-	  update FI translations
+	* po/fi.gmo, po/fi.po, src/xfce4-appfinder.desktop: update FI
+	  translations
 
 2005-01-22 09:18  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/po/fi.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/fi.po: update FI
-	  translations
+	* po/fi.gmo, po/fi.po: update FI translations
 
 2005-01-20 19:47  eduard
 
-	* xfce4-appfinder/branches/xfce_4_2/src/callbacks.c,
-	  xfce4-appfinder/branches/xfce_4_2/src/main.c: Fix 709
+	* src/callbacks.c, src/main.c: Fix 709
 
 2005-01-10 18:01  benny
 
-	* xfce4-appfinder/branches/xfce_4_2/ChangeLog,
-	  xfce4-appfinder/branches/xfce_4_2/NEWS: Final touch before the
-	  tag
+	* ChangeLog, NEWS: Final touch before the tag
 
 2005-01-10 12:56  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/configure,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/hu.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/hu.po: update HU
+	* configure, configure.ac, po/hu.gmo, po/hu.po: update HU
 	  translations
 
 2005-01-10 12:23  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
-	  update LT translations
+	* src/xfce4-appfinder.desktop: update LT translations
 
 2005-01-10 11:55  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/po/lt.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/lt.po: update LT
-	  translations
+	* po/lt.gmo, po/lt.po: update LT translations
 
 2005-01-09 12:41  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
-	  update RO translations
+	* src/xfce4-appfinder.desktop: update RO translations
 
 2005-01-09 12:30  benny
 
-	* xfce4-appfinder/branches/xfce_4_2/doc/C/xfce4-appfinder.html,
-	  xfce4-appfinder/branches/xfce_4_2/doc/C/xfce4-appfinder.xml:
-	  Update version in documentation.
+	* doc/C/xfce4-appfinder.html, doc/C/xfce4-appfinder.xml: Update
+	  version in documentation.
 
 2005-01-08 15:49  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/configure,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/ru.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/ru.po,
-	  xfce4-appfinder/branches/xfce_4_2/src/xfce4-appfinder.desktop:
-	  update RU translations
+	* configure, configure.ac, po/ru.gmo, po/ru.po,
+	  src/xfce4-appfinder.desktop: update RU translations
 
 2005-01-08 15:49  
 
-	* xfce4-appfinder/branches/xfce_4_2/po/ru.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/ru.po: This commit was
-	  manufactured by cvs2svn to create branch 'xfce_4_2'.
+	* po/ru.gmo, po/ru.po: This commit was manufactured by cvs2svn to
+	  create branch 'xfce_4_2'.
 
 2005-01-06 20:33  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/configure,
-	  xfce4-appfinder/branches/xfce_4_2/configure.ac,
-	  xfce4-appfinder/branches/xfce_4_2/po/uk.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/uk.po: update UK
+	* configure, configure.ac, po/uk.gmo, po/uk.po: update UK
 	  translations, i hope i didn't forget any file this time
 
 2005-01-06 20:33  
 
-	* xfce4-appfinder/branches/xfce_4_2/po/uk.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/uk.po: This commit was
-	  manufactured by cvs2svn to create branch 'xfce_4_2'.
+	* po/uk.gmo, po/uk.po: This commit was manufactured by cvs2svn to
+	  create branch 'xfce_4_2'.
 
 2005-01-05 22:13  benny
 
-	* xfce4-appfinder/branches/xfce_4_2/ChangeLog,
-	  xfce4-appfinder/branches/xfce_4_2/ltmain.sh: Final updates
+	* ChangeLog, ltmain.sh: Final updates
 
 2005-01-05 16:14  pollux
 
-	* xfce4-appfinder/branches/xfce_4_2/po/he.gmo,
-	  xfce4-appfinder/branches/xfce_4_2/po/he.po: update HE
-	  translations
+	* po/he.gmo, po/he.po: update HE translations
 
 2005-01-05 16:14  
 
-	* xfce4-appfinder/branches/xfce_4_2,
-	  xfce4-appfinder/branches/xfce_4_2/COPYING,
-	  xfce4-appfinder/branches/xfce_4_2/INSTALL,
-	  xfce4-appfinder/branches/xfce_4_2/NEWS,
-	  xfce4-appfinder/branches/xfce_4_2/xfce4-appfinder.spec.in: This
-	  commit was manufactured by cvs2svn to create branch 'xfce_4_2'.
+	* ., COPYING, INSTALL, NEWS, xfce4-appfinder.spec.in: This commit
+	  was manufactured by cvs2svn to create branch 'xfce_4_2'.
 
 2005-01-02 12:51  olivier
 
@@ -3035,8 +3438,8 @@
 
 2004-12-24 00:03  kelnos
 
-	* xfce4-appfinder/trunk/Makefile.am: add dist-bz2 and
-	  distcheck-bz2 targets
+	* xfce4-appfinder/trunk/Makefile.am: add dist-bz2 and distcheck-bz2
+	  targets
 
 2004-12-23 23:33  olivier
 
@@ -3074,8 +3477,7 @@
 
 2004-12-20 21:00  jasper
 
-	* xfce4-appfinder/trunk/ChangeLog,
-	  xfce4-appfinder/trunk/configure,
+	* xfce4-appfinder/trunk/ChangeLog, xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac: Update versions and ChangeLog
 
 2004-12-19 16:36  fleclainche
@@ -3119,8 +3521,8 @@
 
 2004-12-11 17:51  olivier
 
-	* xfce4-appfinder/trunk/po/xfce4-appfinder.pot: Various changes
-	  and small fixes
+	* xfce4-appfinder/trunk/po/xfce4-appfinder.pot: Various changes and
+	  small fixes
 
 2004-12-05 21:20  pollux
 
@@ -3199,9 +3601,8 @@
 
 	* xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/ltmain.sh,
-	  xfce4-appfinder/trunk/po/ko.gmo, xfce4-appfinder/trunk/po/ko.po:
-	  update KO translations
+	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/ko.gmo,
+	  xfce4-appfinder/trunk/po/ko.po: update KO translations
 
 2004-11-13 18:01  olivier
 
@@ -3226,9 +3627,8 @@
 
 2004-10-30 19:03  olivier
 
-	* xfce4-appfinder/trunk/ChangeLog,
-	  xfce4-appfinder/trunk/ltmain.sh: Global update for 4.1.91 (Xfce
-	  4.2 beta 2)
+	* xfce4-appfinder/trunk/ChangeLog, xfce4-appfinder/trunk/ltmain.sh:
+	  Global update for 4.1.91 (Xfce 4.2 beta 2)
 
 2004-10-30 14:00  pollux
 
@@ -3241,8 +3641,8 @@
 
 	* xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/ltmain.sh,
-	  xfce4-appfinder/trunk/po/he.gmo, xfce4-appfinder/trunk/po/he.po,
+	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/he.gmo,
+	  xfce4-appfinder/trunk/po/he.po,
 	  xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: update HE
 	  translations
 
@@ -3252,8 +3652,7 @@
 
 2004-10-22 20:38  olivier
 
-	* xfce4-appfinder/trunk/ChangeLog,
-	  xfce4-appfinder/trunk/configure,
+	* xfce4-appfinder/trunk/ChangeLog, xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
 	  xfce4-appfinder/trunk/ltmain.sh: Updated versions and change logs
 
@@ -3266,13 +3665,10 @@
 
 	* xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/po/be.gmo,
-	  xfce4-appfinder/trunk/po/de.gmo,
-	  xfce4-appfinder/trunk/po/eu.gmo,
-	  xfce4-appfinder/trunk/po/fi.gmo, xfce4-appfinder/trunk/po/fi.po,
-	  xfce4-appfinder/trunk/po/gu.gmo,
-	  xfce4-appfinder/trunk/po/it.gmo,
-	  xfce4-appfinder/trunk/po/nl.gmo,
+	  xfce4-appfinder/trunk/po/be.gmo, xfce4-appfinder/trunk/po/de.gmo,
+	  xfce4-appfinder/trunk/po/eu.gmo, xfce4-appfinder/trunk/po/fi.gmo,
+	  xfce4-appfinder/trunk/po/fi.po, xfce4-appfinder/trunk/po/gu.gmo,
+	  xfce4-appfinder/trunk/po/it.gmo, xfce4-appfinder/trunk/po/nl.gmo,
 	  xfce4-appfinder/trunk/po/pa.gmo,
 	  xfce4-appfinder/trunk/po/zh_CN.gmo,
 	  xfce4-appfinder/trunk/src/xfce4-appfinder.desktop: update FI
@@ -3333,9 +3729,9 @@
 
 	* xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/ltmain.sh,
-	  xfce4-appfinder/trunk/po/pa.gmo, xfce4-appfinder/trunk/po/pa.po:
-	  Punjabi translations (PA) from jaswinderlinux@netscape.net
+	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/pa.gmo,
+	  xfce4-appfinder/trunk/po/pa.po: Punjabi translations (PA) from
+	  jaswinderlinux@netscape.net
 
 2004-10-02 13:28  olivier
 
@@ -3433,8 +3829,8 @@
 	  xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
 	  xfce4-appfinder/trunk/depcomp, xfce4-appfinder/trunk/install-sh,
-	  xfce4-appfinder/trunk/ltmain.sh,
-	  xfce4-appfinder/trunk/po/eu.gmo, xfce4-appfinder/trunk/po/eu.po,
+	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/eu.gmo,
+	  xfce4-appfinder/trunk/po/eu.po,
 	  xfce4-appfinder/trunk/src/Makefile.in: update EU translations
 
 2004-09-18 13:45  moe
@@ -3446,8 +3842,8 @@
 	  xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
 	  xfce4-appfinder/trunk/depcomp, xfce4-appfinder/trunk/install-sh,
-	  xfce4-appfinder/trunk/ltmain.sh,
-	  xfce4-appfinder/trunk/po/de.gmo, xfce4-appfinder/trunk/po/de.po,
+	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/de.gmo,
+	  xfce4-appfinder/trunk/po/de.po,
 	  xfce4-appfinder/trunk/src/Makefile.in: Adding German translation
 
 2004-09-18 12:29  eduard
@@ -3472,9 +3868,9 @@
 
 	* xfce4-appfinder/trunk/configure,
 	  xfce4-appfinder/trunk/configure.ac,
-	  xfce4-appfinder/trunk/ltmain.sh,
-	  xfce4-appfinder/trunk/po/be.gmo, xfce4-appfinder/trunk/po/be.po:
-	  add BE translations from Ales Nyakhaychyk <nab@mail.by>
+	  xfce4-appfinder/trunk/ltmain.sh, xfce4-appfinder/trunk/po/be.gmo,
+	  xfce4-appfinder/trunk/po/be.po: add BE translations from Ales
+	  Nyakhaychyk <nab@mail.by>
 
 2004-09-15 19:31  eduard
 
@@ -3604,8 +4000,8 @@
 
 	* xfce4-appfinder/trunk/src/Makefile.am,
 	  xfce4-appfinder/trunk/src/af-constants.h,
-	  xfce4-appfinder/trunk/src/main.c: Fix make dist. First attempt
-	  to use XDG basedir spec, Eduard please have
+	  xfce4-appfinder/trunk/src/main.c: Fix make dist. First attempt to
+	  use XDG basedir spec, Eduard please have
 	  a look and fix it.
 
 2004-06-27 09:45  eduard
@@ -3642,8 +4038,8 @@
 	* xfce4-appfinder/trunk/BUGS, xfce4-appfinder/trunk/TODO,
 	  xfce4-appfinder/trunk/src/inline-icon.h,
 	  xfce4-appfinder/trunk/src/main.c,
-	  xfce4-appfinder/trunk/src/xfce4-appfinder.png: It doesn't
-	  flicker anymore.
+	  xfce4-appfinder/trunk/src/xfce4-appfinder.png: It doesn't flicker
+	  anymore.
 	  Code clean.
 	  Icon added.
 	  Some bug fixed (segfaults ;-)
@@ -3676,8 +4072,7 @@
 	  xfce4-appfinder/trunk/aclocal.m4,
 	  xfce4-appfinder/trunk/config.guess,
 	  xfce4-appfinder/trunk/config.sub,
-	  xfce4-appfinder/trunk/configure,
-	  xfce4-appfinder/trunk/ltmain.sh,
+	  xfce4-appfinder/trunk/configure, xfce4-appfinder/trunk/ltmain.sh,
 	  xfce4-appfinder/trunk/src/Makefile.in: Added autogen.sh and m4
 	  directory
 
