@@ -1,34 +1,38 @@
-# French translations for xfce4-appfinder package
+# French translation of the xfce4-appfinder package.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Collet Etienne <xanaxlnx@gmail.com>, 2005.
+# Maximilian Schleiss <maxschleiss@bluewin.ch>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-30 17:29+0900\n"
-"PO-Revision-Date: 2005-10-26 12:22+0900\n"
-"Last-Translator: Collet Etienne <xanaxlnx@gmail.com>\n"
-"Language-Team: French <traduc@traduc.org>\n"
+"PO-Revision-Date: 2007-02-13 23:24+0100\n"
+"Last-Translator: Maximilian Schleiss <maxschleiss@bluewin.ch>\n"
+"Language-Team: French <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
-msgstr "Ne peut pas exécuter l'application choisie"
+msgstr "Échec à l'exécution de l'application sélectionnée"
 
-#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+#: ../src/main.c:205
+#: ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr "Xfce 4 Appfinder"
+msgstr "Appfinder Xfce 4"
 
 #: ../src/main.c:272
 msgid "<b>Name</b>"
 msgstr "<b>Nom</b>"
 
-#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+#: ../src/main.c:287
+#: ../src/main.c:312
+#: ../src/main.c:345
 msgid "N/A"
 msgstr "N/A"
 
@@ -46,27 +50,27 @@ msgstr "<b>Commande</b>"
 
 #: ../src/main.c:389
 msgid "Run program"
-msgstr "Exécutez le programme"
+msgstr "Exécuter le programme"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr "Plus D'Information..."
+msgstr "Plus d'informations..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
-msgstr "<b>Chercher:</b>"
+msgstr "<b>Chercher :</b>"
 
 #: ../src/main.c:466
 msgid "Show Categories"
-msgstr "Montrez Les Catégories"
+msgstr "Afficher les catégories"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
-msgstr "Touts"
+msgstr "Toutes"
 
 #: ../src/xfce4-appfinder.c:122
 msgid "Core"
-msgstr "Core"
+msgstr "Noyau"
 
 #: ../src/xfce4-appfinder.c:123
 msgid "Development"
@@ -78,7 +82,7 @@ msgstr "Bureautique"
 
 #: ../src/xfce4-appfinder.c:125
 msgid "Graphics"
-msgstr "Graphiques"
+msgstr "Infographie"
 
 #: ../src/xfce4-appfinder.c:126
 msgid "Network"
@@ -114,11 +118,11 @@ msgstr "Catégories"
 
 #: ../src/xfce4-appfinder.c:586
 msgid "No items available"
-msgstr "Aucuns articles disponibles"
+msgstr "Aucun élément disponible"
 
 #: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
-msgstr "Désolé, aucune allusion pour le texte recherché."
+msgstr "Désolé, aucune équivalence pour le texte recherché."
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
@@ -126,4 +130,5 @@ msgstr "Appfinder"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr "Liste des applications installées"
+msgstr "Chercheur d'applications pour Xfce 4"
+
