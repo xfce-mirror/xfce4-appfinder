@@ -2,65 +2,63 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Erçin EKER <ercin.eker@linux.org.tr>, 2004.
+# Eren Türkay <turkay.eren@gmail.com>, 2007
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-30 17:29+0900\n"
-"PO-Revision-Date: 2005-10-15 01:56+0900\n"
-"Last-Translator: Erçin EKER <ercin.eker@linux.org.tr>\n"
-"Language-Team: Turkish <gnu-tr-u12a@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2007-03-02 21:52+0200\n"
+"Last-Translator: Eren Türkay <turkay.eren@gmail.com>\n"
+"Language-Team: Turkish <turkce@pardus.org.tr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
-msgstr ""
+msgstr "Seçilen uygulama çalıştırılamıyor"
 
 #: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr ""
+msgstr "Xfce 4 Uygulama Arayıcı"
 
 #: ../src/main.c:272
-#, fuzzy
 msgid "<b>Name</b>"
-msgstr "<b>Ara:</b>"
+msgstr "<b>İsim</b>"
 
 #: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
 msgid "N/A"
-msgstr ""
+msgstr "Boş"
 
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
-msgstr ""
+msgstr "<b>Yorum</b>"
 
 #: ../src/main.c:329
-#, fuzzy
 msgid "<b>Categories</b>"
-msgstr "Kategoriler"
+msgstr "<b>Kategoriler</b>"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
-msgstr ""
+msgstr "<b>Komut</b>"
 
 #: ../src/main.c:389
 msgid "Run program"
-msgstr ""
+msgstr "Programı çalıştır"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr ""
+msgstr "Daha Fazla Bilgi..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>Ara:</b>"
 
 #: ../src/main.c:466
-#, fuzzy
 msgid "Show Categories"
-msgstr "Kategoriler"
+msgstr "Kategorileri Göster"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
@@ -88,7 +86,7 @@ msgstr "Ağ"
 
 #: ../src/xfce4-appfinder.c:127
 msgid "AudioVideo"
-msgstr "SesGörüntü"
+msgstr "Ses/Görüntü"
 
 #: ../src/xfce4-appfinder.c:128
 msgid "Game"
@@ -104,7 +102,7 @@ msgstr "Sistem"
 
 #: ../src/xfce4-appfinder.c:131
 msgid "Filemanager"
-msgstr "DosyaYönetici"
+msgstr "Dosya Yöneticisi"
 
 #: ../src/xfce4-appfinder.c:132
 msgid "Utility"
@@ -116,16 +114,17 @@ msgstr "Kategoriler"
 
 #: ../src/xfce4-appfinder.c:586
 msgid "No items available"
-msgstr ""
+msgstr "Hiçbir öğe mevcut değil"
 
 #: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "Üzgünüm, herhangi bir eşleşme bulunamadı"
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
-msgstr ""
+msgstr "Uygulama Arayıcı"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr ""
+msgstr "Xfce 4 için Uygulama Arayıcısı"
+
