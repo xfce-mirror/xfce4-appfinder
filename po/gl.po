@@ -1,13 +1,12 @@
 # Galician translation for xfce4-appfinder
 # Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
 # This file is distributed under the same license as the xfce4-appfinder package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+# Leandro Regueiro <leandro.regueiro@gmail.com>, 2006.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-05-08 20:03+0000\n"
 "PO-Revision-Date: 2006-08-17 19:31+0000\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
