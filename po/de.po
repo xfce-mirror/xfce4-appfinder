@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Moritz Heiber <moe@xfce.org>, 2004.
 # Enrico Tröger <enrico.troeger@uvena.de>, 2006.
+# Nico Schümann <nico@prog.nico22.de>, 2007.
 #
 msgid ""
 msgstr ""
@@ -22,7 +23,7 @@ msgstr "Kann die ausgewählte Anwendung nicht ausführen"
 
 #: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr "Xfce 4 Anwendungsfinder"
+msgstr "Xfce4-Anwendungsfinder"
 
 #: ../src/main.c:272
 msgid "<b>Name</b>"
