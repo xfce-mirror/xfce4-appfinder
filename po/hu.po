@@ -3,29 +3,31 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-30 17:29+0900\n"
-"PO-Revision-Date: 2006-04-13 12:03+0100\n"
+"PO-Revision-Date: 2007-04-06 03:57+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Poedit-Language: Hungarian\n"
 "X-Poedit-Country: HUNGARY\n"
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
 msgstr "A kijelölt alkalmazás nem futtatható"
 
-#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+#: ../src/main.c:205
+#: ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr "Xfce 4 Alkalmazáskereső"
+msgstr "Xfce 4 Alkalmazás-kereső"
 
 #: ../src/main.c:272
 msgid "<b>Name</b>"
 msgstr "<b>Név</b>"
 
-#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+#: ../src/main.c:287
+#: ../src/main.c:312
+#: ../src/main.c:345
 msgid "N/A"
 msgstr "N/A"
 
@@ -59,7 +61,7 @@ msgstr "Kategóriák mutatása"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
-msgstr "Minden"
+msgstr "Mind"
 
 #: ../src/xfce4-appfinder.c:122
 msgid "Core"
@@ -119,8 +121,9 @@ msgstr "Bocs, nincs találat."
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
-msgstr "Alkalmazáskereső"
+msgstr "Alkalmazás-kereső"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr "Xfce 4 Alkalmazáskereső"
+msgstr "Xfce 4 Alkalmazás-kereső"
+
