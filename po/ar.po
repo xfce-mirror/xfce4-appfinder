@@ -1,9 +1,11 @@
-# Arabeyes Translation & Documentation Team http://arabeyes.org
+# Arabic translation of the xfce4-appfinder package.
+# Copyright (C) 2004-2007 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
 # Hakeem Dimashq 2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder\n"
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-20 18:11+0100\n"
 "PO-Revision-Date: 2007-01-30 15:47+0100\n"

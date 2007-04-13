@@ -1,5 +1,5 @@
-# Traditional Chinese translations for xfce4-appfinder package.
-# Copyright (C) 2004-2005 Eduard Roccatello.
+# Traditional Chinese translation of the xfce4-appfinder package.
+# Copyright (C) 2004-2007 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Hydonsingore Cia <hydonsingore@educities.edu.tw>, 2005.
 #
