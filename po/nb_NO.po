@@ -1,0 +1,130 @@
+# Norwegian Bokmal translations for xfce4-appfinder package.
+# Copyright (C) 2007 THE xfce4-appfinder'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xfce4-appfinder
+# package.
+# Terje Uriansrud <ter@operamail.com>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-20 18:11+0100\n"
+"PO-Revision-Date: 2007-05-09 22:23+0200\n"
+"Last-Translator: Terje Uriansrud <ter@operamail.com>\n"
+"Language-Team: Norwegian Bokmal <i18n-nb@lister.ping.uio.no>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/main.c:161
+msgid "Cannot execute the selected application"
+msgstr "Kunne ikke starte valgte program"
+
+#: ../src/main.c:203 ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr "Xfce 4 Programkatalog"
+
+#: ../src/main.c:270
+msgid "<b>Name</b>"
+msgstr "<b>Navn</b>"
+
+#: ../src/main.c:285 ../src/main.c:310 ../src/main.c:343
+msgid "N/A"
+msgstr "Ikke tilgjengelig"
+
+#: ../src/main.c:294
+msgid "<b>Comment</b>"
+msgstr "<b>Kommentar</b>"
+
+#: ../src/main.c:327
+msgid "<b>Categories</b>"
+msgstr "<b>Kategorier</b>"
+
+#: ../src/main.c:352
+msgid "<b>Command</b>"
+msgstr "<b>Kommando</b>"
+
+#: ../src/main.c:387
+msgid "Run program"
+msgstr "Kjør program"
+
+#: ../src/main.c:395
+msgid "More Information..."
+msgstr "Mer informasjon ..."
+
+#: ../src/main.c:458
+msgid "<b>Search:</b>"
+msgstr "<b>Søk:</b>"
+
+#: ../src/main.c:465
+msgid "Show Categories"
+msgstr "Vis kategorier"
+
+#: ../src/xfce4-appfinder.c:118
+msgid "All"
+msgstr "Alle"
+
+#: ../src/xfce4-appfinder.c:119
+msgid "Core"
+msgstr "Kjerne"
+
+#: ../src/xfce4-appfinder.c:120
+msgid "Development"
+msgstr "Utvikling"
+
+#: ../src/xfce4-appfinder.c:121
+msgid "Office"
+msgstr "Kontor"
+
+#: ../src/xfce4-appfinder.c:122
+msgid "Graphics"
+msgstr "Bilde"
+
+#: ../src/xfce4-appfinder.c:123
+msgid "Network"
+msgstr "Nettverk"
+
+#: ../src/xfce4-appfinder.c:124
+msgid "AudioVideo"
+msgstr "Lyd og video"
+
+#: ../src/xfce4-appfinder.c:125
+msgid "Game"
+msgstr "Spill"
+
+#: ../src/xfce4-appfinder.c:126
+msgid "Education"
+msgstr "Opplæring"
+
+#: ../src/xfce4-appfinder.c:127
+msgid "System"
+msgstr "System"
+
+#: ../src/xfce4-appfinder.c:128
+msgid "Filemanager"
+msgstr "Filbehandler"
+
+#: ../src/xfce4-appfinder.c:129
+msgid "Utility"
+msgstr "Verktøy"
+
+#: ../src/xfce4-appfinder.c:289
+msgid "Categories"
+msgstr "Kategorier"
+
+#: ../src/xfce4-appfinder.c:577
+msgid "No items available"
+msgstr "Ingen elementer tilgjengelig"
+
+#: ../src/xfce4-appfinder.c:617
+msgid "Sorry, no match for searched text."
+msgstr "Ingen treff på søkestrengen"
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr "Programkatalog"
+
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr "Programkatalog for Xfce 4"
