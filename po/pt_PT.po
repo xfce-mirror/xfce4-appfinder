@@ -1,74 +1,75 @@
-# Portuguese translation of xfce4-appfinder.
-# Copyright (C) 2004-2005 Eduard Roccatello
+# European Portuguese translations for xfce4-appfinder package.
+# Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-# Nuno Donato <nunodonato@gmail.com>, 2004.
+# Nuno Donato <nunodonato@gmail.com>, 2004
+# Nuno Miguel <nunis@netcabo.pt>,2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-30 17:29+0900\n"
-"PO-Revision-Date: 2005-10-15 01:53+0900\n"
-"Last-Translator: Nuno Donato <nunodonato@gmail.com>\n"
-"Language-Team: Portuguese <translation-team-pt@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2007-06-12 15:09+0100\n"
+"Last-Translator: Nuno Miguel <nunis@netcabo.pt>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
-msgstr ""
+msgstr "Não é possível executar a aplicação seleccionada"
 
-#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+#: ../src/main.c:205
+#: ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr ""
+msgstr "Xfce 4 Appfinder"
 
 #: ../src/main.c:272
-#, fuzzy
 msgid "<b>Name</b>"
-msgstr "<b>Procurar:</b>"
+msgstr "<b>Nome:</b>"
 
-#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+#: ../src/main.c:287
+#: ../src/main.c:312
+#: ../src/main.c:345
 msgid "N/A"
-msgstr ""
+msgstr "N/D"
 
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
-msgstr ""
+msgstr "<b>Comentário</b>"
 
 #: ../src/main.c:329
-#, fuzzy
 msgid "<b>Categories</b>"
-msgstr "Categorias"
+msgstr "<b>Categorias</b>"
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
-msgstr ""
+msgstr "<b>Comando</b>"
 
 #: ../src/main.c:389
 msgid "Run program"
-msgstr ""
+msgstr "Executar programa"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr ""
+msgstr "Mais Informações..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
 msgstr "<b>Procurar:</b>"
 
 #: ../src/main.c:466
-#, fuzzy
 msgid "Show Categories"
-msgstr "Categorias"
+msgstr "Mostrar Categorias"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
-msgstr "Tudo"
+msgstr "Todos"
 
 #: ../src/xfce4-appfinder.c:122
 msgid "Core"
-msgstr "Núcleo"
+msgstr "Base"
 
 #: ../src/xfce4-appfinder.c:123
 msgid "Development"
@@ -88,7 +89,7 @@ msgstr "Rede"
 
 #: ../src/xfce4-appfinder.c:127
 msgid "AudioVideo"
-msgstr "Aúdio/Video"
+msgstr "Áudio e Vídeo"
 
 #: ../src/xfce4-appfinder.c:128
 msgid "Game"
@@ -96,7 +97,7 @@ msgstr "Jogos"
 
 #: ../src/xfce4-appfinder.c:129
 msgid "Education"
-msgstr "Educação"
+msgstr "Educativos"
 
 #: ../src/xfce4-appfinder.c:130
 msgid "System"
@@ -104,11 +105,11 @@ msgstr "Sistema"
 
 #: ../src/xfce4-appfinder.c:131
 msgid "Filemanager"
-msgstr "Gestor de Ficheiros"
+msgstr "Gestor de ficheiros"
 
 #: ../src/xfce4-appfinder.c:132
 msgid "Utility"
-msgstr "Utilitários"
+msgstr "Acessórios"
 
 #: ../src/xfce4-appfinder.c:292
 msgid "Categories"
@@ -116,16 +117,17 @@ msgstr "Categorias"
 
 #: ../src/xfce4-appfinder.c:586
 msgid "No items available"
-msgstr ""
+msgstr "Nenhum item disponível"
 
 #: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "Desculpe, o texto procurado não foi encontrado."
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
-msgstr ""
+msgstr "Appfinder"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr ""
+msgstr "Localizador de aplicações para o Xfce 4"
+
