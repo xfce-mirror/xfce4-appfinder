@@ -2,23 +2,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2006-08-24 23:40+0400\n"
+"PO-Revision-Date: 2007-06-19 00:19+0400\n"
 "Last-Translator: Dimitri Gogelia <delphi.knight@gmail.com>\n"
 "Language-Team: Georgian <delphi.knight@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Georgian\n"
 "X-Poedit-Country: GEORGIA\n"
 
 #: ../src/main.c:163
 msgid "Cannot execute the selected application"
-msgstr ""
+msgstr "შეუძლებელია არჩეული პროგრამის გაშვება"
 
 #: ../src/main.c:205
 #: ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
-msgstr ""
+msgstr "პროგრამების ძებნა"
 
 #: ../src/main.c:272
 msgid "<b>Name</b>"
@@ -28,55 +27,55 @@ msgstr "<b>სახელი</b>"
 #: ../src/main.c:312
 #: ../src/main.c:345
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: ../src/main.c:296
 msgid "<b>Comment</b>"
-msgstr ""
+msgstr "<b>კომენტარი</b>"
 
 #: ../src/main.c:329
 msgid "<b>Categories</b>"
-msgstr ""
+msgstr "<b>კატეგორიები</b> "
 
 #: ../src/main.c:354
 msgid "<b>Command</b>"
-msgstr ""
+msgstr "<b>ბრძანება</b>"
 
 #: ../src/main.c:389
 msgid "Run program"
-msgstr ""
+msgstr "პროგრამის გაშვება"
 
 #: ../src/main.c:397
 msgid "More Information..."
-msgstr ""
+msgstr "დამატებითი ინფორმაცია..."
 
 #: ../src/main.c:459
 msgid "<b>Search:</b>"
-msgstr ""
+msgstr "<b>ძებნა:</b>"
 
 #: ../src/main.c:466
 msgid "Show Categories"
-msgstr ""
+msgstr "კატეგორიების ჩვენება"
 
 #: ../src/xfce4-appfinder.c:121
 msgid "All"
-msgstr ""
+msgstr "ყველა"
 
 #: ../src/xfce4-appfinder.c:122
 msgid "Core"
-msgstr ""
+msgstr "ძირითადი"
 
 #: ../src/xfce4-appfinder.c:123
 msgid "Development"
-msgstr ""
+msgstr "შექმნა"
 
 #: ../src/xfce4-appfinder.c:124
 msgid "Office"
-msgstr ""
+msgstr "ოფისი"
 
 #: ../src/xfce4-appfinder.c:125
 msgid "Graphics"
-msgstr ""
+msgstr "გრაფიკა"
 
 #: ../src/xfce4-appfinder.c:126
 msgid "Network"
@@ -84,27 +83,27 @@ msgstr "ქსელი"
 
 #: ../src/xfce4-appfinder.c:127
 msgid "AudioVideo"
-msgstr ""
+msgstr "აუდიო/ვიდეო"
 
 #: ../src/xfce4-appfinder.c:128
 msgid "Game"
-msgstr ""
+msgstr "თამაშები"
 
 #: ../src/xfce4-appfinder.c:129
 msgid "Education"
-msgstr ""
+msgstr "განათლება"
 
 #: ../src/xfce4-appfinder.c:130
 msgid "System"
-msgstr ""
+msgstr "სისტემა"
 
 #: ../src/xfce4-appfinder.c:131
 msgid "Filemanager"
-msgstr ""
+msgstr "ფალიების მმართველი"
 
 #: ../src/xfce4-appfinder.c:132
 msgid "Utility"
-msgstr ""
+msgstr "უტილიტა"
 
 #: ../src/xfce4-appfinder.c:292
 msgid "Categories"
@@ -112,17 +111,17 @@ msgstr "კატეგორიები"
 
 #: ../src/xfce4-appfinder.c:586
 msgid "No items available"
-msgstr ""
+msgstr "ელემენტები ხელმისაწვდომი არ არის"
 
 #: ../src/xfce4-appfinder.c:626
 msgid "Sorry, no match for searched text."
-msgstr ""
+msgstr "ვწუხვარ, საძიებო ტექსტში დამთხვევა არ არის."
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
-msgstr ""
+msgstr "პროგრამების ძებნა"
 
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
-msgstr ""
+msgstr "არსებულ პროგრამებს შორის ძებნა"
 
