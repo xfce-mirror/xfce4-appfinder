@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-30 17:29+0900\n"
-"PO-Revision-Date: 2007-06-12 15:09+0100\n"
+"PO-Revision-Date: 2007-09-01 22:50+0100\n"
 "Last-Translator: Nuno Miguel <nunis@netcabo.pt>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Xfce 4 Appfinder"
 
 #: ../src/main.c:272
 msgid "<b>Name</b>"
-msgstr "<b>Nome:</b>"
+msgstr "<b>Nome</b>"
 
 #: ../src/main.c:287
 #: ../src/main.c:312
@@ -97,7 +97,7 @@ msgstr "Jogos"
 
 #: ../src/xfce4-appfinder.c:129
 msgid "Education"
-msgstr "Educativos"
+msgstr "Educação"
 
 #: ../src/xfce4-appfinder.c:130
 msgid "System"
@@ -109,7 +109,7 @@ msgstr "Gestor de ficheiros"
 
 #: ../src/xfce4-appfinder.c:132
 msgid "Utility"
-msgstr "Acessórios"
+msgstr "Utilitários"
 
 #: ../src/xfce4-appfinder.c:292
 msgid "Categories"
