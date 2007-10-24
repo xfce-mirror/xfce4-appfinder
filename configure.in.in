@@ -3,7 +3,7 @@ dnl
 
 m4_define([appfinder_version],[4.4.1])
 
-AC_INIT([xfce4-appfinder], [appfinder_version()], 
+AC_INIT([xfce4-appfinder], [appfinder_version], 
 	[xfce4-dev@xfce.org])
 
 APPFINDER_VERSION=appfinder_version()
