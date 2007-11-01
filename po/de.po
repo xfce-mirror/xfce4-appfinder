@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-30 17:29+0900\n"
+"POT-Creation-Date: 2007-01-20 18:11+0100\n"
 "PO-Revision-Date: 2006-08-29 16:33+0100\n"
 "Last-Translator: Enrico Tröger <enrico.troeger@uvena.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -17,107 +17,107 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/main.c:163
+#: ../src/main.c:161
 msgid "Cannot execute the selected application"
 msgstr "Kann die ausgewählte Anwendung nicht ausführen"
 
-#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+#: ../src/main.c:203 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
 msgstr "Xfce4-Anwendungsfinder"
 
-#: ../src/main.c:272
+#: ../src/main.c:270
 msgid "<b>Name</b>"
 msgstr "<b>Name</b>"
 
-#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+#: ../src/main.c:285 ../src/main.c:310 ../src/main.c:343
 msgid "N/A"
 msgstr "(nicht verfügbar)"
 
-#: ../src/main.c:296
+#: ../src/main.c:294
 msgid "<b>Comment</b>"
 msgstr "<b>Kommentar</b>"
 
-#: ../src/main.c:329
+#: ../src/main.c:327
 msgid "<b>Categories</b>"
 msgstr "<b>Kategorien</b>"
 
-#: ../src/main.c:354
+#: ../src/main.c:352
 msgid "<b>Command</b>"
 msgstr "<b>Befehl</b>"
 
-#: ../src/main.c:389
+#: ../src/main.c:387
 msgid "Run program"
 msgstr "Programm ausführen"
 
-#: ../src/main.c:397
+#: ../src/main.c:395
 msgid "More Information..."
 msgstr "Mehr Informationen..."
 
-#: ../src/main.c:459
+#: ../src/main.c:458
 msgid "<b>Search:</b>"
 msgstr "<b>Suche:</b>"
 
-#: ../src/main.c:466
+#: ../src/main.c:465
 msgid "Show Categories"
 msgstr "Kategorien anzeigen"
 
-#: ../src/xfce4-appfinder.c:121
+#: ../src/xfce4-appfinder.c:118
 msgid "All"
 msgstr "Alle"
 
-#: ../src/xfce4-appfinder.c:122
+#: ../src/xfce4-appfinder.c:119
 msgid "Core"
 msgstr "Kern"
 
-#: ../src/xfce4-appfinder.c:123
+#: ../src/xfce4-appfinder.c:120
 msgid "Development"
 msgstr "Entwicklung"
 
-#: ../src/xfce4-appfinder.c:124
+#: ../src/xfce4-appfinder.c:121
 msgid "Office"
 msgstr "Büro"
 
-#: ../src/xfce4-appfinder.c:125
+#: ../src/xfce4-appfinder.c:122
 msgid "Graphics"
 msgstr "Grafik"
 
-#: ../src/xfce4-appfinder.c:126
+#: ../src/xfce4-appfinder.c:123
 msgid "Network"
 msgstr "Netzwerk"
 
-#: ../src/xfce4-appfinder.c:127
+#: ../src/xfce4-appfinder.c:124
 msgid "AudioVideo"
 msgstr "Audio/Video"
 
-#: ../src/xfce4-appfinder.c:128
+#: ../src/xfce4-appfinder.c:125
 msgid "Game"
 msgstr "Spiele"
 
-#: ../src/xfce4-appfinder.c:129
+#: ../src/xfce4-appfinder.c:126
 msgid "Education"
 msgstr "Ausbildung"
 
-#: ../src/xfce4-appfinder.c:130
+#: ../src/xfce4-appfinder.c:127
 msgid "System"
 msgstr "System"
 
-#: ../src/xfce4-appfinder.c:131
+#: ../src/xfce4-appfinder.c:128
 msgid "Filemanager"
 msgstr "Dateimanager"
 
-#: ../src/xfce4-appfinder.c:132
+#: ../src/xfce4-appfinder.c:129
 msgid "Utility"
 msgstr "Werkzeuge"
 
-#: ../src/xfce4-appfinder.c:292
+#: ../src/xfce4-appfinder.c:289
 msgid "Categories"
 msgstr "Kategorien"
 
-#: ../src/xfce4-appfinder.c:586
+#: ../src/xfce4-appfinder.c:577
 msgid "No items available"
 msgstr "Keine Einträge vorhanden"
 
-#: ../src/xfce4-appfinder.c:626
+#: ../src/xfce4-appfinder.c:617
 msgid "Sorry, no match for searched text."
 msgstr "Keine Übereinstimmung für gesuchten Text"
 

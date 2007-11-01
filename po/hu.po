@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-30 17:29+0900\n"
+"POT-Creation-Date: 2007-01-20 18:11+0100\n"
 "PO-Revision-Date: 2007-04-06 03:57+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: hu\n"
@@ -12,110 +12,107 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-Country: HUNGARY\n"
 
-#: ../src/main.c:163
+#: ../src/main.c:161
 msgid "Cannot execute the selected application"
 msgstr "A kijelölt alkalmazás nem futtatható"
 
-#: ../src/main.c:205
-#: ../src/xfce4-appfinder.desktop.in.h:3
+#: ../src/main.c:203 ../src/xfce4-appfinder.desktop.in.h:3
 msgid "Xfce 4 Appfinder"
 msgstr "Xfce 4 Alkalmazás-kereső"
 
-#: ../src/main.c:272
+#: ../src/main.c:270
 msgid "<b>Name</b>"
 msgstr "<b>Név</b>"
 
-#: ../src/main.c:287
-#: ../src/main.c:312
-#: ../src/main.c:345
+#: ../src/main.c:285 ../src/main.c:310 ../src/main.c:343
 msgid "N/A"
 msgstr "N/A"
 
-#: ../src/main.c:296
+#: ../src/main.c:294
 msgid "<b>Comment</b>"
 msgstr "<b>Megjegyzés</b>"
 
-#: ../src/main.c:329
+#: ../src/main.c:327
 msgid "<b>Categories</b>"
 msgstr "<b>Kategóriák</b>"
 
-#: ../src/main.c:354
+#: ../src/main.c:352
 msgid "<b>Command</b>"
 msgstr "<b>Parancs</b>"
 
-#: ../src/main.c:389
+#: ../src/main.c:387
 msgid "Run program"
 msgstr "Program futtatása"
 
-#: ../src/main.c:397
+#: ../src/main.c:395
 msgid "More Information..."
 msgstr "Több információ..."
 
-#: ../src/main.c:459
+#: ../src/main.c:458
 msgid "<b>Search:</b>"
 msgstr "<b>Keresés:</b>"
 
-#: ../src/main.c:466
+#: ../src/main.c:465
 msgid "Show Categories"
 msgstr "Kategóriák mutatása"
 
-#: ../src/xfce4-appfinder.c:121
+#: ../src/xfce4-appfinder.c:118
 msgid "All"
 msgstr "Mind"
 
-#: ../src/xfce4-appfinder.c:122
+#: ../src/xfce4-appfinder.c:119
 msgid "Core"
 msgstr "Alap"
 
-#: ../src/xfce4-appfinder.c:123
+#: ../src/xfce4-appfinder.c:120
 msgid "Development"
 msgstr "Fejlesztés"
 
-#: ../src/xfce4-appfinder.c:124
+#: ../src/xfce4-appfinder.c:121
 msgid "Office"
 msgstr "Iroda"
 
-#: ../src/xfce4-appfinder.c:125
+#: ../src/xfce4-appfinder.c:122
 msgid "Graphics"
 msgstr "Grafika"
 
-#: ../src/xfce4-appfinder.c:126
+#: ../src/xfce4-appfinder.c:123
 msgid "Network"
 msgstr "Hálózat"
 
-#: ../src/xfce4-appfinder.c:127
+#: ../src/xfce4-appfinder.c:124
 msgid "AudioVideo"
 msgstr "Hang és Mozgókép"
 
-#: ../src/xfce4-appfinder.c:128
+#: ../src/xfce4-appfinder.c:125
 msgid "Game"
 msgstr "Játék"
 
-#: ../src/xfce4-appfinder.c:129
+#: ../src/xfce4-appfinder.c:126
 msgid "Education"
 msgstr "Oktatás"
 
-#: ../src/xfce4-appfinder.c:130
+#: ../src/xfce4-appfinder.c:127
 msgid "System"
 msgstr "Rendszer"
 
-#: ../src/xfce4-appfinder.c:131
+#: ../src/xfce4-appfinder.c:128
 msgid "Filemanager"
 msgstr "Fájlkezelő"
 
-#: ../src/xfce4-appfinder.c:132
+#: ../src/xfce4-appfinder.c:129
 msgid "Utility"
 msgstr "Eszközök"
 
-#: ../src/xfce4-appfinder.c:292
+#: ../src/xfce4-appfinder.c:289
 msgid "Categories"
 msgstr "Kategóriák"
 
-#: ../src/xfce4-appfinder.c:586
+#: ../src/xfce4-appfinder.c:577
 msgid "No items available"
 msgstr "Nincsenek elérhető elemek"
 
-#: ../src/xfce4-appfinder.c:626
+#: ../src/xfce4-appfinder.c:617
 msgid "Sorry, no match for searched text."
 msgstr "Bocs, nincs találat."
 
@@ -126,4 +123,3 @@ msgstr "Alkalmazás-kereső"
 #: ../src/xfce4-appfinder.desktop.in.h:2
 msgid "Application Finder for Xfce 4"
 msgstr "Xfce 4 Alkalmazás-kereső"
-
