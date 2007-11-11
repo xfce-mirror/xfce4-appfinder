@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-20 18:11+0100\n"
-"PO-Revision-Date: 2007-09-23 21:22+0300\n"
+"PO-Revision-Date: 2007-10-28 14:58+0300\n"
 "Last-Translator: Rihards Priedītis <rprieditis@inbox.lv>\n"
 "Language-Team: Latvian <rprieditis@inbox.lv>\n"
 "MIME-Version: 1.0\n"
@@ -92,7 +92,7 @@ msgstr "Skaņa un Video"
 
 #: ../src/xfce4-appfinder.c:125
 msgid "Game"
-msgstr "Spēle"
+msgstr "Spēles"
 
 #: ../src/xfce4-appfinder.c:126
 msgid "Education"
@@ -104,7 +104,7 @@ msgstr "Sistēma"
 
 #: ../src/xfce4-appfinder.c:128
 msgid "Filemanager"
-msgstr "Failu Pārvaldnieki"
+msgstr "Failu Pārvaldnieks"
 
 #: ../src/xfce4-appfinder.c:129
 msgid "Utility"
