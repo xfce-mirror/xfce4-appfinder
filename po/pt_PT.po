@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-20 18:11+0100\n"
-"PO-Revision-Date: 2007-09-01 22:50+0100\n"
+"PO-Revision-Date: 2007-11-03 12:32+0100\n"
 "Last-Translator: Nuno Miguel <nunis@netcabo.pt>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "<b>Nome</b>"
 
 #: ../src/main.c:285 ../src/main.c:310 ../src/main.c:343
 msgid "N/A"
-msgstr "N/D"
+msgstr "N/A"
 
 #: ../src/main.c:294
 msgid "<b>Comment</b>"
@@ -50,7 +50,7 @@ msgstr "Executar programa"
 
 #: ../src/main.c:395
 msgid "More Information..."
-msgstr "Mais Informações..."
+msgstr "Mais Informação..."
 
 #: ../src/main.c:458
 msgid "<b>Search:</b>"
@@ -86,7 +86,7 @@ msgstr "Rede"
 
 #: ../src/xfce4-appfinder.c:124
 msgid "AudioVideo"
-msgstr "Áudio e Vídeo"
+msgstr "ÁudioVídeo"
 
 #: ../src/xfce4-appfinder.c:125
 msgid "Game"
@@ -114,11 +114,11 @@ msgstr "Categorias"
 
 #: ../src/xfce4-appfinder.c:577
 msgid "No items available"
-msgstr "Nenhum item disponível"
+msgstr "Sem itens disponíveis"
 
 #: ../src/xfce4-appfinder.c:617
 msgid "Sorry, no match for searched text."
-msgstr "Desculpe, o texto procurado não foi encontrado."
+msgstr "Desculpe, não existe correspondência para o texto procurado."
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
