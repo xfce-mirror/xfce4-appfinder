@@ -3,7 +3,7 @@
 - Remove trailing parens on AC_INIT version info to work around bug
   in intltool 0.35.x and 0.36.x.
 - Updated translations: Nuno Miguel (pt_PT), Dimitri Gogelia (ka),
-  Pablo Vieira (pt_PT), Vladimir Melo (pt_BR).
+  Pablo Vieira (pt_PT), Vladimir Melo (pt_BR), Mişu Moldovan (ro).
 - New translations: Terje Uriansrud (nb_NO), Tegegne Tefera (am),
   RPrieditis (lv).
 
