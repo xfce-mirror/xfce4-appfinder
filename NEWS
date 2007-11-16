@@ -1,6 +1,24 @@
+4.4.2
+=====
+- Remove trailing parens on AC_INIT version info to work around bug
+  in intltool 0.35.x and 0.36.x.
+- Updated translations: Nuno Miguel (pt_PT), Dimitri Gogelia (ka),
+  Pablo Vieira (pt_PT), Vladimir Melo (pt_BR).
+- New translations: Terje Uriansrud (nb_NO), Tegegne Tefera (am),
+  RPrieditis (lv).
+
+
+4.4.1
+=====
+- Updated translations: Alexander Nyakhaychyk (be), Alexander Toresson (sv),
+  Mişu Moldovan (ro), Maximilian Schleiss (fr), Eren Turkay (tr),
+  Jeff Bailes (en_GB), Daichi Kawahata (ja), Nico Schümann (de),
+  Fabio Riga (it), Pau Rul-lan Ferragut (ca).
+- New translations: Besnik Bleta (sq).
+
+
 4.4.0
 =====
 - Add themed icon support (Bug #2651).
 - Fix potential crash (Bug #1882).
 - Several new and updated translations.
-
