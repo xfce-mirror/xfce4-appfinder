@@ -176,7 +176,6 @@ void
 callbackInformationMenuActivate (GtkMenuItem *menuitem, gpointer menu)
 {
     GtkWidget *dialog;
-    GtkWidget *header;
     GtkWidget *vbox;
     GtkWidget *hbox;
     GtkWidget *frame;
@@ -200,23 +199,23 @@ callbackInformationMenuActivate (GtkMenuItem *menuitem, gpointer menu)
     
     if (path && XFCE_IS_DESKTOP_ENTRY(dentry = xfce_desktop_entry_new (path, keys, 7)))
     {
-        dialog = gtk_dialog_new_with_buttons (_("Xfce 4 Appfinder"), NULL, 
-                                              GTK_DIALOG_NO_SEPARATOR,
-                                              GTK_STOCK_CLOSE, GTK_RESPONSE_OK,
-                                              NULL);
-		icon = xfce_themed_icon_load("xfce4-appfinder", 48);
-        gtk_window_set_icon_name (GTK_WINDOW (dialog), "xfce4-appfinder");
-		gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
+        dialog = xfce_titled_dialog_new_with_buttons (_("Xfce 4 Appfinder"), NULL, 
+                                                     GTK_DIALOG_NO_SEPARATOR,
+                                                     GTK_STOCK_CLOSE, GTK_RESPONSE_OK,
+                                                     NULL);
+	icon = xfce_themed_icon_load ("xfce4-appfinder", 48);
+	if (G_LIKELY (G_IS_OBJECT (icon))) {
+	  gtk_window_set_icon (GTK_WINDOW (dialog), icon);
+	  g_object_unref (icon);
+	}
+
+	gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
+
+	xfce_desktop_entry_get_string (dentry, "Name", TRUE, &name);
+	xfce_titled_dialog_set_subtitle (XFCE_TITLED_DIALOG (dialog), name);
 
         vbox = GTK_DIALOG (dialog)->vbox;
         gtk_container_set_border_width (GTK_CONTAINER (vbox), 2);
-
-        xfce_desktop_entry_get_string (dentry, "Name", TRUE, &name);
-        header = xfce_create_header (icon, name);
-        gtk_container_set_border_width (GTK_CONTAINER (header), BORDER - 2);
-        gtk_widget_show (header);
-        gtk_box_pack_start (GTK_BOX (vbox), header, FALSE, TRUE, 0);
-        g_object_unref(icon);
 
         hbox = gtk_hbox_new(FALSE, BORDER);
         gtk_container_set_border_width (GTK_CONTAINER (hbox), BORDER - 2);
