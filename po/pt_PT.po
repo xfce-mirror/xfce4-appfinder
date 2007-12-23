@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-30 17:29+0900\n"
-"PO-Revision-Date: 2007-06-16 12:48+0100\n"
+"POT-Creation-Date: 2007-01-20 18:11+0100\n"
+"PO-Revision-Date: 2007-12-18 21:32+0100\n"
 "Last-Translator: Nuno Miguel <nunis@netcabo.pt>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -121,7 +121,7 @@ msgstr "Nenhum item disponível"
 
 #: ../src/xfce4-appfinder.c:617
 msgid "Sorry, no match for searched text."
-msgstr "Desculpe, o texto procurado não foi encontrado."
+msgstr "Desculpe, não existe correspondência para o texto procurado."
 
 #: ../src/xfce4-appfinder.desktop.in.h:1
 msgid "Appfinder"
