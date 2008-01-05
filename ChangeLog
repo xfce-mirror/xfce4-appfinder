@@ -1,3 +1,9 @@
+2008-01-05 16:35 jasper
+
+	* configure.ac.in: Add svn revision to the version.
+	* src/appfinder.c: Don't set focus to filter entry after changing
+	category. Quit after successful execution of an application.
+
 2008-01-05 15:04 jasper
 
 	* AUTHORS, COPYING, ChangeLog, Makefile.am, NEWS, README, TODO,

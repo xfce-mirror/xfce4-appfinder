@@ -402,6 +402,7 @@ category_toggled (GtkToggleButton * tb, gpointer data)
   if (gtk_toggle_button_get_active (tb))
     {
       gtk_list_store_clear (application_store);
+      current = NULL;
       if (GTK_WIDGET (tb) == radiobutton_all)
 	{
 	  /* show all */
@@ -424,7 +425,6 @@ category_toggled (GtkToggleButton * tb, gpointer data)
 	    }
 	}
       gtk_widget_set_sensitive (exec_button, FALSE);
-      gtk_widget_grab_focus (filter_entry);
     }
 }
 
@@ -572,6 +572,8 @@ execute_item (GtkWidget * button, gpointer data)
 	    }
 	}
       g_free (exec);
+      /* TODO: should we make this optional? */
+      gtk_main_quit();
     }
 }
 
