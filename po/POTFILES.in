@@ -1,7 +1,0 @@
-# List of source files containing translatable strings.
-
-src/main.c
-src/xfce4-appfinder.c
-
-# files added by intltool-prepare.
-src/xfce4-appfinder.desktop.in
