@@ -17,39 +17,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../src/main.c:62
-#, fuzzy
 msgid "Show version information"
-msgstr "Plus D'Information..."
+msgstr "Information sur la version"
 
 #: ../src/main.c:63
 msgid "[MENUFILE]"
-msgstr ""
+msgstr "[MENUFILE]"
 
 #: ../src/main.c:82
 msgid "Failed to open display"
-msgstr ""
+msgstr "Impossible d'ouvrir l'affichage"
 
 #: ../src/main.c:94
 msgid "Copyright (c) 2008"
-msgstr ""
+msgstr "Copyright (c) 2008"
 
 #: ../src/main.c:95
 msgid "The Xfce development team. All rights reserved."
-msgstr ""
+msgstr "L'équipe de développement Xfce. Tous droits réservés."
 
 #: ../src/main.c:96
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr ""
+msgstr "Veuillez reporter les bogues à <%s>."
 
 #: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
-#, fuzzy
 msgid "Application Finder"
-msgstr "Liste des applications installées"
+msgstr "Liste des applications"
 
 #: ../src/appfinder.c:164
 msgid "Filter"
-msgstr ""
+msgstr "Filtrer"
 
 #: ../src/appfinder.c:185
 msgid "Categories"
@@ -57,84 +55,13 @@ msgstr "Catégories"
 
 #: ../src/appfinder.c:201
 msgid "All"
-msgstr "Touts"
+msgstr "Toutes"
 
 #: ../src/appfinder.c:215 ../src/appfinder.c:370 ../src/appfinder.c:758
 msgid "Applications"
-msgstr ""
+msgstr "Applications"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
-msgstr ""
+msgstr "Recherche des applications installées sur le système"
 
-#~ msgid "Cannot execute the selected application"
-#~ msgstr "Ne peut pas exécuter l'application choisie"
-
-#~ msgid "Xfce 4 Appfinder"
-#~ msgstr "Xfce 4 Appfinder"
-
-#~ msgid "<b>Name</b>"
-#~ msgstr "<b>Nom</b>"
-
-#~ msgid "N/A"
-#~ msgstr "N/A"
-
-#~ msgid "<b>Comment</b>"
-#~ msgstr "<b>Commentaire</b>"
-
-#~ msgid "<b>Categories</b>"
-#~ msgstr "<b>Catégories</b>"
-
-#~ msgid "<b>Command</b>"
-#~ msgstr "<b>Commande</b>"
-
-#~ msgid "Run program"
-#~ msgstr "Exécutez le programme"
-
-#~ msgid "<b>Search:</b>"
-#~ msgstr "<b>Chercher:</b>"
-
-#~ msgid "Show Categories"
-#~ msgstr "Montrez Les Catégories"
-
-#~ msgid "Core"
-#~ msgstr "Core"
-
-#~ msgid "Development"
-#~ msgstr "Développement"
-
-#~ msgid "Office"
-#~ msgstr "Bureautique"
-
-#~ msgid "Graphics"
-#~ msgstr "Graphiques"
-
-#~ msgid "Network"
-#~ msgstr "Réseau"
-
-#~ msgid "AudioVideo"
-#~ msgstr "Multimédia"
-
-#~ msgid "Game"
-#~ msgstr "Jeux"
-
-#~ msgid "Education"
-#~ msgstr "Éducation"
-
-#~ msgid "System"
-#~ msgstr "Système"
-
-#~ msgid "Filemanager"
-#~ msgstr "Gestionnaire de fichiers"
-
-#~ msgid "Utility"
-#~ msgstr "Utilitaire"
-
-#~ msgid "No items available"
-#~ msgstr "Aucuns articles disponibles"
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "Désolé, aucune allusion pour le texte recherché."
-
-#~ msgid "Appfinder"
-#~ msgstr "Appfinder"
