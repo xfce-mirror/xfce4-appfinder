@@ -1,0 +1,130 @@
+# $Id$
+#
+# Japanese translations for xfce4-appfinder package.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Daichi Kawahata <daichi@xfce.org>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-04-30 17:29+0900\n"
+"PO-Revision-Date: 2005-10-15 02:21+0900\n"
+"Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
+"Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/main.c:163
+msgid "Cannot execute the selected application"
+msgstr "選択したアプリケーションを実行できません"
+
+#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr "Xfce 4 アプリファインダー"
+
+#: ../src/main.c:272
+msgid "<b>Name</b>"
+msgstr "<b>名前</b>"
+
+#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+msgid "N/A"
+msgstr "利用不可"
+
+#: ../src/main.c:296
+msgid "<b>Comment</b>"
+msgstr "<b>コメント</b>"
+
+#: ../src/main.c:329
+msgid "<b>Categories</b>"
+msgstr "<b>分類</b>"
+
+#: ../src/main.c:354
+msgid "<b>Command</b>"
+msgstr "<b>コマンド</b>"
+
+#: ../src/main.c:389
+msgid "Run program"
+msgstr "プログラムを実行"
+
+#: ../src/main.c:397
+msgid "More Information..."
+msgstr "詳しい情報..."
+
+#: ../src/main.c:459
+msgid "<b>Search:</b>"
+msgstr "<b>検索:</b>"
+
+#: ../src/main.c:466
+msgid "Show Categories"
+msgstr "分類を表示"
+
+#: ../src/xfce4-appfinder.c:121
+msgid "All"
+msgstr "すべて"
+
+#: ../src/xfce4-appfinder.c:122
+msgid "Core"
+msgstr "コア"
+
+#: ../src/xfce4-appfinder.c:123
+msgid "Development"
+msgstr "開発"
+
+#: ../src/xfce4-appfinder.c:124
+msgid "Office"
+msgstr "オフィス"
+
+#: ../src/xfce4-appfinder.c:125
+msgid "Graphics"
+msgstr "グラフィックス"
+
+#: ../src/xfce4-appfinder.c:126
+msgid "Network"
+msgstr "ネットワーク"
+
+#: ../src/xfce4-appfinder.c:127
+msgid "AudioVideo"
+msgstr "音楽・映像"
+
+#: ../src/xfce4-appfinder.c:128
+msgid "Game"
+msgstr "ゲーム"
+
+#: ../src/xfce4-appfinder.c:129
+msgid "Education"
+msgstr "教育"
+
+#: ../src/xfce4-appfinder.c:130
+msgid "System"
+msgstr "システム"
+
+#: ../src/xfce4-appfinder.c:131
+msgid "Filemanager"
+msgstr "ファイルマネージャー"
+
+#: ../src/xfce4-appfinder.c:132
+msgid "Utility"
+msgstr "ユーティリティ"
+
+#: ../src/xfce4-appfinder.c:292
+msgid "Categories"
+msgstr "分類"
+
+#: ../src/xfce4-appfinder.c:586
+msgid "No items available"
+msgstr "利用できるアイテムはありません"
+
+#: ../src/xfce4-appfinder.c:626
+msgid "Sorry, no match for searched text."
+msgstr "検索内容に該当するものはありません。"
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr "アプリファインダー"
+
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr "Xfce 4 のアプリケーション・ファインダーです"

@@ -1,0 +1,130 @@
+# Romanian translation of xfce4-appfinder.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Mişu Moldovan <dumol@gnome.ro>, 2004-2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-04-30 17:29+0900\n"
+"PO-Revision-Date: 2007-01-20 23:42+0200\n"
+"Last-Translator: Mişu Moldovan <dumol@gnome.ro>\n"
+"Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3;plural=(n==1?0:(n==0||((n%100)>0&&(n%100)<20))?1:2)\n"
+
+#: ../src/main.c:163
+msgid "Cannot execute the selected application"
+msgstr "Nu se poate porni aplicaţia selectată"
+
+#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr "Căutare aplicaţii Xfce 4"
+
+#: ../src/main.c:272
+msgid "<b>Name</b>"
+msgstr "<b>Nume</b>"
+
+#: ../src/main.c:287 ../src/main.c:312 ../src/main.c:345
+msgid "N/A"
+msgstr "N/A"
+
+#: ../src/main.c:296
+msgid "<b>Comment</b>"
+msgstr "<b>Comentariu</b>"
+
+#: ../src/main.c:329
+msgid "<b>Categories</b>"
+msgstr "<b>Categorii</b>"
+
+#: ../src/main.c:354
+msgid "<b>Command</b>"
+msgstr "<b>Comandă</b>"
+
+#: ../src/main.c:389
+msgid "Run program"
+msgstr "Pornire program"
+
+#: ../src/main.c:397
+msgid "More Information..."
+msgstr "Mai multe detalii..."
+
+#: ../src/main.c:459
+msgid "<b>Search:</b>"
+msgstr "<b>Caută:</b>"
+
+#: ../src/main.c:466
+msgid "Show Categories"
+msgstr "Arată categorii"
+
+#: ../src/xfce4-appfinder.c:121
+msgid "All"
+msgstr "Toate"
+
+#: ../src/xfce4-appfinder.c:122
+msgid "Core"
+msgstr "Esenţiale"
+
+#: ../src/xfce4-appfinder.c:123
+msgid "Development"
+msgstr "Dezvoltare"
+
+#: ../src/xfce4-appfinder.c:124
+msgid "Office"
+msgstr "Birou"
+
+#: ../src/xfce4-appfinder.c:125
+msgid "Graphics"
+msgstr "Grafică"
+
+#: ../src/xfce4-appfinder.c:126
+msgid "Network"
+msgstr "Reţea"
+
+#: ../src/xfce4-appfinder.c:127
+msgid "AudioVideo"
+msgstr "Multimedia"
+
+#: ../src/xfce4-appfinder.c:128
+msgid "Game"
+msgstr "Jocuri"
+
+#: ../src/xfce4-appfinder.c:129
+msgid "Education"
+msgstr "Educaţionale"
+
+#: ../src/xfce4-appfinder.c:130
+msgid "System"
+msgstr "Sistem"
+
+#: ../src/xfce4-appfinder.c:131
+msgid "Filemanager"
+msgstr "Administrator de fişiere"
+
+#: ../src/xfce4-appfinder.c:132
+msgid "Utility"
+msgstr "Utilitare"
+
+#: ../src/xfce4-appfinder.c:292
+msgid "Categories"
+msgstr "Categorii"
+
+#: ../src/xfce4-appfinder.c:586
+msgid "No items available"
+msgstr "Nu există elemente disponibile"
+
+#: ../src/xfce4-appfinder.c:626
+msgid "Sorry, no match for searched text."
+msgstr "Scuze, nu există nici o potrivire pentru textul căutat."
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr "Căutare aplicaţii"
+
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr "Unealtă de căutare de aplicaţii pentru Xfce 4"
+

@@ -1,0 +1,132 @@
+# Lithuanian translation of xfce4-appfinder.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Mantas Zapolskas <mantaz@users.sf.net>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-04-30 17:29+0900\n"
+"PO-Revision-Date: 2006-12-13 23:15+0300\n"
+"Last-Translator: Mantas Zapolskas <mantaz@users.sf.net>\n"
+"Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/main.c:163
+msgid "Cannot execute the selected application"
+msgstr "Neįmanoma paleisti pažymėtos programos"
+
+#: ../src/main.c:205
+#: ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr "Xfce 4 Appfinder"
+
+#: ../src/main.c:272
+msgid "<b>Name</b>"
+msgstr "<b>Pavadinimas</b>"
+
+#: ../src/main.c:287
+#: ../src/main.c:312
+#: ../src/main.c:345
+msgid "N/A"
+msgstr "N/A"
+
+#: ../src/main.c:296
+msgid "<b>Comment</b>"
+msgstr "<b>Komentaras</b>"
+
+#: ../src/main.c:329
+msgid "<b>Categories</b>"
+msgstr "<b>Kategorijos</b>"
+
+#: ../src/main.c:354
+msgid "<b>Command</b>"
+msgstr "<b>Komanda</b>"
+
+#: ../src/main.c:389
+msgid "Run program"
+msgstr "Paleisti programą"
+
+#: ../src/main.c:397
+msgid "More Information..."
+msgstr "Daugiau informacijos..."
+
+#: ../src/main.c:459
+msgid "<b>Search:</b>"
+msgstr "<b>Ieškoti:</b>"
+
+#: ../src/main.c:466
+msgid "Show Categories"
+msgstr "Rodyti kategorijas"
+
+#: ../src/xfce4-appfinder.c:121
+msgid "All"
+msgstr "Visi"
+
+#: ../src/xfce4-appfinder.c:122
+msgid "Core"
+msgstr "Pagrindinės"
+
+#: ../src/xfce4-appfinder.c:123
+msgid "Development"
+msgstr "Kūrimas"
+
+#: ../src/xfce4-appfinder.c:124
+msgid "Office"
+msgstr "Biuro Programos"
+
+#: ../src/xfce4-appfinder.c:125
+msgid "Graphics"
+msgstr "Grafika"
+
+#: ../src/xfce4-appfinder.c:126
+msgid "Network"
+msgstr "Tinklas"
+
+#: ../src/xfce4-appfinder.c:127
+msgid "AudioVideo"
+msgstr "Audio Video"
+
+#: ../src/xfce4-appfinder.c:128
+msgid "Game"
+msgstr "Žaidimai"
+
+#: ../src/xfce4-appfinder.c:129
+msgid "Education"
+msgstr "Mokomosios"
+
+#: ../src/xfce4-appfinder.c:130
+msgid "System"
+msgstr "Sistemos"
+
+#: ../src/xfce4-appfinder.c:131
+msgid "Filemanager"
+msgstr "Failų Tvarkyklės"
+
+#: ../src/xfce4-appfinder.c:132
+msgid "Utility"
+msgstr "Pagalbinės"
+
+#: ../src/xfce4-appfinder.c:292
+msgid "Categories"
+msgstr "Kategorijos"
+
+#: ../src/xfce4-appfinder.c:586
+msgid "No items available"
+msgstr "Nėra nė vieno elemento"
+
+#: ../src/xfce4-appfinder.c:626
+msgid "Sorry, no match for searched text."
+msgstr "Deja, nieko nerasta pagal paieškos kriterijų"
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr "Appfinder"
+
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr ""
+

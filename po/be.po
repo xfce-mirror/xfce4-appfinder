@@ -1,0 +1,132 @@
+# Беларускі пераклад xfce4-appfinder.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Ales Nyakhaychyk <nab@mail.by>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-09-02 17:42+0200\n"
+"PO-Revision-Date: 2007-01-19 03:18+0300\n"
+"Last-Translator: Alexander Nyakhaychyk <nyakhaychyk@gmail.com>\n"
+"Language-Team: Belorussian <i18n@mova.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/main.c:163
+msgid "Cannot execute the selected application"
+msgstr "Немагчыма выканаць вылучанае дастасаваньне"
+
+#: ../src/main.c:205
+#: ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr "Шукальнік дастасаваньняў Xfce 4"
+
+#: ../src/main.c:273
+msgid "<b>Name</b>"
+msgstr "<b>Назва</b>"
+
+#: ../src/main.c:288
+#: ../src/main.c:313
+#: ../src/main.c:346
+msgid "N/A"
+msgstr "няма"
+
+#: ../src/main.c:297
+msgid "<b>Comment</b>"
+msgstr "<b>Камэнтар</b>"
+
+#: ../src/main.c:330
+msgid "<b>Categories</b>"
+msgstr "<b>Катэгорыі</b>"
+
+#: ../src/main.c:355
+msgid "<b>Command</b>"
+msgstr "<b>Загад</b>"
+
+#: ../src/main.c:390
+msgid "Run program"
+msgstr "Выканаць праграму"
+
+#: ../src/main.c:398
+msgid "More Information..."
+msgstr "Боль падрабязнасьцей..."
+
+#: ../src/main.c:460
+msgid "<b>Search:</b>"
+msgstr "<b>Пошук:</b>"
+
+#: ../src/main.c:467
+msgid "Show Categories"
+msgstr "Паказваць катэгорыі"
+
+#: ../src/xfce4-appfinder.c:121
+msgid "All"
+msgstr "Усе"
+
+#: ../src/xfce4-appfinder.c:122
+msgid "Core"
+msgstr "Асноўныя"
+
+#: ../src/xfce4-appfinder.c:123
+msgid "Development"
+msgstr "Распрацоўка"
+
+#: ../src/xfce4-appfinder.c:124
+msgid "Office"
+msgstr "Канцэлярыя"
+
+#: ../src/xfce4-appfinder.c:125
+msgid "Graphics"
+msgstr "Графіка"
+
+#: ../src/xfce4-appfinder.c:126
+msgid "Network"
+msgstr "Сетка"
+
+#: ../src/xfce4-appfinder.c:127
+msgid "AudioVideo"
+msgstr "Музыка і фільмы"
+
+#: ../src/xfce4-appfinder.c:128
+msgid "Game"
+msgstr "Гульні"
+
+#: ../src/xfce4-appfinder.c:129
+msgid "Education"
+msgstr "Адукацыя"
+
+#: ../src/xfce4-appfinder.c:130
+msgid "System"
+msgstr "Сыстэма"
+
+#: ../src/xfce4-appfinder.c:131
+msgid "Filemanager"
+msgstr "Кіраваньне файламі"
+
+#: ../src/xfce4-appfinder.c:132
+msgid "Utility"
+msgstr "Прыблуды"
+
+#: ../src/xfce4-appfinder.c:292
+msgid "Categories"
+msgstr "Катэгорыі"
+
+#: ../src/xfce4-appfinder.c:586
+msgid "No items available"
+msgstr "Няма наяўных элемэнтаў"
+
+#: ../src/xfce4-appfinder.c:626
+msgid "Sorry, no match for searched text."
+msgstr "На жаль, няма супадзеньняў."
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr "Шукальнік дастасаваньняў"
+
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr "Шукальнік дастасаваньняў для Xfce 4"
+

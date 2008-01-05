@@ -1,0 +1,130 @@
+# translation of xfce4-appfinder.po to Macedonian
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Jovan Naumovski <jovan@lugola.net>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-09-02 17:42+0200\n"
+"PO-Revision-Date: 2006-12-23 23:58+0100\n"
+"Last-Translator: Jovan Naumovski <jovan@lugola.net>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.2\n"
+
+#: ../src/main.c:163
+msgid "Cannot execute the selected application"
+msgstr "Не можам да ја извршам избраната апликација"
+
+#: ../src/main.c:205 ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr "Наоѓач на апликации за Xfce 4"
+
+#: ../src/main.c:273
+msgid "<b>Name</b>"
+msgstr "<b>Име</b>"
+
+#: ../src/main.c:288 ../src/main.c:313 ../src/main.c:346
+msgid "N/A"
+msgstr "Нема"
+
+#: ../src/main.c:297
+msgid "<b>Comment</b>"
+msgstr "<b>Коментар</b>"
+
+#: ../src/main.c:330
+msgid "<b>Categories</b>"
+msgstr "<b>Категории</b>"
+
+#: ../src/main.c:355
+msgid "<b>Command</b>"
+msgstr "<b>Команда</b>"
+
+#: ../src/main.c:390
+msgid "Run program"
+msgstr "Изврши програма"
+
+#: ../src/main.c:398
+msgid "More Information..."
+msgstr "Повеќе информации..."
+
+#: ../src/main.c:460
+msgid "<b>Search:</b>"
+msgstr "<b>Пребарај:</b>"
+
+#: ../src/main.c:467
+msgid "Show Categories"
+msgstr "Покажи категории"
+
+#: ../src/xfce4-appfinder.c:121
+msgid "All"
+msgstr "Сите"
+
+#: ../src/xfce4-appfinder.c:122
+msgid "Core"
+msgstr "Јадро"
+
+#: ../src/xfce4-appfinder.c:123
+msgid "Development"
+msgstr "Равивање"
+
+#: ../src/xfce4-appfinder.c:124
+msgid "Office"
+msgstr "Канцелариски"
+
+#: ../src/xfce4-appfinder.c:125
+msgid "Graphics"
+msgstr "Графика"
+
+#: ../src/xfce4-appfinder.c:126
+msgid "Network"
+msgstr "Мрежа"
+
+#: ../src/xfce4-appfinder.c:127
+msgid "AudioVideo"
+msgstr "АудиоВидео"
+
+#: ../src/xfce4-appfinder.c:128
+msgid "Game"
+msgstr "Игра"
+
+#: ../src/xfce4-appfinder.c:129
+msgid "Education"
+msgstr "Едукација"
+
+#: ../src/xfce4-appfinder.c:130
+msgid "System"
+msgstr "Систем"
+
+#: ../src/xfce4-appfinder.c:131
+msgid "Filemanager"
+msgstr "Менаџер за датотеки"
+
+#: ../src/xfce4-appfinder.c:132
+msgid "Utility"
+msgstr "Алатка"
+
+#: ../src/xfce4-appfinder.c:292
+msgid "Categories"
+msgstr "Категории"
+
+#: ../src/xfce4-appfinder.c:586
+msgid "No items available"
+msgstr "Нема достапни предмети"
+
+#: ../src/xfce4-appfinder.c:626
+msgid "Sorry, no match for searched text."
+msgstr "Не е пронајдено совпаѓање за бараниот текст."
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr "Appfinder"
+
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr "Наоѓач на апликации за Xfce 4"
+

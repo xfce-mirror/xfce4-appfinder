@@ -1,0 +1,6 @@
+4.4.0
+=====
+- Add themed icon support (Bug #2651).
+- Fix potential crash (Bug #1882).
+- Several new and updated translations.
+
