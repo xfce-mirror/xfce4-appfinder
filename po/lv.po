@@ -1,0 +1,139 @@
+# Latvian translations for xfce4-appfinder package.
+# Copyright (C) 2004-2008 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Rihards Prieditis <rprieditis@inbox.lv>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-04 21:39+0100\n"
+"PO-Revision-Date: 2008-10-28 14:58+0300\n"
+"Last-Translator: Rihards Priedītis <rprieditis@inbox.lv>\n"
+"Language-Team: Latvian <rprieditis@inbox.lv>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/main.c:62
+#, fuzzy
+msgid "Show version information"
+msgstr "Vairāk Informācijas..."
+
+#: ../src/main.c:63
+msgid "[MENUFILE]"
+msgstr ""
+
+#: ../src/main.c:82
+msgid "Failed to open display"
+msgstr ""
+
+#: ../src/main.c:94
+msgid "Copyright (c) 2008"
+msgstr ""
+
+#: ../src/main.c:95
+msgid "The Xfce development team. All rights reserved."
+msgstr ""
+
+#: ../src/main.c:96
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr ""
+
+#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+#, fuzzy
+msgid "Application Finder"
+msgstr "Xfce 4 Lietotņu Meklētājs"
+
+#: ../src/appfinder.c:164
+msgid "Filter"
+msgstr ""
+
+#: ../src/appfinder.c:185
+msgid "Categories"
+msgstr "Kategorijas"
+
+#: ../src/appfinder.c:201
+msgid "All"
+msgstr "Visas"
+
+#: ../src/appfinder.c:215 ../src/appfinder.c:370 ../src/appfinder.c:758
+msgid "Applications"
+msgstr ""
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find applications installed on the system."
+msgstr ""
+
+#~ msgid "Cannot execute the selected application"
+#~ msgstr "Nevar izpildīt izvēlēto lietotni"
+
+#~ msgid "Xfce 4 Appfinder"
+#~ msgstr "Xfce 4 Lietotņu Meklētājs"
+
+#~ msgid "<b>Name</b>"
+#~ msgstr "<b>Nosaukums</b>"
+
+#~ msgid "N/A"
+#~ msgstr "n/a"
+
+#~ msgid "<b>Comment</b>"
+#~ msgstr "<b>Komentārs</b>"
+
+#~ msgid "<b>Categories</b>"
+#~ msgstr "<b>Kategorijas</b>"
+
+#~ msgid "<b>Command</b>"
+#~ msgstr "<b>Komanda</b>"
+
+#~ msgid "Run program"
+#~ msgstr "Izpildīt programmu"
+
+#~ msgid "<b>Search:</b>"
+#~ msgstr "<b>Meklēt:</b>"
+
+#~ msgid "Show Categories"
+#~ msgstr "Rādīt Kategorijas"
+
+#~ msgid "Core"
+#~ msgstr "Kodols"
+
+#~ msgid "Development"
+#~ msgstr "Izstrāde"
+
+#~ msgid "Office"
+#~ msgstr "Birojs"
+
+#~ msgid "Graphics"
+#~ msgstr "Grafika"
+
+#~ msgid "Network"
+#~ msgstr "Tīkls"
+
+#~ msgid "AudioVideo"
+#~ msgstr "Skaņa un Video"
+
+#~ msgid "Game"
+#~ msgstr "Spēles"
+
+#~ msgid "Education"
+#~ msgstr "Izglītība"
+
+#~ msgid "System"
+#~ msgstr "Sistēma"
+
+#~ msgid "Filemanager"
+#~ msgstr "Failu Pārvaldnieks"
+
+#~ msgid "Utility"
+#~ msgstr "Utilītprogrammas"
+
+#~ msgid "No items available"
+#~ msgstr "Neviens vienums nav pieejams"
+
+#~ msgid "Sorry, no match for searched text."
+#~ msgstr "Pēc meklējamā teksta, netika nekas atrasts."
+
+#~ msgid "Appfinder"
+#~ msgstr "Lietotņu Meklētājs"

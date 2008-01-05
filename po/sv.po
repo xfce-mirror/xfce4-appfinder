@@ -1,0 +1,144 @@
+# Swedish translations for xfce4-appfinder package.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Aron Stansvik <elvstone@gmail.com>, 2005.
+# Alexander Toresson <alexander.toresson@gmail.com>, 2005.
+# Jens Hagerman <godhet@gmail.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-04 21:39+0100\n"
+"PO-Revision-Date: 2006-02-19 00:39+0100\n"
+"Last-Translator: Alexander Toresson <alexander.toresson@gmail.com>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Country: SWEDEN\n"
+
+#: ../src/main.c:62
+#, fuzzy
+msgid "Show version information"
+msgstr "Mer information..."
+
+#: ../src/main.c:63
+msgid "[MENUFILE]"
+msgstr ""
+
+#: ../src/main.c:82
+msgid "Failed to open display"
+msgstr ""
+
+#: ../src/main.c:94
+msgid "Copyright (c) 2008"
+msgstr ""
+
+#: ../src/main.c:95
+msgid "The Xfce development team. All rights reserved."
+msgstr ""
+
+#: ../src/main.c:96
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr ""
+
+#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+#, fuzzy
+msgid "Application Finder"
+msgstr "Programlista för Xfce 4"
+
+#: ../src/appfinder.c:164
+msgid "Filter"
+msgstr ""
+
+#: ../src/appfinder.c:185
+msgid "Categories"
+msgstr "Kategorier"
+
+#: ../src/appfinder.c:201
+msgid "All"
+msgstr "Alla"
+
+#: ../src/appfinder.c:215 ../src/appfinder.c:370 ../src/appfinder.c:758
+msgid "Applications"
+msgstr ""
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find applications installed on the system."
+msgstr ""
+
+#~ msgid "Cannot execute the selected application"
+#~ msgstr "Kunde inte starta programmet"
+
+#~ msgid "Xfce 4 Appfinder"
+#~ msgstr "Programlista"
+
+#~ msgid "<b>Name</b>"
+#~ msgstr "<b>Namn</b>"
+
+#~ msgid "N/A"
+#~ msgstr "Ej tillämplig"
+
+#~ msgid "<b>Comment</b>"
+#~ msgstr "<b>Kommentar</b>"
+
+#~ msgid "<b>Categories</b>"
+#~ msgstr "<b>Kategorier</b>"
+
+#~ msgid "<b>Command</b>"
+#~ msgstr "<b>Kommando</b>"
+
+#~ msgid "Run program"
+#~ msgstr "Kör programmet"
+
+#~ msgid "<b>Search:</b>"
+#~ msgstr "<b>Sök:</b>"
+
+#~ msgid "Show Categories"
+#~ msgstr "Visa kategorier"
+
+#~ msgid "Core"
+#~ msgstr "Standard"
+
+#~ msgid "Development"
+#~ msgstr "Utveckling"
+
+#~ msgid "Office"
+#~ msgstr "Kontor"
+
+#~ msgid "Graphics"
+#~ msgstr "Grafik"
+
+#~ msgid "Network"
+#~ msgstr "Nätverk"
+
+#~ msgid "AudioVideo"
+#~ msgstr "Ljud och Bild"
+
+#~ msgid "Game"
+#~ msgstr "Spel"
+
+#~ msgid "Education"
+#~ msgstr "Utbildning"
+
+#~ msgid "System"
+#~ msgstr "System"
+
+#~ msgid "Filemanager"
+#~ msgstr "Filhanterare"
+
+#~ msgid "Utility"
+#~ msgstr "Verktyg"
+
+#~ msgid "No items available"
+#~ msgstr "Inga program i denna kategori"
+
+#~ msgid "Sorry, no match for searched text."
+#~ msgstr "Tyvärr, inga sökträffar."
+
+#~ msgid "Appfinder"
+#~ msgstr "Programlista"

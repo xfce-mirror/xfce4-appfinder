@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-04 21:39+0100\n"
+"PO-Revision-Date: 2006-08-24 23:40+0400\n"
+"Last-Translator: Dimitri Gogelia <delphi.knight@gmail.com>\n"
+"Language-Team: Georgian <delphi.knight@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Georgian\n"
+"X-Poedit-Country: GEORGIA\n"
+
+#: ../src/main.c:62
+msgid "Show version information"
+msgstr ""
+
+#: ../src/main.c:63
+msgid "[MENUFILE]"
+msgstr ""
+
+#: ../src/main.c:82
+msgid "Failed to open display"
+msgstr ""
+
+#: ../src/main.c:94
+msgid "Copyright (c) 2008"
+msgstr ""
+
+#: ../src/main.c:95
+msgid "The Xfce development team. All rights reserved."
+msgstr ""
+
+#: ../src/main.c:96
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr ""
+
+#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr ""
+
+#: ../src/appfinder.c:164
+msgid "Filter"
+msgstr ""
+
+#: ../src/appfinder.c:185
+msgid "Categories"
+msgstr "კატეგორიები"
+
+#: ../src/appfinder.c:201
+msgid "All"
+msgstr ""
+
+#: ../src/appfinder.c:215 ../src/appfinder.c:370 ../src/appfinder.c:758
+msgid "Applications"
+msgstr ""
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find applications installed on the system."
+msgstr ""
+
+#~ msgid "<b>Name</b>"
+#~ msgstr "<b>სახელი</b>"
+
+#~ msgid "Network"
+#~ msgstr "ქსელი"

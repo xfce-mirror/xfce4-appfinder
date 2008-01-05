@@ -1,0 +1,139 @@
+# Traditional Chinese translations for xfce4-appfinder package.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Hydonsingore Cia <hydonsingore@educities.edu.tw>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-04 21:39+0100\n"
+"PO-Revision-Date: 2006-06-12 21:34+0800\n"
+"Last-Translator: Hydonsingore Cia <hydonsingore@educities.edu.tw>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/main.c:62
+#, fuzzy
+msgid "Show version information"
+msgstr "更多資訊..."
+
+#: ../src/main.c:63
+msgid "[MENUFILE]"
+msgstr ""
+
+#: ../src/main.c:82
+msgid "Failed to open display"
+msgstr ""
+
+#: ../src/main.c:94
+msgid "Copyright (c) 2008"
+msgstr ""
+
+#: ../src/main.c:95
+msgid "The Xfce development team. All rights reserved."
+msgstr ""
+
+#: ../src/main.c:96
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr ""
+
+#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+#, fuzzy
+msgid "Application Finder"
+msgstr "Xfce 4 的應用程式搜尋器"
+
+#: ../src/appfinder.c:164
+msgid "Filter"
+msgstr ""
+
+#: ../src/appfinder.c:185
+msgid "Categories"
+msgstr "類別"
+
+#: ../src/appfinder.c:201
+msgid "All"
+msgstr "全部"
+
+#: ../src/appfinder.c:215 ../src/appfinder.c:370 ../src/appfinder.c:758
+msgid "Applications"
+msgstr ""
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find applications installed on the system."
+msgstr ""
+
+#~ msgid "Cannot execute the selected application"
+#~ msgstr "無法執行所選取的應用程式"
+
+#~ msgid "Xfce 4 Appfinder"
+#~ msgstr "Xfce 4 Appfinder"
+
+#~ msgid "<b>Name</b>"
+#~ msgstr "<b>名稱</b>"
+
+#~ msgid "N/A"
+#~ msgstr "無"
+
+#~ msgid "<b>Comment</b>"
+#~ msgstr "<b>備註</b>"
+
+#~ msgid "<b>Categories</b>"
+#~ msgstr "<b>類別</b>"
+
+#~ msgid "<b>Command</b>"
+#~ msgstr "<b>指令</b>"
+
+#~ msgid "Run program"
+#~ msgstr "執行程式"
+
+#~ msgid "<b>Search:</b>"
+#~ msgstr "<b>搜尋：</b>"
+
+#~ msgid "Show Categories"
+#~ msgstr "顯示類別"
+
+#~ msgid "Core"
+#~ msgstr "核心"
+
+#~ msgid "Development"
+#~ msgstr "開發"
+
+#~ msgid "Office"
+#~ msgstr "Office"
+
+#~ msgid "Graphics"
+#~ msgstr "圖像"
+
+#~ msgid "Network"
+#~ msgstr "網路"
+
+#~ msgid "AudioVideo"
+#~ msgstr "影音"
+
+#~ msgid "Game"
+#~ msgstr "遊戲"
+
+#~ msgid "Education"
+#~ msgstr "教育"
+
+#~ msgid "System"
+#~ msgstr "系統"
+
+#~ msgid "Filemanager"
+#~ msgstr "檔案管理器"
+
+#~ msgid "Utility"
+#~ msgstr "工具"
+
+#~ msgid "No items available"
+#~ msgstr "沒有可用的項目"
+
+#~ msgid "Sorry, no match for searched text."
+#~ msgstr "抱歉，找不到相符的程式"
+
+#~ msgid "Appfinder"
+#~ msgstr "Appfinder"

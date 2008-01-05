@@ -1,0 +1,140 @@
+# translation of Xfce4-appfinder into Finnish
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Juha Kautto <juha@xfce.org>, 2004.
+# Jari Rahkonen <jari.rahkonen@pp2.inet.fi>, 2005-2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-04 21:39+0100\n"
+"PO-Revision-Date: 2006-02-01 11:09+0900\n"
+"Last-Translator: Jari Rahkonen <jari.rahkonen@pp2.inet.fi>\n"
+"Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/main.c:62
+#, fuzzy
+msgid "Show version information"
+msgstr "Lisätietoja..."
+
+#: ../src/main.c:63
+msgid "[MENUFILE]"
+msgstr ""
+
+#: ../src/main.c:82
+msgid "Failed to open display"
+msgstr ""
+
+#: ../src/main.c:94
+msgid "Copyright (c) 2008"
+msgstr ""
+
+#: ../src/main.c:95
+msgid "The Xfce development team. All rights reserved."
+msgstr ""
+
+#: ../src/main.c:96
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr ""
+
+#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+#, fuzzy
+msgid "Application Finder"
+msgstr "Sovellusten hakutyökalu Xfce 4:lle"
+
+#: ../src/appfinder.c:164
+msgid "Filter"
+msgstr ""
+
+#: ../src/appfinder.c:185
+msgid "Categories"
+msgstr "Kategoriat"
+
+#: ../src/appfinder.c:201
+msgid "All"
+msgstr "Kaikki"
+
+#: ../src/appfinder.c:215 ../src/appfinder.c:370 ../src/appfinder.c:758
+msgid "Applications"
+msgstr ""
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find applications installed on the system."
+msgstr ""
+
+#~ msgid "Cannot execute the selected application"
+#~ msgstr "Valittua sovellusta ei voi suorittaa"
+
+#~ msgid "Xfce 4 Appfinder"
+#~ msgstr "Xfce 4 Sovellusetsin"
+
+#~ msgid "<b>Name</b>"
+#~ msgstr "<b>Nimi</b>"
+
+#~ msgid "N/A"
+#~ msgstr "-"
+
+#~ msgid "<b>Comment</b>"
+#~ msgstr "<b>Kommentti</b>"
+
+#~ msgid "<b>Categories</b>"
+#~ msgstr "<b>Kategoriat</b>"
+
+#~ msgid "<b>Command</b>"
+#~ msgstr "<b>Komento</b>"
+
+#~ msgid "Run program"
+#~ msgstr "Suorita sovellus"
+
+#~ msgid "<b>Search:</b>"
+#~ msgstr "<b>Etsi:</b>"
+
+#~ msgid "Show Categories"
+#~ msgstr "Näytä kategoriat"
+
+#~ msgid "Core"
+#~ msgstr "Perusohjelmat"
+
+#~ msgid "Development"
+#~ msgstr "Ohjelmakehitys"
+
+#~ msgid "Office"
+#~ msgstr "Toimisto"
+
+#~ msgid "Graphics"
+#~ msgstr "Kuvankäsittely"
+
+#~ msgid "Network"
+#~ msgstr "Verkko"
+
+#~ msgid "AudioVideo"
+#~ msgstr "Ääni ja kuva"
+
+#~ msgid "Game"
+#~ msgstr "Pelit"
+
+#~ msgid "Education"
+#~ msgstr "Koulutus"
+
+#~ msgid "System"
+#~ msgstr "Järjestelmä"
+
+#~ msgid "Filemanager"
+#~ msgstr "Tiedostonhallinta"
+
+#~ msgid "Utility"
+#~ msgstr "Apuohjelmat"
+
+#~ msgid "No items available"
+#~ msgstr "Ei kohteita saatavilla"
+
+#~ msgid "Sorry, no match for searched text."
+#~ msgstr "Haku ei tuottanut tuloksia"
+
+#~ msgid "Appfinder"
+#~ msgstr "Appfinder"

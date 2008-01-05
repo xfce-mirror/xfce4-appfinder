@@ -1,0 +1,138 @@
+# Lithuanian translation of xfce4-appfinder.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Mantas Zapolskas <mantaz@users.sf.net>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-04 21:39+0100\n"
+"PO-Revision-Date: 2006-12-13 23:15+0300\n"
+"Last-Translator: Mantas Zapolskas <mantaz@users.sf.net>\n"
+"Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/main.c:62
+#, fuzzy
+msgid "Show version information"
+msgstr "Daugiau informacijos..."
+
+#: ../src/main.c:63
+msgid "[MENUFILE]"
+msgstr ""
+
+#: ../src/main.c:82
+msgid "Failed to open display"
+msgstr ""
+
+#: ../src/main.c:94
+msgid "Copyright (c) 2008"
+msgstr ""
+
+#: ../src/main.c:95
+msgid "The Xfce development team. All rights reserved."
+msgstr ""
+
+#: ../src/main.c:96
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr ""
+
+#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr ""
+
+#: ../src/appfinder.c:164
+msgid "Filter"
+msgstr ""
+
+#: ../src/appfinder.c:185
+msgid "Categories"
+msgstr "Kategorijos"
+
+#: ../src/appfinder.c:201
+msgid "All"
+msgstr "Visi"
+
+#: ../src/appfinder.c:215 ../src/appfinder.c:370 ../src/appfinder.c:758
+msgid "Applications"
+msgstr ""
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find applications installed on the system."
+msgstr ""
+
+#~ msgid "Cannot execute the selected application"
+#~ msgstr "Neįmanoma paleisti pažymėtos programos"
+
+#~ msgid "Xfce 4 Appfinder"
+#~ msgstr "Xfce 4 Appfinder"
+
+#~ msgid "<b>Name</b>"
+#~ msgstr "<b>Pavadinimas</b>"
+
+#~ msgid "N/A"
+#~ msgstr "N/A"
+
+#~ msgid "<b>Comment</b>"
+#~ msgstr "<b>Komentaras</b>"
+
+#~ msgid "<b>Categories</b>"
+#~ msgstr "<b>Kategorijos</b>"
+
+#~ msgid "<b>Command</b>"
+#~ msgstr "<b>Komanda</b>"
+
+#~ msgid "Run program"
+#~ msgstr "Paleisti programą"
+
+#~ msgid "<b>Search:</b>"
+#~ msgstr "<b>Ieškoti:</b>"
+
+#~ msgid "Show Categories"
+#~ msgstr "Rodyti kategorijas"
+
+#~ msgid "Core"
+#~ msgstr "Pagrindinės"
+
+#~ msgid "Development"
+#~ msgstr "Kūrimas"
+
+#~ msgid "Office"
+#~ msgstr "Biuro Programos"
+
+#~ msgid "Graphics"
+#~ msgstr "Grafika"
+
+#~ msgid "Network"
+#~ msgstr "Tinklas"
+
+#~ msgid "AudioVideo"
+#~ msgstr "Audio Video"
+
+#~ msgid "Game"
+#~ msgstr "Žaidimai"
+
+#~ msgid "Education"
+#~ msgstr "Mokomosios"
+
+#~ msgid "System"
+#~ msgstr "Sistemos"
+
+#~ msgid "Filemanager"
+#~ msgstr "Failų Tvarkyklės"
+
+#~ msgid "Utility"
+#~ msgstr "Pagalbinės"
+
+#~ msgid "No items available"
+#~ msgstr "Nėra nė vieno elemento"
+
+#~ msgid "Sorry, no match for searched text."
+#~ msgstr "Deja, nieko nerasta pagal paieškos kriterijų"
+
+#~ msgid "Appfinder"
+#~ msgstr "Appfinder"

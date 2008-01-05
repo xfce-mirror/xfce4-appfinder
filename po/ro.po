@@ -1,0 +1,141 @@
+# Romanian translation of xfce4-appfinder.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Mişu Moldovan <dumol@gnome.ro>, 2004-2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-04 21:39+0100\n"
+"PO-Revision-Date: 2008-01-20 23:42+0200\n"
+"Last-Translator: Mişu Moldovan <dumol@gnome.ro>\n"
+"Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3;plural=(n==1?0:(n==0||((n%100)>0&&(n%100)<20))?"
+"1:2)\n"
+
+#: ../src/main.c:62
+#, fuzzy
+msgid "Show version information"
+msgstr "Mai multe detalii..."
+
+#: ../src/main.c:63
+msgid "[MENUFILE]"
+msgstr ""
+
+#: ../src/main.c:82
+msgid "Failed to open display"
+msgstr ""
+
+#: ../src/main.c:94
+msgid "Copyright (c) 2008"
+msgstr ""
+
+#: ../src/main.c:95
+msgid "The Xfce development team. All rights reserved."
+msgstr ""
+
+#: ../src/main.c:96
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr ""
+
+#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+#, fuzzy
+msgid "Application Finder"
+msgstr "Unealtă de căutare de aplicaţii pentru Xfce 4"
+
+#: ../src/appfinder.c:164
+msgid "Filter"
+msgstr ""
+
+#: ../src/appfinder.c:185
+msgid "Categories"
+msgstr "Categorii"
+
+#: ../src/appfinder.c:201
+msgid "All"
+msgstr "Toate"
+
+#: ../src/appfinder.c:215 ../src/appfinder.c:370 ../src/appfinder.c:758
+msgid "Applications"
+msgstr ""
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find applications installed on the system."
+msgstr ""
+
+#~ msgid "Cannot execute the selected application"
+#~ msgstr "Nu se poate porni aplicaţia selectată"
+
+#~ msgid "Xfce 4 Appfinder"
+#~ msgstr "Căutare aplicaţii Xfce 4"
+
+#~ msgid "<b>Name</b>"
+#~ msgstr "<b>Nume</b>"
+
+#~ msgid "N/A"
+#~ msgstr "N/A"
+
+#~ msgid "<b>Comment</b>"
+#~ msgstr "<b>Comentariu</b>"
+
+#~ msgid "<b>Categories</b>"
+#~ msgstr "<b>Categorii</b>"
+
+#~ msgid "<b>Command</b>"
+#~ msgstr "<b>Comandă</b>"
+
+#~ msgid "Run program"
+#~ msgstr "Pornire program"
+
+#~ msgid "<b>Search:</b>"
+#~ msgstr "<b>Caută:</b>"
+
+#~ msgid "Show Categories"
+#~ msgstr "Arată categorii"
+
+#~ msgid "Core"
+#~ msgstr "Esenţiale"
+
+#~ msgid "Development"
+#~ msgstr "Dezvoltare"
+
+#~ msgid "Office"
+#~ msgstr "Birou"
+
+#~ msgid "Graphics"
+#~ msgstr "Grafică"
+
+#~ msgid "Network"
+#~ msgstr "Reţea"
+
+#~ msgid "AudioVideo"
+#~ msgstr "Multimedia"
+
+#~ msgid "Game"
+#~ msgstr "Jocuri"
+
+#~ msgid "Education"
+#~ msgstr "Educaţionale"
+
+#~ msgid "System"
+#~ msgstr "Sistem"
+
+#~ msgid "Filemanager"
+#~ msgstr "Administrator de fişiere"
+
+#~ msgid "Utility"
+#~ msgstr "Utilitare"
+
+#~ msgid "No items available"
+#~ msgstr "Nu există elemente disponibile"
+
+#~ msgid "Sorry, no match for searched text."
+#~ msgstr "Scuze, nu există nici o potrivire pentru textul căutat."
+
+#~ msgid "Appfinder"
+#~ msgstr "Căutare aplicaţii"

@@ -1,0 +1,141 @@
+# German translations for xfce4-appfinder package.
+# Copyright (C) 2004-2005 Eduard Roccatello.
+# This file is distributed under the same license as the xfce4-appfinder package.
+# Moritz Heiber <moe@xfce.org>, 2004.
+# Enrico Tröger <enrico.troeger@uvena.de>, 2006.
+# Nico Schümann <nico@prog.nico22.de>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-04 21:39+0100\n"
+"PO-Revision-Date: 2006-08-29 16:33+0100\n"
+"Last-Translator: Nico Schümann <nico@prog.nico22.de>\n"
+"Language-Team: German <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/main.c:62
+#, fuzzy
+msgid "Show version information"
+msgstr "Mehr Informationen..."
+
+#: ../src/main.c:63
+msgid "[MENUFILE]"
+msgstr ""
+
+#: ../src/main.c:82
+msgid "Failed to open display"
+msgstr ""
+
+#: ../src/main.c:94
+msgid "Copyright (c) 2008"
+msgstr ""
+
+#: ../src/main.c:95
+msgid "The Xfce development team. All rights reserved."
+msgstr ""
+
+#: ../src/main.c:96
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr ""
+
+#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+#, fuzzy
+msgid "Application Finder"
+msgstr "Anwendungsfinder für Xfce 4"
+
+#: ../src/appfinder.c:164
+msgid "Filter"
+msgstr ""
+
+#: ../src/appfinder.c:185
+msgid "Categories"
+msgstr "Kategorien"
+
+#: ../src/appfinder.c:201
+msgid "All"
+msgstr "Alle"
+
+#: ../src/appfinder.c:215 ../src/appfinder.c:370 ../src/appfinder.c:758
+msgid "Applications"
+msgstr ""
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find applications installed on the system."
+msgstr ""
+
+#~ msgid "Cannot execute the selected application"
+#~ msgstr "Kann die ausgewählte Anwendung nicht ausführen"
+
+#~ msgid "Xfce 4 Appfinder"
+#~ msgstr "Xfce4-Anwendungsfinder"
+
+#~ msgid "<b>Name</b>"
+#~ msgstr "<b>Name</b>"
+
+#~ msgid "N/A"
+#~ msgstr "(nicht verfügbar)"
+
+#~ msgid "<b>Comment</b>"
+#~ msgstr "<b>Kommentar</b>"
+
+#~ msgid "<b>Categories</b>"
+#~ msgstr "<b>Kategorien</b>"
+
+#~ msgid "<b>Command</b>"
+#~ msgstr "<b>Befehl</b>"
+
+#~ msgid "Run program"
+#~ msgstr "Programm ausführen"
+
+#~ msgid "<b>Search:</b>"
+#~ msgstr "<b>Suche:</b>"
+
+#~ msgid "Show Categories"
+#~ msgstr "Kategorien anzeigen"
+
+#~ msgid "Core"
+#~ msgstr "Kern"
+
+#~ msgid "Development"
+#~ msgstr "Entwicklung"
+
+#~ msgid "Office"
+#~ msgstr "Büro"
+
+#~ msgid "Graphics"
+#~ msgstr "Grafik"
+
+#~ msgid "Network"
+#~ msgstr "Netzwerk"
+
+#~ msgid "AudioVideo"
+#~ msgstr "Audio/Video"
+
+#~ msgid "Game"
+#~ msgstr "Spiele"
+
+#~ msgid "Education"
+#~ msgstr "Ausbildung"
+
+#~ msgid "System"
+#~ msgstr "System"
+
+#~ msgid "Filemanager"
+#~ msgstr "Dateimanager"
+
+#~ msgid "Utility"
+#~ msgstr "Werkzeuge"
+
+#~ msgid "No items available"
+#~ msgstr "Keine Einträge vorhanden"
+
+#~ msgid "Sorry, no match for searched text."
+#~ msgstr "Keine Übereinstimmung für gesuchten Text"
+
+#~ msgid "Appfinder"
+#~ msgstr "Appfinder"
