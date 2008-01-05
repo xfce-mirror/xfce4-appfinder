@@ -1,4 +1,4 @@
-# $Id: ja.po 24659 2008-01-20 17:12:02Z benny $
+# $Id$
 #
 # Japanese translations for xfce4-appfinder package.
 # Copyright (C) 2004-2005 Eduard Roccatello.
