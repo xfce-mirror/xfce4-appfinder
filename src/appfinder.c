@@ -200,6 +200,7 @@ appfinder_create_shell (void)
 
   radiobutton_all = gtk_radio_button_new_with_label (NULL, _("All"));
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radiobutton_all), TRUE);
+  gtk_button_set_focus_on_click (GTK_BUTTON (radiobutton_all), FALSE);
   gtk_widget_show (radiobutton_all);
   gtk_box_pack_start (GTK_BOX (category_box), radiobutton_all, FALSE, FALSE, 0);
 
@@ -690,6 +691,7 @@ appfinder_add_category_widget (const char *category)
   GtkWidget *label;
 
   rb = gtk_radio_button_new_from_widget (GTK_RADIO_BUTTON (radiobutton_all));
+  gtk_button_set_focus_on_click (GTK_BUTTON (rb), FALSE);
   gtk_widget_show (rb);
   gtk_box_pack_start (GTK_BOX (category_box), rb, FALSE, FALSE, 0);
 

@@ -1,3 +1,8 @@
+2008-01-06 14:27 jasper
+
+	* src/appfinder.c: Don't take away focus on filter entry when
+	selecting another category.
+
 2008-01-05 16:35 jasper
 
 	* configure.ac.in: Add svn revision to the version.
