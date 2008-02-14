@@ -1,0 +1,130 @@
+# translation of xfce4-appfinder.po to Sinhala
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Rashan Anushka <rashan.uoc@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-20 18:11+0100\n"
+"PO-Revision-Date: 2008-02-09 21:32+0530\n"
+"Last-Translator: Rashan Anushka <rashan.uoc@gmail.com>\n"
+"Language-Team: Sinhala <si@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../src/main.c:161
+msgid "Cannot execute the selected application"
+msgstr "තේරූ යෙදුම ක්‍රියාත්මක කළ නොහැක"
+
+#: ../src/main.c:203 ../src/xfce4-appfinder.desktop.in.h:3
+msgid "Xfce 4 Appfinder"
+msgstr "Xfce 4 යෙදුම් සෙවුම"
+
+#: ../src/main.c:270
+msgid "<b>Name</b>"
+msgstr "<b>නාමය</b>"
+
+#: ../src/main.c:285 ../src/main.c:310 ../src/main.c:343
+msgid "N/A"
+msgstr "අදාල නැත"
+
+#: ../src/main.c:294
+msgid "<b>Comment</b>"
+msgstr "<b>සටහන</b>"
+
+#: ../src/main.c:327
+msgid "<b>Categories</b>"
+msgstr "<b>ප්‍රවර්ග</b>"
+
+#: ../src/main.c:352
+msgid "<b>Command</b>"
+msgstr "<b>විධානය</b>"
+
+#: ../src/main.c:387
+msgid "Run program"
+msgstr "ක්‍රමලේඛය ක්‍රියාත්මක කරන්න"
+
+#: ../src/main.c:395
+msgid "More Information..."
+msgstr "වැඩි විස්තර..."
+
+#: ../src/main.c:458
+msgid "<b>Search:</b>"
+msgstr "<b>සෙවුම:</b>"
+
+#: ../src/main.c:465
+msgid "Show Categories"
+msgstr "ප්‍රවර්ග පෙන්වන්න"
+
+#: ../src/xfce4-appfinder.c:118
+msgid "All"
+msgstr "සියළු"
+
+#: ../src/xfce4-appfinder.c:119
+msgid "Core"
+msgstr "පාදම"
+
+#: ../src/xfce4-appfinder.c:120
+msgid "Development"
+msgstr "වැඩිදියුණු කිරීම්"
+
+#: ../src/xfce4-appfinder.c:121
+msgid "Office"
+msgstr "කාර්යාලීය"
+
+#: ../src/xfce4-appfinder.c:122
+msgid "Graphics"
+msgstr "චිත්‍රක"
+
+#: ../src/xfce4-appfinder.c:123
+msgid "Network"
+msgstr "ජාලකරණ"
+
+#: ../src/xfce4-appfinder.c:124
+msgid "AudioVideo"
+msgstr "ශ්‍රව්‍ය දෘශ්‍ය"
+
+#: ../src/xfce4-appfinder.c:125
+msgid "Game"
+msgstr "ක්‍රීඩා"
+
+#: ../src/xfce4-appfinder.c:126
+msgid "Education"
+msgstr "අධ්‍යාපන"
+
+#: ../src/xfce4-appfinder.c:127
+msgid "System"
+msgstr "පද්ධති"
+
+#: ../src/xfce4-appfinder.c:128
+msgid "Filemanager"
+msgstr "ගොනු කළමාණාකරු"
+
+#: ../src/xfce4-appfinder.c:129
+msgid "Utility"
+msgstr "උපයුක්ත"
+
+#: ../src/xfce4-appfinder.c:289
+msgid "Categories"
+msgstr "ප්‍රවර්ග"
+
+#: ../src/xfce4-appfinder.c:577
+msgid "No items available"
+msgstr "කිසිදු අයිතමයක් නොමැත"
+
+#: ../src/xfce4-appfinder.c:617
+msgid "Sorry, no match for searched text."
+msgstr "සමාවන්න, සෙවුම් පෙළ සඳහා ගැලපුමක් නැත."
+
+#: ../src/xfce4-appfinder.desktop.in.h:1
+msgid "Appfinder"
+msgstr "යෙදුම් සෙවුම"
+
+#: ../src/xfce4-appfinder.desktop.in.h:2
+msgid "Application Finder for Xfce 4"
+msgstr "Xfce 4 සඳහා යෙදුම් සෙවුම"
+
