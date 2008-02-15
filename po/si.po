@@ -1,0 +1,140 @@
+# translation of xfce4-appfinder.po to Sinhala
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Rashan Anushka <rashan.uoc@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-02-15 15:05+0100\n"
+"PO-Revision-Date: 2008-02-09 21:32+0530\n"
+"Last-Translator: Rashan Anushka <rashan.uoc@gmail.com>\n"
+"Language-Team: Sinhala <si@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../src/main.c:62
+#, fuzzy
+msgid "Show version information"
+msgstr "වැඩි විස්තර..."
+
+#: ../src/main.c:63
+msgid "[MENUFILE]"
+msgstr ""
+
+#: ../src/main.c:82
+msgid "Failed to open display"
+msgstr ""
+
+#: ../src/main.c:94
+msgid "Copyright (c) 2008"
+msgstr ""
+
+#: ../src/main.c:95
+msgid "The Xfce development team. All rights reserved."
+msgstr ""
+
+#: ../src/main.c:96
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr ""
+
+#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+#, fuzzy
+msgid "Application Finder"
+msgstr "Xfce 4 සඳහා යෙදුම් සෙවුම"
+
+#: ../src/appfinder.c:164
+msgid "Filter"
+msgstr ""
+
+#: ../src/appfinder.c:185
+msgid "Categories"
+msgstr "ප්‍රවර්ග"
+
+#: ../src/appfinder.c:201
+msgid "All"
+msgstr "සියළු"
+
+#: ../src/appfinder.c:216 ../src/appfinder.c:371 ../src/appfinder.c:762
+msgid "Applications"
+msgstr ""
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find applications installed on the system."
+msgstr ""
+
+#~ msgid "Cannot execute the selected application"
+#~ msgstr "තේරූ යෙදුම ක්‍රියාත්මක කළ නොහැක"
+
+#~ msgid "Xfce 4 Appfinder"
+#~ msgstr "Xfce 4 යෙදුම් සෙවුම"
+
+#~ msgid "<b>Name</b>"
+#~ msgstr "<b>නාමය</b>"
+
+#~ msgid "N/A"
+#~ msgstr "අදාල නැත"
+
+#~ msgid "<b>Comment</b>"
+#~ msgstr "<b>සටහන</b>"
+
+#~ msgid "<b>Categories</b>"
+#~ msgstr "<b>ප්‍රවර්ග</b>"
+
+#~ msgid "<b>Command</b>"
+#~ msgstr "<b>විධානය</b>"
+
+#~ msgid "Run program"
+#~ msgstr "ක්‍රමලේඛය ක්‍රියාත්මක කරන්න"
+
+#~ msgid "<b>Search:</b>"
+#~ msgstr "<b>සෙවුම:</b>"
+
+#~ msgid "Show Categories"
+#~ msgstr "ප්‍රවර්ග පෙන්වන්න"
+
+#~ msgid "Core"
+#~ msgstr "පාදම"
+
+#~ msgid "Development"
+#~ msgstr "වැඩිදියුණු කිරීම්"
+
+#~ msgid "Office"
+#~ msgstr "කාර්යාලීය"
+
+#~ msgid "Graphics"
+#~ msgstr "චිත්‍රක"
+
+#~ msgid "Network"
+#~ msgstr "ජාලකරණ"
+
+#~ msgid "AudioVideo"
+#~ msgstr "ශ්‍රව්‍ය දෘශ්‍ය"
+
+#~ msgid "Game"
+#~ msgstr "ක්‍රීඩා"
+
+#~ msgid "Education"
+#~ msgstr "අධ්‍යාපන"
+
+#~ msgid "System"
+#~ msgstr "පද්ධති"
+
+#~ msgid "Filemanager"
+#~ msgstr "ගොනු කළමාණාකරු"
+
+#~ msgid "Utility"
+#~ msgstr "උපයුක්ත"
+
+#~ msgid "No items available"
+#~ msgstr "කිසිදු අයිතමයක් නොමැත"
+
+#~ msgid "Sorry, no match for searched text."
+#~ msgstr "සමාවන්න, සෙවුම් පෙළ සඳහා ගැලපුමක් නැත."
+
+#~ msgid "Appfinder"
+#~ msgstr "යෙදුම් සෙවුම"
