@@ -1,16 +1,20 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-15 15:05+0100\n"
-"PO-Revision-Date: 2006-08-24 23:40+0400\n"
-"Last-Translator: Dimitri Gogelia <delphi.knight@gmail.com>\n"
-"Language-Team: Georgian <delphi.knight@gmail.com>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Georgian\n"
-"X-Poedit-Country: GEORGIA\n"
 
 #: ../src/main.c:62
 msgid "Show version information"
@@ -47,7 +51,7 @@ msgstr ""
 
 #: ../src/appfinder.c:185
 msgid "Categories"
-msgstr "კატეგორიები"
+msgstr ""
 
 #: ../src/appfinder.c:201
 msgid "All"
@@ -60,9 +64,3 @@ msgstr ""
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
 msgstr ""
-
-#~ msgid "<b>Name</b>"
-#~ msgstr "<b>სახელი</b>"
-
-#~ msgid "Network"
-#~ msgstr "ქსელი"

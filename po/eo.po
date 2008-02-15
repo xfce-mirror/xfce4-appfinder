@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-04 21:39+0100\n"
+"POT-Creation-Date: 2008-02-15 15:05+0100\n"
 "PO-Revision-Date: 2006-09-08 21:52+0200\n"
 "Last-Translator: Jarbas Araujo Jr. <jarbasaraujojr@yahoo.com.br>\n"
 "Language-Team: Debian-l10n-esperanto <debian-l10n-esperanto@lists.debian."
@@ -61,7 +61,7 @@ msgstr "Kategorioj"
 msgid "All"
 msgstr "Ĉiuj"
 
-#: ../src/appfinder.c:215 ../src/appfinder.c:370 ../src/appfinder.c:758
+#: ../src/appfinder.c:216 ../src/appfinder.c:371 ../src/appfinder.c:762
 msgid "Applications"
 msgstr ""
 

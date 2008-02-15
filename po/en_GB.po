@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-04 21:39+0100\n"
+"POT-Creation-Date: 2008-02-15 15:05+0100\n"
 "PO-Revision-Date: 2008-03-25 11:28+1000\n"
 "Last-Translator: Jeff Bailes <thepizzaking@gmail.com>\n"
 "Language-Team: English/GB\n"
@@ -61,7 +61,7 @@ msgstr "Categories"
 msgid "All"
 msgstr "All"
 
-#: ../src/appfinder.c:215 ../src/appfinder.c:370 ../src/appfinder.c:758
+#: ../src/appfinder.c:216 ../src/appfinder.c:371 ../src/appfinder.c:762
 msgid "Applications"
 msgstr ""
 

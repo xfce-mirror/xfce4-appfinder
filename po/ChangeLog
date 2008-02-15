@@ -1,3 +1,7 @@
+2008-02-15	Mike Massonnet <mmassonnet@xfce.org>
+
+	* *.po, *.pot: make update-po, add initial pot file
+
 2008-01-07  Jari Rahkonen <jari.rahkonen@pp1.inet.fi>
 
 	* fi.po: Updated Finnish translation

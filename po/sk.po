@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-04 21:39+0100\n"
+"POT-Creation-Date: 2008-02-15 15:05+0100\n"
 "PO-Revision-Date: 2006-02-19 11:41+0100\n"
 "Last-Translator: Roman Moravcik <roman.moravcik@gmail.com>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -58,7 +58,7 @@ msgstr "Kategórie"
 msgid "All"
 msgstr "Všetky"
 
-#: ../src/appfinder.c:215 ../src/appfinder.c:370 ../src/appfinder.c:758
+#: ../src/appfinder.c:216 ../src/appfinder.c:371 ../src/appfinder.c:762
 msgid "Applications"
 msgstr ""
 
