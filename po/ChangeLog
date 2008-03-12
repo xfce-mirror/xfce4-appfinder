@@ -1,11 +1,15 @@
+2008-03-12      Jean-François Wauthy <pollux@xfce.org>
+	* de.po: Update German translations by Enrico Tröger
+	<enrico.troeger@uvena.de>
+
 2008-03-05	Mike Massonnet <mmassonnet@xfce.org>
 
 	* am.po: Update Amharic translation
 
 2008-02-27  Og Maciel <ogmaciel@gnome.org>
 
-    * pt_BR.po: Brazilian Portuguese translation updated by
-    Fábio Nogueira <deb-user-ba@ubuntu.com>.
+	* pt_BR.po: Brazilian Portuguese translation updated by
+	Fábio Nogueira <deb-user-ba@ubuntu.com>.
 
 2008-02-15	Mike Massonnet <mmassonnet@xfce.org>
 
