@@ -3,13 +3,14 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Pau Rul·lan Ferragut <paurullan@bulma.net>, 2005, 2006.
+# Carles Muñoz Gorriz <carlesmu@internautas.org>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-15 15:05+0100\n"
-"PO-Revision-Date: 2008-04-05 14:32+0200\n"
-"Last-Translator: Pau Rul·lan Ferragut <paurullan@bulma.net>\n"
+"PO-Revision-Date: 2008-03-15 18:13+0100\n"
+"Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,9 +18,8 @@ msgstr ""
 "X-Generator: KBabel 1.11.2\n"
 
 #: ../src/main.c:62
-#, fuzzy
 msgid "Show version information"
-msgstr "Més informació"
+msgstr "Mostra la informació de la versió"
 
 #: ../src/main.c:63
 msgid "[MENUFILE]"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../src/main.c:82
 msgid "Failed to open display"
-msgstr ""
+msgstr "No s'ha pogut accedir a la pantalla."
 
 #: ../src/main.c:94
 msgid "Copyright (c) 2008"
@@ -40,16 +40,15 @@ msgstr ""
 #: ../src/main.c:96
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr ""
+msgstr "Aviseu dels errors a <%s>."
 
 #: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
-#, fuzzy
 msgid "Application Finder"
-msgstr "Cercador d'aplicacions per Xfce4"
+msgstr "Cercador d'aplicacions"
 
 #: ../src/appfinder.c:164
 msgid "Filter"
-msgstr ""
+msgstr "Filtre"
 
 #: ../src/appfinder.c:185
 msgid "Categories"
@@ -61,11 +60,11 @@ msgstr "Totes"
 
 #: ../src/appfinder.c:216 ../src/appfinder.c:371 ../src/appfinder.c:762
 msgid "Applications"
-msgstr ""
+msgstr "Aplicacions"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
-msgstr ""
+msgstr "Cerca les aplicacions instaŀlades."
 
 #~ msgid "Cannot execute the selected application"
 #~ msgstr "No s'ha pogut executar l'aplicació"
