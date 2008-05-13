@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-15 15:05+0100\n"
-"PO-Revision-Date: 2008-03-25 11:28+1000\n"
+"PO-Revision-Date: 2008-05-10 12:24+1000\n"
 "Last-Translator: Jeff Bailes <thepizzaking@gmail.com>\n"
 "Language-Team: English/GB\n"
 "MIME-Version: 1.0\n"
@@ -19,39 +19,38 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/main.c:62
-#, fuzzy
 msgid "Show version information"
-msgstr "More Information..."
+msgstr "Show version information"
 
 #: ../src/main.c:63
 msgid "[MENUFILE]"
-msgstr ""
+msgstr "[MENUFILE]"
 
 #: ../src/main.c:82
 msgid "Failed to open display"
-msgstr ""
+msgstr "Failed to open display"
 
 #: ../src/main.c:94
 msgid "Copyright (c) 2008"
-msgstr ""
+msgstr "Copyright (c) 2008"
 
 #: ../src/main.c:95
 msgid "The Xfce development team. All rights reserved."
-msgstr ""
+msgstr "The Xfce development team. All rights reserved."
 
 #: ../src/main.c:96
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr ""
+msgstr "Please report bugs to <%s>."
 
-#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
-#, fuzzy
+#: ../src/appfinder.c:123
+#: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "Application Finder for Xfce 4"
+msgstr "Application Finder"
 
 #: ../src/appfinder.c:164
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: ../src/appfinder.c:185
 msgid "Categories"
@@ -61,82 +60,62 @@ msgstr "Categories"
 msgid "All"
 msgstr "All"
 
-#: ../src/appfinder.c:216 ../src/appfinder.c:371 ../src/appfinder.c:762
+#: ../src/appfinder.c:216
+#: ../src/appfinder.c:371
+#: ../src/appfinder.c:762
 msgid "Applications"
-msgstr ""
+msgstr "Applications"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
-msgstr ""
+msgstr "Find applications installed on the system."
 
 #~ msgid "Cannot execute the selected application"
 #~ msgstr "Cannot execute the selected application"
-
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "Xfce 4 Appfinder"
-
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Name</b>"
-
 #~ msgid "N/A"
 #~ msgstr "N/A"
-
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Comment</b>"
-
 #~ msgid "<b>Categories</b>"
 #~ msgstr "<b>Categories</b>"
-
 #~ msgid "<b>Command</b>"
 #~ msgstr "<b>Command</b>"
-
 #~ msgid "Run program"
 #~ msgstr "Run program"
-
 #~ msgid "<b>Search:</b>"
 #~ msgstr "<b>Search:</b>"
-
 #~ msgid "Show Categories"
 #~ msgstr "Show Categories"
-
 #~ msgid "Core"
 #~ msgstr "Core"
-
 #~ msgid "Development"
 #~ msgstr "Development"
-
 #~ msgid "Office"
 #~ msgstr "Office"
-
 #~ msgid "Graphics"
 #~ msgstr "Graphics"
-
 #~ msgid "Network"
 #~ msgstr "Network"
-
 #~ msgid "AudioVideo"
 #~ msgstr "AudioVideo"
-
 #~ msgid "Game"
 #~ msgstr "Game"
-
 #~ msgid "Education"
 #~ msgstr "Education"
-
 #~ msgid "System"
 #~ msgstr "System"
-
 #~ msgid "Filemanager"
 #~ msgstr "Filemanager"
-
 #~ msgid "Utility"
 #~ msgstr "Utility"
-
 #~ msgid "No items available"
 #~ msgstr "No items available"
-
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "Sorry, no match for searched text."
-
 #~ msgid "Appfinder"
 #~ msgstr "Appfinder"
+
