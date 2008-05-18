@@ -21,6 +21,7 @@
 #include <gdk/gdkkeysyms.h>
 #include <gtk/gtk.h>
 #include <libxfce4menu/libxfce4menu.h>
+#include <libxfce4util/libxfce4util.h>
 
 #include "appfinder.h"
 
@@ -541,10 +542,10 @@ entry_key_pressed (GtkWidget * entry, GdkEventKey * ev, gpointer data)
   switch (ev->keyval)
     {
     case GDK_Return:
-      gtk_widget_grab_focus (application_view);
       path = gtk_tree_path_new_from_string ("0");
       gtk_tree_view_set_cursor (GTK_TREE_VIEW (application_view), path, NULL, FALSE);
       gtk_tree_path_free (path);
+      gtk_widget_grab_focus (application_view);
       handled = TRUE;
       break;
     default:

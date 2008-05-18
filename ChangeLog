@@ -1,3 +1,11 @@
+2008-05-18 20:28 jasper
+
+	* configure.ac.in: Add dependency on libxfce4util (already linked
+	through libxfce4menu anyway).
+	* src/appfinder.c: Include libxfce4util.h for translations. Fix focus
+	grab of application list after pressing Enter on the filter entry.
+	Patch from Mike Massonnet.
+
 2008-01-06 14:27 jasper
 
 	* src/appfinder.c: Don't take away focus on filter entry when
