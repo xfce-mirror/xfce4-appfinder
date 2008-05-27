@@ -1,20 +1,22 @@
+# translation of tr.po to Turkish
 # Turkish translations for xfce4-appfinder package.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-# Erçin EKER <ercin.eker@linux.org.tr>, 2004.
-# Eren Türkay <turkay.eren@gmail.com>, 2008
 #
+# Erçin EKER <ercin.eker@linux.org.tr>, 2004.
+# Eren Türkay <turkay.eren@gmail.com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-15 15:05+0100\n"
-"PO-Revision-Date: 2008-03-02 21:52+0200\n"
+"PO-Revision-Date: 2008-05-27 09:07+0300\n"
 "Last-Translator: Eren Türkay <turkay.eren@gmail.com>\n"
 "Language-Team: Turkish <turkce@pardus.org.tr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/main.c:62
 #, fuzzy
@@ -27,29 +29,28 @@ msgstr ""
 
 #: ../src/main.c:82
 msgid "Failed to open display"
-msgstr ""
+msgstr "Görüntü sunucusu açılamadı"
 
 #: ../src/main.c:94
 msgid "Copyright (c) 2008"
-msgstr ""
+msgstr "Telif Hakkı (c) 2008"
 
 #: ../src/main.c:95
 msgid "The Xfce development team. All rights reserved."
-msgstr ""
+msgstr "Xfce geliştirici takımı. Tüm hakları saklıdır."
 
 #: ../src/main.c:96
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr ""
+msgstr "Lütfen hataları <%s> adresine bildirin."
 
 #: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
-#, fuzzy
 msgid "Application Finder"
-msgstr "Xfce 4 için Uygulama Arayıcısı"
+msgstr "Uygulama Arayıcı"
 
 #: ../src/appfinder.c:164
 msgid "Filter"
-msgstr ""
+msgstr "Filtre"
 
 #: ../src/appfinder.c:185
 msgid "Categories"
@@ -61,80 +62,9 @@ msgstr "Hepsi"
 
 #: ../src/appfinder.c:216 ../src/appfinder.c:371 ../src/appfinder.c:762
 msgid "Applications"
-msgstr ""
+msgstr "Uygulamalar"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
-msgstr ""
+msgstr "Sistem üzerinde kurulmuş olan uygulamaları ara."
 
-#~ msgid "Cannot execute the selected application"
-#~ msgstr "Seçilen uygulama çalıştırılamıyor"
-
-#~ msgid "Xfce 4 Appfinder"
-#~ msgstr "Xfce 4 Uygulama Arayıcı"
-
-#~ msgid "<b>Name</b>"
-#~ msgstr "<b>İsim</b>"
-
-#~ msgid "N/A"
-#~ msgstr "Boş"
-
-#~ msgid "<b>Comment</b>"
-#~ msgstr "<b>Yorum</b>"
-
-#~ msgid "<b>Categories</b>"
-#~ msgstr "<b>Kategoriler</b>"
-
-#~ msgid "<b>Command</b>"
-#~ msgstr "<b>Komut</b>"
-
-#~ msgid "Run program"
-#~ msgstr "Programı çalıştır"
-
-#~ msgid "<b>Search:</b>"
-#~ msgstr "<b>Ara:</b>"
-
-#~ msgid "Show Categories"
-#~ msgstr "Kategorileri Göster"
-
-#~ msgid "Core"
-#~ msgstr "Temel"
-
-#~ msgid "Development"
-#~ msgstr "Geliştirme"
-
-#~ msgid "Office"
-#~ msgstr "Ofis"
-
-#~ msgid "Graphics"
-#~ msgstr "Grafik"
-
-#~ msgid "Network"
-#~ msgstr "Ağ"
-
-#~ msgid "AudioVideo"
-#~ msgstr "Ses/Görüntü"
-
-#~ msgid "Game"
-#~ msgstr "Oyun"
-
-#~ msgid "Education"
-#~ msgstr "Eğitim"
-
-#~ msgid "System"
-#~ msgstr "Sistem"
-
-#~ msgid "Filemanager"
-#~ msgstr "Dosya Yöneticisi"
-
-#~ msgid "Utility"
-#~ msgstr "Araç"
-
-#~ msgid "No items available"
-#~ msgstr "Hiçbir öğe mevcut değil"
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "Üzgünüm, herhangi bir eşleşme bulunamadı"
-
-#~ msgid "Appfinder"
-#~ msgstr "Uygulama Arayıcı"
