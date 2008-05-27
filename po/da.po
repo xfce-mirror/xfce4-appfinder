@@ -1,0 +1,70 @@
+# Danish translations for xfce package.
+# Copyright (C) 2008 THE xfce'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xfce package.
+# Ole Guldberg <olegb@omgwtf.dk>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce 4-appfinder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-02-15 15:05+0100\n"
+"PO-Revision-Date: 2008-05-18 20:55+0100\n"
+"Last-Translator: Ole Guldberg <olegb@omgwtf.dk>\n"
+"Language-Team: Danish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/main.c:62
+msgid "Show version information"
+msgstr "Vis versionsinformation"
+
+#: ../src/main.c:63
+msgid "[MENUFILE]"
+msgstr "[MENUFIL]"
+
+#: ../src/main.c:82
+msgid "Failed to open display"
+msgstr "Kunne ikke åbne display"
+
+#: ../src/main.c:94
+msgid "Copyright (c) 2008"
+msgstr "Copyright (c) 2008"
+
+#: ../src/main.c:95
+msgid "The Xfce development team. All rights reserved."
+msgstr "Xfce udviklingsholdet. Alle rettigheder reserveret."
+
+#: ../src/main.c:96
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr "Rapporter venligst fejl to <%s>."
+
+#: ../src/appfinder.c:123
+#: ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr "Programfinder"
+
+#: ../src/appfinder.c:164
+msgid "Filter"
+msgstr "Filter"
+
+#: ../src/appfinder.c:185
+msgid "Categories"
+msgstr "Kategorier"
+
+#: ../src/appfinder.c:201
+msgid "All"
+msgstr "Alle"
+
+#: ../src/appfinder.c:216
+#: ../src/appfinder.c:371
+#: ../src/appfinder.c:762
+msgid "Applications"
+msgstr "Programmer"
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find applications installed on the system."
+msgstr "Find programmer som er installeret på systemet."
+
