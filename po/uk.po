@@ -1,139 +1,67 @@
 # Ukrainian translation to xfce4-appfinder.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-# Maxim V. Dziumanenko <mvd@mylinux.ua>, 2005-2006.
 #
+# Maxim V. Dziumanenko <mvd@mylinux.ua>, 2005-2006.
+# Dmitry Nikitin <luckas_fb@mail.ru>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-15 15:05+0100\n"
-"PO-Revision-Date: 2005-10-15 01:57+0900\n"
-"Last-Translator: Maxim V. Dziumanenko <mvd@mylinux.ua>\n"
-"Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2008-07-09 12:51+0000\n"
+"PO-Revision-Date: 2008-07-01 21:56+0300\n"
+"Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
+"Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/main.c:62
-#, fuzzy
 msgid "Show version information"
-msgstr "Більше інформації..."
+msgstr "Показати інформацію про версію"
 
 #: ../src/main.c:63
 msgid "[MENUFILE]"
-msgstr ""
+msgstr "[МенюФайла]"
 
 #: ../src/main.c:82
 msgid "Failed to open display"
-msgstr ""
+msgstr "Неможливо відкрити дисплей"
 
 #: ../src/main.c:94
 msgid "Copyright (c) 2008"
-msgstr ""
+msgstr "Авторські права (c) 2008"
 
 #: ../src/main.c:95
 msgid "The Xfce development team. All rights reserved."
-msgstr ""
+msgstr "Команда розробників Xfce. Всі права застережено."
 
 #: ../src/main.c:96
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr ""
+msgstr "Звіти про помилки для <%s>."
 
-#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
-#, fuzzy
+#: ../src/appfinder.c:124 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "Пошук серед встановлених програм для Xfce 4"
+msgstr "Пошук встановлених програм"
 
-#: ../src/appfinder.c:164
+#: ../src/appfinder.c:165
 msgid "Filter"
-msgstr ""
+msgstr "Фільтр"
 
-#: ../src/appfinder.c:185
+#: ../src/appfinder.c:186
 msgid "Categories"
 msgstr "Категорії"
 
-#: ../src/appfinder.c:201
+#: ../src/appfinder.c:202
 msgid "All"
-msgstr "Усі"
+msgstr "Всі"
 
-#: ../src/appfinder.c:216 ../src/appfinder.c:371 ../src/appfinder.c:762
+#: ../src/appfinder.c:217 ../src/appfinder.c:372 ../src/appfinder.c:763
 msgid "Applications"
-msgstr ""
+msgstr "Програми"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
-msgstr ""
-
-#~ msgid "Cannot execute the selected application"
-#~ msgstr "Не вдається виконати вибрану програму"
-
-#~ msgid "Xfce 4 Appfinder"
-#~ msgstr "Пошук програм"
-
-#~ msgid "<b>Name</b>"
-#~ msgstr "<b>Назва</b>"
-
-#~ msgid "N/A"
-#~ msgstr "Н/Д"
-
-#~ msgid "<b>Comment</b>"
-#~ msgstr "<b>Коментар</b>"
-
-#~ msgid "<b>Categories</b>"
-#~ msgstr "<b>Категорії</b>"
-
-#~ msgid "<b>Command</b>"
-#~ msgstr "<b>Команда</b>"
-
-#~ msgid "Run program"
-#~ msgstr "Запустити програму"
-
-#~ msgid "<b>Search:</b>"
-#~ msgstr "<b>Шукати:</b>"
-
-#~ msgid "Show Categories"
-#~ msgstr "Показати категорії"
-
-#~ msgid "Core"
-#~ msgstr "Основа"
-
-#~ msgid "Development"
-#~ msgstr "Розробка"
-
-#~ msgid "Office"
-#~ msgstr "Офіс"
-
-#~ msgid "Graphics"
-#~ msgstr "Графіка"
-
-#~ msgid "Network"
-#~ msgstr "Мережа"
-
-#~ msgid "AudioVideo"
-#~ msgstr "Звук та відео"
-
-#~ msgid "Game"
-#~ msgstr "Ігри"
-
-#~ msgid "Education"
-#~ msgstr "Освіта"
-
-#~ msgid "System"
-#~ msgstr "Система"
-
-#~ msgid "Filemanager"
-#~ msgstr "Файлові менеджери"
-
-#~ msgid "Utility"
-#~ msgstr "Службові"
-
-#~ msgid "No items available"
-#~ msgstr "Пункт недоступний"
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "Немає відповідності тексту вказаному критерію."
-
-#~ msgid "Appfinder"
-#~ msgstr "Пошук програм"
+msgstr "Шукати програми встановлені в системі."
