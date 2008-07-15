@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-15 15:05+0100\n"
-"PO-Revision-Date: 2006-08-17 19:31+0000\n"
+"PO-Revision-Date: 2008-06-28 13:16+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -21,9 +21,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../src/main.c:62
-#, fuzzy
 msgid "Show version information"
-msgstr "Máis Información..."
+msgstr "Mostrar información de versión"
 
 #: ../src/main.c:63
 msgid "[MENUFILE]"
@@ -35,70 +34,64 @@ msgstr ""
 
 #: ../src/main.c:94
 msgid "Copyright (c) 2008"
-msgstr ""
+msgstr "Copyright (c) 2008"
 
 #: ../src/main.c:95
 msgid "The Xfce development team. All rights reserved."
-msgstr ""
+msgstr "O equipo de desenvolvemento de Xfce. Tódolos dereitos reservados."
 
 #: ../src/main.c:96
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr ""
+msgstr "Por favor, comunique os erros a <%s>."
 
-#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder.c:123
+#: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr ""
+msgstr "Buscador de aplicacións"
 
 #: ../src/appfinder.c:164
 msgid "Filter"
-msgstr ""
+msgstr "Filtro"
 
 #: ../src/appfinder.c:185
 msgid "Categories"
-msgstr ""
+msgstr "Categorías"
 
 #: ../src/appfinder.c:201
 msgid "All"
-msgstr ""
+msgstr "Todas"
 
-#: ../src/appfinder.c:216 ../src/appfinder.c:371 ../src/appfinder.c:762
+#: ../src/appfinder.c:216
+#: ../src/appfinder.c:371
+#: ../src/appfinder.c:762
 msgid "Applications"
-msgstr ""
+msgstr "Aplicacións"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
-msgstr ""
+msgstr "Busque aplicacións instaladas no sistema."
 
 #~ msgid "Cannot execute the selected application"
 #~ msgstr "Non se puido executar a aplicación seleccionada"
-
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Nome</b>"
-
 #~ msgid "N/A"
 #~ msgstr "N/A"
-
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Comentario</b>"
-
 #~ msgid "Development"
 #~ msgstr "Desenvolvemento"
-
 #~ msgid "Office"
 #~ msgstr "Oficina"
-
 #~ msgid "Graphics"
 #~ msgstr "Gráficos"
-
 #~ msgid "Network"
 #~ msgstr "Rede"
-
 #~ msgid "AudioVideo"
 #~ msgstr "Audio e Vídeo"
-
 #~ msgid "Game"
 #~ msgstr "Xogos"
-
 #~ msgid "Education"
 #~ msgstr "Educación"
+
