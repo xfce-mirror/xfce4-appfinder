@@ -1,12 +1,12 @@
 # Arabeyes Translation & Documentation Team http://arabeyes.org
-# Hakeem Dimashq 2008.
+# Hakeem Dimashq 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-15 15:05+0100\n"
-"PO-Revision-Date: 2008-01-30 15:47+0100\n"
+"PO-Revision-Date: 2007-01-30 15:47+0100\n"
 "Last-Translator: Hakeem Dimashq\n"
 "Language-Team: Arabeyes Translation & Documentation <admin@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
