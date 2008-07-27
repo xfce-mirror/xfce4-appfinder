@@ -82,7 +82,7 @@ main (gint argc, gchar ** argv)
       g_print ("%s: %s\n", PACKAGE_NAME, error ? error->message : _("Failed to open display"));
 
       if (error != NULL)
-	g_error_free (error);
+        g_error_free (error);
 
       return EXIT_FAILURE;
     }
@@ -158,7 +158,7 @@ create_menu (gpointer data)
     }
 
   menu_is_ready = 1;
-  return NULL;			/* return value not used */
+  return NULL;                  /* return value not used */
 }
 
 

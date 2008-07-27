@@ -21,7 +21,7 @@
 #define __APPFINDER_H__
 
 void appfinder_create_shell (void);
-void appfinder_set_menu (XfceMenu *root_menu);
+void appfinder_set_menu (XfceMenu * root_menu);
 void appfinder_add_applications (void);
 
 #endif /* __APPFINDER_H__ */

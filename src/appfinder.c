@@ -56,7 +56,7 @@ typedef struct
 static void category_toggled (GtkToggleButton * tb, gpointer data);
 static gboolean item_visible_func (GtkTreeModel * model, GtkTreeIter * iter, gpointer user_data);
 static void view_data_get (GtkWidget * widget, GdkDragContext * drag_context,
-			   GtkSelectionData * data, guint info, guint time, gpointer user_data);
+                           GtkSelectionData * data, guint info, guint time, gpointer user_data);
 static gboolean entry_focused (GtkWidget * entry, GdkEventFocus * ev, gpointer data);
 static gboolean entry_key_pressed (GtkWidget * entry, GdkEventKey * ev, gpointer data);
 static void execute_item (GtkWidget * button, gpointer data);
@@ -130,12 +130,12 @@ appfinder_create_shell (void)
   theme = gtk_icon_theme_get_default ();
   icon =
     gtk_icon_theme_load_icon (theme, "xfce4-appfinder", ICON_SIZE, GTK_ICON_LOOKUP_USE_BUILTIN,
-			      NULL);
+                              NULL);
   if (!icon)
     {
       icon =
-	gtk_icon_theme_load_icon (theme, "applications-other", ICON_SIZE,
-				  GTK_ICON_LOOKUP_USE_BUILTIN, NULL);
+        gtk_icon_theme_load_icon (theme, "applications-other", ICON_SIZE,
+                                  GTK_ICON_LOOKUP_USE_BUILTIN, NULL);
     }
   if (icon)
     {
@@ -180,7 +180,7 @@ appfinder_create_shell (void)
 
   g_signal_connect (G_OBJECT (filter_entry), "focus-in-event", G_CALLBACK (entry_focused), NULL);
   g_signal_connect (G_OBJECT (filter_entry), "key-press-event", G_CALLBACK (entry_key_pressed),
-		    NULL);
+                    NULL);
 
   label = gtk_label_new (NULL);
   g_snprintf (text, 256, "<span weight=\"bold\" size=\"large\">%s</span>", _("Categories"));
@@ -225,7 +225,7 @@ appfinder_create_shell (void)
   scroll = gtk_scrolled_window_new (NULL, NULL);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scroll), GTK_SHADOW_ETCHED_IN);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll), GTK_POLICY_NEVER,
-				  GTK_POLICY_ALWAYS);
+                                  GTK_POLICY_ALWAYS);
   gtk_widget_show (scroll);
   gtk_box_pack_start (GTK_BOX (right), scroll, TRUE, TRUE, 0);
 
@@ -237,13 +237,13 @@ appfinder_create_shell (void)
   gtk_container_add (GTK_CONTAINER (scroll), application_view);
 
   g_signal_connect (G_OBJECT (application_view), "cursor-changed", G_CALLBACK (cursor_changed),
-		    NULL);
+                    NULL);
   g_signal_connect (G_OBJECT (application_view), "key-press-event", G_CALLBACK (key_pressed), NULL);
   g_signal_connect (G_OBJECT (application_view), "button-press-event", G_CALLBACK (view_dblclick),
-		    NULL);
+                    NULL);
 
   gtk_drag_source_set (application_view, GDK_BUTTON1_MASK, dnd_target_list,
-		       G_N_ELEMENTS (dnd_target_list), GDK_ACTION_COPY);
+                       G_N_ELEMENTS (dnd_target_list), GDK_ACTION_COPY);
   g_signal_connect (G_OBJECT (application_view), "drag-data-get", G_CALLBACK (view_data_get), NULL);
 
   /* buttons */
@@ -335,11 +335,11 @@ appfinder_add_applications (void)
       gtk_window_set_title (GTK_WINDOW (application_window), application_title);
     }
 
-  application_store = gtk_list_store_new (NUM_COLUMS,	/* columns      */
-					  G_TYPE_POINTER,	/* Item         */
-					  GDK_TYPE_PIXBUF,	/* Pixbuf       */
-					  G_TYPE_STRING,	/* Text         */
-					  G_TYPE_STRING);	/* Comment      */
+  application_store = gtk_list_store_new (NUM_COLUMS,   /* columns      */
+                                          G_TYPE_POINTER,       /* Item         */
+                                          GDK_TYPE_PIXBUF,      /* Pixbuf       */
+                                          G_TYPE_STRING,        /* Text         */
+                                          G_TYPE_STRING);       /* Comment      */
 
   r = gtk_cell_renderer_pixbuf_new ();
   col = gtk_tree_view_column_new_with_attributes ("Icon", r, "pixbuf", PIXBUF_COL, NULL);
@@ -351,9 +351,9 @@ appfinder_add_applications (void)
 
   filter = gtk_tree_model_filter_new (GTK_TREE_MODEL (application_store), NULL);
   gtk_tree_model_filter_set_visible_func (GTK_TREE_MODEL_FILTER (filter),
-					  item_visible_func, filter_entry, NULL);
+                                          item_visible_func, filter_entry, NULL);
   g_signal_connect_swapped (G_OBJECT (filter_entry), "changed",
-			    G_CALLBACK (gtk_tree_model_filter_refilter), filter);
+                            G_CALLBACK (gtk_tree_model_filter_refilter), filter);
 
   gtk_tree_view_set_model (GTK_TREE_VIEW (application_view), filter);
   g_object_unref (G_OBJECT (filter));
@@ -368,10 +368,10 @@ appfinder_add_applications (void)
       g_hash_table_foreach (categories, (GHFunc) appfinder_add_items_for_category, NULL);
       category_list = g_list_sort (g_hash_table_get_keys (categories), (GCompareFunc) strcmp);
       for (l = category_list; l != NULL; l = l->next)
-	{
-	  if (G_UNLIKELY (strcmp ((const char *) l->data, _("Applications")) != 0))
-	    appfinder_add_category_widget ((const char *) l->data);
-	}
+        {
+          if (G_UNLIKELY (strcmp ((const char *) l->data, _("Applications")) != 0))
+            appfinder_add_category_widget ((const char *) l->data);
+        }
       gtk_widget_set_size_request (application_view, -1, VIEW_HEIGHT);
     }
 }
@@ -406,26 +406,26 @@ category_toggled (GtkToggleButton * tb, gpointer data)
       gtk_list_store_clear (application_store);
       current = NULL;
       if (GTK_WIDGET (tb) == radiobutton_all)
-	{
-	  /* show all */
-	  for (l = category_list; l != NULL; l = l->next)
-	    {
-	      appdata = g_hash_table_lookup (categories, l->data);
-	      if (appdata)
-		{
-		  appfinder_add_items_for_category (l->data, appdata, NULL);
-		}
-	    }
-	}
+        {
+          /* show all */
+          for (l = category_list; l != NULL; l = l->next)
+            {
+              appdata = g_hash_table_lookup (categories, l->data);
+              if (appdata)
+                {
+                  appfinder_add_items_for_category (l->data, appdata, NULL);
+                }
+            }
+        }
       else
-	{
-	  /* 'data' is category */
-	  appdata = g_hash_table_lookup (categories, data);
-	  if (appdata)
-	    {
-	      appfinder_add_items_for_category (data, appdata, NULL);
-	    }
-	}
+        {
+          /* 'data' is category */
+          appdata = g_hash_table_lookup (categories, data);
+          if (appdata)
+            {
+              appfinder_add_items_for_category (data, appdata, NULL);
+            }
+        }
       gtk_widget_set_sensitive (exec_button, FALSE);
     }
 }
@@ -497,7 +497,7 @@ item_visible_func (GtkTreeModel * model, GtkTreeIter * iter, gpointer user_data)
 
 static void
 view_data_get (GtkWidget * widget, GdkDragContext * drag_context, GtkSelectionData * data,
-	       guint info, guint time, gpointer user_data)
+               guint info, guint time, gpointer user_data)
 {
   GtkTreeSelection *sel;
   GtkTreeModel *model;
@@ -510,16 +510,16 @@ view_data_get (GtkWidget * widget, GdkDragContext * drag_context, GtkSelectionDa
   if (sel != NULL)
     {
       if (!gtk_tree_selection_get_selected (sel, &model, &iter))
-	return;
+        return;
 
       gtk_tree_model_get (model, &iter, ITEM_COL, &item, -1);
 
       uri = g_filename_to_uri (xfce_menu_item_get_filename (item), NULL, NULL);
       if (uri)
-	{
-	  gtk_selection_data_set (data, data->target, 8, (guchar *) uri, strlen (uri));
-	  g_free (uri);
-	}
+        {
+          gtk_selection_data_set (data, data->target, 8, (guchar *) uri, strlen (uri));
+          g_free (uri);
+        }
     }
 }
 
@@ -566,16 +566,16 @@ execute_item (GtkWidget * button, gpointer data)
     {
       exec = g_strconcat ("exo-open ", xfce_menu_item_get_filename (current), NULL);
       if (!gdk_spawn_command_line_on_screen (gtk_widget_get_screen (button), exec, &error))
-	{
-	  if (error)
-	    {
-	      g_critical (error->message);
-	      g_error_free (error);
-	    }
-	}
+        {
+          if (error)
+            {
+              g_critical (error->message);
+              g_error_free (error);
+            }
+        }
       g_free (exec);
       /* TODO: should we make this optional? */
-      gtk_main_quit();
+      gtk_main_quit ();
     }
 }
 
@@ -620,10 +620,10 @@ key_pressed (GtkWidget * widget, GdkEventKey * ev, gpointer data)
     {
     case GDK_Return:
       if (current)
-	{
-	  execute_item (exec_button, NULL);
-	  handled = TRUE;
-	}
+        {
+          execute_item (exec_button, NULL);
+          handled = TRUE;
+        }
       break;
     case GDK_Escape:
       gtk_main_quit ();
@@ -662,7 +662,7 @@ appfinder_add_application_data (AppData * data)
 
   gtk_list_store_append (application_store, &iter);
   gtk_list_store_set (application_store, &iter, ITEM_COL, data->item, PIXBUF_COL, data->pixbuf,
-		      TEXT_COL, data->text, COMMENT_COL, data->comment, -1);
+                      TEXT_COL, data->text, COMMENT_COL, data->comment, -1);
 }
 
 
@@ -749,52 +749,52 @@ menu_add_applications (XfceMenu * menu, GSList * list)
   if (size)
     {
       if (menu != NULL)
-	{
-	  directory = xfce_menu_get_directory (menu);
-	  if (directory != NULL)
-	    {
-	      value = xfce_menu_directory_get_name (directory);
-	    }
-	  else
-	    {
-	      value = xfce_menu_get_name (menu);
-	    }
-	}
+        {
+          directory = xfce_menu_get_directory (menu);
+          if (directory != NULL)
+            {
+              value = xfce_menu_directory_get_name (directory);
+            }
+          else
+            {
+              value = xfce_menu_get_name (menu);
+            }
+        }
       category = value ? g_markup_escape_text (value, -1) : g_strdup (_("Applications"));
       item_array = g_array_sized_new (FALSE, FALSE, sizeof (AppData), size);
       for (i = 0, iter = list; i < size; i++, iter = iter->next)
-	{
-	  if (G_UNLIKELY (!XFCE_IS_MENU_ITEM (iter->data)))	/* separator */
-	    {
-	      continue;
-	    }
+        {
+          if (G_UNLIKELY (!XFCE_IS_MENU_ITEM (iter->data)))     /* separator */
+            {
+              continue;
+            }
 
-	  item = XFCE_MENU_ITEM (iter->data);
-	  data.item = item;
+          item = XFCE_MENU_ITEM (iter->data);
+          data.item = item;
 
-	  /* IMPORTANT: create pixbuf from the GUI thread later, not here. */
-	  data.pixbuf = NULL;
+          /* IMPORTANT: create pixbuf from the GUI thread later, not here. */
+          data.pixbuf = NULL;
 
-	  value = xfce_menu_item_get_name (item);
-	  name = value ? g_markup_escape_text (value, -1) : g_strdup ("?");
-	  data.text = g_strdup_printf ("<b>%s</b>\n<i><small>%s</small></i>", name, category);
-	  g_free (name);
+          value = xfce_menu_item_get_name (item);
+          name = value ? g_markup_escape_text (value, -1) : g_strdup ("?");
+          data.text = g_strdup_printf ("<b>%s</b>\n<i><small>%s</small></i>", name, category);
+          g_free (name);
 
-	  value = xfce_menu_item_get_comment (item);
-	  /* data.comment = value ? g_markup_escape_text (value, -1) : NULL; */
-	  data.comment = value ? g_strdup (value) : NULL;
+          value = xfce_menu_item_get_comment (item);
+          /* data.comment = value ? g_markup_escape_text (value, -1) : NULL; */
+          data.comment = value ? g_strdup (value) : NULL;
 
-	  g_array_append_val (item_array, data);
-	}
+          g_array_append_val (item_array, data);
+        }
       if (item_array->len)
-	{
-	  g_hash_table_insert (categories, category, item_array);
-	}
+        {
+          g_hash_table_insert (categories, category, item_array);
+        }
       else
-	{
-	  g_array_free (item_array, TRUE);
-	  g_free (category);
-	}
+        {
+          g_array_free (item_array, TRUE);
+          g_free (category);
+        }
     }
 }
 
@@ -828,52 +828,52 @@ menu_create_item_icon (XfceMenuItem * item)
     {
       /* Try to load the icon name directly using the icon theme */
       icon =
-	gtk_icon_theme_load_icon (icon_theme, icon_name, ICON_SIZE, GTK_ICON_LOOKUP_USE_BUILTIN,
-				  NULL);
+        gtk_icon_theme_load_icon (icon_theme, icon_name, ICON_SIZE, GTK_ICON_LOOKUP_USE_BUILTIN,
+                                  NULL);
 
       /* If that didn't work, try to remove the filename extension if there is one */
       if (icon == NULL)
-	{
-	  /* Get basename (just to be sure) */
-	  basename = g_path_get_basename (icon_name);
+        {
+          /* Get basename (just to be sure) */
+          basename = g_path_get_basename (icon_name);
 
-	  /* Determine position of the extension */
-	  extension = g_utf8_strrchr (basename, -1, '.');
+          /* Determine position of the extension */
+          extension = g_utf8_strrchr (basename, -1, '.');
 
-	  /* Make sure we found an extension */
-	  if (extension != NULL)
-	    {
-	      /* Remove extension */
-	      g_utf8_strncpy (new_icon_name, basename,
-			      g_utf8_strlen (basename, -1) - g_utf8_strlen (extension, -1));
+          /* Make sure we found an extension */
+          if (extension != NULL)
+            {
+              /* Remove extension */
+              g_utf8_strncpy (new_icon_name, basename,
+                              g_utf8_strlen (basename, -1) - g_utf8_strlen (extension, -1));
 
-	      /* Try to load the pixbuf using the new icon name */
-	      icon =
-		gtk_icon_theme_load_icon (icon_theme, new_icon_name, ICON_SIZE,
-					  GTK_ICON_LOOKUP_USE_BUILTIN, NULL);
-	    }
+              /* Try to load the pixbuf using the new icon name */
+              icon =
+                gtk_icon_theme_load_icon (icon_theme, new_icon_name, ICON_SIZE,
+                                          GTK_ICON_LOOKUP_USE_BUILTIN, NULL);
+            }
 
-	  /* Free basename */
-	  g_free (basename);
+          /* Free basename */
+          g_free (basename);
 
-	  /* As a last fallback, we try to load the icon by lowercase item name */
-	  if (icon == NULL && item_name != NULL)
-	    {
-	      new_item_name = g_utf8_strdown (item_name, -1);
-	      icon =
-		gtk_icon_theme_load_icon (icon_theme, new_item_name, ICON_SIZE,
-					  GTK_ICON_LOOKUP_USE_BUILTIN, NULL);
-	      g_free (new_item_name);
-	    }
-	}
+          /* As a last fallback, we try to load the icon by lowercase item name */
+          if (icon == NULL && item_name != NULL)
+            {
+              new_item_name = g_utf8_strdown (item_name, -1);
+              icon =
+                gtk_icon_theme_load_icon (icon_theme, new_item_name, ICON_SIZE,
+                                          GTK_ICON_LOOKUP_USE_BUILTIN, NULL);
+              g_free (new_item_name);
+            }
+        }
     }
 
   /* fallback */
   if (icon == NULL)
     {
       icon =
-	gtk_icon_theme_load_icon (icon_theme, "applications-other", ICON_SIZE,
-				  GTK_ICON_LOOKUP_USE_BUILTIN, NULL);
+        gtk_icon_theme_load_icon (icon_theme, "applications-other", ICON_SIZE,
+                                  GTK_ICON_LOOKUP_USE_BUILTIN, NULL);
     }
 
   /* Scale icon (if needed) */

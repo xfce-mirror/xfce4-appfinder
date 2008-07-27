@@ -9,11 +9,12 @@ xfce4-appfinder, e.g. 'xfce4-appfinder /etc/xdg/menus/gnomecc.menu'.
 = Development =
 
 Help and patches are always welcome. For the coding style I have chosen the
-GNU coding style with a line width of 100 instead of 80.
+GNU coding style with a line width of 100 instead of 80, and spaces for
+indentation.
 
 Your code should not changed when run through the following indent command:
 
-  indent -npro -gnu -l100
+  indent -npro -gnu -l100 -nut
 
 --
-Jasper Huijsmans, January 2008
+Jasper Huijsmans, July 2008
