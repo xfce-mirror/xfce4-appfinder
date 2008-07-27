@@ -51,7 +51,7 @@ static XfceMenu *root_menu = NULL;
 static volatile int menu_is_ready = 0;
 
 static gpointer create_menu (gpointer data);
-static gboolean wait_for_menu (gpointer data);
+static gboolean wait_and_add_menu (gpointer data);
 
 /* command line options */
 static gboolean opt_version = FALSE;
@@ -110,7 +110,7 @@ main (gint argc, gchar ** argv)
   appfinder_create_shell ();
 
   /* wait for menu to be parsed */
-  g_idle_add ((GSourceFunc) wait_for_menu, NULL);
+  g_idle_add ((GSourceFunc) wait_and_add_menu, NULL);
 
   gtk_main ();
 
@@ -164,7 +164,7 @@ create_menu (gpointer data)
 
 
 static gboolean
-wait_for_menu (gpointer data)
+wait_and_add_menu (gpointer data)
 {
   if (!menu_is_ready)
     return TRUE;
