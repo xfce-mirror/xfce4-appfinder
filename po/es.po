@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-15 15:05+0100\n"
+"POT-Creation-Date: 2008-07-27 09:20+0200\n"
 "PO-Revision-Date: 2005-11-07 21:55+0900\n"
 "Last-Translator: Rudy Godoy <rudy@stone-head.org>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -42,24 +42,28 @@ msgstr ""
 msgid "Please report bugs to <%s>."
 msgstr ""
 
-#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
 #, fuzzy
 msgid "Application Finder"
 msgstr "Buscador de aplicaciones para Xfce 4"
 
-#: ../src/appfinder.c:164
+#: ../src/appfinder.c:185
 msgid "Filter"
 msgstr ""
 
-#: ../src/appfinder.c:185
+#: ../src/appfinder.c:206
 msgid "Categories"
 msgstr "Categorías"
 
-#: ../src/appfinder.c:201
+#: ../src/appfinder.c:222
 msgid "All"
 msgstr "Todos"
 
-#: ../src/appfinder.c:216 ../src/appfinder.c:371 ../src/appfinder.c:762
+#: ../src/appfinder.c:275
+msgid "C_lose after execute"
+msgstr ""
+
+#: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
 msgstr ""
 

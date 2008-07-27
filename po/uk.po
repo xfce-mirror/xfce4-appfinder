@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-09 12:51+0000\n"
+"POT-Creation-Date: 2008-07-27 09:20+0200\n"
 "PO-Revision-Date: 2008-07-01 21:56+0300\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
@@ -42,23 +42,27 @@ msgstr "Команда розробників Xfce. Всі права засте
 msgid "Please report bugs to <%s>."
 msgstr "Звіти про помилки для <%s>."
 
-#: ../src/appfinder.c:124 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Пошук встановлених програм"
 
-#: ../src/appfinder.c:165
+#: ../src/appfinder.c:185
 msgid "Filter"
 msgstr "Фільтр"
 
-#: ../src/appfinder.c:186
+#: ../src/appfinder.c:206
 msgid "Categories"
 msgstr "Категорії"
 
-#: ../src/appfinder.c:202
+#: ../src/appfinder.c:222
 msgid "All"
 msgstr "Всі"
 
-#: ../src/appfinder.c:217 ../src/appfinder.c:372 ../src/appfinder.c:763
+#: ../src/appfinder.c:275
+msgid "C_lose after execute"
+msgstr ""
+
+#: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
 msgstr "Програми"
 

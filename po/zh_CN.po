@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-15 15:05+0100\n"
+"POT-Creation-Date: 2008-07-27 09:20+0200\n"
 "PO-Revision-Date: 2006-04-20 21:40+0800\n"
 "Last-Translator: Jick Nan <jick.nan@gmail.com>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
@@ -45,24 +45,28 @@ msgstr ""
 msgid "Please report bugs to <%s>."
 msgstr ""
 
-#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
 #, fuzzy
 msgid "Application Finder"
 msgstr "Xfce 4的程序查找工具"
 
-#: ../src/appfinder.c:164
+#: ../src/appfinder.c:185
 msgid "Filter"
 msgstr ""
 
-#: ../src/appfinder.c:185
+#: ../src/appfinder.c:206
 msgid "Categories"
 msgstr "类别"
 
-#: ../src/appfinder.c:201
+#: ../src/appfinder.c:222
 msgid "All"
 msgstr "全部"
 
-#: ../src/appfinder.c:216 ../src/appfinder.c:371 ../src/appfinder.c:762
+#: ../src/appfinder.c:275
+msgid "C_lose after execute"
+msgstr ""
+
+#: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
 msgstr ""
 

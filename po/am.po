@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-20 18:11+0100\n"
+"POT-Creation-Date: 2008-07-27 09:20+0200\n"
 "PO-Revision-Date: 2007-07-01 11:31+0100\n"
 "Last-Translator: tegegne tefera <tefera@mekuria.com>\n"
 "Language-Team: Amharic <l10n-am@googlegroups.com>\n"
@@ -15,118 +15,129 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/main.c:161
-msgid "Cannot execute the selected application"
-msgstr "የተመረጠውን ፕሮግራም ማስኬድ አልተቻለም"
-
-#: ../src/main.c:203
-#: ../src/xfce4-appfinder.desktop.in.h:3
-msgid "Xfce 4 Appfinder"
-msgstr "የሸፍሲ 4 ፕሮግራማግኚ"
-
-#: ../src/main.c:270
-msgid "<b>Name</b>"
-msgstr "<b>ስም</b>"
-
-#: ../src/main.c:285
-#: ../src/main.c:310
-#: ../src/main.c:343
-msgid "N/A"
-msgstr "የለም"
-
-#: ../src/main.c:294
-msgid "<b>Comment</b>"
-msgstr "<b>አስተያየት</b>"
-
-#: ../src/main.c:327
-msgid "<b>Categories</b>"
-msgstr "<b>መደቦች</b>"
-
-#: ../src/main.c:352
-msgid "<b>Command</b>"
-msgstr "<b>ትዕዛዝ</b>"
-
-#: ../src/main.c:387
-msgid "Run program"
-msgstr "ፕሮግራሙን አስኪድ"
-
-#: ../src/main.c:395
-msgid "More Information..."
+#: ../src/main.c:62
+#, fuzzy
+msgid "Show version information"
 msgstr "ተጨማሪ መረጃ..."
 
-#: ../src/main.c:458
-msgid "<b>Search:</b>"
-msgstr "<b>ፈልግ:</b>"
+#: ../src/main.c:63
+msgid "[MENUFILE]"
+msgstr ""
 
-#: ../src/main.c:465
-msgid "Show Categories"
-msgstr "መደቦችን አሳይ"
+#: ../src/main.c:82
+msgid "Failed to open display"
+msgstr ""
 
-#: ../src/xfce4-appfinder.c:118
-msgid "All"
-msgstr "ሁሉም"
+#: ../src/main.c:94
+msgid "Copyright (c) 2008"
+msgstr ""
 
-#: ../src/xfce4-appfinder.c:119
-msgid "Core"
-msgstr "መሰረታዊ"
+#: ../src/main.c:95
+msgid "The Xfce development team. All rights reserved."
+msgstr ""
 
-#: ../src/xfce4-appfinder.c:120
-msgid "Development"
-msgstr "ፕሮግራም ድርሰት"
+#: ../src/main.c:96
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr ""
 
-#: ../src/xfce4-appfinder.c:121
-msgid "Office"
-msgstr "ቢሮ"
+#: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
+#, fuzzy
+msgid "Application Finder"
+msgstr "ለሸፍሲ4 ፕሮግራም ፈላጊ"
 
-#: ../src/xfce4-appfinder.c:122
-msgid "Graphics"
-msgstr "ንድፍ"
+#: ../src/appfinder.c:185
+msgid "Filter"
+msgstr ""
 
-#: ../src/xfce4-appfinder.c:123
-msgid "Network"
-msgstr "አውታር"
-
-#: ../src/xfce4-appfinder.c:124
-msgid "AudioVideo"
-msgstr "ድምጽናምስል"
-
-#: ../src/xfce4-appfinder.c:125
-msgid "Game"
-msgstr "ጨዋታ"
-
-#: ../src/xfce4-appfinder.c:126
-msgid "Education"
-msgstr "ትምህርት"
-
-#: ../src/xfce4-appfinder.c:127
-msgid "System"
-msgstr "ስርዓት"
-
-#: ../src/xfce4-appfinder.c:128
-msgid "Filemanager"
-msgstr "ፋይል አስተናባሪ"
-
-#: ../src/xfce4-appfinder.c:129
-msgid "Utility"
-msgstr "መጠቀሚያዎች"
-
-#: ../src/xfce4-appfinder.c:289
+#: ../src/appfinder.c:206
 msgid "Categories"
 msgstr "ክፍሎች"
 
-#: ../src/xfce4-appfinder.c:577
-msgid "No items available"
-msgstr "ምንም እቃ አልተገኘም"
+#: ../src/appfinder.c:222
+msgid "All"
+msgstr "ሁሉም"
 
-#: ../src/xfce4-appfinder.c:617
-msgid "Sorry, no match for searched text."
-msgstr "ይቅርታ፣ ለተፈለገው ጽሁፍ ተመሳሳይ አልተገኘለትም"
+#: ../src/appfinder.c:275
+msgid "C_lose after execute"
+msgstr ""
 
-#: ../src/xfce4-appfinder.desktop.in.h:1
-msgid "Appfinder"
-msgstr "ፕሮግራም ፈላጊ"
+#: ../src/appfinder.c:390 ../src/appfinder.c:873
+msgid "Applications"
+msgstr ""
 
-#: ../src/xfce4-appfinder.desktop.in.h:2
-msgid "Application Finder for Xfce 4"
-msgstr "ለሸፍሲ4 ፕሮግራም ፈላጊ"
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find applications installed on the system."
+msgstr ""
 
+#~ msgid "Cannot execute the selected application"
+#~ msgstr "የተመረጠውን ፕሮግራም ማስኬድ አልተቻለም"
+
+#~ msgid "Xfce 4 Appfinder"
+#~ msgstr "የሸፍሲ 4 ፕሮግራማግኚ"
+
+#~ msgid "<b>Name</b>"
+#~ msgstr "<b>ስም</b>"
+
+#~ msgid "N/A"
+#~ msgstr "የለም"
+
+#~ msgid "<b>Comment</b>"
+#~ msgstr "<b>አስተያየት</b>"
+
+#~ msgid "<b>Categories</b>"
+#~ msgstr "<b>መደቦች</b>"
+
+#~ msgid "<b>Command</b>"
+#~ msgstr "<b>ትዕዛዝ</b>"
+
+#~ msgid "Run program"
+#~ msgstr "ፕሮግራሙን አስኪድ"
+
+#~ msgid "<b>Search:</b>"
+#~ msgstr "<b>ፈልግ:</b>"
+
+#~ msgid "Show Categories"
+#~ msgstr "መደቦችን አሳይ"
+
+#~ msgid "Core"
+#~ msgstr "መሰረታዊ"
+
+#~ msgid "Development"
+#~ msgstr "ፕሮግራም ድርሰት"
+
+#~ msgid "Office"
+#~ msgstr "ቢሮ"
+
+#~ msgid "Graphics"
+#~ msgstr "ንድፍ"
+
+#~ msgid "Network"
+#~ msgstr "አውታር"
+
+#~ msgid "AudioVideo"
+#~ msgstr "ድምጽናምስል"
+
+#~ msgid "Game"
+#~ msgstr "ጨዋታ"
+
+#~ msgid "Education"
+#~ msgstr "ትምህርት"
+
+#~ msgid "System"
+#~ msgstr "ስርዓት"
+
+#~ msgid "Filemanager"
+#~ msgstr "ፋይል አስተናባሪ"
+
+#~ msgid "Utility"
+#~ msgstr "መጠቀሚያዎች"
+
+#~ msgid "No items available"
+#~ msgstr "ምንም እቃ አልተገኘም"
+
+#~ msgid "Sorry, no match for searched text."
+#~ msgstr "ይቅርታ፣ ለተፈለገው ጽሁፍ ተመሳሳይ አልተገኘለትም"
+
+#~ msgid "Appfinder"
+#~ msgstr "ፕሮግራም ፈላጊ"

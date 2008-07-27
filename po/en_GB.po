@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-15 15:05+0100\n"
+"POT-Creation-Date: 2008-07-27 09:20+0200\n"
 "PO-Revision-Date: 2008-05-10 12:24+1000\n"
 "Last-Translator: Jeff Bailes <thepizzaking@gmail.com>\n"
 "Language-Team: English/GB\n"
@@ -43,26 +43,27 @@ msgstr "The Xfce development team. All rights reserved."
 msgid "Please report bugs to <%s>."
 msgstr "Please report bugs to <%s>."
 
-#: ../src/appfinder.c:123
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Application Finder"
 
-#: ../src/appfinder.c:164
+#: ../src/appfinder.c:185
 msgid "Filter"
 msgstr "Filter"
 
-#: ../src/appfinder.c:185
+#: ../src/appfinder.c:206
 msgid "Categories"
 msgstr "Categories"
 
-#: ../src/appfinder.c:201
+#: ../src/appfinder.c:222
 msgid "All"
 msgstr "All"
 
-#: ../src/appfinder.c:216
-#: ../src/appfinder.c:371
-#: ../src/appfinder.c:762
+#: ../src/appfinder.c:275
+msgid "C_lose after execute"
+msgstr ""
+
+#: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
 msgstr "Applications"
 
@@ -72,50 +73,72 @@ msgstr "Find applications installed on the system."
 
 #~ msgid "Cannot execute the selected application"
 #~ msgstr "Cannot execute the selected application"
+
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "Xfce 4 Appfinder"
+
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Name</b>"
+
 #~ msgid "N/A"
 #~ msgstr "N/A"
+
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Comment</b>"
+
 #~ msgid "<b>Categories</b>"
 #~ msgstr "<b>Categories</b>"
+
 #~ msgid "<b>Command</b>"
 #~ msgstr "<b>Command</b>"
+
 #~ msgid "Run program"
 #~ msgstr "Run program"
+
 #~ msgid "<b>Search:</b>"
 #~ msgstr "<b>Search:</b>"
+
 #~ msgid "Show Categories"
 #~ msgstr "Show Categories"
+
 #~ msgid "Core"
 #~ msgstr "Core"
+
 #~ msgid "Development"
 #~ msgstr "Development"
+
 #~ msgid "Office"
 #~ msgstr "Office"
+
 #~ msgid "Graphics"
 #~ msgstr "Graphics"
+
 #~ msgid "Network"
 #~ msgstr "Network"
+
 #~ msgid "AudioVideo"
 #~ msgstr "AudioVideo"
+
 #~ msgid "Game"
 #~ msgstr "Game"
+
 #~ msgid "Education"
 #~ msgstr "Education"
+
 #~ msgid "System"
 #~ msgstr "System"
+
 #~ msgid "Filemanager"
 #~ msgstr "Filemanager"
+
 #~ msgid "Utility"
 #~ msgstr "Utility"
+
 #~ msgid "No items available"
 #~ msgstr "No items available"
+
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "Sorry, no match for searched text."
+
 #~ msgid "Appfinder"
 #~ msgstr "Appfinder"
-

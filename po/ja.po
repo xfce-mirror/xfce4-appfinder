@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-15 15:05+0100\n"
+"POT-Creation-Date: 2008-07-27 09:20+0200\n"
 "PO-Revision-Date: 2008-05-18 23:51+0900\n"
 "Last-Translator: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
@@ -43,26 +43,27 @@ msgstr "Xfce 開発チーム. All rights reserved."
 msgid "Please report bugs to <%s>."
 msgstr "バグを <%s> に報告してください。"
 
-#: ../src/appfinder.c:123
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "アプリケーション・ファインダー"
 
-#: ../src/appfinder.c:164
+#: ../src/appfinder.c:185
 msgid "Filter"
 msgstr "フィルタ"
 
-#: ../src/appfinder.c:185
+#: ../src/appfinder.c:206
 msgid "Categories"
 msgstr "分類"
 
-#: ../src/appfinder.c:201
+#: ../src/appfinder.c:222
 msgid "All"
 msgstr "すべて"
 
-#: ../src/appfinder.c:216
-#: ../src/appfinder.c:371
-#: ../src/appfinder.c:762
+#: ../src/appfinder.c:275
+msgid "C_lose after execute"
+msgstr ""
+
+#: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
 msgstr "アプリケーション"
 
@@ -72,50 +73,72 @@ msgstr "システムにインストールされたアプリケーションを探
 
 #~ msgid "Cannot execute the selected application"
 #~ msgstr "選択したアプリケーションを実行できません"
+
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "Xfce 4 アプリファインダー"
+
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>名前</b>"
+
 #~ msgid "N/A"
 #~ msgstr "利用不可"
+
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>コメント</b>"
+
 #~ msgid "<b>Categories</b>"
 #~ msgstr "<b>分類</b>"
+
 #~ msgid "<b>Command</b>"
 #~ msgstr "<b>コマンド</b>"
+
 #~ msgid "Run program"
 #~ msgstr "プログラムを実行"
+
 #~ msgid "<b>Search:</b>"
 #~ msgstr "<b>検索:</b>"
+
 #~ msgid "Show Categories"
 #~ msgstr "分類を表示"
+
 #~ msgid "Core"
 #~ msgstr "コア"
+
 #~ msgid "Development"
 #~ msgstr "開発"
+
 #~ msgid "Office"
 #~ msgstr "オフィス"
+
 #~ msgid "Graphics"
 #~ msgstr "グラフィックス"
+
 #~ msgid "Network"
 #~ msgstr "ネットワーク"
+
 #~ msgid "AudioVideo"
 #~ msgstr "音楽・映像"
+
 #~ msgid "Game"
 #~ msgstr "ゲーム"
+
 #~ msgid "Education"
 #~ msgstr "教育"
+
 #~ msgid "System"
 #~ msgstr "システム"
+
 #~ msgid "Filemanager"
 #~ msgstr "ファイルマネージャー"
+
 #~ msgid "Utility"
 #~ msgstr "ユーティリティ"
+
 #~ msgid "No items available"
 #~ msgstr "利用できるアイテムはありません"
+
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "検索内容に該当するものはありません。"
+
 #~ msgid "Appfinder"
 #~ msgstr "アプリファインダー"
-

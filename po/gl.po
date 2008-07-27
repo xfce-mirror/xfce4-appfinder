@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-15 15:05+0100\n"
+"POT-Creation-Date: 2008-07-27 09:20+0200\n"
 "PO-Revision-Date: 2008-06-28 13:16+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -45,26 +45,27 @@ msgstr "O equipo de desenvolvemento de Xfce. Tódolos dereitos reservados."
 msgid "Please report bugs to <%s>."
 msgstr "Por favor, comunique os erros a <%s>."
 
-#: ../src/appfinder.c:123
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Buscador de aplicacións"
 
-#: ../src/appfinder.c:164
+#: ../src/appfinder.c:185
 msgid "Filter"
 msgstr "Filtro"
 
-#: ../src/appfinder.c:185
+#: ../src/appfinder.c:206
 msgid "Categories"
 msgstr "Categorías"
 
-#: ../src/appfinder.c:201
+#: ../src/appfinder.c:222
 msgid "All"
 msgstr "Todas"
 
-#: ../src/appfinder.c:216
-#: ../src/appfinder.c:371
-#: ../src/appfinder.c:762
+#: ../src/appfinder.c:275
+msgid "C_lose after execute"
+msgstr ""
+
+#: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
 msgstr "Aplicacións"
 
@@ -74,24 +75,33 @@ msgstr "Busque aplicacións instaladas no sistema."
 
 #~ msgid "Cannot execute the selected application"
 #~ msgstr "Non se puido executar a aplicación seleccionada"
+
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Nome</b>"
+
 #~ msgid "N/A"
 #~ msgstr "N/A"
+
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Comentario</b>"
+
 #~ msgid "Development"
 #~ msgstr "Desenvolvemento"
+
 #~ msgid "Office"
 #~ msgstr "Oficina"
+
 #~ msgid "Graphics"
 #~ msgstr "Gráficos"
+
 #~ msgid "Network"
 #~ msgstr "Rede"
+
 #~ msgid "AudioVideo"
 #~ msgstr "Audio e Vídeo"
+
 #~ msgid "Game"
 #~ msgstr "Xogos"
+
 #~ msgid "Education"
 #~ msgstr "Educación"
-

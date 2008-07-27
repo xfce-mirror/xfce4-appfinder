@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-15 15:05+0100\n"
+"POT-Creation-Date: 2008-07-27 09:20+0200\n"
 "PO-Revision-Date: 2008-01-05 21:55+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: hu\n"
@@ -38,23 +38,27 @@ msgstr "Az Xfce fejlesztő csapat. Minden jog fenntartva."
 msgid "Please report bugs to <%s>."
 msgstr "Jelentsd a hibákat itt: <%s>."
 
-#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Alkalmazás-kereső"
 
-#: ../src/appfinder.c:164
+#: ../src/appfinder.c:185
 msgid "Filter"
 msgstr "Szűrő"
 
-#: ../src/appfinder.c:185
+#: ../src/appfinder.c:206
 msgid "Categories"
 msgstr "Kategóriák"
 
-#: ../src/appfinder.c:201
+#: ../src/appfinder.c:222
 msgid "All"
 msgstr "Minden"
 
-#: ../src/appfinder.c:216 ../src/appfinder.c:371 ../src/appfinder.c:762
+#: ../src/appfinder.c:275
+msgid "C_lose after execute"
+msgstr ""
+
+#: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
 msgstr "Alkalmazások"
 

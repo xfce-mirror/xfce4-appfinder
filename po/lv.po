@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-15 15:05+0100\n"
+"POT-Creation-Date: 2008-07-27 09:20+0200\n"
 "PO-Revision-Date: 2008-04-06 20:31+0300\n"
 "Last-Translator: Rihards Prieditis <RPrieditis@gmail.com>\n"
 "Language-Team: Latvian <RPrieditis@gmail.com>\n"
@@ -17,7 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
 
 #: ../src/main.c:62
 msgid "Show version information"
@@ -32,6 +33,7 @@ msgid "Failed to open display"
 msgstr "Neizdevās atvērt displeju"
 
 # C#: ../src/main.c:94
+#: ../src/main.c:94
 msgid "Copyright (c) 2008"
 msgstr "Autortiesības (c) 2008"
 
@@ -44,27 +46,30 @@ msgstr "Xfce izstrādes komanda. Visas tiesības paturētas."
 msgid "Please report bugs to <%s>."
 msgstr "Lūdzu ziņojiet par kļūdām uz <%s>."
 
-#: ../src/appfinder.c:123 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Lietotņu meklētājs"
 
-#: ../src/appfinder.c:164
+#: ../src/appfinder.c:185
 msgid "Filter"
 msgstr "Filtrs"
 
-#: ../src/appfinder.c:185
+#: ../src/appfinder.c:206
 msgid "Categories"
 msgstr "Kategorijas"
 
-#: ../src/appfinder.c:201
+#: ../src/appfinder.c:222
 msgid "All"
 msgstr "Viss"
 
-#: ../src/appfinder.c:216 ../src/appfinder.c:371 ../src/appfinder.c:762
+#: ../src/appfinder.c:275
+msgid "C_lose after execute"
+msgstr ""
+
+#: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
 msgstr "Lietotnes"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
 msgstr "Atrast lietotni, kura ir instalēta sistēmā."
-

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce 4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-15 15:05+0100\n"
+"POT-Creation-Date: 2008-07-27 09:20+0200\n"
 "PO-Revision-Date: 2008-05-18 20:55+0100\n"
 "Last-Translator: Ole Guldberg <olegb@omgwtf.dk>\n"
 "Language-Team: Danish\n"
@@ -41,30 +41,30 @@ msgstr "Xfce udviklingsholdet. Alle rettigheder reserveret."
 msgid "Please report bugs to <%s>."
 msgstr "Rapporter venligst fejl to <%s>."
 
-#: ../src/appfinder.c:123
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Programfinder"
 
-#: ../src/appfinder.c:164
+#: ../src/appfinder.c:185
 msgid "Filter"
 msgstr "Filter"
 
-#: ../src/appfinder.c:185
+#: ../src/appfinder.c:206
 msgid "Categories"
 msgstr "Kategorier"
 
-#: ../src/appfinder.c:201
+#: ../src/appfinder.c:222
 msgid "All"
 msgstr "Alle"
 
-#: ../src/appfinder.c:216
-#: ../src/appfinder.c:371
-#: ../src/appfinder.c:762
+#: ../src/appfinder.c:275
+msgid "C_lose after execute"
+msgstr ""
+
+#: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
 msgstr "Programmer"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
 msgstr "Find programmer som er installeret på systemet."
-

@@ -1,4 +1,19 @@
-2008-05-18 20:28 jasper
+2008-07-26 jasper
+	* autogen.sh: Improve git-svn version support.
+	* configure.ac.in: Version bump.
+	* src/appfinder.c: Minor layout changes. Don't show window before menu
+	is ready. Add option to keep application open after execution.
+	* po/am.po, po/ar.po, po/be.po, po/bn_IN.po, po/ca.po, po/cs.po,
+	po/da.po, po/de.po, po/dz.po, po/el.po, po/en_GB.po, po/eo.po,
+	po/es_MX.po, po/es.po, po/et.po, po/eu.po, po/fa.po, po/fi.po,
+	po/fr.po, po/gl.po, po/gu.po, po/he.po, po/hu.po, po/hy.po, po/id.po,
+	po/it.po, po/ja.po, po/ka.po, po/ko.po, po/lt.po, po/lv.po, po/mk.po,
+	po/mr.po, po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po,
+	po/ro.po, po/ru.po, po/si.po, po/sk.po, po/sq.po, po/sv.po, po/tr.po,
+	po/uk.po, po/ur.po, po/xfce4-appfinder.pot, po/zh_CN.po, po/zh_TW.po:
+	Update po files, one translatable string added.
+
+2008-05-18 jasper
 
 	* configure.ac.in: Add dependency on libxfce4util (already linked
 	through libxfce4menu anyway).
@@ -6,18 +21,18 @@
 	grab of application list after pressing Enter on the filter entry.
 	Patch from Mike Massonnet.
 
-2008-01-06 14:27 jasper
+2008-01-06 jasper
 
 	* src/appfinder.c: Don't take away focus on filter entry when
 	selecting another category.
 
-2008-01-05 16:35 jasper
+2008-01-05 jasper
 
 	* configure.ac.in: Add svn revision to the version.
 	* src/appfinder.c: Don't set focus to filter entry after changing
 	category. Quit after successful execution of an application.
 
-2008-01-05 15:04 jasper
+2008-01-05 jasper
 
 	* AUTHORS, COPYING, ChangeLog, Makefile.am, NEWS, README, TODO,
 	autogen.sh, configure.ac.in, data/.svn/entries, data/.svn/format,
