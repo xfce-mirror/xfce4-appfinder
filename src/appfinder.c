@@ -18,6 +18,9 @@
  */
 
 #include <string.h>
+#include <unistd.h>
+#include <stdio.h>
+
 #include <gdk/gdkkeysyms.h>
 #include <gtk/gtk.h>
 #include <libxfce4menu/libxfce4menu.h>
@@ -33,6 +36,10 @@
 #define ICON_SIZE       32
 #define VIEW_WIDTH      400
 #define VIEW_HEIGHT     300
+
+#define RCDIR           "xfce4" G_DIR_SEPARATOR_S
+#define RCFILE          "appfinder.rc"
+#define RCFILETMP       RCFILE ".tmp"
 
 enum
 {
@@ -60,6 +67,7 @@ static void view_data_get (GtkWidget * widget, GdkDragContext * drag_context,
 static gboolean entry_focused (GtkWidget * entry, GdkEventFocus * ev, gpointer data);
 static gboolean entry_key_pressed (GtkWidget * entry, GdkEventKey * ev, gpointer data);
 static void execute_item (GtkWidget * button, gpointer data);
+static void toggle_keep_open (GtkToggleButton *tb, gpointer ignore );
 static void cursor_changed (GtkTreeView * view, gpointer data);
 static gboolean key_pressed (GtkWidget * widget, GdkEventKey * ev, gpointer data);
 static gboolean view_dblclick (GtkWidget * view, GdkEventButton * evt, gpointer data);
@@ -67,6 +75,9 @@ static void appfinder_add_items_for_category (gpointer key, gpointer value, gpoi
 static void appfinder_add_category_widget (const char *category);
 static void appfinder_add_application_data (AppData * data);
 
+static void appfinder_config_read (void);
+static void appfinder_config_write (void);
+static void appfinder_quit (void);
 
 
 static GSList *menu_concat_items (XfceMenu * menu, GSList * list);
@@ -85,6 +96,7 @@ static char *application_title = NULL;
 static GHashTable *categories = NULL;
 static GList *category_list = NULL;
 static XfceMenuItem *current = NULL;
+static gboolean keep_open = FALSE;
 
 static const GtkTargetEntry dnd_target_list[] = {
   {"text/uri-list", 0, 0}
@@ -119,12 +131,15 @@ appfinder_create_shell (void)
   GtkWidget *button;
   char text[256];
 
+  /* configuration */
+  appfinder_config_read ();
+
   /* main window (don't show yet) */
   application_window = window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window), _("Application Finder"));
   gtk_container_set_border_width (GTK_CONTAINER (window), SPACING);
 
-  g_signal_connect (G_OBJECT (window), "delete-event", G_CALLBACK (gtk_main_quit), NULL);
+  g_signal_connect (G_OBJECT (window), "delete-event", G_CALLBACK (appfinder_quit), NULL);
   g_signal_connect (G_OBJECT (window), "key-press-event", G_CALLBACK (key_pressed), NULL);
 
   theme = gtk_icon_theme_get_default ();
@@ -154,7 +169,7 @@ appfinder_create_shell (void)
 
   buttonbox = gtk_hbox_new (FALSE, SPACING);
   gtk_widget_show (buttonbox);
-  gtk_box_pack_start (GTK_BOX (vbox), buttonbox, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (vbox), buttonbox, FALSE, TRUE, 0);
 
   /* left pane */
   left = gtk_vbox_new (FALSE, SPACING);
@@ -212,16 +227,6 @@ appfinder_create_shell (void)
   gtk_widget_show (right);
   gtk_box_pack_start (GTK_BOX (hbox), right, TRUE, TRUE, 0);
 
-#if 0
-  label = gtk_label_new (NULL);
-  g_snprintf (text, 256, "<span weight=\"bold\" size=\"large\">%s</span>", _("Applications"));
-  gtk_label_set_markup (GTK_LABEL (label), text);
-  gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
-  gtk_widget_modify_fg (label, GTK_STATE_NORMAL, &label->style->fg[GTK_STATE_INSENSITIVE]);
-  gtk_widget_show (label);
-  gtk_box_pack_start (GTK_BOX (right), label, FALSE, FALSE, 0);
-#endif
-
   scroll = gtk_scrolled_window_new (NULL, NULL);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scroll), GTK_SHADOW_ETCHED_IN);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll), GTK_POLICY_NEVER,
@@ -251,7 +256,7 @@ appfinder_create_shell (void)
   gtk_widget_show (button);
   gtk_box_pack_end (GTK_BOX (buttonbox), button, FALSE, FALSE, 0);
 
-  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (gtk_main_quit), NULL);
+  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (appfinder_quit), NULL);
 
   exec_button = button = gtk_button_new_from_stock (GTK_STOCK_EXECUTE);
   GTK_WIDGET_SET_FLAGS (button, GTK_CAN_DEFAULT);
@@ -261,6 +266,14 @@ appfinder_create_shell (void)
   gtk_box_pack_end (GTK_BOX (buttonbox), button, FALSE, FALSE, 0);
 
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (execute_item), NULL);
+
+  button = gtk_check_button_new_with_mnemonic (_("C_lose on execute"));
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), !keep_open);
+  gtk_widget_show (button);
+  gtk_box_pack_start (GTK_BOX (buttonbox), button, FALSE, FALSE, 0);
+  gtk_button_box_set_child_secondary (GTK_BUTTON_BOX (buttonbox), button, TRUE);
+
+  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (toggle_keep_open), NULL);
 
   /* done */
   gtk_widget_show (window);
@@ -273,7 +286,7 @@ appfinder_create_shell (void)
  *
  * Find categories and create cache of application data. This function
  * is intended to be called from a background thread, before calling
- * appfinder_add_applications() in the main thread. All GUI related 
+ * appfinder_add_applications() in the main thread. All GUI related
  * actions are deferred to appfinder_add_applications().
  **/
 void
@@ -574,9 +587,20 @@ execute_item (GtkWidget * button, gpointer data)
             }
         }
       g_free (exec);
-      /* TODO: should we make this optional? */
-      gtk_main_quit ();
+
+      if (!keep_open)
+        {
+          appfinder_quit ();
+        }
     }
+}
+
+
+
+static void
+toggle_keep_open (GtkToggleButton *tb, gpointer ignore )
+{
+  keep_open = !gtk_toggle_button_get_active (tb);
 }
 
 
@@ -626,7 +650,7 @@ key_pressed (GtkWidget * widget, GdkEventKey * ev, gpointer data)
         }
       break;
     case GDK_Escape:
-      gtk_main_quit ();
+      appfinder_quit ();
       handled = TRUE;
       break;
     default:
@@ -706,7 +730,85 @@ appfinder_add_category_widget (const char *category)
 
 
 
-/* 
+/*
+ * configuration file
+ */
+
+static void
+appfinder_config_read (void)
+{
+  gchar *location = xfce_resource_save_location (XFCE_RESOURCE_CONFIG, RCDIR, FALSE);
+  gchar *file;
+  XfceRc *rc;
+
+  if (location)
+    {
+      file = g_build_filename (location, RCFILE, NULL);
+      if (file)
+        {
+          rc = xfce_rc_simple_open (file, TRUE);
+          if (rc)
+            {
+              keep_open = xfce_rc_read_bool_entry (rc, "keep_open", FALSE );
+              xfce_rc_close (rc);
+            }
+          g_free (file);
+        }
+      g_free (location);
+    }
+}
+
+
+
+static void
+appfinder_config_write (void)
+{
+  gchar *location = xfce_resource_save_location (XFCE_RESOURCE_CONFIG, RCDIR, TRUE);
+  gchar *tmpfile;
+  gchar *file;
+  XfceRc *rc;
+
+  if (location)
+    {
+      tmpfile = g_build_filename (location, RCFILETMP, NULL);
+      if (tmpfile)
+        {
+          /* 1. write to temporary file */
+          rc = xfce_rc_simple_open (tmpfile, FALSE);
+          if (rc)
+            {
+              xfce_rc_write_bool_entry (rc, "keep_open", keep_open );
+              xfce_rc_close (rc);
+
+              /* 2. rename temporary file to real rc file, removing an existing file in the process */
+              file = g_build_filename (location, RCFILE, NULL);
+              if (file)
+                {
+                  rename (tmpfile, file);
+                  g_free (file);
+                }
+            }
+          g_free (tmpfile);
+        }
+      g_free (location);
+    }
+}
+
+
+
+
+/* quit */
+static void
+appfinder_quit (void)
+{
+  gtk_widget_hide (application_window);
+  gtk_main_quit ();
+  appfinder_config_write ();
+}
+
+
+
+/*
  * menu handling
  */
 
