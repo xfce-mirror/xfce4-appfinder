@@ -32,7 +32,7 @@
 #define _(x) x
 #endif
 
-#define SPACING         8
+#define SPACING         10
 #define ICON_SIZE       32
 #define VIEW_WIDTH      400
 #define VIEW_HEIGHT     300
@@ -123,10 +123,10 @@ appfinder_create_shell (void)
   GtkWidget *vbox;
   GtkWidget *hbox;
   GtkWidget *buttonbox;
+  GtkWidget *align;
   GtkWidget *left;
   GtkWidget *right;
   GtkWidget *label;
-  GtkWidget *align;
   GtkWidget *scroll;
   GtkWidget *button;
   char text[256];
@@ -166,6 +166,11 @@ appfinder_create_shell (void)
   hbox = gtk_hbox_new (FALSE, SPACING);
   gtk_widget_show (hbox);
   gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, 0);
+
+  align = gtk_alignment_new (0,0,0,0); /* dummy widget for padding */
+  gtk_widget_show (align);
+  gtk_box_pack_start (GTK_BOX (vbox), align, FALSE, FALSE, 0);
+
 
   buttonbox = gtk_hbox_new (FALSE, SPACING);
   gtk_widget_show (buttonbox);
@@ -267,7 +272,7 @@ appfinder_create_shell (void)
 
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (execute_item), NULL);
 
-  button = gtk_check_button_new_with_mnemonic (_("C_lose on execute"));
+  button = gtk_check_button_new_with_mnemonic (_("C_lose after execute"));
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), !keep_open);
   gtk_widget_show (button);
   gtk_box_pack_start (GTK_BOX (buttonbox), button, FALSE, FALSE, 0);
@@ -275,8 +280,7 @@ appfinder_create_shell (void)
 
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (toggle_keep_open), NULL);
 
-  /* done */
-  gtk_widget_show (window);
+  /* show window in appfinder_add_applications() */
 }
 
 
@@ -387,6 +391,9 @@ appfinder_add_applications (void)
         }
       gtk_widget_set_size_request (application_view, -1, VIEW_HEIGHT);
     }
+
+  /* we're done */
+  gtk_widget_show (application_window);
 }
 
 /*
