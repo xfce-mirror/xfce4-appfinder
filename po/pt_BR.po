@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-07-27 09:20+0200\n"
-"PO-Revision-Date: 2008-01-14 09:56-0300\n"
+"PO-Revision-Date: 2008-07-27 09:00-0300\n"
 "Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr "Por favor, envie relatórios sobre erros para <%s>."
 
 #: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "Localizador de Aplicações"
+msgstr "Localizador de aplicativos"
 
 #: ../src/appfinder.c:185
 msgid "Filter"
@@ -60,15 +60,15 @@ msgstr "Todos"
 
 #: ../src/appfinder.c:275
 msgid "C_lose after execute"
-msgstr ""
+msgstr "F_echar depois de executar"
 
 #: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
-msgstr "Aplicações"
+msgstr "Aplicativos"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
-msgstr "Localize aplicações instaladas no sistema."
+msgstr "Localize aplicativos instalados no sistema."
 
 #~ msgid "Cannot execute the selected application"
 #~ msgstr "Não é possível executar a aplicação selecionada"
