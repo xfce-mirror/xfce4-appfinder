@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-07-27 09:20+0200\n"
-"PO-Revision-Date: 2005-11-01 01:29+0900\n"
-"Last-Translator: ByungHyun Choi <byunghyunchoi@gmail.com>\n"
+"PO-Revision-Date: 2008-07-28 23:54+0900\n"
+"Last-Translator: ByungHyun Choi <byunghyunchoi@debianusers.org>\n"
 "Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge."
 "net>\n"
 "MIME-Version: 1.0\n"
@@ -17,39 +17,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/main.c:62
-#, fuzzy
 msgid "Show version information"
-msgstr "더 많은 정보..."
+msgstr "버전 정보"
 
 #: ../src/main.c:63
 msgid "[MENUFILE]"
-msgstr ""
+msgstr "[MENUFILE]"
 
 #: ../src/main.c:82
 msgid "Failed to open display"
-msgstr ""
+msgstr "디스플레이를 열지 못 했습니다."
 
 #: ../src/main.c:94
 msgid "Copyright (c) 2008"
-msgstr ""
+msgstr "Copyright (c) 2008"
 
 #: ../src/main.c:95
 msgid "The Xfce development team. All rights reserved."
-msgstr ""
+msgstr "The Xfce development team. All rights reserved."
 
 #: ../src/main.c:96
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr ""
+msgstr "버그가 생기면 <%s>에게 알려 주십시오."
 
 #: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
-#, fuzzy
 msgid "Application Finder"
-msgstr "Xfce 4 응용프로그램 검색"
+msgstr "응용프로그램 검색"
 
 #: ../src/appfinder.c:185
 msgid "Filter"
-msgstr ""
+msgstr "거르기"
 
 #: ../src/appfinder.c:206
 msgid "Categories"
@@ -61,84 +59,12 @@ msgstr "모두"
 
 #: ../src/appfinder.c:275
 msgid "C_lose after execute"
-msgstr ""
+msgstr "실행후 닫기(_l)"
 
 #: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
-msgstr ""
+msgstr "응용프로그램"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
-msgstr ""
-
-#~ msgid "Cannot execute the selected application"
-#~ msgstr "선택한 응용프로그램을 실행하지 못 했습니다."
-
-#~ msgid "Xfce 4 Appfinder"
-#~ msgstr "Xfce 4 Appfinder"
-
-#~ msgid "<b>Name</b>"
-#~ msgstr "<b>이름:</b>"
-
-#~ msgid "N/A"
-#~ msgstr "N/A"
-
-#~ msgid "<b>Comment</b>"
-#~ msgstr "<b>설명</b>"
-
-#~ msgid "<b>Categories</b>"
-#~ msgstr "분류"
-
-#~ msgid "<b>Command</b>"
-#~ msgstr "<b>명령</b>"
-
-#~ msgid "Run program"
-#~ msgstr "프로그램 실행"
-
-#~ msgid "<b>Search:</b>"
-#~ msgstr "<b>검색:</b>"
-
-#~ msgid "Show Categories"
-#~ msgstr "분류 보이기"
-
-#~ msgid "Core"
-#~ msgstr "핵심"
-
-#~ msgid "Development"
-#~ msgstr "개발용"
-
-#~ msgid "Office"
-#~ msgstr "사무용"
-
-#~ msgid "Graphics"
-#~ msgstr "그래픽용"
-
-#~ msgid "Network"
-#~ msgstr "네트워크용"
-
-#~ msgid "AudioVideo"
-#~ msgstr "멀티미디어"
-
-#~ msgid "Game"
-#~ msgstr "놀이"
-
-#~ msgid "Education"
-#~ msgstr "교육용"
-
-#~ msgid "System"
-#~ msgstr "시스템 관리용"
-
-#~ msgid "Filemanager"
-#~ msgstr "화일 관리자"
-
-#~ msgid "Utility"
-#~ msgstr "도구"
-
-#~ msgid "No items available"
-#~ msgstr "없음"
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "일치하는 부분이 없습니다."
-
-#~ msgid "Appfinder"
-#~ msgstr "응용프로그램 검색"
+msgstr "시스템에 설치된 응용프로그램 찾기"

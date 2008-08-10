@@ -19,39 +19,37 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #: ../src/main.c:62
-#, fuzzy
 msgid "Show version information"
-msgstr "Więcej Informacji..."
+msgstr "Pokaż informacje wersji"
 
 #: ../src/main.c:63
 msgid "[MENUFILE]"
-msgstr ""
+msgstr "[PLIKMENU]"
 
 #: ../src/main.c:82
 msgid "Failed to open display"
-msgstr ""
+msgstr "Nie udało się otworzyć okna"
 
 #: ../src/main.c:94
 msgid "Copyright (c) 2008"
-msgstr ""
+msgstr "Copyright (c) 2008"
 
 #: ../src/main.c:95
 msgid "The Xfce development team. All rights reserved."
-msgstr ""
+msgstr "Zespół programistów Xfce. Wszelkie prawa zastrzeżone."
 
 #: ../src/main.c:96
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr ""
+msgstr "Proszę zgłaszać błędy do <%s>."
 
 #: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
-#, fuzzy
 msgid "Application Finder"
 msgstr "Wyszukiwacz aplikacji"
 
 #: ../src/appfinder.c:185
 msgid "Filter"
-msgstr ""
+msgstr "Filtruj"
 
 #: ../src/appfinder.c:206
 msgid "Categories"
@@ -67,11 +65,11 @@ msgstr ""
 
 #: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
-msgstr ""
+msgstr "Aplikacje"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
-msgstr ""
+msgstr "Znajdź aplikacje zainstalowane w systemie."
 
 #~ msgid "Cannot execute the selected application"
 #~ msgstr "Nie mogę wykonać wybranej aplikacji"
