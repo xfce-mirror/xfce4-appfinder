@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-27 09:20+0200\n"
-"PO-Revision-Date: 2008-01-07 17:52+0200\n"
+"POT-Creation-Date: 2008-08-12 13:23+0300\n"
+"PO-Revision-Date: 2008-08-12 13:36+0300\n"
 "Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -59,9 +59,9 @@ msgstr "Kaikki"
 
 #: ../src/appfinder.c:275
 msgid "C_lose after execute"
-msgstr ""
+msgstr "S_ulje, kun sovellus suoritetaan"
 
-#: ../src/appfinder.c:390 ../src/appfinder.c:873
+#: ../src/appfinder.c:389 ../src/appfinder.c:872
 msgid "Applications"
 msgstr "Sovellukset"
 
