@@ -276,7 +276,6 @@ appfinder_create_shell (void)
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), !keep_open);
   gtk_widget_show (button);
   gtk_box_pack_start (GTK_BOX (buttonbox), button, FALSE, FALSE, 0);
-  gtk_button_box_set_child_secondary (GTK_BUTTON_BOX (buttonbox), button, TRUE);
 
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (toggle_keep_open), NULL);
 
