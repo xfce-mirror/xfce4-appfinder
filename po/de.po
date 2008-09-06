@@ -4,12 +4,13 @@
 # Moritz Heiber <moe@xfce.org>, 2004.
 # Enrico Tröger <enrico.troeger@uvena.de>, 2006, 2008.
 # Nico Schümann <nico@prog.nico22.de>, 2008.
+# Fabian Nowak <timystery@arcor.de>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-27 09:20+0200\n"
+"POT-Creation-Date: 2008-08-21 22:06+0200\n"
 "PO-Revision-Date: 2008-03-12 08:36+0100\n"
 "Last-Translator: Enrico Tröger <enrico.troeger@uvena.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -60,9 +61,9 @@ msgstr "Alle"
 
 #: ../src/appfinder.c:275
 msgid "C_lose after execute"
-msgstr ""
+msgstr "Nach Ausführung sch_ließen"
 
-#: ../src/appfinder.c:390 ../src/appfinder.c:873
+#: ../src/appfinder.c:389 ../src/appfinder.c:872
 msgid "Applications"
 msgstr "Anwendungen"
 

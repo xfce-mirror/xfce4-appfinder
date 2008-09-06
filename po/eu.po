@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-07-27 09:20+0200\n"
-"PO-Revision-Date: 2008-05-02 23:16+0200\n"
+"PO-Revision-Date: 2008-08-28 12:38+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Euskara <debian-l10n-basque@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -61,7 +61,7 @@ msgstr "Denak"
 
 #: ../src/appfinder.c:275
 msgid "C_lose after execute"
-msgstr ""
+msgstr "I_txi exekutatu ondoren"
 
 #: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
@@ -70,3 +70,4 @@ msgstr "Aplikazioak"
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
 msgstr "Bilatu sisteman instalatutako aplikazioak."
+
