@@ -16,13 +16,13 @@ m4_define([appfinder_version_minor], [5])
 m4_define([appfinder_version_micro], [90])
 m4_define([appfinder_version_nano],  []) dnl leave this empty to have no nano version
 m4_define([appfinder_version_build], [r@REVISION@])
-m4_define([appfinder_version_tag],   [svn])
+m4_define([appfinder_version_tag],   [])
 m4_define([appfinder_version], [appfinder_version_major().appfinder_version_minor().appfinder_version_micro()ifelse(appfinder_version_nano(), [], [], [.appfinder_version_nano()])ifelse(appfinder_version_tag(), [svn], [appfinder_version_tag()-appfinder_version_build()], [appfinder_version_tag()])])
 
 dnl minimum required versions
 m4_define([gtk_minimum_version], [2.8.0])
-m4_define([xfce4menu_minimum_version], [0.1.0svn-r26163])
-m4_define([xfce4util_minimum_version], [4.4.0])
+m4_define([xfce4menu_minimum_version], [4.5.90])
+m4_define([xfce4util_minimum_version], [4.5.90])
 m4_define([intltool_minimum_version], [0.31])
 m4_define([autoconf_minimum_version], [2.50])
 
