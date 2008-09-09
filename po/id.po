@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-07-27 09:20+0200\n"
-"PO-Revision-Date: 2008-05-20 16:54+0700\n"
+"PO-Revision-Date: 2008-09-02 22:16+0700\n"
 "Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -58,7 +58,7 @@ msgstr "Semua"
 
 #: ../src/appfinder.c:275
 msgid "C_lose after execute"
-msgstr ""
+msgstr "S_impan setelah eksekusi"
 
 #: ../src/appfinder.c:390 ../src/appfinder.c:873
 msgid "Applications"
