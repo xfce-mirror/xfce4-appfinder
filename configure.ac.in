@@ -24,7 +24,6 @@ m4_define([gtk_minimum_version], [2.8.0])
 m4_define([xfce4menu_minimum_version], [4.5.90])
 m4_define([xfce4util_minimum_version], [4.5.90])
 m4_define([intltool_minimum_version], [0.31])
-m4_define([autoconf_minimum_version], [2.50])
 
 dnl debugging support for SVN snapshots
 m4_define([appfinder_debug_default], [ifelse(appfinder_version_tag(), [svn], [yes], [minimum])])
@@ -39,7 +38,7 @@ AC_COPYRIGHT([Copyright (c) 2008
 
 Written for Xfce by Jasper Huijsmans <jasper@xfce.org>.])
 AC_INIT([xfce4-appfinder], [appfinder_version], [http://bugzilla.xfce.org/], [xfce4-appfinder])
-AC_PREREQ([autoconf_minimum_version()])
+AC_PREREQ([2.50])
 AC_REVISION([$Id$])
 
 AM_CONFIG_HEADER([config.h])
