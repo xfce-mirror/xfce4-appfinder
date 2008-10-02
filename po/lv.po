@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-27 09:20+0200\n"
+"POT-Creation-Date: 2008-10-02 17:36+0200\n"
 "PO-Revision-Date: 2008-04-06 20:31+0300\n"
 "Last-Translator: Rihards Prieditis <RPrieditis@gmail.com>\n"
 "Language-Team: Latvian <RPrieditis@gmail.com>\n"
@@ -20,56 +20,101 @@ msgstr ""
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: ../src/main.c:62
-msgid "Show version information"
+#: ../src/main.c:42
+#, fuzzy
+msgid "Version information"
 msgstr "Rādīt versijas informāciju"
 
-#: ../src/main.c:63
+#: ../src/main.c:43
 msgid "[MENUFILE]"
 msgstr "[IZVĒLNESFAILS]"
 
-#: ../src/main.c:82
-msgid "Failed to open display"
-msgstr "Neizdevās atvērt displeju"
+#: ../src/main.c:64
+#, c-format
+msgid "Type '%s --help' for usage information."
+msgstr ""
 
-# C#: ../src/main.c:94
-#: ../src/main.c:94
-msgid "Copyright (c) 2008"
-msgstr "Autortiesības (c) 2008"
+#: ../src/main.c:70
+msgid "Unable to initialize GTK+."
+msgstr ""
 
-#: ../src/main.c:95
+#: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce izstrādes komanda. Visas tiesības paturētas."
 
-#: ../src/main.c:96
+#: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Lūdzu ziņojiet par kļūdām uz <%s>."
 
-#: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/main.c:97
+#, c-format
+msgid "Failed to connect to xfconf daemon. Reason: %s"
+msgstr ""
+
+#: ../src/main.c:101
+msgid "Failed to connect to xfconf daemon."
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:244 ../src/xfce-appfinder-window.c:258
+#: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Lietotņu meklētājs"
 
-#: ../src/appfinder.c:185
+#: ../src/xfce-appfinder-window.c:259
+#, fuzzy
+msgid "Find and launch applications installed on your system"
+msgstr "Atrast lietotni, kura ir instalēta sistēmā."
+
+#: ../src/xfce-appfinder-window.c:282
 msgid "Filter"
 msgstr "Filtrs"
 
-#: ../src/appfinder.c:206
+#: ../src/xfce-appfinder-window.c:304
 msgid "Categories"
 msgstr "Kategorijas"
 
-#: ../src/appfinder.c:222
-msgid "All"
-msgstr "Viss"
-
-#: ../src/appfinder.c:275
+#: ../src/xfce-appfinder-window.c:351
 msgid "C_lose after execute"
 msgstr ""
 
-#: ../src/appfinder.c:390 ../src/appfinder.c:873
-msgid "Applications"
-msgstr "Lietotnes"
+#: ../src/xfce-appfinder-window.c:614
+#, c-format
+msgid "Could not execute application %s. Reason: %s"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:618
+#, c-format
+msgid "Could not execute application %s"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:736
+#, c-format
+msgid "Could not load menu from %s. Reason: "
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:738
+msgid "Could not load system menu"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:743
+msgid "Unable to load menu file"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:755 ../src/xfce-appfinder-window.c:1012
+msgid "All"
+msgstr "Viss"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
 msgstr "Atrast lietotni, kura ir instalēta sistēmā."
+
+#~ msgid "Failed to open display"
+#~ msgstr "Neizdevās atvērt displeju"
+
+# C#: ../src/main.c:94
+#~ msgid "Copyright (c) 2008"
+#~ msgstr "Autortiesības (c) 2008"
+
+#~ msgid "Applications"
+#~ msgstr "Lietotnes"

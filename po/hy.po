@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-27 09:20+0200\n"
+"POT-Creation-Date: 2008-10-02 17:36+0200\n"
 "PO-Revision-Date: 2005-10-15 01:48+0900\n"
 "Last-Translator: Norayr Chilingaryan <norik@freenet.am>\n"
 "Language-Team: Armenian <en@li.org>\n"
@@ -16,54 +16,88 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: ../src/main.c:62
-msgid "Show version information"
+#: ../src/main.c:42
+msgid "Version information"
 msgstr ""
 
-#: ../src/main.c:63
+#: ../src/main.c:43
 msgid "[MENUFILE]"
 msgstr ""
 
-#: ../src/main.c:82
-msgid "Failed to open display"
+#: ../src/main.c:64
+#, c-format
+msgid "Type '%s --help' for usage information."
 msgstr ""
 
-#: ../src/main.c:94
-msgid "Copyright (c) 2008"
+#: ../src/main.c:70
+msgid "Unable to initialize GTK+."
 msgstr ""
 
-#: ../src/main.c:95
+#: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
 msgstr ""
 
-#: ../src/main.c:96
+#: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr ""
 
-#: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/main.c:97
+#, c-format
+msgid "Failed to connect to xfconf daemon. Reason: %s"
+msgstr ""
+
+#: ../src/main.c:101
+msgid "Failed to connect to xfconf daemon."
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:244 ../src/xfce-appfinder-window.c:258
+#: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr ""
 
-#: ../src/appfinder.c:185
+#: ../src/xfce-appfinder-window.c:259
+msgid "Find and launch applications installed on your system"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:282
 msgid "Filter"
 msgstr ""
 
-#: ../src/appfinder.c:206
+#: ../src/xfce-appfinder-window.c:304
 msgid "Categories"
 msgstr "Դասեր"
 
-#: ../src/appfinder.c:222
-msgid "All"
-msgstr "Բոլոր"
-
-#: ../src/appfinder.c:275
+#: ../src/xfce-appfinder-window.c:351
 msgid "C_lose after execute"
 msgstr ""
 
-#: ../src/appfinder.c:390 ../src/appfinder.c:873
-msgid "Applications"
+#: ../src/xfce-appfinder-window.c:614
+#, c-format
+msgid "Could not execute application %s. Reason: %s"
 msgstr ""
+
+#: ../src/xfce-appfinder-window.c:618
+#, c-format
+msgid "Could not execute application %s"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:736
+#, c-format
+msgid "Could not load menu from %s. Reason: "
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:738
+msgid "Could not load system menu"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:743
+msgid "Unable to load menu file"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:755 ../src/xfce-appfinder-window.c:1012
+msgid "All"
+msgstr "Բոլոր"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."

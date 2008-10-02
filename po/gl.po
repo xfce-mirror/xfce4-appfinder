@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-27 09:20+0200\n"
+"POT-Creation-Date: 2008-10-02 17:36+0200\n"
 "PO-Revision-Date: 2008-06-28 13:16+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -20,61 +20,100 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: ../src/main.c:62
-msgid "Show version information"
+#: ../src/main.c:42
+#, fuzzy
+msgid "Version information"
 msgstr "Mostrar información de versión"
 
-#: ../src/main.c:63
+#: ../src/main.c:43
 msgid "[MENUFILE]"
 msgstr ""
 
-#: ../src/main.c:82
-msgid "Failed to open display"
+#: ../src/main.c:64
+#, c-format
+msgid "Type '%s --help' for usage information."
 msgstr ""
 
-#: ../src/main.c:94
-msgid "Copyright (c) 2008"
-msgstr "Copyright (c) 2008"
+#: ../src/main.c:70
+msgid "Unable to initialize GTK+."
+msgstr ""
 
-#: ../src/main.c:95
+#: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
 msgstr "O equipo de desenvolvemento de Xfce. Tódolos dereitos reservados."
 
-#: ../src/main.c:96
+#: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Por favor, comunique os erros a <%s>."
 
-#: ../src/appfinder.c:139 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/main.c:97
+#, c-format
+msgid "Failed to connect to xfconf daemon. Reason: %s"
+msgstr ""
+
+#: ../src/main.c:101
+msgid "Failed to connect to xfconf daemon."
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:244 ../src/xfce-appfinder-window.c:258
+#: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Buscador de aplicacións"
 
-#: ../src/appfinder.c:185
+#: ../src/xfce-appfinder-window.c:259
+#, fuzzy
+msgid "Find and launch applications installed on your system"
+msgstr "Busque aplicacións instaladas no sistema."
+
+#: ../src/xfce-appfinder-window.c:282
 msgid "Filter"
 msgstr "Filtro"
 
-#: ../src/appfinder.c:206
+#: ../src/xfce-appfinder-window.c:304
 msgid "Categories"
 msgstr "Categorías"
 
-#: ../src/appfinder.c:222
-msgid "All"
-msgstr "Todas"
-
-#: ../src/appfinder.c:275
+#: ../src/xfce-appfinder-window.c:351
 msgid "C_lose after execute"
 msgstr ""
 
-#: ../src/appfinder.c:390 ../src/appfinder.c:873
-msgid "Applications"
-msgstr "Aplicacións"
+#: ../src/xfce-appfinder-window.c:614
+#, c-format
+msgid "Could not execute application %s. Reason: %s"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:618
+#, fuzzy, c-format
+msgid "Could not execute application %s"
+msgstr "Non se puido executar a aplicación seleccionada"
+
+#: ../src/xfce-appfinder-window.c:736
+#, c-format
+msgid "Could not load menu from %s. Reason: "
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:738
+msgid "Could not load system menu"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:743
+msgid "Unable to load menu file"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:755 ../src/xfce-appfinder-window.c:1012
+msgid "All"
+msgstr "Todas"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find applications installed on the system."
 msgstr "Busque aplicacións instaladas no sistema."
 
-#~ msgid "Cannot execute the selected application"
-#~ msgstr "Non se puido executar a aplicación seleccionada"
+#~ msgid "Copyright (c) 2008"
+#~ msgstr "Copyright (c) 2008"
+
+#~ msgid "Applications"
+#~ msgstr "Aplicacións"
 
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Nome</b>"

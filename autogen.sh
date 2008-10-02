@@ -40,7 +40,7 @@ $2}'`
 fi
 sed -e "s/@LINGUAS@/${linguas}/g" \
     -e "s/@REVISION@/${revision}/g" \
-    < "configure.ac.in" > "configure.ac"
+    < "configure.in.in" > "configure.in"
 
 xdt-autogen $@
 

@@ -11,3 +11,5 @@
 
 * save and/or manage a 'Favorites' category?
 * add documentation
+* remember last category for restarts and menu regeneration
+* make the DBG macro work
