@@ -2,7 +2,7 @@
 Version=1.0
 Encoding=UTF-8
 _Name=Application Finder
-_Comment=Find applications installed on the system.
+_Comment=Find and launch applications installed on your system
 Exec=xfce4-appfinder
 Icon=xfce4-appfinder
 StartupNotify=true

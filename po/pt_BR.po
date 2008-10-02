@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-02 17:36+0200\n"
+"POT-Creation-Date: 2008-10-02 17:55+0200\n"
 "PO-Revision-Date: 2008-07-27 09:00-0300\n"
 "Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
@@ -58,7 +58,7 @@ msgstr ""
 msgid "Application Finder"
 msgstr "Localizador de aplicativos"
 
-#: ../src/xfce-appfinder-window.c:259
+#: ../src/xfce-appfinder-window.c:259 ../data/xfce4-appfinder.desktop.in.h:2
 #, fuzzy
 msgid "Find and launch applications installed on your system"
 msgstr "Localize aplicativos instalados no sistema."
@@ -87,24 +87,28 @@ msgstr "Não é possível executar a aplicação selecionada"
 
 #: ../src/xfce-appfinder-window.c:736
 #, c-format
-msgid "Could not load menu from %s. Reason: "
+msgid "Could not load menu from %s. Reason: %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:738
+#: ../src/xfce-appfinder-window.c:738 ../src/xfce-appfinder-window.c:747
 msgid "Could not load system menu"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:743
-msgid "Unable to load menu file"
+#: ../src/xfce-appfinder-window.c:745
+#, c-format
+msgid "Could not load menu from %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:755 ../src/xfce-appfinder-window.c:1012
+#: ../src/xfce-appfinder-window.c:760 ../src/xfce-appfinder-window.c:1017
 msgid "All"
 msgstr "Todos"
 
-#: ../data/xfce4-appfinder.desktop.in.h:2
-msgid "Find applications installed on the system."
-msgstr "Localize aplicativos instalados no sistema."
+#, fuzzy
+#~ msgid "Find and launch applications installed on the system"
+#~ msgstr "Localize aplicativos instalados no sistema."
+
+#~ msgid "Find applications installed on the system."
+#~ msgstr "Localize aplicativos instalados no sistema."
 
 #~ msgid "Failed to open display"
 #~ msgstr "Falhou ao abrir exibição"

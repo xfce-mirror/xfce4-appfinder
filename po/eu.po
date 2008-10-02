@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-02 17:36+0200\n"
+"POT-Creation-Date: 2008-10-02 17:55+0200\n"
 "PO-Revision-Date: 2008-08-28 12:38+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Euskara <debian-l10n-basque@lists.debian.org>\n"
@@ -59,7 +59,7 @@ msgstr ""
 msgid "Application Finder"
 msgstr "Aplikazio bilatzailea"
 
-#: ../src/xfce-appfinder-window.c:259
+#: ../src/xfce-appfinder-window.c:259 ../data/xfce4-appfinder.desktop.in.h:2
 #, fuzzy
 msgid "Find and launch applications installed on your system"
 msgstr "Bilatu sisteman instalatutako aplikazioak."
@@ -88,24 +88,28 @@ msgstr ""
 
 #: ../src/xfce-appfinder-window.c:736
 #, c-format
-msgid "Could not load menu from %s. Reason: "
+msgid "Could not load menu from %s. Reason: %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:738
+#: ../src/xfce-appfinder-window.c:738 ../src/xfce-appfinder-window.c:747
 msgid "Could not load system menu"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:743
-msgid "Unable to load menu file"
+#: ../src/xfce-appfinder-window.c:745
+#, c-format
+msgid "Could not load menu from %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:755 ../src/xfce-appfinder-window.c:1012
+#: ../src/xfce-appfinder-window.c:760 ../src/xfce-appfinder-window.c:1017
 msgid "All"
 msgstr "Denak"
 
-#: ../data/xfce4-appfinder.desktop.in.h:2
-msgid "Find applications installed on the system."
-msgstr "Bilatu sisteman instalatutako aplikazioak."
+#, fuzzy
+#~ msgid "Find and launch applications installed on the system"
+#~ msgstr "Bilatu sisteman instalatutako aplikazioak."
+
+#~ msgid "Find applications installed on the system."
+#~ msgstr "Bilatu sisteman instalatutako aplikazioak."
 
 #~ msgid "Failed to open display"
 #~ msgstr "Huts pantaila irekitzean"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-02 17:36+0200\n"
+"POT-Creation-Date: 2008-10-02 17:55+0200\n"
 "PO-Revision-Date: 2008-07-28 23:54+0900\n"
 "Last-Translator: ByungHyun Choi <byunghyunchoi@debianusers.org>\n"
 "Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge."
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Application Finder"
 msgstr "응용프로그램 검색"
 
-#: ../src/xfce-appfinder-window.c:259
+#: ../src/xfce-appfinder-window.c:259 ../data/xfce4-appfinder.desktop.in.h:2
 #, fuzzy
 msgid "Find and launch applications installed on your system"
 msgstr "시스템에 설치된 응용프로그램 찾기"
@@ -86,24 +86,28 @@ msgstr ""
 
 #: ../src/xfce-appfinder-window.c:736
 #, c-format
-msgid "Could not load menu from %s. Reason: "
+msgid "Could not load menu from %s. Reason: %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:738
+#: ../src/xfce-appfinder-window.c:738 ../src/xfce-appfinder-window.c:747
 msgid "Could not load system menu"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:743
-msgid "Unable to load menu file"
+#: ../src/xfce-appfinder-window.c:745
+#, c-format
+msgid "Could not load menu from %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:755 ../src/xfce-appfinder-window.c:1012
+#: ../src/xfce-appfinder-window.c:760 ../src/xfce-appfinder-window.c:1017
 msgid "All"
 msgstr "모두"
 
-#: ../data/xfce4-appfinder.desktop.in.h:2
-msgid "Find applications installed on the system."
-msgstr "시스템에 설치된 응용프로그램 찾기"
+#, fuzzy
+#~ msgid "Find and launch applications installed on the system"
+#~ msgstr "시스템에 설치된 응용프로그램 찾기"
+
+#~ msgid "Find applications installed on the system."
+#~ msgstr "시스템에 설치된 응용프로그램 찾기"
 
 #~ msgid "Failed to open display"
 #~ msgstr "디스플레이를 열지 못 했습니다."

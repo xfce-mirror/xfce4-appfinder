@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-02 17:36+0200\n"
+"POT-Creation-Date: 2008-10-02 17:55+0200\n"
 "PO-Revision-Date: 2006-10-24 16:55+0530\n"
 "Last-Translator: sonam rinchen <somindruk@druknet.bt>\n"
 "Language-Team: dzongkha <pgeyleg@dit.gov.bt>\n"
@@ -61,7 +61,7 @@ msgstr ""
 msgid "Application Finder"
 msgstr "ཨེཀསི་ཨེཕ་སི་ཨི་༤་གི་དོན་ལས་གློག་རིམ་འཚོལ་བྱེད།"
 
-#: ../src/xfce-appfinder-window.c:259
+#: ../src/xfce-appfinder-window.c:259 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr ""
 
@@ -89,24 +89,21 @@ msgstr "སེལ་འཐུ་འབད་ཡོད་པའི་གློག
 
 #: ../src/xfce-appfinder-window.c:736
 #, c-format
-msgid "Could not load menu from %s. Reason: "
+msgid "Could not load menu from %s. Reason: %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:738
+#: ../src/xfce-appfinder-window.c:738 ../src/xfce-appfinder-window.c:747
 msgid "Could not load system menu"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:743
-msgid "Unable to load menu file"
+#: ../src/xfce-appfinder-window.c:745
+#, c-format
+msgid "Could not load menu from %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:755 ../src/xfce-appfinder-window.c:1012
+#: ../src/xfce-appfinder-window.c:760 ../src/xfce-appfinder-window.c:1017
 msgid "All"
 msgstr "ཆ་མཉམ།"
-
-#: ../data/xfce4-appfinder.desktop.in.h:2
-msgid "Find applications installed on the system."
-msgstr ""
 
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "ཨེཀསི་ཨེཕ་སི་ཨི་༤ཨེཔ་ཕའིན་ཌར།"

@@ -733,14 +733,19 @@ _xfce_appfinder_window_reload_menu (XfceAppfinderWindow *window)
       if (G_LIKELY (error != NULL))
         {
           if (G_UNLIKELY (window->menu_filename != NULL))
-            xfce_err (_("Could not load menu from %s. Reason: "), window->menu_filename, error->message);
+            xfce_err (_("Could not load menu from %s. Reason: %s"), window->menu_filename, error->message);
           else
             xfce_err (_("Could not load system menu"));
 
           g_error_free (error);
         }
       else
-        xfce_err (_("Unable to load menu file"));
+        {
+          if (G_UNLIKELY (window->menu_filename != NULL))
+            xfce_err (_("Could not load menu from %s"), window->menu_filename);
+          else
+            xfce_err (_("Could not load system menu"));
+        }
 
       return NULL;
     }
