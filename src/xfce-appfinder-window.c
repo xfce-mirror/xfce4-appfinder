@@ -40,6 +40,11 @@
 
 
 
+#define DEFAULT_WINDOW_WIDTH        640
+#define DEFAULT_WINDOW_HEIGHT       480
+#define DEFAULT_CLOSE_AFTER_EXECUTE FALSE
+#define DEFAULT_CATEGORY            NULL
+
 #define ICON_SIZE 32
 
 #define ICON_COLUMN 0
@@ -53,6 +58,7 @@ enum
 {
   PROP_0,
   PROP_MENU_FILENAME,
+  PROP_CATEGORY,
 };
 
 
@@ -62,6 +68,10 @@ static void       xfce_appfinder_window_init               (XfceAppfinderWindow 
 static void       xfce_appfinder_window_constructed        (GObject                  *object);
 static void       xfce_appfinder_window_dispose            (GObject                  *object);
 static void       xfce_appfinder_window_finalize           (GObject                  *object);
+static void       xfce_appfinder_window_get_property       (GObject                  *object,
+                                                            guint                     prop_id,
+                                                            GValue                   *value,
+                                                            GParamSpec               *pspec);
 static void       xfce_appfinder_window_set_property       (GObject                  *object,
                                                             guint                     prop_id,
                                                             const GValue             *value,
@@ -76,7 +86,7 @@ static void       _xfce_appfinder_window_entry_focused     (GtkWidget           
                                                             GdkEventFocus            *event,
                                                             XfceAppfinderWindow      *window);
 static void       _xfce_appfinder_window_category_changed  (XfceAppfinderWindow      *window, 
-                                                            GtkButton                *button);
+                                                            GtkToggleButton          *button);
 static void       _xfce_appfinder_window_cursor_changed    (GtkTreeView              *tree_view,
                                                             XfceAppfinderWindow      *window);
 static void       _xfce_appfinder_window_drag_data_get     (GtkWidget                *widget,
@@ -105,6 +115,8 @@ static GdkPixbuf *_xfce_appfinder_window_create_item_icon  (XfceMenuItem        
 static gboolean   _xfce_appfinder_window_visible_func      (GtkTreeModel             *filter,
                                                             GtkTreeIter              *iter,
                                                             gpointer                  user_data);
+static void       _xfce_appfinder_window_set_category      (XfceAppfinderWindow      *window,
+                                                            const gchar              *category);
 
 
 
@@ -196,15 +208,26 @@ xfce_appfinder_window_class_init (XfceAppfinderWindowClass *klass)
   gobject_class->constructed = xfce_appfinder_window_constructed;
   gobject_class->dispose = xfce_appfinder_window_dispose;
   gobject_class->finalize = xfce_appfinder_window_finalize;
+  gobject_class->get_property = xfce_appfinder_window_get_property;
   gobject_class->set_property = xfce_appfinder_window_set_property;
 
-  g_object_class_install_property (gobject_class, PROP_MENU_FILENAME,
+  g_object_class_install_property (gobject_class, 
+                                   PROP_MENU_FILENAME,
                                    g_param_spec_string ("menu-filename",
                                                         "menu-filename",
                                                         "menu-filename",
                                                         NULL,
                                                         G_PARAM_CONSTRUCT_ONLY |
                                                         G_PARAM_WRITABLE));
+
+  g_object_class_install_property (gobject_class, 
+                                   PROP_CATEGORY,
+                                   g_param_spec_string ("category",
+                                                        "category",
+                                                        "category",
+                                                        DEFAULT_CATEGORY,
+                                                        G_PARAM_CONSTRUCT |
+                                                        G_PARAM_READWRITE));
 }
 
 
@@ -235,7 +258,6 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   window->menu_filename = NULL;
   window->reload_thread = NULL;
   window->categories_group = NULL;
-  window->current_category = NULL;
 
   window->channel = xfconf_channel_get ("xfce4-appfinder");
 
@@ -244,8 +266,8 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_window_set_title (GTK_WINDOW (window), _("Application Finder"));
   gtk_window_set_icon_name (GTK_WINDOW (window), "xfce4-appfinder");
 
-  width = xfconf_channel_get_int (window->channel, "/window-width", 640);
-  height = xfconf_channel_get_int (window->channel, "/window-height", 480);
+  width = xfconf_channel_get_int (window->channel, "/window-width", DEFAULT_WINDOW_WIDTH);
+  height = xfconf_channel_get_int (window->channel, "/window-height", DEFAULT_WINDOW_HEIGHT);
 
   gtk_window_set_default_size (GTK_WINDOW (window), width, height);
   gtk_window_set_position (GTK_WINDOW (window), GTK_WIN_POS_CENTER);
@@ -353,7 +375,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_widget_show (check_button);
 
   xfconf_g_property_bind (window->channel, "/close-after-execute", G_TYPE_BOOLEAN, G_OBJECT (check_button), "active");
-  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (check_button), xfconf_channel_get_bool (window->channel, "/close-after-execute", TRUE));
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (check_button), xfconf_channel_get_bool (window->channel, "/close-after-execute", DEFAULT_CLOSE_AFTER_EXECUTE));
 
   bbox = gtk_hbutton_box_new ();
   gtk_box_set_spacing (GTK_BOX (bbox), 8);
@@ -381,7 +403,10 @@ static void
 xfce_appfinder_window_constructed (GObject *object)
 {
   XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (object);
+  
   xfce_menu_monitor_set_vtable (&menu_monitor_vtable, window);
+
+  xfconf_g_property_bind (window->channel, "/category", G_TYPE_STRING, G_OBJECT (window), "category");
 }
 
 
@@ -413,6 +438,28 @@ xfce_appfinder_window_finalize (GObject *object)
 
 
 static void
+xfce_appfinder_window_get_property (GObject    *object,
+                                    guint       prop_id,
+                                    GValue     *value,
+                                    GParamSpec *pspec)
+{
+  XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (object);
+
+  switch (prop_id)
+    {
+    case PROP_CATEGORY:
+      g_value_set_string (value, window->current_category);
+      break;
+
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+      break;
+    }
+}
+
+
+
+static void
 xfce_appfinder_window_set_property (GObject      *object,
                                     guint         prop_id,
                                     const GValue *value,
@@ -425,6 +472,10 @@ xfce_appfinder_window_set_property (GObject      *object,
     case PROP_MENU_FILENAME:
       g_free (window->menu_filename);
       window->menu_filename = g_strdup (g_value_get_string (value));
+      break;
+
+    case PROP_CATEGORY:
+      _xfce_appfinder_window_set_category (window, g_value_get_string (value));
       break;
 
     default:
@@ -499,16 +550,12 @@ _xfce_appfinder_window_entry_focused (GtkWidget           *entry,
 
 static void
 _xfce_appfinder_window_category_changed (XfceAppfinderWindow *window, 
-                                         GtkButton           *button)
+                                         GtkToggleButton     *button)
 {
   g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
 
-  g_free (window->current_category);
-  window->current_category = g_strdup (gtk_button_get_label (button));
-
-  gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (window->filter));
-
-  gtk_widget_set_sensitive (window->execute_button, FALSE);
+  if (gtk_toggle_button_get_active (button))
+    _xfce_appfinder_window_set_category (window, gtk_button_get_label (GTK_BUTTON (button)));
 }
 
 
@@ -700,9 +747,12 @@ _xfce_appfinder_window_load_menu (XfceAppfinderWindow *window,
           gtk_container_add (GTK_CONTAINER (window->categories_box), button);
           gtk_widget_show (button);
 
+          if (G_UNLIKELY (window->current_category != NULL && g_utf8_collate (window->current_category, name) == 0))
+            gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
+
           window->categories_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (button));
     
-          g_signal_connect_swapped (button, "clicked", G_CALLBACK (_xfce_appfinder_window_category_changed), window);
+          g_signal_connect_swapped (button, "toggled", G_CALLBACK (_xfce_appfinder_window_category_changed), window);
         }
     }
 
@@ -759,9 +809,12 @@ _xfce_appfinder_window_reload_menu (XfceAppfinderWindow *window)
 
   button = gtk_radio_button_new_with_label (NULL, _("All"));
   gtk_button_set_focus_on_click (GTK_BUTTON (button), FALSE);
-  g_signal_connect_swapped (button, "clicked", G_CALLBACK (_xfce_appfinder_window_category_changed), window);
+  g_signal_connect_swapped (button, "toggled", G_CALLBACK (_xfce_appfinder_window_category_changed), window);
   gtk_container_add (GTK_CONTAINER (window->categories_box), button);
   gtk_widget_show (button);
+
+  if (window->current_category == NULL || g_utf8_collate (window->current_category, _("All")) == 0)
+    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
 
   window->categories_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (button));
 
@@ -1028,4 +1081,25 @@ _xfce_appfinder_window_visible_func (GtkTreeModel *filter,
   g_free (category);
 
   return visible;
+}
+
+
+
+static void
+_xfce_appfinder_window_set_category (XfceAppfinderWindow *window,
+                                     const gchar         *category)
+{
+  g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
+
+  if (G_LIKELY (window->current_category != NULL))
+    if (G_UNLIKELY (g_utf8_collate (window->current_category, category) == 0))
+      return;
+      
+  g_free (window->current_category);
+  window->current_category = g_strdup (category);
+
+  gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (window->filter));
+  gtk_widget_set_sensitive (window->execute_button, FALSE);
+
+  g_object_notify (G_OBJECT (window), "category");
 }
