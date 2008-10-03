@@ -27,6 +27,8 @@
 #include <string.h>
 #endif
 
+#include <gdk/gdk.h>
+#include <gdk/gdkkeysyms.h>
 #include <gtk/gtk.h>
 
 #include <libxfce4util/libxfce4util.h>
@@ -84,6 +86,15 @@ static void       _xfce_appfinder_window_entry_activated   (GtkEntry            
                                                             XfceAppfinderWindow      *window);
 static void       _xfce_appfinder_window_entry_focused     (GtkWidget                *entry,
                                                             GdkEventFocus            *event,
+                                                            XfceAppfinderWindow      *window);
+static gboolean   _xfce_appfinder_window_entry_key_pressed (GtkWidget                *widget,
+                                                            GdkEventKey              *event,
+                                                            XfceAppfinderWindow      *window);
+static gboolean   _xfce_appfinder_window_radio_key_pressed (GtkWidget                *widget,
+                                                            GdkEventKey              *event,
+                                                            XfceAppfinderWindow      *window);
+static gboolean   _xfce_appfinder_window_view_key_pressed  (GtkWidget                *widget,
+                                                            GdkEventKey              *event,
                                                             XfceAppfinderWindow      *window);
 static void       _xfce_appfinder_window_category_changed  (XfceAppfinderWindow      *window, 
                                                             GtkToggleButton          *button);
@@ -319,6 +330,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   g_signal_connect (window->search_entry, "changed", G_CALLBACK (_xfce_appfinder_window_entry_changed), window);
   g_signal_connect (window->search_entry, "activate", G_CALLBACK (_xfce_appfinder_window_entry_activated), window);
   g_signal_connect (window->search_entry, "focus-in-event", G_CALLBACK (_xfce_appfinder_window_entry_focused), window);
+  g_signal_connect (window->search_entry, "key-press-event", G_CALLBACK (_xfce_appfinder_window_entry_key_pressed), window);
   gtk_container_add (GTK_CONTAINER (alignment), window->search_entry);
   gtk_widget_show (window->search_entry);
 
@@ -352,6 +364,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   g_signal_connect (window->tree_view, "cursor-changed", G_CALLBACK (_xfce_appfinder_window_cursor_changed), window);
   g_signal_connect_swapped (window->tree_view, "row-activated", G_CALLBACK (_xfce_appfinder_window_execute), window);
   g_signal_connect (window->tree_view, "drag-data-get", G_CALLBACK (_xfce_appfinder_window_drag_data_get), window);
+  g_signal_connect (window->tree_view, "key-press-event", G_CALLBACK (_xfce_appfinder_window_view_key_pressed), window);
   gtk_container_add (GTK_CONTAINER (scrollwin), window->tree_view);
   gtk_widget_show (window->tree_view);
 
@@ -517,14 +530,22 @@ _xfce_appfinder_window_entry_activated (GtkEntry            *entry,
                                         XfceAppfinderWindow *window)
 {
   GtkTreePath *path;
+  GtkTreePath *start;
+  GtkTreePath *end;
 
   g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
 
-  path = gtk_tree_path_new_first ();
-  gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->tree_view), path, NULL, FALSE);
-  gtk_tree_path_free (path);
+  if (G_LIKELY (gtk_tree_view_get_visible_range (GTK_TREE_VIEW (window->tree_view), &start, &end)))
+    {
+      path = gtk_tree_path_new_first ();
+      gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->tree_view), path, NULL, FALSE);
+      gtk_tree_path_free (path);
 
-  gtk_widget_grab_focus (window->tree_view);
+      gtk_tree_path_free (start);
+      gtk_tree_path_free (end);
+
+      gtk_widget_grab_focus (window->tree_view);
+    }
 }
 
 
@@ -544,6 +565,103 @@ _xfce_appfinder_window_entry_focused (GtkWidget           *entry,
     gtk_tree_selection_unselect_all (selection);
 
   gtk_widget_set_sensitive (window->execute_button, FALSE);
+}
+
+
+
+static gboolean
+_xfce_appfinder_window_entry_key_pressed (GtkWidget           *widget,
+                                          GdkEventKey         *event,
+                                          XfceAppfinderWindow *window)
+{
+  GtkWidget *child;
+  GList     *children;
+  gboolean   handled = FALSE;
+
+  g_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (window), FALSE);
+
+  if (event->keyval == GDK_Up || event->keyval == GDK_Down)
+    {
+      children = gtk_container_get_children (GTK_CONTAINER (window->categories_box));
+
+      if (G_LIKELY (children != NULL))
+        {
+          child = event->keyval == GDK_Down ? g_list_first (children)->data : g_list_last (children)->data;
+
+          if (G_LIKELY (GTK_IS_TOGGLE_BUTTON (child)))
+            {
+              gtk_widget_grab_focus (child);
+              gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (child), TRUE);
+
+              handled = TRUE;
+            }
+        }
+    }
+
+  return handled;
+}
+
+
+
+static gboolean
+_xfce_appfinder_window_radio_key_pressed (GtkWidget           *widget,
+                                          GdkEventKey         *event,
+                                          XfceAppfinderWindow *window)
+{
+  GList   *children;
+  gboolean entry_grab = FALSE;
+  gboolean handled = FALSE;
+
+  g_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (window), FALSE);
+
+  children = gtk_container_get_children (GTK_CONTAINER (window->categories_box));
+
+  switch (event->keyval)
+    {
+    case GDK_Up:
+    case GDK_Down:
+
+      if (G_LIKELY (children != NULL))
+        {
+          if (event->keyval == GDK_Up)
+            entry_grab = (widget == g_list_first (children)->data);
+          else
+            entry_grab = (widget == g_list_last (children)->data);
+
+          if (G_UNLIKELY (entry_grab))
+            {
+              gtk_widget_grab_focus (window->search_entry);
+              handled = TRUE;
+            }
+        }
+
+      break;
+    case GDK_Right:
+      _xfce_appfinder_window_entry_activated (GTK_ENTRY (window->search_entry), window);
+      handled = TRUE;
+    default:
+      break;
+    }
+
+  return handled;
+}
+
+
+
+static gboolean
+_xfce_appfinder_window_view_key_pressed (GtkWidget           *widget,
+                                         GdkEventKey         *event,
+                                         XfceAppfinderWindow *window)
+{
+  g_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (window), FALSE);
+
+  if (event->keyval == GDK_Left)
+    {
+      gtk_widget_grab_focus (window->search_entry);
+      return TRUE;
+    }
+  else
+    return FALSE;
 }
 
 
@@ -744,6 +862,7 @@ _xfce_appfinder_window_load_menu (XfceAppfinderWindow *window,
         {
           button = gtk_radio_button_new_with_label (window->categories_group, name);
           gtk_button_set_focus_on_click (GTK_BUTTON (button), FALSE);
+          g_signal_connect (button, "key-press-event", G_CALLBACK (_xfce_appfinder_window_radio_key_pressed), window);
           gtk_container_add (GTK_CONTAINER (window->categories_box), button);
           gtk_widget_show (button);
 
@@ -810,6 +929,7 @@ _xfce_appfinder_window_reload_menu (XfceAppfinderWindow *window)
   button = gtk_radio_button_new_with_label (NULL, _("All"));
   gtk_button_set_focus_on_click (GTK_BUTTON (button), FALSE);
   g_signal_connect_swapped (button, "toggled", G_CALLBACK (_xfce_appfinder_window_category_changed), window);
+  g_signal_connect (button, "key-press-event", G_CALLBACK (_xfce_appfinder_window_radio_key_pressed), window);
   gtk_container_add (GTK_CONTAINER (window->categories_box), button);
   gtk_widget_show (button);
 
