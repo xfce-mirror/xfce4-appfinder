@@ -1,3 +1,11 @@
+4.5.91
+======
+- Improved keyboard navigation.
+- Filesystem monitoring support based on thunar-vfs.
+- Remember last window size and category when closing the appfinder.
+- Add search icon to the search entry.
+- Translations updates: German (Jannis Pohlmann).
+
 4.5.90
 ======
 - Rewrite based on libxfce4menu.
