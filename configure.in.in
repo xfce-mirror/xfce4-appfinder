@@ -144,6 +144,7 @@ Makefile
 data/Makefile
 src/Makefile
 po/Makefile.in
+xfce4-appfinder.spec
 ])
 
 dnl ***************************

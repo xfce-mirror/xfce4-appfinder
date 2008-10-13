@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-07 17:19+0300\n"
+"POT-Creation-Date: 2008-10-13 23:40+0200\n"
 "PO-Revision-Date: 2008-10-07 17:23+0300\n"
 "Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
@@ -16,87 +16,87 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/main.c:42
+#: ../src/main.c:43
 msgid "Version information"
 msgstr "Versiotiedot"
 
-#: ../src/main.c:43
+#: ../src/main.c:44
 msgid "[MENUFILE]"
 msgstr "[VALIKKOTIEDOSTO]"
 
-#: ../src/main.c:64
+#: ../src/main.c:65
 #, c-format
 msgid "Type '%s --help' for usage information."
 msgstr "Saat käyttöohjeita kirjoittamalla \"%s --help\"."
 
-#: ../src/main.c:70
+#: ../src/main.c:71
 msgid "Unable to initialize GTK+."
 msgstr "GTK:n alustus ei onnistu."
 
-#: ../src/main.c:80
+#: ../src/main.c:81
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce:n kehitystiimi. Kaikki oikeudet pidätetään."
 
-#: ../src/main.c:81
+#: ../src/main.c:82
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Ilmoita vioista osoitteessa <%s>."
 
-#: ../src/main.c:97
+#: ../src/main.c:98
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
 msgstr "Ei voi yhdistää xfconf-taustaprosessiin. Syy: %s"
 
-#: ../src/main.c:101
+#: ../src/main.c:102
 msgid "Failed to connect to xfconf daemon."
 msgstr "Ei voi yhdistää xfconf-taustaprosessiin."
 
-#: ../src/xfce-appfinder-window.c:277 ../src/xfce-appfinder-window.c:291
+#: ../src/xfce-appfinder-window.c:279 ../src/xfce-appfinder-window.c:293
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Sovellusten hakutyökalu"
 
-#: ../src/xfce-appfinder-window.c:292 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:294 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Etsi ja käynnistä järjestelmään asennettuja sovelluksia"
 
-#: ../src/xfce-appfinder-window.c:315
+#: ../src/xfce-appfinder-window.c:317
 msgid "Filter"
 msgstr "Suodata"
 
-#: ../src/xfce-appfinder-window.c:338
+#: ../src/xfce-appfinder-window.c:340
 msgid "Categories"
 msgstr "Kategoriat"
 
-#: ../src/xfce-appfinder-window.c:386
+#: ../src/xfce-appfinder-window.c:388
 msgid "C_lose after execute"
 msgstr "S_ulje, kun sovellus suoritetaan"
 
-#: ../src/xfce-appfinder-window.c:779
+#: ../src/xfce-appfinder-window.c:789
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
 msgstr "Sovellusta %s ei voi suorittaa. Syy: %s"
 
-#: ../src/xfce-appfinder-window.c:783
+#: ../src/xfce-appfinder-window.c:793
 #, c-format
 msgid "Could not execute application %s"
 msgstr "Sovellusta %s ei voi suorittaa"
 
-#: ../src/xfce-appfinder-window.c:905
+#: ../src/xfce-appfinder-window.c:915
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "Valikkoa ei voi avata tiedostosta %s. Syy: %s"
 
-#: ../src/xfce-appfinder-window.c:907 ../src/xfce-appfinder-window.c:916
+#: ../src/xfce-appfinder-window.c:917 ../src/xfce-appfinder-window.c:926
 msgid "Could not load system menu"
 msgstr "Järjestelmävalikkoa ei voi avata"
 
-#: ../src/xfce-appfinder-window.c:914
+#: ../src/xfce-appfinder-window.c:924
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Valikkoa ei voi avata kohteesta %s"
 
-#: ../src/xfce-appfinder-window.c:929 ../src/xfce-appfinder-window.c:936
-#: ../src/xfce-appfinder-window.c:1190
+#: ../src/xfce-appfinder-window.c:939 ../src/xfce-appfinder-window.c:946
+#: ../src/xfce-appfinder-window.c:1200
 msgid "All"
 msgstr "Kaikki"

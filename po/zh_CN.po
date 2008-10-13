@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-02 17:55+0200\n"
+"POT-Creation-Date: 2008-10-13 23:40+0200\n"
 "PO-Revision-Date: 2006-04-20 21:40+0800\n"
 "Last-Translator: Jick Nan <jick.nan@gmail.com>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
@@ -19,89 +19,90 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/main.c:42
+#: ../src/main.c:43
 #, fuzzy
 msgid "Version information"
 msgstr "更多信息..."
 
-#: ../src/main.c:43
+#: ../src/main.c:44
 msgid "[MENUFILE]"
 msgstr ""
 
-#: ../src/main.c:64
+#: ../src/main.c:65
 #, c-format
 msgid "Type '%s --help' for usage information."
 msgstr ""
 
-#: ../src/main.c:70
+#: ../src/main.c:71
 msgid "Unable to initialize GTK+."
 msgstr ""
 
-#: ../src/main.c:80
+#: ../src/main.c:81
 msgid "The Xfce development team. All rights reserved."
 msgstr ""
 
-#: ../src/main.c:81
+#: ../src/main.c:82
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr ""
 
-#: ../src/main.c:97
+#: ../src/main.c:98
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
 msgstr ""
 
-#: ../src/main.c:101
+#: ../src/main.c:102
 msgid "Failed to connect to xfconf daemon."
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:244 ../src/xfce-appfinder-window.c:258
+#: ../src/xfce-appfinder-window.c:279 ../src/xfce-appfinder-window.c:293
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #, fuzzy
 msgid "Application Finder"
 msgstr "Xfce 4的程序查找工具"
 
-#: ../src/xfce-appfinder-window.c:259 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:294 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:282
+#: ../src/xfce-appfinder-window.c:317
 msgid "Filter"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:304
+#: ../src/xfce-appfinder-window.c:340
 msgid "Categories"
 msgstr "类别"
 
-#: ../src/xfce-appfinder-window.c:351
+#: ../src/xfce-appfinder-window.c:388
 msgid "C_lose after execute"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:614
+#: ../src/xfce-appfinder-window.c:789
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:618
+#: ../src/xfce-appfinder-window.c:793
 #, fuzzy, c-format
 msgid "Could not execute application %s"
 msgstr "不能执行所选程序"
 
-#: ../src/xfce-appfinder-window.c:736
+#: ../src/xfce-appfinder-window.c:915
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:738 ../src/xfce-appfinder-window.c:747
+#: ../src/xfce-appfinder-window.c:917 ../src/xfce-appfinder-window.c:926
 msgid "Could not load system menu"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:745
+#: ../src/xfce-appfinder-window.c:924
 #, c-format
 msgid "Could not load menu from %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:760 ../src/xfce-appfinder-window.c:1017
+#: ../src/xfce-appfinder-window.c:939 ../src/xfce-appfinder-window.c:946
+#: ../src/xfce-appfinder-window.c:1200
 msgid "All"
 msgstr "全部"
 

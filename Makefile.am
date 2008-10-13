@@ -10,6 +10,7 @@ EXTRA_DIST = \
 	intltool-update.in
 
 DISTCLEANFILES = \
+	xfce4-appfinder.spec \
 	intltool-extract \
 	intltool-merge \
 	intltool-update

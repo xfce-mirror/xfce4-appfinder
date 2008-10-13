@@ -35,6 +35,7 @@
 #include "xfce-appfinder-window.h"
 
 
+
 static gboolean     opt_version = FALSE;
 static gchar      **opt_remaining = NULL;
 static const gchar *opt_menu_filename = NULL;

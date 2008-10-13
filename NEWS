@@ -4,7 +4,8 @@
 - Filesystem monitoring support based on thunar-vfs.
 - Remember last window size and category when closing the appfinder.
 - Add search icon to the search entry.
-- Translations updates: German (Jannis Pohlmann).
+- Translations updates: Basque, Brazilian Portuguese, Czech, Finnish, German,
+  Japanese, Hungarian, Sinhalese, Spanish.
 
 4.5.90
 ======

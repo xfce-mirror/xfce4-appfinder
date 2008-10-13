@@ -216,7 +216,9 @@ xfce_appfinder_window_class_init (XfceAppfinderWindowClass *klass)
   xfce_appfinder_window_parent_class = g_type_class_peek_parent (klass);
 
   gobject_class = G_OBJECT_CLASS (klass);
+#if GLIB_CHECK_VERSION (2,14,0)
   gobject_class->constructed = xfce_appfinder_window_constructed;
+#endif
   gobject_class->dispose = xfce_appfinder_window_dispose;
   gobject_class->finalize = xfce_appfinder_window_finalize;
   gobject_class->get_property = xfce_appfinder_window_get_property;
@@ -502,7 +504,15 @@ xfce_appfinder_window_set_property (GObject      *object,
 GtkWidget *
 xfce_appfinder_window_new (const gchar *filename)
 {
-  return g_object_new (XFCE_TYPE_APPFINDER_WINDOW, "menu-filename", filename, NULL);
+  GObject *object;
+  
+  object = g_object_new (XFCE_TYPE_APPFINDER_WINDOW, "menu-filename", filename, NULL);
+
+#if !GLIB_CHECK_VERSION (2,14,0)
+  xfce_appfinder_window_constructed (object);
+#endif
+
+  return GTK_WIDGET (object);
 }
 
 
