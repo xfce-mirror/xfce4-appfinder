@@ -1,53 +1,1824 @@
-2008-07-26 jasper
-	* autogen.sh: Improve git-svn version support.
-	* configure.ac.in: Version bump.
-	* src/appfinder.c: Minor layout changes. Don't show window before menu
-	is ready. Add option to keep application open after execution.
-	* po/am.po, po/ar.po, po/be.po, po/bn_IN.po, po/ca.po, po/cs.po,
-	po/da.po, po/de.po, po/dz.po, po/el.po, po/en_GB.po, po/eo.po,
-	po/es_MX.po, po/es.po, po/et.po, po/eu.po, po/fa.po, po/fi.po,
-	po/fr.po, po/gl.po, po/gu.po, po/he.po, po/hu.po, po/hy.po, po/id.po,
-	po/it.po, po/ja.po, po/ka.po, po/ko.po, po/lt.po, po/lv.po, po/mk.po,
-	po/mr.po, po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po,
-	po/ro.po, po/ru.po, po/si.po, po/sk.po, po/sq.po, po/sv.po, po/tr.po,
-	po/uk.po, po/ur.po, po/xfce4-appfinder.pot, po/zh_CN.po, po/zh_TW.po:
-	Update po files, one translatable string added.
+2008-10-13  jannis
 
-2008-05-18 jasper
+	* Makefile.am, NEWS, configure.in.in, po/am.po, po/ar.po, po/be.po,
+	  po/bn_IN.po, po/ca.po, po/cs.po, po/da.po, po/de.po, po/dz.po,
+	  po/el.po, po/en_GB.po, po/eo.po, po/es.po, po/es_MX.po, po/et.po,
+	  po/eu.po, po/fa.po, po/fi.po, po/fr.po, po/gl.po, po/gu.po,
+	  po/he.po, po/hu.po, po/hy.po, po/id.po, po/it.po, po/ja.po,
+	  po/ka.po, po/ko.po, po/lt.po, po/lv.po, po/mk.po, po/mr.po,
+	  po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po,
+	  po/ru.po, po/si.po, po/sk.po, po/sq.po, po/sv.po, po/tr.po,
+	  po/uk.po, po/ur.po, po/xfce4-appfinder.pot, po/zh_CN.po,
+	  po/zh_TW.po, src/main.c, src/xfce-appfinder-window.c:
+	  Fix spec file generation. Update NEWS. Fix usage of the
+	  constructed
+	  function (it's new in GLib 2.14). Update po files.
 
-	* configure.ac.in: Add dependency on libxfce4util (already linked
-	through libxfce4menu anyway).
-	* src/appfinder.c: Include libxfce4util.h for translations. Fix focus
-	grab of application list after pressing Enter on the filter entry.
-	Patch from Mike Massonnet.
+2008-10-12  piarres
 
-2008-01-06 jasper
+	* po/ChangeLog, po/eu.po:
+	  thunar & xfce4-appfinder Basque translation update
 
-	* src/appfinder.c: Don't take away focus on filter entry when
-	selecting another category.
+2008-10-09  sas
 
-2008-01-05 jasper
+	* po/hu.po:
+	  [intl:hu] little fixes
 
-	* configure.ac.in: Add svn revision to the version.
-	* src/appfinder.c: Don't set focus to filter entry after changing
-	category. Quit after successful execution of an application.
+2008-10-07  maximilian
 
-2008-01-05 jasper
+	* po/ChangeLog, po/ja.po, po/si.po:
+	  Translation updates:
+	  - xfce4-appfinder: ja, si
+	  - xfce-utils: ja, si
+	  - xfce4-mixer: si
+	  - xfce4-panel: ja, si
+	  - xfdesktop: ja
+	  - terminal: ja
+
+2008-10-07  jari
+
+	* po/ChangeLog, po/fi.po:
+	  Update Finnish translations.
+
+2008-10-06  majkl
+
+	* po/cs.po:
+	  Czech translation updated
+
+2008-10-05  omaciel
+
+	* po/ChangeLog, po/pt_BR.po:
+	  Updated Brazilian Portuguese translation.
+
+2008-10-05  maximilian
+
+	* po/ChangeLog, po/es.po:
+	  Updated and added Estonian translations for the libxfcegui4,
+	  terminal and mousepad trunk modules and libxfce4util branch 4.4
+	  module
+	  Updated Indonesian translations for the xfce-utils, xfce4-mixer,
+	  xarchiver, xfwm4, xfcalendar and xfdesktop trunk modules
+	  Updated and added Spanish translations for the xfce4-appfinder,
+	  squeeze, libexo, xfce-utils, libxfce4menu, xfce4-session,
+	  xfce4-mixer, libxfce4util, libxfce4ui, xfce4-icon-theme, thunar,
+	  libxfcegui4, xfce4-panel, xfdesktop, xfce4-trigger-launcher,
+	  terminal, mousepad and xfmedia trunk modules
+	  Updated Russian translation for the xarchiver, libexo and
+	  libxfcegui4 trunk modules
+	  Updated and added German translation of the xfce4-settings and
+	  xfwm4 trunk modules
+	  Updated Japanese translation for the thunar module
+	  Updated Sinhalese translation for the libxfcegui4 trunk module
+
+2008-10-04  jannis
+
+	* NEWS:
+	  Update NEWS.
+
+2008-10-03  jannis
+
+	* TODO, src/xfce-appfinder-window.c:
+	  Add more ways to navigate with the keyboard.
+	  
+	  In the search entry GDK_Up now selects the last category radio
+	  button,
+	  GDK_Down selects the first. Activating the entry only makes the
+	  tree
+	  view grab the focus if it's not empty.
+	  
+	  In the first radio button GDK_Up now activates the search entry
+	  focus.
+	  So does GDK_Down for the last radio button.
+
+2008-10-02  jannis
+
+	* src/xfce-appfinder-window.c:
+	  Remember the category when closing the appfinder or rebuilding
+	  the menu.
+	* data/xfce4-appfinder.desktop.in, po/am.po, po/ar.po, po/be.po,
+	  po/bn_IN.po, po/ca.po, po/cs.po, po/da.po, po/de.po, po/dz.po,
+	  po/el.po, po/en_GB.po, po/eo.po, po/es.po, po/es_MX.po, po/et.po,
+	  po/eu.po, po/fa.po, po/fi.po, po/fr.po, po/gl.po, po/gu.po,
+	  po/he.po, po/hu.po, po/hy.po, po/id.po, po/it.po, po/ja.po,
+	  po/ka.po, po/ko.po, po/lt.po, po/lv.po, po/mk.po, po/mr.po,
+	  po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po,
+	  po/ru.po, po/si.po, po/sk.po, po/sq.po, po/sv.po, po/tr.po,
+	  po/uk.po, po/ur.po, po/xfce4-appfinder.pot, po/zh_CN.po,
+	  po/zh_TW.po, src/xfce-appfinder-window.c:
+	  Improve and merge strings.
+	* AUTHORS, TODO, autogen.sh, configure.ac.in, configure.in.in,
+	  po/POTFILES.in, po/am.po, po/ar.po, po/be.po, po/bn_IN.po,
+	  po/ca.po, po/cs.po, po/da.po, po/de.po, po/dz.po, po/el.po,
+	  po/en_GB.po, po/eo.po, po/es.po, po/es_MX.po, po/et.po, po/eu.po,
+	  po/fa.po, po/fi.po, po/fr.po, po/gl.po, po/gu.po, po/he.po,
+	  po/hu.po, po/hy.po, po/id.po, po/it.po, po/ja.po, po/ka.po,
+	  po/ko.po, po/lt.po, po/lv.po, po/mk.po, po/mr.po, po/nl.po,
+	  po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po,
+	  po/si.po, po/sk.po, po/sq.po, po/sv.po, po/tr.po, po/uk.po,
+	  po/ur.po, po/xfce4-appfinder.pot, po/zh_CN.po, po/zh_TW.po,
+	  src/Makefile.am, src/frap-icon-entry.c, src/frap-icon-entry.h,
+	  src/main.c, src/xfce-appfinder-window.c,
+	  src/xfce-appfinder-window.h:
+	  Rewrite for the sake of more object-orientated and flexible code.
+	  
+	  It should cover all the features the previous version offered. In
+	  addition it uses FrapIconEntry for the search entry and depends
+	  on
+	  ThunarVFS for filesystem monitoring support.
+
+2008-09-23  nick
+
+	* configure.ac.in:
+	  This way of defining the required autoconf version causes trouble
+	  here:
+	  
+	  /usr/bin/m4:configure.ac:42: bad expression in eval (bad input):
+	  (0) != (0r36:autoconf_+1)
+	  /usr/bin/m4:configure.ac:42: bad expression in eval (bad input):
+	  (0) != (0r36:minimum_+1)
+	  /usr/bin/m4:configure.ac:42: bad expression in eval (missing
+	  right parenthesis): (0) != (0r36:version()+0)
+
+2008-09-12  jannis
+
+	* NEWS:
+	  Update NEWS script for the alpha release.
+
+2008-09-09  maximilian
+
+	* po/ChangeLog, po/fr.po, po/id.po:
+	  Translations updates and new ones for trunk in es,fr,id
+
+2008-09-06  stephan
+
+	* configure.ac.in:
+	  Remove svn tag
+	  Remove xfce_4_6_alpha tag
+	  Bump dep version numbers
+
+2008-08-29  maximilian
+
+	* po/ChangeLog, po/de.po:
+	  Updated various pending translations (German,Korean and Slovene)
+
+2008-08-28  piarres
+
+	* po/ChangeLog, po/eu.po:
+	  Basque translation uypdate
+
+2008-08-22  stephan
+
+	* configure.ac.in:
+	  Bump version number
+	* configure.ac.in, src/appfinder.c:
+	  Bump version number
+	  Fix critical glib error
+
+2008-08-12  jari
+
+	* po/ChangeLog, po/fi.po:
+	  Updated Finnish translations.
+
+2008-08-10  maximilian
+
+	* po/ChangeLog, po/ko.po, po/pl.po:
+	  Translations updated and added in Indonesian, Korean and Polish.
+
+2008-07-27  omaciel
+
+	* po/ChangeLog, po/pt_BR.po:
+	  Updated Brazilian Portuguese translation.
+
+2008-07-27  jasper
+
+	* ChangeLog, configure.ac.in, po/am.po, po/ar.po, po/be.po,
+	  po/bn_IN.po, po/ca.po, po/cs.po, po/da.po, po/de.po, po/dz.po,
+	  po/el.po, po/en_GB.po, po/eo.po, po/es.po, po/es_MX.po, po/et.po,
+	  po/eu.po, po/fa.po, po/fi.po, po/fr.po, po/gl.po, po/gu.po,
+	  po/he.po, po/hu.po, po/hy.po, po/id.po, po/it.po, po/ja.po,
+	  po/ka.po, po/ko.po, po/lt.po, po/lv.po, po/mk.po, po/mr.po,
+	  po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po,
+	  po/ru.po, po/si.po, po/sk.po, po/sq.po, po/sv.po, po/tr.po,
+	  po/uk.po, po/ur.po, po/xfce4-appfinder.pot, po/zh_CN.po,
+	  po/zh_TW.po:
+	  Bump version number. Update po files: one string added.
+	* src/appfinder.c:
+	  Minor layout changes. Don't show window before menu is ready.
+	* src/appfinder.c:
+	  Add option to keep application open after execution.
+	* src/main.c:
+	  Rename function for (a bit more) clarity.
+	* README, src/appfinder.c, src/appfinder.h, src/main.c:
+	  Indentation update, spaces instead of tabs.
+	* autogen.sh:
+	  Better support for git-svn to get revision.
+
+2008-07-17  alnokta
+
+	* po/ar.po:
+	  Update Arabic translations
+
+2008-07-16  alnokta
+
+	* po/ar.po:
+	  Update Arabic translations
+
+2008-07-15  maximilian
+
+	* po/ChangeLog, po/gl.po:
+	  Translations added and updated (gl;sk)
+
+2008-07-09  mvd
+
+	* po/uk.po:
+	  Maxim Dziumanenko <dziumanenko@gmail.com>
+	  
+	  Updated Ukrainian translation
+
+2008-06-26  maximilian
+
+	* po/ChangeLog, po/gl.po:
+	  Translations added and updated for most trunk packages (gl)
+
+2008-06-22  mmassonnet
+
+	* po/ChangeLog, po/LINGUAS, po/id.po:
+	  update-po
+
+2008-05-27  erenturkay
+
+	* po/ChangeLog, po/tr.po:
+	  * update Turkish translation, I don't know why [MENULIST] string
+	  is used in main.c:63
+	  
+	  so, I leave it untranslated till I understand what it means :)
+
+2008-05-27  mmassonnet
+
+	* po/ChangeLog, po/LINGUAS, po/da.po, po/ja.po:
+	  update-po
+
+2008-05-18  jasper
+
+	* ChangeLog, configure.ac.in, src/appfinder.c:
+	  * configure.ac.in: Add dependency on libxfce4util (already linked
+	  through libxfce4menu anyway).
+	  * src/appfinder.c: Include libxfce4util.h for translations. Fix
+	  focus grab of application list after pressing Enter on the filter
+	  entry.
+	  Patch from Mike Massonnet.
+
+2008-05-13  mmassonnet
+
+	* po/ChangeLog, po/en_GB.po:
+	  update en_GB translations
+
+2008-05-02  piarres
+
+	* po/ChangeLog, po/eu.po:
+	  Basque translation update
+
+2008-04-12  mmassonnet
+
+	* po/ChangeLog, po/lv.po:
+	  Update Latvian translation
+
+2008-03-18  mmassonnet
+
+	* po/ChangeLog, po/pt_PT.po:
+	  Update Portuguese translation
+	* po/ChangeLog, po/ca.po:
+	  Update Catalan translation
+
+2008-03-12  pollux
+
+	* po/ChangeLog, po/de.po:
+	  Update German translations by Enrico Tröger
+
+2008-03-05  mmassonnet
+
+	* po/ChangeLog, po/am.po:
+	  Update Amharic translation
+
+2008-02-28  omaciel
+
+	* po/ChangeLog, po/pt_BR.po:
+	  Brazilian Portuguese translation updated by Fábio Nogueira
+	  <deb-user-ba@ubuntu.com>.
+
+2008-02-15  mmassonnet
+
+	* po/ChangeLog, po/LINGUAS, po/si.po:
+	  Merge Sinhala translation from xfce 4.4 branch to trunk
+	* po/ChangeLog, po/am.po, po/ar.po, po/be.po, po/bn_IN.po,
+	  po/ca.po, po/cs.po, po/de.po, po/dz.po, po/el.po, po/en_GB.po,
+	  po/eo.po, po/es.po, po/es_MX.po, po/et.po, po/eu.po, po/fa.po,
+	  po/fi.po, po/fr.po, po/gl.po, po/gu.po, po/he.po, po/hu.po,
+	  po/hy.po, po/it.po, po/ja.po, po/ka.po, po/ko.po, po/lt.po,
+	  po/lv.po, po/mk.po, po/mr.po, po/nl.po, po/pa.po, po/pl.po,
+	  po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po, po/sk.po, po/sq.po,
+	  po/sv.po, po/tr.po, po/uk.po, po/ur.po, po/xfce4-appfinder.pot,
+	  po/zh_CN.po, po/zh_TW.po:
+	  xfce4-appfinder: make update-po and add initial pot file
+
+2008-01-27  majkl
+
+	* po/cs.po:
+	  Czech translations updated
+
+2008-01-07  jari
+
+	* po/ChangeLog, po/fi.po:
+	  Added a Finnish translation for libxfce4menu and updated the
+	  translation
+	  for xfce4-appfinder.
+
+2008-01-06  jasper
+
+	* ChangeLog, src/appfinder.c:
+	  Don't take away focus on filter entry when selecting another
+	  category.
+
+2008-01-05  sas
+
+	* po/hu.po:
+	  hu trunk: little updates
+
+2008-01-05  jasper
+
+	* ChangeLog, configure.ac.in, src/appfinder.c:
+	  Add svn revision to the version. Don't set focus to filter entry
+	  after changing category. Quit after successful execution of an
+	  application.
+
+2008-01-05  mmassonnet
+
+	* po/ChangeLog, po/fr.po:
+	  xfce4-appfiner: update french translation
+
+2008-01-05  jasper
 
 	* AUTHORS, COPYING, ChangeLog, Makefile.am, NEWS, README, TODO,
-	autogen.sh, configure.ac.in, data/.svn/entries, data/.svn/format,
-	data/.svn/props/xfce4-appfinder.png.svn-work, data/Makefile.am,
-	data/xfce4-appfinder.desktop.in, data/xfce4-appfinder.png,
-	po/.svn/entries, po/.svn/format, po/ChangeLog, po/LINGUAS,
-	po/POTFILES.in, po/am.po, po/ar.po, po/be.po, po/bn_IN.po, po/ca.po,
-	po/cs.po, po/de.po, po/dz.po, po/el.po, po/en_GB.po, po/eo.po,
-	po/es.po, po/es_MX.po, po/et.po, po/eu.po, po/fa.po, po/fi.po,
-	po/fr.po, po/gl.po, po/gu.po, po/he.po, po/hu.po, po/hy.po, po/it.po,
-	po/ja.po, po/ka.po, po/ko.po, po/lt.po, po/lv.po, po/mk.po, po/mr.po,
-	po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po,
-	po/ru.po, po/sk.po, po/sq.po, po/sv.po, po/tr.po, po/uk.po, po/ur.po,
-	po/zh_CN.po, po/zh_TW.po, src/.svn/entries, src/.svn/format,
-	src/Makefile.am, src/appfinder.c, src/appfinder.h, src/main.c,
-	xfce4-appfinder.spec.in: Complete rewrite of xfce4-appfinder using
-	libxfce4menu and exo-open.
-	
+	  autogen.sh, configure.ac.in, data/Makefile.am,
+	  data/xfce4-appfinder.desktop.in, data/xfce4-appfinder.png,
+	  po/ChangeLog, po/LINGUAS, po/POTFILES.in, po/am.po, po/ar.po,
+	  po/be.po, po/bn_IN.po, po/ca.po, po/cs.po, po/de.po, po/dz.po,
+	  po/el.po, po/en_GB.po, po/eo.po, po/es.po, po/es_MX.po, po/et.po,
+	  po/eu.po, po/fa.po, po/fi.po, po/fr.po, po/gl.po, po/gu.po,
+	  po/he.po, po/hu.po, po/hy.po, po/it.po, po/ja.po, po/ka.po,
+	  po/ko.po, po/lt.po, po/lv.po, po/mk.po, po/mr.po, po/nl.po,
+	  po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po,
+	  po/sk.po, po/sq.po, po/sv.po, po/tr.po, po/uk.po, po/ur.po,
+	  po/zh_CN.po, po/zh_TW.po, src/Makefile.am, src/appfinder.c,
+	  src/appfinder.h, src/main.c, xfce4-appfinder.spec.in:
+	  Set svn:keywords property.
+	* AUTHORS, COPYING, ChangeLog, Makefile.am, NEWS, README, TODO,
+	  autogen.sh, configure.ac.in, data, data/Makefile.am,
+	  data/xfce4-appfinder.desktop.in, data/xfce4-appfinder.png, po,
+	  po/ChangeLog, po/LINGUAS, po/POTFILES.in, po/am.po, po/ar.po,
+	  po/be.po, po/bn_IN.po, po/ca.po, po/cs.po, po/de.po, po/dz.po,
+	  po/el.po, po/en_GB.po, po/eo.po, po/es.po, po/es_MX.po, po/et.po,
+	  po/eu.po, po/fa.po, po/fi.po, po/fr.po, po/gl.po, po/gu.po,
+	  po/he.po, po/hu.po, po/hy.po, po/it.po, po/ja.po, po/ka.po,
+	  po/ko.po, po/lt.po, po/lv.po, po/mk.po, po/mr.po, po/nl.po,
+	  po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po,
+	  po/sk.po, po/sq.po, po/sv.po, po/tr.po, po/uk.po, po/ur.po,
+	  po/zh_CN.po, po/zh_TW.po, src, src/Makefile.am, src/appfinder.c,
+	  src/appfinder.h, src/main.c, xfce4-appfinder.spec.in:
+	  Complete rewrite of xfce4-appfinder using libxfce4menu and
+	  exo-open.
+	* AUTHORS, BUGS, COPYING, ChangeLog, ChangeLog.old, INSTALL,
+	  Makefile.am, NEWS, README, TODO, autogen.sh, configure.in.in,
+	  doc, po, src, xfce4-appfinder.spec.in:
+	  Remove everything from trunk, before adding my rewrite.
+
+2007-12-23  pollux
+
+	* po/ChangeLog, po/pt_PT.po:
+	  Updated Portuguese translations by Nuno Miguel <nunis@netcabo.pt>
+
+2007-12-16  pollux
+
+	* src/main.c:
+	  use XfceTitledDialog instead of xfce_create_header
+
+2007-11-15  mmassonnet
+
+	* po/ChangeLog, po/LINGUAS, po/ur.po:
+	  Add Urdu translations to trunk (hope this is right *sigh*)
+
+2007-11-11  mmassonnet
+
+	* po/ChangeLog, po/lv.po:
+	  Update latvian
+
+2007-10-24  kelnos
+
+	* configure.in.in:
+	  remove trailing parens on AC_INIT version info to work around bug
+	  in intltool 0.35.x and 0.36.x
+
+2007-09-24  mmassonnet
+
+	* po/ChangeLog, po/LINGUAS, po/lv.po:
+	  * thunar, xfce4-panel: Update Korean translation
+	  * libxfce4menu, libxfcegui4, mousepad, squeeze, xfce4-appfinder,
+	  xfce4-icon-theme, xfce4-mixer, xfce4-terminal,
+	  xfce4-trigger-launcher,
+	  xfce-mcs-manager, xfce-utils: Add Latvian translation
+
+2007-09-06  maximilian
+
+	* po/ChangeLog, po/LINGUAS, po/am.po:
+	  Added a long waiting Amharic translation for trunk.
+
+2007-06-27  maximilian
+
+	* po/ChangeLog, po/pt_PT.po:
+	  * no_NO.po: Norwegian Bokmal translation update for the xfburn
+	  package
+	  * pt_PT.po: European Portuguese translation update for some
+	  packages in trunk
+	  * ka.po: Georgian translation update for the xfce-mcs-manager
+	  package (4.4)
+
+2007-06-10  maximilian
+
+	* po/ChangeLog:
+	  * nb_NO: Updated some Norwegian translations and added one for
+	  Xfmedia
+	  * pt_PT: Added European Portuguese translations
+	  * Changed my email address
+
+2007-04-09  maximilian
+
+	* po/fr.po:
+	  * fr.po: Fixed headers in trunk
+	  * Updated AUTHORS file in xfce-utils trunk and branch 4.4
+
+2007-04-05  paurullan
+
+	* po/ChangeLog, po/ca.po:
+	  i18n catalan update
+
+2007-03-28  maximilian
+
+	* po/ChangeLog, po/de.po, po/en_GB.po:
+	  * de.po: Nico Schümann minor fixes to the German translations
+	  * en_GB.po: Jeff Bailes updated the British English translations
+	  for trunk and branches
+
+2007-03-25  daichi
+
+	* po/ChangeLog, po/gl.po:
+	  Fixed.
+	* po/ChangeLog, po/mk.po:
+	  Removed executable attribute.
+
+2007-03-18  erenturkay
+
+	* po/ChangeLog:
+	  update ChangeLog
+
+2007-03-04  erenturkay
+
+	* po/tr.po:
+	  update Turkish translation
+
+2007-02-10  maximilian
+
+	* po/ChangeLog, po/LINGUAS:
+	  Verified all LINGUAS files and added Albanian language to it.
+
+2007-02-08  alnokta
+
+	* po/ChangeLog:
+	  Adding information to the ChangeLog
+	* po/ar.po:
+	  28 strings, 0 fuzzy, 0 not translated. initial commit.
+	* po/LINGUAS:
+	  Adding AR language code.
+
+2007-01-25  maximilian
+
+	* po/ChangeLog, po/sq.po:
+	  Added the Albanian translations by Besnik Bleta for the core
+	  packages. Updated some French translations
+
+2007-01-21  maximilian
+
+	* po/ChangeLog, po/ro.po:
+	  * fr.po: Minor changes to the French translations
+	  in xfce-utils, libxfce4util and mousepad
+	  * pl.po: Updated the Polish translation by Szymon Kałasz
+	  <szymon_maestro@gazeta.pl>
+	  in thunar and mousepad.
+	  * ro.po: Updated the Romanian translation by Mişu Moldovan
+	  <dumol@gnome.ro>
+	  in most core packages.
+
+2007-01-20  benny
+
+	* INSTALL, NEWS, po/be.po, po/bn_IN.po, po/ca.po, po/cs.po,
+	  po/de.po, po/dz.po, po/el.po, po/en_GB.po, po/eo.po, po/es.po,
+	  po/es_MX.po, po/et.po, po/eu.po, po/fa.po, po/fi.po, po/fr.po,
+	  po/gl.po, po/gu.po, po/he.po, po/hu.po, po/hy.po, po/it.po,
+	  po/ja.po, po/ka.po, po/ko.po, po/lt.po, po/mk.po, po/mr.po,
+	  po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po,
+	  po/ru.po, po/sk.po, po/sv.po, po/tr.po, po/uk.po,
+	  po/xfce4-appfinder.pot, po/zh_CN.po, po/zh_TW.po:
+	  Bump version. Update NEWS. Update Project-Id-Version.
+
+2007-01-19  olivier
+
+	* ChangeLog:
+	  Update ChangeLog
+	* ChangeLog, INSTALL, configure.in.in:
+	  Update version
+
+2007-01-19  nab
+
+	* po/ChangeLog, po/be.po:
+	  2007-01-19 Alexander Nyakhaychyk <nyakhaychyk@gmail.com>
+	  
+	  * be.po: Updated Belarusian Translation
+
+2007-01-18  eulex
+
+	* po/ChangeLog, po/sv.po:
+	  Updated Swedish translations for:
+	  * libexo
+	  * libxfcegui4
+	  * mousepad
+	  * thunar
+	  * xfcalendar
+	  * xfce4-appfinder
+	  * xfce4-panel
+	  * xfce-mcs-plugins
+	  * xfce-utils
+	  * xfdesktop
+	  * xfprint
+	  * xfwm4
+	  
+	  Also thus updated appropriate ChangeLog files.
+
+2006-12-29  aalam
+
+	* po/pa.po:
+	  update punjabi translation
+
+2006-12-25  maximilian
+
+	* po/ChangeLog, po/LINGUAS, po/mk.po:
+	  Added the new translations from the Macedonian team for plenty of
+	  packages, Merry Christmas
+
+2006-12-13  mantas
+
+	* po/lt.po:
+	  Updated lithuanian translation
+
+2006-12-09  jasper
+
+	* src/xfce4-appfinder.c:
+	  Patch by Gergan Penkov to fix a potential crash (bug #1882).
+	* src/inline-icon.h, src/main.c, src/xfce4-appfinder.c:
+	  Patch for themed icon support by Zenwalk (bug #2651). Seems like
+	  a nice improvement.
+
+2006-11-30  stavrosg
+
+	* po/ChangeLog, po/el.po:
+	  E-mail address change. Sorry for the noise.
+
+2006-11-04  benny
+
+	* configure.in.in, po/be.po, po/bn_IN.po, po/ca.po, po/cs.po,
+	  po/de.po, po/dz.po, po/el.po, po/en_GB.po, po/eo.po, po/es.po,
+	  po/es_MX.po, po/et.po, po/eu.po, po/fa.po, po/fi.po, po/fr.po,
+	  po/gl.po, po/gu.po, po/he.po, po/hu.po, po/hy.po, po/it.po,
+	  po/ja.po, po/ka.po, po/ko.po, po/lt.po, po/mr.po, po/nl.po,
+	  po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po,
+	  po/sk.po, po/sv.po, po/tr.po, po/uk.po, po/zh_CN.po, po/zh_TW.po:
+	  Bump version and requirements. Update Project-Id-Version.
+
+2006-10-28  paurullan
+
+	* po/ChangeLog, po/LINGUAS, po/dz.po:
+	  added whole Dzongkha translation
+	  
+	  congratulations to the dz team.
+
+2006-10-24  olivier
+
+	* configure.in.in:
+	  Update version
+
+2006-10-02  paurullan
+
+	* po/ChangeLog, po/ru.po:
+	  i18n Russian updated
+
+2006-09-08  gnu_sylvain
+
+	* po/ChangeLog, po/eo.po:
+	  Esperanto translations: fixed one fuzzy mark.
+
+2006-09-02  benny
+
+	* configure.in.in, po/be.po, po/bn_IN.po, po/ca.po, po/cs.po,
+	  po/de.po, po/el.po, po/en_GB.po, po/eo.po, po/es.po, po/es_MX.po,
+	  po/et.po, po/eu.po, po/fa.po, po/fi.po, po/fr.po, po/gl.po,
+	  po/gu.po, po/he.po, po/hu.po, po/hy.po, po/it.po, po/ja.po,
+	  po/ka.po, po/ko.po, po/lt.po, po/mr.po, po/nl.po, po/pa.po,
+	  po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po, po/sk.po,
+	  po/sv.po, po/tr.po, po/uk.po, po/xfce4-appfinder.pot,
+	  po/zh_CN.po, po/zh_TW.po:
+	  Bump version and requirements.
+	* po/ChangeLog, po/de.po:
+	  2006-09-02 Benedikt Meurer <benny@xfce.org>
+	  
+	  * de.po: Updated German translations by Enrico TrÃ¶ger
+	  <enrico.troeger@uvena.de>.
+
+2006-09-02  sas
+
+	* po/hu.po:
+	  hungarian updates
+
+2006-08-27  pollux
+
+	* po/ChangeLog, po/LINGUAS, po/ka.po:
+	  add Georgian translations
+
+2006-08-20  pollux
+
+	* po/gl.po:
+	  remove executable property from gl.po
+	* po/ChangeLog, po/LINGUAS, po/gl.po:
+	  Add Galician translations
+
+2006-07-30  pollux
+
+	* po/ChangeLog, po/cs.po:
+	  Updated Czech translations
+
+2006-07-22  gnu_sylvain
+
+	* po/ChangeLog, po/eo.po:
+	  Updated Esperanto translations with approval of Jarbas Araujo Jr
+	  <jarbasaraujojr@yahoo.com.br>.
+
+2006-07-19  gnu_sylvain
+
+	* po/eo.po:
+	  Added Esperanto translations from Jarbas Araujo Jr.
+	  <jarbasaraujojr at yahoo.com.br>
+	  - completing previous commit (r22487 - xfce4-appfinder/trunk/po)
+	  - reason: during commit r22487 I forgot to do 'svn add eo.po'
+	  beforehand.
+	* po/ChangeLog, po/LINGUAS:
+	  Added Esperanto translations from Jarbas Araujo Jr.
+	  <jarbasaraujojr@yahoo.com.br>.
+
+2006-07-09  pollux
+
+	* configure.in.in:
+	  bump all versions and dependencies to 4.3.90.2
+
+2006-06-12  hydonsingore
+
+	* po/ChangeLog, po/zh_TW.po:
+	  Update traditional Chinese translations; Modify personal e-mail
+	  address.
+
+2006-06-04  eulex
+
+	* po/ChangeLog:
+	  Changelogs for appfinder, exo, utils, mcs-plugins, mcs-manager,
+	  xfce4-session, xfce4-mixer, thunar, libgui, xfwm4, the panel,
+	  orage, trigger-launcher and terminal updated.
+	  Also couldn't resist to fix a small error in the xfce4-mixer
+	  Changelog.
+	  Didn't updated the changelog of xfprint, because I discovered
+	  that that translation wasn't updated, it had just slipped through
+	  the commit by mistake.
+
+2006-06-03  eulex
+
+	* po/sv.po:
+	  Merged Swedish translations (by me and Jens Hagerman) into the
+	  xfce svn.
+	  This includes updated translations of appfinder, xfce-utils,
+	  mcs-plugins,
+	  xfprint, xfce4-session, xfce4-mixer, thunar, libxfcegui4, xfwm4,
+	  xfce4-panel, xfdesktop, orage, xfce4-trigger-launcher and
+	  mcs-manager,
+	  and added translations for libexo and terminal.
+	  The appropriate LINGUAS files were also updated.
+
+2006-06-02  eduard
+
+	* src/xfce4-appfinder.c:
+	  Added check on parameters in hashtable creation
+	* src/xfce4-appfinder.c:
+	  Fix crash on hash table creation (BUG: 1882)
+
+2006-05-27  daichi
+
+	* po/LINGUAS:
+	  * xfcalendar/trunk/po/LINGUAS, xfce-utils/trunk/po/LINGUAS,
+	  xfce4-appfinder/trunk/po/LINGUAS, xfce4-session/trunk/po/LINGUAS:
+	  Added a newline at the end of file.
+	  * xfce-mcs-manager/trunk/po/LINGUAS: Removed an extra white
+	  space.
+	  * xfce4-trigger-launcher/trunk/po/LINGUAS,
+	  xfwm4/trunk/po/LINGUAS:
+	  Removed an extra white line.
+
+2006-05-25  pollux
+
+	* autogen.sh, configure.ac, configure.in.in, po/LINGUAS:
+	  * add LINGUAS support
+	  * update svn:ignore
+
+2006-05-23  daichi
+
+	* po/ChangeLog, po/fi.po:
+	  Changed an address.
+
+2006-05-18  eduard
+
+	* src/main.c:
+	  Resize disabled on information window
+
+2006-05-07  daichi
+
+	* po/ChangeLog, po/cs.po:
+	  Added/Updated Czech translations by Michal Varady
+	  <miko.vaji@gmail.com>.
+
+2006-05-05  daichi
+
+	* po/be.po, po/bn_IN.po, po/ca.po, po/cs.po, po/de.po, po/el.po,
+	  po/en_GB.po, po/es.po, po/es_MX.po, po/et.po, po/eu.po, po/fa.po,
+	  po/fi.po, po/fr.po, po/gu.po, po/he.po, po/hu.po, po/hy.po,
+	  po/it.po, po/ja.po, po/ko.po, po/lt.po, po/mr.po, po/nl.po,
+	  po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po,
+	  po/sk.po, po/sv.po, po/tr.po, po/uk.po, po/zh_CN.po, po/zh_TW.po:
+	  Bump.
+
+2006-05-02  daichi
+
+	* po/ChangeLog:
+	  Removed timestamps so that a translator isn't bothered:
+	  "Then, what time is it now in UTC?"
+
+2006-05-02  hydonsingore
+
+	* po/ChangeLog, po/zh_TW.po:
+	  several traditional Chinese translations update.
+
+2006-04-30  daichi
+
+	* po/pl.po:
+	  Updated Polish translations by Piotr Malinski <admin@rk.edu.pl>.
+	* po/be.po, po/bn_IN.po, po/ca.po, po/cs.po, po/de.po, po/el.po,
+	  po/en_GB.po, po/es.po, po/es_MX.po, po/et.po, po/eu.po, po/fa.po,
+	  po/fi.po, po/fr.po, po/gu.po, po/he.po, po/hu.po, po/hy.po,
+	  po/it.po, po/ja.po, po/ko.po, po/lt.po, po/mr.po, po/nl.po,
+	  po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po,
+	  po/sk.po, po/sv.po, po/tr.po, po/uk.po, po/xfce4-appfinder.pot,
+	  po/zh_CN.po, po/zh_TW.po:
+	  Updated.
+
+2006-04-29  eduard
+
+	* src/xfce4-appfinder.c:
+	  Bug fix on search. If there is no comment continue with the other
+	  elements
+	* src/xfce4-appfinder.c:
+	  Bug fix on search. Missing casefolding and AND instead of OR.
+	  Added search on executable command
+	* src/xfce4-appfinder.c:
+	  Added DND for XFdesktop4
+
+2006-04-29  hydonsingore
+
+	* po/ChangeLog, po/zh_TW.po:
+	  Update traditional Chinese translations for several packages.
+
+2006-04-25  mvd
+
+	* po/uk.po:
+	  2006-04-25 Maxim Dziumanenko <mvd@mylinux.ua>
+	  
+	  * Updated Ukrainian translation.
+
+2006-04-23  daichi
+
+	* po/ru.po:
+	  Updated Russian translations by Sergey Fedoseev
+	  <fedoseev.sergey@gmail.com>.
+
+2006-04-22  daichi
+
+	* po/zh_CN.po:
+	  Updated Simplified Chinese by Jick Nan <jick.nan@gmail.com>.
+
+2006-04-17  stavrosg
+
+	* po/el.po:
+	  Greek translations update
+
+2006-04-16  daichi
+
+	* po/be.po, po/bn_IN.po, po/ca.po, po/cs.po, po/de.po, po/el.po,
+	  po/en_GB.po, po/es.po, po/es_MX.po, po/et.po, po/eu.po, po/fa.po,
+	  po/fi.po, po/fr.po, po/gu.po, po/he.po, po/hu.po, po/hy.po,
+	  po/it.po, po/ja.po, po/ko.po, po/lt.po, po/mr.po, po/nl.po,
+	  po/pa.po, po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po,
+	  po/sk.po, po/sv.po, po/tr.po, po/uk.po, po/zh_CN.po, po/zh_TW.po:
+	  Bump.
+
+2006-04-16  benny
+
+	* ., Makefile.am, autogen.sh, configure.ac, doc, doc/C,
+	  doc/C/Makefile.am, doc/C/images, doc/C/images/Makefile.am,
+	  doc/C/xfce4-appfinder.xml, doc/Makefile.am, doc/fr,
+	  doc/fr/Makefile.am, doc/fr/images, doc/fr/images/Makefile.am,
+	  doc/fr/xfce4-appfinder.xml, po, po/be.po, po/bn_IN.po, po/ca.po,
+	  po/cs.po, po/de.po, po/el.po, po/en_GB.po, po/es.po, po/es_MX.po,
+	  po/et.po, po/eu.po, po/fa.po, po/fi.po, po/fr.po, po/gu.po,
+	  po/he.po, po/hu.po, po/hy.po, po/it.po, po/ja.po, po/ko.po,
+	  po/lt.po, po/mr.po, po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po,
+	  po/pt_PT.po, po/ro.po, po/ru.po, po/sk.po, po/sv.po, po/tr.po,
+	  po/uk.po, po/xfce4-appfinder.pot, po/zh_CN.po, po/zh_TW.po, src,
+	  src/Makefile.am, src/appfinder.h, src/inline-icon.h, src/main.c,
+	  src/main.h, src/xfce4-appfinder.c,
+	  src/xfce4-appfinder.desktop.in, src/xfce4-appfinder.h,
+	  xfce4-appfinder.spec.in:
+	  Update for 4.4beta1.
+
+2006-04-15  olivier
+
+	* ChangeLog:
+	  Update ChangeLog
+
+2006-04-15  daichi
+
+	* po/ca.po, po/el.po, po/he.po, po/hu.po:
+	  Bump, etc.
+	* po/ru.po:
+	  Updated Russian translations by Andrey Fedoseev
+	  <andrey.fedoseev@gmail.com>.
+	* po/ru.po:
+	  Updated Russian translations by Andrey Fedoseev
+	  <andrey.fedoseev@gmail.com>.
+	* configure.ac:
+	  Added missing language codes.
+
+2006-04-13  sas
+
+	* po/hu.po:
+	  hu: calendar, appfinder, icon-theme & panel updates
+
+2006-04-01  stavrosg
+
+	* po/el.po:
+	  Greek translations update & polish by Stathis Kamperis
+	  <ekamperi@auth.gr>
+
+2006-03-19  paurullan
+
+	* po/ca.po:
+	  [i18n] catalan
+	  seems a lot of work but they all are fuzzy
+
+2006-03-18  daichi
+
+	* po/ru.po:
+	  Added/Updated Russian translations by
+	  Andrey Fedoseev <andrey.fedoseev@gmail.com>,
+	  Sergey Fedoseev <fedoseev.sergey@gmail.com>.
+
+2006-03-04  daichi
+
+	* po/et.po:
+	  Updated.
+
+2006-03-02  daichi
+
+	* po/et.po:
+	  Added/Updated Estonian translations by Peeter Vois
+	  <Peeter.Vois@mail.ee>.
+
+2006-02-21  daichi
+
+	* configure.ac, po/sk.po:
+	  Added/Updated Slovak translations by Roman Moravcik
+	  <roman.moravcik@gmail.com>.
+
+2006-02-18  daichi
+
+	* po/fi.po, po/he.po, po/zh_CN.po:
+	  Updated.
+
+2006-02-16  pollux
+
+	* po/zh_CN.po:
+	  updated zh_CN translations
+
+2006-02-05  yuvaltanny
+
+	* po/he.po:
+	  Update Hebrew translations
+
+2006-02-02  daichi
+
+	* po/fi.po:
+	  Updated Finnish translations by Jari Rahkonen
+	  <jari.rahkonen@pp1.inet.fi>.
+
+2006-01-29  daichi
+
+	* po/el.po:
+	  Converted local charset to UTF-8.
+	* src/main.c:
+	  Removed executable attribute.
+	* po/be.po, po/bn_IN.po, po/ca.po, po/cs.po, po/de.po, po/el.po,
+	  po/en_GB.po, po/es.po, po/es_MX.po, po/et.po, po/eu.po, po/fa.po,
+	  po/fi.po, po/fr.po, po/gu.po, po/he.po, po/hy.po, po/it.po,
+	  po/ja.po, po/ko.po, po/lt.po, po/mr.po, po/nl.po, po/pa.po,
+	  po/pl.po, po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po, po/sv.po,
+	  po/tr.po, po/uk.po, po/xfce4-appfinder.pot, po/zh_CN.po,
+	  po/zh_TW.po:
+	  * Updated.
+	  * Discarded obsolete translations.
+
+2006-01-18  daichi
+
+	* po/ChangeLog:
+	  Updated.
+
+2006-01-15  paurullan
+
+	* po/ca.po:
+	  some work on catalan translation (trunk)
+
+2006-01-13  daichi
+
+	* po/pl.po:
+	  Updated Polish translations by Piotr Malinski
+	  <riklaunim@gmail.com>.
+
+2006-01-11  daichi
+
+	* po/ca.po:
+	  Fixed an error.
+	* configure.ac:
+	  Added "ca" to XDT_I18N().
+
+2006-01-08  paurullan
+
+	* po/ca.po:
+	  catalan translation
+	  two new files created
+
+2006-01-08  eduard
+
+	* configure.ac:
+	  Updating version number
+	* README, configure.ac, src/xfce4-appfinder.c,
+	  src/xfce4-appfinder.h:
+	  Drag and drop added. I hope this will be used for adding new
+	  panel launchers and menueditor entries
+
+2006-01-07  daichi
+
+	* po/el.po, po/eu.po, po/pt_BR.po, po/uk.po:
+	  Updated copyright information.
+
+2005-12-21  daichi
+
+	* po/pt_BR.po:
+	  Updated Brazilian Portuguese translations by Adriano Winter Bess
+	  <awbess@gmail.com>.
+
+2005-11-28  daichi
+
+	* po/ChangeLog:
+	  Updated.
+
+2005-11-21  daichi
+
+	* po/be.po, po/bn_IN.po, po/cs.po, po/de.po, po/en_GB.po, po/es.po,
+	  po/es_MX.po, po/et.po, po/eu.po, po/fa.po, po/fi.po, po/fr.po,
+	  po/gu.po, po/he.po, po/hy.po, po/it.po, po/ja.po, po/ko.po,
+	  po/lt.po, po/mr.po, po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po,
+	  po/pt_PT.po, po/ro.po, po/ru.po, po/sv.po, po/tr.po, po/uk.po,
+	  po/xfce4-appfinder.pot, po/zh_CN.po, po/zh_TW.po:
+	  Updated.
+
+2005-11-21  stavrosg
+
+	* configure.ac, po/el.po:
+	  * Added Greek translation
+
+2005-11-21  daichi
+
+	* po/POTFILES.in:
+	  Updated POTFILES.in files.
+
+2005-11-07  daichi
+
+	* po/es.po:
+	  Updated Spanish translations by Rudy Godoy
+	  <rudy@kernel-panik.org>.
+
+2005-11-05  daichi
+
+	* po/ChangeLog:
+	  Deciphering.
+	* po/ChangeLog:
+	  Trimmed and updated.
+
+2005-11-03  daichi
+
+	* po/ko.po:
+	  Updated Korean translations by ByungHyun Choi
+	  <byunghyun.choi@gmail.com>.
+
+2005-10-30  daichi
+
+	* po/xfce4-appfinder.pot:
+	  Added again, because it requires for translators who are grabbing
+	  PO
+	  files from `trunk-po' module, without POT file, it's hard to
+	  create
+	  initial PO file from command line (e.g. msginit) or with GUI
+	  tools
+	  (e.g. KBabel, poEdit).
+
+2005-10-29  daichi
+
+	* po/fr.po:
+	  Updated French translations by Collet Etienne
+	  <xanaxlnx@gmail.com>.
+
+2005-10-23  piarres
+
+	* po/ChangeLog, po/eu.po:
+	  BAsque translation update
+
+2005-10-20  alex
+
+	* po/it.po:
+	  Update Italian translations.
+
+2005-10-19  daichi
+
+	* po/lt.po:
+	  Changed addresses.
+
+2005-10-16  daichi
+
+	* po/be.po, po/bn_IN.po, po/cs.po, po/de.po, po/en_GB.po, po/es.po,
+	  po/es_MX.po, po/et.po, po/eu.po, po/fa.po, po/fi.po, po/fr.po,
+	  po/gu.po, po/he.po, po/hy.po, po/it.po, po/ja.po, po/ko.po,
+	  po/lt.po, po/mr.po, po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po,
+	  po/pt_PT.po, po/ro.po, po/ru.po, po/sv.po, po/tr.po, po/uk.po,
+	  po/zh_CN.po, po/zh_TW.po:
+	  Updated.
+
+2005-10-15  daichi
+
+	* po/be.po, po/bn_IN.po, po/cs.po, po/de.po, po/en_GB.po, po/es.po,
+	  po/es_MX.po, po/et.po, po/eu.po, po/fa.po, po/fi.po, po/fr.po,
+	  po/gu.po, po/he.po, po/hy.po, po/it.po, po/ja.po, po/ko.po,
+	  po/lt.po, po/mr.po, po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po,
+	  po/pt_PT.po, po/ro.po, po/ru.po, po/sv.po, po/tr.po, po/uk.po,
+	  po/zh_CN.po, po/zh_TW.po:
+	  Updated.
+
+2005-10-14  daichi
+
+	* po/ja.po:
+	  Minor update.
+	* po/be.po, po/bn_IN.po, po/cs.po, po/de.po, po/en_GB.po, po/es.po,
+	  po/es_MX.po, po/et.po, po/eu.po, po/fa.po, po/fi.po, po/fr.po,
+	  po/gu.po, po/he.po, po/hy.po, po/it.po, po/ja.po, po/ko.po,
+	  po/lt.po, po/mr.po, po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po,
+	  po/pt_PT.po, po/ro.po, po/ru.po, po/sv.po, po/tr.po, po/uk.po,
+	  po/zh_CN.po, po/zh_TW.po:
+	  * Added fall back address at the `Language-Team', according to
+	  the
+	  http://www.iro.umontreal.ca/translation/registry.cgi?team=index
+	  
+	  * Modified initial header strings using template by `msginit'.
+	  
+	  * Modified initial comment strings using template by `msginit'.
+	  
+	  * Discarded obsolete translations.
+
+2005-10-14  jasper
+
+	* Makefile.am, configure.ac, m4, po/POTFILES.in, po/be.po,
+	  po/bn_IN.po, po/cs.po, po/de.po, po/en_GB.po, po/es.po,
+	  po/es_MX.po, po/et.po, po/eu.po, po/fa.po, po/fi.po, po/fr.po,
+	  po/gu.po, po/he.po, po/hy.po, po/it.po, po/ja.po, po/ko.po,
+	  po/lt.po, po/mr.po, po/nl.po, po/pa.po, po/pl.po, po/pt_BR.po,
+	  po/pt_PT.po, po/ro.po, po/ru.po, po/sv.po, po/tr.po, po/uk.po,
+	  po/xfce4-appfinder.pot, po/zh_CN.po, po/zh_TW.po,
+	  src/Makefile.am, src/appfinder.h, src/main.c,
+	  src/xfce4-appfinder.c, src/xfce4-appfinder.desktop,
+	  src/xfce4-appfinder.desktop.in, src/xfce4-appfinder.h:
+	  * Properly use xfce4-dev-tools
+	  * Use inttool for .desktop file
+	  * Make more functions static
+	  * Fix a couple of memory leaks
+	  * Make information dialog prettier ;-)
+
+2005-10-09  daichi
+
+	* po/ja.po:
+	  Keyword `Id' expansion.
+
+2005-09-13  benny
+
+	* src/xfce4-appfinder.desktop:
+	  Apply Daichis desktop fix for xfce4-appfinder. Second part of
+	  #1149.
+
+2005-09-09  daichi
+
+	* po/zh_TW.po:
+	  Changed translator's representation in spelling by the request.
+
+2005-08-18  daichi
+
+	* po/ja.po:
+	  Updated Japanese translations.
+
+2005-08-17  daichi
+
+	* po/lt.po:
+	  Fixed errors emitted by 'msgfmt -c'.
+	  
+	  Modified initial comment strings with template by 'msginit'.
+	* po/en_GB.po, po/es.po, po/es_MX.po, po/it.po, po/nl.po,
+	  po/pt_BR.po, po/zh_CN.po:
+	  Fixed errors emitted by 'msgfmt -c'.
+	  
+	  Converted local charset to UTF-8 at the 'Content-type:'.
+	  
+	  Added fall back address at the 'Language-Team: ', according to
+	  the
+	  http://www.iro.umontreal.ca/translation/registry.cgi?team=index
+	  
+	  Modified initial comment strings with template by 'msginit'.
+
+2005-08-13  daichi
+
+	* po/fi.po:
+	  Updated Finnish translations by Jari Rahkonen.
+
+2005-08-04  pollux
+
+	* configure.ac, po/hy.po:
+	  add some HY translations
+
+2005-07-28  pollux
+
+	* po/ja.po:
+	  update JA translations
+
+2005-07-06  pollux
+
+	* configure.ac, po/zh_TW.po:
+	  update zh_TW translations
+
+2005-07-04  pollux
+
+	* po/ko.po:
+	  update KO translations
+
+2005-05-17  eduard
+
+	* po/POTFILES.in, src/xfce4-appfinder.c:
+	  Sorting items into treeview by name
+	* src/xfce4-appfinder.c, src/xfce4-appfinder.h:
+	  .Desktop Caching and api improvement
+
+2005-05-16  eduard
+
+	* src/xfce4-appfinder.h:
+	  aligning macro XFCE_IS_APPFINDER
+
+2005-05-15  eduard
+
+	* src/af-constants.h, src/callbacks.c, src/callbacks.h:
+	  Remove unused files
+	* src/xfce4-appfinder.c, src/xfce4-appfinder.h:
+	  Appfinder widgetized - Please Test
+	* BUGS, TODO, src/Makefile.am, src/appfinder.h, src/main.c,
+	  src/main.h:
+	  Appfinder widgetized - Please Test
+
+2005-05-14  olivier
+
+	* po/ChangeLog:
+	  Update ChangeLog
+	* ChangeLog:
+	  Update ChangeLog
+
+2005-05-06  pollux
+
+	* configure.ac, po/bn_IN.po:
+	  add bn_IN translations
+	* configure.ac, po/mr.po:
+	  add MR translations
+
+2005-05-04  olivier
+
+	* ChangeLog:
+	  Update ChangeLog
+	* po/ChangeLog:
+	  Update ChangeLog
+
+2005-04-12  jasper
+
+	* Makefile.in, aclocal.m4, autogen.sh, compile, config.guess,
+	  config.h.in, config.sub, configure, depcomp, doc/C/Makefile.in,
+	  doc/C/images/Makefile.in, doc/Makefile.in, doc/fr/Makefile.in,
+	  doc/fr/images/Makefile.in, install-sh, ltmain.sh, missing,
+	  mkinstalldirs, po/Makefile.in.in, po/be.gmo, po/cs.gmo,
+	  po/de.gmo, po/en_GB.gmo, po/es.gmo, po/es_MX.gmo, po/et.gmo,
+	  po/eu.gmo, po/fa.gmo, po/fi.gmo, po/gu.gmo, po/he.gmo, po/it.gmo,
+	  po/ko.gmo, po/lt.gmo, po/nl.gmo, po/pa.gmo, po/pt_BR.gmo,
+	  po/pt_PT.gmo, po/ro.gmo, po/ru.gmo, po/tr.gmo, po/uk.gmo,
+	  po/zh_CN.gmo, src/Makefile.in:
+	  Move remaining modules to use dev tools and remove generated
+	  files
+
+2005-04-08  pollux
+
+	* configure.ac, po/sv.po:
+	  add SV translations
+
+2005-03-28  jasper
+
+	* configure, configure.ac, doc/C/xfce4-appfinder.html,
+	  doc/Makefile.am, doc/Makefile.in, doc/fr, doc/fr/Makefile.am,
+	  doc/fr/Makefile.in, doc/fr/images, doc/fr/images/Makefile.am,
+	  doc/fr/images/Makefile.in,
+	  doc/fr/images/appfinder-handle-popup.png,
+	  doc/fr/images/appfinder-item-popup.png,
+	  doc/fr/images/default_appfinder.png, doc/fr/xfce4-appfinder.html,
+	  doc/fr/xfce4-appfinder.xml:
+	  Add French docs
+
+2005-03-04  pollux
+
+	* configure.ac, po/pl.po:
+	  add PL translations
+
+2005-02-21  pollux
+
+	* configure.ac, po/ja.po:
+	  update JA translations
+
+2005-01-22  pollux
+
+	* po/fi.gmo, po/fi.po:
+	  update FI translations
+
+2005-01-19  eduard
+
+	* src/callbacks.c, src/main.c:
+	  fix bug 709
+
+2005-01-08  pollux
+
+	* configure, configure.ac, po/ru.gmo, po/ru.po,
+	  src/xfce4-appfinder.desktop:
+	  update RU translations
+
+2005-01-06  pollux
+
+	* configure, configure.ac, ltmain.sh, po/uk.gmo, po/uk.po:
+	  update UK translations
+
+2005-01-05  pollux
+
+	* po/he.gmo, po/he.po:
+	  update HE translations
+
+2005-01-02  olivier
+
+	* ChangeLog, Makefile.in, configure, configure.ac, ltmain.sh,
+	  po/xfce4-appfinder.pot:
+	  Update version and changelog
+
+2004-12-25  kelnos
+
+	* Makefile.am:
+	  fix distcheck-bz2
+
+2004-12-24  eduard
+
+	* src/af-constants.h, src/appfinder.h, src/callbacks.c, src/main.c,
+	  src/main.h:
+	  Build fix for --enable-debug=full
+
+2004-12-24  kelnos
+
+	* Makefile.am:
+	  add dist-bz2 and distcheck-bz2 targets
+
+2004-12-23  olivier
+
+	* doc/C/images/appfinder-item-popup.png,
+	  doc/C/images/default_appfinder.png:
+	  Themes and screenshots
+
+2004-12-23  pollux
+
+	* configure, configure.ac, po/et.gmo, po/et.po,
+	  src/xfce4-appfinder.desktop:
+	  update ET translations
+
+2004-12-22  benny
+
+	* ChangeLog, Makefile.am, Makefile.in:
+	  Update ChangeLog. Fix EXTRA_DIST.
+
+2004-12-21  jasper
+
+	* configure:
+	  Reporting for autotool duty
+
+2004-12-21  kelnos
+
+	* configure.ac:
+	  add czech translations
+	* po/cs.gmo, po/cs.po:
+	  add/update czech translations
+
+2004-12-20  jasper
+
+	* ChangeLog, configure, configure.ac:
+	  Update versions and ChangeLog
+
+2004-12-19  fleclainche
+
+	* doc/C/images/appfinder-handle-popup.png,
+	  doc/C/images/appfinder-item-popup.png,
+	  doc/C/images/default_appfinder.png:
+	  Documentation screenshots update
+
+2004-12-15  pollux
+
+	* configure, configure.ac, po/pt_BR.gmo, po/pt_BR.po:
+	  update pt_BR translations
+
+2004-12-14  pollux
+
+	* configure, configure.ac, po/ro.gmo, po/ro.po:
+	  add RO translations
+
+2004-12-11  benny
+
+	* doc/C/xfce4-appfinder.html:
+	  Somehow this was left out from the previous commit.
+	* ChangeLog, doc/C/Makefile.am, doc/C/images/Makefile.am,
+	  doc/C/images/Makefile.in,
+	  doc/C/images/appfinder-handle-popup.png,
+	  doc/C/images/appfinder-item-popup.png,
+	  doc/C/images/handle-popup.png, doc/C/images/item-popup.png,
+	  doc/C/xfce4-appfinder.xml:
+	  Fix conflicting image files that are also in xfce4-panel.
+
+2004-12-11  olivier
+
+	* po/xfce4-appfinder.pot:
+	  Various changes and small fixes
+
+2004-12-05  pollux
+
+	* configure, configure.ac, po/en_GB.gmo, po/en_GB.po:
+	  add en_GB translations
+	* src/xfce4-appfinder.desktop:
+	  update KO translations and add screenshots in xfprint doc
+
+2004-12-04  benny
+
+	* ChangeLog, Makefile.in, aclocal.m4, compile, config.guess,
+	  config.sub, configure, configure.ac, depcomp, doc/C/Makefile.in,
+	  doc/C/images/Makefile.in, doc/C/xfce4-appfinder.html,
+	  doc/C/xfce4-appfinder.xml, doc/Makefile.in, install-sh,
+	  ltmain.sh, missing, src/Makefile.in:
+	  Update configure and ChangeLog. Small typo/style fix in doc.
+
+2004-12-03  eduard
+
+	* Makefile.am, Makefile.in, aclocal.m4, compile, config.guess,
+	  config.sub, configure, configure.ac, depcomp, doc, doc/C,
+	  doc/C/Makefile.am, doc/C/Makefile.in, doc/C/images,
+	  doc/C/images/Makefile.am, doc/C/images/Makefile.in,
+	  doc/C/images/default_appfinder.png,
+	  doc/C/images/handle-popup.png, doc/C/images/item-popup.png,
+	  doc/C/xfce4-appfinder.html, doc/C/xfce4-appfinder.xml,
+	  doc/Makefile.am, doc/Makefile.in, doc/xfce-nochunk.xsl,
+	  install-sh, ltmain.sh, missing, src/Makefile.in, src/main.c:
+	  Doc addition and 506 559 bugs fixed
+
+2004-12-02  benny
+
+	* src/main.c:
+	  Fix typo.
+
+2004-11-28  pollux
+
+	* configure, configure.ac, po/tr.gmo, po/tr.po:
+	  update TR translations
+
+2004-11-26  pollux
+
+	* configure, configure.ac, ltmain.sh, po/ko.gmo, po/ko.po:
+	  update KO translations
+
+2004-11-13  olivier
+
+	* ChangeLog:
+	  Update ChangeLog
+
+2004-11-06  olivier
+
+	* ChangeLog, Makefile.in, aclocal.m4, compile, config.guess,
+	  config.sub, configure, configure.ac, depcomp, install-sh,
+	  missing, src/Makefile.in:
+	  Update automake/autoconf/libtool/gettext versions to generate the
+	  configure scripts and Makefiles,
+	  Update versions of all packages to 4.1.99.1 (ie 4.2 RC1),
+	  Update ChangeLogs.
+
+2004-10-30  olivier
+
+	* ChangeLog, ltmain.sh:
+	  Global update for 4.1.91 (Xfce 4.2 beta 2)
+
+2004-10-30  pollux
+
+	* configure, configure.ac, po/lt.gmo, po/lt.po:
+	  update LT translations
+
+2004-10-28  pollux
+
+	* configure, configure.ac, ltmain.sh, po/he.gmo, po/he.po,
+	  src/xfce4-appfinder.desktop:
+	  update HE translations
+
+2004-10-23  olivier
+
+	* ChangeLog:
+	  Update ChangeLog
+
+2004-10-22  olivier
+
+	* ChangeLog, configure, configure.ac, ltmain.sh:
+	  Updated versions and change logs
+	* src/xfce4-appfinder.desktop:
+	  Theme fixes
+	  update locale [fr] for desktop files
+
+2004-10-14  pollux
+
+	* configure, configure.ac, po/be.gmo, po/de.gmo, po/eu.gmo,
+	  po/fi.gmo, po/fi.po, po/gu.gmo, po/it.gmo, po/nl.gmo, po/pa.gmo,
+	  po/zh_CN.gmo, src/xfce4-appfinder.desktop:
+	  update FI translations
+
+2004-10-11  benny
+
+	* po/be.po, po/de.po, po/eu.po, po/gu.po, po/it.po, po/nl.po,
+	  po/pa.po, po/xfce4-appfinder.pot, po/zh_CN.po:
+	  update-po for Moe.
+
+2004-10-10  pollux
+
+	* configure, configure.ac, po/pt_PT.gmo, po/pt_PT.po:
+	  update pt_PT translations
+
+2004-10-09  eduard
+
+	* src/af-constants.h, src/appfinder.h, src/callbacks.c,
+	  src/callbacks.h:
+	  Trivial style fixes
+
+2004-10-09  pollux
+
+	* configure, configure.ac, po/fa.gmo, po/fa.po:
+	  update FA translations
+
+2004-10-08  edscott
+
+	* configure, configure.ac, po/es.gmo, po/es.po, po/es_MX.gmo,
+	  po/es_MX.po:
+	  add spanish language translations
+
+2004-10-07  benny
+
+	* Makefile.in, aclocal.m4, configure, m4/debug.m4,
+	  m4/glib-gettext.m4, m4/pkg.m4, src/Makefile.in:
+	  Added --enable-final (-O1 for GNU ld) as per Jaspers request.
+	  Added missing
+	  m4 files.
+
+2004-10-03  pollux
+
+	* configure, configure.ac, ltmain.sh, po/pa.gmo, po/pa.po:
+	  Punjabi translations (PA) from jaswinderlinux@netscape.net
+
+2004-10-02  olivier
+
+	* ChangeLog, Makefile.in, aclocal.m4, config.guess, config.sub,
+	  configure, depcomp, install-sh, ltmain.sh,
+	  po/xfce4-appfinder.pot, src/Makefile.in:
+	  Update all files for 4.2 beta 1
+
+2004-09-30  eduard
+
+	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
+	  configure.ac, depcomp, install-sh, ltmain.sh, src/Makefile.in:
+	  version update
+
+2004-09-29  pollux
+
+	* configure, configure.ac, po/zh_CN.gmo, po/zh_CN.po:
+	  updated zh_CN translations from yongtao yang
+	  <yongtao.yang@gmail.com>
+
+2004-09-28  eduard
+
+	* src/main.c:
+	  Fix the fix :-)
+	* src/main.c:
+	  Fix 339
+
+2004-09-23  pollux
+
+	* configure, configure.ac, po/gu.gmo, po/gu.po:
+	  add Gujarati translations (GU) from Ankit Patel
+	  <ankit@redhat.com>
+
+2004-09-23  jasper
+
+	* src/xfce4-appfinder.desktop:
+	  Add nl translations
+
+2004-09-22  kelnos
+
+	* src/xfce4-appfinder.desktop:
+	  add GenericName tags to settings .desktop files
+
+2004-09-21  jasper
+
+	* po/be.gmo, po/be.po, po/de.gmo, po/de.po, po/eu.gmo, po/eu.po,
+	  po/it.gmo, po/it.po, po/nl.gmo, po/nl.po:
+	  Run make update-po at Moe's request.
+
+2004-09-20  olivier
+
+	* ChangeLog, po/xfce4-appfinder.pot:
+	  Update all ChangeLogs
+
+2004-09-19  eduard
+
+	* src/main.c:
+	  kdedir support and better syntax
+
+2004-09-19  jasper
+
+	* configure, configure.ac, po/nl.gmo, po/nl.po:
+	  Update nl translations
+
+2004-09-18  pollux
+
+	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
+	  configure.ac, depcomp, install-sh, ltmain.sh, po/eu.gmo,
+	  po/eu.po, src/Makefile.in:
+	  update EU translations
+
+2004-09-18  moe
+
+	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
+	  configure.ac, depcomp, install-sh, ltmain.sh, po/de.gmo,
+	  po/de.po, src/Makefile.in:
+	  Adding German translation
+
+2004-09-18  eduard
+
+	* src/xfce4-appfinder.desktop:
+	  .desktop file missing (d'oh!)
+	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
+	  depcomp, install-sh, ltmain.sh, src/Makefile.am, src/Makefile.in:
+	  .desktop added and makefile changes
+
+2004-09-16  pollux
+
+	* configure, configure.ac, ltmain.sh, po/be.gmo, po/be.po:
+	  add BE translations from Ales Nyakhaychyk <nab@mail.by>
+
+2004-09-15  eduard
+
+	* src/appfinder.h, src/main.c:
+	  Basedir support added
+
+2004-08-24  eduard
+
+	* ChangeLog.old:
+	  forgot a file :-)
+	* Makefile.am, Makefile.in, po/Makefile.in.in,
+	  po/xfce4-appfinder.pot:
+	  make dist/rpm fixes
+
+2004-08-02  eduard
+
+	* src/callbacks.c:
+	  removed useless menu entries
+
+2004-07-29  eduard
+
+	* ChangeLog, TODO, src/callbacks.c, src/main.c:
+	  Internationalization fixes (on category liststore)
+
+2004-07-28  benny
+
+	* m4/depends.m4:
+	  Fixed (module)_FOUND bug reported by brian. Hopefully nothing
+	  else broke
+	  this time.
+
+2004-07-26  eduard
+
+	* po/it.gmo, po/it.po, src/Makefile.am, src/Makefile.in,
+	  src/af-constants.h, src/appfinder.h, src/callbacks.c,
+	  src/callbacks.h, src/main.c:
+	  Directory recursion added
+
+2004-07-24  benny
+
+	* m4/depends.m4:
+	  Readded XFCE_MCS_PLUGIN() again, dunno how I manage to remove it
+	  everytime
+	  I edit depends.m4!
+	* m4/depends.m4:
+	  XFCE_PANEL_PLUGIN had wrong panel version for the threaded test.
+	* m4/depends.m4:
+	  Extended the XFCE_PANEL_PLUGIN macro to include some magic for
+	  threaded panels.
+
+2004-07-21  benny
+
+	* m4/depends.m4:
+	  Readded the XFCE_MCS_PLUGIN macro. I didn't ment to remove it,
+	  tho.
+
+2004-07-20  benny
+
+	* m4/depends.m4:
+	  Modifed panel plugin check, so one (the installer) can choose to
+	  install
+	  into a different plugin dir.
+
+2004-07-18  pollux
+
+	* src/main.c:
+	  i18n fix
+
+2004-07-18  eduard
+
+	* po/it.po, po/xfce4-appfinder.pot, src/af-constants.h,
+	  src/appfinder.h, src/main.c:
+	  i18n fixes
+	* po, po/ChangeLog, po/Makefile.in.in, po/POTFILES.in, po/it.gmo,
+	  po/it.po, po/xfce4-appfinder.pot:
+	  po files
+	* Makefile.am, Makefile.in, aclocal.m4, compile, config.guess,
+	  config.h.in, config.sub, configure, configure.ac, depcomp,
+	  install-sh, ltmain.sh, missing, mkinstalldirs, src/Makefile.in,
+	  src/af-constants.h, src/main.c:
+	  i18n support
+	* src/main.c:
+	  Fix build issue
+
+2004-07-17  eduard
+
+	* src/main.c:
+	  Remove a useless thing
+	* ChangeLog, TODO, src/main.c:
+	  Code clean and resync with libxfce4gui
+
+2004-07-17  benny
+
+	* src/Makefile.am, src/af-constants.h, src/main.c:
+	  Fix make dist. First attempt to use XDG basedir spec, Eduard
+	  please have
+	  a look and fix it.
+
+2004-06-27  eduard
+
+	* Makefile.in, TODO, aclocal.m4, autogen.sh, src/appfinder.h,
+	  src/main.c:
+	  Added infobox to the right menu
+
+2004-06-24  eduard
+
+	* src/appfinder.h, src/main.c:
+	  Some clean and reorganization.
+	  Menu added
+
+2004-06-22  eduard
+
+	* AUTHORS, README, TODO, src/af-constants.h, src/appfinder.h,
+	  src/main.c:
+	  No item report added.
+	  A lot of small fixes and cleanup.
+	  Support for right click on treeview (just the callback for now).
+
+2004-06-21  eduard
+
+	* src/af-constants.h:
+	  Added af-constants.h file
+	* BUGS, TODO, src/inline-icon.h, src/main.c,
+	  src/xfce4-appfinder.png:
+	  It doesn't flicker anymore.
+	  Code clean.
+	  Icon added.
+	  Some bug fixed (segfaults ;-)
+
+2004-06-19  eduard
+
+	* src/main.c:
+	  Removed the labels (goto ugly stuff) and code improvements
+	* src/main.c:
+	  Fixed potential crash on categories callback
+
+2004-06-19  benny
+
+	* m4, m4/X11.m4, m4/debug.m4, m4/depends.m4, m4/i18n.m4:
+	  Added missing .m4 files.
+
+2004-06-19  eduard
+
+	* src/main.c:
+	  Speed improvements and code cleanup
+	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
+	  ltmain.sh, src/Makefile.in:
+	  Added autogen.sh and m4 directory
+	* src/main.c:
+	  Some other fixes on dentry. Deprecated things removed
+	* src/main.c:
+	  Some fixes on free()
+	* src/main.c:
+	  Code cleanup
+
+2004-06-14  eduard
+
+	* src/main.c:
+	  drag and drop fixes
+
+2004-06-13  eduard
+
+	* configure.ac, src/main.c:
+	  Drag and drop support
+	  Some bug fixed
+
+2004-05-19  eduard
+
+	* config.guess, config.sub, ltmain.sh:
+	  Added autogen.sh
+
+2004-05-18  eduard
+
+	* src/inline-icon.h, src/main.c:
+	  Fixed crash on some app execution
+
+2004-05-07  eduard
+
+	* AUTHORS, COPYING, ChangeLog, INSTALL, Makefile.am, Makefile.in,
+	  config.guess, config.h.in, config.sub, configure, configure.ac,
+	  install-sh, missing, mkinstalldirs, src, src/Makefile.am,
+	  src/Makefile.in, src/inline-icon.h, src/main.c, src/main.h,
+	  src/xfce4-appfinder.png, xfce4-appfinder.spec.in:
+	  Initial revision
+	* BUGS, NEWS, README, TODO, aclocal.m4, compile, depcomp,
+	  ltmain.sh:
+	  Initial revision
+
+2004-05-07  
+
+	* .:
+	  New repository initialized by cvs2svn.
+

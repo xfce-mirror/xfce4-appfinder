@@ -23,7 +23,7 @@ xfce4_appfinder_CFLAGS = 						\
 	$(LIBXFCE4UTIL_CFLAGS)						\
 	$(LIBXFCEGUI4_CFLAGS)						\
 	$(LIBXFCE4MENU_CFLAGS)						\
-	$(XFCONF_CFLAGS)						\
+	$(LIBXFCONF_CFLAGS)						\
 	$(THUNAR_VFS_CFLAGS)
 
 xfce4_appfinder_LDFLAGS = 						\
@@ -34,5 +34,5 @@ xfce4_appfinder_LDFLAGS = 						\
 	$(LIBXFCE4UTIL_LIBS)						\
 	$(LIBXFCEGUI4_LIBS)						\
 	$(LIBXFCE4MENU_LIBS)						\
-	$(XFCONF_LIBS)							\
+	$(LIBXFCONF_LIBS)							\
 	$(THUNAR_VFS_LIBS)
