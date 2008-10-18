@@ -1,3 +1,10 @@
+2008-10-18  Maximilian Schleiss <maximilian@xfce.org>
+
+	* es.po: Spanish translation update (Abel Martin)
+	* fr.po: French translation update
+	* id.po: Indonesian translation update (Andhika Padmawan)
+	* nb_NO.po, LINGUAS: Norwegian Bokmal translation added (Terje Uriansrud)
+
 2008-10-12  Piarres Beobide <pi@beobide.>
 
 	* eu.po: Basque translation update

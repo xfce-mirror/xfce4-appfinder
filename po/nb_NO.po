@@ -1,63 +1,64 @@
-# Indonesian translation of the xfce4-appfinder package
-# Copyright (C) 2004-2005 Eduard Roccatello.
-# This file is distributed under the same license as the xfce4-appfinder package.
-# Andhika Padmawan <andhika.padmawan@gmail.com>, 2008.
+# Norwegian Bokmal translations for xfce package.
+# Copyright (C) 2008 THE xfce'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xfce package.
+# Terje Uriansrud <ter@operamail.com>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Project-Id-Version: xfce 4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-13 23:40+0200\n"
-"PO-Revision-Date: 2008-10-11 19:47+0700\n"
-"Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
-"Language-Team: Indonesian <id@li.org>\n"
+"PO-Revision-Date: 2008-10-15 23:10+0200\n"
+"Last-Translator: Terje Uriansrud <ter@operamail.com>\n"
+"Language-Team: Norwegian Bokmal\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/main.c:43
 msgid "Version information"
-msgstr "Informasi versi"
+msgstr "Versjonsinformasjon"
 
 #: ../src/main.c:44
 msgid "[MENUFILE]"
-msgstr "[MENUBERKAS]"
+msgstr "[MENYFIL]"
 
 #: ../src/main.c:65
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr "Ketik '%s --help' untuk informasi penggunaan"
+msgstr "Skriv '%s --help' for hjelp om bruk."
 
 #: ../src/main.c:71
 msgid "Unable to initialize GTK+."
-msgstr "Tak dapat menginisialisasi GTK+"
+msgstr "Klarte ikke initialisere GTK+."
 
 #: ../src/main.c:81
 msgid "The Xfce development team. All rights reserved."
-msgstr "Tim pengembang Xfce. Hak cipta dilindungi undang-undang."
+msgstr "Xfce utviklingsteam. Alle rettigheter reservert."
 
 #: ../src/main.c:82
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Silakan laporkan kutu ke <%s>."
+msgstr "Rapporter feil til <%s>."
 
 #: ../src/main.c:98
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "Gagal menyambung ke jurik xfconf. Alasan: %s"
+msgstr "Klarte ikke koble til xfconf prosessen. Årsak: %s"
 
 #: ../src/main.c:102
 msgid "Failed to connect to xfconf daemon."
-msgstr "Gagal menyambung ke jurik xfconf."
+msgstr "Klarte ikke koble til xfconf prosessen"
 
 #: ../src/xfce-appfinder-window.c:279 ../src/xfce-appfinder-window.c:293
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "Pencari Aplikasi"
+msgstr "Programkatalog"
 
 #: ../src/xfce-appfinder-window.c:294 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Mencari dan menjalankan aplikasi terinstal di sistem anda"
+msgstr "Finn og kjør programmer installert på datamaskinen din"
 
 #: ../src/xfce-appfinder-window.c:317
 msgid "Filter"
@@ -65,53 +66,37 @@ msgstr "Filter"
 
 #: ../src/xfce-appfinder-window.c:340
 msgid "Categories"
-msgstr "Kategori"
+msgstr "Kategorier"
 
 #: ../src/xfce-appfinder-window.c:388
 msgid "C_lose after execute"
-msgstr "S_impan setelah eksekusi"
+msgstr "_Lukk etter start"
 
 #: ../src/xfce-appfinder-window.c:789
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
-msgstr "Tak dapat mengeksekusi aplikasi %s. Alasan: %s"
+msgstr "Klarte ikke starte programmet %s. Årsak: %s"
 
 #: ../src/xfce-appfinder-window.c:793
 #, c-format
 msgid "Could not execute application %s"
-msgstr "Tak dapat mengeksekusi aplikasi %s"
+msgstr "Klarte ikke starte programmet %s"
 
 #: ../src/xfce-appfinder-window.c:915
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
-msgstr "Tak dapat memuat menu dari %s. Alasan: %s"
+msgstr "Klarte ikke laste inn meny fra %s. Årsak: %s"
 
 #: ../src/xfce-appfinder-window.c:917 ../src/xfce-appfinder-window.c:926
 msgid "Could not load system menu"
-msgstr "Tak dapat memuat menu sistem"
+msgstr "Klarte ikke laste inn systemmeny"
 
 #: ../src/xfce-appfinder-window.c:924
 #, c-format
 msgid "Could not load menu from %s"
-msgstr "Tak dapat memuat menu dari %s"
+msgstr "Klarte ikke laste meny fra %s"
 
 #: ../src/xfce-appfinder-window.c:939 ../src/xfce-appfinder-window.c:946
 #: ../src/xfce-appfinder-window.c:1200
 msgid "All"
-msgstr "Semua"
-
-#, fuzzy
-#~ msgid "Find and launch applications installed on the system"
-#~ msgstr "Mencari aplikasi terinstal di sistem."
-
-#~ msgid "Find applications installed on the system."
-#~ msgstr "Mencari aplikasi terinstal di sistem."
-
-#~ msgid "Failed to open display"
-#~ msgstr "Gagal membuka tampilan"
-
-#~ msgid "Copyright (c) 2008"
-#~ msgstr "Hak cipta (c) 2008"
-
-#~ msgid "Applications"
-#~ msgstr "Aplikasi"
+msgstr "Alle"
