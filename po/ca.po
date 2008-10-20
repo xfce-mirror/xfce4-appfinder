@@ -9,35 +9,35 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-13 23:40+0200\n"
-"PO-Revision-Date: 2008-03-15 18:13+0100\n"
+"PO-Revision-Date: 2008-10-19 14:19+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/main.c:43
-#, fuzzy
 msgid "Version information"
-msgstr "Mostra la informació de la versió"
+msgstr "Informació de la versió"
 
 #: ../src/main.c:44
 msgid "[MENUFILE]"
-msgstr ""
+msgstr "[MENUFILE]"
 
 #: ../src/main.c:65
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr ""
+msgstr "Proveu «%s --help» per obtenir més informació."
 
 #: ../src/main.c:71
 msgid "Unable to initialize GTK+."
-msgstr ""
+msgstr "no s'ha pogut iniciar GTK+."
 
 #: ../src/main.c:81
 msgid "The Xfce development team. All rights reserved."
-msgstr ""
+msgstr "L'equip de desenvolupament d'Xfce. Tots els drets reservats."
 
 #: ../src/main.c:82
 #, c-format
@@ -47,11 +47,11 @@ msgstr "Aviseu dels errors a <%s>."
 #: ../src/main.c:98
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr ""
+msgstr "No s'ha pogut connectar al dimoni «xfconf». Motiu: %s"
 
 #: ../src/main.c:102
 msgid "Failed to connect to xfconf daemon."
-msgstr ""
+msgstr "No s'ha pogut connectar al dimoni «xfconf»."
 
 #: ../src/xfce-appfinder-window.c:279 ../src/xfce-appfinder-window.c:293
 #: ../data/xfce4-appfinder.desktop.in.h:1
@@ -59,9 +59,8 @@ msgid "Application Finder"
 msgstr "Cercador d'aplicacions"
 
 #: ../src/xfce-appfinder-window.c:294 ../data/xfce4-appfinder.desktop.in.h:2
-#, fuzzy
 msgid "Find and launch applications installed on your system"
-msgstr "Cerca les aplicacions instaŀlades."
+msgstr "Cerca i executa aplicacions instaŀlades al sistema"
 
 #: ../src/xfce-appfinder-window.c:317
 msgid "Filter"
@@ -73,31 +72,31 @@ msgstr "Categories"
 
 #: ../src/xfce-appfinder-window.c:388
 msgid "C_lose after execute"
-msgstr ""
+msgstr "_Tanca després d'executar"
 
 #: ../src/xfce-appfinder-window.c:789
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
-msgstr ""
+msgstr "No s'ha pogut executar l'aplicació %s. Motiu: %s"
 
 #: ../src/xfce-appfinder-window.c:793
-#, fuzzy, c-format
+#, c-format
 msgid "Could not execute application %s"
-msgstr "No s'ha pogut executar l'aplicació"
+msgstr "No s'ha pogut executar l'aplicació %s"
 
 #: ../src/xfce-appfinder-window.c:915
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
-msgstr ""
+msgstr "No s'ha pogut carregal el menú de %s. Motiu: %s"
 
 #: ../src/xfce-appfinder-window.c:917 ../src/xfce-appfinder-window.c:926
 msgid "Could not load system menu"
-msgstr ""
+msgstr "No s'ha pogut carregar el menú del sistema"
 
 #: ../src/xfce-appfinder-window.c:924
 #, c-format
 msgid "Could not load menu from %s"
-msgstr ""
+msgstr "No s'ha pogut carregar el menú de %s"
 
 #: ../src/xfce-appfinder-window.c:939 ../src/xfce-appfinder-window.c:946
 #: ../src/xfce-appfinder-window.c:1200
