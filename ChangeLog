@@ -1,3 +1,54 @@
+2008-10-22 21:33  lars
+
+	* po/da.po: update-po
+
+2008-10-22 21:32  lars
+
+	* po/ChangeLog, po/LINGUAS, po/da.po: update-po
+
+2008-06-22 10:02  mmassonnet
+
+	* po/ChangeLog, po/LINGUAS, po/id.po: update-po
+
+2008-05-14 13:05  mmassonnet
+
+	* po/LINGUAS: update kurdish translation
+
+2008-04-27 13:33  mmassonnet
+
+	* po/ChangeLog: Missed one ChangeLog entry
+
+2008-04-27 13:32  mmassonnet
+
+	* po/LINGUAS, po/ku.po: Add Kurdish translation
+
+2008-04-12 09:56  mmassonnet
+
+	* po/ChangeLog, po/lv.po: Update Latvian translation
+
+2008-02-23 19:28  mmassonnet
+
+	* po/ChangeLog, po/LINGUAS, po/ur.po: Merge Urdu translation from
+	  trunk (r26296)
+
+2008-02-15 13:39  mmassonnet
+
+	* po/LINGUAS: Add si to LINGUAS
+
+2008-02-14 22:55  stephan
+
+	* po/ChangeLog, po/si.po: Add Sinhala translations by Rashan
+	  Anushka <rashan.uoc@gmail.com>
+
+2007-12-23 16:50  pollux
+
+	* po/ChangeLog, po/sq.po: Updated Albanian translations by Besnik
+	  Bleta <bbleta@otenet.gr>
+
+2007-11-17 18:42  kelnos
+
+	* ChangeLog: update changelogs; ready to tag 4.4.2
+
 2007-11-17 17:47  kelnos
 
 	* INSTALL: various pre-release updates - po files, docs, etc.
@@ -186,7 +237,7 @@
 
 2007-01-21 14:08  maximilian
 
-	* : * fr.po: Minor changes to the French translations
+	* * fr.po: Minor changes to the French translations
 	  in xfce-utils, libxfce4util and mousepad
 	  * pl.po: Updated the Polish translation by Szymon Kałasz
 	  <szymon_maestro@gazeta.pl>
@@ -197,25 +248,25 @@
 
 2007-01-20 17:12  benny
 
-	* : Bump version. Update NEWS. Update Project-Id-Version.
+	* Bump version. Update NEWS. Update Project-Id-Version.
 
 2007-01-19 22:04  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2007-01-19 21:27  olivier
 
-	* : Update version
+	* Update version
 
 2007-01-19 01:19  nab
 
-	* : 2007-01-19 Alexander Nyakhaychyk <nyakhaychyk@gmail.com>
+	* 2007-01-19 Alexander Nyakhaychyk <nyakhaychyk@gmail.com>
 	  
 	  * be.po: Updated Belarusian Translation
 
 2007-01-18 23:10  eulex
 
-	* : Updated Swedish translations for:
+	* Updated Swedish translations for:
 	  * libexo
 	  * libxfcegui4
 	  * mousepad
@@ -233,91 +284,91 @@
 
 2006-12-29 00:52  aalam
 
-	* : update punjabi translation
+	* update punjabi translation
 
 2006-12-25 11:14  maximilian
 
-	* : Added the new translations from the Macedonian team for plenty
-	  of packages, Merry Christmas
+	* Added the new translations from the Macedonian team for plenty of
+	  packages, Merry Christmas
 
 2006-12-13 21:18  mantas
 
-	* : Updated lithuanian translation
+	* Updated lithuanian translation
 
 2006-12-09 11:38  jasper
 
-	* : Patch by Gergan Penkov to fix a potential crash (bug #1882).
+	* Patch by Gergan Penkov to fix a potential crash (bug #1882).
 
 2006-12-09 09:59  jasper
 
-	* : Patch for themed icon support by Zenwalk (bug #2651). Seems
-	  like a nice improvement.
+	* Patch for themed icon support by Zenwalk (bug #2651). Seems like
+	  a nice improvement.
 
 2006-11-30 18:23  stavrosg
 
-	* : E-mail address change. Sorry for the noise.
+	* E-mail address change. Sorry for the noise.
 
 2006-11-04 18:12  benny
 
-	* : Bump version and requirements. Update Project-Id-Version.
+	* Bump version and requirements. Update Project-Id-Version.
 
 2006-10-28 13:04  paurullan
 
-	* : added whole Dzongkha translation
+	* added whole Dzongkha translation
 	  
 	  congratulations to the dz team.
 
 2006-10-24 21:46  olivier
 
-	* : Update version
+	* Update version
 
 2006-10-02 17:18  paurullan
 
-	* : i18n Russian updated
+	* i18n Russian updated
 
 2006-09-08 19:53  gnu_sylvain
 
-	* : Esperanto translations: fixed one fuzzy mark.
+	* Esperanto translations: fixed one fuzzy mark.
 
 2006-09-02 15:44  benny
 
-	* : Bump version and requirements.
+	* Bump version and requirements.
 
 2006-09-02 12:24  benny
 
-	* : 2006-09-02 Benedikt Meurer <benny@xfce.org>
+	* 2006-09-02 Benedikt Meurer <benny@xfce.org>
 	  
 	  * de.po: Updated German translations by Enrico TrÃ¶ger
 	  <enrico.troeger@uvena.de>.
 
 2006-09-02 08:57  sas
 
-	* : hungarian updates
+	* hungarian updates
 
 2006-08-27 11:35  pollux
 
-	* : add Georgian translations
+	* add Georgian translations
 
 2006-08-20 18:54  pollux
 
-	* : remove executable property from gl.po
+	* remove executable property from gl.po
 
 2006-08-20 18:51  pollux
 
-	* : Add Galician translations
+	* Add Galician translations
 
 2006-07-30 08:31  pollux
 
-	* : Updated Czech translations
+	* Updated Czech translations
 
 2006-07-22 10:17  gnu_sylvain
 
-	* : Updated Esperanto translations with approval of Jarbas Araujo
-	  Jr <jarbasaraujojr@yahoo.com.br>.
+	* Updated Esperanto translations with approval of Jarbas Araujo Jr
+	  <jarbasaraujojr@yahoo.com.br>.
 
 2006-07-19 20:37  gnu_sylvain
 
-	* : Added Esperanto translations from Jarbas Araujo Jr.
+	* Added Esperanto translations from Jarbas Araujo Jr.
 	  <jarbasaraujojr at yahoo.com.br>
 	  - completing previous commit (r22487 - xfce4-appfinder/trunk/po)
 	  - reason: during commit r22487 I forgot to do 'svn add eo.po'
@@ -325,21 +376,21 @@
 
 2006-07-19 20:32  gnu_sylvain
 
-	* : Added Esperanto translations from Jarbas Araujo Jr.
+	* Added Esperanto translations from Jarbas Araujo Jr.
 	  <jarbasaraujojr@yahoo.com.br>.
 
 2006-07-09 09:56  pollux
 
-	* : bump all versions and dependencies to 4.3.90.2
+	* bump all versions and dependencies to 4.3.90.2
 
 2006-06-12 14:26  hydonsingore
 
-	* : Update traditional Chinese translations; Modify personal e-mail
+	* Update traditional Chinese translations; Modify personal e-mail
 	  address.
 
 2006-06-04 08:12  eulex
 
-	* : Changelogs for appfinder, exo, utils, mcs-plugins, mcs-manager,
+	* Changelogs for appfinder, exo, utils, mcs-plugins, mcs-manager,
 	  xfce4-session, xfce4-mixer, thunar, libgui, xfwm4, the panel,
 	  orage, trigger-launcher and terminal updated.
 	  Also couldn't resist to fix a small error in the xfce4-mixer
@@ -350,7 +401,7 @@
 
 2006-06-03 23:44  eulex
 
-	* : Merged Swedish translations (by me and Jens Hagerman) into the
+	* Merged Swedish translations (by me and Jens Hagerman) into the
 	  xfce svn.
 	  This includes updated translations of appfinder, xfce-utils,
 	  mcs-plugins,
@@ -362,15 +413,15 @@
 
 2006-06-02 11:32  eduard
 
-	* : Added check on parameters in hashtable creation
+	* Added check on parameters in hashtable creation
 
 2006-06-02 07:13  eduard
 
-	* : Fix crash on hash table creation (BUG: 1882)
+	* Fix crash on hash table creation (BUG: 1882)
 
 2006-05-27 16:04  daichi
 
-	* : * xfcalendar/trunk/po/LINGUAS, xfce-utils/trunk/po/LINGUAS,
+	* * xfcalendar/trunk/po/LINGUAS, xfce-utils/trunk/po/LINGUAS,
 	  xfce4-appfinder/trunk/po/LINGUAS, xfce4-session/trunk/po/LINGUAS:
 	  Added a newline at the end of file.
 	  * xfce-mcs-manager/trunk/po/LINGUAS: Removed an extra white
@@ -381,257 +432,256 @@
 
 2006-05-25 16:34  pollux
 
-	* : * add LINGUAS support
+	* * add LINGUAS support
 	  * update svn:ignore
 
 2006-05-23 02:45  daichi
 
-	* : Changed an address.
+	* Changed an address.
 
 2006-05-18 16:00  eduard
 
-	* : Resize disabled on information window
+	* Resize disabled on information window
 
 2006-05-07 09:26  daichi
 
-	* : Added/Updated Czech translations by Michal Varady
+	* Added/Updated Czech translations by Michal Varady
 	  <miko.vaji@gmail.com>.
 
 2006-05-05 21:01  daichi
 
-	* : Bump.
+	* Bump.
 
 2006-05-02 16:06  daichi
 
-	* : Removed timestamps so that a translator isn't bothered:
+	* Removed timestamps so that a translator isn't bothered:
 	  "Then, what time is it now in UTC?"
 
 2006-05-02 13:09  hydonsingore
 
-	* : several traditional Chinese translations update.
+	* several traditional Chinese translations update.
 
 2006-04-30 16:00  daichi
 
-	* : Updated Polish translations by Piotr Malinski
-	  <admin@rk.edu.pl>.
+	* Updated Polish translations by Piotr Malinski <admin@rk.edu.pl>.
 
 2006-04-30 08:36  daichi
 
-	* : Updated.
+	* Updated.
 
 2006-04-29 20:07  eduard
 
-	* : Bug fix on search. If there is no comment continue with the
-	  other elements
+	* Bug fix on search. If there is no comment continue with the other
+	  elements
 
 2006-04-29 20:00  eduard
 
-	* : Bug fix on search. Missing casefolding and AND instead of OR.
+	* Bug fix on search. Missing casefolding and AND instead of OR.
 	  Added search on executable command
 
 2006-04-29 15:09  eduard
 
-	* : Added DND for XFdesktop4
+	* Added DND for XFdesktop4
 
 2006-04-29 00:01  hydonsingore
 
-	* : Update traditional Chinese translations for several packages.
+	* Update traditional Chinese translations for several packages.
 
 2006-04-25 16:26  mvd
 
-	* : 2006-04-25 Maxim Dziumanenko <mvd@mylinux.ua>
+	* 2006-04-25 Maxim Dziumanenko <mvd@mylinux.ua>
 	  
 	  * Updated Ukrainian translation.
 
 2006-04-23 11:56  daichi
 
-	* : Updated Russian translations by Sergey Fedoseev
+	* Updated Russian translations by Sergey Fedoseev
 	  <fedoseev.sergey@gmail.com>.
 
 2006-04-22 09:53  daichi
 
-	* : Updated Simplified Chinese by Jick Nan <jick.nan@gmail.com>.
+	* Updated Simplified Chinese by Jick Nan <jick.nan@gmail.com>.
 
 2006-04-17 17:26  stavrosg
 
-	* : Greek translations update
+	* Greek translations update
 
 2006-04-16 10:47  daichi
 
-	* : Bump.
+	* Bump.
 
 2006-04-16 09:56  benny
 
-	* : Update for 4.4beta1.
+	* Update for 4.4beta1.
 
 2006-04-15 17:37  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2006-04-15 12:10  daichi
 
-	* : Bump, etc.
+	* Bump, etc.
 
 2006-04-15 10:24  daichi
 
-	* : Updated Russian translations by Andrey Fedoseev
+	* Updated Russian translations by Andrey Fedoseev
 	  <andrey.fedoseev@gmail.com>.
 
 2006-04-15 03:03  daichi
 
-	* : Updated Russian translations by Andrey Fedoseev
+	* Updated Russian translations by Andrey Fedoseev
 	  <andrey.fedoseev@gmail.com>.
 
 2006-04-15 01:42  daichi
 
-	* : Added missing language codes.
+	* Added missing language codes.
 
 2006-04-13 10:35  sas
 
-	* : hu: calendar, appfinder, icon-theme & panel updates
+	* hu: calendar, appfinder, icon-theme & panel updates
 
 2006-04-01 03:37  stavrosg
 
-	* : Greek translations update & polish by Stathis Kamperis
+	* Greek translations update & polish by Stathis Kamperis
 	  <ekamperi@auth.gr>
 
 2006-03-19 16:54  paurullan
 
-	* : [i18n] catalan
+	* [i18n] catalan
 	  seems a lot of work but they all are fuzzy
 
 2006-03-18 09:15  daichi
 
-	* : Added/Updated Russian translations by
+	* Added/Updated Russian translations by
 	  Andrey Fedoseev <andrey.fedoseev@gmail.com>,
 	  Sergey Fedoseev <fedoseev.sergey@gmail.com>.
 
 2006-03-04 11:10  daichi
 
-	* : Updated.
+	* Updated.
 
 2006-03-02 13:03  daichi
 
-	* : Added/Updated Estonian translations by Peeter Vois
+	* Added/Updated Estonian translations by Peeter Vois
 	  <Peeter.Vois@mail.ee>.
 
 2006-02-21 13:20  daichi
 
-	* : Added/Updated Slovak translations by Roman Moravcik
+	* Added/Updated Slovak translations by Roman Moravcik
 	  <roman.moravcik@gmail.com>.
 
 2006-02-18 13:43  daichi
 
-	* : Updated.
+	* Updated.
 
 2006-02-16 16:31  pollux
 
-	* : updated zh_CN translations
+	* updated zh_CN translations
 
 2006-02-05 17:53  yuvaltanny
 
-	* : Update Hebrew translations
+	* Update Hebrew translations
 
 2006-02-02 13:57  daichi
 
-	* : Updated Finnish translations by Jari Rahkonen
+	* Updated Finnish translations by Jari Rahkonen
 	  <jari.rahkonen@pp1.inet.fi>.
 
 2006-01-29 13:04  daichi
 
-	* : Converted local charset to UTF-8.
+	* Converted local charset to UTF-8.
 
 2006-01-29 13:02  daichi
 
-	* : Removed executable attribute.
+	* Removed executable attribute.
 
 2006-01-29 06:52  daichi
 
-	* : * Updated.
+	* * Updated.
 	  * Discarded obsolete translations.
 
 2006-01-18 17:48  daichi
 
-	* : Updated.
+	* Updated.
 
 2006-01-15 00:46  paurullan
 
-	* : some work on catalan translation (trunk)
+	* some work on catalan translation (trunk)
 
 2006-01-13 05:52  daichi
 
-	* : Updated Polish translations by Piotr Malinski
+	* Updated Polish translations by Piotr Malinski
 	  <riklaunim@gmail.com>.
 
 2006-01-11 12:02  daichi
 
-	* : Fixed an error.
+	* Fixed an error.
 
 2006-01-11 11:12  daichi
 
-	* : Added "ca" to XDT_I18N().
+	* Added "ca" to XDT_I18N().
 
 2006-01-08 23:25  paurullan
 
-	* : catalan translation
+	* catalan translation
 	  two new files created
 
 2006-01-08 21:42  eduard
 
-	* : Updating version number
+	* Updating version number
 
 2006-01-08 21:41  eduard
 
-	* : Drag and drop added. I hope this will be used for adding new
+	* Drag and drop added. I hope this will be used for adding new
 	  panel launchers and menueditor entries
 
 2006-01-07 09:40  daichi
 
-	* : Updated copyright information.
+	* Updated copyright information.
 
 2005-12-21 07:50  daichi
 
-	* : Updated Brazilian Portuguese translations by Adriano Winter
-	  Bess <awbess@gmail.com>.
+	* Updated Brazilian Portuguese translations by Adriano Winter Bess
+	  <awbess@gmail.com>.
 
 2005-11-28 15:19  daichi
 
-	* : Updated.
+	* Updated.
 
 2005-11-21 17:14  daichi
 
-	* : Updated.
+	* Updated.
 
 2005-11-21 16:34  stavrosg
 
-	* : * Added Greek translation
+	* * Added Greek translation
 
 2005-11-21 16:06  daichi
 
-	* : Updated POTFILES.in files.
+	* Updated POTFILES.in files.
 
 2005-11-07 13:13  daichi
 
-	* : Updated Spanish translations by Rudy Godoy
+	* Updated Spanish translations by Rudy Godoy
 	  <rudy@kernel-panik.org>.
 
 2005-11-05 14:59  daichi
 
-	* : Deciphering.
+	* Deciphering.
 
 2005-11-05 14:38  daichi
 
-	* : Trimmed and updated.
+	* Trimmed and updated.
 
 2005-11-03 13:48  daichi
 
-	* : Updated Korean translations by ByungHyun Choi
+	* Updated Korean translations by ByungHyun Choi
 	  <byunghyun.choi@gmail.com>.
 
 2005-10-30 13:44  daichi
 
-	* : Added again, because it requires for translators who are
-	  grabbing PO
+	* Added again, because it requires for translators who are grabbing
+	  PO
 	  files from `trunk-po' module, without POT file, it's hard to
 	  create
 	  initial PO file from command line (e.g. msginit) or with GUI
@@ -640,36 +690,36 @@
 
 2005-10-29 09:27  daichi
 
-	* : Updated French translations by Collet Etienne
+	* Updated French translations by Collet Etienne
 	  <xanaxlnx@gmail.com>.
 
 2005-10-23 21:40  piarres
 
-	* : BAsque translation update
+	* BAsque translation update
 
 2005-10-20 12:37  alex
 
-	* : Update Italian translations.
+	* Update Italian translations.
 
 2005-10-19 20:51  daichi
 
-	* : Changed addresses.
+	* Changed addresses.
 
 2005-10-16 22:19  daichi
 
-	* : Updated.
+	* Updated.
 
 2005-10-15 13:12  daichi
 
-	* : Updated.
+	* Updated.
 
 2005-10-14 17:22  daichi
 
-	* : Minor update.
+	* Minor update.
 
 2005-10-14 17:13  daichi
 
-	* : * Added fall back address at the `Language-Team', according to
+	* * Added fall back address at the `Language-Team', according to
 	  the
 	  http://www.iro.umontreal.ca/translation/registry.cgi?team=index
 	  
@@ -681,7 +731,7 @@
 
 2005-10-14 15:04  jasper
 
-	* : * Properly use xfce4-dev-tools
+	* * Properly use xfce4-dev-tools
 	  * Use inttool for .desktop file
 	  * Make more functions static
 	  * Fix a couple of memory leaks
@@ -689,30 +739,30 @@
 
 2005-10-09 18:02  daichi
 
-	* : Keyword `Id' expansion.
+	* Keyword `Id' expansion.
 
 2005-09-13 15:00  benny
 
-	* : Apply Daichis desktop fix for xfce4-appfinder. Second part of
+	* Apply Daichis desktop fix for xfce4-appfinder. Second part of
 	  #1149.
 
 2005-09-09 12:06  daichi
 
-	* : Changed translator's representation in spelling by the request.
+	* Changed translator's representation in spelling by the request.
 
 2005-08-18 12:05  daichi
 
-	* : Updated Japanese translations.
+	* Updated Japanese translations.
 
 2005-08-17 13:15  daichi
 
-	* : Fixed errors emitted by 'msgfmt -c'.
+	* Fixed errors emitted by 'msgfmt -c'.
 	  
 	  Modified initial comment strings with template by 'msginit'.
 
 2005-08-17 13:09  daichi
 
-	* : Fixed errors emitted by 'msgfmt -c'.
+	* Fixed errors emitted by 'msgfmt -c'.
 	  
 	  Converted local charset to UTF-8 at the 'Content-type:'.
 	  
@@ -724,524 +774,523 @@
 
 2005-08-13 14:09  daichi
 
-	* : Updated Finnish translations by Jari Rahkonen.
+	* Updated Finnish translations by Jari Rahkonen.
 
 2005-08-04 15:17  pollux
 
-	* : add some HY translations
+	* add some HY translations
 
 2005-07-28 12:32  pollux
 
-	* : update JA translations
+	* update JA translations
 
 2005-07-06 09:01  pollux
 
-	* : update zh_TW translations
+	* update zh_TW translations
 
 2005-07-04 11:47  pollux
 
-	* : update KO translations
+	* update KO translations
 
 2005-05-17 20:25  eduard
 
-	* : Sorting items into treeview by name
+	* Sorting items into treeview by name
 
 2005-05-17 18:47  eduard
 
-	* : .Desktop Caching and api improvement
+	* .Desktop Caching and api improvement
 
 2005-05-16 19:34  eduard
 
-	* : aligning macro XFCE_IS_APPFINDER
+	* aligning macro XFCE_IS_APPFINDER
 
 2005-05-15 21:10  eduard
 
-	* : Remove unused files
+	* Remove unused files
 
 2005-05-15 21:07  eduard
 
-	* : Appfinder widgetized - Please Test
+	* Appfinder widgetized - Please Test
 
 2005-05-15 21:06  eduard
 
-	* : Appfinder widgetized - Please Test
+	* Appfinder widgetized - Please Test
 
 2005-05-14 19:47  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2005-05-14 19:47  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2005-05-06 19:01  pollux
 
-	* : add bn_IN translations
+	* add bn_IN translations
 
 2005-05-06 18:46  pollux
 
-	* : add MR translations
+	* add MR translations
 
 2005-05-04 21:00  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2005-05-04 21:00  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2005-04-12 14:00  jasper
 
-	* : Move remaining modules to use dev tools and remove generated
+	* Move remaining modules to use dev tools and remove generated
 	  files
 
 2005-04-08 11:55  pollux
 
-	* : add SV translations
+	* add SV translations
 
 2005-03-28 08:58  jasper
 
-	* : Add French docs
+	* Add French docs
 
 2005-03-04 17:32  pollux
 
-	* : add PL translations
+	* add PL translations
 
 2005-02-21 08:39  pollux
 
-	* : update JA translations
+	* update JA translations
 
 2005-01-22 12:22  pollux
 
-	* : update FI translations
+	* update FI translations
 
 2005-01-19 20:50  eduard
 
-	* : fix bug 709
+	* fix bug 709
 
 2005-01-08 15:04  pollux
 
-	* : update RU translations
+	* update RU translations
 
 2005-01-06 19:24  pollux
 
-	* : update UK translations
+	* update UK translations
 
 2005-01-05 16:01  pollux
 
-	* : update HE translations
+	* update HE translations
 
 2005-01-02 12:51  olivier
 
-	* : Update version and changelog
+	* Update version and changelog
 
 2004-12-25 20:33  kelnos
 
-	* : fix distcheck-bz2
+	* fix distcheck-bz2
 
 2004-12-24 19:10  eduard
 
-	* : Build fix for --enable-debug=full
+	* Build fix for --enable-debug=full
 
 2004-12-24 00:03  kelnos
 
-	* : add dist-bz2 and distcheck-bz2 targets
+	* add dist-bz2 and distcheck-bz2 targets
 
 2004-12-23 23:33  olivier
 
-	* : Themes and screenshots
+	* Themes and screenshots
 
 2004-12-23 21:24  pollux
 
-	* : update ET translations
+	* update ET translations
 
 2004-12-22 20:46  benny
 
-	* : Update ChangeLog. Fix EXTRA_DIST.
+	* Update ChangeLog. Fix EXTRA_DIST.
 
 2004-12-21 10:00  jasper
 
-	* : Reporting for autotool duty
+	* Reporting for autotool duty
 
 2004-12-21 09:10  kelnos
 
-	* : add czech translations
+	* add czech translations
 
 2004-12-21 09:03  kelnos
 
-	* : add/update czech translations
+	* add/update czech translations
 
 2004-12-20 21:00  jasper
 
-	* : Update versions and ChangeLog
+	* Update versions and ChangeLog
 
 2004-12-19 16:36  fleclainche
 
-	* : Documentation screenshots update
+	* Documentation screenshots update
 
 2004-12-15 18:56  pollux
 
-	* : update pt_BR translations
+	* update pt_BR translations
 
 2004-12-14 20:33  pollux
 
-	* : add RO translations
+	* add RO translations
 
 2004-12-11 18:56  benny
 
-	* : Somehow this was left out from the previous commit.
+	* Somehow this was left out from the previous commit.
 
 2004-12-11 18:50  benny
 
-	* : Fix conflicting image files that are also in xfce4-panel.
+	* Fix conflicting image files that are also in xfce4-panel.
 
 2004-12-11 17:51  olivier
 
-	* : Various changes and small fixes
+	* Various changes and small fixes
 
 2004-12-05 21:20  pollux
 
-	* : add en_GB translations
+	* add en_GB translations
 
 2004-12-05 20:50  pollux
 
-	* : update KO translations and add screenshots in xfprint doc
+	* update KO translations and add screenshots in xfprint doc
 
 2004-12-04 17:03  benny
 
-	* : Update configure and ChangeLog. Small typo/style fix in doc.
+	* Update configure and ChangeLog. Small typo/style fix in doc.
 
 2004-12-03 23:12  eduard
 
-	* : Doc addition and 506 559 bugs fixed
+	* Doc addition and 506 559 bugs fixed
 
 2004-12-02 11:00  benny
 
-	* : Fix typo.
+	* Fix typo.
 
 2004-11-28 18:01  pollux
 
-	* : update TR translations
+	* update TR translations
 
 2004-11-26 19:06  pollux
 
-	* : update KO translations
+	* update KO translations
 
 2004-11-13 18:01  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2004-11-06 16:24  olivier
 
-	* : Update automake/autoconf/libtool/gettext versions to generate
-	  the configure scripts and Makefiles,
+	* Update automake/autoconf/libtool/gettext versions to generate the
+	  configure scripts and Makefiles,
 	  Update versions of all packages to 4.1.99.1 (ie 4.2 RC1),
 	  Update ChangeLogs.
 
 2004-10-30 19:03  olivier
 
-	* : Global update for 4.1.91 (Xfce 4.2 beta 2)
+	* Global update for 4.1.91 (Xfce 4.2 beta 2)
 
 2004-10-30 14:00  pollux
 
-	* : update LT translations
+	* update LT translations
 
 2004-10-28 11:55  pollux
 
-	* : update HE translations
+	* update HE translations
 
 2004-10-23 14:45  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2004-10-22 20:38  olivier
 
-	* : Updated versions and change logs
+	* Updated versions and change logs
 
 2004-10-22 19:33  olivier
 
-	* : Theme fixes
+	* Theme fixes
 	  update locale [fr] for desktop files
 
 2004-10-14 17:13  pollux
 
-	* : update FI translations
+	* update FI translations
 
 2004-10-11 16:30  benny
 
-	* : update-po for Moe.
+	* update-po for Moe.
 
 2004-10-10 11:52  pollux
 
-	* : update pt_PT translations
+	* update pt_PT translations
 
 2004-10-09 17:47  eduard
 
-	* : Trivial style fixes
+	* Trivial style fixes
 
 2004-10-09 14:20  pollux
 
-	* : update FA translations
+	* update FA translations
 
 2004-10-08 13:49  edscott
 
-	* : add spanish language translations
+	* add spanish language translations
 
 2004-10-07 20:35  benny
 
-	* : Added --enable-final (-O1 for GNU ld) as per Jaspers request.
+	* Added --enable-final (-O1 for GNU ld) as per Jaspers request.
 	  Added missing
 	  m4 files.
 
 2004-10-03 16:14  pollux
 
-	* : Punjabi translations (PA) from jaswinderlinux@netscape.net
+	* Punjabi translations (PA) from jaswinderlinux@netscape.net
 
 2004-10-02 13:28  olivier
 
-	* : Update all files for 4.2 beta 1
+	* Update all files for 4.2 beta 1
 
 2004-09-30 20:15  eduard
 
-	* : version update
+	* version update
 
 2004-09-29 07:59  pollux
 
-	* : updated zh_CN translations from yongtao yang
+	* updated zh_CN translations from yongtao yang
 	  <yongtao.yang@gmail.com>
 
 2004-09-28 19:51  eduard
 
-	* : Fix the fix :-)
+	* Fix the fix :-)
 
 2004-09-28 19:34  eduard
 
-	* : Fix 339
+	* Fix 339
 
 2004-09-23 21:36  pollux
 
-	* : add Gujarati translations (GU) from Ankit Patel
+	* add Gujarati translations (GU) from Ankit Patel
 	  <ankit@redhat.com>
 
 2004-09-23 08:22  jasper
 
-	* : Add nl translations
+	* Add nl translations
 
 2004-09-22 03:18  kelnos
 
-	* : add GenericName tags to settings .desktop files
+	* add GenericName tags to settings .desktop files
 
 2004-09-21 11:51  jasper
 
-	* : Run make update-po at Moe's request.
+	* Run make update-po at Moe's request.
 
 2004-09-20 22:22  olivier
 
-	* : Update all ChangeLogs
+	* Update all ChangeLogs
 
 2004-09-19 13:34  eduard
 
-	* : kdedir support and better syntax
+	* kdedir support and better syntax
 
 2004-09-19 10:14  jasper
 
-	* : Update nl translations
+	* Update nl translations
 
 2004-09-18 16:41  pollux
 
-	* : update EU translations
+	* update EU translations
 
 2004-09-18 13:45  moe
 
-	* : Adding German translation
+	* Adding German translation
 
 2004-09-18 12:29  eduard
 
-	* : .desktop file missing (d'oh!)
+	* .desktop file missing (d'oh!)
 
 2004-09-18 12:13  eduard
 
-	* : .desktop added and makefile changes
+	* .desktop added and makefile changes
 
 2004-09-16 22:10  pollux
 
-	* : add BE translations from Ales Nyakhaychyk <nab@mail.by>
+	* add BE translations from Ales Nyakhaychyk <nab@mail.by>
 
 2004-09-15 19:31  eduard
 
-	* : Basedir support added
+	* Basedir support added
 
 2004-08-24 19:57  eduard
 
-	* : forgot a file :-)
+	* forgot a file :-)
 
 2004-08-24 19:53  eduard
 
-	* : make dist/rpm fixes
+	* make dist/rpm fixes
 
 2004-08-02 19:00  eduard
 
-	* : removed useless menu entries
+	* removed useless menu entries
 
 2004-07-29 18:46  eduard
 
-	* : Internationalization fixes (on category liststore)
+	* Internationalization fixes (on category liststore)
 
 2004-07-28 21:22  benny
 
-	* : Fixed (module)_FOUND bug reported by brian. Hopefully nothing
+	* Fixed (module)_FOUND bug reported by brian. Hopefully nothing
 	  else broke
 	  this time.
 
 2004-07-26 19:46  eduard
 
-	* : Directory recursion added
+	* Directory recursion added
 
 2004-07-24 18:52  benny
 
-	* : Readded XFCE_MCS_PLUGIN() again, dunno how I manage to remove
-	  it everytime
+	* Readded XFCE_MCS_PLUGIN() again, dunno how I manage to remove it
+	  everytime
 	  I edit depends.m4!
 
 2004-07-24 17:30  benny
 
-	* : XFCE_PANEL_PLUGIN had wrong panel version for the threaded
-	  test.
+	* XFCE_PANEL_PLUGIN had wrong panel version for the threaded test.
 
 2004-07-24 17:28  benny
 
-	* : Extended the XFCE_PANEL_PLUGIN macro to include some magic for
+	* Extended the XFCE_PANEL_PLUGIN macro to include some magic for
 	  threaded panels.
 
 2004-07-21 23:00  benny
 
-	* : Readded the XFCE_MCS_PLUGIN macro. I didn't ment to remove it,
+	* Readded the XFCE_MCS_PLUGIN macro. I didn't ment to remove it,
 	  tho.
 
 2004-07-20 20:58  benny
 
-	* : Modifed panel plugin check, so one (the installer) can choose
-	  to install
+	* Modifed panel plugin check, so one (the installer) can choose to
+	  install
 	  into a different plugin dir.
 
 2004-07-18 14:19  pollux
 
-	* : i18n fix
+	* i18n fix
 
 2004-07-18 14:01  eduard
 
-	* : i18n fixes
+	* i18n fixes
 
 2004-07-18 13:08  eduard
 
-	* : po files
+	* po files
 
 2004-07-18 13:04  eduard
 
-	* : i18n support
+	* i18n support
 
 2004-07-18 09:01  eduard
 
-	* : Fix build issue
+	* Fix build issue
 
 2004-07-17 17:21  eduard
 
-	* : Remove a useless thing
+	* Remove a useless thing
 
 2004-07-17 17:09  eduard
 
-	* : Code clean and resync with libxfce4gui
+	* Code clean and resync with libxfce4gui
 
 2004-07-17 12:20  benny
 
-	* : Fix make dist. First attempt to use XDG basedir spec, Eduard
+	* Fix make dist. First attempt to use XDG basedir spec, Eduard
 	  please have
 	  a look and fix it.
 
 2004-06-27 09:45  eduard
 
-	* : Added infobox to the right menu
+	* Added infobox to the right menu
 
 2004-06-24 18:50  eduard
 
-	* : Some clean and reorganization.
+	* Some clean and reorganization.
 	  Menu added
 
 2004-06-22 18:50  eduard
 
-	* : No item report added.
+	* No item report added.
 	  A lot of small fixes and cleanup.
 	  Support for right click on treeview (just the callback for now).
 
 2004-06-21 19:13  eduard
 
-	* : Added af-constants.h file
+	* Added af-constants.h file
 
 2004-06-21 19:02  eduard
 
-	* : It doesn't flicker anymore.
+	* It doesn't flicker anymore.
 	  Code clean.
 	  Icon added.
 	  Some bug fixed (segfaults ;-)
 
 2004-06-19 23:57  eduard
 
-	* : Removed the labels (goto ugly stuff) and code improvements
+	* Removed the labels (goto ugly stuff) and code improvements
 
 2004-06-19 20:59  eduard
 
-	* : Fixed potential crash on categories callback
+	* Fixed potential crash on categories callback
 
 2004-06-19 20:21  benny
 
-	* : Added missing .m4 files.
+	* Added missing .m4 files.
 
 2004-06-19 20:16  eduard
 
-	* : Speed improvements and code cleanup
+	* Speed improvements and code cleanup
 
 2004-06-19 18:43  eduard
 
-	* : Added autogen.sh and m4 directory
+	* Added autogen.sh and m4 directory
 
 2004-06-19 17:58  eduard
 
-	* : Some other fixes on dentry. Deprecated things removed
+	* Some other fixes on dentry. Deprecated things removed
 
 2004-06-19 17:00  eduard
 
-	* : Some fixes on free()
+	* Some fixes on free()
 
 2004-06-19 12:10  eduard
 
-	* : Code cleanup
+	* Code cleanup
 
 2004-06-14 20:18  eduard
 
-	* : drag and drop fixes
+	* drag and drop fixes
 
 2004-06-13 16:48  eduard
 
-	* : Drag and drop support
+	* Drag and drop support
 	  Some bug fixed
 
 2004-05-19 20:13  eduard
 
-	* : Added autogen.sh
+	* Added autogen.sh
 
 2004-05-18 21:06  eduard
 
-	* : Fixed crash on some app execution
+	* Fixed crash on some app execution
 
 2004-05-07 19:43  eduard
 
-	* : Initial revision
+	* Initial revision
 
 2004-05-07 19:36  eduard
 
-	* : Initial revision
+	* Initial revision
 
 2004-05-07 19:36  
 
-	* : New repository initialized by cvs2svn.
+	* New repository initialized by cvs2svn.
 
