@@ -1201,7 +1201,7 @@ _xfce_appfinder_window_visible_func (GtkTreeModel *filter,
         visible = TRUE;
       else
         {
-          if (G_UNLIKELY (g_utf8_collate (category, window->current_category) == 0))
+          if (G_UNLIKELY (category != NULL && g_utf8_collate (category, window->current_category) == 0))
             visible = TRUE;
         }
     }
