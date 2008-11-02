@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-13 23:40+0200\n"
-"PO-Revision-Date: 2008-10-15 21:35+0100\n"
+"PO-Revision-Date: 2008-11-02 13:34+0100\n"
 "Last-Translator: Abel Martín <abel.martin.ruiz@gmail.com>\n"
 "Language-Team: Spanish, http://i18n.xfce.org/wiki/team_es\n"
 "MIME-Version: 1.0\n"
@@ -56,7 +56,7 @@ msgstr "Fallo al conectar al demonio xfconf."
 #: ../src/xfce-appfinder-window.c:293
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "Buscador de Aplicaciones"
+msgstr "Buscador de aplicaciones"
 
 #: ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:2
@@ -88,7 +88,7 @@ msgstr "No se pudo ejecutar la aplicación %s"
 #: ../src/xfce-appfinder-window.c:915
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
-msgstr "No se pudo cargar el menú de %s. Motivo: %s"
+msgstr "No se pudo cargar el menú desde %s. Motivo: %s"
 
 #: ../src/xfce-appfinder-window.c:917
 #: ../src/xfce-appfinder-window.c:926
@@ -98,7 +98,7 @@ msgstr "No se pudo cargar el menú de sistema"
 #: ../src/xfce-appfinder-window.c:924
 #, c-format
 msgid "Could not load menu from %s"
-msgstr "No se pudo cargar el menú de %s"
+msgstr "No se pudo cargar el menú desde %s"
 
 #: ../src/xfce-appfinder-window.c:939
 #: ../src/xfce-appfinder-window.c:946

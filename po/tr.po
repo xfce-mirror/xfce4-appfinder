@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-13 23:40+0200\n"
-"PO-Revision-Date: 2008-05-27 09:07+0300\n"
-"Last-Translator: Eren Türkay <turkay.eren@gmail.com>\n"
+"PO-Revision-Date: 2008-10-22 07:49+0200\n"
+"Last-Translator: Gökmen Görgen <gkmngrgn@gmail.com>\n"
 "Language-Team: Turkish <turkce@pardus.org.tr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,22 +19,21 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 
 #: ../src/main.c:43
-#, fuzzy
 msgid "Version information"
-msgstr "Daha Fazla Bilgi..."
+msgstr "Sürüm bilgisi"
 
 #: ../src/main.c:44
 msgid "[MENUFILE]"
-msgstr ""
+msgstr "[MENUFILE]"
 
 #: ../src/main.c:65
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr ""
+msgstr "Kullanım bilgisi için '%s --help' yazın."
 
 #: ../src/main.c:71
 msgid "Unable to initialize GTK+."
-msgstr ""
+msgstr "GTK+'nin başlangıç durumuna getirilmesi olanaksız."
 
 #: ../src/main.c:81
 msgid "The Xfce development team. All rights reserved."
@@ -48,59 +47,62 @@ msgstr "Lütfen hataları <%s> adresine bildirin."
 #: ../src/main.c:98
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr ""
+msgstr "Xfconf servisine bağlanılamadı. Nedeni: %s"
 
 #: ../src/main.c:102
 msgid "Failed to connect to xfconf daemon."
-msgstr ""
+msgstr "Xfconf servisine bağlanılamadı."
 
-#: ../src/xfce-appfinder-window.c:279 ../src/xfce-appfinder-window.c:293
+#: ../src/xfce-appfinder-window.c:279
+#: ../src/xfce-appfinder-window.c:293
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "Uygulama Arayıcı"
+msgstr "Uygulama Bulucu"
 
-#: ../src/xfce-appfinder-window.c:294 ../data/xfce4-appfinder.desktop.in.h:2
-#, fuzzy
+#: ../src/xfce-appfinder-window.c:294
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Sistem üzerinde kurulmuş olan uygulamaları ara."
+msgstr "Sisteminde kurulu uygulamaları bul ve başlat"
 
 #: ../src/xfce-appfinder-window.c:317
 msgid "Filter"
-msgstr "Filtre"
+msgstr "Süzgeç"
 
 #: ../src/xfce-appfinder-window.c:340
 msgid "Categories"
-msgstr "Kategoriler"
+msgstr "Sınıflandırmalar"
 
 #: ../src/xfce-appfinder-window.c:388
 msgid "C_lose after execute"
-msgstr ""
+msgstr "Çalıştırdıktan sonra _kapat"
 
 #: ../src/xfce-appfinder-window.c:789
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
-msgstr ""
+msgstr "%s uygulaması başlatılamadı. Nedeni: %s"
 
 #: ../src/xfce-appfinder-window.c:793
 #, c-format
 msgid "Could not execute application %s"
-msgstr ""
+msgstr "%s uygulaması başlatılamadı"
 
 #: ../src/xfce-appfinder-window.c:915
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
-msgstr ""
+msgstr "%s bölümünden menü yüklenemedi. Nedeni: %s"
 
-#: ../src/xfce-appfinder-window.c:917 ../src/xfce-appfinder-window.c:926
+#: ../src/xfce-appfinder-window.c:917
+#: ../src/xfce-appfinder-window.c:926
 msgid "Could not load system menu"
-msgstr ""
+msgstr "Sistem menüsü yüklenemedi"
 
 #: ../src/xfce-appfinder-window.c:924
 #, c-format
 msgid "Could not load menu from %s"
-msgstr ""
+msgstr "%s bölümünden menü yüklenemedi"
 
-#: ../src/xfce-appfinder-window.c:939 ../src/xfce-appfinder-window.c:946
+#: ../src/xfce-appfinder-window.c:939
+#: ../src/xfce-appfinder-window.c:946
 #: ../src/xfce-appfinder-window.c:1200
 msgid "All"
 msgstr "Hepsi"
@@ -108,15 +110,12 @@ msgstr "Hepsi"
 #, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Sistem üzerinde kurulmuş olan uygulamaları ara."
-
 #~ msgid "Find applications installed on the system."
 #~ msgstr "Sistem üzerinde kurulmuş olan uygulamaları ara."
-
 #~ msgid "Failed to open display"
 #~ msgstr "Görüntü sunucusu açılamadı"
-
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Telif Hakkı (c) 2008"
-
 #~ msgid "Applications"
 #~ msgstr "Uygulamalar"
+
