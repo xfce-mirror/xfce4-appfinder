@@ -8,7 +8,7 @@ dnl *** Version information ***
 dnl ***************************
 m4_define([xfce4_appfinder_version_major], [4])
 m4_define([xfce4_appfinder_version_minor], [5])
-m4_define([xfce4_appfinder_version_micro], [91])
+m4_define([xfce4_appfinder_version_micro], [92])
 m4_define([xfce4_appfinder_version_nano],  []) dnl leave this empty to have no nano version
 m4_define([xfce4_appfinder_version_build], [r@REVISION@])
 m4_define([xfce4_appfinder_version_tag],   [])
@@ -75,11 +75,11 @@ dnl ***********************************
 XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.12.0])
 XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.12.0])
 XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.10.0])
-XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.5.91])
-XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.5.91])
-XDT_CHECK_PACKAGE([LIBXFCE4MENU], [libxfce4menu-0.1], [4.5.91])
-XDT_CHECK_PACKAGE([LIBXFCONF], [libxfconf-0], [4.5.91])
-XDT_CHECK_PACKAGE([THUNAR_VFS], [thunar-vfs-1], [0.9.91])
+XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.5.92])
+XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.5.912)
+XDT_CHECK_PACKAGE([LIBXFCE4MENU], [libxfce4menu-0.1], [4.5.92])
+XDT_CHECK_PACKAGE([LIBXFCONF], [libxfconf-0], [4.5.92])
+XDT_CHECK_PACKAGE([THUNAR_VFS], [thunar-vfs-1], [0.9.92])
 
 dnl ***********************************
 dnl *** Check for debugging support ***
