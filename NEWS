@@ -1,3 +1,10 @@
+4.5.92
+======
+- Fix runtime warnings and toplevel menu items always being displayed
+  on top of every category.
+- Translation updates: Carles Munõz Gorriz (ca), Abel Martín (es), 
+  Maximilian Schleiss (fr), Andhika Padmawan (id), Terje Uriansrud (nb_NO)
+
 4.5.91
 ======
 - Improved keyboard navigation.
