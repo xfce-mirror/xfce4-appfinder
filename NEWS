@@ -1,3 +1,7 @@
+4.5.93
+======
+- Assume "All" category if the current category string is empty (Bug #4613).
+
 4.5.92
 ======
 - Fix runtime warnings and toplevel menu items always being displayed

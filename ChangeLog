@@ -1,3 +1,12 @@
+2008-11-15	Jannis Pohlmann <jannis@xfce.org>
+
+	* src/xfce-appfinder-window.c (_xfce_appfinder_window_visible_func): 
+	  Assume "All" category if the category string is empty. For some 
+	  reason xfconf_g_property_bind() sets the property to an empty string
+	  if it does not exist at the time the binding is created. This fixes
+	  bug #4613.
+	* NEWS: Update NEWS file.
+
 2008-11-11	Jannis Pohlmann <jannis@xfce.org>
 
 	* == 4.5.92 released ==
@@ -1703,4 +1712,3 @@
 2004-05-07  Unknown Author <xfce4-dev@xfce.org>
 
 	* New repository initialized by cvs2svn.
-

@@ -271,6 +271,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   window->menu_filename = NULL;
   window->reload_thread = NULL;
   window->categories_group = NULL;
+  window->current_category = NULL;
 
   window->channel = xfconf_channel_get ("xfce4-appfinder");
 
@@ -1197,8 +1198,12 @@ _xfce_appfinder_window_visible_func (GtkTreeModel *filter,
 
   if (G_UNLIKELY (g_strstr_len (text, -1, search_text) != NULL))
     {
-      if (window->current_category == NULL || g_utf8_collate (window->current_category, _("All")) == 0)
-        visible = TRUE;
+      if (window->current_category == NULL || 
+          g_utf8_strlen (window->current_category, -1) == 0 ||
+          g_utf8_collate (window->current_category, _("All")) == 0)
+        {
+          visible = TRUE;
+        }
       else
         {
           if (G_UNLIKELY (category != NULL && g_utf8_collate (category, window->current_category) == 0))
@@ -1224,7 +1229,7 @@ _xfce_appfinder_window_set_category (XfceAppfinderWindow *window,
   if (G_LIKELY (window->current_category != NULL))
     if (G_UNLIKELY (g_utf8_collate (window->current_category, category) == 0))
       return;
-      
+
   g_free (window->current_category);
   window->current_category = g_strdup (category);
 
