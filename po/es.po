@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-13 23:40+0200\n"
-"PO-Revision-Date: 2008-11-02 13:34+0100\n"
+"PO-Revision-Date: 2008-11-15 19:39+0100\n"
 "Last-Translator: Abel Martín <abel.martin.ruiz@gmail.com>\n"
 "Language-Team: Spanish, http://i18n.xfce.org/wiki/team_es\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr "El equipo de desarrollo de Xfce. Todos los derechos reservados."
 #: ../src/main.c:82
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Por favor informe de errores a <%s>."
+msgstr "Por favor, informe de errores a <%s>."
 
 #: ../src/main.c:98
 #, c-format
@@ -61,7 +61,7 @@ msgstr "Buscador de aplicaciones"
 #: ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Encontrar y lanzar aplicaciones instaladas en el sistema."
+msgstr "Encuentre y lance aplicaciones instaladas en el sistema"
 
 #: ../src/xfce-appfinder-window.c:317
 msgid "Filter"

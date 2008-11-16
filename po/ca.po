@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-13 23:40+0200\n"
-"PO-Revision-Date: 2008-10-19 14:19+0100\n"
+"PO-Revision-Date: 2008-11-16 10:30+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -29,15 +29,15 @@ msgstr "[MENUFILE]"
 #: ../src/main.c:65
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr "Proveu «%s --help» per obtenir més informació."
+msgstr "Feu «%s --help» per veure l'ús."
 
 #: ../src/main.c:71
 msgid "Unable to initialize GTK+."
-msgstr "no s'ha pogut iniciar GTK+."
+msgstr "No s'ha pogut iniciar GTK+."
 
 #: ../src/main.c:81
 msgid "The Xfce development team. All rights reserved."
-msgstr "L'equip de desenvolupament d'Xfce. Tots els drets reservats."
+msgstr "L'equip de desenvolupament de Xfce. Tots els drets reservats."
 
 #: ../src/main.c:82
 #, c-format
@@ -47,11 +47,11 @@ msgstr "Aviseu dels errors a <%s>."
 #: ../src/main.c:98
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "No s'ha pogut connectar al dimoni «xfconf». Motiu: %s"
+msgstr "No s'ha pogut connectar al dimoni xfconf. Motiu: %s"
 
 #: ../src/main.c:102
 msgid "Failed to connect to xfconf daemon."
-msgstr "No s'ha pogut connectar al dimoni «xfconf»."
+msgstr "No s'ha pogut connectar al dimoni xfconf."
 
 #: ../src/xfce-appfinder-window.c:279 ../src/xfce-appfinder-window.c:293
 #: ../data/xfce4-appfinder.desktop.in.h:1
