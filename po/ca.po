@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-13 23:40+0200\n"
-"PO-Revision-Date: 2008-11-16 10:30+0100\n"
+"PO-Revision-Date: 2008-11-21 19:40+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -42,7 +42,7 @@ msgstr "L'equip de desenvolupament de Xfce. Tots els drets reservats."
 #: ../src/main.c:82
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Aviseu dels errors a <%s>."
+msgstr "Envieu els errors a <%s>."
 
 #: ../src/main.c:98
 #, c-format
