@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-13 23:40+0200\n"
-"PO-Revision-Date: 2008-10-07 23:51+0900\n"
+"POT-Creation-Date: 2008-11-22 18:00+0900\n"
+"PO-Revision-Date: 2008-12-02 22:13+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../src/main.c:43
 msgid "Version information"
-msgstr "バージョン情報"
+msgstr "バージョン情報を表示する"
 
 #: ../src/main.c:44
 msgid "[MENUFILE]"
@@ -37,12 +37,12 @@ msgstr "GTK+ の初期化に失敗しました。"
 
 #: ../src/main.c:81
 msgid "The Xfce development team. All rights reserved."
-msgstr "Xfce 開発チーム. All rights reserved."
+msgstr "The Xfce development team. All rights reserved."
 
 #: ../src/main.c:82
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "バグを <%s> に報告してください。"
+msgstr "バグは <%s> へ報告してください。"
 
 #: ../src/main.c:98
 #, c-format
@@ -53,136 +53,57 @@ msgstr "xfconf デーモンへの接続に失敗しました。理由: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "xfconf デーモンへの接続に失敗しました。"
 
-#: ../src/xfce-appfinder-window.c:279 ../src/xfce-appfinder-window.c:293
+#: ../src/xfce-appfinder-window.c:280
+#: ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "アプリケーション・ファインダー"
+msgstr "アプリケーションファインダ"
 
-#: ../src/xfce-appfinder-window.c:294 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "システムにインストールされたアプリケーションの検索・起動を行います。"
+msgstr "システムにインストールされたアプリケーションの検索および起動を行います"
 
-#: ../src/xfce-appfinder-window.c:317
+#: ../src/xfce-appfinder-window.c:318
 msgid "Filter"
 msgstr "フィルタ"
 
-#: ../src/xfce-appfinder-window.c:340
+#: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
 msgstr "分類"
 
-#: ../src/xfce-appfinder-window.c:388
+#: ../src/xfce-appfinder-window.c:389
 msgid "C_lose after execute"
 msgstr "起動後に閉じる(_L)"
 
-#: ../src/xfce-appfinder-window.c:789
+#: ../src/xfce-appfinder-window.c:790
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
-msgstr "アプリケーション %s を起動できませんでした。理由: %s"
+msgstr "アプリケーション %s を実行できませんでした。理由: %s"
 
-#: ../src/xfce-appfinder-window.c:793
+#: ../src/xfce-appfinder-window.c:794
 #, c-format
 msgid "Could not execute application %s"
 msgstr "アプリケーション %s を実行できませんでした"
 
-#: ../src/xfce-appfinder-window.c:915
+#: ../src/xfce-appfinder-window.c:916
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "%s からメニューを読み込めませんでした。理由: %s"
 
-#: ../src/xfce-appfinder-window.c:917 ../src/xfce-appfinder-window.c:926
+#: ../src/xfce-appfinder-window.c:918
+#: ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "システムメニューを読み込めませんでした"
 
-#: ../src/xfce-appfinder-window.c:924
+#: ../src/xfce-appfinder-window.c:925
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "%s からメニューを読み込めませんでした"
 
-#: ../src/xfce-appfinder-window.c:939 ../src/xfce-appfinder-window.c:946
-#: ../src/xfce-appfinder-window.c:1200
+#: ../src/xfce-appfinder-window.c:940
+#: ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "全て"
 
-#~ msgid "Find and launch applications installed on the system"
-#~ msgstr "システムにインストールされたアプリケーションを探します。"
-
-#~ msgid "Find applications installed on the system."
-#~ msgstr "システムにインストールされたアプリケーションを探します。"
-
-#~ msgid "Failed to open display"
-#~ msgstr "ディスプレイのオープンに失敗しました。"
-
-#~ msgid "Copyright (c) 2008"
-#~ msgstr "Copyright (c) 2008"
-
-#~ msgid "Applications"
-#~ msgstr "アプリケーション"
-
-#~ msgid "Xfce 4 Appfinder"
-#~ msgstr "Xfce 4 アプリファインダー"
-
-#~ msgid "<b>Name</b>"
-#~ msgstr "<b>名前</b>"
-
-#~ msgid "N/A"
-#~ msgstr "利用不可"
-
-#~ msgid "<b>Comment</b>"
-#~ msgstr "<b>コメント</b>"
-
-#~ msgid "<b>Categories</b>"
-#~ msgstr "<b>分類</b>"
-
-#~ msgid "<b>Command</b>"
-#~ msgstr "<b>コマンド</b>"
-
-#~ msgid "Run program"
-#~ msgstr "プログラムを実行"
-
-#~ msgid "<b>Search:</b>"
-#~ msgstr "<b>検索:</b>"
-
-#~ msgid "Show Categories"
-#~ msgstr "分類を表示"
-
-#~ msgid "Core"
-#~ msgstr "コア"
-
-#~ msgid "Development"
-#~ msgstr "開発"
-
-#~ msgid "Office"
-#~ msgstr "オフィス"
-
-#~ msgid "Graphics"
-#~ msgstr "グラフィックス"
-
-#~ msgid "Network"
-#~ msgstr "ネットワーク"
-
-#~ msgid "AudioVideo"
-#~ msgstr "音楽・映像"
-
-#~ msgid "Game"
-#~ msgstr "ゲーム"
-
-#~ msgid "Education"
-#~ msgstr "教育"
-
-#~ msgid "System"
-#~ msgstr "システム"
-
-#~ msgid "Filemanager"
-#~ msgstr "ファイルマネージャー"
-
-#~ msgid "Utility"
-#~ msgstr "ユーティリティ"
-
-#~ msgid "No items available"
-#~ msgstr "利用できるアイテムはありません"
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "検索内容に該当するものはありません。"
-
-#~ msgid "Appfinder"
-#~ msgstr "アプリファインダー"
