@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-13 23:40+0200\n"
-"PO-Revision-Date: 2008-06-28 13:16+0100\n"
+"PO-Revision-Date: 2008-12-14 15:25+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -21,9 +21,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../src/main.c:43
-#, fuzzy
 msgid "Version information"
-msgstr "Mostrar información de versión"
+msgstr "Información da versión"
 
 #: ../src/main.c:44
 msgid "[MENUFILE]"
@@ -32,11 +31,11 @@ msgstr ""
 #: ../src/main.c:65
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr ""
+msgstr "Introduza '%s --help' para ver a información de uso."
 
 #: ../src/main.c:71
 msgid "Unable to initialize GTK+."
-msgstr ""
+msgstr "Non se puido iniciar GTK+."
 
 #: ../src/main.c:81
 msgid "The Xfce development team. All rights reserved."
@@ -50,21 +49,22 @@ msgstr "Por favor, comunique os erros a <%s>."
 #: ../src/main.c:98
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr ""
+msgstr "Fallo ó conectar co daemon xfconf. Razón: %s"
 
 #: ../src/main.c:102
 msgid "Failed to connect to xfconf daemon."
-msgstr ""
+msgstr "Fallo ó conectar co daemon xfconf."
 
-#: ../src/xfce-appfinder-window.c:279 ../src/xfce-appfinder-window.c:293
+#: ../src/xfce-appfinder-window.c:279
+#: ../src/xfce-appfinder-window.c:293
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Buscador de aplicacións"
 
-#: ../src/xfce-appfinder-window.c:294 ../data/xfce4-appfinder.desktop.in.h:2
-#, fuzzy
+#: ../src/xfce-appfinder-window.c:294
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Busque aplicacións instaladas no sistema."
+msgstr "Busque e execute aplicacións instaladas no sistema"
 
 #: ../src/xfce-appfinder-window.c:317
 msgid "Filter"
@@ -81,28 +81,30 @@ msgstr ""
 #: ../src/xfce-appfinder-window.c:789
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
-msgstr ""
+msgstr "Non se puido executar a aplicación %s. Razón: %s"
 
 #: ../src/xfce-appfinder-window.c:793
-#, fuzzy, c-format
+#, c-format
 msgid "Could not execute application %s"
-msgstr "Non se puido executar a aplicación seleccionada"
+msgstr "Non se puido executar a aplicación %s"
 
 #: ../src/xfce-appfinder-window.c:915
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
-msgstr ""
+msgstr "Non se puido cargar o menú do sistema dende %s. Razón: %s"
 
-#: ../src/xfce-appfinder-window.c:917 ../src/xfce-appfinder-window.c:926
+#: ../src/xfce-appfinder-window.c:917
+#: ../src/xfce-appfinder-window.c:926
 msgid "Could not load system menu"
-msgstr ""
+msgstr "Non se puido cargar o menú do sistema"
 
 #: ../src/xfce-appfinder-window.c:924
 #, c-format
 msgid "Could not load menu from %s"
-msgstr ""
+msgstr "Non se puido cargar o menú do sistema dende %s"
 
-#: ../src/xfce-appfinder-window.c:939 ../src/xfce-appfinder-window.c:946
+#: ../src/xfce-appfinder-window.c:939
+#: ../src/xfce-appfinder-window.c:946
 #: ../src/xfce-appfinder-window.c:1200
 msgid "All"
 msgstr "Todas"
@@ -110,42 +112,30 @@ msgstr "Todas"
 #, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Busque aplicacións instaladas no sistema."
-
 #~ msgid "Find applications installed on the system."
 #~ msgstr "Busque aplicacións instaladas no sistema."
-
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Copyright (c) 2008"
-
 #~ msgid "Applications"
 #~ msgstr "Aplicacións"
-
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Nome</b>"
-
 #~ msgid "N/A"
 #~ msgstr "N/A"
-
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Comentario</b>"
-
 #~ msgid "Development"
 #~ msgstr "Desenvolvemento"
-
 #~ msgid "Office"
 #~ msgstr "Oficina"
-
 #~ msgid "Graphics"
 #~ msgstr "Gráficos"
-
 #~ msgid "Network"
 #~ msgstr "Rede"
-
 #~ msgid "AudioVideo"
 #~ msgstr "Audio e Vídeo"
-
 #~ msgid "Game"
 #~ msgstr "Xogos"
-
 #~ msgid "Education"
 #~ msgstr "Educación"
+
