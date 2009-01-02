@@ -2,14 +2,14 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Juha Kautto <juha@xfce.org>, 2004.
-# Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2005-2008.
+# Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2005-2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2008-10-07 17:23+0300\n"
+"POT-Creation-Date: 2009-01-02 15:54+0200\n"
+"PO-Revision-Date: 2009-01-02 15:56+0300\n"
 "Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -62,7 +62,7 @@ msgstr "Etsi ja käynnistä järjestelmään asennettuja sovelluksia"
 
 #: ../src/xfce-appfinder-window.c:318
 msgid "Search"
-msgstr ""
+msgstr "Hae"
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
@@ -100,6 +100,3 @@ msgstr "Valikkoa ei voi avata kohteesta %s"
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Kaikki"
-
-#~ msgid "Filter"
-#~ msgstr "Suodata"

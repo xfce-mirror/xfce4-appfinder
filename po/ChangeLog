@@ -1,4 +1,8 @@
-2009-01-02	Jannis Pohlmann <jannis@xfce.org>
+2009-01-02  Jari Rahkonen <jari.rahkonen@pp1.inet.fi>
+
+	* fi.po: Update Finnish translation.
+
+2009-01-02  Jannis Pohlmann <jannis@xfce.org>
 
 	* xfce4-mixer.pot, *.po: Update translation files.
 	* de.po: Update German translations.
