@@ -7,12 +7,11 @@
 # Jick Nan <jick.nan@gmail.com>, 2006.
 # Hunt Xu <huntxu@live.cn>, 2008.
 #
-
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-13 23:40+0200\n"
+"POT-Creation-Date: 2009-01-02 13:31+0100\n"
 "PO-Revision-Date: 2008-12-17 11:53+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
@@ -55,104 +54,122 @@ msgstr "无法连接至 xfconf 守护进程。原因：%s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "无法连接至 xfconf 守护进程。"
 
-#: ../src/xfce-appfinder-window.c:279
-#: ../src/xfce-appfinder-window.c:293
+#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "程序查找工具"
 
-#: ../src/xfce-appfinder-window.c:294
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "查找并启动您系统上安装的程序"
 
-#: ../src/xfce-appfinder-window.c:317
-msgid "Filter"
-msgstr "过滤器"
+#: ../src/xfce-appfinder-window.c:318
+#, fuzzy
+msgid "Search"
+msgstr "<b>搜寻：</b>"
 
-#: ../src/xfce-appfinder-window.c:340
+#: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
 msgstr "类别"
 
-#: ../src/xfce-appfinder-window.c:388
+#: ../src/xfce-appfinder-window.c:389
 msgid "C_lose after execute"
 msgstr "执行后关闭(_l)"
 
-#: ../src/xfce-appfinder-window.c:789
+#: ../src/xfce-appfinder-window.c:790
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
 msgstr "无法运行程序 %s。原因如下：%s"
 
-#: ../src/xfce-appfinder-window.c:793
+#: ../src/xfce-appfinder-window.c:794
 #, c-format
 msgid "Could not execute application %s"
 msgstr "无法运行程序 %s "
 
-#: ../src/xfce-appfinder-window.c:915
+#: ../src/xfce-appfinder-window.c:916
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "无法从 %s 载入菜单。原因如下：%s"
 
-#: ../src/xfce-appfinder-window.c:917
-#: ../src/xfce-appfinder-window.c:926
+#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "无法载入系统菜单"
 
-#: ../src/xfce-appfinder-window.c:924
+#: ../src/xfce-appfinder-window.c:925
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "无法从 %s 载入菜单"
 
-#: ../src/xfce-appfinder-window.c:939
-#: ../src/xfce-appfinder-window.c:946
-#: ../src/xfce-appfinder-window.c:1200
+#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "全部"
 
+#~ msgid "Filter"
+#~ msgstr "过滤器"
+
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "Xfce 4 程序查找工具"
+
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>名称</b>"
+
 #~ msgid "N/A"
 #~ msgstr "N/A"
+
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>注释</b>"
+
 #~ msgid "<b>Categories</b>"
 #~ msgstr "<b>类别</b>"
+
 #~ msgid "<b>Command</b>"
 #~ msgstr "<b>命令</b>"
+
 #~ msgid "Run program"
 #~ msgstr "运行程序"
-#~ msgid "<b>Search:</b>"
-#~ msgstr "<b>搜寻：</b>"
+
 #~ msgid "Show Categories"
 #~ msgstr "显示类别"
+
 #~ msgid "Core"
 #~ msgstr "核心"
+
 #~ msgid "Development"
 #~ msgstr "开发"
+
 #~ msgid "Office"
 #~ msgstr "办公"
+
 #~ msgid "Graphics"
 #~ msgstr "图形"
+
 #~ msgid "Network"
 #~ msgstr "网络"
+
 #~ msgid "AudioVideo"
 #~ msgstr "声音和图象"
+
 #~ msgid "Game"
 #~ msgstr "游戏"
+
 #~ msgid "Education"
 #~ msgstr "教育"
+
 #~ msgid "System"
 #~ msgstr "系统"
+
 #~ msgid "Filemanager"
 #~ msgstr "文件管理器"
+
 #~ msgid "Utility"
 #~ msgstr "工具程序"
+
 #~ msgid "No items available"
 #~ msgstr "无可用项目"
+
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "抱歉，没有找到。"
+
 #~ msgid "Appfinder"
 #~ msgstr "程序查找工具"
-

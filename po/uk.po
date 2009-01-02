@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-13 23:40+0200\n"
+"POT-Creation-Date: 2009-01-02 13:31+0100\n"
 "PO-Revision-Date: 2008-11-1 11:52+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
@@ -52,53 +52,55 @@ msgstr "Невдача з'єднання зі службою xfconf. Причи�
 msgid "Failed to connect to xfconf daemon."
 msgstr "Невдача з'єднання зі службою xfconf."
 
-#: ../src/xfce-appfinder-window.c:279 ../src/xfce-appfinder-window.c:293
+#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Пошук встановлених програм"
 
-#: ../src/xfce-appfinder-window.c:294 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Шукати та запускати програми встановлені в Вашій системі"
 
-#: ../src/xfce-appfinder-window.c:317
-msgid "Filter"
-msgstr "Фільтр"
+#: ../src/xfce-appfinder-window.c:318
+msgid "Search"
+msgstr ""
 
-#: ../src/xfce-appfinder-window.c:340
+#: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
 msgstr "Категорії"
 
-#: ../src/xfce-appfinder-window.c:388
+#: ../src/xfce-appfinder-window.c:389
 msgid "C_lose after execute"
 msgstr "З_акрити після виконання"
 
-#: ../src/xfce-appfinder-window.c:789
+#: ../src/xfce-appfinder-window.c:790
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
 msgstr "Неможливо виконати програму %s. Причина: %s"
 
-#: ../src/xfce-appfinder-window.c:793
+#: ../src/xfce-appfinder-window.c:794
 #, c-format
 msgid "Could not execute application %s"
 msgstr "Неможливо виконати програму %s"
 
-#: ../src/xfce-appfinder-window.c:915
+#: ../src/xfce-appfinder-window.c:916
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "Неможливо завантажити меню з %s. Причина: %s"
 
-#: ../src/xfce-appfinder-window.c:917 ../src/xfce-appfinder-window.c:926
+#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Неможливо завантажити системне меню"
 
-#: ../src/xfce-appfinder-window.c:924
+#: ../src/xfce-appfinder-window.c:925
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Неможливо завантажити меню з %s"
 
-#: ../src/xfce-appfinder-window.c:939 ../src/xfce-appfinder-window.c:946
-#: ../src/xfce-appfinder-window.c:1200
+#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Всі"
 
+#~ msgid "Filter"
+#~ msgstr "Фільтр"

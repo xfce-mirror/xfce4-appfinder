@@ -315,7 +315,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_widget_show (vbox3);
 
   label = gtk_label_new (NULL);
-  text = g_strdup_printf ("<span weight=\"bold\" size=\"large\">%s</span>", _("Filter"));
+  text = g_strdup_printf ("<span weight=\"bold\" size=\"large\">%s</span>", _("Search"));
   gtk_label_set_markup (GTK_LABEL (label), text);
   gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
   gtk_widget_modify_fg (label, GTK_STATE_NORMAL, &label->style->fg[GTK_STATE_INSENSITIVE]);

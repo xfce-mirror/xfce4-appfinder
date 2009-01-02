@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-13 23:40+0200\n"
+"POT-Creation-Date: 2009-01-02 13:31+0100\n"
 "PO-Revision-Date: 2008-10-11 19:47+0700\n"
 "Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
@@ -50,55 +50,58 @@ msgstr "Gagal menyambung ke jurik xfconf. Alasan: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Gagal menyambung ke jurik xfconf."
 
-#: ../src/xfce-appfinder-window.c:279 ../src/xfce-appfinder-window.c:293
+#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Pencari Aplikasi"
 
-#: ../src/xfce-appfinder-window.c:294 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Mencari dan menjalankan aplikasi terinstal di sistem anda"
 
-#: ../src/xfce-appfinder-window.c:317
-msgid "Filter"
-msgstr "Filter"
+#: ../src/xfce-appfinder-window.c:318
+msgid "Search"
+msgstr ""
 
-#: ../src/xfce-appfinder-window.c:340
+#: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
 msgstr "Kategori"
 
-#: ../src/xfce-appfinder-window.c:388
+#: ../src/xfce-appfinder-window.c:389
 msgid "C_lose after execute"
 msgstr "S_impan setelah eksekusi"
 
-#: ../src/xfce-appfinder-window.c:789
+#: ../src/xfce-appfinder-window.c:790
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
 msgstr "Tak dapat mengeksekusi aplikasi %s. Alasan: %s"
 
-#: ../src/xfce-appfinder-window.c:793
+#: ../src/xfce-appfinder-window.c:794
 #, c-format
 msgid "Could not execute application %s"
 msgstr "Tak dapat mengeksekusi aplikasi %s"
 
-#: ../src/xfce-appfinder-window.c:915
+#: ../src/xfce-appfinder-window.c:916
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "Tak dapat memuat menu dari %s. Alasan: %s"
 
-#: ../src/xfce-appfinder-window.c:917 ../src/xfce-appfinder-window.c:926
+#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Tak dapat memuat menu sistem"
 
-#: ../src/xfce-appfinder-window.c:924
+#: ../src/xfce-appfinder-window.c:925
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Tak dapat memuat menu dari %s"
 
-#: ../src/xfce-appfinder-window.c:939 ../src/xfce-appfinder-window.c:946
-#: ../src/xfce-appfinder-window.c:1200
+#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Semua"
+
+#~ msgid "Filter"
+#~ msgstr "Filter"
 
 #, fuzzy
 #~ msgid "Find and launch applications installed on the system"

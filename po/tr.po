@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-13 23:40+0200\n"
+"POT-Creation-Date: 2009-01-02 13:31+0100\n"
 "PO-Revision-Date: 2008-11-10 14:05+0200\n"
 "Last-Translator: Gökmen Görgen <gkmngrgn@gmail.com>\n"
 "Language-Team: Turkish <turkce@pardus.org.tr>\n"
@@ -55,69 +55,71 @@ msgstr "Xfconf servisine bağlanılamadı. Nedeni: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Xfconf servisine bağlanılamadı."
 
-#: ../src/xfce-appfinder-window.c:279
-#: ../src/xfce-appfinder-window.c:293
+#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Uygulama Bulucu"
 
-#: ../src/xfce-appfinder-window.c:294
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Sisteminde kurulu uygulamaları bul ve başlat"
 
-#: ../src/xfce-appfinder-window.c:317
-msgid "Filter"
-msgstr "Süzgeç"
+#: ../src/xfce-appfinder-window.c:318
+msgid "Search"
+msgstr ""
 
-#: ../src/xfce-appfinder-window.c:340
+#: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
 msgstr "Sınıflandırmalar"
 
-#: ../src/xfce-appfinder-window.c:388
+#: ../src/xfce-appfinder-window.c:389
 msgid "C_lose after execute"
 msgstr "Çalıştırdıktan sonra _kapat"
 
-#: ../src/xfce-appfinder-window.c:789
+#: ../src/xfce-appfinder-window.c:790
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
 msgstr "%s uygulaması başlatılamadı. Nedeni: %s"
 
-#: ../src/xfce-appfinder-window.c:793
+#: ../src/xfce-appfinder-window.c:794
 #, c-format
 msgid "Could not execute application %s"
 msgstr "%s uygulaması başlatılamadı"
 
-#: ../src/xfce-appfinder-window.c:915
+#: ../src/xfce-appfinder-window.c:916
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "%s bölümünden menü yüklenemedi. Nedeni: %s"
 
-#: ../src/xfce-appfinder-window.c:917
-#: ../src/xfce-appfinder-window.c:926
+#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Sistem menüsü yüklenemedi"
 
-#: ../src/xfce-appfinder-window.c:924
+#: ../src/xfce-appfinder-window.c:925
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "%s bölümünden menü yüklenemedi"
 
-#: ../src/xfce-appfinder-window.c:939
-#: ../src/xfce-appfinder-window.c:946
-#: ../src/xfce-appfinder-window.c:1200
+#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Hepsi"
+
+#~ msgid "Filter"
+#~ msgstr "Süzgeç"
 
 #, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Sistem üzerinde kurulmuş olan uygulamaları ara."
+
 #~ msgid "Find applications installed on the system."
 #~ msgstr "Sistem üzerinde kurulmuş olan uygulamaları ara."
+
 #~ msgid "Failed to open display"
 #~ msgstr "Görüntü sunucusu açılamadı"
+
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Telif Hakkı (c) 2008"
+
 #~ msgid "Applications"
 #~ msgstr "Uygulamalar"
-

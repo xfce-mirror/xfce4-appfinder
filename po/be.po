@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-13 23:40+0200\n"
+"POT-Creation-Date: 2009-01-02 13:31+0100\n"
 "PO-Revision-Date: 2008-11-18 01:09+0200\n"
 "Last-Translator: Alexander Nyakhaychyk <nyakhaychyk@gmail.com>\n"
 "Language-Team: Belorussian <i18n@mova.org>\n"
@@ -50,55 +50,59 @@ msgstr "Немагчыма далучыцца да дэмана xfconf. Прыч
 msgid "Failed to connect to xfconf daemon."
 msgstr "Немагчыма далучыцца да дэмана xfconf."
 
-#: ../src/xfce-appfinder-window.c:279 ../src/xfce-appfinder-window.c:293
+#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Шукач дастасаваньняў"
 
-#: ../src/xfce-appfinder-window.c:294 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Шукае й запускае ўсталяваныя дастасаваньні"
 
-#: ../src/xfce-appfinder-window.c:317
-msgid "Filter"
-msgstr "Фільтар"
+#: ../src/xfce-appfinder-window.c:318
+#, fuzzy
+msgid "Search"
+msgstr "<b>Пошук:</b>"
 
-#: ../src/xfce-appfinder-window.c:340
+#: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
 msgstr "Катэгорыі"
 
-#: ../src/xfce-appfinder-window.c:388
+#: ../src/xfce-appfinder-window.c:389
 msgid "C_lose after execute"
 msgstr "За_крыць пасьля запуску"
 
-#: ../src/xfce-appfinder-window.c:789
+#: ../src/xfce-appfinder-window.c:790
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
 msgstr "Немагчыма выканаць дастасаваньне %s. Прычына: %s"
 
-#: ../src/xfce-appfinder-window.c:793
+#: ../src/xfce-appfinder-window.c:794
 #, c-format
 msgid "Could not execute application %s"
 msgstr "Немагчыма выканаць дастасаваньне %s"
 
-#: ../src/xfce-appfinder-window.c:915
+#: ../src/xfce-appfinder-window.c:916
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "Немагчыма загрузіць мэню з %s. Прычына: %s"
 
-#: ../src/xfce-appfinder-window.c:917 ../src/xfce-appfinder-window.c:926
+#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Немагчыма загрузіць сыстэмнае мэню"
 
-#: ../src/xfce-appfinder-window.c:924
+#: ../src/xfce-appfinder-window.c:925
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Немагчыма загрузіць мэню з %s"
 
-#: ../src/xfce-appfinder-window.c:939 ../src/xfce-appfinder-window.c:946
-#: ../src/xfce-appfinder-window.c:1200
+#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Усе"
+
+#~ msgid "Filter"
+#~ msgstr "Фільтар"
 
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "Шукальнік дастасаваньняў Xfce 4"
@@ -120,9 +124,6 @@ msgstr "Усе"
 
 #~ msgid "Run program"
 #~ msgstr "Выканаць праграму"
-
-#~ msgid "<b>Search:</b>"
-#~ msgstr "<b>Пошук:</b>"
 
 #~ msgid "Show Categories"
 #~ msgstr "Паказваць катэгорыі"

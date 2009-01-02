@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-22 18:00+0900\n"
+"POT-Creation-Date: 2009-01-02 13:31+0100\n"
 "PO-Revision-Date: 2008-12-02 22:13+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
@@ -53,20 +53,18 @@ msgstr "xfconf デーモンへの接続に失敗しました。理由: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "xfconf デーモンへの接続に失敗しました。"
 
-#: ../src/xfce-appfinder-window.c:280
-#: ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "アプリケーションファインダ"
 
-#: ../src/xfce-appfinder-window.c:295
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "システムにインストールされたアプリケーションの検索および起動を行います"
 
 #: ../src/xfce-appfinder-window.c:318
-msgid "Filter"
-msgstr "フィルタ"
+msgid "Search"
+msgstr ""
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
@@ -91,8 +89,7 @@ msgstr "アプリケーション %s を実行できませんでした"
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "%s からメニューを読み込めませんでした。理由: %s"
 
-#: ../src/xfce-appfinder-window.c:918
-#: ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "システムメニューを読み込めませんでした"
 
@@ -101,9 +98,10 @@ msgstr "システムメニューを読み込めませんでした"
 msgid "Could not load menu from %s"
 msgstr "%s からメニューを読み込めませんでした"
 
-#: ../src/xfce-appfinder-window.c:940
-#: ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "全て"
 
+#~ msgid "Filter"
+#~ msgstr "フィルタ"

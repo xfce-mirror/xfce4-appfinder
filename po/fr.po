@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.5.91\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-13 23:40+0200\n"
+"POT-Creation-Date: 2009-01-02 13:31+0100\n"
 "PO-Revision-Date: 2008-10-14 19:08+0100\n"
 "Last-Translator: Maximilian Schleiss <maximilian@xfce.org>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
@@ -51,69 +51,71 @@ msgstr "Échec à la connexion au démon xfconf. Raison  : %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Échec à la connexion au démon xfconf."
 
-#: ../src/xfce-appfinder-window.c:279
-#: ../src/xfce-appfinder-window.c:293
+#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Liste des applications"
 
-#: ../src/xfce-appfinder-window.c:294
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Recherche et exécute des applications installées sur le système"
 
-#: ../src/xfce-appfinder-window.c:317
-msgid "Filter"
-msgstr "Filtrer"
+#: ../src/xfce-appfinder-window.c:318
+msgid "Search"
+msgstr ""
 
-#: ../src/xfce-appfinder-window.c:340
+#: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
 msgstr "Catégories"
 
-#: ../src/xfce-appfinder-window.c:388
+#: ../src/xfce-appfinder-window.c:389
 msgid "C_lose after execute"
 msgstr "_Fermer après exécution"
 
-#: ../src/xfce-appfinder-window.c:789
+#: ../src/xfce-appfinder-window.c:790
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
 msgstr "Échec à l'exécution de l'application %s. Raison : %s"
 
-#: ../src/xfce-appfinder-window.c:793
+#: ../src/xfce-appfinder-window.c:794
 #, c-format
 msgid "Could not execute application %s"
 msgstr "Échec à l'exécution de l'application %s"
 
-#: ../src/xfce-appfinder-window.c:915
+#: ../src/xfce-appfinder-window.c:916
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "Le menu de %s n'a pas pu être chargé. Raison : %s"
 
-#: ../src/xfce-appfinder-window.c:917
-#: ../src/xfce-appfinder-window.c:926
+#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Le menu du système n'a pas pu être chargé"
 
-#: ../src/xfce-appfinder-window.c:924
+#: ../src/xfce-appfinder-window.c:925
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Le menu de %s n'a pas pu être chargé."
 
-#: ../src/xfce-appfinder-window.c:939
-#: ../src/xfce-appfinder-window.c:946
-#: ../src/xfce-appfinder-window.c:1200
+#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Toutes"
+
+#~ msgid "Filter"
+#~ msgstr "Filtrer"
 
 #, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Recherche des applications installées sur le système"
+
 #~ msgid "Find applications installed on the system."
 #~ msgstr "Recherche des applications installées sur le système"
+
 #~ msgid "Failed to open display"
 #~ msgstr "Échec à l'ouverture de l'affichage"
+
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Copyright (c) 2008"
+
 #~ msgid "Applications"
 #~ msgstr "Applications"
-
