@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2008-12-31 03:13+0100\n"
+"PO-Revision-Date: 2009-01-03 15:40+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -54,19 +54,20 @@ msgstr "Nepodařilo se připojit ke službě xfconf. Důvod: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Nepodařilo se připojit ke službě xfconf."
 
-#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:280
+#: ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Vyhledávač aplikací"
 
-#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Umožňuje najít a spouštět aplikace nainstalované v systému."
 
 #: ../src/xfce-appfinder-window.c:318
-#, fuzzy
 msgid "Search"
-msgstr "<b>Vyhledávání:</b>"
+msgstr "Hledat"
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
@@ -91,7 +92,8 @@ msgstr "Nelze spustit aplikaci %s"
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "Nelze načíst nabídku ze souboru %s. Důvod: %s"
 
-#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:918
+#: ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Nelze načíst systémovou nabídku"
 
@@ -100,7 +102,8 @@ msgstr "Nelze načíst systémovou nabídku"
 msgid "Could not load menu from %s"
 msgstr "Nelze načíst nabídku ze souboru %s"
 
-#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:940
+#: ../src/xfce-appfinder-window.c:947
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Vše"
@@ -111,81 +114,56 @@ msgstr "Vše"
 #, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Najít aplikace nainstalované v tomto systému."
-
 #~ msgid "Find applications installed on the system."
 #~ msgstr "Najít aplikace nainstalované v tomto systému."
-
 #~ msgid "Failed to open display"
 #~ msgstr "Otevření displeje se nezdařilo"
-
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Copyright (c) 2008"
-
 #~ msgid "Applications"
 #~ msgstr "Aplikace"
-
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "Vyhledávač aplikací pro Xfce 4"
-
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Název</b>"
-
 #~ msgid "N/A"
 #~ msgstr "nedostupný"
-
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Komentář</b>"
-
 #~ msgid "<b>Categories</b>"
 #~ msgstr "<b>Kategorie</b>"
-
 #~ msgid "<b>Command</b>"
 #~ msgstr "<b>Příkaz</b>"
-
 #~ msgid "Run program"
 #~ msgstr "Spustit program"
-
 #~ msgid "Show Categories"
 #~ msgstr "Zobrazit kategorie"
-
 #~ msgid "Core"
 #~ msgstr "Hlavní"
-
 #~ msgid "Development"
 #~ msgstr "Vývojové nástroje"
-
 #~ msgid "Office"
 #~ msgstr "Kancelář"
-
 #~ msgid "Graphics"
 #~ msgstr "Grafika"
-
 #~ msgid "Network"
 #~ msgstr "Síť"
-
 #~ msgid "AudioVideo"
 #~ msgstr "Hudba a Film"
-
 #~ msgid "Game"
 #~ msgstr "Hry"
-
 #~ msgid "Education"
 #~ msgstr "Vzdělání"
-
 #~ msgid "System"
 #~ msgstr "Systém"
-
 #~ msgid "Filemanager"
 #~ msgstr "Správce souborů"
-
 #~ msgid "Utility"
 #~ msgstr "Nástroje"
-
 #~ msgid "No items available"
 #~ msgstr "Žádné položky nejsou k dispozici"
-
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "Shoda s hledaným textem nebyla nalezena "
-
 #~ msgid "Appfinder"
 #~ msgstr "Appfinder"
+
