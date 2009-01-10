@@ -1,6 +1,12 @@
 4.5.93
 ======
 - Assume "All" category if the current category string is empty (Bug #4613).
+- Review strings.
+- Translation updates: be (Alexander Nyakhaychyk), ca (Carles Muños Gorriz), 
+  cs (Michal Varady), da (Lars Nielsen), de (Fabian Nowak, Jannis Pohlmann), 
+  el (Stavros Giannouris), es (Abel Martín), eu (Piarres Beobide), fi (Jari 
+  Rahkonen), gl (Leandro Regueiro), ja (Nobuhiro Iwamatsu), sv (Daniel 
+  Nylander), tr (Eren Turkay), uk (Dimitry Nikitin), zh_CN (Hunt Xu).
 
 4.5.92
 ======

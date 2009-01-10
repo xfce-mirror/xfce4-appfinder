@@ -1,3 +1,7 @@
+2009-01-11	Jannis Pohlmann <jannis@xfce.org>
+
+	* NEWS: Update NEWS for the upcoming 4.5.93 release.
+
 2009-01-02	Jannis Pohlmann <jannis@xfce.org>
 
 	* src/appfinder.{c,h}: Remove unused source files.
