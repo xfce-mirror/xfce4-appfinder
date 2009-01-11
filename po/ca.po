@@ -3,13 +3,13 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Pau Rul·lan Ferragut <paurullan@bulma.net>, 2005, 2006.
-# Carles Muñoz Gorriz <carlesmu@internautas.org>, 2008.
+# Carles Muñoz Gorriz <carlesmu@internautas.org>, 2008-2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2008-11-21 19:40+0100\n"
+"PO-Revision-Date: 2009-01-11 12:23+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -63,9 +63,8 @@ msgid "Find and launch applications installed on your system"
 msgstr "Cerca i executa aplicacions instaŀlades al sistema"
 
 #: ../src/xfce-appfinder-window.c:318
-#, fuzzy
 msgid "Search"
-msgstr "<b>Cerca:</b>"
+msgstr "Cerca"
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
