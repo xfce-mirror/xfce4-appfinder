@@ -64,7 +64,7 @@ msgstr "Bilatu eta abiarazi sisteman instalatutako aplikazioak"
 
 #: ../src/xfce-appfinder-window.c:318
 msgid "Search"
-msgstr ""
+msgstr "Bilatu"
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
