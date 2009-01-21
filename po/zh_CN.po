@@ -6,13 +6,14 @@
 # Huang Huan <unicon221@gmail.com>, 2006.
 # Jick Nan <jick.nan@gmail.com>, 2006.
 # Hunt Xu <huntxu@live.cn>, 2008.
+# Chris K. Zhang <plutino@gmail.com>, 2009
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2008-12-17 11:53+0800\n"
+"PO-Revision-Date: 2009-01-19 13:03-0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
@@ -64,9 +65,8 @@ msgid "Find and launch applications installed on your system"
 msgstr "查找并启动您系统上安装的程序"
 
 #: ../src/xfce-appfinder-window.c:318
-#, fuzzy
 msgid "Search"
-msgstr "<b>搜寻：</b>"
+msgstr "搜索"
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
