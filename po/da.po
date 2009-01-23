@@ -2,13 +2,13 @@
 # Copyright (c) 2008 - Jannis Pohlmann <jannis@xfce.org>
 # This file is distributed under the same license as the xfce-4-appfinder package.
 # Ole Guldberg <olegb@omgwtf.dk>, 2008.
-# Per Kongstad <p_kongstad@op.pl>, 2008.
+# Per Kongstad <p_kongstad@op.pl>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce-4-appfinder 4.5.92\n"
+"Project-Id-Version: xfce-4-appfinder 4.5.93\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2008-11-26 12:15+0100\n"
+"PO-Revision-Date: 2009-01-23 10:37+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -54,18 +54,20 @@ msgstr "Kunne ikke forbinde til xfconf-dæmon. Årsag: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Kunne ikke forbinde til xfconf-dæmon."
 
-#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:280
+#: ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Programfinder"
 
-#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Find og start programmer, som er installeret på systemet"
 
 #: ../src/xfce-appfinder-window.c:318
 msgid "Search"
-msgstr ""
+msgstr "Søg"
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
@@ -90,7 +92,8 @@ msgstr "Kunne ikke køre programmet %s"
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "Kunne ikke indlæse menu fra %s. Årsag: %s"
 
-#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:918
+#: ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Kunne ikke indlæse systemmenu"
 
@@ -99,10 +102,9 @@ msgstr "Kunne ikke indlæse systemmenu"
 msgid "Could not load menu from %s"
 msgstr "Kunne ikke indlæse menu fra %s"
 
-#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:940
+#: ../src/xfce-appfinder-window.c:947
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Alle"
 
-#~ msgid "Filter"
-#~ msgstr "Filter"
