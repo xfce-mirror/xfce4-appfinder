@@ -54,14 +54,12 @@ msgstr "Kunne ikke forbinde til xfconf-dæmon. Årsag: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Kunne ikke forbinde til xfconf-dæmon."
 
-#: ../src/xfce-appfinder-window.c:280
-#: ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Programfinder"
 
-#: ../src/xfce-appfinder-window.c:295
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Find og start programmer, som er installeret på systemet"
 
@@ -92,8 +90,7 @@ msgstr "Kunne ikke køre programmet %s"
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "Kunne ikke indlæse menu fra %s. Årsag: %s"
 
-#: ../src/xfce-appfinder-window.c:918
-#: ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Kunne ikke indlæse systemmenu"
 
@@ -102,9 +99,7 @@ msgstr "Kunne ikke indlæse systemmenu"
 msgid "Could not load menu from %s"
 msgstr "Kunne ikke indlæse menu fra %s"
 
-#: ../src/xfce-appfinder-window.c:940
-#: ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Alle"
-

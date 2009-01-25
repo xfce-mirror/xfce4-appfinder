@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-18 12:15+0100\n"
+"POT-Creation-Date: 2009-01-02 13:31+0100\n"
 "PO-Revision-Date: 2009-01-18 12:34+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -57,14 +57,12 @@ msgstr "Misslyckades med att ansluta till xfconf-demonen. Anledning: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Misslyckades med att ansluta till xfconf-demonen."
 
-#: ../src/xfce-appfinder-window.c:280
-#: ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Programlista"
 
-#: ../src/xfce-appfinder-window.c:295
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Sök och starta program som är installerade på din dator"
 
@@ -95,8 +93,7 @@ msgstr "Kunde inte starta programmet %s"
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "Kunde inte läsa in meny från %s. Anledning: %s"
 
-#: ../src/xfce-appfinder-window.c:918
-#: ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Kunde inte läsa in systemmenyn"
 
@@ -105,56 +102,76 @@ msgstr "Kunde inte läsa in systemmenyn"
 msgid "Could not load menu from %s"
 msgstr "Kunde inte läsa in meny från %s"
 
-#: ../src/xfce-appfinder-window.c:940
-#: ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Alla"
 
 #~ msgid "Filter"
 #~ msgstr "Filter"
+
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "Programlista"
+
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Namn</b>"
+
 #~ msgid "N/A"
 #~ msgstr "Ej tillämplig"
+
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Kommentar</b>"
+
 #~ msgid "<b>Categories</b>"
 #~ msgstr "<b>Kategorier</b>"
+
 #~ msgid "<b>Command</b>"
 #~ msgstr "<b>Kommando</b>"
+
 #~ msgid "Run program"
 #~ msgstr "Kör programmet"
+
 #~ msgid "Show Categories"
 #~ msgstr "Visa kategorier"
+
 #~ msgid "Core"
 #~ msgstr "Standard"
+
 #~ msgid "Development"
 #~ msgstr "Utveckling"
+
 #~ msgid "Office"
 #~ msgstr "Kontor"
+
 #~ msgid "Graphics"
 #~ msgstr "Grafik"
+
 #~ msgid "Network"
 #~ msgstr "Nätverk"
+
 #~ msgid "AudioVideo"
 #~ msgstr "Ljud och Bild"
+
 #~ msgid "Game"
 #~ msgstr "Spel"
+
 #~ msgid "Education"
 #~ msgstr "Utbildning"
+
 #~ msgid "System"
 #~ msgstr "System"
+
 #~ msgid "Filemanager"
 #~ msgstr "Filhanterare"
+
 #~ msgid "Utility"
 #~ msgstr "Verktyg"
+
 #~ msgid "No items available"
 #~ msgstr "Inga program i denna kategori"
+
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "Tyvärr, inga sökträffar."
+
 #~ msgid "Appfinder"
 #~ msgstr "Programlista"
-

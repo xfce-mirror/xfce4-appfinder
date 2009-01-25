@@ -1,3 +1,10 @@
+4.5.99.1
+========
+- Translation updates: da (Per Kongstad), es (Abel Martín), eu (Piarres 
+  Beobide), fr (Jérôme Guelfucci), ja (Masato Hashimoto), nb_NO (Terje 
+  Uriansrud), pt_BR (Og Maciel), sv (Alexander Toresson), zh_CN (Hunt 
+  Xu, Chris. K. Zhang).
+
 4.5.93
 ======
 - Assume "All" category if the current category string is empty (Bug #4613).
@@ -13,7 +20,7 @@
 - Fix runtime warnings and toplevel menu items always being displayed
   on top of every category.
 - Translation updates: Carles Munõz Gorriz (ca), Abel Martín (es), 
-  Maximilian Schleiss (fr), Andhika Padmawan (id), Terje Uriansrud (nb_NO)
+  Maximilian Schleiss (fr), Andhika Padmawan (id), Terje Uriansrud (nb_NO).
 
 4.5.91
 ======

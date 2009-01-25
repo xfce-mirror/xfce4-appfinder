@@ -27,8 +27,8 @@ msgstr "[MENUFILE]"
 #: ../src/main.c:65
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr "Saisissez '%s ---help' pour obtenir des informations sur"
-" l'utilisation."
+msgstr ""
+"Saisissez '%s ---help' pour obtenir des informations sur l'utilisation."
 
 #: ../src/main.c:71
 msgid "Unable to initialize GTK+."
