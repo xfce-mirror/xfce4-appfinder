@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2008-11-1 11:52+0200\n"
+"PO-Revision-Date: 2009-01-26 11:48+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -63,7 +63,7 @@ msgstr "Шукати та запускати програми встановле
 
 #: ../src/xfce-appfinder-window.c:318
 msgid "Search"
-msgstr ""
+msgstr "Пошук"
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
@@ -102,5 +102,3 @@ msgstr "Неможливо завантажити меню з %s"
 msgid "All"
 msgstr "Всі"
 
-#~ msgid "Filter"
-#~ msgstr "Фільтр"
