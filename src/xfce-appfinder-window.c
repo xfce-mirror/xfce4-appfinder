@@ -79,6 +79,7 @@ static void       xfce_appfinder_window_set_property       (GObject             
                                                             const GValue             *value,
                                                             GParamSpec               *pspec);
 static void       _xfce_appfinder_window_closed            (XfceAppfinderWindow      *window);
+static gchar     *_xfce_appfinder_window_get_menu_filename (XfceAppfinderWindow      *window);
 static gpointer   _xfce_appfinder_window_reload_menu       (XfceAppfinderWindow      *window);
 static void       _xfce_appfinder_window_entry_changed     (GtkEditable              *editable,
                                                             XfceAppfinderWindow      *window);
@@ -891,12 +892,38 @@ _xfce_appfinder_window_load_menu (XfceAppfinderWindow *window,
 
 
 
+static gchar *
+_xfce_appfinder_window_get_menu_filename (XfceAppfinderWindow *window)
+{
+  gchar **paths;
+  gchar  *filename = NULL;
+  gint    i;
+
+  g_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (window), NULL);
+
+  paths = xfce_resource_lookup_all (XFCE_RESOURCE_CONFIG, "menus/xfce-applications.menu");
+
+  for (i = 0; paths[i] != NULL; ++i)
+    if (g_file_test (paths[i], G_FILE_TEST_IS_REGULAR))
+      {
+        filename = g_strdup (paths[i]);
+        break;
+      }
+
+  g_strfreev (paths);
+
+  return filename;
+}
+
+
+
 static gpointer 
 _xfce_appfinder_window_reload_menu (XfceAppfinderWindow *window)
 {
   GtkWidget *button;
   GError    *error = NULL;
   GSList    *menus;
+  gchar     *filename = NULL;
   gint       counter = 0;
 
   g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
@@ -906,7 +933,16 @@ _xfce_appfinder_window_reload_menu (XfceAppfinderWindow *window)
   if (G_UNLIKELY (window->menu_filename != NULL))
     window->menu = xfce_menu_new (window->menu_filename, &error);
   else
-    window->menu = xfce_menu_get_root (&error);
+    {
+      filename = _xfce_appfinder_window_get_menu_filename (window);
+
+      if (G_LIKELY (filename != NULL))
+        window->menu = xfce_menu_new (filename, &error);
+      else
+        window->menu = xfce_menu_get_root (&error);
+
+      g_free (filename);
+    }
 
   if (G_UNLIKELY (window->menu == NULL))
     {
