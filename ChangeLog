@@ -1,5 +1,9 @@
 2009-02-01	Jannis Pohlmann <jannis@xfce.org>
 
+	* NEWS: Update NEWS with the latest change.
+
+2009-02-01	Jannis Pohlmann <jannis@xfce.org>
+
 	* src/xfce-appfinder-window.c: Try to load items from 
 	  xfce-applications.menu before trying applications.menu in order to
 	  provide the same items as the xfdesktop menu does. Reported by

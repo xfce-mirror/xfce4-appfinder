@@ -1,3 +1,9 @@
+4.5.99.2
+========
+- Try to load items from xfce-applications.menu before trying 
+  applications.menu in order to provide the same items as xfdesktop
+  does (reported by Mark Trompell).
+
 4.5.99.1
 ========
 - Translation updates: da (Per Kongstad), es (Abel Martín), eu (Piarres 
