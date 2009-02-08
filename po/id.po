@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2008-10-11 19:47+0700\n"
+"PO-Revision-Date: 2009-01-27 22:28+0700\n"
 "Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -50,18 +50,20 @@ msgstr "Gagal menyambung ke jurik xfconf. Alasan: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Gagal menyambung ke jurik xfconf."
 
-#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:280
+#: ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Pencari Aplikasi"
 
-#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Mencari dan menjalankan aplikasi terinstal di sistem anda"
 
 #: ../src/xfce-appfinder-window.c:318
 msgid "Search"
-msgstr ""
+msgstr "Telusuri"
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
@@ -86,7 +88,8 @@ msgstr "Tak dapat mengeksekusi aplikasi %s"
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "Tak dapat memuat menu dari %s. Alasan: %s"
 
-#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:918
+#: ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Tak dapat memuat menu sistem"
 
@@ -95,7 +98,8 @@ msgstr "Tak dapat memuat menu sistem"
 msgid "Could not load menu from %s"
 msgstr "Tak dapat memuat menu dari %s"
 
-#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:940
+#: ../src/xfce-appfinder-window.c:947
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Semua"
@@ -106,15 +110,12 @@ msgstr "Semua"
 #, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Mencari aplikasi terinstal di sistem."
-
 #~ msgid "Find applications installed on the system."
 #~ msgstr "Mencari aplikasi terinstal di sistem."
-
 #~ msgid "Failed to open display"
 #~ msgstr "Gagal membuka tampilan"
-
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Hak cipta (c) 2008"
-
 #~ msgid "Applications"
 #~ msgstr "Aplikasi"
+
