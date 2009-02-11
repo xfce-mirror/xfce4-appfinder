@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2008-10-08 21:20+0100\n"
+"PO-Revision-Date: 2009-02-11 01:33+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: hu\n"
 "MIME-Version: 1.0\n"
@@ -48,19 +48,20 @@ msgstr "Nem tudtam kapcsolódni az xfconf démonhoz. Oka: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Nem tudtam kapcsolódni az xfconf démonhoz"
 
-#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:280
+#: ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Alkalmazás-kereső"
 
-#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "A rendszerre telepített alkalmazások keresése és futtatása"
 
 #: ../src/xfce-appfinder-window.c:318
-#, fuzzy
 msgid "Search"
-msgstr "<b>Keresés:</b>"
+msgstr "Keresés"
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
@@ -85,7 +86,8 @@ msgstr "Nem tudtam futtatni ezt az alkalmazást: %s"
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "Nem tudtam betölteni a menüt innen: %s. Oka: %s"
 
-#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:918
+#: ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Nem tudtam betölteni a rendszer menüt"
 
@@ -94,7 +96,8 @@ msgstr "Nem tudtam betölteni a rendszer menüt"
 msgid "Could not load menu from %s"
 msgstr "Nem tudtam betölteni a menüt innen: %s"
 
-#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:940
+#: ../src/xfce-appfinder-window.c:947
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Minden"
@@ -105,81 +108,56 @@ msgstr "Minden"
 #, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "A rendszerre telepített alkalmazások keresése"
-
 #~ msgid "Find applications installed on the system."
 #~ msgstr "A rendszerre telepített alkalmazások keresése"
-
 #~ msgid "Failed to open display"
 #~ msgstr "Kijelző megnyitása sikertelen"
-
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Copyright (c) 2008"
-
 #~ msgid "Applications"
 #~ msgstr "Alkalmazások"
-
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "Xfce 4 Alkalmazáskereső"
-
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Név</b>"
-
 #~ msgid "N/A"
 #~ msgstr "N/A"
-
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Megjegyzés</b>"
-
 #~ msgid "<b>Categories</b>"
 #~ msgstr "<b>Kategóriák</b>"
-
 #~ msgid "<b>Command</b>"
 #~ msgstr "<b>Parancs</b>"
-
 #~ msgid "Run program"
 #~ msgstr "Program futtatása"
-
 #~ msgid "Show Categories"
 #~ msgstr "Kategóriák mutatása"
-
 #~ msgid "Core"
 #~ msgstr "Alap"
-
 #~ msgid "Development"
 #~ msgstr "Fejlesztés"
-
 #~ msgid "Office"
 #~ msgstr "Iroda"
-
 #~ msgid "Graphics"
 #~ msgstr "Grafika"
-
 #~ msgid "Network"
 #~ msgstr "Hálózat"
-
 #~ msgid "AudioVideo"
 #~ msgstr "Hang és Mozgókép"
-
 #~ msgid "Game"
 #~ msgstr "Játék"
-
 #~ msgid "Education"
 #~ msgstr "Oktatás"
-
 #~ msgid "System"
 #~ msgstr "Rendszer"
-
 #~ msgid "Filemanager"
 #~ msgstr "Fájlkezelő"
-
 #~ msgid "Utility"
 #~ msgstr "Eszközök"
-
 #~ msgid "No items available"
 #~ msgstr "Nincsenek elérhető elemek"
-
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "Bocs, nincs találat."
-
 #~ msgid "Appfinder"
 #~ msgstr "Alkalmazáskereső"
+
