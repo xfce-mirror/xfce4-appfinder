@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2008-12-14 15:25+0100\n"
+"PO-Revision-Date: 2009-02-11 17:31+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -55,26 +55,29 @@ msgstr "Fallo ó conectar co daemon xfconf. Razón: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Fallo ó conectar co daemon xfconf."
 
-#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:280
+#: ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Buscador de aplicacións"
 
-#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Busque e execute aplicacións instaladas no sistema"
 
 #: ../src/xfce-appfinder-window.c:318
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
 msgstr "Categorías"
 
 #: ../src/xfce-appfinder-window.c:389
+#, fuzzy
 msgid "C_lose after execute"
-msgstr ""
+msgstr "Fallo ó executar o proceso fillo (%s)"
 
 #: ../src/xfce-appfinder-window.c:790
 #, c-format
@@ -91,7 +94,8 @@ msgstr "Non se puido executar a aplicación %s"
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "Non se puido cargar o menú do sistema dende %s. Razón: %s"
 
-#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:918
+#: ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Non se puido cargar o menú do sistema"
 
@@ -100,7 +104,8 @@ msgstr "Non se puido cargar o menú do sistema"
 msgid "Could not load menu from %s"
 msgstr "Non se puido cargar o menú do sistema dende %s"
 
-#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:940
+#: ../src/xfce-appfinder-window.c:947
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Todas"
@@ -111,42 +116,30 @@ msgstr "Todas"
 #, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Busque aplicacións instaladas no sistema."
-
 #~ msgid "Find applications installed on the system."
 #~ msgstr "Busque aplicacións instaladas no sistema."
-
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Copyright (c) 2008"
-
 #~ msgid "Applications"
 #~ msgstr "Aplicacións"
-
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Nome</b>"
-
 #~ msgid "N/A"
 #~ msgstr "N/A"
-
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Comentario</b>"
-
 #~ msgid "Development"
 #~ msgstr "Desenvolvemento"
-
 #~ msgid "Office"
 #~ msgstr "Oficina"
-
 #~ msgid "Graphics"
 #~ msgstr "Gráficos"
-
 #~ msgid "Network"
 #~ msgstr "Rede"
-
 #~ msgid "AudioVideo"
 #~ msgstr "Audio e Vídeo"
-
 #~ msgid "Game"
 #~ msgstr "Xogos"
-
 #~ msgid "Education"
 #~ msgstr "Educación"
+
