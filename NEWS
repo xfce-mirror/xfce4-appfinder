@@ -1,8 +1,12 @@
-4.5.99.2
+4.6.0
 ========
 - Try to load items from xfce-applications.menu before trying 
   applications.menu in order to provide the same items as xfdesktop
   does (reported by Mark Trompell).
+- Translation updates: gl (Leandro Regueiro), id (Andhika Padmawan), 
+  pl (Piotr Sokół), en_GB (Jeff Bailes), tr (Gökmen Görgen, Samed Beyribey),
+  uk (Dmitry Nikitin)
+  
 
 4.5.99.1
 ========
