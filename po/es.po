@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Edscott Wilson Garcia <edscott@xfce.org>, 2004.
 # Rudy Godoy <rudy@stone-head.org>, 2005.
-# Abel Martín <abel.martin.ruiz@gmail.com>, 2008.
+# Abel Martín <abel.martin.ruiz@gmail.com>, 2008-2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2009-01-18 11:40+0100\n"
+"PO-Revision-Date: 2009-02-24 13:39+0100\n"
 "Last-Translator: Abel Martín <abel.martin.ruiz@gmail.com>\n"
 "Language-Team: Spanish/ES <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
