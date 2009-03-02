@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2008-03-18 14:20+0100\n"
+"PO-Revision-Date: 2009-02-25 19:01+0100\n"
 "Last-Translator: Nuno Miguel <nunis@netcabo.pt>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,9 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/main.c:43
-#, fuzzy
 msgid "Version information"
-msgstr "Mostrar informação de versão"
+msgstr "Informação de versão"
 
 #: ../src/main.c:44
 msgid "[MENUFILE]"
@@ -28,11 +27,11 @@ msgstr "[MENUFICHEIRO]"
 #: ../src/main.c:65
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr ""
+msgstr "Digite '%s --help' para informação de uso."
 
 #: ../src/main.c:71
 msgid "Unable to initialize GTK+."
-msgstr ""
+msgstr "Incapaz de iniciar GTK+."
 
 #: ../src/main.c:81
 msgid "The Xfce development team. All rights reserved."
@@ -46,26 +45,26 @@ msgstr "Por favor, reporte bugs para <%s>."
 #: ../src/main.c:98
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr ""
+msgstr "Falhou a ligação ao daemon xfconf. Razão: %s"
 
 #: ../src/main.c:102
 msgid "Failed to connect to xfconf daemon."
-msgstr ""
+msgstr "Falhou ao ligar ao daemon xfconf."
 
-#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:280
+#: ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "Application Finder"
+msgstr "Localizar Aplicações"
 
-#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
-#, fuzzy
+#: ../src/xfce-appfinder-window.c:295
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Encontra aplicações instaladas no sistema"
+msgstr "Encontra e lança aplicações instaladas no sistema"
 
 #: ../src/xfce-appfinder-window.c:318
-#, fuzzy
 msgid "Search"
-msgstr "<b>Procurar:</b>"
+msgstr "Procurar"
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
@@ -73,118 +72,89 @@ msgstr "Categorias"
 
 #: ../src/xfce-appfinder-window.c:389
 msgid "C_lose after execute"
-msgstr ""
+msgstr "Fe_char depois de executar"
 
 #: ../src/xfce-appfinder-window.c:790
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
-msgstr ""
+msgstr "Incapaz de executar aplicação %s. Razão: %s"
 
 #: ../src/xfce-appfinder-window.c:794
-#, fuzzy, c-format
+#, c-format
 msgid "Could not execute application %s"
-msgstr "Não é possível executar a aplicação seleccionada"
+msgstr "Incapaz de executar a aplicação %s"
 
 #: ../src/xfce-appfinder-window.c:916
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
-msgstr ""
+msgstr "Incapaz de carregar menu de %s. Razão: %s"
 
-#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:918
+#: ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
-msgstr ""
+msgstr "Incapaz de carregar menu de sistema"
 
 #: ../src/xfce-appfinder-window.c:925
 #, c-format
 msgid "Could not load menu from %s"
-msgstr ""
+msgstr "Incapaz de carregar menu de %s"
 
-#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:940
+#: ../src/xfce-appfinder-window.c:947
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Todos"
 
 #~ msgid "Filter"
 #~ msgstr "Filtro"
-
-#, fuzzy
-#~ msgid "Find and launch applications installed on the system"
-#~ msgstr "Encontra aplicações instaladas no sistema"
-
-#~ msgid "Find applications installed on the system."
-#~ msgstr "Encontra aplicações instaladas no sistema"
-
 #~ msgid "Failed to open display"
 #~ msgstr "Falhou ao abrir ecrã"
-
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Copyright (c) 2008"
-
 #~ msgid "Applications"
 #~ msgstr "Aplicações"
-
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "Xfce 4 Appfinder"
-
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Nome:</b>"
-
 #~ msgid "N/A"
 #~ msgstr "N/D"
-
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Comentário</b>"
-
 #~ msgid "<b>Categories</b>"
 #~ msgstr "<b>Categorias</b>"
-
 #~ msgid "<b>Command</b>"
 #~ msgstr "<b>Comando</b>"
-
 #~ msgid "Run program"
 #~ msgstr "Executar programa"
-
 #~ msgid "Show Categories"
 #~ msgstr "Mostrar Categorias"
-
 #~ msgid "Core"
 #~ msgstr "Base"
-
 #~ msgid "Development"
 #~ msgstr "Desenvolvimento"
-
 #~ msgid "Office"
 #~ msgstr "Escritório"
-
 #~ msgid "Graphics"
 #~ msgstr "Gráficos"
-
 #~ msgid "Network"
 #~ msgstr "Rede"
-
 #~ msgid "AudioVideo"
 #~ msgstr "Áudio e Vídeo"
-
 #~ msgid "Game"
 #~ msgstr "Jogos"
-
 #~ msgid "Education"
 #~ msgstr "Educativos"
-
 #~ msgid "System"
 #~ msgstr "Sistema"
-
 #~ msgid "Filemanager"
 #~ msgstr "Gestor de ficheiros"
-
 #~ msgid "Utility"
 #~ msgstr "Acessórios"
-
 #~ msgid "No items available"
 #~ msgstr "Nenhum item disponível"
-
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "Desculpe, não existe correspondência para o texto procurado."
-
 #~ msgid "Appfinder"
 #~ msgstr "Appfinder"
+
