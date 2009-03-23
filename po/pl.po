@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2009-02-05 17:21+0100\n"
+"PO-Revision-Date: 2009-03-18 13:29+0100\n"
 "Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../src/main.c:43
 msgid "Version information"
-msgstr "Wypisuje informacje o wersji"
+msgstr "Wypisuje informacje o wersji i kończy"
 
 #: ../src/main.c:44
 msgid "[MENUFILE]"
@@ -33,7 +33,7 @@ msgstr "Proszę wpisać „%s --help” aby wypisać komunikat pomocy."
 
 #: ../src/main.c:71
 msgid "Unable to initialize GTK+."
-msgstr "Nie można zainicjalizować GTK+."
+msgstr "Nie można zainicjować GTK+."
 
 #: ../src/main.c:81
 msgid "The Xfce development team. All rights reserved."
@@ -62,7 +62,7 @@ msgstr "Wyszukiwanie programów"
 #: ../src/xfce-appfinder-window.c:295
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Znajduje i uruchamia programy zainstalowane w systemie"
+msgstr "Wyszukuje i uruchamia programy zainstalowane w systemie"
 
 #: ../src/xfce-appfinder-window.c:318
 msgid "Search"
@@ -94,7 +94,7 @@ msgstr "Nie można wczytać menu z pliku „%s”. Powód: %s"
 #: ../src/xfce-appfinder-window.c:918
 #: ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
-msgstr "Nie można wczytać menu systemowego"
+msgstr "Nie można wczytać menu programów"
 
 #: ../src/xfce-appfinder-window.c:925
 #, c-format
