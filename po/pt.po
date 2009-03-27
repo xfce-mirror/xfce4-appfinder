@@ -6,10 +6,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Project-Id-Version: xfce4-appfinder 4.6.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2009-02-25 19:01+0100\n"
+"PO-Revision-Date: 2009-03-14 19:24+0100\n"
 "Last-Translator: Nuno Miguel <nunis@netcabo.pt>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
