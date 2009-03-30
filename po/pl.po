@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2009-03-18 13:29+0100\n"
+"PO-Revision-Date: 2009-03-26 17:13+0100\n"
 "Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -66,7 +66,7 @@ msgstr "Wyszukuje i uruchamia programy zainstalowane w systemie"
 
 #: ../src/xfce-appfinder-window.c:318
 msgid "Search"
-msgstr "Znajdź"
+msgstr "Wyszukiwanie"
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
