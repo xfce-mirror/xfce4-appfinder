@@ -101,4 +101,3 @@ msgstr "Неможливо завантажити меню з %s"
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Всі"
-

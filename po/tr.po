@@ -55,14 +55,12 @@ msgstr "Xfconf servisine bağlanılamadı. Nedeni: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Xfconf servisine bağlanılamadı."
 
-#: ../src/xfce-appfinder-window.c:280
-#: ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Uygulama Bulucu"
 
-#: ../src/xfce-appfinder-window.c:295
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Sisteminde kurulu uygulamaları bul ve başlat"
 
@@ -93,8 +91,7 @@ msgstr "%s uygulaması başlatılamadı"
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "%s bölümünden menü yüklenemedi. Nedeni: %s"
 
-#: ../src/xfce-appfinder-window.c:918
-#: ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Sistem menüsü yüklenemedi"
 
@@ -103,8 +100,7 @@ msgstr "Sistem menüsü yüklenemedi"
 msgid "Could not load menu from %s"
 msgstr "%s bölümünden menü yüklenemedi"
 
-#: ../src/xfce-appfinder-window.c:940
-#: ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Hepsi"
@@ -115,12 +111,15 @@ msgstr "Hepsi"
 #, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Sistem üzerinde kurulmuş olan uygulamaları ara."
+
 #~ msgid "Find applications installed on the system."
 #~ msgstr "Sistem üzerinde kurulmuş olan uygulamaları ara."
+
 #~ msgid "Failed to open display"
 #~ msgstr "Görüntü sunucusu açılamadı"
+
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Telif Hakkı (c) 2008"
+
 #~ msgid "Applications"
 #~ msgstr "Uygulamalar"
-

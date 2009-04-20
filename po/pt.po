@@ -51,14 +51,12 @@ msgstr "Falhou a ligação ao daemon xfconf. Razão: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Falhou ao ligar ao daemon xfconf."
 
-#: ../src/xfce-appfinder-window.c:280
-#: ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Localizar Aplicações"
 
-#: ../src/xfce-appfinder-window.c:295
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Encontra e lança aplicações instaladas no sistema"
 
@@ -89,8 +87,7 @@ msgstr "Incapaz de executar a aplicação %s"
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "Incapaz de carregar menu de %s. Razão: %s"
 
-#: ../src/xfce-appfinder-window.c:918
-#: ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "Incapaz de carregar menu de sistema"
 
@@ -99,62 +96,85 @@ msgstr "Incapaz de carregar menu de sistema"
 msgid "Could not load menu from %s"
 msgstr "Incapaz de carregar menu de %s"
 
-#: ../src/xfce-appfinder-window.c:940
-#: ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Todos"
 
 #~ msgid "Filter"
 #~ msgstr "Filtro"
+
 #~ msgid "Failed to open display"
 #~ msgstr "Falhou ao abrir ecrã"
+
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Copyright (c) 2008"
+
 #~ msgid "Applications"
 #~ msgstr "Aplicações"
+
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "Xfce 4 Appfinder"
+
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Nome:</b>"
+
 #~ msgid "N/A"
 #~ msgstr "N/D"
+
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Comentário</b>"
+
 #~ msgid "<b>Categories</b>"
 #~ msgstr "<b>Categorias</b>"
+
 #~ msgid "<b>Command</b>"
 #~ msgstr "<b>Comando</b>"
+
 #~ msgid "Run program"
 #~ msgstr "Executar programa"
+
 #~ msgid "Show Categories"
 #~ msgstr "Mostrar Categorias"
+
 #~ msgid "Core"
 #~ msgstr "Base"
+
 #~ msgid "Development"
 #~ msgstr "Desenvolvimento"
+
 #~ msgid "Office"
 #~ msgstr "Escritório"
+
 #~ msgid "Graphics"
 #~ msgstr "Gráficos"
+
 #~ msgid "Network"
 #~ msgstr "Rede"
+
 #~ msgid "AudioVideo"
 #~ msgstr "Áudio e Vídeo"
+
 #~ msgid "Game"
 #~ msgstr "Jogos"
+
 #~ msgid "Education"
 #~ msgstr "Educativos"
+
 #~ msgid "System"
 #~ msgstr "Sistema"
+
 #~ msgid "Filemanager"
 #~ msgstr "Gestor de ficheiros"
+
 #~ msgid "Utility"
 #~ msgstr "Acessórios"
+
 #~ msgid "No items available"
 #~ msgstr "Nenhum item disponível"
+
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "Desculpe, não existe correspondência para o texto procurado."
+
 #~ msgid "Appfinder"
 #~ msgstr "Appfinder"
-
