@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: Muhammad Ali Makki <makki.ma@gmail.com>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Urdu\n"
 "X-Poedit-Country: PAKISTAN\n"
@@ -54,12 +54,14 @@ msgstr "ڈیمن xfconf سے رابطہ ناکام. وجہ: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "ڈیمن xfconf سے رابطہ ناکام"
 
-#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:280
+#: ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "اطلاقیہ تلاش کار"
 
-#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "نظام میں نصب اطلاقیے تلاش کریں اور چلائیں"
 
@@ -90,7 +92,8 @@ msgstr "اطلاقیہ %s نہیں چلایا جاسکتا"
 msgid "Could not load menu from %s. Reason: %s"
 msgstr "%s سے فہرست لوڈ نہیں کی جاسکی. وجہ: %s"
 
-#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:918
+#: ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
 msgstr "نظام کی فہرست لوڈ نہیں کی جاسکتی"
 
@@ -99,73 +102,54 @@ msgstr "نظام کی فہرست لوڈ نہیں کی جاسکتی"
 msgid "Could not load menu from %s"
 msgstr "%s سے فہرست لوڈ نہیں کی جاسکتی"
 
-#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:940
+#: ../src/xfce-appfinder-window.c:947
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "تمام"
 
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "ایکسفس 4 اطلاقیہ تلاش کار"
-
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>نام</b>"
-
 #~ msgid "N/A"
 #~ msgstr "غ/م"
-
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>تبصرہ</b>"
-
 #~ msgid "<b>Categories</b>"
 #~ msgstr "<b>زمرہ جات</b>"
-
 #~ msgid "<b>Command</b>"
 #~ msgstr "<b>کمانڈ</b>"
-
 #~ msgid "Run program"
 #~ msgstr "پروگرام چلائیں"
-
 #~ msgid "Show Categories"
 #~ msgstr "زمرے دکھائیں"
-
 #~ msgid "Core"
 #~ msgstr "مرکز"
-
 #~ msgid "Development"
 #~ msgstr "ترقی"
-
 #~ msgid "Office"
 #~ msgstr "آفس"
-
 #~ msgid "Graphics"
 #~ msgstr "گریفکس"
-
 #~ msgid "Network"
 #~ msgstr "نیٹ ورک"
-
 #~ msgid "AudioVideo"
 #~ msgstr "آڈیوویڈیو"
-
 #~ msgid "Game"
 #~ msgstr "گیم"
-
 #~ msgid "Education"
 #~ msgstr "تعلیم"
-
 #~ msgid "System"
 #~ msgstr "نظام"
-
 #~ msgid "Filemanager"
 #~ msgstr "فائل منیجر"
-
 #~ msgid "Utility"
 #~ msgstr "سہولت"
-
 #~ msgid "No items available"
 #~ msgstr "کوئی عناصر نہیں"
-
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "معذرت، تلاش کیے گئے متن کا کوئی نتیجہ نہیں."
-
 #~ msgid "Appfinder"
 #~ msgstr "اطلاقیہ تلاش کار"
+
