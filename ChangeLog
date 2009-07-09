@@ -1,5 +1,10 @@
 2009-07-09	Jannis Pohlmann <jannis@xfce.org>
 
+	* src/xfce-appfinder-window.c: Rework the tooltip string code a little
+	  bit.
+
+2009-07-09	Jannis Pohlmann <jannis@xfce.org>
+
 	* src/xfce-appfinder-window.c: Don't use startup notification for now.
 	  As we use exo-open to launch desktop entries, people usually end up
 	  with annoying waiting cursors and a lot of temporary exo-open items

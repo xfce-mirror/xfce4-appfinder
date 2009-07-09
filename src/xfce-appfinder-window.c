@@ -1089,10 +1089,10 @@ _xfce_appfinder_window_load_menu_item (XfceAppfinderWindow *window,
   GString      *tooltip_str;
   GList        *categories;
   GList        *lp;
-  const gchar **categories_array;
   const gchar  *name = NULL;
   const gchar  *comment;
   const gchar  *command;
+  gchar       **categories_array;
   gchar        *categories_string;
   gchar        *text;
   gchar        *tooltip = NULL;
@@ -1127,19 +1127,25 @@ _xfce_appfinder_window_load_menu_item (XfceAppfinderWindow *window,
 
   if (G_LIKELY (categories != NULL))
     {
-      categories_array = g_new0 (const gchar *, g_list_length (categories) + 1);
+      categories_array = g_new0 (gchar *, g_list_length (categories) + 1);
 
       for (lp = categories, n = 0; lp != NULL; lp = lp->next, ++n)
         categories_array[n] = lp->data;
 
-      categories_string = g_strjoinv (", ", (gchar **) categories_array);
-      g_string_append_printf (tooltip_str, _("<b>Categories:</b> %s\n"), categories_string);
+      categories_string = g_strjoinv (", ", categories_array);
+      g_string_append_printf (tooltip_str, _("<b>Categories:</b> %s"), categories_string);
       g_free (categories_string);
 
       g_free (categories_array);
     }
 
-  g_string_append_printf (tooltip_str, _("<b>Command:</b> %s"), command);
+  if (command != NULL && *command != '\0')
+    {
+      if (categories != NULL)
+        g_string_append_c (tooltip_str, '\n');
+
+      g_string_append_printf (tooltip_str, _("<b>Command:</b> %s"), command);
+    }
 
   tooltip = g_string_free (tooltip_str, FALSE);
 
