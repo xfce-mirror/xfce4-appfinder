@@ -53,6 +53,7 @@
 #define TEXT_COLUMN 1
 #define CATEGORY_COLUMN 2
 #define ITEM_COLUMN 3
+#define TOOLTIP_COLUMN 4
 
 
 
@@ -264,6 +265,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   GtkWidget         *label;
   GtkWidget         *alignment;
   GtkWidget         *scrollwin;
+  GtkWidget         *execute_image;
   gchar             *text;
   gint               width;
   gint               height;
@@ -358,13 +360,15 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_container_add (GTK_CONTAINER (hbox1), scrollwin);
   gtk_widget_show (scrollwin);
 
-  window->list_store = gtk_list_store_new (4, GDK_TYPE_PIXBUF, G_TYPE_STRING, G_TYPE_STRING, XFCE_TYPE_MENU_ITEM);
+  window->list_store =
+    gtk_list_store_new (5, GDK_TYPE_PIXBUF, G_TYPE_STRING, G_TYPE_STRING, XFCE_TYPE_MENU_ITEM, G_TYPE_STRING);
 
   window->filter = gtk_tree_model_filter_new (GTK_TREE_MODEL (window->list_store), NULL);
   gtk_tree_model_filter_set_visible_func (GTK_TREE_MODEL_FILTER (window->filter), _xfce_appfinder_window_visible_func, window, NULL);
 
   window->tree_view = gtk_tree_view_new_with_model (GTK_TREE_MODEL (window->filter));
   gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (window->tree_view), FALSE);
+  gtk_tree_view_set_tooltip_column (GTK_TREE_VIEW (window->tree_view), TOOLTIP_COLUMN);
   g_signal_connect (window->tree_view, "cursor-changed", G_CALLBACK (_xfce_appfinder_window_cursor_changed), window);
   g_signal_connect_swapped (window->tree_view, "row-activated", G_CALLBACK (_xfce_appfinder_window_execute), window);
   g_signal_connect (window->tree_view, "drag-data-get", G_CALLBACK (_xfce_appfinder_window_drag_data_get), window);
@@ -387,7 +391,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_box_pack_start (GTK_BOX (vbox2), hbox2, FALSE, TRUE, 0);
   gtk_widget_show (hbox2);
 
-  check_button = gtk_check_button_new_with_mnemonic (_("C_lose after execute"));
+  check_button = gtk_check_button_new_with_mnemonic (_("C_lose after launch"));
   gtk_box_pack_start (GTK_BOX (hbox2), check_button, FALSE, TRUE, 0);
   gtk_widget_show (check_button);
 
@@ -400,7 +404,9 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_container_add (GTK_CONTAINER (hbox2), bbox);
   gtk_widget_show (bbox);
 
-  window->execute_button = gtk_button_new_from_stock (GTK_STOCK_EXECUTE);
+  window->execute_button = gtk_button_new_with_mnemonic (_("Launch"));
+  execute_image = gtk_image_new_from_stock (GTK_STOCK_EXECUTE, GTK_ICON_SIZE_BUTTON);
+  gtk_button_set_image (GTK_BUTTON (window->execute_button), execute_image);
   GTK_WIDGET_SET_FLAGS (window->execute_button, GTK_CAN_DEFAULT);
   gtk_button_set_focus_on_click (GTK_BUTTON (window->execute_button), FALSE);
   gtk_widget_set_sensitive (window->execute_button, FALSE);
@@ -784,7 +790,7 @@ _xfce_appfinder_window_execute (XfceAppfinderWindow *window)
 
   screen = xfce_gdk_display_locate_monitor_with_pointer (gdk_display_get_default (), NULL);
 
-  if (G_UNLIKELY (!xfce_exec_on_screen (screen, command, FALSE, TRUE, &error)))
+  if (G_UNLIKELY (!xfce_exec_on_screen (screen, command, FALSE, FALSE, &error)))
     {
       if (G_LIKELY (error != NULL))
         {
@@ -1078,11 +1084,19 @@ _xfce_appfinder_window_load_menu_item (XfceAppfinderWindow *window,
                                        const gchar         *category,
                                        gint                *counter)
 {
-  GtkTreeIter  iter;
-  GdkPixbuf   *pixbuf;
-  const gchar *name = NULL;
-  const gchar *comment;
-  gchar       *text;
+  GtkTreeIter   iter;
+  GdkPixbuf    *pixbuf;
+  GString      *tooltip_str;
+  GList        *categories;
+  GList        *lp;
+  const gchar **categories_array;
+  const gchar  *name = NULL;
+  const gchar  *comment;
+  const gchar  *command;
+  gchar        *categories_string;
+  gchar        *text;
+  gchar        *tooltip = NULL;
+  guint         n;
 
   g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
 
@@ -1095,28 +1109,50 @@ _xfce_appfinder_window_load_menu_item (XfceAppfinderWindow *window,
 
       if (G_UNLIKELY (name == NULL))
         name = xfce_menu_element_get_name (XFCE_MENU_ELEMENT (item));
-    }   
+    }
   else
     name = xfce_menu_element_get_name (XFCE_MENU_ELEMENT (item));
 
   comment = xfce_menu_item_get_comment (item);
   pixbuf = _xfce_appfinder_window_create_item_icon (item);
-
-  DBG ("name = %s", name);
+  categories = xfce_menu_item_get_categories (item);
+  command = xfce_menu_item_get_command (item);
 
   if (G_LIKELY (comment != NULL))
     text = g_strdup_printf ("<b>%s</b>\n%s", name, comment);
   else
     text = g_strdup_printf ("<b>%s</b>", name);
 
+  tooltip_str = g_string_new (NULL);
+
+  if (G_LIKELY (categories != NULL))
+    {
+      categories_array = g_new0 (const gchar *, g_list_length (categories) + 1);
+
+      for (lp = categories, n = 0; lp != NULL; lp = lp->next, ++n)
+        categories_array[n] = lp->data;
+
+      categories_string = g_strjoinv (", ", (gchar **) categories_array);
+      g_string_append_printf (tooltip_str, _("<b>Categories:</b> %s\n"), categories_string);
+      g_free (categories_string);
+
+      g_free (categories_array);
+    }
+
+  g_string_append_printf (tooltip_str, _("<b>Command:</b> %s"), command);
+
+  tooltip = g_string_free (tooltip_str, FALSE);
+
   gtk_list_store_append (window->list_store, &iter);
-  gtk_list_store_set (window->list_store, &iter, 
-                      ICON_COLUMN, pixbuf, 
+  gtk_list_store_set (window->list_store, &iter,
+                      ICON_COLUMN, pixbuf,
                       TEXT_COLUMN, text,
                       CATEGORY_COLUMN, category,
-                      ITEM_COLUMN, item, -1);
+                      ITEM_COLUMN, item,
+                      TOOLTIP_COLUMN, tooltip,-1);
 
   g_free (text);
+  g_free (tooltip);
 
   if (GDK_IS_PIXBUF (pixbuf))
     g_object_unref (pixbuf);
@@ -1210,15 +1246,20 @@ _xfce_appfinder_window_visible_func (GtkTreeModel *filter,
                                      gpointer      user_data)
 {
   XfceAppfinderWindow *window = user_data;
+  XfceMenuItem        *item;
   gchar               *category;
   gchar               *text;
   gchar               *search_text;
   gchar               *normalized;
+  gchar               *command;
   gboolean             visible = FALSE;
 
   g_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (window), FALSE);
 
-  gtk_tree_model_get (filter, iter, CATEGORY_COLUMN, &category, TEXT_COLUMN, &text, -1);
+  gtk_tree_model_get (filter, iter, 
+                      CATEGORY_COLUMN, &category, 
+                      TEXT_COLUMN, &text, 
+                      ITEM_COLUMN, &item, -1);
 
   if (G_UNLIKELY (text == NULL))
     return FALSE;
@@ -1232,7 +1273,19 @@ _xfce_appfinder_window_visible_func (GtkTreeModel *filter,
   text = g_utf8_casefold (normalized, -1);
   g_free (normalized);
 
-  if (G_UNLIKELY (g_strstr_len (text, -1, search_text) != NULL))
+  if (xfce_menu_item_get_command (item) != NULL)
+    {
+      normalized = g_utf8_normalize (xfce_menu_item_get_command (item), -1, G_NORMALIZE_ALL);
+      command = g_utf8_casefold (normalized, -1);
+      g_free (normalized);
+    }
+  else
+    {
+      command = g_strdup ("");
+    }
+
+  if (g_strstr_len (text, -1, search_text) != NULL || 
+      g_strstr_len (command, -1, search_text) != NULL)
     {
       if (window->current_category == NULL || 
           g_utf8_strlen (window->current_category, -1) == 0 ||
@@ -1240,14 +1293,15 @@ _xfce_appfinder_window_visible_func (GtkTreeModel *filter,
         {
           visible = TRUE;
         }
-      else
+      else 
         {
-          if (G_UNLIKELY (category != NULL && g_utf8_collate (category, window->current_category) == 0))
+          if (category != NULL && g_utf8_collate (category, window->current_category) == 0)
             visible = TRUE;
         }
     }
 
   g_free (search_text);
+  g_free (command);
   g_free (text);
   g_free (category);
 
