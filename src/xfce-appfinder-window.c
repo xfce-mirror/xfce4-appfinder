@@ -334,12 +334,13 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   column = gtk_tree_view_column_new_with_attributes (NULL, renderer, "markup", TEXT_COLUMN, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (window->tree_view), GTK_TREE_VIEW_COLUMN (column));
 
-  hbox2 = gtk_hbox_new (FALSE, 12);
-  gtk_box_pack_start (GTK_BOX (vbox2), hbox2, FALSE, TRUE, 0);
+  hbox2 = gtk_hbox_new (FALSE, 6);
+  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (window)->vbox), hbox2, FALSE, TRUE, 0);
   gtk_widget_show (hbox2);
 
   check_button = gtk_check_button_new_with_mnemonic (_("C_lose after launch"));
   gtk_box_pack_start (GTK_BOX (hbox2), check_button, FALSE, TRUE, 0);
+  gtk_container_set_border_width (GTK_CONTAINER (check_button), 6);
   gtk_widget_show (check_button);
 
   xfconf_g_property_bind (window->channel, "/close-after-execute", G_TYPE_BOOLEAN, G_OBJECT (check_button), "active");
@@ -353,6 +354,12 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   button = gtk_dialog_add_button (GTK_DIALOG (window), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
   g_signal_connect_swapped (button, "clicked", G_CALLBACK (_xfce_appfinder_window_closed), window);
+  
+  g_object_ref (G_OBJECT (GTK_DIALOG (window)->action_area));
+  gtk_container_remove (GTK_CONTAINER (GTK_DIALOG (window)->vbox),
+                        GTK_DIALOG (window)->action_area);
+  gtk_box_pack_start (GTK_BOX (hbox2), GTK_DIALOG (window)->action_area, TRUE, TRUE, 0);
+  g_object_unref (G_OBJECT (GTK_DIALOG (window)->action_area));
 }
 
 
