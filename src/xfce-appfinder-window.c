@@ -3,19 +3,19 @@
  * Copyright (c) 2008 Jasper Huijsmans <jasper@xfce.org>.
  * Copyright (c) 2008 Jannis Pohlmann <jannis@xfce.org>.
  *
- * This program is free software; you can redistribute it and/or modify 
- * it under the terms of the GNU General Public License as published by 
- * the Free Software Foundation; either version 2 of the License, or (at 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or (at
  * your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, but 
- * WITHOUT ANY WARRANTY; without even the implied warranty of 
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU 
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License 
- * along with this program; if not, write to the Free Software 
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
  * MA  02111-1307  USA
  */
 
@@ -32,9 +32,9 @@
 #include <gtk/gtk.h>
 
 #include <libxfce4util/libxfce4util.h>
-#include <libxfcegui4/libxfcegui4.h>
+#include <libxfce4ui/libxfce4ui.h>
 #include <libxfce4menu/libxfce4menu.h>
-#include <thunar-vfs/thunar-vfs.h>
+#include <gio/gio.h>
 #include <xfconf/xfconf.h>
 
 #include "xfce-appfinder-window.h"
@@ -66,8 +66,6 @@ enum
 
 
 
-static void       xfce_appfinder_window_class_init         (XfceAppfinderWindowClass *klass);
-static void       xfce_appfinder_window_init               (XfceAppfinderWindow      *window);
 static void       xfce_appfinder_window_constructed        (GObject                  *object);
 static void       xfce_appfinder_window_dispose            (GObject                  *object);
 static void       xfce_appfinder_window_finalize           (GObject                  *object);
@@ -98,7 +96,7 @@ static gboolean   _xfce_appfinder_window_radio_key_pressed (GtkWidget           
 static gboolean   _xfce_appfinder_window_view_key_pressed  (GtkWidget                *widget,
                                                             GdkEventKey              *event,
                                                             XfceAppfinderWindow      *window);
-static void       _xfce_appfinder_window_category_changed  (XfceAppfinderWindow      *window, 
+static void       _xfce_appfinder_window_category_changed  (XfceAppfinderWindow      *window,
                                                             GtkToggleButton          *button);
 static void       _xfce_appfinder_window_cursor_changed    (GtkTreeView              *tree_view,
                                                             XfceAppfinderWindow      *window);
@@ -106,7 +104,7 @@ static void       _xfce_appfinder_window_drag_data_get     (GtkWidget           
                                                             GdkDragContext           *drag_context,
                                                             GtkSelectionData         *data,
                                                             guint                     info,
-                                                            guint                     time,
+                                                            guint                     drag_time,
                                                             XfceAppfinderWindow      *window);
 static void       _xfce_appfinder_window_execute           (XfceAppfinderWindow      *window);
 static gpointer   _xfce_appfinder_window_monitor_directory (XfceMenu                 *menu,
@@ -114,11 +112,10 @@ static gpointer   _xfce_appfinder_window_monitor_directory (XfceMenu            
                                                             gpointer                  user_data);
 static void       _xfce_appfinder_window_remove_monitor    (XfceMenu                 *menu,
                                                             gpointer                  monitor_handle);
-static void       _xfce_appfinder_window_something_changed (ThunarVfsMonitor         *monitor,
-                                                            ThunarVfsMonitorHandle   *handle,
-                                                            ThunarVfsMonitorEvent     event,
-                                                            ThunarVfsPath            *handle_path,
-                                                            ThunarVfsPath            *event_path,
+static void       _xfce_appfinder_window_something_changed (GFileMonitor             *monitor,
+                                                            GFile                    *file,
+                                                            GFile                    *other_file,
+                                                            GFileMonitorEvent         event_type,
                                                             gpointer                  user_data);
 static void       _xfce_appfinder_window_load_menu_item    (XfceAppfinderWindow      *window,
                                                             XfceMenuItem             *item,
@@ -135,12 +132,12 @@ static void       _xfce_appfinder_window_set_category      (XfceAppfinderWindow 
 
 struct _XfceAppfinderWindowClass
 {
-  GtkWindowClass __parent__;
+  XfceTitledDialogClass __parent__;
 };
 
 struct _XfceAppfinderWindow
 {
-  GtkWindow      __parent__;
+  XfceTitledDialog __parent__;
 
   XfconfChannel *channel;
 
@@ -155,7 +152,7 @@ struct _XfceAppfinderWindow
   GtkListStore  *list_store;
   GtkTreeModel  *filter;
   GtkWidget     *tree_view;
-  
+
   XfceMenu      *menu;
   gchar         *menu_filename;
 
@@ -164,8 +161,6 @@ struct _XfceAppfinderWindow
 
 
 
-static GObjectClass *xfce_appfinder_window_parent_class = NULL;
-
 static const GtkTargetEntry dnd_target_list[] = {
   { "text/uri-list", 0, 0 }
 };
@@ -173,39 +168,14 @@ static const GtkTargetEntry dnd_target_list[] = {
 
 
 XfceMenuMonitorVTable menu_monitor_vtable = {
-  NULL, 
+  NULL,
   _xfce_appfinder_window_monitor_directory,
   _xfce_appfinder_window_remove_monitor,
 };
 
 
 
-GType
-xfce_appfinder_window_get_type (void)
-{
-  static GType type = G_TYPE_INVALID;
-
-  if (G_UNLIKELY (type == G_TYPE_INVALID))
-    {
-      static const GTypeInfo info = 
-        {
-          sizeof (XfceAppfinderWindowClass),
-          NULL,
-          NULL,
-          (GClassInitFunc) xfce_appfinder_window_class_init,
-          NULL,
-          NULL,
-          sizeof (XfceAppfinderWindow),
-          0,
-          (GInstanceInitFunc) xfce_appfinder_window_init,
-          NULL,
-        };
-
-      type = g_type_register_static (GTK_TYPE_WINDOW, "XfceAppfinderWindow", &info, 0);
-    }
-  
-  return type;
-}
+G_DEFINE_TYPE (XfceAppfinderWindow, xfce_appfinder_window, XFCE_TYPE_TITLED_DIALOG)
 
 
 
@@ -214,19 +184,14 @@ xfce_appfinder_window_class_init (XfceAppfinderWindowClass *klass)
 {
   GObjectClass *gobject_class;
 
-  /* Determine parent type class */
-  xfce_appfinder_window_parent_class = g_type_class_peek_parent (klass);
-
   gobject_class = G_OBJECT_CLASS (klass);
-#if GLIB_CHECK_VERSION (2,14,0)
   gobject_class->constructed = xfce_appfinder_window_constructed;
-#endif
   gobject_class->dispose = xfce_appfinder_window_dispose;
   gobject_class->finalize = xfce_appfinder_window_finalize;
   gobject_class->get_property = xfce_appfinder_window_get_property;
   gobject_class->set_property = xfce_appfinder_window_set_property;
 
-  g_object_class_install_property (gobject_class, 
+  g_object_class_install_property (gobject_class,
                                    PROP_MENU_FILENAME,
                                    g_param_spec_string ("menu-filename",
                                                         "menu-filename",
@@ -235,7 +200,7 @@ xfce_appfinder_window_class_init (XfceAppfinderWindowClass *klass)
                                                         G_PARAM_CONSTRUCT_ONLY |
                                                         G_PARAM_WRITABLE));
 
-  g_object_class_install_property (gobject_class, 
+  g_object_class_install_property (gobject_class,
                                    PROP_CATEGORY,
                                    g_param_spec_string ("category",
                                                         "category",
@@ -252,20 +217,15 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 {
   GtkTreeViewColumn *column;
   GtkCellRenderer   *renderer;
-  GtkWidget         *vbox1;
   GtkWidget         *vbox2;
   GtkWidget         *vbox3;
   GtkWidget         *hbox1;
   GtkWidget         *hbox2;
-  GtkWidget         *bbox;
-  GtkWidget         *separator;
-  GtkWidget         *heading;
   GtkWidget         *check_button;
   GtkWidget         *button;
   GtkWidget         *label;
   GtkWidget         *alignment;
   GtkWidget         *scrollwin;
-  GtkWidget         *execute_image;
   gchar             *text;
   gint               width;
   gint               height;
@@ -282,6 +242,8 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   gtk_window_set_title (GTK_WINDOW (window), _("Application Finder"));
   gtk_window_set_icon_name (GTK_WINDOW (window), "xfce4-appfinder");
+  xfce_titled_dialog_set_subtitle (XFCE_TITLED_DIALOG (window), _("Find and launch applications installed on your system"));
+  gtk_dialog_set_has_separator (GTK_DIALOG (window), FALSE);
 
   width = xfconf_channel_get_int (window->channel, "/window-width", DEFAULT_WINDOW_WIDTH);
   height = xfconf_channel_get_int (window->channel, "/window-height", DEFAULT_WINDOW_HEIGHT);
@@ -289,24 +251,9 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_window_set_default_size (GTK_WINDOW (window), width, height);
   gtk_window_set_position (GTK_WINDOW (window), GTK_WIN_POS_CENTER);
 
-  vbox1 = gtk_vbox_new (FALSE, 0);
-  gtk_container_add (GTK_CONTAINER (window), vbox1);
-  gtk_widget_show (vbox1);
-
-  heading = xfce_heading_new ();
-  xfce_heading_set_title (XFCE_HEADING (heading), _("Application Finder"));
-  xfce_heading_set_subtitle (XFCE_HEADING (heading), _("Find and launch applications installed on your system"));
-  xfce_heading_set_icon_name (XFCE_HEADING (heading), "xfce4-appfinder");
-  gtk_box_pack_start (GTK_BOX (vbox1), heading, FALSE, TRUE, 0);
-  gtk_widget_show (heading);
-
-  separator = gtk_hseparator_new ();
-  gtk_box_pack_start (GTK_BOX (vbox1), separator, FALSE, TRUE, 0);
-  gtk_widget_show (separator);
-
   vbox2 = gtk_vbox_new (FALSE, 6);
   gtk_container_set_border_width (GTK_CONTAINER (vbox2), 6);
-  gtk_container_add (GTK_CONTAINER (vbox1), vbox2);
+  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (window)->vbox), vbox2, TRUE, TRUE, 0);
   gtk_widget_show (vbox2);
 
   hbox1 = gtk_hbox_new (FALSE, 12);
@@ -398,26 +345,14 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   xfconf_g_property_bind (window->channel, "/close-after-execute", G_TYPE_BOOLEAN, G_OBJECT (check_button), "active");
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (check_button), xfconf_channel_get_bool (window->channel, "/close-after-execute", DEFAULT_CLOSE_AFTER_EXECUTE));
 
-  bbox = gtk_hbutton_box_new ();
-  gtk_box_set_spacing (GTK_BOX (bbox), 8);
-  gtk_button_box_set_layout (GTK_BUTTON_BOX (bbox), GTK_BUTTONBOX_END);
-  gtk_container_add (GTK_CONTAINER (hbox2), bbox);
-  gtk_widget_show (bbox);
-
-  window->execute_button = gtk_button_new_with_mnemonic (_("Launch"));
-  execute_image = gtk_image_new_from_stock (GTK_STOCK_EXECUTE, GTK_ICON_SIZE_BUTTON);
-  gtk_button_set_image (GTK_BUTTON (window->execute_button), execute_image);
+  window->execute_button = gtk_dialog_add_button (GTK_DIALOG (window), GTK_STOCK_EXECUTE, GTK_RESPONSE_OK);
   GTK_WIDGET_SET_FLAGS (window->execute_button, GTK_CAN_DEFAULT);
   gtk_button_set_focus_on_click (GTK_BUTTON (window->execute_button), FALSE);
   gtk_widget_set_sensitive (window->execute_button, FALSE);
   g_signal_connect_swapped (window->execute_button, "clicked", G_CALLBACK (_xfce_appfinder_window_execute), window);
-  gtk_container_add (GTK_CONTAINER (bbox), window->execute_button);
-  gtk_widget_show (window->execute_button);
 
-  button = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
+  button = gtk_dialog_add_button (GTK_DIALOG (window), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
   g_signal_connect_swapped (button, "clicked", G_CALLBACK (_xfce_appfinder_window_closed), window);
-  gtk_container_add (GTK_CONTAINER (bbox), button);
-  gtk_widget_show (button);
 }
 
 
@@ -426,7 +361,7 @@ static void
 xfce_appfinder_window_constructed (GObject *object)
 {
   XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (object);
-  
+
   xfce_menu_monitor_set_vtable (&menu_monitor_vtable, window);
 
   xfconf_g_property_bind (window->channel, "/category", G_TYPE_STRING, G_OBJECT (window), "category");
@@ -512,15 +447,7 @@ xfce_appfinder_window_set_property (GObject      *object,
 GtkWidget *
 xfce_appfinder_window_new (const gchar *filename)
 {
-  GObject *object;
-  
-  object = g_object_new (XFCE_TYPE_APPFINDER_WINDOW, "menu-filename", filename, NULL);
-
-#if !GLIB_CHECK_VERSION (2,14,0)
-  xfce_appfinder_window_constructed (object);
-#endif
-
-  return GTK_WIDGET (object);
+  return g_object_new (XFCE_TYPE_APPFINDER_WINDOW, "menu-filename", filename, NULL);
 }
 
 
@@ -685,7 +612,7 @@ _xfce_appfinder_window_view_key_pressed (GtkWidget           *widget,
 
 
 static void
-_xfce_appfinder_window_category_changed (XfceAppfinderWindow *window, 
+_xfce_appfinder_window_category_changed (XfceAppfinderWindow *window,
                                          GtkToggleButton     *button)
 {
   g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
@@ -708,10 +635,10 @@ _xfce_appfinder_window_cursor_changed (GtkTreeView         *tree_view,
   g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
 
   selection = gtk_tree_view_get_selection (tree_view);
-  
+
   if (G_LIKELY (selection != NULL && gtk_tree_selection_get_selected (selection, &model, &iter)))
     gtk_tree_model_get (model, &iter, ITEM_COLUMN, &item, -1);
-  
+
   if (G_LIKELY (item != NULL))
     {
       gtk_widget_set_sensitive (window->execute_button, TRUE);
@@ -731,7 +658,7 @@ _xfce_appfinder_window_drag_data_get (GtkWidget           *widget,
                                       GdkDragContext      *drag_context,
                                       GtkSelectionData    *data,
                                       guint                info,
-                                      guint                time,
+                                      guint                drag_time,
                                       XfceAppfinderWindow *window)
 {
   XfceMenuItem     *item;
@@ -748,7 +675,7 @@ _xfce_appfinder_window_drag_data_get (GtkWidget           *widget,
     return;
 
   gtk_tree_model_get (model, &iter, ITEM_COLUMN, &item, -1);
-  
+
   if (G_UNLIKELY (item == NULL))
     return;
 
@@ -788,17 +715,15 @@ _xfce_appfinder_window_execute (XfceAppfinderWindow *window)
 
   command = g_strconcat ("exo-open ", xfce_menu_item_get_filename (item), NULL);
 
-  screen = xfce_gdk_display_locate_monitor_with_pointer (gdk_display_get_default (), NULL);
+  screen = xfce_gdk_screen_get_active (NULL);
 
-  if (G_UNLIKELY (!xfce_exec_on_screen (screen, command, FALSE, FALSE, &error)))
+  if (G_UNLIKELY (!xfce_spawn_command_line_on_screen (screen, command, FALSE, TRUE, &error)))
     {
-      if (G_LIKELY (error != NULL))
-        {
-          xfce_err (_("Could not execute application %s. Reason: %s"), xfce_menu_element_get_name (XFCE_MENU_ELEMENT (item)), error->message);
-          g_error_free (error);
-        }
-      else
-        xfce_err (_("Could not execute application %s"), xfce_menu_element_get_name (XFCE_MENU_ELEMENT (item)));
+      xfce_dialog_show_error (GTK_WINDOW (window), error,
+           _("Could not execute application %s."), xfce_menu_element_get_name (XFCE_MENU_ELEMENT (item)));
+
+      if (error != NULL)
+        g_error_free (error);
     }
 
   g_free (command);
@@ -849,8 +774,8 @@ _xfce_appfinder_window_load_menu (XfceAppfinderWindow *window,
   directory = xfce_menu_get_directory (menu);
 
   if (G_LIKELY (directory != NULL))
-    if (G_UNLIKELY (!xfce_menu_directory_show_in_environment (directory) 
-                    || xfce_menu_directory_get_hidden (directory) 
+    if (G_UNLIKELY (!xfce_menu_directory_show_in_environment (directory)
+                    || xfce_menu_directory_get_hidden (directory)
                     || xfce_menu_directory_get_no_display (directory)))
       {
         return;
@@ -864,7 +789,7 @@ _xfce_appfinder_window_load_menu (XfceAppfinderWindow *window,
   for (iter = items; iter != NULL; iter = g_slist_next (iter))
     _xfce_appfinder_window_load_menu_item (window, XFCE_MENU_ITEM (iter->data), is_category ? name : category, &current_counter);
   g_slist_free (items);
-  
+
   /* Load sub-menus */
   menus = xfce_menu_get_menus (menu);
   for (iter = menus; iter != NULL; iter = g_slist_next (iter))
@@ -888,7 +813,7 @@ _xfce_appfinder_window_load_menu (XfceAppfinderWindow *window,
             gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
 
           window->categories_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (button));
-    
+
           g_signal_connect_swapped (button, "toggled", G_CALLBACK (_xfce_appfinder_window_category_changed), window);
         }
     }
@@ -923,16 +848,15 @@ _xfce_appfinder_window_get_menu_filename (XfceAppfinderWindow *window)
 
 
 
-static gpointer 
+static gpointer
 _xfce_appfinder_window_reload_menu (XfceAppfinderWindow *window)
 {
   GtkWidget *button;
   GError    *error = NULL;
-  GSList    *menus;
   gchar     *filename = NULL;
   gint       counter = 0;
 
-  g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
+  g_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (window), NULL);
 
   DBG ("window->menu_filename = %s", window->menu_filename);
 
@@ -952,22 +876,15 @@ _xfce_appfinder_window_reload_menu (XfceAppfinderWindow *window)
 
   if (G_UNLIKELY (window->menu == NULL))
     {
-      if (G_LIKELY (error != NULL))
-        {
-          if (G_UNLIKELY (window->menu_filename != NULL))
-            xfce_err (_("Could not load menu from %s. Reason: %s"), window->menu_filename, error->message);
-          else
-            xfce_err (_("Could not load system menu"));
-
-          g_error_free (error);
-        }
+      if (G_UNLIKELY (window->menu_filename != NULL))
+        xfce_dialog_show_error (GTK_WINDOW (window), error,
+          _("Could not load menu from %s"), window->menu_filename);
       else
-        {
-          if (G_UNLIKELY (window->menu_filename != NULL))
-            xfce_err (_("Could not load menu from %s"), window->menu_filename);
-          else
-            xfce_err (_("Could not load system menu"));
-        }
+        xfce_dialog_show_error (GTK_WINDOW (window), error,
+          _("Could not load system menu"));
+
+      if (error != NULL)
+        g_error_free (error);
 
       return NULL;
     }
@@ -998,15 +915,14 @@ _xfce_appfinder_window_reload_menu (XfceAppfinderWindow *window)
 
 
 
-static gpointer 
+static gpointer
 _xfce_appfinder_window_monitor_directory (XfceMenu    *menu,
                                           const gchar *filename,
                                           gpointer     user_data)
 {
-  XfceAppfinderWindow    *window = user_data;
-  ThunarVfsMonitorHandle *monitor_handle = NULL;
-  ThunarVfsMonitor       *monitor;
-  ThunarVfsPath          *path;
+  XfceAppfinderWindow *window = user_data;
+  GFile               *path;
+  GFileMonitor        *monitor = NULL;
 
   g_return_val_if_fail (XFCE_IS_MENU (menu), NULL);
   g_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (window), NULL);
@@ -1015,20 +931,17 @@ _xfce_appfinder_window_monitor_directory (XfceMenu    *menu,
   if (G_UNLIKELY (!g_file_test (filename, G_FILE_TEST_IS_DIR)))
     return NULL;
 
-  path = thunar_vfs_path_new (filename, NULL);
-
+  path = g_file_new_for_path (filename);
   if (G_LIKELY (path != NULL))
     {
-      monitor = thunar_vfs_monitor_get_default ();
-      monitor_handle = thunar_vfs_monitor_add_directory (monitor, path, _xfce_appfinder_window_something_changed, window);
-      g_object_unref (monitor);
-
-      thunar_vfs_path_unref (path);
+      monitor = g_file_monitor_directory (path, G_FILE_MONITOR_NONE, NULL, NULL);
+      g_signal_connect (G_OBJECT (monitor), "changed", G_CALLBACK (_xfce_appfinder_window_something_changed), window);
+      g_object_unref (G_OBJECT (path));
     }
 
-  DBG ("monitor_handle = %p", monitor_handle);
+  DBG ("monitor_handle = %p", monitor);
 
-  return monitor_handle;
+  return monitor;
 }
 
 
@@ -1037,27 +950,25 @@ static void
 _xfce_appfinder_window_remove_monitor (XfceMenu *menu,
                                        gpointer  monitor_handle)
 {
-  ThunarVfsMonitor *monitor;
+  GFileMonitor *monitor = monitor_handle;
 
   g_return_if_fail (XFCE_IS_MENU (menu));
   g_return_if_fail (monitor_handle != NULL);
 
   DBG ("monitor_handle = %p", monitor_handle);
 
-  monitor = thunar_vfs_monitor_get_default ();
-  thunar_vfs_monitor_remove (monitor, (ThunarVfsMonitorHandle *) monitor_handle);
-  g_object_unref (monitor);
+  g_file_monitor_cancel (monitor);
+  g_object_unref (G_OBJECT (monitor));
 }
 
 
 
 static void
-_xfce_appfinder_window_something_changed (ThunarVfsMonitor       *monitor,
-                                          ThunarVfsMonitorHandle *handle,
-                                          ThunarVfsMonitorEvent   event,
-                                          ThunarVfsPath          *handle_path,
-                                          ThunarVfsPath          *event_path,
-                                          gpointer                user_data)
+_xfce_appfinder_window_something_changed (GFileMonitor      *monitor,
+                                          GFile             *file,
+                                          GFile             *other_file,
+                                          GFileMonitorEvent  event_type,
+                                          gpointer           user_data)
 {
   XfceAppfinderWindow *window = user_data;
   XfceMenuItemCache   *cache;
@@ -1175,7 +1086,7 @@ _xfce_appfinder_window_create_item_icon (XfceMenuItem *item)
   GtkIconTheme *icon_theme;
   const gchar  *icon_name;
   const gchar  *item_name;
-  gchar        *basename;
+  gchar        *base_name;
   gchar        *extension;
   gchar        *new_item_name;
   gchar         new_icon_name[1024];
@@ -1201,23 +1112,23 @@ _xfce_appfinder_window_create_item_icon (XfceMenuItem *item)
       if (icon == NULL)
         {
           /* Get basename (just to be sure) */
-          basename = g_path_get_basename (icon_name);
+          base_name = g_path_get_basename (icon_name);
 
           /* Determine position of the extension */
-          extension = g_utf8_strrchr (basename, -1, '.');
+          extension = g_utf8_strrchr (base_name, -1, '.');
 
           /* Make sure we found an extension */
           if (extension != NULL)
             {
               /* Remove extension */
-              g_utf8_strncpy (new_icon_name, basename, g_utf8_strlen (basename, -1) - g_utf8_strlen (extension, -1));
+              g_utf8_strncpy (new_icon_name, base_name, g_utf8_strlen (base_name, -1) - g_utf8_strlen (extension, -1));
 
               /* Try to load the pixbuf using the new icon name */
               icon = gtk_icon_theme_load_icon (icon_theme, new_icon_name, ICON_SIZE, GTK_ICON_LOOKUP_USE_BUILTIN, NULL);
             }
 
           /* Free basename */
-          g_free (basename);
+          g_free (base_name);
 
           /* As a last fallback, we try to load the icon by lowercase item name */
           if (icon == NULL && item_name != NULL)
@@ -1262,9 +1173,9 @@ _xfce_appfinder_window_visible_func (GtkTreeModel *filter,
 
   g_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (window), FALSE);
 
-  gtk_tree_model_get (filter, iter, 
-                      CATEGORY_COLUMN, &category, 
-                      TEXT_COLUMN, &text, 
+  gtk_tree_model_get (filter, iter,
+                      CATEGORY_COLUMN, &category,
+                      TEXT_COLUMN, &text,
                       ITEM_COLUMN, &item, -1);
 
   if (G_UNLIKELY (text == NULL))
@@ -1290,16 +1201,16 @@ _xfce_appfinder_window_visible_func (GtkTreeModel *filter,
       command = g_strdup ("");
     }
 
-  if (g_strstr_len (text, -1, search_text) != NULL || 
+  if (g_strstr_len (text, -1, search_text) != NULL ||
       g_strstr_len (command, -1, search_text) != NULL)
     {
-      if (window->current_category == NULL || 
+      if (window->current_category == NULL ||
           g_utf8_strlen (window->current_category, -1) == 0 ||
           g_utf8_collate (window->current_category, _("All")) == 0)
         {
           visible = TRUE;
         }
-      else 
+      else
         {
           if (category != NULL && g_utf8_collate (category, window->current_category) == 0)
             visible = TRUE;

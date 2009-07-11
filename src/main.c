@@ -2,19 +2,19 @@
 /*-
  * Copyright (c) 2008 Jannis Pohlmann <jannis@xfce.org>.
  *
- * This program is free software; you can redistribute it and/or modify 
- * it under the terms of the GNU General Public License as published by 
- * the Free Software Foundation; either version 2 of the License, or (at 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or (at
  * your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, but 
- * WITHOUT ANY WARRANTY; without even the implied warranty of 
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU 
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License 
- * along with this program; if not, write to the Free Software 
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
  * MA  02111-1307  USA
  */
 
@@ -38,7 +38,6 @@
 
 static gboolean     opt_version = FALSE;
 static gchar      **opt_remaining = NULL;
-static const gchar *opt_menu_filename = NULL;
 static GOptionEntry opt_entries[] = {
   { "version", 'V', G_OPTION_FLAG_IN_MAIN, G_OPTION_ARG_NONE, &opt_version, N_("Version information"), NULL },
   { G_OPTION_REMAINING, 0, G_OPTION_FLAG_IN_MAIN, G_OPTION_ARG_FILENAME_ARRAY, &opt_remaining, NULL, N_("[MENUFILE]") },
@@ -57,7 +56,7 @@ main (int    argc,
   xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 
   /* Initialize GTK+ and parse command line options */
-  if (G_UNLIKELY (!gtk_init_with_args (&argc, &argv, "", opt_entries, PACKAGE, &error)))
+  if (G_UNLIKELY (!gtk_init_with_args (&argc, &argv, NULL, opt_entries, PACKAGE, &error)))
     {
       if (G_LIKELY (error != NULL))
         {
@@ -77,18 +76,13 @@ main (int    argc,
   if (G_UNLIKELY (opt_version))
     {
       g_print ("%s %s (Xfce %s)\n\n", G_LOG_DOMAIN, PACKAGE_VERSION, xfce_version_string ());
-      g_print ("%s\n", "Copyright (c) 2008");
+      g_print ("%s\n", "Copyright (c) 2008-2009");
       g_print ("\t%s\n\n", _("The Xfce development team. All rights reserved."));
       g_print (_("Please report bugs to <%s>."), PACKAGE_BUGREPORT);
       g_print ("\n");
 
       return EXIT_SUCCESS;
     }
-
-  if (!g_thread_supported ())
-    g_thread_init (NULL);
-
-  thunar_vfs_init ();
 
   /* Initialize xfconf */
   if (G_UNLIKELY (!xfconf_init (&error)))
@@ -116,7 +110,6 @@ main (int    argc,
   /* Shutdown libraries */
   xfce_menu_shutdown ();
   xfconf_shutdown ();
-  thunar_vfs_shutdown ();
 
   return EXIT_SUCCESS;
 }

@@ -21,10 +21,10 @@ xfce4_appfinder_CFLAGS = 						\
 	$(GLIB_CFLAGS)							\
 	$(GTK_CFLAGS)							\
 	$(LIBXFCE4UTIL_CFLAGS)						\
-	$(LIBXFCEGUI4_CFLAGS)						\
+	$(LIBXFCE4UI_CFLAGS)						\
 	$(LIBXFCE4MENU_CFLAGS)						\
 	$(LIBXFCONF_CFLAGS)						\
-	$(THUNAR_VFS_CFLAGS)
+	$(GIO_CFLAGS)
 
 xfce4_appfinder_LDFLAGS = 						\
 	$(PLATFORM_LIBS)						\
@@ -32,7 +32,7 @@ xfce4_appfinder_LDFLAGS = 						\
 	$(GTHREAD_LIBS)							\
 	$(GTK_LIBS)							\
 	$(LIBXFCE4UTIL_LIBS)						\
-	$(LIBXFCEGUI4_LIBS)						\
+	$(LIBXFCE4UI_LIBS)						\
 	$(LIBXFCE4MENU_LIBS)						\
-	$(LIBXFCONF_LIBS)							\
-	$(THUNAR_VFS_LIBS)
+	$(LIBXFCONF_LIBS)						\
+	$(GIO_LIBS)

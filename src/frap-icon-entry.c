@@ -47,8 +47,6 @@ enum
 
 
 
-static void     frap_icon_entry_class_init          (FrapIconEntryClass *klass);
-static void     frap_icon_entry_init                (FrapIconEntry      *icon_entry);
 static void     frap_icon_entry_finalize            (GObject            *object);
 static void     frap_icon_entry_get_property        (GObject            *object,
                                                      guint               prop_id,
@@ -430,30 +428,30 @@ frap_icon_entry_get_borders (FrapIconEntry *icon_entry,
                              gint          *xborder_return,
                              gint          *yborder_return)
 {
-	gboolean interior_focus;
-	gint     focus_width;
+  gboolean interior_focus;
+  gint     focus_width;
 
-	gtk_widget_style_get (GTK_WIDGET (icon_entry),
+  gtk_widget_style_get (GTK_WIDGET (icon_entry),
                         "focus-line-width", &focus_width,
                         "interior-focus", &interior_focus,
                         NULL);
 
-	if (gtk_entry_get_has_frame (GTK_ENTRY (icon_entry)))
+  if (gtk_entry_get_has_frame (GTK_ENTRY (icon_entry)))
     {
-		  *xborder_return = GTK_WIDGET (icon_entry)->style->xthickness;
-  		*yborder_return = GTK_WIDGET (icon_entry)->style->ythickness;
-	  }
-	else
-	  {
-  		*xborder_return = 0;
-	  	*yborder_return = 0;
-  	}
+      *xborder_return = GTK_WIDGET (icon_entry)->style->xthickness;
+      *yborder_return = GTK_WIDGET (icon_entry)->style->ythickness;
+    }
+  else
+    {
+      *xborder_return = 0;
+      *yborder_return = 0;
+    }
 
-	if (!interior_focus)
-	  {
-  		*xborder_return += focus_width;
-	  	*yborder_return += focus_width;
-  	}
+  if (!interior_focus)
+    {
+      *xborder_return += focus_width;
+      *yborder_return += focus_width;
+    }
 }
 
 
@@ -465,18 +463,18 @@ frap_icon_entry_get_text_area_size (FrapIconEntry *icon_entry,
                                     gint          *width_return,
                                     gint          *height_return)
 {
-	GtkRequisition requisition;
-	gint           xborder;
+  GtkRequisition requisition;
+  gint           xborder;
   gint           yborder;
 
-	gtk_widget_get_child_requisition (GTK_WIDGET (icon_entry), &requisition);
+  gtk_widget_get_child_requisition (GTK_WIDGET (icon_entry), &requisition);
 
   frap_icon_entry_get_borders (icon_entry, &xborder, &yborder);
 
-	if (x_return != NULL) *x_return = xborder;
-	if (y_return != NULL) *y_return = yborder;
-	if (width_return  != NULL) *width_return  = GTK_WIDGET (icon_entry)->allocation.width - xborder * 2;
-	if (height_return != NULL) *height_return = requisition.height - yborder * 2;
+  if (x_return != NULL) *x_return = xborder;
+  if (y_return != NULL) *y_return = yborder;
+  if (width_return  != NULL) *width_return  = GTK_WIDGET (icon_entry)->allocation.width - xborder * 2;
+  if (height_return != NULL) *height_return = requisition.height - yborder * 2;
 }
 
 
