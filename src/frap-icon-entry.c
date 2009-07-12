@@ -26,7 +26,7 @@
 
 #include "frap-icon-entry.h"
 
-
+#if !GTK_CHECK_VERSION (2, 16, 0)
 
 /* the margin around the icon */
 #define FRAP_ICON_ENTRY_ICON_MARGIN (2)
@@ -587,4 +587,4 @@ frap_icon_entry_set_stock_id (FrapIconEntry *icon_entry,
   gtk_widget_queue_resize (GTK_WIDGET (icon_entry));
 }
 
-
+#endif /* !GTK_CHECK_VERSION (2, 16, 0) */

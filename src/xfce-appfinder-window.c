@@ -278,8 +278,13 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_box_pack_start (GTK_BOX (vbox3), alignment, FALSE, TRUE, 0);
   gtk_widget_show (alignment);
 
+#if GTK_CHECK_VERSION (2, 16, 0)
+  window->search_entry = gtk_entry_new ();
+  gtk_entry_set_icon_from_stock (GTK_ENTRY (window->search_entry), GTK_ENTRY_ICON_PRIMARY, GTK_STOCK_FIND);
+#else
   window->search_entry = frap_icon_entry_new ();
   frap_icon_entry_set_stock_id (FRAP_ICON_ENTRY (window->search_entry), GTK_STOCK_FIND);
+#endif
   g_signal_connect (window->search_entry, "changed", G_CALLBACK (_xfce_appfinder_window_entry_changed), window);
   g_signal_connect (window->search_entry, "activate", G_CALLBACK (_xfce_appfinder_window_entry_activated), window);
   g_signal_connect (window->search_entry, "focus-in-event", G_CALLBACK (_xfce_appfinder_window_entry_focused), window);
@@ -354,7 +359,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   button = gtk_dialog_add_button (GTK_DIALOG (window), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
   g_signal_connect_swapped (button, "clicked", G_CALLBACK (_xfce_appfinder_window_closed), window);
-  
+
   g_object_ref (G_OBJECT (GTK_DIALOG (window)->action_area));
   gtk_container_remove (GTK_CONTAINER (GTK_DIALOG (window)->vbox),
                         GTK_DIALOG (window)->action_area);
