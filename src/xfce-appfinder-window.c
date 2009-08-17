@@ -33,7 +33,7 @@
 
 #include <libxfce4util/libxfce4util.h>
 #include <libxfce4ui/libxfce4ui.h>
-#include <libxfce4menu/libxfce4menu.h>
+#include <garcon/garcon.h>
 #include <gio/gio.h>
 #include <xfconf/xfconf.h>
 
@@ -78,7 +78,6 @@ static void       xfce_appfinder_window_set_property       (GObject             
                                                             const GValue             *value,
                                                             GParamSpec               *pspec);
 static void       _xfce_appfinder_window_closed            (XfceAppfinderWindow      *window);
-static gchar     *_xfce_appfinder_window_get_menu_filename (XfceAppfinderWindow      *window);
 static gpointer   _xfce_appfinder_window_reload_menu       (XfceAppfinderWindow      *window);
 static void       _xfce_appfinder_window_entry_changed     (GtkEditable              *editable,
                                                             XfceAppfinderWindow      *window);
@@ -107,21 +106,11 @@ static void       _xfce_appfinder_window_drag_data_get     (GtkWidget           
                                                             guint                     drag_time,
                                                             XfceAppfinderWindow      *window);
 static void       _xfce_appfinder_window_execute           (XfceAppfinderWindow      *window);
-static gpointer   _xfce_appfinder_window_monitor_directory (XfceMenu                 *menu,
-                                                            const gchar              *filename,
-                                                            gpointer                  user_data);
-static void       _xfce_appfinder_window_remove_monitor    (XfceMenu                 *menu,
-                                                            gpointer                  monitor_handle);
-static void       _xfce_appfinder_window_something_changed (GFileMonitor             *monitor,
-                                                            GFile                    *file,
-                                                            GFile                    *other_file,
-                                                            GFileMonitorEvent         event_type,
-                                                            gpointer                  user_data);
 static void       _xfce_appfinder_window_load_menu_item    (XfceAppfinderWindow      *window,
-                                                            XfceMenuItem             *item,
+                                                            GarconMenuItem             *item,
                                                             const gchar              *category,
                                                             gint                     *counter);
-static GdkPixbuf *_xfce_appfinder_window_create_item_icon  (XfceMenuItem             *item);
+static GdkPixbuf *_xfce_appfinder_window_create_item_icon  (GarconMenuItem             *item);
 static gboolean   _xfce_appfinder_window_visible_func      (GtkTreeModel             *filter,
                                                             GtkTreeIter              *iter,
                                                             gpointer                  user_data);
@@ -153,7 +142,7 @@ struct _XfceAppfinderWindow
   GtkTreeModel  *filter;
   GtkWidget     *tree_view;
 
-  XfceMenu      *menu;
+  GarconMenu    *menu;
   gchar         *menu_filename;
 
   GThread       *reload_thread;
@@ -163,14 +152,6 @@ struct _XfceAppfinderWindow
 
 static const GtkTargetEntry dnd_target_list[] = {
   { "text/uri-list", 0, 0 }
-};
-
-
-
-XfceMenuMonitorVTable menu_monitor_vtable = {
-  NULL,
-  _xfce_appfinder_window_monitor_directory,
-  _xfce_appfinder_window_remove_monitor,
 };
 
 
@@ -313,7 +294,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_widget_show (scrollwin);
 
   window->list_store =
-    gtk_list_store_new (5, GDK_TYPE_PIXBUF, G_TYPE_STRING, G_TYPE_STRING, XFCE_TYPE_MENU_ITEM, G_TYPE_STRING);
+    gtk_list_store_new (5, GDK_TYPE_PIXBUF, G_TYPE_STRING, G_TYPE_STRING, GARCON_TYPE_MENU_ITEM, G_TYPE_STRING);
 
   window->filter = gtk_tree_model_filter_new (GTK_TREE_MODEL (window->list_store), NULL);
   gtk_tree_model_filter_set_visible_func (GTK_TREE_MODEL_FILTER (window->filter), _xfce_appfinder_window_visible_func, window, NULL);
@@ -374,8 +355,6 @@ xfce_appfinder_window_constructed (GObject *object)
 {
   XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (object);
 
-  xfce_menu_monitor_set_vtable (&menu_monitor_vtable, window);
-
   xfconf_g_property_bind (window->channel, "/category", G_TYPE_STRING, G_OBJECT (window), "category");
 }
 
@@ -397,7 +376,7 @@ xfce_appfinder_window_finalize (GObject *object)
   g_free (window->current_category);
   g_free (window->menu_filename);
 
-  if (G_LIKELY (XFCE_IS_MENU (window->menu)))
+  if (G_LIKELY (GARCON_IS_MENU (window->menu)))
     g_object_unref (window->menu);
 
   g_slist_free (window->categories_group);
@@ -642,7 +621,7 @@ _xfce_appfinder_window_cursor_changed (GtkTreeView         *tree_view,
   GtkTreeSelection *selection;
   GtkTreeModel     *model;
   GtkTreeIter       iter;
-  XfceMenuItem     *item = NULL;
+  GarconMenuItem     *item = NULL;
 
   g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
 
@@ -673,7 +652,7 @@ _xfce_appfinder_window_drag_data_get (GtkWidget           *widget,
                                       guint                drag_time,
                                       XfceAppfinderWindow *window)
 {
-  XfceMenuItem     *item;
+  GarconMenuItem   *item;
   GtkTreeSelection *selection;
   GtkTreeModel     *model;
   GtkTreeIter       iter;
@@ -691,8 +670,7 @@ _xfce_appfinder_window_drag_data_get (GtkWidget           *widget,
   if (G_UNLIKELY (item == NULL))
     return;
 
-  uri = g_filename_to_uri (xfce_menu_item_get_filename (item), NULL, NULL);
-
+  uri = garcon_menu_item_get_uri (item);
   if (G_LIKELY (uri != NULL))
     {
       gtk_selection_data_set (data, data->target, 8, (guchar *) uri, strlen (uri));
@@ -705,13 +683,13 @@ _xfce_appfinder_window_drag_data_get (GtkWidget           *widget,
 static void
 _xfce_appfinder_window_execute (XfceAppfinderWindow *window)
 {
-  XfceMenuItem     *item;
+  GarconMenuItem   *item;
   GtkTreeSelection *selection;
   GtkTreeModel     *model;
   GtkTreeIter       iter;
   GdkScreen        *screen;
   GError           *error = NULL;
-  gchar            *command;
+  gchar            *command, *uri;
 
   g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
 
@@ -725,14 +703,16 @@ _xfce_appfinder_window_execute (XfceAppfinderWindow *window)
   if (G_UNLIKELY (item == NULL))
     return;
 
-  command = g_strconcat ("exo-open ", xfce_menu_item_get_filename (item), NULL);
+  uri = garcon_menu_item_get_uri (item);
+  command = g_strconcat ("exo-open ", uri, NULL);
+  g_free (uri);
 
   screen = xfce_gdk_screen_get_active (NULL);
 
   if (G_UNLIKELY (!xfce_spawn_command_line_on_screen (screen, command, FALSE, TRUE, &error)))
     {
       xfce_dialog_show_error (GTK_WINDOW (window), error,
-           _("Could not execute application %s."), xfce_menu_element_get_name (XFCE_MENU_ELEMENT (item)));
+           _("Could not execute application %s."), garcon_menu_element_get_name (GARCON_MENU_ELEMENT (item)));
 
       if (error != NULL)
         g_error_free (error);
@@ -766,47 +746,47 @@ _xfce_appfinder_window_closed (XfceAppfinderWindow *window)
 
 static void
 _xfce_appfinder_window_load_menu (XfceAppfinderWindow *window,
-                                  XfceMenu            *menu,
+                                  GarconMenu          *menu,
                                   const gchar         *category,
                                   gint                *counter,
                                   gboolean             is_root,
                                   gboolean             is_category)
 {
-  XfceMenuDirectory *directory;
-  GtkWidget         *button;
-  GSList            *items;
-  GSList            *menus;
-  GSList            *iter;
-  const gchar       *name;
-  gint               current_counter = 0;
+  GarconMenuDirectory *directory;
+  GtkWidget           *button;
+  GList               *items;
+  GList               *menus;
+  GList               *iter;
+  const gchar         *name;
+  gint                 current_counter = 0;
 
-  g_return_if_fail (XFCE_IS_MENU (menu));
+  g_return_if_fail (GARCON_IS_MENU (menu));
   g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
 
-  directory = xfce_menu_get_directory (menu);
+  directory = garcon_menu_get_directory (menu);
 
   if (G_LIKELY (directory != NULL))
-    if (G_UNLIKELY (!xfce_menu_directory_show_in_environment (directory)
-                    || xfce_menu_directory_get_hidden (directory)
-                    || xfce_menu_directory_get_no_display (directory)))
+    if (G_UNLIKELY (!garcon_menu_directory_get_show_in_environment (directory)
+                    || garcon_menu_directory_get_hidden (directory)
+                    || garcon_menu_directory_get_no_display (directory)))
       {
         return;
       }
 
   /* Determine menu name */
-  name = xfce_menu_element_get_name (XFCE_MENU_ELEMENT (menu));
+  name = garcon_menu_element_get_name (GARCON_MENU_ELEMENT (menu));
 
   /* Load menu items */
-  items = xfce_menu_get_items (menu);
-  for (iter = items; iter != NULL; iter = g_slist_next (iter))
-    _xfce_appfinder_window_load_menu_item (window, XFCE_MENU_ITEM (iter->data), is_category ? name : category, &current_counter);
-  g_slist_free (items);
+  items = garcon_menu_get_items (menu);
+  for (iter = items; iter != NULL; iter = g_list_next (iter))
+    _xfce_appfinder_window_load_menu_item (window, GARCON_MENU_ITEM (iter->data), is_category ? name : category, &current_counter);
+  g_list_free (items);
 
   /* Load sub-menus */
-  menus = xfce_menu_get_menus (menu);
-  for (iter = menus; iter != NULL; iter = g_slist_next (iter))
-    _xfce_appfinder_window_load_menu (window, XFCE_MENU (iter->data), is_category ? name : category, &current_counter, FALSE, is_root ? TRUE : FALSE);
-  g_slist_free (menus);
+  menus = garcon_menu_get_menus (menu);
+  for (iter = menus; iter != NULL; iter = g_list_next (iter))
+    _xfce_appfinder_window_load_menu (window, GARCON_MENU (iter->data), is_category ? name : category, &current_counter, FALSE, is_root ? TRUE : FALSE);
+  g_list_free (menus);
 
   /* Create category widget */
   if (G_LIKELY (current_counter > 0 && is_category))
@@ -835,37 +815,11 @@ _xfce_appfinder_window_load_menu (XfceAppfinderWindow *window,
 
 
 
-static gchar *
-_xfce_appfinder_window_get_menu_filename (XfceAppfinderWindow *window)
-{
-  gchar **paths;
-  gchar  *filename = NULL;
-  gint    i;
-
-  g_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (window), NULL);
-
-  paths = xfce_resource_lookup_all (XFCE_RESOURCE_CONFIG, "menus/xfce-applications.menu");
-
-  for (i = 0; paths[i] != NULL; ++i)
-    if (g_file_test (paths[i], G_FILE_TEST_IS_REGULAR))
-      {
-        filename = g_strdup (paths[i]);
-        break;
-      }
-
-  g_strfreev (paths);
-
-  return filename;
-}
-
-
-
 static gpointer
 _xfce_appfinder_window_reload_menu (XfceAppfinderWindow *window)
 {
   GtkWidget *button;
   GError    *error = NULL;
-  gchar     *filename = NULL;
   gint       counter = 0;
 
   g_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (window), NULL);
@@ -873,31 +827,29 @@ _xfce_appfinder_window_reload_menu (XfceAppfinderWindow *window)
   DBG ("window->menu_filename = %s", window->menu_filename);
 
   if (G_UNLIKELY (window->menu_filename != NULL))
-    window->menu = xfce_menu_new (window->menu_filename, &error);
+    window->menu = garcon_menu_new_for_path (window->menu_filename);
   else
-    {
-      filename = _xfce_appfinder_window_get_menu_filename (window);
-
-      if (G_LIKELY (filename != NULL))
-        window->menu = xfce_menu_new (filename, &error);
-      else
-        window->menu = xfce_menu_get_root (&error);
-
-      g_free (filename);
-    }
+    window->menu = garcon_menu_new_applications ();
 
   if (G_UNLIKELY (window->menu == NULL))
     {
       if (G_UNLIKELY (window->menu_filename != NULL))
-        xfce_dialog_show_error (GTK_WINDOW (window), error,
+        xfce_dialog_show_error (GTK_WINDOW (window), NULL,
           _("Could not load menu from %s"), window->menu_filename);
       else
-        xfce_dialog_show_error (GTK_WINDOW (window), error,
+        xfce_dialog_show_error (GTK_WINDOW (window), NULL,
           _("Could not load system menu"));
 
       if (error != NULL)
         g_error_free (error);
 
+      return NULL;
+    }
+
+  if (!garcon_menu_load (window->menu, NULL, &error))
+    {
+      g_message ("failed to load the menu: %s", error->message);
+      g_error_free (error);
       return NULL;
     }
 
@@ -927,83 +879,9 @@ _xfce_appfinder_window_reload_menu (XfceAppfinderWindow *window)
 
 
 
-static gpointer
-_xfce_appfinder_window_monitor_directory (XfceMenu    *menu,
-                                          const gchar *filename,
-                                          gpointer     user_data)
-{
-  XfceAppfinderWindow *window = user_data;
-  GFile               *path;
-  GFileMonitor        *monitor = NULL;
-
-  g_return_val_if_fail (XFCE_IS_MENU (menu), NULL);
-  g_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (window), NULL);
-  g_return_val_if_fail (filename != NULL, NULL);
-
-  if (G_UNLIKELY (!g_file_test (filename, G_FILE_TEST_IS_DIR)))
-    return NULL;
-
-  path = g_file_new_for_path (filename);
-  if (G_LIKELY (path != NULL))
-    {
-      monitor = g_file_monitor_directory (path, G_FILE_MONITOR_NONE, NULL, NULL);
-      g_signal_connect (G_OBJECT (monitor), "changed", G_CALLBACK (_xfce_appfinder_window_something_changed), window);
-      g_object_unref (G_OBJECT (path));
-    }
-
-  DBG ("monitor_handle = %p", monitor);
-
-  return monitor;
-}
-
-
-
-static void
-_xfce_appfinder_window_remove_monitor (XfceMenu *menu,
-                                       gpointer  monitor_handle)
-{
-  GFileMonitor *monitor = monitor_handle;
-
-  g_return_if_fail (XFCE_IS_MENU (menu));
-  g_return_if_fail (monitor_handle != NULL);
-
-  DBG ("monitor_handle = %p", monitor_handle);
-
-  g_file_monitor_cancel (monitor);
-  g_object_unref (G_OBJECT (monitor));
-}
-
-
-
-static void
-_xfce_appfinder_window_something_changed (GFileMonitor      *monitor,
-                                          GFile             *file,
-                                          GFile             *other_file,
-                                          GFileMonitorEvent  event_type,
-                                          gpointer           user_data)
-{
-  XfceAppfinderWindow *window = user_data;
-  XfceMenuItemCache   *cache;
-
-  g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
-
-  cache = xfce_menu_item_cache_get_default ();
-  xfce_menu_item_cache_invalidate (cache);
-  g_object_unref (cache);
-
-  if (XFCE_IS_MENU (window->menu))
-    g_object_unref (window->menu);
-
-  gtk_list_store_clear (window->list_store);
-
-  _xfce_appfinder_window_reload_menu (window);
-}
-
-
-
 static void
 _xfce_appfinder_window_load_menu_item (XfceAppfinderWindow *window,
-                                       XfceMenuItem        *item,
+                                       GarconMenuItem        *item,
                                        const gchar         *category,
                                        gint                *counter)
 {
@@ -1023,23 +901,23 @@ _xfce_appfinder_window_load_menu_item (XfceAppfinderWindow *window,
 
   g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
 
-  if (G_UNLIKELY (!xfce_menu_item_show_in_environment (item) || xfce_menu_item_get_no_display (item)))
+  if (G_UNLIKELY (!garcon_menu_item_get_show_in_environment (item) || garcon_menu_item_get_no_display (item)))
     return;
 
-  if (G_UNLIKELY (xfce_menu_item_only_show_in_environment (item) || xfce_menu_item_has_category (item, "X-XFCE")))
+  if (G_UNLIKELY (garcon_menu_item_only_show_in_environment (item) || garcon_menu_item_has_category (item, "X-XFCE")))
     {
-      name = xfce_menu_item_get_generic_name (item);
+      name = garcon_menu_item_get_generic_name (item);
 
       if (G_UNLIKELY (name == NULL))
-        name = xfce_menu_element_get_name (XFCE_MENU_ELEMENT (item));
+        name = garcon_menu_element_get_name (GARCON_MENU_ELEMENT (item));
     }
   else
-    name = xfce_menu_element_get_name (XFCE_MENU_ELEMENT (item));
+    name = garcon_menu_element_get_name (GARCON_MENU_ELEMENT (item));
 
-  comment = xfce_menu_item_get_comment (item);
+  comment = garcon_menu_item_get_comment (item);
   pixbuf = _xfce_appfinder_window_create_item_icon (item);
-  categories = xfce_menu_item_get_categories (item);
-  command = xfce_menu_item_get_command (item);
+  categories = garcon_menu_item_get_categories (item);
+  command = garcon_menu_item_get_command (item);
 
   if (G_LIKELY (comment != NULL))
     text = g_strdup_printf ("<b>%s</b>\n%s", name, comment);
@@ -1092,7 +970,7 @@ _xfce_appfinder_window_load_menu_item (XfceAppfinderWindow *window,
 
 
 static GdkPixbuf *
-_xfce_appfinder_window_create_item_icon (XfceMenuItem *item)
+_xfce_appfinder_window_create_item_icon (GarconMenuItem *item)
 {
   GdkPixbuf    *icon = NULL;
   GtkIconTheme *icon_theme;
@@ -1106,8 +984,8 @@ _xfce_appfinder_window_create_item_icon (XfceMenuItem *item)
   /* Get current icon theme */
   icon_theme = gtk_icon_theme_get_default ();
 
-  item_name = xfce_menu_element_get_name (XFCE_MENU_ELEMENT (item));
-  icon_name = xfce_menu_element_get_icon_name (XFCE_MENU_ELEMENT (item));
+  item_name = garcon_menu_element_get_name (GARCON_MENU_ELEMENT (item));
+  icon_name = garcon_menu_element_get_icon_name (GARCON_MENU_ELEMENT (item));
 
   if (icon_name == NULL)
     return NULL;
@@ -1175,7 +1053,7 @@ _xfce_appfinder_window_visible_func (GtkTreeModel *filter,
                                      gpointer      user_data)
 {
   XfceAppfinderWindow *window = user_data;
-  XfceMenuItem        *item;
+  GarconMenuItem      *item;
   gchar               *category;
   gchar               *text;
   gchar               *search_text;
@@ -1202,9 +1080,9 @@ _xfce_appfinder_window_visible_func (GtkTreeModel *filter,
   text = g_utf8_casefold (normalized, -1);
   g_free (normalized);
 
-  if (xfce_menu_item_get_command (item) != NULL)
+  if (garcon_menu_item_get_command (item) != NULL)
     {
-      normalized = g_utf8_normalize (xfce_menu_item_get_command (item), -1, G_NORMALIZE_ALL);
+      normalized = g_utf8_normalize (garcon_menu_item_get_command (item), -1, G_NORMALIZE_ALL);
       command = g_utf8_casefold (normalized, -1);
       g_free (normalized);
     }

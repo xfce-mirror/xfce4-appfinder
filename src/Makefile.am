@@ -22,7 +22,7 @@ xfce4_appfinder_CFLAGS = 						\
 	$(GTK_CFLAGS)							\
 	$(LIBXFCE4UTIL_CFLAGS)						\
 	$(LIBXFCE4UI_CFLAGS)						\
-	$(LIBXFCE4MENU_CFLAGS)						\
+	$(GARCON_CFLAGS)						\
 	$(LIBXFCONF_CFLAGS)						\
 	$(GIO_CFLAGS)
 
@@ -33,6 +33,6 @@ xfce4_appfinder_LDFLAGS = 						\
 	$(GTK_LIBS)							\
 	$(LIBXFCE4UTIL_LIBS)						\
 	$(LIBXFCE4UI_LIBS)						\
-	$(LIBXFCE4MENU_LIBS)						\
+	$(GARCON_LIBS)							\
 	$(LIBXFCONF_LIBS)						\
 	$(GIO_LIBS)

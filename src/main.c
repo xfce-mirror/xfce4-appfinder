@@ -29,7 +29,7 @@
 #include <gtk/gtk.h>
 
 #include <libxfce4util/libxfce4util.h>
-#include <libxfce4menu/libxfce4menu.h>
+#include <garcon/garcon.h>
 #include <xfconf/xfconf.h>
 
 #include "xfce-appfinder-window.h"
@@ -99,7 +99,7 @@ main (int    argc,
     }
 
   /* Initialize menu library */
-  xfce_menu_init ("XFCE");
+  garcon_set_environment ("XFCE");
 
   window = xfce_appfinder_window_new (opt_remaining != NULL ? opt_remaining[0] : NULL);
   xfce_appfinder_window_reload (XFCE_APPFINDER_WINDOW (window));
@@ -108,7 +108,6 @@ main (int    argc,
   gtk_main ();
 
   /* Shutdown libraries */
-  xfce_menu_shutdown ();
   xfconf_shutdown ();
 
   return EXIT_SUCCESS;
