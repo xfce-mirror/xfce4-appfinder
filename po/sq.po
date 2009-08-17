@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-02 13:31+0100\n"
-"PO-Revision-Date: 2008-01-21 09:42+0200\n"
+"PO-Revision-Date: 2009-08-17 13:06+0200\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <translation-team-sq@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -16,9 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/main.c:43
-#, fuzzy
 msgid "Version information"
-msgstr "Më Tepër të Dhëna..."
+msgstr "Të dhëna versioni"
 
 #: ../src/main.c:44
 msgid "[MENUFILE]"
@@ -27,44 +26,44 @@ msgstr ""
 #: ../src/main.c:65
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr ""
+msgstr "Shtypni '%s --help' për të dhëna përdorimi."
 
 #: ../src/main.c:71
 msgid "Unable to initialize GTK+."
-msgstr ""
+msgstr "I pazoti të gatisë GTK+."
 
 #: ../src/main.c:81
 msgid "The Xfce development team. All rights reserved."
-msgstr ""
+msgstr "Ekipi zhvillues i Xfce-së. Tërë të drejtat të rezervuara."
 
 #: ../src/main.c:82
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr ""
+msgstr "Ju lutem, njoftojini të metat te <%s>."
 
 #: ../src/main.c:98
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr ""
+msgstr "Dështoi në lidhjen me demonin xfconf. Arsyeja: %s"
 
 #: ../src/main.c:102
 msgid "Failed to connect to xfconf daemon."
-msgstr ""
+msgstr "Dështoi lidhja me demonin xfconf."
 
-#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:280
+#: ../src/xfce-appfinder-window.c:294
 #: ../data/xfce4-appfinder.desktop.in.h:1
-#, fuzzy
 msgid "Application Finder"
-msgstr "Gjetës Zbatimesh për Xfce 4-n"
+msgstr "Gjetës Zbatimesh"
 
-#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:295
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr ""
+msgstr "Gjeni dhe nisni zbatime të instaluar në sistemin tuaj"
 
 #: ../src/xfce-appfinder-window.c:318
-#, fuzzy
 msgid "Search"
-msgstr "<b>Kërko</b>"
+msgstr "Kërko"
 
 #: ../src/xfce-appfinder-window.c:341
 msgid "Categories"
@@ -72,99 +71,81 @@ msgstr "Kategori"
 
 #: ../src/xfce-appfinder-window.c:389
 msgid "C_lose after execute"
-msgstr ""
+msgstr "_Mbylle pas përmbushjes"
 
 #: ../src/xfce-appfinder-window.c:790
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
-msgstr ""
+msgstr "Nuk kryen dot zbatimin %s. Arsyeja: %s"
 
 #: ../src/xfce-appfinder-window.c:794
-#, fuzzy, c-format
+#, c-format
 msgid "Could not execute application %s"
-msgstr "Nuk përmbush dot zbatimin e përzgjedhur"
+msgstr "Nuk kryen dot zbatimin %s"
 
 #: ../src/xfce-appfinder-window.c:916
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
-msgstr ""
+msgstr "Nuk ngarkoi dot menu prej %s. Arsyeja: %s"
 
-#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:918
+#: ../src/xfce-appfinder-window.c:927
 msgid "Could not load system menu"
-msgstr ""
+msgstr "S'ngarkoi dot menu sistemi"
 
 #: ../src/xfce-appfinder-window.c:925
 #, c-format
 msgid "Could not load menu from %s"
-msgstr ""
+msgstr "S'ngarkoi dot menu prej %s"
 
-#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
+#: ../src/xfce-appfinder-window.c:940
+#: ../src/xfce-appfinder-window.c:947
 #: ../src/xfce-appfinder-window.c:1203
 msgid "All"
 msgstr "Tërë"
 
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "Xfce 4 Appfinder"
-
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Emër:</b> "
-
 #~ msgid "N/A"
 #~ msgstr "N/A"
-
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Koment</b> "
-
 #~ msgid "<b>Categories</b>"
 #~ msgstr "<b>Kategori</b> "
-
 #~ msgid "<b>Command</b>"
 #~ msgstr "<b>Urdhër</b> "
-
 #~ msgid "Run program"
 #~ msgstr "Nis program"
-
 #~ msgid "Show Categories"
 #~ msgstr "Shfaq Kategori"
-
 #~ msgid "Core"
 #~ msgstr "Bërthama"
-
 #~ msgid "Development"
 #~ msgstr "Zhvillim"
-
 #~ msgid "Office"
 #~ msgstr "Zyrë"
-
 #~ msgid "Graphics"
 #~ msgstr "Grafika"
-
 #~ msgid "Network"
 #~ msgstr "Rrjet"
-
 #~ msgid "AudioVideo"
 #~ msgstr "AudioVideo"
-
 #~ msgid "Game"
 #~ msgstr "Lojë"
-
 #~ msgid "Education"
 #~ msgstr "Edukim"
-
 #~ msgid "System"
 #~ msgstr "Sistem"
-
 #~ msgid "Filemanager"
 #~ msgstr "Përgjegjës kartelash"
-
 #~ msgid "Utility"
 #~ msgstr "Përdorëse"
-
 #~ msgid "No items available"
 #~ msgstr "Pa objekte të« passhëm"
-
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "Më ndjeni, nuk ka përputhje për tekstin e kërkuar."
-
 #~ msgid "Appfinder"
 #~ msgstr "Appfinder"
+
