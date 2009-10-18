@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: untitled\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-15 19:45+0200\n"
+"POT-Creation-Date: 2009-10-18 13:57+0200\n"
 "PO-Revision-Date: 2009-06-15 20:18+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome at gnome dot hu>\n"
@@ -17,88 +17,93 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../src/main.c:43
+#: ../src/main.c:42
 msgid "Version information"
 msgstr "Verzióinformációk"
 
-#: ../src/main.c:44
+#: ../src/main.c:43
 msgid "[MENUFILE]"
 msgstr "[MENÜFÁJL]"
 
-#: ../src/main.c:65
+#: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
 msgstr "Segítségért adja ki az „%s --help” parancsot."
 
-#: ../src/main.c:71
+#: ../src/main.c:70
 msgid "Unable to initialize GTK+."
 msgstr "A GTK+ nem inicializálható."
 
-#: ../src/main.c:81
+#: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
 msgstr "Az Xfce fejlesztőcsapata. Minden jog fenntartva."
 
-#: ../src/main.c:82
+#: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "A hibákat ide jelentse: <%s>."
 
-#: ../src/main.c:98
+#: ../src/main.c:92
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
 msgstr "Nem sikerült csatlakozni az xfconf démonhoz. Ok: %s"
 
-#: ../src/main.c:102
+#: ../src/main.c:96
 msgid "Failed to connect to xfconf daemon."
 msgstr "Nem sikerült csatlakozni az xfconf démonhoz."
 
-#: ../src/xfce-appfinder-window.c:281 ../src/xfce-appfinder-window.c:295
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:224 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Alkalmazáskereső"
 
-#: ../src/xfce-appfinder-window.c:296 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:226 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "A rendszerre telepített alkalmazások keresése és indítása"
 
-#: ../src/xfce-appfinder-window.c:319
+#: ../src/xfce-appfinder-window.c:249
 msgid "Search"
 msgstr "Keresés"
 
-#: ../src/xfce-appfinder-window.c:342
+#: ../src/xfce-appfinder-window.c:277
 msgid "Categories"
 msgstr "Kategóriák"
 
-#: ../src/xfce-appfinder-window.c:390
-msgid "C_lose after execute"
+#: ../src/xfce-appfinder-window.c:327
+#, fuzzy
+msgid "C_lose after launch"
 msgstr "Be_zárás indítás után"
 
-#: ../src/xfce-appfinder-window.c:791
-#, c-format
-msgid "Could not execute application %s. Reason: %s"
-msgstr "Az alkalmazás (%s) nem indítható. Ok: %s"
-
-#: ../src/xfce-appfinder-window.c:795
-#, c-format
-msgid "Could not execute application %s"
+#: ../src/xfce-appfinder-window.c:715
+#, fuzzy, c-format
+msgid "Could not execute application %s."
 msgstr "Az alkalmazás (%s) nem indítható"
 
-#: ../src/xfce-appfinder-window.c:952
-#, c-format
-msgid "Could not load menu from %s. Reason: %s"
-msgstr "Nem tölthető be a menü innen: %s. Ok: %s"
-
-#: ../src/xfce-appfinder-window.c:954 ../src/xfce-appfinder-window.c:963
-msgid "Could not load system menu"
-msgstr "Nem tölthető be a rendszermenü"
-
-#: ../src/xfce-appfinder-window.c:961
+#: ../src/xfce-appfinder-window.c:838
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Nem tölthető be a menü innen: %s"
 
-#: ../src/xfce-appfinder-window.c:976 ../src/xfce-appfinder-window.c:983
-#: ../src/xfce-appfinder-window.c:1239
+#: ../src/xfce-appfinder-window.c:841
+msgid "Could not load system menu"
+msgstr "Nem tölthető be a rendszermenü"
+
+#: ../src/xfce-appfinder-window.c:863 ../src/xfce-appfinder-window.c:870
+#: ../src/xfce-appfinder-window.c:1099
 msgid "All"
 msgstr "Minden"
 
+#: ../src/xfce-appfinder-window.c:937
+#, fuzzy, c-format
+msgid "<b>Categories:</b> %s"
+msgstr "Kategóriák"
+
+#: ../src/xfce-appfinder-window.c:948
+#, c-format
+msgid "<b>Command:</b> %s"
+msgstr ""
+
+#~ msgid "Could not execute application %s. Reason: %s"
+#~ msgstr "Az alkalmazás (%s) nem indítható. Ok: %s"
+
+#~ msgid "Could not load menu from %s. Reason: %s"
+#~ msgstr "Nem tölthető be a menü innen: %s. Ok: %s"

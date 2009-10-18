@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-02 13:31+0100\n"
+"POT-Creation-Date: 2009-10-18 13:57+0200\n"
 "PO-Revision-Date: 2009-01-03 15:40+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
@@ -19,90 +19,96 @@ msgstr ""
 "X-Poedit-Language: Czech\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 
-#: ../src/main.c:43
+#: ../src/main.c:42
 msgid "Version information"
 msgstr "Informace o verzi"
 
-#: ../src/main.c:44
+#: ../src/main.c:43
 msgid "[MENUFILE]"
 msgstr "[SOUBORNABÍDKY]"
 
-#: ../src/main.c:65
+#: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
 msgstr "Informace o použití získáte příkazem '%s --help'."
 
-#: ../src/main.c:71
+#: ../src/main.c:70
 msgid "Unable to initialize GTK+."
 msgstr "Nelze inicializovat GTK+."
 
-#: ../src/main.c:81
+#: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
 msgstr "Vývojářský tým prostředí Xfce. Všechna práva vyhrazena."
 
-#: ../src/main.c:82
+#: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Prosíme, abyste chyby nahlásili na adresu <%s>."
 
-#: ../src/main.c:98
+#: ../src/main.c:92
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
 msgstr "Nepodařilo se připojit ke službě xfconf. Důvod: %s"
 
-#: ../src/main.c:102
+#: ../src/main.c:96
 msgid "Failed to connect to xfconf daemon."
 msgstr "Nepodařilo se připojit ke službě xfconf."
 
-#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:224 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Vyhledávač aplikací"
 
-#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:226 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Umožňuje najít a spouštět aplikace nainstalované v systému."
 
-#: ../src/xfce-appfinder-window.c:318
+#: ../src/xfce-appfinder-window.c:249
 msgid "Search"
 msgstr "Hledat"
 
-#: ../src/xfce-appfinder-window.c:341
+#: ../src/xfce-appfinder-window.c:277
 msgid "Categories"
 msgstr "Kategorie"
 
-#: ../src/xfce-appfinder-window.c:389
-msgid "C_lose after execute"
+#: ../src/xfce-appfinder-window.c:327
+#, fuzzy
+msgid "C_lose after launch"
 msgstr "Za_vřít po spuštění"
 
-#: ../src/xfce-appfinder-window.c:790
-#, c-format
-msgid "Could not execute application %s. Reason: %s"
-msgstr "Nelze spustit aplikaci %s. Důvod: %s"
-
-#: ../src/xfce-appfinder-window.c:794
-#, c-format
-msgid "Could not execute application %s"
+#: ../src/xfce-appfinder-window.c:715
+#, fuzzy, c-format
+msgid "Could not execute application %s."
 msgstr "Nelze spustit aplikaci %s"
 
-#: ../src/xfce-appfinder-window.c:916
-#, c-format
-msgid "Could not load menu from %s. Reason: %s"
-msgstr "Nelze načíst nabídku ze souboru %s. Důvod: %s"
-
-#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
-msgid "Could not load system menu"
-msgstr "Nelze načíst systémovou nabídku"
-
-#: ../src/xfce-appfinder-window.c:925
+#: ../src/xfce-appfinder-window.c:838
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Nelze načíst nabídku ze souboru %s"
 
-#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
-#: ../src/xfce-appfinder-window.c:1203
+#: ../src/xfce-appfinder-window.c:841
+msgid "Could not load system menu"
+msgstr "Nelze načíst systémovou nabídku"
+
+#: ../src/xfce-appfinder-window.c:863 ../src/xfce-appfinder-window.c:870
+#: ../src/xfce-appfinder-window.c:1099
 msgid "All"
 msgstr "Vše"
+
+#: ../src/xfce-appfinder-window.c:937
+#, fuzzy, c-format
+msgid "<b>Categories:</b> %s"
+msgstr "<b>Kategorie</b>"
+
+#: ../src/xfce-appfinder-window.c:948
+#, fuzzy, c-format
+msgid "<b>Command:</b> %s"
+msgstr "<b>Příkaz</b>"
+
+#~ msgid "Could not execute application %s. Reason: %s"
+#~ msgstr "Nelze spustit aplikaci %s. Důvod: %s"
+
+#~ msgid "Could not load menu from %s. Reason: %s"
+#~ msgstr "Nelze načíst nabídku ze souboru %s. Důvod: %s"
 
 #~ msgid "Filter"
 #~ msgstr "Filtr"
@@ -134,12 +140,6 @@ msgstr "Vše"
 
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Komentář</b>"
-
-#~ msgid "<b>Categories</b>"
-#~ msgstr "<b>Kategorie</b>"
-
-#~ msgid "<b>Command</b>"
-#~ msgstr "<b>Příkaz</b>"
 
 #~ msgid "Run program"
 #~ msgstr "Spustit program"

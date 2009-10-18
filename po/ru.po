@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-02 13:31+0100\n"
+"POT-Creation-Date: 2009-10-18 13:57+0200\n"
 "PO-Revision-Date: 2009-05-14 17:12+0400\n"
 "Last-Translator: Denis Koryavov <dkoryavov@yandex.ru>\n"
 "Language-Team: Russian\n"
@@ -16,88 +16,94 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/main.c:43
+#: ../src/main.c:42
 msgid "Version information"
 msgstr "Информация о версии "
 
-#: ../src/main.c:44
+#: ../src/main.c:43
 msgid "[MENUFILE]"
 msgstr "[ФАЙЛ МЕНЮ] "
 
-#: ../src/main.c:65
+#: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr "Выполните '%s --help' для просмотра параметров использования программы. "
+msgstr ""
+"Выполните '%s --help' для просмотра параметров использования программы. "
 
-#: ../src/main.c:71
+#: ../src/main.c:70
 msgid "Unable to initialize GTK+."
 msgstr "Невозможно загрузить GTK+ "
 
-#: ../src/main.c:81
+#: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
 msgstr "Команда разработчиков Xfce. Все права защищены. "
 
-#: ../src/main.c:82
+#: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Пожалуйста, направляйте отчеты об ошибках по этому адресу: <%s>. "
 
-#: ../src/main.c:98
+#: ../src/main.c:92
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
 msgstr "Невозможно соединиться с менеджером настроек Xfce. Причина: %s "
 
-#: ../src/main.c:102
+#: ../src/main.c:96
 msgid "Failed to connect to xfconf daemon."
 msgstr "Невозможно соединиться с менеджером настроек Xfce. "
 
-#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:224 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Поиск приложений "
 
-#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:226 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Ищите и запускайте приложения установленные в вашей системе "
 
-#: ../src/xfce-appfinder-window.c:318
+#: ../src/xfce-appfinder-window.c:249
 msgid "Search"
 msgstr "Поиск "
 
-#: ../src/xfce-appfinder-window.c:341
+#: ../src/xfce-appfinder-window.c:277
 msgid "Categories"
 msgstr "Категории "
 
-#: ../src/xfce-appfinder-window.c:389
-msgid "C_lose after execute"
+#: ../src/xfce-appfinder-window.c:327
+#, fuzzy
+msgid "C_lose after launch"
 msgstr "В_ыйти после запуска "
 
-#: ../src/xfce-appfinder-window.c:790
-#, c-format
-msgid "Could not execute application %s. Reason: %s"
-msgstr "Невозможно запустить приложение %s. Причина: %s "
-
-#: ../src/xfce-appfinder-window.c:794
-#, c-format
-msgid "Could not execute application %s"
+#: ../src/xfce-appfinder-window.c:715
+#, fuzzy, c-format
+msgid "Could not execute application %s."
 msgstr "Невозможно запустить приложение %s. "
 
-#: ../src/xfce-appfinder-window.c:916
-#, c-format
-msgid "Could not load menu from %s. Reason: %s"
-msgstr "Невозможно загрузить меню из источника %s. Причина: %s "
-
-#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
-msgid "Could not load system menu"
-msgstr "Невозможно загрузить системное меню "
-
-#: ../src/xfce-appfinder-window.c:925
+#: ../src/xfce-appfinder-window.c:838
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Невозможно загрузить меню из источника %s "
 
-#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
-#: ../src/xfce-appfinder-window.c:1203
+#: ../src/xfce-appfinder-window.c:841
+msgid "Could not load system menu"
+msgstr "Невозможно загрузить системное меню "
+
+#: ../src/xfce-appfinder-window.c:863 ../src/xfce-appfinder-window.c:870
+#: ../src/xfce-appfinder-window.c:1099
 msgid "All"
 msgstr "Все "
 
+#: ../src/xfce-appfinder-window.c:937
+#, fuzzy, c-format
+msgid "<b>Categories:</b> %s"
+msgstr "Категории "
+
+#: ../src/xfce-appfinder-window.c:948
+#, c-format
+msgid "<b>Command:</b> %s"
+msgstr ""
+
+#~ msgid "Could not execute application %s. Reason: %s"
+#~ msgstr "Невозможно запустить приложение %s. Причина: %s "
+
+#~ msgid "Could not load menu from %s. Reason: %s"
+#~ msgstr "Невозможно загрузить меню из источника %s. Причина: %s "

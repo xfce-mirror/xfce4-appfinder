@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-02 13:31+0100\n"
+"POT-Creation-Date: 2009-10-18 13:57+0200\n"
 "PO-Revision-Date: 2008-10-06 17:26+0530\n"
 "Last-Translator: Rashan Anushka <rashan.uoc@gmail.com>\n"
 "Language-Team: Sinhalese <en@li.org>\n"
@@ -16,90 +16,96 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/main.c:43
+#: ../src/main.c:42
 msgid "Version information"
 msgstr "අනුවාද තොරතුරු"
 
-#: ../src/main.c:44
+#: ../src/main.c:43
 msgid "[MENUFILE]"
 msgstr "[MENUFILE]"
 
-#: ../src/main.c:65
+#: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
 msgstr "භාවිත තොරතුරු සඳහා '%s --help' යොදන්න."
 
-#: ../src/main.c:71
+#: ../src/main.c:70
 msgid "Unable to initialize GTK+."
 msgstr "GTK+ ඇරඹීමට නොකැක."
 
-#: ../src/main.c:81
+#: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce වැඩිදියුණු කිරීමේ කණ්ඩායම. සියළු හිමිකම් ඇවිරිණි."
 
-#: ../src/main.c:82
+#: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "කරුණාකර දෝෂයන් <%s> වෙත වාර්ථා කරන්න."
 
-#: ../src/main.c:98
+#: ../src/main.c:92
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
 msgstr "xfconf ඩීමනයට සම්බන්ධ වීම අසමත් විීය. හේතුව: %s"
 
-#: ../src/main.c:102
+#: ../src/main.c:96
 msgid "Failed to connect to xfconf daemon."
 msgstr "xfconf ඩීමනයට සම්බන්ධ වීම අසමත් විය."
 
-#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:224 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "යෙදුම් සෙවුම"
 
-#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:226 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "ඔබගේ පද්ධතියේ ස්ථාපනය කර ඇති යෙදුම් සොයා ක්‍රියාත්මක කරන්න"
 
-#: ../src/xfce-appfinder-window.c:318
+#: ../src/xfce-appfinder-window.c:249
 msgid "Search"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:341
+#: ../src/xfce-appfinder-window.c:277
 msgid "Categories"
 msgstr "ප්‍රවර්ග"
 
-#: ../src/xfce-appfinder-window.c:389
-msgid "C_lose after execute"
+#: ../src/xfce-appfinder-window.c:327
+#, fuzzy
+msgid "C_lose after launch"
 msgstr "ක්‍රියාත්මක කළමට පසු වසා දමන(නC)te"
 
-#: ../src/xfce-appfinder-window.c:790
-#, c-format
-msgid "Could not execute application %s. Reason: %s"
-msgstr "%s යෙදුම ක්‍රියාත්මක කළ නොහැක. හේතුව: %s"
-
-#: ../src/xfce-appfinder-window.c:794
-#, c-format
-msgid "Could not execute application %s"
+#: ../src/xfce-appfinder-window.c:715
+#, fuzzy, c-format
+msgid "Could not execute application %s."
 msgstr "%s යෙදුම ක්‍රියාත්මක කළ නොහැක"
 
-#: ../src/xfce-appfinder-window.c:916
-#, c-format
-msgid "Could not load menu from %s. Reason: %s"
-msgstr "%s න් මෙනුව ප්‍රවේශණය කළ නොහැක. හේතුව: %s"
-
-#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
-msgid "Could not load system menu"
-msgstr "පද්ධති මෙනුව ප්‍රවේශනය කළ නොහැක"
-
-#: ../src/xfce-appfinder-window.c:925
+#: ../src/xfce-appfinder-window.c:838
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "%s න් මෙනුව ප්‍රවේශණය කළ නොහැක"
 
-#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
-#: ../src/xfce-appfinder-window.c:1203
+#: ../src/xfce-appfinder-window.c:841
+msgid "Could not load system menu"
+msgstr "පද්ධති මෙනුව ප්‍රවේශනය කළ නොහැක"
+
+#: ../src/xfce-appfinder-window.c:863 ../src/xfce-appfinder-window.c:870
+#: ../src/xfce-appfinder-window.c:1099
 msgid "All"
 msgstr "සියළු"
+
+#: ../src/xfce-appfinder-window.c:937
+#, fuzzy, c-format
+msgid "<b>Categories:</b> %s"
+msgstr "ප්‍රවර්ග"
+
+#: ../src/xfce-appfinder-window.c:948
+#, c-format
+msgid "<b>Command:</b> %s"
+msgstr ""
+
+#~ msgid "Could not execute application %s. Reason: %s"
+#~ msgstr "%s යෙදුම ක්‍රියාත්මක කළ නොහැක. හේතුව: %s"
+
+#~ msgid "Could not load menu from %s. Reason: %s"
+#~ msgstr "%s න් මෙනුව ප්‍රවේශණය කළ නොහැක. හේතුව: %s"
 
 #~ msgid "Filter"
 #~ msgstr "පෙරහන"

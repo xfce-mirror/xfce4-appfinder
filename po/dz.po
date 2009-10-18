@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-02 13:31+0100\n"
+"POT-Creation-Date: 2009-10-18 13:57+0200\n"
 "PO-Revision-Date: 2006-10-24 16:55+0530\n"
 "Last-Translator: sonam rinchen <somindruk@druknet.bt>\n"
 "Language-Team: dzongkha <pgeyleg@dit.gov.bt>\n"
@@ -19,93 +19,92 @@ msgstr ""
 "X-Poedit-Country: bhutan\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../src/main.c:43
+#: ../src/main.c:42
 #, fuzzy
 msgid "Version information"
 msgstr "བརྡ་དོན་ཧེང་བཀལ་..."
 
-#: ../src/main.c:44
+#: ../src/main.c:43
 msgid "[MENUFILE]"
 msgstr ""
 
-#: ../src/main.c:65
+#: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
 msgstr ""
 
-#: ../src/main.c:71
+#: ../src/main.c:70
 msgid "Unable to initialize GTK+."
 msgstr ""
 
-#: ../src/main.c:81
+#: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
 msgstr ""
 
-#: ../src/main.c:82
+#: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr ""
 
-#: ../src/main.c:98
+#: ../src/main.c:92
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
 msgstr ""
 
-#: ../src/main.c:102
+#: ../src/main.c:96
 msgid "Failed to connect to xfconf daemon."
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:224 ../data/xfce4-appfinder.desktop.in.h:1
 #, fuzzy
 msgid "Application Finder"
 msgstr "ཨེཀསི་ཨེཕ་སི་ཨི་༤་གི་དོན་ལས་གློག་རིམ་འཚོལ་བྱེད།"
 
-#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:226 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:318
+#: ../src/xfce-appfinder-window.c:249
 #, fuzzy
 msgid "Search"
 msgstr "<b>འཚོལ་ཞིབ་:</b>"
 
-#: ../src/xfce-appfinder-window.c:341
+#: ../src/xfce-appfinder-window.c:277
 msgid "Categories"
 msgstr "དབྱེ་རིམ་ཚུ།"
 
-#: ../src/xfce-appfinder-window.c:389
-msgid "C_lose after execute"
+#: ../src/xfce-appfinder-window.c:327
+msgid "C_lose after launch"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:790
-#, c-format
-msgid "Could not execute application %s. Reason: %s"
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:794
+#: ../src/xfce-appfinder-window.c:715
 #, fuzzy, c-format
-msgid "Could not execute application %s"
+msgid "Could not execute application %s."
 msgstr "སེལ་འཐུ་འབད་ཡོད་པའི་གློག་རིམ་འདི་ལག་ལེན་འཐབ་མི་ཚུགས།"
 
-#: ../src/xfce-appfinder-window.c:916
-#, c-format
-msgid "Could not load menu from %s. Reason: %s"
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
-msgid "Could not load system menu"
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:925
+#: ../src/xfce-appfinder-window.c:838
 #, c-format
 msgid "Could not load menu from %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
-#: ../src/xfce-appfinder-window.c:1203
+#: ../src/xfce-appfinder-window.c:841
+msgid "Could not load system menu"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:863 ../src/xfce-appfinder-window.c:870
+#: ../src/xfce-appfinder-window.c:1099
 msgid "All"
 msgstr "ཆ་མཉམ།"
+
+#: ../src/xfce-appfinder-window.c:937
+#, fuzzy, c-format
+msgid "<b>Categories:</b> %s"
+msgstr "<b>དབྱེ་རིམ་ཚུ།</b>"
+
+#: ../src/xfce-appfinder-window.c:948
+#, fuzzy, c-format
+msgid "<b>Command:</b> %s"
+msgstr "<b>བརྡ་བཀོད།</b>"
 
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "ཨེཀསི་ཨེཕ་སི་ཨི་༤ཨེཔ་ཕའིན་ཌར།"
@@ -118,12 +117,6 @@ msgstr "ཆ་མཉམ།"
 
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>བསམ་བཀོད།</b>"
-
-#~ msgid "<b>Categories</b>"
-#~ msgstr "<b>དབྱེ་རིམ་ཚུ།</b>"
-
-#~ msgid "<b>Command</b>"
-#~ msgstr "<b>བརྡ་བཀོད།</b>"
 
 #~ msgid "Run program"
 #~ msgstr "ལས་རིམ་གཡོག་བཀོལ།"

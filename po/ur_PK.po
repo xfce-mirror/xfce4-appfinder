@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-02 13:31+0100\n"
+"POT-Creation-Date: 2009-10-18 13:57+0200\n"
 "PO-Revision-Date: 2009-05-14 02:26+0500\n"
 "Last-Translator: Muhammad Ali Makki <makki.ma@gmail.com>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
@@ -19,137 +19,153 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../src/main.c:43
+#: ../src/main.c:42
 msgid "Version information"
 msgstr "ورژن کی معلومات"
 
-#: ../src/main.c:44
+#: ../src/main.c:43
 msgid "[MENUFILE]"
 msgstr "[MENUFILE]"
 
-#: ../src/main.c:65
+#: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
 msgstr "مزید معلومات کے لیے '%s --help' لکھیں."
 
-#: ../src/main.c:71
+#: ../src/main.c:70
 msgid "Unable to initialize GTK+."
 msgstr "GTK+ کو نہیں چلایا جاسکا."
 
-#: ../src/main.c:81
+#: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
 msgstr "ایکسفس ترقی ٹیم. تمام حقوق محفوظ ہیں."
 
-#: ../src/main.c:82
+#: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "براہ مہربانی غلطیوں کی <%s> پر رپورٹ کریں."
 
-#: ../src/main.c:98
+#: ../src/main.c:92
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
 msgstr "ڈیمن xfconf سے رابطہ ناکام. وجہ: %s"
 
-#: ../src/main.c:102
+#: ../src/main.c:96
 msgid "Failed to connect to xfconf daemon."
 msgstr "ڈیمن xfconf سے رابطہ ناکام"
 
-#: ../src/xfce-appfinder-window.c:280
-#: ../src/xfce-appfinder-window.c:294
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:224 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "اطلاقیہ تلاش کار"
 
-#: ../src/xfce-appfinder-window.c:295
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:226 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "نظام میں نصب اطلاقیے تلاش کریں اور چلائیں"
 
-#: ../src/xfce-appfinder-window.c:318
+#: ../src/xfce-appfinder-window.c:249
 msgid "Search"
 msgstr "تلاش"
 
-#: ../src/xfce-appfinder-window.c:341
+#: ../src/xfce-appfinder-window.c:277
 msgid "Categories"
 msgstr "زمرہ جات"
 
-#: ../src/xfce-appfinder-window.c:389
-msgid "C_lose after execute"
+#: ../src/xfce-appfinder-window.c:327
+#, fuzzy
+msgid "C_lose after launch"
 msgstr "چلانے کے بعد _بند کریں"
 
-#: ../src/xfce-appfinder-window.c:790
-#, c-format
-msgid "Could not execute application %s. Reason: %s"
-msgstr "اطلاقیہ %s نہیں چلایا  جاسکا. وجہ: %s"
-
-#: ../src/xfce-appfinder-window.c:794
-#, c-format
-msgid "Could not execute application %s"
+#: ../src/xfce-appfinder-window.c:715
+#, fuzzy, c-format
+msgid "Could not execute application %s."
 msgstr "اطلاقیہ %s نہیں چلایا جاسکتا"
 
-#: ../src/xfce-appfinder-window.c:916
-#, c-format
-msgid "Could not load menu from %s. Reason: %s"
-msgstr "%s سے فہرست لوڈ نہیں کی جاسکی. وجہ: %s"
-
-#: ../src/xfce-appfinder-window.c:918
-#: ../src/xfce-appfinder-window.c:927
-msgid "Could not load system menu"
-msgstr "نظام کی فہرست لوڈ نہیں کی جاسکتی"
-
-#: ../src/xfce-appfinder-window.c:925
+#: ../src/xfce-appfinder-window.c:838
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "%s سے فہرست لوڈ نہیں کی جاسکتی"
 
-#: ../src/xfce-appfinder-window.c:940
-#: ../src/xfce-appfinder-window.c:947
-#: ../src/xfce-appfinder-window.c:1203
+#: ../src/xfce-appfinder-window.c:841
+msgid "Could not load system menu"
+msgstr "نظام کی فہرست لوڈ نہیں کی جاسکتی"
+
+#: ../src/xfce-appfinder-window.c:863 ../src/xfce-appfinder-window.c:870
+#: ../src/xfce-appfinder-window.c:1099
 msgid "All"
 msgstr "تمام"
 
+#: ../src/xfce-appfinder-window.c:937
+#, fuzzy, c-format
+msgid "<b>Categories:</b> %s"
+msgstr "<b>زمرہ جات</b>"
+
+#: ../src/xfce-appfinder-window.c:948
+#, fuzzy, c-format
+msgid "<b>Command:</b> %s"
+msgstr "<b>کمانڈ</b>"
+
+#~ msgid "Could not execute application %s. Reason: %s"
+#~ msgstr "اطلاقیہ %s نہیں چلایا  جاسکا. وجہ: %s"
+
+#~ msgid "Could not load menu from %s. Reason: %s"
+#~ msgstr "%s سے فہرست لوڈ نہیں کی جاسکی. وجہ: %s"
+
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "ایکسفس 4 اطلاقیہ تلاش کار"
+
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>نام</b>"
+
 #~ msgid "N/A"
 #~ msgstr "غ/م"
+
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>تبصرہ</b>"
-#~ msgid "<b>Categories</b>"
-#~ msgstr "<b>زمرہ جات</b>"
-#~ msgid "<b>Command</b>"
-#~ msgstr "<b>کمانڈ</b>"
+
 #~ msgid "Run program"
 #~ msgstr "پروگرام چلائیں"
+
 #~ msgid "Show Categories"
 #~ msgstr "زمرے دکھائیں"
+
 #~ msgid "Core"
 #~ msgstr "مرکز"
+
 #~ msgid "Development"
 #~ msgstr "ترقی"
+
 #~ msgid "Office"
 #~ msgstr "آفس"
+
 #~ msgid "Graphics"
 #~ msgstr "گریفکس"
+
 #~ msgid "Network"
 #~ msgstr "نیٹ ورک"
+
 #~ msgid "AudioVideo"
 #~ msgstr "آڈیوویڈیو"
+
 #~ msgid "Game"
 #~ msgstr "گیم"
+
 #~ msgid "Education"
 #~ msgstr "تعلیم"
+
 #~ msgid "System"
 #~ msgstr "نظام"
+
 #~ msgid "Filemanager"
 #~ msgstr "فائل منیجر"
+
 #~ msgid "Utility"
 #~ msgstr "سہولت"
+
 #~ msgid "No items available"
 #~ msgstr "کوئی عناصر نہیں"
+
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "معذرت، تلاش کیے گئے متن کا کوئی نتیجہ نہیں."
+
 #~ msgid "Appfinder"
 #~ msgstr "اطلاقیہ تلاش کار"
-

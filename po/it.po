@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-02 13:31+0100\n"
+"POT-Creation-Date: 2009-10-18 13:57+0200\n"
 "PO-Revision-Date: 2009-04-15 21:48+0100\n"
 "Last-Translator: Cristian Cozzolino <cristiancozzolino@libero.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -15,129 +15,141 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/main.c:43
+#: ../src/main.c:42
 msgid "Version information"
 msgstr "Informazioni di versione"
 
-#: ../src/main.c:44
+#: ../src/main.c:43
 msgid "[MENUFILE]"
 msgstr "[MENUFILE]"
 
-#: ../src/main.c:65
+#: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
 msgstr "Digitare '%s --help' per informazioni sull'uso."
 
-#: ../src/main.c:71
+#: ../src/main.c:70
 msgid "Unable to initialize GTK+."
 msgstr "Impossibile inizializzare GTK+."
 
-#: ../src/main.c:81
+#: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
 msgstr "Il team di sviluppo di Xfce. Tutti i diritti riservati."
 
-#: ../src/main.c:82
+#: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Segnalare i problemi a <%s>."
 
-#: ../src/main.c:98
+#: ../src/main.c:92
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
 msgstr "Impossibile connettersi al demone xfconf. Motivo: %s"
 
-#: ../src/main.c:102
+#: ../src/main.c:96
 msgid "Failed to connect to xfconf daemon."
 msgstr "Impossibile connettersi al demone xfconf."
 
-#: ../src/xfce-appfinder-window.c:280
-#: ../src/xfce-appfinder-window.c:294
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:224 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Trova applicazioni"
 
-#: ../src/xfce-appfinder-window.c:295
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:226 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Trova e lancia le applicazioni installate nel sistema"
 
-#: ../src/xfce-appfinder-window.c:318
+#: ../src/xfce-appfinder-window.c:249
 msgid "Search"
 msgstr "Cerca:"
 
-#: ../src/xfce-appfinder-window.c:341
+#: ../src/xfce-appfinder-window.c:277
 msgid "Categories"
 msgstr "Categorie"
 
-#: ../src/xfce-appfinder-window.c:389
-msgid "C_lose after execute"
+#: ../src/xfce-appfinder-window.c:327
+#, fuzzy
+msgid "C_lose after launch"
 msgstr "_Chiudi dopo l'esecuzione"
 
-#: ../src/xfce-appfinder-window.c:790
-#, c-format
-msgid "Could not execute application %s. Reason: %s"
-msgstr "Impossibile eseguire l'applicazione %s. Motivo: %s"
-
-#: ../src/xfce-appfinder-window.c:794
-#, c-format
-msgid "Could not execute application %s"
+#: ../src/xfce-appfinder-window.c:715
+#, fuzzy, c-format
+msgid "Could not execute application %s."
 msgstr "Impossibile eseguire l'applicazione %s"
 
-#: ../src/xfce-appfinder-window.c:916
-#, c-format
-msgid "Could not load menu from %s. Reason: %s"
-msgstr "Impossibile caricare il menù da %s. Motivo: %s"
-
-#: ../src/xfce-appfinder-window.c:918
-#: ../src/xfce-appfinder-window.c:927
-msgid "Could not load system menu"
-msgstr "Impossibile caricare il menù di sistema"
-
-#: ../src/xfce-appfinder-window.c:925
+#: ../src/xfce-appfinder-window.c:838
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Impossibile caricare il menù da %s"
 
-#: ../src/xfce-appfinder-window.c:940
-#: ../src/xfce-appfinder-window.c:947
-#: ../src/xfce-appfinder-window.c:1203
+#: ../src/xfce-appfinder-window.c:841
+msgid "Could not load system menu"
+msgstr "Impossibile caricare il menù di sistema"
+
+#: ../src/xfce-appfinder-window.c:863 ../src/xfce-appfinder-window.c:870
+#: ../src/xfce-appfinder-window.c:1099
 msgid "All"
 msgstr "Tutte"
 
+#: ../src/xfce-appfinder-window.c:937
+#, fuzzy, c-format
+msgid "<b>Categories:</b> %s"
+msgstr "<b>Categorie</b>"
+
+#: ../src/xfce-appfinder-window.c:948
+#, fuzzy, c-format
+msgid "<b>Command:</b> %s"
+msgstr "<b>Comando</b>"
+
+#~ msgid "Could not execute application %s. Reason: %s"
+#~ msgstr "Impossibile eseguire l'applicazione %s. Motivo: %s"
+
+#~ msgid "Could not load menu from %s. Reason: %s"
+#~ msgstr "Impossibile caricare il menù da %s. Motivo: %s"
+
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Nome</b>"
+
 #~ msgid "N/A"
 #~ msgstr "N/D"
+
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Commento</b>"
-#~ msgid "<b>Categories</b>"
-#~ msgstr "<b>Categorie</b>"
-#~ msgid "<b>Command</b>"
-#~ msgstr "<b>Comando</b>"
+
 #~ msgid "Run program"
 #~ msgstr "Avvia programma"
+
 #~ msgid "Show Categories"
 #~ msgstr "Mostra Categorie"
+
 #~ msgid "Core"
 #~ msgstr "Principali"
+
 #~ msgid "Development"
 #~ msgstr "Sviluppo"
+
 #~ msgid "Office"
 #~ msgstr "Ufficio"
+
 #~ msgid "Graphics"
 #~ msgstr "Grafica"
+
 #~ msgid "Network"
 #~ msgstr "Rete ed internet"
+
 #~ msgid "AudioVideo"
 #~ msgstr "Multimedia"
+
 #~ msgid "Game"
 #~ msgstr "Gioco"
+
 #~ msgid "Education"
 #~ msgstr "Educativi"
+
 #~ msgid "System"
 #~ msgstr "Sistema"
+
 #~ msgid "No items available"
 #~ msgstr "Nessun elemento disponibile"
+
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "Nessun risultato trovato."
-
