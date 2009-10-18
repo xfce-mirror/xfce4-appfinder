@@ -83,7 +83,7 @@ static void       _xfce_appfinder_window_entry_changed     (GtkEditable         
                                                             XfceAppfinderWindow      *window);
 static void       _xfce_appfinder_window_entry_activated   (GtkEntry                 *entry,
                                                             XfceAppfinderWindow      *window);
-static void       _xfce_appfinder_window_entry_focused     (GtkWidget                *entry,
+static gboolean   _xfce_appfinder_window_entry_focused     (GtkWidget                *entry,
                                                             GdkEventFocus            *event,
                                                             XfceAppfinderWindow      *window);
 static gboolean   _xfce_appfinder_window_entry_key_pressed (GtkWidget                *widget,
@@ -491,14 +491,14 @@ _xfce_appfinder_window_entry_activated (GtkEntry            *entry,
 
 
 
-static void
+static gboolean
 _xfce_appfinder_window_entry_focused (GtkWidget           *entry,
                                       GdkEventFocus       *event,
                                       XfceAppfinderWindow *window)
 {
   GtkTreeSelection *selection;
 
-  g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
+  g_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (window), FALSE);
 
   selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (window->tree_view));
 
@@ -506,6 +506,8 @@ _xfce_appfinder_window_entry_focused (GtkWidget           *entry,
     gtk_tree_selection_unselect_all (selection);
 
   gtk_widget_set_sensitive (window->execute_button, FALSE);
+
+  return FALSE;
 }
 
 
