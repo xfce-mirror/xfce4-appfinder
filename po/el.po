@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 13:57+0200\n"
+"POT-Creation-Date: 2009-10-18 14:57+0200\n"
 "PO-Revision-Date: 2009-08-30 19:51+0200\n"
 "Last-Translator: Evaggelos Balaskas <ebalaskas@ebalaskas.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -54,52 +54,56 @@ msgstr "Αδυναμία σύνδεσης με τον δαίμονα xfconf. O �
 msgid "Failed to connect to xfconf daemon."
 msgstr "Αδυναμία σύνδεσης με τον δαίμονα xfconf."
 
-#: ../src/xfce-appfinder-window.c:224 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Εύρεση εφαρμογών"
 
-#: ../src/xfce-appfinder-window.c:226 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Εύρεση και εκτέλεση εγκατεστημένων εφαρμογών στο σύστημά σας."
 
-#: ../src/xfce-appfinder-window.c:249
+#: ../src/xfce-appfinder-window.c:250
 msgid "Search"
 msgstr "Aναζήτηση"
 
-#: ../src/xfce-appfinder-window.c:277
+#: ../src/xfce-appfinder-window.c:278
 msgid "Categories"
 msgstr "Κατηγορίες"
 
-#: ../src/xfce-appfinder-window.c:327
+#: ../src/xfce-appfinder-window.c:328
 #, fuzzy
 msgid "C_lose after launch"
 msgstr "Κλείσιμο μετά την εκτέλεση"
 
-#: ../src/xfce-appfinder-window.c:715
+#: ../src/xfce-appfinder-window.c:336
+msgid "Launch"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:720
 #, fuzzy, c-format
 msgid "Could not execute application %s."
 msgstr "Αδυναμία εκτέλεσης της εφαρμογής %s"
 
-#: ../src/xfce-appfinder-window.c:838
+#: ../src/xfce-appfinder-window.c:843
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Αδυναμία φόρτωσης του μενού από %s"
 
-#: ../src/xfce-appfinder-window.c:841
+#: ../src/xfce-appfinder-window.c:846
 msgid "Could not load system menu"
 msgstr "Αδυναμία φόρτωσης του μενού συστήματος"
 
-#: ../src/xfce-appfinder-window.c:863 ../src/xfce-appfinder-window.c:870
-#: ../src/xfce-appfinder-window.c:1099
+#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
+#: ../src/xfce-appfinder-window.c:1104
 msgid "All"
 msgstr "Όλα"
 
-#: ../src/xfce-appfinder-window.c:937
+#: ../src/xfce-appfinder-window.c:942
 #, fuzzy, c-format
 msgid "<b>Categories:</b> %s"
 msgstr "<b>Κατηγορίες</b>"
 
-#: ../src/xfce-appfinder-window.c:948
+#: ../src/xfce-appfinder-window.c:953
 #, fuzzy, c-format
 msgid "<b>Command:</b> %s"
 msgstr "<b>Εντολή</b>"

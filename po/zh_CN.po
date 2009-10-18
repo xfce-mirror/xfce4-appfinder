@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 13:57+0200\n"
+"POT-Creation-Date: 2009-10-18 14:57+0200\n"
 "PO-Revision-Date: 2009-01-19 13:03-0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
@@ -55,52 +55,56 @@ msgstr "无法连接至 xfconf 守护进程。原因：%s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "无法连接至 xfconf 守护进程。"
 
-#: ../src/xfce-appfinder-window.c:224 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "程序查找工具"
 
-#: ../src/xfce-appfinder-window.c:226 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "查找并启动您系统上安装的程序"
 
-#: ../src/xfce-appfinder-window.c:249
+#: ../src/xfce-appfinder-window.c:250
 msgid "Search"
 msgstr "搜索"
 
-#: ../src/xfce-appfinder-window.c:277
+#: ../src/xfce-appfinder-window.c:278
 msgid "Categories"
 msgstr "类别"
 
-#: ../src/xfce-appfinder-window.c:327
+#: ../src/xfce-appfinder-window.c:328
 #, fuzzy
 msgid "C_lose after launch"
 msgstr "执行后关闭(_l)"
 
-#: ../src/xfce-appfinder-window.c:715
+#: ../src/xfce-appfinder-window.c:336
+msgid "Launch"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:720
 #, fuzzy, c-format
 msgid "Could not execute application %s."
 msgstr "无法运行程序 %s "
 
-#: ../src/xfce-appfinder-window.c:838
+#: ../src/xfce-appfinder-window.c:843
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "无法从 %s 载入菜单"
 
-#: ../src/xfce-appfinder-window.c:841
+#: ../src/xfce-appfinder-window.c:846
 msgid "Could not load system menu"
 msgstr "无法载入系统菜单"
 
-#: ../src/xfce-appfinder-window.c:863 ../src/xfce-appfinder-window.c:870
-#: ../src/xfce-appfinder-window.c:1099
+#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
+#: ../src/xfce-appfinder-window.c:1104
 msgid "All"
 msgstr "全部"
 
-#: ../src/xfce-appfinder-window.c:937
+#: ../src/xfce-appfinder-window.c:942
 #, fuzzy, c-format
 msgid "<b>Categories:</b> %s"
 msgstr "<b>类别</b>"
 
-#: ../src/xfce-appfinder-window.c:948
+#: ../src/xfce-appfinder-window.c:953
 #, fuzzy, c-format
 msgid "<b>Command:</b> %s"
 msgstr "<b>命令</b>"

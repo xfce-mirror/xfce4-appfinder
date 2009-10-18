@@ -203,6 +203,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   GtkWidget         *hbox1;
   GtkWidget         *hbox2;
   GtkWidget         *check_button;
+  GtkWidget         *execute_image;
   GtkWidget         *button;
   GtkWidget         *label;
   GtkWidget         *alignment;
@@ -332,11 +333,15 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   xfconf_g_property_bind (window->channel, "/close-after-execute", G_TYPE_BOOLEAN, G_OBJECT (check_button), "active");
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (check_button), xfconf_channel_get_bool (window->channel, "/close-after-execute", DEFAULT_CLOSE_AFTER_EXECUTE));
 
-  window->execute_button = gtk_dialog_add_button (GTK_DIALOG (window), GTK_STOCK_EXECUTE, GTK_RESPONSE_OK);
+  window->execute_button = gtk_button_new_with_mnemonic (_("Launch"));
+  execute_image = gtk_image_new_from_stock (GTK_STOCK_EXECUTE, GTK_ICON_SIZE_BUTTON);
+  gtk_button_set_image (GTK_BUTTON (window->execute_button), execute_image);
+  gtk_dialog_add_action_widget (GTK_DIALOG (window), window->execute_button, GTK_RESPONSE_OK);
   GTK_WIDGET_SET_FLAGS (window->execute_button, GTK_CAN_DEFAULT);
   gtk_button_set_focus_on_click (GTK_BUTTON (window->execute_button), FALSE);
   gtk_widget_set_sensitive (window->execute_button, FALSE);
   g_signal_connect_swapped (window->execute_button, "clicked", G_CALLBACK (_xfce_appfinder_window_execute), window);
+  gtk_widget_show (window->execute_button);
 
   button = gtk_dialog_add_button (GTK_DIALOG (window), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
   g_signal_connect_swapped (button, "clicked", G_CALLBACK (_xfce_appfinder_window_closed), window);

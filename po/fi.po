@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 13:57+0200\n"
+"POT-Creation-Date: 2009-10-18 14:57+0200\n"
 "PO-Revision-Date: 2009-01-02 15:56+0300\n"
 "Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
@@ -51,52 +51,56 @@ msgstr "Ei voi yhdistää xfconf-taustaprosessiin. Syy: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Ei voi yhdistää xfconf-taustaprosessiin."
 
-#: ../src/xfce-appfinder-window.c:224 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Sovellusten hakutyökalu"
 
-#: ../src/xfce-appfinder-window.c:226 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Etsi ja käynnistä järjestelmään asennettuja sovelluksia"
 
-#: ../src/xfce-appfinder-window.c:249
+#: ../src/xfce-appfinder-window.c:250
 msgid "Search"
 msgstr "Hae"
 
-#: ../src/xfce-appfinder-window.c:277
+#: ../src/xfce-appfinder-window.c:278
 msgid "Categories"
 msgstr "Kategoriat"
 
-#: ../src/xfce-appfinder-window.c:327
+#: ../src/xfce-appfinder-window.c:328
 #, fuzzy
 msgid "C_lose after launch"
 msgstr "S_ulje, kun sovellus suoritetaan"
 
-#: ../src/xfce-appfinder-window.c:715
+#: ../src/xfce-appfinder-window.c:336
+msgid "Launch"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:720
 #, fuzzy, c-format
 msgid "Could not execute application %s."
 msgstr "Sovellusta %s ei voi suorittaa"
 
-#: ../src/xfce-appfinder-window.c:838
+#: ../src/xfce-appfinder-window.c:843
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Valikkoa ei voi avata kohteesta %s"
 
-#: ../src/xfce-appfinder-window.c:841
+#: ../src/xfce-appfinder-window.c:846
 msgid "Could not load system menu"
 msgstr "Järjestelmävalikkoa ei voi avata"
 
-#: ../src/xfce-appfinder-window.c:863 ../src/xfce-appfinder-window.c:870
-#: ../src/xfce-appfinder-window.c:1099
+#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
+#: ../src/xfce-appfinder-window.c:1104
 msgid "All"
 msgstr "Kaikki"
 
-#: ../src/xfce-appfinder-window.c:937
+#: ../src/xfce-appfinder-window.c:942
 #, fuzzy, c-format
 msgid "<b>Categories:</b> %s"
 msgstr "Kategoriat"
 
-#: ../src/xfce-appfinder-window.c:948
+#: ../src/xfce-appfinder-window.c:953
 #, c-format
 msgid "<b>Command:</b> %s"
 msgstr ""

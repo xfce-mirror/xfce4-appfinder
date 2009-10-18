@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 13:57+0200\n"
+"POT-Creation-Date: 2009-10-18 14:57+0200\n"
 "PO-Revision-Date: 2009-01-27 12:48+1100\n"
 "Last-Translator:  <>\n"
 "Language-Team: \n"
@@ -54,52 +54,56 @@ msgstr "Failed to connect to xfconf daemon. Reason: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Failed to connect to xfconf daemon."
 
-#: ../src/xfce-appfinder-window.c:224 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Application Finder"
 
-#: ../src/xfce-appfinder-window.c:226 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Find and launch applications installed on your system"
 
-#: ../src/xfce-appfinder-window.c:249
+#: ../src/xfce-appfinder-window.c:250
 msgid "Search"
 msgstr "Search"
 
-#: ../src/xfce-appfinder-window.c:277
+#: ../src/xfce-appfinder-window.c:278
 msgid "Categories"
 msgstr "Categories"
 
-#: ../src/xfce-appfinder-window.c:327
+#: ../src/xfce-appfinder-window.c:328
 #, fuzzy
 msgid "C_lose after launch"
 msgstr "C_lose after execute"
 
-#: ../src/xfce-appfinder-window.c:715
+#: ../src/xfce-appfinder-window.c:336
+msgid "Launch"
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:720
 #, fuzzy, c-format
 msgid "Could not execute application %s."
 msgstr "Could not execute application %s"
 
-#: ../src/xfce-appfinder-window.c:838
+#: ../src/xfce-appfinder-window.c:843
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Could not load menu from %s"
 
-#: ../src/xfce-appfinder-window.c:841
+#: ../src/xfce-appfinder-window.c:846
 msgid "Could not load system menu"
 msgstr "Could not load system menu"
 
-#: ../src/xfce-appfinder-window.c:863 ../src/xfce-appfinder-window.c:870
-#: ../src/xfce-appfinder-window.c:1099
+#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
+#: ../src/xfce-appfinder-window.c:1104
 msgid "All"
 msgstr "All"
 
-#: ../src/xfce-appfinder-window.c:937
+#: ../src/xfce-appfinder-window.c:942
 #, fuzzy, c-format
 msgid "<b>Categories:</b> %s"
 msgstr "<b>Categories</b>"
 
-#: ../src/xfce-appfinder-window.c:948
+#: ../src/xfce-appfinder-window.c:953
 #, fuzzy, c-format
 msgid "<b>Command:</b> %s"
 msgstr "<b>Command</b>"
