@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 14:57+0200\n"
-"PO-Revision-Date: 2009-01-03 17:26+0900\n"
+"POT-Creation-Date: 2009-10-21 00:47+0900\n"
+"PO-Revision-Date: 2009-10-21 00:49+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
 "MIME-Version: 1.0\n"
@@ -53,11 +53,13 @@ msgstr "xfconf デーモンへの接続に失敗しました。理由: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "xfconf デーモンへの接続に失敗しました。"
 
-#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:225
+#: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "アプリケーションファインダ"
 
-#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:227
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "システムにインストールされたアプリケーションの検索および起動を行います"
 
@@ -67,51 +69,50 @@ msgstr "検索"
 
 #: ../src/xfce-appfinder-window.c:278
 msgid "Categories"
-msgstr "分類"
+msgstr "カテゴリ"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
 msgstr "起動後に閉じる(_L)"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "起動"
 
-#: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:722
+#, c-format
 msgid "Could not execute application %s."
-msgstr "アプリケーション %s を実行できませんでした"
+msgstr "アプリケーション %s を実行できませんでした。"
 
-#: ../src/xfce-appfinder-window.c:843
+#: ../src/xfce-appfinder-window.c:845
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "%s からメニューを読み込めませんでした"
 
-#: ../src/xfce-appfinder-window.c:846
+#: ../src/xfce-appfinder-window.c:848
 msgid "Could not load system menu"
 msgstr "システムメニューを読み込めませんでした"
 
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
-#: ../src/xfce-appfinder-window.c:1104
+#: ../src/xfce-appfinder-window.c:870
+#: ../src/xfce-appfinder-window.c:877
+#: ../src/xfce-appfinder-window.c:1106
 msgid "All"
 msgstr "全て"
 
-#: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:944
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "分類"
+msgstr "<b>カテゴリ:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:953
+#: ../src/xfce-appfinder-window.c:955
 #, c-format
 msgid "<b>Command:</b> %s"
-msgstr ""
+msgstr "<b>コマンド:</b> %s"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "アプリケーション %s を実行できませんでした。理由: %s"
-
 #~ msgid "Could not load menu from %s. Reason: %s"
 #~ msgstr "%s からメニューを読み込めませんでした。理由: %s"
-
 #~ msgid "Filter"
 #~ msgstr "フィルタ"
+
