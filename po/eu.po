@@ -3,20 +3,20 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 #
-# Piarres Beobide Egaña <pi@beobide.net>, 2004, 2005, 2008.
+# Piarres Beobide Egaña <pi@beobide.net>, 2004, 2005, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-18 14:57+0200\n"
-"PO-Revision-Date: 2008-10-12 00:52+0200\n"
+"PO-Revision-Date: 2009-10-21 13:53+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
-"Language-Team: Euskara <debian-l10n-basque@lists.debian.org>\n"
+"Language-Team: Basque <debian-l10n-eu@debian.lists.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 
 #: ../src/main.c:42
 msgid "Version information"
@@ -70,18 +70,16 @@ msgid "Categories"
 msgstr "Kategoriak"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
-msgstr "I_txi exekutatu ondoren"
+msgstr "I_txi abiarazi ondoren"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "Abiarazi"
 
-#: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:720, c-format
 msgid "Could not execute application %s."
-msgstr "Ezin da %s aplikazioa exekutatu"
+msgstr "Ezin da %s aplikazioa exekutatu."
 
 #: ../src/xfce-appfinder-window.c:843
 #, c-format
@@ -97,15 +95,14 @@ msgstr "Ezin da sistema menua kargatu"
 msgid "All"
 msgstr "Denak"
 
-#: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:942, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "Kategoriak"
+msgstr "<b>Kategoriak:</b> %s"
 
 #: ../src/xfce-appfinder-window.c:953
 #, c-format
 msgid "<b>Command:</b> %s"
-msgstr ""
+msgstr "<b>Komandoa:</b> %s"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "Ezin da %s aplikazioa exekutatu. Arrazoia; %s"
