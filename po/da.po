@@ -5,10 +5,10 @@
 # Per Kongstad <p_kongstad@op.pl>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce-4-appfinder 4.5.93\n"
+"Project-Id-Version: xfce-4-appfinder 4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-18 14:57+0200\n"
-"PO-Revision-Date: 2009-01-23 10:37+0100\n"
+"PO-Revision-Date: 2009-10-21 20:33+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -54,11 +54,13 @@ msgstr "Kunne ikke forbinde til xfconf-dæmon. Årsag: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Kunne ikke forbinde til xfconf-dæmon."
 
-#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:225
+#: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Programfinder"
 
-#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:227
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Find og start programmer, som er installeret på systemet"
 
@@ -71,18 +73,17 @@ msgid "Categories"
 msgstr "Kategorier"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
-msgstr "L_uk efter kørsel"
+msgstr "L_uk efter start"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "Start"
 
 #: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#, c-format
 msgid "Could not execute application %s."
-msgstr "Kunne ikke køre programmet %s"
+msgstr "Kunne ikke køre programmet %s."
 
 #: ../src/xfce-appfinder-window.c:843
 #, c-format
@@ -93,23 +94,24 @@ msgstr "Kunne ikke indlæse menu fra %s"
 msgid "Could not load system menu"
 msgstr "Kunne ikke indlæse systemmenu"
 
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
+#: ../src/xfce-appfinder-window.c:868
+#: ../src/xfce-appfinder-window.c:875
 #: ../src/xfce-appfinder-window.c:1104
 msgid "All"
 msgstr "Alle"
 
 #: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "Kategorier"
+msgstr "<b>Kategorier:</b> %s"
 
 #: ../src/xfce-appfinder-window.c:953
 #, c-format
 msgid "<b>Command:</b> %s"
-msgstr ""
+msgstr "<b>Kommando:</b> %s"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "Kunne ikke køre programmet %s. Årsag: %s"
-
 #~ msgid "Could not load menu from %s. Reason: %s"
 #~ msgstr "Kunne ikke indlæse menu fra %s. Årsag: %s"
+
