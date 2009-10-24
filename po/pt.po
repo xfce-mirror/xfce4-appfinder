@@ -2,15 +2,15 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Nuno Donato <nunodonato@gmail.com>, 2004
-# Nuno Miguel <nunis@netcabo.pt>,2008.
+# Nuno Miguel <nunis@netcabo.pt>,2008, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.6.0\n"
+"Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-18 14:57+0200\n"
-"PO-Revision-Date: 2009-03-14 19:24+0100\n"
-"Last-Translator: Nuno Miguel <nunis@netcabo.pt>\n"
+"PO-Revision-Date: 2009-10-23 18:49+0100\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,11 +51,13 @@ msgstr "Falhou a ligação ao daemon xfconf. Razão: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Falhou ao ligar ao daemon xfconf."
 
-#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:225
+#: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Localizar Aplicações"
 
-#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:227
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Encontra e lança aplicações instaladas no sistema"
 
@@ -68,18 +70,17 @@ msgid "Categories"
 msgstr "Categorias"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
-msgstr "Fe_char depois de executar"
+msgstr "Fe_char depois de lançar"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "Lançar"
 
 #: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#, c-format
 msgid "Could not execute application %s."
-msgstr "Incapaz de executar a aplicação %s"
+msgstr "Incapaz de executar a aplicação %s."
 
 #: ../src/xfce-appfinder-window.c:843
 #, c-format
@@ -90,95 +91,19 @@ msgstr "Incapaz de carregar menu de %s"
 msgid "Could not load system menu"
 msgstr "Incapaz de carregar menu de sistema"
 
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
+#: ../src/xfce-appfinder-window.c:868
+#: ../src/xfce-appfinder-window.c:875
 #: ../src/xfce-appfinder-window.c:1104
 msgid "All"
 msgstr "Todos"
 
 #: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "<b>Categorias</b>"
+msgstr "<b>Categorias</b> %s"
 
 #: ../src/xfce-appfinder-window.c:953
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Command:</b> %s"
-msgstr "<b>Comando</b>"
+msgstr "<b>Comando</b> %s"
 
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "Incapaz de executar aplicação %s. Razão: %s"
-
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "Incapaz de carregar menu de %s. Razão: %s"
-
-#~ msgid "Filter"
-#~ msgstr "Filtro"
-
-#~ msgid "Failed to open display"
-#~ msgstr "Falhou ao abrir ecrã"
-
-#~ msgid "Copyright (c) 2008"
-#~ msgstr "Copyright (c) 2008"
-
-#~ msgid "Applications"
-#~ msgstr "Aplicações"
-
-#~ msgid "Xfce 4 Appfinder"
-#~ msgstr "Xfce 4 Appfinder"
-
-#~ msgid "<b>Name</b>"
-#~ msgstr "<b>Nome:</b>"
-
-#~ msgid "N/A"
-#~ msgstr "N/D"
-
-#~ msgid "<b>Comment</b>"
-#~ msgstr "<b>Comentário</b>"
-
-#~ msgid "Run program"
-#~ msgstr "Executar programa"
-
-#~ msgid "Show Categories"
-#~ msgstr "Mostrar Categorias"
-
-#~ msgid "Core"
-#~ msgstr "Base"
-
-#~ msgid "Development"
-#~ msgstr "Desenvolvimento"
-
-#~ msgid "Office"
-#~ msgstr "Escritório"
-
-#~ msgid "Graphics"
-#~ msgstr "Gráficos"
-
-#~ msgid "Network"
-#~ msgstr "Rede"
-
-#~ msgid "AudioVideo"
-#~ msgstr "Áudio e Vídeo"
-
-#~ msgid "Game"
-#~ msgstr "Jogos"
-
-#~ msgid "Education"
-#~ msgstr "Educativos"
-
-#~ msgid "System"
-#~ msgstr "Sistema"
-
-#~ msgid "Filemanager"
-#~ msgstr "Gestor de ficheiros"
-
-#~ msgid "Utility"
-#~ msgstr "Acessórios"
-
-#~ msgid "No items available"
-#~ msgstr "Nenhum item disponível"
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "Desculpe, não existe correspondência para o texto procurado."
-
-#~ msgid "Appfinder"
-#~ msgstr "Appfinder"
