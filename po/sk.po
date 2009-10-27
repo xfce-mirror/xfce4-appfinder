@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-18 14:57+0200\n"
-"PO-Revision-Date: 2009-09-13 17:24+0200\n"
+"PO-Revision-Date: 2009-10-27 21:21+0100\n"
 "Last-Translator: Robert Hartl <hartl.robert@gmail.com>\n"
-"Language-Team: slovak <sk-i18n@lists.linux.sk>\n"
+"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
@@ -67,18 +67,17 @@ msgid "Categories"
 msgstr "Kategórie"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
 msgstr "_Zavrieť po spustení"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "Spustiť"
 
 #: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#, c-format
 msgid "Could not execute application %s."
-msgstr "Nemožno spustiť aplikáciu %s"
+msgstr "Nemožno spustiť aplikáciu %s."
 
 #: ../src/xfce-appfinder-window.c:843
 #, c-format
@@ -95,14 +94,14 @@ msgid "All"
 msgstr "Všetky"
 
 #: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "<b>Kategórie</b>"
+msgstr "<b>Kategórie</b> %s"
 
 #: ../src/xfce-appfinder-window.c:953
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Command:</b> %s"
-msgstr "<b>Príkaz</b>"
+msgstr "<b>Príkaz</b> %s"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "Nemožno spustiť aplikáciu %s. Dôvod: %s"
