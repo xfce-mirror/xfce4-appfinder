@@ -13,9 +13,9 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-18 14:57+0200\n"
-"PO-Revision-Date: 2009-01-19 13:03-0800\n"
+"PO-Revision-Date: 2009-11-09 19:06+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
-"Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
+"Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -72,18 +72,17 @@ msgid "Categories"
 msgstr "类别"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
-msgstr "执行后关闭(_l)"
+msgstr "启动后关闭(_L)"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "启动"
 
 #: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#, c-format
 msgid "Could not execute application %s."
-msgstr "无法运行程序 %s "
+msgstr "无法运行程序 %s。"
 
 #: ../src/xfce-appfinder-window.c:843
 #, c-format
@@ -100,14 +99,14 @@ msgid "All"
 msgstr "全部"
 
 #: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "<b>类别</b>"
+msgstr "<b>类别:</b> %s"
 
 #: ../src/xfce-appfinder-window.c:953
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Command:</b> %s"
-msgstr "<b>命令</b>"
+msgstr "<b>命令:</b> %s"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "无法运行程序 %s。原因如下：%s"
