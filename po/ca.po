@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-18 14:57+0200\n"
-"PO-Revision-Date: 2009-01-11 12:23+0100\n"
+"PO-Revision-Date: 2009-11-26 18:01+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Catalan\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/main.c:42
 msgid "Version information"
@@ -70,18 +72,17 @@ msgid "Categories"
 msgstr "Categories"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
 msgstr "_Tanca després d'executar"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "Executa"
 
 #: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#, c-format
 msgid "Could not execute application %s."
-msgstr "No s'ha pogut executar l'aplicació %s"
+msgstr "No s'ha pogut executar l'aplicació «%s»."
 
 #: ../src/xfce-appfinder-window.c:843
 #, c-format
@@ -98,14 +99,14 @@ msgid "All"
 msgstr "Totes"
 
 #: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "<b>Categories</b>"
+msgstr "<b>Categories:</b> %s"
 
 #: ../src/xfce-appfinder-window.c:953
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Command:</b> %s"
-msgstr "<b>Ordre</b>"
+msgstr "<b>Ordre:</b> %s"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "No s'ha pogut executar l'aplicació %s. Motiu: %s"
