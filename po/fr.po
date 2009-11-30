@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.6 RC1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-18 14:57+0200\n"
-"PO-Revision-Date: 2009-01-18 16:11+0100\n"
+"PO-Revision-Date: 2009-11-30 20:40+0100\n"
 "Last-Translator: Jérôme Guelfucci <jeromeg@xfce.org>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -69,18 +69,16 @@ msgid "Categories"
 msgstr "Catégories"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
-msgstr "_Fermer après lancement"
+msgstr "_Fermer après exécution"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "Exécuter"
 
 #: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
 msgid "Could not execute application %s."
-msgstr "Impossible de lancer l'application %s"
+msgstr "Impossible de lancer l'application %s."
 
 #: ../src/xfce-appfinder-window.c:843
 #, c-format
@@ -97,14 +95,13 @@ msgid "All"
 msgstr "Toutes"
 
 #: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "Catégories"
+msgstr "<b>Catégories :</b> %s"
 
 #: ../src/xfce-appfinder-window.c:953
 #, c-format
 msgid "<b>Command:</b> %s"
-msgstr ""
+msgstr "<b>Commande :</b> %s"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "Impossible de lancer l'application %s. Raison : %s"
