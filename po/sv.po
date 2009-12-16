@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-18 14:57+0200\n"
-"PO-Revision-Date: 2009-01-18 12:34+0100\n"
+"PO-Revision-Date: 2009-12-16 17:12+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -57,11 +57,13 @@ msgstr "Misslyckades med att ansluta till xfconf-demonen. Anledning: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Misslyckades med att ansluta till xfconf-demonen."
 
-#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:225
+#: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Programlista"
 
-#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:227
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Sök och starta program som är installerade på din dator"
 
@@ -74,18 +76,17 @@ msgid "Categories"
 msgstr "Kategorier"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
 msgstr "S_täng efter start"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "Starta"
 
 #: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#, c-format
 msgid "Could not execute application %s."
-msgstr "Kunde inte starta programmet %s"
+msgstr "Kunde inte starta programmet %s."
 
 #: ../src/xfce-appfinder-window.c:843
 #, c-format
@@ -96,86 +97,66 @@ msgstr "Kunde inte läsa in meny från %s"
 msgid "Could not load system menu"
 msgstr "Kunde inte läsa in systemmenyn"
 
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
+#: ../src/xfce-appfinder-window.c:868
+#: ../src/xfce-appfinder-window.c:875
 #: ../src/xfce-appfinder-window.c:1104
 msgid "All"
 msgstr "Alla"
 
 #: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "<b>Kategorier</b>"
+msgstr "<b>Kategorier:</b> %s"
 
 #: ../src/xfce-appfinder-window.c:953
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Command:</b> %s"
-msgstr "<b>Kommando</b>"
+msgstr "<b>Kommando:</b> %s"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "Kunde inte starta programmet %s. Anledning: %s"
-
 #~ msgid "Could not load menu from %s. Reason: %s"
 #~ msgstr "Kunde inte läsa in meny från %s. Anledning: %s"
-
 #~ msgid "Filter"
 #~ msgstr "Filter"
-
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "Programlista"
-
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Namn</b>"
-
 #~ msgid "N/A"
 #~ msgstr "Ej tillämplig"
-
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Kommentar</b>"
-
 #~ msgid "Run program"
 #~ msgstr "Kör programmet"
-
 #~ msgid "Show Categories"
 #~ msgstr "Visa kategorier"
-
 #~ msgid "Core"
 #~ msgstr "Standard"
-
 #~ msgid "Development"
 #~ msgstr "Utveckling"
-
 #~ msgid "Office"
 #~ msgstr "Kontor"
-
 #~ msgid "Graphics"
 #~ msgstr "Grafik"
-
 #~ msgid "Network"
 #~ msgstr "Nätverk"
-
 #~ msgid "AudioVideo"
 #~ msgstr "Ljud och Bild"
-
 #~ msgid "Game"
 #~ msgstr "Spel"
-
 #~ msgid "Education"
 #~ msgstr "Utbildning"
-
 #~ msgid "System"
 #~ msgstr "System"
-
 #~ msgid "Filemanager"
 #~ msgstr "Filhanterare"
-
 #~ msgid "Utility"
 #~ msgstr "Verktyg"
-
 #~ msgid "No items available"
 #~ msgstr "Inga program i denna kategori"
-
 #~ msgid "Sorry, no match for searched text."
 #~ msgstr "Tyvärr, inga sökträffar."
-
 #~ msgid "Appfinder"
 #~ msgstr "Programlista"
+
