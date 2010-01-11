@@ -4,12 +4,12 @@
 # Rodrigo Coacci <rcoacci@gmail.com>, 2004.
 # Adriano Winter Bess <awbess@gmail.com>, 2005.
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 14:57+0200\n"
+"POT-Creation-Date: 2010-01-11 08:59-0500\n"
 "PO-Revision-Date: 2009-01-15 09:03-0500\n"
 "Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
@@ -69,42 +69,41 @@ msgid "Categories"
 msgstr "Categorias"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
-msgstr "F_echar depois de executar"
+msgstr "F_echar depois de iniciar"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "Iniciar"
 
-#: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:722
+#, c-format
 msgid "Could not execute application %s."
-msgstr "Não foi possível executar o aplicativo %s"
+msgstr "Não foi possível executar o aplicativo %s."
 
-#: ../src/xfce-appfinder-window.c:843
+#: ../src/xfce-appfinder-window.c:845
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Não foi possível carregar o menu de %s"
 
-#: ../src/xfce-appfinder-window.c:846
+#: ../src/xfce-appfinder-window.c:848
 msgid "Could not load system menu"
 msgstr "Não foi possível carregar o menu do sistema"
 
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
-#: ../src/xfce-appfinder-window.c:1104
+#: ../src/xfce-appfinder-window.c:870 ../src/xfce-appfinder-window.c:877
+#: ../src/xfce-appfinder-window.c:1106
 msgid "All"
 msgstr "Todos"
 
-#: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:944
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "<b>Categorias</b>"
+msgstr "<b>Categorias:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:953
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:955
+#, c-format
 msgid "<b>Command:</b> %s"
-msgstr "<b>Comando</b>"
+msgstr "<b>Comando:</b> %s"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "Não foi possível executar o aplicativo %s. Razão: %s"
@@ -115,7 +114,6 @@ msgstr "<b>Comando</b>"
 #~ msgid "Filter"
 #~ msgstr "Filtro"
 
-#, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Localize aplicativos instalados no sistema."
 
