@@ -2,12 +2,12 @@
 # Copyright (C) 2008 Jasper Huijsmans <jasper@xfce.org>
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Jasper Huijsmans <jasper@xfce.org>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.5.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-02 13:31+0100\n"
+"POT-Creation-Date: 2010-01-17 12:09+0100\n"
 "PO-Revision-Date: 2008-07-27 09:26+0200\n"
 "Last-Translator: Jasper Huijsmans <jasper@xfce.org>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -15,7 +15,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#
 #: ../src/main.c:43
 #, fuzzy
 msgid "Version information"
@@ -28,11 +27,11 @@ msgstr "[MENUBESTAND]"
 #: ../src/main.c:65
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr ""
+msgstr "Typ '%s --help' voor het gebruik van informatie."
 
 #: ../src/main.c:71
 msgid "Unable to initialize GTK+."
-msgstr ""
+msgstr "Mislukt om GTK+ te intalliseren."
 
 #: ../src/main.c:81
 msgid "The Xfce development team. All rights reserved."
@@ -46,67 +45,65 @@ msgstr "Rapporteer problemen op <%s>"
 #: ../src/main.c:98
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr ""
+msgstr "Kon geen verbinding maken met  xfconf daemon. Reden:%s"
 
 #: ../src/main.c:102
 msgid "Failed to connect to xfconf daemon."
-msgstr ""
+msgstr "Kon geen verbinding maken xfconf daemon."
 
-#: ../src/xfce-appfinder-window.c:280 ../src/xfce-appfinder-window.c:294
+#: ../src/xfce-appfinder-window.c:281 ../src/xfce-appfinder-window.c:295
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Toepassingen Zoeken"
 
-#: ../src/xfce-appfinder-window.c:295 ../data/xfce4-appfinder.desktop.in.h:2
-#, fuzzy
+#: ../src/xfce-appfinder-window.c:296 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Toepassingen zoeken die geïnstalleerd zijn op het systeem."
+msgstr "Toepassingen zoeken en uitvoeren die geïnstalleerd zijn op het systeem."
 
-#: ../src/xfce-appfinder-window.c:318
+#: ../src/xfce-appfinder-window.c:319
 msgid "Search"
-msgstr ""
+msgstr "Zoeken"
 
-#: ../src/xfce-appfinder-window.c:341
+#: ../src/xfce-appfinder-window.c:342
 msgid "Categories"
 msgstr "Categorieën"
 
-#: ../src/xfce-appfinder-window.c:389
+#: ../src/xfce-appfinder-window.c:390
 msgid "C_lose after execute"
 msgstr "A_fsluiten na uitvoeren"
 
-#: ../src/xfce-appfinder-window.c:790
+#: ../src/xfce-appfinder-window.c:793
 #, c-format
 msgid "Could not execute application %s. Reason: %s"
-msgstr ""
+msgstr "Kon de toepassing%s niet uitvoeren. De reden: %s"
 
-#: ../src/xfce-appfinder-window.c:794
+#: ../src/xfce-appfinder-window.c:797
 #, c-format
 msgid "Could not execute application %s"
-msgstr ""
+msgstr "Kon  de toepassing %s niet uitvoeren"
 
-#: ../src/xfce-appfinder-window.c:916
+#: ../src/xfce-appfinder-window.c:954
 #, c-format
 msgid "Could not load menu from %s. Reason: %s"
-msgstr ""
+msgstr "Kan niet het menu van %s laden. De reden:% s"
 
-#: ../src/xfce-appfinder-window.c:918 ../src/xfce-appfinder-window.c:927
+#: ../src/xfce-appfinder-window.c:956 ../src/xfce-appfinder-window.c:965
 msgid "Could not load system menu"
-msgstr ""
+msgstr "Kan systeem menu niet laden"
 
-#: ../src/xfce-appfinder-window.c:925
+#: ../src/xfce-appfinder-window.c:963
 #, c-format
 msgid "Could not load menu from %s"
-msgstr ""
+msgstr "Kan geen menu laden van %s"
 
-#: ../src/xfce-appfinder-window.c:940 ../src/xfce-appfinder-window.c:947
-#: ../src/xfce-appfinder-window.c:1203
+#: ../src/xfce-appfinder-window.c:978 ../src/xfce-appfinder-window.c:985
+#: ../src/xfce-appfinder-window.c:1241
 msgid "All"
 msgstr "Alles"
 
 #~ msgid "Filter"
 #~ msgstr "Filter"
 
-#, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Toepassingen zoeken die geïnstalleerd zijn op het systeem."
 
