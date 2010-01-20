@@ -2,14 +2,14 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Juha Kautto <juha@xfce.org>, 2004.
-# Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2005-2009.
+# Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2005-2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 14:57+0200\n"
-"PO-Revision-Date: 2009-01-02 15:56+0300\n"
+"POT-Creation-Date: 2010-01-20 18:03+0100\n"
+"PO-Revision-Date: 2010-01-21 00:25+0200\n"
 "Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -40,7 +40,7 @@ msgstr "Xfce:n kehitystiimi. Kaikki oikeudet pidätetään."
 #: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Ilmoita vioista osoitteessa <%s>."
+msgstr "Vikailmoitukset osoitteeseen <%s>."
 
 #: ../src/main.c:92
 #, c-format
@@ -65,48 +65,41 @@ msgstr "Hae"
 
 #: ../src/xfce-appfinder-window.c:278
 msgid "Categories"
-msgstr "Kategoriat"
+msgstr "Luokat"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
-msgstr "S_ulje, kun sovellus suoritetaan"
+msgstr "S_ulje käynnistyksen jälkeen"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "Käynnistä"
 
-#: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:722
+#, c-format
 msgid "Could not execute application %s."
-msgstr "Sovellusta %s ei voi suorittaa"
+msgstr "Sovelluksen %s suoritus epäonnistui."
 
-#: ../src/xfce-appfinder-window.c:843
+#: ../src/xfce-appfinder-window.c:845
 #, c-format
 msgid "Could not load menu from %s"
-msgstr "Valikkoa ei voi avata kohteesta %s"
+msgstr "Valikon lataus epäonnistui kohteesta %s"
 
-#: ../src/xfce-appfinder-window.c:846
+#: ../src/xfce-appfinder-window.c:848
 msgid "Could not load system menu"
-msgstr "Järjestelmävalikkoa ei voi avata"
+msgstr "Järjestelmävalikon lataus epäonnistui"
 
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
-#: ../src/xfce-appfinder-window.c:1104
+#: ../src/xfce-appfinder-window.c:870 ../src/xfce-appfinder-window.c:877
+#: ../src/xfce-appfinder-window.c:1106
 msgid "All"
 msgstr "Kaikki"
 
-#: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:944
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "Kategoriat"
+msgstr "<b>Luokat:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:953
+#: ../src/xfce-appfinder-window.c:955
 #, c-format
 msgid "<b>Command:</b> %s"
-msgstr ""
-
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "Sovellusta %s ei voi suorittaa. Syy: %s"
-
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "Valikkoa ei voi avata tiedostosta %s. Syy: %s"
+msgstr "<b>Komento:</b> %s"
