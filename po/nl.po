@@ -17,7 +17,7 @@ msgstr ""
 
 #: ../src/main.c:43
 msgid "Version information"
-msgstr "Toon versie-informatie"
+msgstr "Versie-informatie"
 
 #: ../src/main.c:44
 msgid "[MENUFILE]"
