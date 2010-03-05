@@ -1,14 +1,14 @@
 # Ukrainian translation to xfce4-appfinder.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-#
+# 
 # Maxim V. Dziumanenko <mvd@mylinux.ua>, 2005-2006.
 # Dmitry Nikitin <luckas_fb@mail.ru>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 14:57+0200\n"
+"POT-Creation-Date: 2010-03-05 06:04+0100\n"
 "PO-Revision-Date: 2009-01-26 11:48+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
@@ -69,42 +69,41 @@ msgid "Categories"
 msgstr "Категорії"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
-msgstr "З_акрити після виконання"
+msgstr "З_акрити після запуску"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "Запустити"
 
-#: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:722
+#, c-format
 msgid "Could not execute application %s."
-msgstr "Неможливо виконати програму %s"
+msgstr "Не вдалося виконати програму %s."
 
-#: ../src/xfce-appfinder-window.c:843
+#: ../src/xfce-appfinder-window.c:845
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Неможливо завантажити меню з %s"
 
-#: ../src/xfce-appfinder-window.c:846
+#: ../src/xfce-appfinder-window.c:848
 msgid "Could not load system menu"
 msgstr "Неможливо завантажити системне меню"
 
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
-#: ../src/xfce-appfinder-window.c:1104
+#: ../src/xfce-appfinder-window.c:870 ../src/xfce-appfinder-window.c:877
+#: ../src/xfce-appfinder-window.c:1106
 msgid "All"
 msgstr "Всі"
 
-#: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:944
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "Категорії"
+msgstr "<b>Категорії:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:953
+#: ../src/xfce-appfinder-window.c:955
 #, c-format
 msgid "<b>Command:</b> %s"
-msgstr ""
+msgstr "<b>Команда:</b> %s"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "Неможливо виконати програму %s. Причина: %s"
