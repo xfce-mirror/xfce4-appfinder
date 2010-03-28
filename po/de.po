@@ -6,12 +6,12 @@
 # Nico Schümann <nico@prog.nico22.de>, 2008.
 # Fabian Nowak <timystery@arcor.de>, 2008.
 # Jannis Pohlmann <jannis@xfce.org>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 14:57+0200\n"
+"POT-Creation-Date: 2010-03-28 12:04+0200\n"
 "PO-Revision-Date: 2009-01-02 13:33+0100\n"
 "Last-Translator: Jannis Pohlmann <jannis@xfce.org>\n"
 "Language-Team: German <de@li.org>\n"
@@ -43,7 +43,7 @@ msgstr "Das Xfce-Entwicklungsteam. Alle Rechte vorbehalten."
 #: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Bitte melden Sie Probleme unter <%s>."
+msgstr "Bitte melden Sie Probleme an <%s>."
 
 #: ../src/main.c:92
 #, c-format
@@ -71,42 +71,41 @@ msgid "Categories"
 msgstr "Kategorien"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
 msgstr "Nach Ausführung sch_ließen"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "Starten"
 
-#: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:722
+#, c-format
 msgid "Could not execute application %s."
-msgstr "Kann die Anwendung »%s« nicht ausführen"
+msgstr "Konnte die Anwendung »%s« nicht ausführen."
 
-#: ../src/xfce-appfinder-window.c:843
+#: ../src/xfce-appfinder-window.c:845
 #, c-format
 msgid "Could not load menu from %s"
-msgstr "Konnte das Menü nicht aus »%s« laden"
+msgstr "Konnte das Menü nicht aus »%s« laden."
 
-#: ../src/xfce-appfinder-window.c:846
+#: ../src/xfce-appfinder-window.c:848
 msgid "Could not load system menu"
-msgstr "Konnte das Standardmenü nicht laden"
+msgstr "Konnte das Systemmenü nicht laden."
 
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
-#: ../src/xfce-appfinder-window.c:1104
+#: ../src/xfce-appfinder-window.c:870 ../src/xfce-appfinder-window.c:877
+#: ../src/xfce-appfinder-window.c:1106
 msgid "All"
 msgstr "Alle"
 
-#: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:944
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "<b>Kategorien</b>"
+msgstr "<b>Kategorien:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:953
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:955
+#, c-format
 msgid "<b>Command:</b> %s"
-msgstr "<b>Befehl</b>"
+msgstr "<b>Befehl:</b> %s"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "Konnte Anwendung »%s« nicht starten. Ursache: %s"
