@@ -2,12 +2,12 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Runa Bhattacharjee <runab@redhat.com>, 2005.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 14:57+0200\n"
+"POT-Creation-Date: 2010-04-05 10:04+0000\n"
 "PO-Revision-Date: 2005-10-15 01:31+0900\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bangla INDIA <LL@li.org>\n"
@@ -18,16 +18,17 @@ msgstr ""
 
 #: ../src/main.c:42
 msgid "Version information"
-msgstr ""
+msgstr "সংস্করণ তথ্য"
 
 #: ../src/main.c:43
+#, fuzzy
 msgid "[MENUFILE]"
-msgstr ""
+msgstr "[MENUFILE]"
 
 #: ../src/main.c:64
-#, c-format
+#, c-format, fuzzy
 msgid "Type '%s --help' for usage information."
-msgstr ""
+msgstr "Type '%s --help' for usage information."
 
 #: ../src/main.c:70
 msgid "Unable to initialize GTK+."
@@ -35,12 +36,12 @@ msgstr ""
 
 #: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
-msgstr ""
+msgstr "Xfce ডিভেলপমেন্ট দল।"
 
 #: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr ""
+msgstr "<%s> স্থানে ত্রুটি সম্পর্কে জানান।"
 
 #: ../src/main.c:92
 #, c-format
@@ -53,16 +54,15 @@ msgstr ""
 
 #: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr ""
+msgstr "অ্যাপ্লিকেশন ফাইন্ডার"
 
 #: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr ""
 
 #: ../src/xfce-appfinder-window.c:250
-#, fuzzy
 msgid "Search"
-msgstr "<b>অনুসন্ধান প্রক্রিয়া:</b>"
+msgstr "অনুসন্ধান প্রক্রিয়া"
 
 #: ../src/xfce-appfinder-window.c:278
 msgid "Categories"
@@ -70,46 +70,44 @@ msgstr "বিভাগ"
 
 #: ../src/xfce-appfinder-window.c:328
 msgid "C_lose after launch"
-msgstr ""
+msgstr "শুরু করার পরে বন্ধ করুন(_l)"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "শুরু করুন"
 
-#: ../src/xfce-appfinder-window.c:720
+#: ../src/xfce-appfinder-window.c:722
 #, c-format
 msgid "Could not execute application %s."
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:843
+#: ../src/xfce-appfinder-window.c:845
 #, c-format
 msgid "Could not load menu from %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:846
+#: ../src/xfce-appfinder-window.c:848
 msgid "Could not load system menu"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
-#: ../src/xfce-appfinder-window.c:1104
+#: ../src/xfce-appfinder-window.c:870 ../src/xfce-appfinder-window.c:877
+#: ../src/xfce-appfinder-window.c:1106
 msgid "All"
 msgstr "সকল"
 
-#: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:944
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "বিভাগ"
+msgstr "<b>বিভাগ:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:953
+#: ../src/xfce-appfinder-window.c:955
 #, c-format
 msgid "<b>Command:</b> %s"
-msgstr ""
+msgstr "<b>কম্যান্ড</b> %s"
 
-#, fuzzy
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>অনুসন্ধান প্রক্রিয়া:</b>"
 
-#, fuzzy
 #~ msgid "Show Categories"
 #~ msgstr "বিভাগ"
 
