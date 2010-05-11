@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2009.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-19 18:04+0100\n"
+"POT-Creation-Date: 2010-05-11 04:10+0000\n"
 "PO-Revision-Date: 2010-02-20 00:40+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
@@ -16,99 +16,96 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
-#: ../src/main.c:42
+#: ../src/main.c:43
 msgid "Version information"
 msgstr "Нұсқа ақпараты"
 
-#: ../src/main.c:43
+#: ../src/main.c:44
 msgid "[MENUFILE]"
 msgstr "[МӘЗІРФАЙЛЫ]"
 
-#: ../src/main.c:64
+#: ../src/main.c:65
 #, c-format
 msgid "Type '%s --help' for usage information."
 msgstr "Қолдану туралы ақпаратты оқу үшін '%s --help' енгізіңіз."
 
-#: ../src/main.c:70
+#: ../src/main.c:71
 msgid "Unable to initialize GTK+."
 msgstr "GTK+ іске қосу мүмкін емес."
 
-#: ../src/main.c:80
+#: ../src/main.c:81
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce өндіру тобы. Барлық құқықтары қорғалған."
 
-#: ../src/main.c:81
+#: ../src/main.c:82
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Ақаулықтар жөнінде хабарласыңыз: <%s>."
 
-#: ../src/main.c:92
+#: ../src/main.c:98
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
 msgstr "Xfconf қызметіне байланыс орнату сәтсіз аяқталды. Себебі: %s"
 
-#: ../src/main.c:96
+#: ../src/main.c:102
 msgid "Failed to connect to xfconf daemon."
 msgstr "Xfconf қызметіне байланыс орнату сәтсіз аяқталды."
 
-#: ../src/xfce-appfinder-window.c:225
+#: ../src/xfce-appfinder-window.c:281 ../src/xfce-appfinder-window.c:295
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Қолданбаларды табушы"
 
-#: ../src/xfce-appfinder-window.c:227
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:296 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Жүйеңізде орнатылған қолданбаларды табады және орындайды"
 
-#: ../src/xfce-appfinder-window.c:250
+#: ../src/xfce-appfinder-window.c:319
 msgid "Search"
 msgstr "Іздеу"
 
-#: ../src/xfce-appfinder-window.c:278
+#: ../src/xfce-appfinder-window.c:342
 msgid "Categories"
 msgstr "Санаттар"
 
-#: ../src/xfce-appfinder-window.c:328
-msgid "C_lose after launch"
+#: ../src/xfce-appfinder-window.c:390
+msgid "C_lose after execute"
 msgstr "Жө_нелткеннен кейін жабу"
 
-#: ../src/xfce-appfinder-window.c:336
-msgid "Launch"
-msgstr "Жөнелту"
-
-#: ../src/xfce-appfinder-window.c:722
+#: ../src/xfce-appfinder-window.c:793
 #, c-format
-msgid "Could not execute application %s."
-msgstr "%s қолданбасын орындау мүмкін емес."
+msgid "Could not execute application %s. Reason: %s"
+msgstr "%s қолданбасын орындау мүмкін емес. Себебі: %s"
 
-#: ../src/xfce-appfinder-window.c:845
+#: ../src/xfce-appfinder-window.c:797
+#, c-format
+msgid "Could not execute application %s"
+msgstr "%s қолданбасын орындау мүмкін емес"
+
+#: ../src/xfce-appfinder-window.c:954
+#, c-format
+msgid "Could not load menu from %s. Reason: %s"
+msgstr "Келесі жерден мәзірді жүктеу мүмкін емес: %s. Себебі: %s"
+
+#: ../src/xfce-appfinder-window.c:956 ../src/xfce-appfinder-window.c:965
+msgid "Could not load system menu"
+msgstr "Жүйелік мәзірді жүктеу мүмкін емес"
+
+#: ../src/xfce-appfinder-window.c:963
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Келесі жерден мәзірді жүктеу мүмкін емес: %s"
 
-#: ../src/xfce-appfinder-window.c:848
-msgid "Could not load system menu"
-msgstr "Жүйелік мәзірді жүктеу мүмкін емес"
-
-#: ../src/xfce-appfinder-window.c:870
-#: ../src/xfce-appfinder-window.c:877
-#: ../src/xfce-appfinder-window.c:1106
+#: ../src/xfce-appfinder-window.c:978 ../src/xfce-appfinder-window.c:985
+#: ../src/xfce-appfinder-window.c:1241
 msgid "All"
 msgstr "Барлығы"
 
-#: ../src/xfce-appfinder-window.c:944
-#, c-format
-msgid "<b>Categories:</b> %s"
-msgstr "<b>Санаттар:</b> %s"
+#~ msgid "Launch"
+#~ msgstr "Жөнелту"
 
-#: ../src/xfce-appfinder-window.c:955
-#, c-format
-msgid "<b>Command:</b> %s"
-msgstr "<b>Команда:</b> %s"
+#~ msgid "<b>Categories:</b> %s"
+#~ msgstr "<b>Санаттар:</b> %s"
 
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "%s қолданбасын орындау мүмкін емес. Себебі: %s"
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "Келесі жерден мәзірді жүктеу мүмкін емес: %s. Себебі: %s"
-
+#~ msgid "<b>Command:</b> %s"
+#~ msgstr "<b>Команда:</b> %s"
