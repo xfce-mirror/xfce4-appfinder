@@ -1,9 +1,16 @@
+4.6.2
+=====
+- Build fixes for GIT.
+- Properly propagate the focus-in-event of the search entry (bug #5883).
+- Translation updates (es, gl, hu, id, it, pl, pt, tr, lv, ur, ur_PK,
+  ro, sq, sk, nl, kk, ug).
+
 4.6.1
-========
+=====
 - Translation updates:
 
 4.6.0
-========
+=====
 - Try to load items from xfce-applications.menu before trying 
   applications.menu in order to provide the same items as xfdesktop
   does (reported by Mark Trompell).
