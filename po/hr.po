@@ -1,0 +1,106 @@
+# Croatian translations for  xfce4-appfinder package.
+# Copyright (C) 2010 The Xfce development team.
+# This file is distributed under the same license as the  xfce4-appfinder package.
+#  Ivica Kolić<ikoli@yahoo.com>, 2010.
+#  Ivica Kolić<ikoli@yahoo.com> <>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version:  xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-06-05 04:06+0000\n"
+"PO-Revision-Date: 2010-06-05 10:42+0200\n"
+"Last-Translator:  Ivica Kolić<ikoli@yahoo.com> <>\n"
+"Language-Team: Croatian <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../src/main.c:42
+msgid "Version information"
+msgstr "Informacija o verziji"
+
+#: ../src/main.c:43
+msgid "[MENUFILE]"
+msgstr "[DATOTEKA IZBORNIKA]"
+
+#: ../src/main.c:64
+#, c-format
+msgid "Type '%s --help' for usage information."
+msgstr ""
+
+#: ../src/main.c:70
+msgid "Unable to initialize GTK+."
+msgstr "NIje moguće inicirati GTK+."
+
+#: ../src/main.c:80
+msgid "The Xfce development team. All rights reserved."
+msgstr "Xfce razvojni tim.Sva prava pridržana."
+
+#: ../src/main.c:81
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr "Prijavite probleme u <%s>."
+
+#: ../src/main.c:92
+#, c-format
+msgid "Failed to connect to xfconf daemon. Reason: %s"
+msgstr ""
+
+#: ../src/main.c:96
+msgid "Failed to connect to xfconf daemon."
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr "Nalaznik programa"
+
+#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find and launch applications installed on your system"
+msgstr "Nađi i pokreni programe instalirane u vašem sustavu."
+
+#: ../src/xfce-appfinder-window.c:250
+msgid "Search"
+msgstr "Traži"
+
+#: ../src/xfce-appfinder-window.c:278
+msgid "Categories"
+msgstr "Kategorije"
+
+#: ../src/xfce-appfinder-window.c:328
+msgid "C_lose after launch"
+msgstr "Z_atvori nakon poretanja"
+
+#: ../src/xfce-appfinder-window.c:336
+msgid "Launch"
+msgstr "Pokreni"
+
+#: ../src/xfce-appfinder-window.c:722
+#, c-format
+msgid "Could not execute application %s."
+msgstr "Ne mogu izvršiti program %s."
+
+#: ../src/xfce-appfinder-window.c:845
+#, c-format
+msgid "Could not load menu from %s"
+msgstr "Ne mogu učitati izbornik iz %s"
+
+#: ../src/xfce-appfinder-window.c:848
+msgid "Could not load system menu"
+msgstr "Ne mogu učitati izbornik sustava"
+
+#: ../src/xfce-appfinder-window.c:870 ../src/xfce-appfinder-window.c:877
+#: ../src/xfce-appfinder-window.c:1106
+msgid "All"
+msgstr "Sve"
+
+#: ../src/xfce-appfinder-window.c:944
+#, c-format
+msgid "<b>Categories:</b> %s"
+msgstr "<b>Kategorije:</b> %s"
+
+#: ../src/xfce-appfinder-window.c:955
+#, c-format
+msgid "<b>Command:</b> %s"
+msgstr "<b>Naredba:</b> %s"
