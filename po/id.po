@@ -2,12 +2,12 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 14:57+0200\n"
+"POT-Creation-Date: 2010-06-24 10:05+0000\n"
 "PO-Revision-Date: 2009-01-27 22:28+0700\n"
 "Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
@@ -67,42 +67,41 @@ msgid "Categories"
 msgstr "Kategori"
 
 #: ../src/xfce-appfinder-window.c:328
-#, fuzzy
 msgid "C_lose after launch"
-msgstr "S_impan setelah eksekusi"
+msgstr "Tutup sete_lah menjalankan"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "Jalankan"
 
-#: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:722
+#, c-format
 msgid "Could not execute application %s."
-msgstr "Tak dapat mengeksekusi aplikasi %s"
+msgstr "Tak dapat mengeksekusi aplikasi %s."
 
-#: ../src/xfce-appfinder-window.c:843
+#: ../src/xfce-appfinder-window.c:845
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Tak dapat memuat menu dari %s"
 
-#: ../src/xfce-appfinder-window.c:846
+#: ../src/xfce-appfinder-window.c:848
 msgid "Could not load system menu"
 msgstr "Tak dapat memuat menu sistem"
 
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
-#: ../src/xfce-appfinder-window.c:1104
+#: ../src/xfce-appfinder-window.c:870 ../src/xfce-appfinder-window.c:877
+#: ../src/xfce-appfinder-window.c:1106
 msgid "All"
 msgstr "Semua"
 
-#: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:944
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "Kategori"
+msgstr "<b>Kategori:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:953
+#: ../src/xfce-appfinder-window.c:955
 #, c-format
 msgid "<b>Command:</b> %s"
-msgstr ""
+msgstr "<b>Perintah:</b> %s"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "Tak dapat mengeksekusi aplikasi %s. Alasan: %s"
@@ -113,7 +112,6 @@ msgstr ""
 #~ msgid "Filter"
 #~ msgstr "Filter"
 
-#, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Mencari aplikasi terinstal di sistem."
 
