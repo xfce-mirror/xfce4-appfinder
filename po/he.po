@@ -2,7 +2,7 @@
 # Hebrew translations for xfce4-appfinder package.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-#
+# 
 # Dotan Kamber <kamberd@yahoo.com>, 2004, 2006.
 # Jonatan Perry <Jonatan443@walla.co.il>, 2004.
 # Yuval Tanny <tanai@int.gov.il>, 2004.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 14:57+0200\n"
+"POT-Creation-Date: 2010-07-29 10:05+0000\n"
 "PO-Revision-Date: 2006-01-29 01:23+0200\n"
 "Last-Translator: Dotan Kamber <kamberd@yahoo.com>\n"
 "Language-Team: Hebrew\n"
@@ -20,54 +20,51 @@ msgstr ""
 "X-Generator: KBabel 1.11\n"
 
 #: ../src/main.c:42
-#, fuzzy
 msgid "Version information"
-msgstr "מידע נוסף..."
+msgstr "Version information"
 
 #: ../src/main.c:43
 msgid "[MENUFILE]"
-msgstr ""
+msgstr "[MENUFILE]"
 
 #: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr ""
+msgstr "Type '%s --help' for usage information."
 
 #: ../src/main.c:70
 msgid "Unable to initialize GTK+."
-msgstr ""
+msgstr "Unable to initialize GTK+."
 
 #: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
-msgstr ""
+msgstr "The Xfce development team. All rights reserved."
 
 #: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr ""
+msgstr "Please report bugs to <%s>."
 
 #: ../src/main.c:92
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr ""
+msgstr "Failed to connect to xfconf daemon. Reason: %s"
 
 #: ../src/main.c:96
 msgid "Failed to connect to xfconf daemon."
-msgstr ""
+msgstr "Failed to connect to xfconf daemon."
 
 #: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
-#, fuzzy
 msgid "Application Finder"
 msgstr "כלי לחיפוש יישומים"
 
 #: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr ""
+msgstr "חיפוש וטעינת יישומים המותקנים במחשבך"
 
 #: ../src/xfce-appfinder-window.c:250
-#, fuzzy
 msgid "Search"
-msgstr "<b>חיפוש:</b>"
+msgstr "חיפוש"
 
 #: ../src/xfce-appfinder-window.c:278
 msgid "Categories"
@@ -75,40 +72,40 @@ msgstr "קטגוריות"
 
 #: ../src/xfce-appfinder-window.c:328
 msgid "C_lose after launch"
-msgstr ""
+msgstr "_סגירה לאחר השיגור"
 
 #: ../src/xfce-appfinder-window.c:336
 msgid "Launch"
-msgstr ""
+msgstr "שיגור"
 
-#: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:722
+#, c-format
 msgid "Could not execute application %s."
-msgstr "אין אפשרות להפעיל את היישום שנבחר"
+msgstr "אין אפשרות להפעיל את היישום %s"
 
-#: ../src/xfce-appfinder-window.c:843
+#: ../src/xfce-appfinder-window.c:845
 #, c-format
 msgid "Could not load menu from %s"
-msgstr ""
+msgstr "לא ניתן לטעון את התפריט מ־%s"
 
-#: ../src/xfce-appfinder-window.c:846
+#: ../src/xfce-appfinder-window.c:848
 msgid "Could not load system menu"
-msgstr ""
+msgstr "לא ניתן לטעון את תפריט המערכת"
 
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
-#: ../src/xfce-appfinder-window.c:1104
+#: ../src/xfce-appfinder-window.c:870 ../src/xfce-appfinder-window.c:877
+#: ../src/xfce-appfinder-window.c:1106
 msgid "All"
-msgstr "הכל"
+msgstr "הכול"
 
-#: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:944
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "<b>קטגוריות</b>"
+msgstr "<b>קטגוריות:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:953
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:955
+#, c-format
 msgid "<b>Command:</b> %s"
-msgstr "<b>פקודה</b>"
+msgstr "<b>פקודה:</b> %s"
 
 #~ msgid "Xfce 4 Appfinder"
 #~ msgstr "מאתר היישומים של Xfce 4"
