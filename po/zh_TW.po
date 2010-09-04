@@ -1,13 +1,14 @@
 # Traditional Chinese translations for xfce4-appfinder package.
-# Copyright (C) 2004-2005 Eduard Roccatello.
+# Copyright (C) 2005, 2010 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Hydonsingore Cia <hydonsingore@educities.edu.tw>, 2005.
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-08 04:04+0000\n"
+"POT-Creation-Date: 2010-09-03 22:05+0000\n"
 "PO-Revision-Date: 2010-05-08 15:31+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
@@ -50,13 +51,11 @@ msgstr "連接到 xfconf 幕後程式失敗。原因：%s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "連接到 xfconf 幕後程式失敗。"
 
-#: ../src/xfce-appfinder-window.c:225
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "應用程式協尋器"
 
-#: ../src/xfce-appfinder-window.c:227
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "尋找並啟動您系統上安裝的應用程式"
 
@@ -90,8 +89,7 @@ msgstr "無法從 %s 載入系統選單"
 msgid "Could not load system menu"
 msgstr "無法載入系統選單"
 
-#: ../src/xfce-appfinder-window.c:870
-#: ../src/xfce-appfinder-window.c:877
+#: ../src/xfce-appfinder-window.c:870 ../src/xfce-appfinder-window.c:877
 #: ../src/xfce-appfinder-window.c:1106
 msgid "All"
 msgstr "全部"
