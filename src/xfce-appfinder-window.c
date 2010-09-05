@@ -1,22 +1,22 @@
-/* vi:set sw=2 sts=2 ts=2 et ai: */
+/* vi:set et ai sw=2 sts=2 ts=2: */
 /*-
- * Copyright (c) 2008 Jasper Huijsmans <jasper@xfce.org>.
- * Copyright (c) 2008 Jannis Pohlmann <jannis@xfce.org>.
+ * Copyright (c) 2008      Jasper Huijsmans <jasper@xfce.org>
+ * Copyright (c) 2008-2010 Jannis Pohlmann <jannis@xfce.org>
  *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or (at
- * your option) any later version.
+ * This program is free software; you can redistribute it and/or 
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of 
+ * the License, or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * General Public License for more details.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
+ * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
- * MA  02111-1307  USA
+ * You should have received a copy of the GNU General Public 
+ * License along with this program; if not, write to the Free 
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301, USA.
  */
 
 #ifdef HAVE_CONFIG_H
@@ -78,7 +78,12 @@ static void       xfce_appfinder_window_set_property       (GObject             
                                                             const GValue             *value,
                                                             GParamSpec               *pspec);
 static void       _xfce_appfinder_window_closed            (XfceAppfinderWindow      *window);
-static gpointer   _xfce_appfinder_window_reload_menu       (XfceAppfinderWindow      *window);
+static void       _xfce_appfinder_window_load_menu         (XfceAppfinderWindow      *window,
+                                                            GarconMenu               *menu,
+                                                            const gchar              *category,
+                                                            gint                     *counter,
+                                                            gboolean                  is_root,
+                                                            gboolean                  is_category);
 static void       _xfce_appfinder_window_entry_changed     (GtkEditable              *editable,
                                                             XfceAppfinderWindow      *window);
 static void       _xfce_appfinder_window_entry_activated   (GtkEntry                 *entry,
@@ -144,8 +149,6 @@ struct _XfceAppfinderWindow
 
   GarconMenu    *menu;
   gchar         *menu_filename;
-
-  GThread       *reload_thread;
 };
 
 
@@ -214,7 +217,6 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   window->menu = NULL;
   window->menu_filename = NULL;
-  window->reload_thread = NULL;
   window->categories_group = NULL;
   window->current_category = NULL;
 
@@ -351,6 +353,14 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
                         GTK_DIALOG (window)->action_area);
   gtk_box_pack_start (GTK_BOX (hbox2), GTK_DIALOG (window)->action_area, TRUE, TRUE, 0);
   g_object_unref (G_OBJECT (GTK_DIALOG (window)->action_area));
+
+  if (G_UNLIKELY (window->menu_filename != NULL))
+    window->menu = garcon_menu_new_for_path (window->menu_filename);
+  else
+    window->menu = garcon_menu_new_applications ();
+
+  /* reload the menu when necessary */
+  g_signal_connect_swapped (window->menu, "reload-required", G_CALLBACK (xfce_appfinder_window_reload), window);
 }
 
 
@@ -451,7 +461,45 @@ xfce_appfinder_window_new (const gchar *filename)
 void
 xfce_appfinder_window_reload (XfceAppfinderWindow *window)
 {
-  _xfce_appfinder_window_reload_menu (window);
+  GtkWidget *button;
+  GError    *error = NULL;
+  gint       counter = 0;
+
+  g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
+  
+  gtk_list_store_clear (window->list_store);
+
+  if (!garcon_menu_load (window->menu, NULL, &error))
+    {
+      xfce_dialog_show_error (GTK_WINDOW (window), error, _("Could not load menu from %s"), window->menu_filename);
+      g_error_free (error);
+      return;
+    }
+
+  if (GTK_IS_WIDGET (window->categories_box))
+    gtk_widget_destroy (window->categories_box);
+
+  window->categories_box = gtk_vbox_new (FALSE, 6);
+  gtk_container_add (GTK_CONTAINER (window->categories_alignment), window->categories_box);
+  gtk_widget_show (window->categories_box);
+
+  button = gtk_radio_button_new_with_label (NULL, _("All"));
+  gtk_button_set_focus_on_click (GTK_BUTTON (button), FALSE);
+  g_signal_connect_swapped (button, "toggled", G_CALLBACK (_xfce_appfinder_window_category_changed), window);
+  g_signal_connect (button, "key-press-event", G_CALLBACK (_xfce_appfinder_window_radio_key_pressed), window);
+  gtk_container_add (GTK_CONTAINER (window->categories_box), button);
+  gtk_widget_show (button);
+
+  if (window->current_category == NULL || g_utf8_collate (window->current_category, _("All")) == 0)
+    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
+
+  window->categories_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (button));
+
+  _xfce_appfinder_window_load_menu (window, window->menu, NULL, &counter, TRUE, FALSE);
+
+  /* reset the current category when the previous one doesn't exist anymore */
+  if (window->current_category != NULL && gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (button)))
+    _xfce_appfinder_window_set_category (window, gtk_button_get_label (GTK_BUTTON (button)));
 }
 
 
@@ -780,6 +828,9 @@ _xfce_appfinder_window_load_menu (XfceAppfinderWindow *window,
         return;
       }
 
+  /* connect to the directory changed signal of all menus, force a reload when one of the menus changes */
+  g_signal_connect_swapped (menu, "directory-changed", G_CALLBACK (xfce_appfinder_window_reload), window);
+
   /* Determine menu name */
   name = garcon_menu_element_get_name (GARCON_MENU_ELEMENT (menu));
 
@@ -798,8 +849,6 @@ _xfce_appfinder_window_load_menu (XfceAppfinderWindow *window,
   /* Create category widget */
   if (G_LIKELY (current_counter > 0 && is_category))
     {
-      DBG ("name = %s", name);
-
       if (G_LIKELY (name != NULL))
         {
           button = gtk_radio_button_new_with_label (window->categories_group, name);
@@ -822,73 +871,9 @@ _xfce_appfinder_window_load_menu (XfceAppfinderWindow *window,
 
 
 
-static gpointer
-_xfce_appfinder_window_reload_menu (XfceAppfinderWindow *window)
-{
-  GtkWidget *button;
-  GError    *error = NULL;
-  gint       counter = 0;
-
-  g_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (window), NULL);
-
-  DBG ("window->menu_filename = %s", window->menu_filename);
-
-  if (G_UNLIKELY (window->menu_filename != NULL))
-    window->menu = garcon_menu_new_for_path (window->menu_filename);
-  else
-    window->menu = garcon_menu_new_applications ();
-
-  if (G_UNLIKELY (window->menu == NULL))
-    {
-      if (G_UNLIKELY (window->menu_filename != NULL))
-        xfce_dialog_show_error (GTK_WINDOW (window), NULL,
-          _("Could not load menu from %s"), window->menu_filename);
-      else
-        xfce_dialog_show_error (GTK_WINDOW (window), NULL,
-          _("Could not load system menu"));
-
-      if (error != NULL)
-        g_error_free (error);
-
-      return NULL;
-    }
-
-  if (!garcon_menu_load (window->menu, NULL, &error))
-    {
-      g_message ("failed to load the menu: %s", error->message);
-      g_error_free (error);
-      return NULL;
-    }
-
-  if (GTK_IS_WIDGET (window->categories_box))
-    gtk_widget_destroy (window->categories_box);
-
-  window->categories_box = gtk_vbox_new (FALSE, 6);
-  gtk_container_add (GTK_CONTAINER (window->categories_alignment), window->categories_box);
-  gtk_widget_show (window->categories_box);
-
-  button = gtk_radio_button_new_with_label (NULL, _("All"));
-  gtk_button_set_focus_on_click (GTK_BUTTON (button), FALSE);
-  g_signal_connect_swapped (button, "toggled", G_CALLBACK (_xfce_appfinder_window_category_changed), window);
-  g_signal_connect (button, "key-press-event", G_CALLBACK (_xfce_appfinder_window_radio_key_pressed), window);
-  gtk_container_add (GTK_CONTAINER (window->categories_box), button);
-  gtk_widget_show (button);
-
-  if (window->current_category == NULL || g_utf8_collate (window->current_category, _("All")) == 0)
-    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
-
-  window->categories_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (button));
-
-  _xfce_appfinder_window_load_menu (window, window->menu, NULL, &counter, TRUE, FALSE);
-
-  return NULL;
-}
-
-
-
 static void
 _xfce_appfinder_window_load_menu_item (XfceAppfinderWindow *window,
-                                       GarconMenuItem        *item,
+                                       GarconMenuItem      *item,
                                        const gchar         *category,
                                        gint                *counter)
 {
@@ -927,9 +912,9 @@ _xfce_appfinder_window_load_menu_item (XfceAppfinderWindow *window,
   command = garcon_menu_item_get_command (item);
 
   if (G_LIKELY (comment != NULL))
-    text = g_strdup_printf ("<b>%s</b>\n%s", name, comment);
+    text = g_markup_printf_escaped ("<b>%s</b>\n%s", name, comment);
   else
-    text = g_strdup_printf ("<b>%s</b>", name);
+    text = g_markup_printf_escaped ("<b>%s</b>", name);
 
   tooltip_str = g_string_new (NULL);
 
@@ -970,6 +955,8 @@ _xfce_appfinder_window_load_menu_item (XfceAppfinderWindow *window,
 
   if (GDK_IS_PIXBUF (pixbuf))
     g_object_unref (pixbuf);
+
+  g_signal_connect_swapped (item, "changed", G_CALLBACK (xfce_appfinder_window_reload), window);
 
   *counter += 1;
 }
