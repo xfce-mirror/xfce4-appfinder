@@ -1,3 +1,24 @@
+4.7.0
+=====
+- Remove deprecated encoding key from desktop file.
+- Build ChangeLog from GIT and use XDT 4.7.2.
+- Rename "Execute" button to "Launch".
+- Port the libxfce4menu code to garcon.
+- Use Gtk api for entry icon, if available.
+- Port to libxfce4ui and gio.
+- Rework the tooltip string code a little.
+- Don't use startup notification for now.
+- Translation updates (gl, lv, ro, hu, ast, kk, el, ru, sk, sq, ja,
+  eu, da, pt, cs, zh_CN, ca, fr, sv, es, pt_BR, nl, fi, it, uk, de, he).
+
+
+4.6.2
+=====
+- Build fixes for GIT.
+- Properly propagate the focus-in-event of the search entry (bug #5883).
+- Translation updates (es, gl, hu, id, it, pl, pt, tr, lv, ur, ur_PK,
+  ro, sq, sk, nl, kk, ug).
+
 4.6.1
 ========
 - Translation updates:
