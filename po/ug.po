@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-21 00:47+0900\n"
+"POT-Creation-Date: 2010-09-07 04:05+0000\n"
 "PO-Revision-Date: 2009-10-21 00:49+0900\n"
 "Last-Translator: Gheyret T.Kenji <gheyret@gmail.com>\n"
 "Language-Team:Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -52,66 +52,54 @@ msgstr "xfconf daemon غا باغلىنىش مەغلۇپ بولدى. سەۋەب�
 msgid "Failed to connect to xfconf daemon."
 msgstr "xfconf daemon غا باغلىنىش مەغلۇپ بولدى."
 
-#: ../src/xfce-appfinder-window.c:225
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "پروگرامما ئىزدىگۈ"
 
-#: ../src/xfce-appfinder-window.c:227
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:229 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "كومپيۇتېرىڭىزغا ئورنىتىلغان پروگراممىلارنى ئىزدەيدۇ ۋە ئىجرا قىلىدۇ"
 
-#: ../src/xfce-appfinder-window.c:250
+#: ../src/xfce-appfinder-window.c:252
 msgid "Search"
 msgstr "ئىزدە"
 
-#: ../src/xfce-appfinder-window.c:278
+#: ../src/xfce-appfinder-window.c:280
 msgid "Categories"
 msgstr "كاتېگورىيە"
 
-#: ../src/xfce-appfinder-window.c:328
+#: ../src/xfce-appfinder-window.c:330
 msgid "C_lose after launch"
-msgstr ""
+msgstr "ئىجرا قىلىنىپ بولغاندىن كېيىن ياپ(_L)"
 
-#: ../src/xfce-appfinder-window.c:336
+#: ../src/xfce-appfinder-window.c:338
 msgid "Launch"
-msgstr ""
+msgstr "ئىجرا قىل"
 
-#: ../src/xfce-appfinder-window.c:722
-#, c-format
-msgid "Could not execute application %s."
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:845
+#: ../src/xfce-appfinder-window.c:474
 #, c-format
 msgid "Could not load menu from %s"
-msgstr "%s دىن menu نى ئوقۇغىلى بولمىدى"
+msgstr "%s دىن تىزىملىكنى ئوقۇغىلى بولمىدى"
 
-#: ../src/xfce-appfinder-window.c:848
-msgid "Could not load system menu"
-msgstr "سىستېما menu نى ئوقۇغىلى بولمىدى."
-
-#: ../src/xfce-appfinder-window.c:870
-#: ../src/xfce-appfinder-window.c:877
-#: ../src/xfce-appfinder-window.c:1106
+#: ../src/xfce-appfinder-window.c:486 ../src/xfce-appfinder-window.c:493
+#: ../src/xfce-appfinder-window.c:1093
 msgid "All"
 msgstr "ھەممە"
 
-#: ../src/xfce-appfinder-window.c:944
+#: ../src/xfce-appfinder-window.c:770
+#, c-format
+msgid "Could not execute application %s."
+msgstr "پروگرامما %s نى ئىجرا قىلغىلى بولمىدى"
+
+#: ../src/xfce-appfinder-window.c:929
 #, c-format
 msgid "<b>Categories:</b> %s"
-msgstr ""
+msgstr "<b>كاتېگورىيىلەر:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:955
+#: ../src/xfce-appfinder-window.c:940
 #, c-format
 msgid "<b>Command:</b> %s"
-msgstr ""
+msgstr "<b>بۇيرۇق:</b> %s"
 
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "アプリケーション %s を実行できませんでした。理由: %s"
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "%s からメニューを読み込めませんでした。理由: %s"
-#~ msgid "Filter"
-#~ msgstr "フィルタ"
-
+#~ msgid "Could not load system menu"
+#~ msgstr "سىستېما تىزىملىكىنى ئوقۇغىلى بولمىدى."
