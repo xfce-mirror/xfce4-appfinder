@@ -689,6 +689,7 @@ _xfce_appfinder_window_cursor_changed (GtkTreeView         *tree_view,
     {
       gtk_widget_set_sensitive (window->execute_button, TRUE);
       gtk_widget_grab_default (window->execute_button);
+      g_object_unref (G_OBJECT (item));
     }
   else
     {
@@ -726,6 +727,7 @@ _xfce_appfinder_window_drag_data_get (GtkWidget           *widget,
     return;
 
   uri = garcon_menu_item_get_uri (item);
+  g_object_unref (G_OBJECT (item));
   if (G_LIKELY (uri != NULL))
     {
       gtk_selection_data_set (data, data->target, 8, (guchar *) uri, strlen (uri));
@@ -738,42 +740,78 @@ _xfce_appfinder_window_drag_data_get (GtkWidget           *widget,
 static void
 _xfce_appfinder_window_execute (XfceAppfinderWindow *window)
 {
-  GarconMenuItem   *item;
-  GtkTreeSelection *selection;
-  GtkTreeModel     *model;
-  GtkTreeIter       iter;
-  GdkScreen        *screen;
-  GError           *error = NULL;
-  gchar            *command, *uri;
+  GarconMenuItem    *item;
+  GtkTreeSelection  *selection;
+  GtkTreeModel      *model;
+  GtkTreeIter        iter;
+  GError            *error = NULL;
+  const gchar       *command, *p;
+  GString           *string;
+  gchar            **argv;
+  gboolean           result = FALSE;
 
   g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
 
   selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (window->tree_view));
 
-  if (G_UNLIKELY (selection == NULL || !gtk_tree_selection_get_selected (selection, &model, &iter)))
+  if (selection == NULL
+      || !gtk_tree_selection_get_selected (selection, &model, &iter))
     return;
 
   gtk_tree_model_get (model, &iter, ITEM_COLUMN, &item, -1);
-
   if (G_UNLIKELY (item == NULL))
     return;
 
-  uri = garcon_menu_item_get_uri (item);
-  command = g_strconcat ("exo-open ", uri, NULL);
-  g_free (uri);
+  command = garcon_menu_item_get_command (item);
+  if (command == NULL || *command == '\0')
+    return;
 
-  screen = xfce_gdk_screen_get_active (NULL);
+  string = g_string_sized_new (100);
 
-  if (G_UNLIKELY (!xfce_spawn_command_line_on_screen (screen, command, FALSE, TRUE, &error)))
+  if (garcon_menu_item_requires_terminal (item))
+    g_string_append (string, "exo-open --launch TerminalEmulator ");
+
+  /* expand the field codes */
+  for (p = command; *p != '\0'; ++p)
     {
-      xfce_dialog_show_error (GTK_WINDOW (window), error,
-           _("Could not execute application %s."), garcon_menu_element_get_name (GARCON_MENU_ELEMENT (item)));
+      if (G_UNLIKELY (p[0] == '%' && p[1] != '\0'))
+        {
+          switch (*++p)
+            {
+            case '%':
+              g_string_append_c (string, '%');
+              break;
 
-      if (error != NULL)
-        g_error_free (error);
+            /* skip all the other %? values for now we don't have dnd anyways */
+            }
+        }
+      else
+        {
+          g_string_append_c (string, *p);
+        }
     }
 
-  g_free (command);
+  if (g_shell_parse_argv (string->str, NULL, &argv, &error))
+    {
+      result = xfce_spawn_on_screen (gtk_window_get_screen (GTK_WINDOW (window)),
+                                     garcon_menu_item_get_path (item),
+                                     argv, NULL, G_SPAWN_SEARCH_PATH,
+                                     garcon_menu_item_supports_startup_notification (item),
+                                     gtk_get_current_event_time (),
+                                     garcon_menu_item_get_icon_name (item),
+                                     &error);
+
+      g_strfreev (argv);
+    }
+
+  if (G_UNLIKELY (!result))
+    {
+      xfce_dialog_show_error (GTK_WINDOW (window), error, _("Failed to execute command \"%s\"."), command);
+      g_error_free (error);
+    }
+
+  g_string_free (string, TRUE);
+  g_object_unref (G_OBJECT (item));
 
   if (G_LIKELY (xfconf_channel_get_bool (window->channel, "/close-after-execute", FALSE)))
     _xfce_appfinder_window_closed (window);
@@ -1105,6 +1143,7 @@ _xfce_appfinder_window_visible_func (GtkTreeModel *filter,
   g_free (command);
   g_free (text);
   g_free (category);
+  g_object_unref (G_OBJECT (item));
 
   return visible;
 }
