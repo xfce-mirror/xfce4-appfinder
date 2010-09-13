@@ -3,18 +3,18 @@
  * Copyright (c) 2008      Jasper Huijsmans <jasper@xfce.org>
  * Copyright (c) 2008-2010 Jannis Pohlmann <jannis@xfce.org>
  *
- * This program is free software; you can redistribute it and/or 
+ * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of 
+ * published by the Free Software Foundation; either version 2 of
  * the License, or (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public 
- * License along with this program; if not, write to the Free 
+ * You should have received a copy of the GNU General Public
+ * License along with this program; if not, write to the Free
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  */
@@ -60,8 +60,7 @@
 enum
 {
   PROP_0,
-  PROP_MENU_FILENAME,
-  PROP_CATEGORY,
+  PROP_MENU_FILENAME
 };
 
 
@@ -183,15 +182,6 @@ xfce_appfinder_window_class_init (XfceAppfinderWindowClass *klass)
                                                         NULL,
                                                         G_PARAM_CONSTRUCT_ONLY |
                                                         G_PARAM_WRITABLE));
-
-  g_object_class_install_property (gobject_class,
-                                   PROP_CATEGORY,
-                                   g_param_spec_string ("category",
-                                                        "category",
-                                                        "category",
-                                                        DEFAULT_CATEGORY,
-                                                        G_PARAM_CONSTRUCT |
-                                                        G_PARAM_READWRITE));
 }
 
 
@@ -369,8 +359,12 @@ static void
 xfce_appfinder_window_constructed (GObject *object)
 {
   XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (object);
+  gchar               *category;
 
-  xfconf_g_property_bind (window->channel, "/category", G_TYPE_STRING, G_OBJECT (window), "category");
+  category = xfconf_channel_get_string (window->channel, "/category", NULL);
+  if (category != NULL)
+    _xfce_appfinder_window_set_category (window, category);
+  g_free (category);
 }
 
 
@@ -407,14 +401,8 @@ xfce_appfinder_window_get_property (GObject    *object,
                                     GValue     *value,
                                     GParamSpec *pspec)
 {
-  XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (object);
-
   switch (prop_id)
     {
-    case PROP_CATEGORY:
-      g_value_set_string (value, window->current_category);
-      break;
-
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
       break;
@@ -436,10 +424,6 @@ xfce_appfinder_window_set_property (GObject      *object,
     case PROP_MENU_FILENAME:
       g_free (window->menu_filename);
       window->menu_filename = g_strdup (g_value_get_string (value));
-      break;
-
-    case PROP_CATEGORY:
-      _xfce_appfinder_window_set_category (window, g_value_get_string (value));
       break;
 
     default:
@@ -466,7 +450,7 @@ xfce_appfinder_window_reload (XfceAppfinderWindow *window)
   gint       counter = 0;
 
   g_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
-  
+
   gtk_list_store_clear (window->list_store);
 
   if (!garcon_menu_load (window->menu, NULL, &error))
@@ -1166,5 +1150,5 @@ _xfce_appfinder_window_set_category (XfceAppfinderWindow *window,
   gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (window->filter));
   gtk_widget_set_sensitive (window->execute_button, FALSE);
 
-  g_object_notify (G_OBJECT (window), "category");
+  xfconf_channel_set_string (window->channel, "/category", window->current_category);
 }
