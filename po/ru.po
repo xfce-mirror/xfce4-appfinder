@@ -1,13 +1,13 @@
 # translation of xfce4-appfinder.po to Russian
 # Copyright (C) 2004-2009 The Xfce development team.
 # This file is distributed under the same license as the xfce4-appfinder package.
-#
+# 
 # Denis Koryavov <dkoryavov@yandex.ru>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-26 18:03+0100\n"
+"POT-Creation-Date: 2010-09-14 04:07+0000\n"
 "PO-Revision-Date: 2009-05-14 17:12+0400\n"
 "Last-Translator: Denis Koryavov <dkoryavov@yandex.ru>\n"
 "Language-Team: Russian\n"
@@ -27,8 +27,7 @@ msgstr "[ФАЙЛ МЕНЮ]"
 #: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr ""
-"Выполните '%s --help' для просмотра параметров использования программы. "
+msgstr "Выполните '%s --help' для просмотра параметров использования программы. "
 
 #: ../src/main.c:70
 msgid "Unable to initialize GTK+."
@@ -52,58 +51,57 @@ msgstr "Невозможно соединиться с менеджером на
 msgid "Failed to connect to xfconf daemon."
 msgstr "Невозможно соединиться с менеджером настроек Xfce. "
 
-#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Поиск приложений"
 
-#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Ищите и запускайте приложения установленные в вашей системе "
 
-#: ../src/xfce-appfinder-window.c:250
+#: ../src/xfce-appfinder-window.c:242
 msgid "Search"
 msgstr "Поиск"
 
-#: ../src/xfce-appfinder-window.c:278
+#: ../src/xfce-appfinder-window.c:270
 msgid "Categories"
 msgstr "Категории"
 
-#: ../src/xfce-appfinder-window.c:328
+#: ../src/xfce-appfinder-window.c:320
 msgid "C_lose after launch"
 msgstr "В_ыйти после запуска"
 
-#: ../src/xfce-appfinder-window.c:336
+#: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
 msgstr "Запустить"
 
-#: ../src/xfce-appfinder-window.c:722
-#, c-format
-msgid "Could not execute application %s."
-msgstr "Не удалось запустить приложение %s."
-
-#: ../src/xfce-appfinder-window.c:845
+#: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Не удалось загрузить меню из источника %s"
 
-#: ../src/xfce-appfinder-window.c:848
-msgid "Could not load system menu"
-msgstr "Не удалось загрузить системное меню"
-
-#: ../src/xfce-appfinder-window.c:870 ../src/xfce-appfinder-window.c:877
-#: ../src/xfce-appfinder-window.c:1106
+#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:1115
 msgid "All"
 msgstr "Все "
 
-#: ../src/xfce-appfinder-window.c:944
+#: ../src/xfce-appfinder-window.c:793
+#, c-format
+msgid "Failed to execute command \"%s\"."
+msgstr "Не удалось запустить команду\"%s\"."
+
+#: ../src/xfce-appfinder-window.c:951
 #, c-format
 msgid "<b>Categories:</b> %s"
 msgstr "<b>Категории:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:955
+#: ../src/xfce-appfinder-window.c:962
 #, c-format
 msgid "<b>Command:</b> %s"
 msgstr "<b>Команда:</b> %s"
+
+#~ msgid "Could not load system menu"
+#~ msgstr "Не удалось загрузить системное меню"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "Невозможно запустить приложение %s. Причина: %s "
