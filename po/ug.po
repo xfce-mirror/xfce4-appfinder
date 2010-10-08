@@ -1,18 +1,18 @@
 # $Id$
-#
+# 
 # Uyghur translations for xfce4-appfinder package.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Gheyret T.Kenji <gheyret@gmail.com>, 2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-07 04:05+0000\n"
+"POT-Creation-Date: 2010-10-08 04:08+0000\n"
 "PO-Revision-Date: 2009-10-21 00:49+0900\n"
 "Last-Translator: Gheyret T.Kenji <gheyret@gmail.com>\n"
-"Language-Team:Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,51 +52,51 @@ msgstr "xfconf daemon غا باغلىنىش مەغلۇپ بولدى. سەۋەب�
 msgid "Failed to connect to xfconf daemon."
 msgstr "xfconf daemon غا باغلىنىش مەغلۇپ بولدى."
 
-#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "پروگرامما ئىزدىگۈ"
 
-#: ../src/xfce-appfinder-window.c:229 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "كومپيۇتېرىڭىزغا ئورنىتىلغان پروگراممىلارنى ئىزدەيدۇ ۋە ئىجرا قىلىدۇ"
 
-#: ../src/xfce-appfinder-window.c:252
+#: ../src/xfce-appfinder-window.c:242
 msgid "Search"
 msgstr "ئىزدە"
 
-#: ../src/xfce-appfinder-window.c:280
+#: ../src/xfce-appfinder-window.c:270
 msgid "Categories"
 msgstr "كاتېگورىيە"
 
-#: ../src/xfce-appfinder-window.c:330
+#: ../src/xfce-appfinder-window.c:320
 msgid "C_lose after launch"
 msgstr "ئىجرا قىلىنىپ بولغاندىن كېيىن ياپ(_L)"
 
-#: ../src/xfce-appfinder-window.c:338
+#: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
 msgstr "ئىجرا قىل"
 
-#: ../src/xfce-appfinder-window.c:474
+#: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "%s دىن تىزىملىكنى ئوقۇغىلى بولمىدى"
 
-#: ../src/xfce-appfinder-window.c:486 ../src/xfce-appfinder-window.c:493
-#: ../src/xfce-appfinder-window.c:1093
+#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:1115
 msgid "All"
 msgstr "ھەممە"
 
-#: ../src/xfce-appfinder-window.c:770
+#: ../src/xfce-appfinder-window.c:793
 #, c-format
-msgid "Could not execute application %s."
+msgid "Failed to execute command \"%s\"."
 msgstr "پروگرامما %s نى ئىجرا قىلغىلى بولمىدى"
 
-#: ../src/xfce-appfinder-window.c:929
+#: ../src/xfce-appfinder-window.c:951
 #, c-format
 msgid "<b>Categories:</b> %s"
 msgstr "<b>كاتېگورىيىلەر:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:940
+#: ../src/xfce-appfinder-window.c:962
 #, c-format
 msgid "<b>Command:</b> %s"
 msgstr "<b>بۇيرۇق:</b> %s"
