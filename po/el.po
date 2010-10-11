@@ -1,7 +1,7 @@
 # Greek translations for xfce4-appfinder package.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-#
+# 
 # Stavros Giannouris <stavrosg@serverhive.com>, 2005.
 # Stathis Kamperis <ekamperi@auth.gr>, 2006.
 # Evaggelos Balaskas <ebalaskas@ebalaskas.gr>, 2008.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder git\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-01 06:04+0100\n"
+"POT-Creation-Date: 2010-10-11 16:08+0000\n"
 "PO-Revision-Date: 2010-02-01 08:39+0200\n"
 "Last-Translator: Evaggelos Balaskas <ebalaskas@ebalaskas.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -17,10 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 0.2\n"
 "X-Poedit-Language: Greek\n"
-"X-Poedit-Country: GREECE\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Country: GREECE\n"
+"X-Generator: Lokalize 0.2\n"
 
 #: ../src/main.c:42
 msgid "Version information"
@@ -57,59 +57,54 @@ msgstr "Αδυναμία σύνδεσης με τον δαίμονα xfconf. O �
 msgid "Failed to connect to xfconf daemon."
 msgstr "Αδυναμία σύνδεσης με τον δαίμονα xfconf."
 
-#: ../src/xfce-appfinder-window.c:225
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Εύρεση εφαρμογών"
 
-#: ../src/xfce-appfinder-window.c:227
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Εύρεση και εκτέλεση εγκατεστημένων εφαρμογών στο σύστημά σας."
 
-#: ../src/xfce-appfinder-window.c:250
+#: ../src/xfce-appfinder-window.c:242
 msgid "Search"
 msgstr "Aναζήτηση"
 
-#: ../src/xfce-appfinder-window.c:278
+#: ../src/xfce-appfinder-window.c:270
 msgid "Categories"
 msgstr "Κατηγορίες"
 
-#: ../src/xfce-appfinder-window.c:328
+#: ../src/xfce-appfinder-window.c:320
 msgid "C_lose after launch"
 msgstr "Κ_λείσιμο μετά την εκτέλεση"
 
-#: ../src/xfce-appfinder-window.c:336
+#: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
 msgstr "Εκτέλεση"
 
-#: ../src/xfce-appfinder-window.c:722
-#, c-format
-msgid "Could not execute application %s."
-msgstr "Αδυναμία εκτέλεσης της εφαρμογής %s."
-
-#: ../src/xfce-appfinder-window.c:845
+#: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Αδυναμία φόρτωσης του μενού από %s"
 
-#: ../src/xfce-appfinder-window.c:848
-msgid "Could not load system menu"
-msgstr "Αδυναμία φόρτωσης του μενού συστήματος"
-
-#: ../src/xfce-appfinder-window.c:870
-#: ../src/xfce-appfinder-window.c:877
-#: ../src/xfce-appfinder-window.c:1106
+#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:1115
 msgid "All"
 msgstr "Όλα"
 
-#: ../src/xfce-appfinder-window.c:944
+#: ../src/xfce-appfinder-window.c:793
+#, c-format
+msgid "Failed to execute command \"%s\"."
+msgstr "Δεν ήταν δυνατή η εκτέλεσης της εντολής \"\\%s\"."
+
+#: ../src/xfce-appfinder-window.c:951
 #, c-format
 msgid "<b>Categories:</b> %s"
 msgstr "<b>Κατηγορίες:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:955
+#: ../src/xfce-appfinder-window.c:962
 #, c-format
 msgid "<b>Command:</b> %s"
 msgstr "<b>Εντολή:</b> %s"
 
+#~ msgid "Could not load system menu"
+#~ msgstr "Αδυναμία φόρτωσης του μενού συστήματος"
