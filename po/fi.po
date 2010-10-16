@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-20 18:03+0100\n"
-"PO-Revision-Date: 2010-01-21 00:25+0200\n"
+"POT-Creation-Date: 2010-10-16 10:07+0000\n"
+"PO-Revision-Date: 2010-10-16 16:13+0300\n"
 "Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -51,55 +51,54 @@ msgstr "Ei voi yhdistää xfconf-taustaprosessiin. Syy: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Ei voi yhdistää xfconf-taustaprosessiin."
 
-#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Sovellusten hakutyökalu"
 
-#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Etsi ja käynnistä järjestelmään asennettuja sovelluksia"
 
-#: ../src/xfce-appfinder-window.c:250
+#: ../src/xfce-appfinder-window.c:242
 msgid "Search"
 msgstr "Hae"
 
-#: ../src/xfce-appfinder-window.c:278
+#: ../src/xfce-appfinder-window.c:270
 msgid "Categories"
 msgstr "Luokat"
 
-#: ../src/xfce-appfinder-window.c:328
+#: ../src/xfce-appfinder-window.c:320
 msgid "C_lose after launch"
 msgstr "S_ulje käynnistyksen jälkeen"
 
-#: ../src/xfce-appfinder-window.c:336
+#: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
 msgstr "Käynnistä"
 
-#: ../src/xfce-appfinder-window.c:722
-#, c-format
-msgid "Could not execute application %s."
-msgstr "Sovelluksen %s suoritus epäonnistui."
-
-#: ../src/xfce-appfinder-window.c:845
+#: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Valikon lataus epäonnistui kohteesta %s"
 
-#: ../src/xfce-appfinder-window.c:848
-msgid "Could not load system menu"
-msgstr "Järjestelmävalikon lataus epäonnistui"
-
-#: ../src/xfce-appfinder-window.c:870 ../src/xfce-appfinder-window.c:877
-#: ../src/xfce-appfinder-window.c:1106
+#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:1115
 msgid "All"
 msgstr "Kaikki"
 
-#: ../src/xfce-appfinder-window.c:944
+#: ../src/xfce-appfinder-window.c:793
+#, c-format
+msgid "Failed to execute command \"%s\"."
+msgstr "Komennon \"%s\" suoritus epäonnistui."
+
+#: ../src/xfce-appfinder-window.c:951
 #, c-format
 msgid "<b>Categories:</b> %s"
 msgstr "<b>Luokat:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:955
+#: ../src/xfce-appfinder-window.c:962
 #, c-format
 msgid "<b>Command:</b> %s"
 msgstr "<b>Komento:</b> %s"
+
+#~ msgid "Could not load system menu"
+#~ msgstr "Järjestelmävalikon lataus epäonnistui"
