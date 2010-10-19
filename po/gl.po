@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-18 14:57+0200\n"
-"PO-Revision-Date: 2009-11-04 21:10+0100\n"
+"PO-Revision-Date: 2010-10-19 18:23+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -109,7 +109,7 @@ msgstr "<b>Categorías:</b> %s"
 #: ../src/xfce-appfinder-window.c:953
 #, c-format
 msgid "<b>Command:</b> %s"
-msgstr "<b>Comando:</b> %s"
+msgstr "<b>Orde:</b> %s"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "Non se puido executar a aplicación %s. Razón: %s"
