@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 14:57+0200\n"
+"POT-Creation-Date: 2010-10-23 10:07+0000\n"
 "PO-Revision-Date: 2009-11-26 18:01+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: Catalan\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: KBabel 1.11.2\n"
 
 #: ../src/main.c:42
 msgid "Version information"
@@ -55,58 +55,57 @@ msgstr "No s'ha pogut connectar al dimoni xfconf. Motiu: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "No s'ha pogut connectar al dimoni xfconf."
 
-#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Cercador d'aplicacions"
 
-#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Cerca i executa aplicacions instaŀlades al sistema"
 
-#: ../src/xfce-appfinder-window.c:250
+#: ../src/xfce-appfinder-window.c:242
 msgid "Search"
 msgstr "Cerca"
 
-#: ../src/xfce-appfinder-window.c:278
+#: ../src/xfce-appfinder-window.c:270
 msgid "Categories"
 msgstr "Categories"
 
-#: ../src/xfce-appfinder-window.c:328
+#: ../src/xfce-appfinder-window.c:320
 msgid "C_lose after launch"
 msgstr "_Tanca després d'executar"
 
-#: ../src/xfce-appfinder-window.c:336
+#: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
 msgstr "Executa"
 
-#: ../src/xfce-appfinder-window.c:720
-#, c-format
-msgid "Could not execute application %s."
-msgstr "No s'ha pogut executar l'aplicació «%s»."
-
-#: ../src/xfce-appfinder-window.c:843
+#: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "No s'ha pogut carregar el menú de %s"
 
-#: ../src/xfce-appfinder-window.c:846
-msgid "Could not load system menu"
-msgstr "No s'ha pogut carregar el menú del sistema"
-
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
-#: ../src/xfce-appfinder-window.c:1104
+#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:1115
 msgid "All"
 msgstr "Totes"
 
-#: ../src/xfce-appfinder-window.c:942
+#: ../src/xfce-appfinder-window.c:793
+#, c-format
+msgid "Failed to execute command \"%s\"."
+msgstr "No s'ha pogut executar l'aplicació «%s»."
+
+#: ../src/xfce-appfinder-window.c:951
 #, c-format
 msgid "<b>Categories:</b> %s"
 msgstr "<b>Categories:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:953
+#: ../src/xfce-appfinder-window.c:962
 #, c-format
 msgid "<b>Command:</b> %s"
 msgstr "<b>Ordre:</b> %s"
+
+#~ msgid "Could not load system menu"
+#~ msgstr "No s'ha pogut carregar el menú del sistema"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "No s'ha pogut executar l'aplicació %s. Motiu: %s"
@@ -117,7 +116,6 @@ msgstr "<b>Ordre:</b> %s"
 #~ msgid "Filter"
 #~ msgstr "Filtre"
 
-#, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Cerca les aplicacions instaŀlades."
 
