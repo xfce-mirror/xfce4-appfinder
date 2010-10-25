@@ -1,17 +1,17 @@
 # Galician translation of xfce4-appfinder
 # Copyright (C) 2008-2009 Leandro Regueiro
 # This file is distributed under the same license as the xfce package.
-#
+# 
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2006, 2008, 2009.
-#
+# 
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
 # colaborar connosco, podes atopar máis información en <http://trasno.net>
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 14:57+0200\n"
+"POT-Creation-Date: 2010-10-25 10:07+0000\n"
 "PO-Revision-Date: 2010-10-19 18:23+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -55,94 +55,102 @@ msgstr "Fallo ó conectar co daemon xfconf. Razón: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Fallo ó conectar co daemon xfconf."
 
-#: ../src/xfce-appfinder-window.c:225
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Buscador de aplicacións"
 
-#: ../src/xfce-appfinder-window.c:227
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Busque e execute aplicacións instaladas no sistema"
 
-#: ../src/xfce-appfinder-window.c:250
+#: ../src/xfce-appfinder-window.c:242
 msgid "Search"
 msgstr "Buscar"
 
-#: ../src/xfce-appfinder-window.c:278
+#: ../src/xfce-appfinder-window.c:270
 msgid "Categories"
 msgstr "Categorías"
 
-#: ../src/xfce-appfinder-window.c:328
+#: ../src/xfce-appfinder-window.c:320
 msgid "C_lose after launch"
 msgstr "_Pechar despois de iniciar"
 
-#: ../src/xfce-appfinder-window.c:336
+#: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
 msgstr "Iniciar"
 
-#: ../src/xfce-appfinder-window.c:720
-#, c-format
-msgid "Could not execute application %s."
-msgstr "Non se puido executar o aplicativo %s."
-
-#: ../src/xfce-appfinder-window.c:843
+#: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Non se puido cargar o menú do sistema dende %s"
 
-#: ../src/xfce-appfinder-window.c:846
-msgid "Could not load system menu"
-msgstr "Non se puido cargar o menú do sistema"
-
-#: ../src/xfce-appfinder-window.c:868
-#: ../src/xfce-appfinder-window.c:875
-#: ../src/xfce-appfinder-window.c:1104
+#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:1115
 msgid "All"
 msgstr "Todas"
 
-#: ../src/xfce-appfinder-window.c:942
+#: ../src/xfce-appfinder-window.c:793
+#, c-format
+msgid "Failed to execute command \"%s\"."
+msgstr "Produciuse un erro ao executar a orde \"%s\"."
+
+#: ../src/xfce-appfinder-window.c:951
 #, c-format
 msgid "<b>Categories:</b> %s"
 msgstr "<b>Categorías:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:953
+#: ../src/xfce-appfinder-window.c:962
 #, c-format
 msgid "<b>Command:</b> %s"
 msgstr "<b>Orde:</b> %s"
 
+#~ msgid "Could not load system menu"
+#~ msgstr "Non se puido cargar o menú do sistema"
+
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "Non se puido executar a aplicación %s. Razón: %s"
+
 #~ msgid "Could not load menu from %s. Reason: %s"
 #~ msgstr "Non se puido cargar o menú do sistema dende %s. Razón: %s"
+
 #~ msgid "Filter"
 #~ msgstr "Filtro"
 
-#, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Busque aplicacións instaladas no sistema."
+
 #~ msgid "Find applications installed on the system."
 #~ msgstr "Busque aplicacións instaladas no sistema."
+
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Copyright (c) 2008"
+
 #~ msgid "Applications"
 #~ msgstr "Aplicacións"
+
 #~ msgid "<b>Name</b>"
 #~ msgstr "<b>Nome</b>"
+
 #~ msgid "N/A"
 #~ msgstr "N/A"
+
 #~ msgid "Development"
 #~ msgstr "Desenvolvemento"
+
 #~ msgid "Office"
 #~ msgstr "Oficina"
+
 #~ msgid "Graphics"
 #~ msgstr "Gráficos"
+
 #~ msgid "Network"
 #~ msgstr "Rede"
+
 #~ msgid "AudioVideo"
 #~ msgstr "Audio e Vídeo"
+
 #~ msgid "Game"
 #~ msgstr "Xogos"
+
 #~ msgid "Education"
 #~ msgstr "Educación"
-
