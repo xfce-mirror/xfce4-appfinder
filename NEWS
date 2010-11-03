@@ -1,3 +1,11 @@
+4.7.1
+=====
+- Don't watch category changes in xfconf (bug #6043).
+- Launch items with startup notification.
+- Implement monitoring by reloading all contents on menu change events.
+- Translation updates (ug, de, ru, kk, zh_TW, pt, it, da, uk, ja,
+  el, fi, sv, gl, ca, eu, hu).
+
 4.7.0
 =====
 - Remove deprecated encoding key from desktop file.
@@ -10,7 +18,6 @@
 - Don't use startup notification for now.
 - Translation updates (gl, lv, ro, hu, ast, kk, el, ru, sk, sq, ja,
   eu, da, pt, cs, zh_CN, ca, fr, sv, es, pt_BR, nl, fi, it, uk, de, he).
-
 
 4.6.2
 =====
