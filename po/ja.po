@@ -1,16 +1,16 @@
 # $Id$
-#
+# 
 # Japanese translations for xfce4-appfinder package.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Daichi Kawahata <daichi@xfce.org>, 2005.
 # Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-13 17:30+0900\n"
+"POT-Creation-Date: 2010-11-04 05:07+0000\n"
 "PO-Revision-Date: 2009-10-21 00:49+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
@@ -53,58 +53,57 @@ msgstr "xfconf デーモンへの接続に失敗しました。理由: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "xfconf デーモンへの接続に失敗しました。"
 
-#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "アプリケーションファインダ"
 
-#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "システムにインストールされたアプリケーションの検索および起動を行います"
 
-#: ../src/xfce-appfinder-window.c:250
+#: ../src/xfce-appfinder-window.c:242
 msgid "Search"
 msgstr "検索"
 
-#: ../src/xfce-appfinder-window.c:278
+#: ../src/xfce-appfinder-window.c:270
 msgid "Categories"
 msgstr "カテゴリ"
 
-#: ../src/xfce-appfinder-window.c:328
+#: ../src/xfce-appfinder-window.c:320
 msgid "C_lose after launch"
 msgstr "起動後に閉じる(_L)"
 
-#: ../src/xfce-appfinder-window.c:336
+#: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
 msgstr "起動"
 
-#: ../src/xfce-appfinder-window.c:722
-#, c-format
-msgid "Could not execute application %s."
-msgstr "アプリケーション %s を実行できませんでした。"
-
-#: ../src/xfce-appfinder-window.c:845
+#: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "%s からメニューを読み込めませんでした"
 
-#: ../src/xfce-appfinder-window.c:848
-msgid "Could not load system menu"
-msgstr "システムメニューを読み込めませんでした"
-
-#: ../src/xfce-appfinder-window.c:870 ../src/xfce-appfinder-window.c:877
-#: ../src/xfce-appfinder-window.c:1106
+#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:1115
 msgid "All"
 msgstr "すべて"
 
-#: ../src/xfce-appfinder-window.c:944
+#: ../src/xfce-appfinder-window.c:793
+#, c-format
+msgid "Failed to execute command \"%s\"."
+msgstr "コマンド \"%s\" の実行に失敗しました。"
+
+#: ../src/xfce-appfinder-window.c:951
 #, c-format
 msgid "<b>Categories:</b> %s"
 msgstr "<b>カテゴリ:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:955
+#: ../src/xfce-appfinder-window.c:962
 #, c-format
 msgid "<b>Command:</b> %s"
 msgstr "<b>コマンド:</b> %s"
+
+#~ msgid "Could not load system menu"
+#~ msgstr "システムメニューを読み込めませんでした"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "アプリケーション %s を実行できませんでした。理由: %s"
