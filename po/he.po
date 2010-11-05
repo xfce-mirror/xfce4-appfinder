@@ -72,11 +72,11 @@ msgstr "קטגוריות"
 
 #: ../src/xfce-appfinder-window.c:320
 msgid "C_lose after launch"
-msgstr "_סגירה לאחר השיגור"
+msgstr "_סגירה לאחר הטעינה"
 
 #: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
-msgstr "שיגור"
+msgstr "טעינה"
 
 #: ../src/xfce-appfinder-window.c:458
 #, c-format
