@@ -2,15 +2,15 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Mantas Zapolskas <mantaz@users.sf.net>, 2004.
-# 
+# Ričardas Vasiulis <ricardas.v@inbox.lt>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.4.0\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: <ricardas.v@inbox.lt>\n"
 "POT-Creation-Date: 2010-11-12 23:07+0000\n"
-"PO-Revision-Date: 2006-12-13 23:15+0300\n"
-"Last-Translator: Mantas Zapolskas <mantaz@users.sf.net>\n"
-"Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
+"PO-Revision-Date: 2010-11-13 02:49+0300\n"
+"Last-Translator: Ričardas Vasiulis <ricardas.v@inbox.lt>\n"
+"Language-Team: Lithuanian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,11 +51,13 @@ msgstr "Nepavyko prisijungti prie xfconf tarnybos. Priežastis: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Nepavyko prisijungti prie xfconf tarnybos."
 
-#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217
+#: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Programų paieška"
 
-#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Surasti ir paleisti programas įdiegtas jūsų sistemoje"
 
@@ -80,7 +82,8 @@ msgstr "Paleisti"
 msgid "Could not load menu from %s"
 msgstr "Nepavyko įkelti meniu iš %s"
 
-#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:470
+#: ../src/xfce-appfinder-window.c:477
 #: ../src/xfce-appfinder-window.c:1115
 msgid "All"
 msgstr "Visi"
