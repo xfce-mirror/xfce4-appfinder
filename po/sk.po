@@ -87,17 +87,17 @@ msgstr "Všetky"
 #: ../src/xfce-appfinder-window.c:793
 #, c-format
 msgid "Failed to execute command \"%s\"."
-msgstr "Nemožno spustiť príkaz \"%s\"."
+msgstr "Nepodarilo sa spustiť príkaz \"%s\"."
 
 #: ../src/xfce-appfinder-window.c:951
 #, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "<b>Kategórie</b> %s"
+msgstr "<b>Kategórie:</b> %s"
 
 #: ../src/xfce-appfinder-window.c:962
 #, c-format
 msgid "<b>Command:</b> %s"
-msgstr "<b>Príkaz</b> %s"
+msgstr "<b>Príkaz:</b> %s"
 
 #~ msgid "Could not load system menu"
 #~ msgstr "Nemožno načítať systémovú ponuku z %s"
