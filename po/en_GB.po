@@ -4,15 +4,15 @@
 # Zuza Software Foundation (Translate.org.za), 2004.
 # Translate.org.za <info@translate.org.za>, 2008.
 # Jeff Bailes <thepizzaking@gmail.com>, 2009.
-#
-#
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 14:57+0200\n"
+"POT-Creation-Date: 2010-12-13 05:08+0000\n"
 "PO-Revision-Date: 2009-01-27 12:48+1100\n"
-"Last-Translator:  <>\n"
+"Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -54,59 +54,57 @@ msgstr "Failed to connect to xfconf daemon. Reason: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Failed to connect to xfconf daemon."
 
-#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Application Finder"
 
-#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Find and launch applications installed on your system"
 
-#: ../src/xfce-appfinder-window.c:250
+#: ../src/xfce-appfinder-window.c:242
 msgid "Search"
 msgstr "Search"
 
-#: ../src/xfce-appfinder-window.c:278
+#: ../src/xfce-appfinder-window.c:270
 msgid "Categories"
 msgstr "Categories"
 
-#: ../src/xfce-appfinder-window.c:328
-#, fuzzy
+#: ../src/xfce-appfinder-window.c:320
 msgid "C_lose after launch"
-msgstr "C_lose after execute"
+msgstr "C_lose after launch"
 
-#: ../src/xfce-appfinder-window.c:336
+#: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
-msgstr ""
+msgstr "Launch"
 
-#: ../src/xfce-appfinder-window.c:720
-#, fuzzy, c-format
-msgid "Could not execute application %s."
-msgstr "Could not execute application %s"
-
-#: ../src/xfce-appfinder-window.c:843
+#: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Could not load menu from %s"
 
-#: ../src/xfce-appfinder-window.c:846
-msgid "Could not load system menu"
-msgstr "Could not load system menu"
-
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
-#: ../src/xfce-appfinder-window.c:1104
+#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:1115
 msgid "All"
 msgstr "All"
 
-#: ../src/xfce-appfinder-window.c:942
-#, fuzzy, c-format
-msgid "<b>Categories:</b> %s"
-msgstr "<b>Categories</b>"
+#: ../src/xfce-appfinder-window.c:793
+#, c-format
+msgid "Failed to execute command \"%s\"."
+msgstr "Failed to execute command \"%s\"."
 
-#: ../src/xfce-appfinder-window.c:953
-#, fuzzy, c-format
+#: ../src/xfce-appfinder-window.c:951
+#, c-format
+msgid "<b>Categories:</b> %s"
+msgstr "<b>Categories:</b> %s"
+
+#: ../src/xfce-appfinder-window.c:962
+#, c-format
 msgid "<b>Command:</b> %s"
-msgstr "<b>Command</b>"
+msgstr "<b>Command:</b> %s"
+
+#~ msgid "Could not load system menu"
+#~ msgstr "Could not load system menu"
 
 #~ msgid "Could not execute application %s. Reason: %s"
 #~ msgstr "Could not execute application %s. Reason: %s"
@@ -117,7 +115,6 @@ msgstr "<b>Command</b>"
 #~ msgid "Filter"
 #~ msgstr "Filter"
 
-#, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "Find applications installed on the system."
 
