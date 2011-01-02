@@ -1,3 +1,8 @@
+4.7.2
+=====
+- Translation updates (pt, ja, he, lt, zh_CN, pt_BR, sk, cs,
+  en_GB, nb, hr, pl, ar).
+
 4.7.1
 =====
 - Don't watch category changes in xfconf (bug #6043).
