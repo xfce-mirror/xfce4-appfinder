@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.8\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-05 17:09+0000\n"
-"PO-Revision-Date: 2011-01-05 21:39+0300\n"
+"PO-Revision-Date: 2011-01-07 14:24+0200\n"
 "Last-Translator: Mișu Moldovan <dumol@xfce.org>\n"
 "Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -54,11 +54,11 @@ msgstr "Conectarea la demonul xfconf a eșuat."
 
 #: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "Căutare de aplicații"
+msgstr "Căutare de programe"
 
 #: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Caută și lansează aplicații instalate în sistem"
+msgstr "Caută și lansează programe instalate în sistem"
 
 #: ../src/xfce-appfinder-window.c:242
 msgid "Search"
