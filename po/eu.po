@@ -2,16 +2,17 @@
 # Euskara translations for xfce4-appfinder package.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-# 
+#
 # Piarres Beobide Egaña <pi@beobide.net>, 2004, 2005, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-03 05:07+0000\n"
+"POT-Creation-Date: 2011-01-16 16:52+0100\n"
 "PO-Revision-Date: 2009-10-21 13:53+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Basque <debian-l10n-eu@debian.lists.org>\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"

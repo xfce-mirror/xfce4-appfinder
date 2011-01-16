@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-28 18:04+0100\n"
+"POT-Creation-Date: 2011-01-16 16:52+0100\n"
 "PO-Revision-Date: 2010-02-24 12:44+0600\n"
 "Last-Translator: Loba Yeasmeen <loba@ankur.org.bd>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
+"Language: bn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -50,55 +51,54 @@ msgstr "xfconf ডেমন সংযুক্ত করতে ব্যর্�
 msgid "Failed to connect to xfconf daemon."
 msgstr "xfconf ডেমন সংযুক্ত করতে ব্যর্থ।"
 
-#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "অ্যাপ্লিকেশন অনুসন্ধানকারী"
 
-#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "আপনার সিস্টেমে ইনস্টলকৃত অ্যাপ্লিকেশন খুঁজে বের করে চালু করুন"
 
-#: ../src/xfce-appfinder-window.c:250
+#: ../src/xfce-appfinder-window.c:242
 msgid "Search"
 msgstr "অনুসন্ধান"
 
-#: ../src/xfce-appfinder-window.c:278
+#: ../src/xfce-appfinder-window.c:270
 msgid "Categories"
 msgstr "শ্রেনীবিভাগ"
 
-#: ../src/xfce-appfinder-window.c:328
+#: ../src/xfce-appfinder-window.c:320
 msgid "C_lose after launch"
 msgstr "চালু করার পর বন্ধ করা হবে (_l)"
 
-#: ../src/xfce-appfinder-window.c:336
+#: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
 msgstr "চালু করা"
 
-#: ../src/xfce-appfinder-window.c:722
-#, c-format
-msgid "Could not execute application %s."
-msgstr "%s অ্যাপ্লিকেশন চালু করতে পারেনি।"
-
-#: ../src/xfce-appfinder-window.c:845
+#: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "%s থেকে মেনু লোড করতে পারেনি"
 
-#: ../src/xfce-appfinder-window.c:848
-msgid "Could not load system menu"
-msgstr "সিস্টেম মেনু লোড করতে পারেনি"
-
-#: ../src/xfce-appfinder-window.c:870 ../src/xfce-appfinder-window.c:877
-#: ../src/xfce-appfinder-window.c:1106
+#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:1115
 msgid "All"
 msgstr "সমস্ত"
 
-#: ../src/xfce-appfinder-window.c:944
+#: ../src/xfce-appfinder-window.c:793
+#, fuzzy, c-format
+msgid "Failed to execute command \"%s\"."
+msgstr "%s অ্যাপ্লিকেশন চালু করতে পারেনি।"
+
+#: ../src/xfce-appfinder-window.c:951
 #, c-format
 msgid "<b>Categories:</b> %s"
 msgstr "<b>শ্রেনীবিভাগ:</b> %s"
 
-#: ../src/xfce-appfinder-window.c:955
+#: ../src/xfce-appfinder-window.c:962
 #, c-format
 msgid "<b>Command:</b> %s"
 msgstr "<b>কমান্ড:</b> %s"
+
+#~ msgid "Could not load system menu"
+#~ msgstr "সিস্টেম মেনু লোড করতে পারেনি"

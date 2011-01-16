@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-18 14:57+0200\n"
+"POT-Creation-Date: 2011-01-16 16:52+0100\n"
 "PO-Revision-Date: 2005-10-15 01:48+0900\n"
 "Last-Translator: Norayr Chilingaryan <norik@freenet.am>\n"
 "Language-Team: Armenian <en@li.org>\n"
+"Language: hy\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,56 +52,52 @@ msgstr ""
 msgid "Failed to connect to xfconf daemon."
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:225 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:227 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:250
+#: ../src/xfce-appfinder-window.c:242
 #, fuzzy
 msgid "Search"
 msgstr "<b>Փնտրել՝</b>"
 
-#: ../src/xfce-appfinder-window.c:278
+#: ../src/xfce-appfinder-window.c:270
 msgid "Categories"
 msgstr "Դասեր"
 
-#: ../src/xfce-appfinder-window.c:328
+#: ../src/xfce-appfinder-window.c:320
 msgid "C_lose after launch"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:336
+#: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:720
-#, c-format
-msgid "Could not execute application %s."
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:843
+#: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:846
-msgid "Could not load system menu"
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:868 ../src/xfce-appfinder-window.c:875
-#: ../src/xfce-appfinder-window.c:1104
+#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:1115
 msgid "All"
 msgstr "Բոլոր"
 
-#: ../src/xfce-appfinder-window.c:942
+#: ../src/xfce-appfinder-window.c:793
+#, c-format
+msgid "Failed to execute command \"%s\"."
+msgstr ""
+
+#: ../src/xfce-appfinder-window.c:951
 #, fuzzy, c-format
 msgid "<b>Categories:</b> %s"
 msgstr "Դասեր"
 
-#: ../src/xfce-appfinder-window.c:953
+#: ../src/xfce-appfinder-window.c:962
 #, c-format
 msgid "<b>Command:</b> %s"
 msgstr ""

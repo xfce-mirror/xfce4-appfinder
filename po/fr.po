@@ -2,15 +2,16 @@
 # Copyright (C) 2004-2008 The Xfce development team.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Collet Etienne <xanaxlnx@gmail.com>, 2005.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.6 RC1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-15 17:09+0000\n"
+"POT-Creation-Date: 2011-01-16 16:52+0100\n"
 "PO-Revision-Date: 2009-11-30 20:40+0100\n"
 "Last-Translator: Jérôme Guelfucci <jeromeg@xfce.org>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,7 +28,8 @@ msgstr "[MENUFILE]"
 #: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr "Saisissez '%s ---help' pour obtenir des informations sur l'utilisation."
+msgstr ""
+"Saisissez '%s ---help' pour obtenir des informations sur l'utilisation."
 
 #: ../src/main.c:70
 msgid "Unable to initialize GTK+."
