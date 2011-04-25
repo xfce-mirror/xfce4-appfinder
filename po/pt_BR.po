@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 16:52+0100\n"
-"PO-Revision-Date: 2010-11-23 15:06-0300\n"
-"Last-Translator: Tomas A. Schertel <tschertel@gmail.com>\n"
+"POT-Creation-Date: 2011-04-21 10:11+0000\n"
+"PO-Revision-Date: 2011-04-21 12:13-0300\n"
+"Last-Translator: Sérgio Cipolla <secipolla@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
-"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
 
 #: ../src/main.c:42
 msgid "Version information"
@@ -24,12 +24,12 @@ msgstr "Informações da versão"
 
 #: ../src/main.c:43
 msgid "[MENUFILE]"
-msgstr "[MENUFILE]"
+msgstr "[ARQUIVO-DE-MENU]"
 
 #: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr "Digite \"%s --help\" para informações sobre o uso."
+msgstr "Digite \"%s --help\" para opções de uso."
 
 #: ../src/main.c:70
 msgid "Unable to initialize GTK+."
@@ -53,11 +53,13 @@ msgstr "Falha ao conectar no daemon do xfconf. Razão: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Falha ao conectar no daemon do xfconf."
 
-#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217
+#: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Localizador de aplicativos"
 
-#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Localize e execute aplicativos instalados no seu sistema"
 
@@ -71,18 +73,19 @@ msgstr "Categorias"
 
 #: ../src/xfce-appfinder-window.c:320
 msgid "C_lose after launch"
-msgstr "F_echar depois de iniciar"
+msgstr "F_echar ao executar"
 
 #: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
-msgstr "Iniciar"
+msgstr "Executar"
 
 #: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "Não foi possível carregar o menu de %s"
 
-#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:470
+#: ../src/xfce-appfinder-window.c:477
 #: ../src/xfce-appfinder-window.c:1115
 msgid "All"
 msgstr "Todos"
