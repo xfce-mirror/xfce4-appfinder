@@ -2,24 +2,23 @@
 # Copyright (C) 2008 Jasper Huijsmans <jasper@xfce.org>
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Jasper Huijsmans <jasper@xfce.org>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.5.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 16:52+0100\n"
+"POT-Creation-Date: 2011-05-09 04:32+0000\n"
 "PO-Revision-Date: 2008-07-27 09:26+0200\n"
 "Last-Translator: Jasper Huijsmans <jasper@xfce.org>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
-"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 
 #: ../src/main.c:42
-#, fuzzy
 msgid "Version information"
-msgstr "Toon versie-informatie"
+msgstr "Versie-informatie"
 
 #: ../src/main.c:43
 msgid "[MENUFILE]"
@@ -31,9 +30,8 @@ msgid "Type '%s --help' for usage information."
 msgstr "Typ '%s -- help' voor het gebruiks informatie."
 
 #: ../src/main.c:70
-#, fuzzy
 msgid "Unable to initialize GTK+."
-msgstr "Mislukt om GTK + te intaliseren"
+msgstr "Kon GTK+ niet initialiseren"
 
 #: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
@@ -59,8 +57,7 @@ msgstr "Toepassingen Zoeken"
 
 #: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr ""
-"Toepassingen zoeken en uitvoeren die geïnstalleerd zijn op het systeem."
+msgstr "Toepassingen zoeken en uitvoeren die geïnstalleerd zijn op het systeem."
 
 #: ../src/xfce-appfinder-window.c:242
 msgid "Search"
@@ -71,9 +68,8 @@ msgid "Categories"
 msgstr "Categorieën"
 
 #: ../src/xfce-appfinder-window.c:320
-#, fuzzy
 msgid "C_lose after launch"
-msgstr "A_fsluiten na uitvoeren"
+msgstr "Sluit _af na uitvoeren"
 
 #: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
@@ -90,9 +86,9 @@ msgid "All"
 msgstr "Alles"
 
 #: ../src/xfce-appfinder-window.c:793
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to execute command \"%s\"."
-msgstr "Kon de toepassing %s niet uitvoeren."
+msgstr "Kon commando \"%s\" niet uitvoeren."
 
 #: ../src/xfce-appfinder-window.c:951
 #, c-format
