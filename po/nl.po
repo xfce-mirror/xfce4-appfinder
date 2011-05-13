@@ -2,17 +2,17 @@
 # Copyright (C) 2008 Jasper Huijsmans <jasper@xfce.org>
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Jasper Huijsmans <jasper@xfce.org>, 2008.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.5.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-09 16:33+0000\n"
+"POT-Creation-Date: 2011-05-13 10:32+0000\n"
 "PO-Revision-Date: 2008-07-27 09:26+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: nl\n"
 
@@ -35,7 +35,7 @@ msgstr "Kon GTK+ niet initialiseren."
 
 #: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
-msgstr "De Xfce-ontwikkelingsploeg. Alle rechten voorbehouden."
+msgstr "De Xfce-ontwikkelploeg. Alle rechten voorbehouden."
 
 #: ../src/main.c:81
 #, c-format
@@ -45,20 +45,19 @@ msgstr "Gelieve fouten te melden bij <%s>."
 #: ../src/main.c:92
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "Kon geen verbinding maken met xfconf daemon. Reden: %s"
+msgstr "Kon geen verbinding maken met xfconf-achtergronddienst. Reden: %s"
 
 #: ../src/main.c:96
 msgid "Failed to connect to xfconf daemon."
-msgstr "Kon geen verbinding maken met xfconf daemon."
+msgstr "Kon geen verbinding maken met xfconf-achtergronddienst."
 
 #: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "Toepassingen Zoeker"
+msgstr "Toepassingenzoeker"
 
 #: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr ""
-"Toepassingen zoeken en uitvoeren die geïnstalleerd zijn in uw systeem."
+msgstr "Toepassingen zoeken en uitvoeren die geïnstalleerd zijn in uw systeem."
 
 #: ../src/xfce-appfinder-window.c:242
 msgid "Search"
