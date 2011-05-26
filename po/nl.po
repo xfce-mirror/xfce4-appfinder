@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.5.1\n"
+"Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-13 10:32+0000\n"
+"POT-Creation-Date: 2011-05-26 16:32+0000\n"
 "PO-Revision-Date: 2008-07-27 09:26+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -78,7 +78,7 @@ msgstr "Uitvoeren"
 #: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
-msgstr "Kon geen menu van %s laden"
+msgstr "Kon geen menu vanuit %s laden"
 
 #: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
 #: ../src/xfce-appfinder-window.c:1115
@@ -88,7 +88,7 @@ msgstr "Alle"
 #: ../src/xfce-appfinder-window.c:793
 #, c-format
 msgid "Failed to execute command \"%s\"."
-msgstr "Kon commando \"%s\" niet uitvoeren."
+msgstr "Kon opdracht \"%s\" niet uitvoeren."
 
 #: ../src/xfce-appfinder-window.c:951
 #, c-format
@@ -98,7 +98,7 @@ msgstr "<b>Categorieën:</b>%s"
 #: ../src/xfce-appfinder-window.c:962
 #, c-format
 msgid "<b>Command:</b> %s"
-msgstr "<b>Commando:%s</b>"
+msgstr "<b>Opdracht:%s</b>"
 
 #~ msgid "Could not load system menu"
 #~ msgstr "Kon het systeemmenu niet laden"
