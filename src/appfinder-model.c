@@ -754,7 +754,6 @@ xfce_appfinder_model_collect_items (XfceAppfinderModel *model,
               item = g_slice_new0 (ModelItem);
               item->visible = TRUE;
               item->item = li->data;
-              item->visible = FALSE;
 
               command = garcon_menu_item_get_command (li->data);
               if (G_LIKELY (command != NULL))
