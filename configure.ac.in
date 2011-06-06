@@ -1,13 +1,12 @@
-dnl $Id$
 dnl
-dnl Copyright (c) 2008-2011 - Jannis Pohlmann <jannis@xfce.org>
+dnl Copyright (c) 2008-2011 - The Xfce Development Team.
 dnl
 
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
 m4_define([xfce4_appfinder_version_major], [4])
-m4_define([xfce4_appfinder_version_minor], [8])
+m4_define([xfce4_appfinder_version_minor], [9])
 m4_define([xfce4_appfinder_version_micro], [0])
 m4_define([xfce4_appfinder_version_nano],  []) dnl leave this empty to have no nano version
 m4_define([xfce4_appfinder_version_build], [@REVISION@])
@@ -61,6 +60,7 @@ dnl **********************************
 dnl *** Check for standard headers ***
 dnl **********************************
 AC_HEADER_STDC()
+AC_CHECK_HEADERS([stdlib.h string.h])
 
 dnl ******************************
 dnl *** Check for i18n support ***
@@ -70,14 +70,12 @@ XDT_I18N([@LINGUAS@])
 dnl ***********************************
 dnl *** Check for required packages ***
 dnl ***********************************
-XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.16.0])
-XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.16.0])
-XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.14.0])
+XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.23.0])
+XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.23.0])
+XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.20.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.8.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-1], [4.8.0])
-XDT_CHECK_PACKAGE([GARCON], [garcon-1], [0.1.2])
-XDT_CHECK_PACKAGE([LIBXFCONF], [libxfconf-0], [4.8.0])
-XDT_CHECK_PACKAGE([GIO], [gio-2.0], [2.16.0])
+XDT_CHECK_PACKAGE([GARCON], [garcon-1], [0.1.7])
 
 dnl ***********************************
 dnl *** Check for debugging support ***
@@ -107,7 +105,6 @@ Makefile
 data/Makefile
 src/Makefile
 po/Makefile.in
-xfce4-appfinder.spec
 ])
 
 dnl ***************************

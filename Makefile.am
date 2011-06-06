@@ -1,16 +1,15 @@
-@SET_MAKE@
 
-SUBDIRS = src data po
+SUBDIRS = \
+	src \
+	data \
+	po
 
 EXTRA_DIST = \
-	TODO \
-	xfce4-appfinder.spec \
 	intltool-extract.in \
 	intltool-merge.in \
 	intltool-update.in
 
 DISTCLEANFILES = \
-	xfce4-appfinder.spec \
 	intltool-extract \
 	intltool-merge \
 	intltool-update

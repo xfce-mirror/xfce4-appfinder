@@ -1,38 +1,39 @@
-# $Id$
 # vi:set ts=8 sw=8 noet ai nocindent syntax=automake:
 
-bin_PROGRAMS =								\
-	xfce4-appfinder
+INCLUDES = \
+	-I$(top_srcdir) \
+	-DPACKAGE_LOCALE_DIR=\"$(localedir)\" \
+	-DG_LOG_DOMAIN=\"xfce4-appfinder\" \
+	$(PLATFORM_CPPFLAGS)
 
-xfce4_appfinder_SOURCES =						\
-	main.c								\
-	xfce-appfinder-window.h						\
-	xfce-appfinder-window.c						\
-	frap-icon-entry.h						\
-	frap-icon-entry.c
+bin_PROGRAMS = xfce4-appfinder
 
-xfce4_appfinder_CFLAGS = 						\
-	-I$(top_builddir)						\
-	-I$(top_srcdir)							\
-	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
-	-DDATADIR=\"$(datadir)\"					\
-	-DG_LOG_DOMAIN=\"xfce4-appfinder\"				\
-	$(PLATFORM_CFLAGS)						\
-	$(GLIB_CFLAGS)							\
-	$(GTK_CFLAGS)							\
-	$(LIBXFCE4UTIL_CFLAGS)						\
-	$(LIBXFCE4UI_CFLAGS)						\
-	$(GARCON_CFLAGS)						\
-	$(LIBXFCONF_CFLAGS)						\
-	$(GIO_CFLAGS)
+xfce4_appfinder_SOURCES = \
+	appfinder-category-model.c \
+	appfinder-category-model.h \
+	appfinder-model.c \
+	appfinder-model.h \
+	appfinder-window.c \
+	appfinder-window.h \
+	main.c
 
-xfce4_appfinder_LDFLAGS = 						\
-	$(PLATFORM_LIBS)						\
-	$(GLIB_LIBS)							\
-	$(GTHREAD_LIBS)							\
-	$(GTK_LIBS)							\
-	$(LIBXFCE4UTIL_LIBS)						\
-	$(LIBXFCE4UI_LIBS)						\
-	$(GARCON_LIBS)							\
-	$(LIBXFCONF_LIBS)						\
-	$(GIO_LIBS)
+xfce4_appfinder_CFLAGS = \
+	$(GTHREAD_CFLAGS) \
+	$(GTK_CFLAGS) \
+	$(LIBXFCE4UTIL_CFLAGS) \
+	$(LIBXFCE4UI_CFLAGS) \
+	$(GARCON_CFLAGS) \
+	$(PLATFORM_CFLAGS)
+
+xfce4_appfinder_LDADD = \
+	$(GLIB_LIBS) \
+	$(GTHREAD_LIBS) \
+	$(GTK_LIBS) \
+	$(LIBXFCE4UTIL_LIBS) \
+	$(LIBXFCE4UI_LIBS) \
+	$(GARCON_LIBS) \
+	$(LIBXFCONF_LIBS)
+
+xfce4_appfinder_LDFLAGS = \
+	-no-undefined \
+	$(PLATFORM_LDFLAGS)

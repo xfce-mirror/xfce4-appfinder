@@ -1,9 +1,8 @@
-# List of source files containing translatable strings.
-src/main.c
-src/xfce-appfinder-window.c
-src/xfce-appfinder-window.h
-src/frap-icon-entry.c
-src/frap-icon-entry.h
 
-# .desktop files
+src/appfinder-category-model.c
+src/appfinder-model.c
+src/appfinder-window.c
+src/main.c
+
 data/xfce4-appfinder.desktop.in
+data/xfce4-run.desktop.in
