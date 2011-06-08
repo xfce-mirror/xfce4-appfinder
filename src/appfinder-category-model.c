@@ -404,7 +404,7 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
   GtkTreePath  *path;
   GtkTreeIter   iter;
 
-  g_debug ("insert %d categories", g_slist_length (categories));
+  APPFINDER_DEBUG ("insert %d categories", g_slist_length (categories));
 
   /* remove shortcuts after hard-coded before inserting */
   li = g_slist_nth (model->categories, 3);
@@ -450,4 +450,34 @@ xfce_appfinder_category_model_row_separator_func (GtkTreeModel *tree_model,
   g_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (tree_model), FALSE);
 
   return (item->directory == NULL);
+}
+
+
+
+void
+xfce_appfinder_category_model_icon_theme_changed (XfceAppfinderCategoryModel *model)
+{
+  Categoryitem *item;
+  GSList       *li;
+  gint          idx;
+  GtkTreeIter   iter;
+  GtkTreePath  *path;
+
+  g_return_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model));
+
+  for (li = model->categories, idx = 0; li != NULL; li = li->next, idx++)
+    {
+      item = li->data;
+
+      if (item->pixbuf != NULL)
+        {
+          g_object_unref (G_OBJECT (item->pixbuf));
+          item->pixbuf = NULL;
+
+          path = gtk_tree_path_new_from_indices (idx, -1);
+          ITER_INIT (iter, model->stamp, li);
+          gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
+          gtk_tree_path_free (path);
+        }
+    }
 }

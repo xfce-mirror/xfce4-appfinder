@@ -64,6 +64,7 @@ static void       xfce_appfinder_window_category_changed         (GtkTreeSelecti
                                                                   XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_item_changed             (XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_row_activated            (XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_icon_theme_changed       (XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_execute                  (XfceAppfinderWindow         *window);
 
 
@@ -145,6 +146,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   GtkWidget          *button;
   GtkTreePath        *path;
   GtkEntryCompletion *completion;
+  GtkIconTheme       *icon_theme;
 
   window->last_window_height = 400;
 
@@ -314,9 +316,11 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   image = gtk_image_new_from_stock (GTK_STOCK_EXECUTE, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (button), image);
-  gtk_widget_show (image);
 
-  g_debug ("constructed window");
+  icon_theme = gtk_icon_theme_get_for_screen (gtk_window_get_screen (GTK_WINDOW (window)));
+  g_signal_connect_swapped (G_OBJECT (icon_theme), "changed", G_CALLBACK (xfce_appfinder_window_icon_theme_changed), window);
+
+  APPFINDER_DEBUG ("constructed window");
 }
 
 
@@ -598,6 +602,24 @@ xfce_appfinder_window_row_activated (XfceAppfinderWindow *window)
 
 
 
+static void
+xfce_appfinder_window_icon_theme_changed (XfceAppfinderWindow *window)
+{
+  if (window->icon_find != NULL)
+    g_object_unref (G_OBJECT (window->icon_find));
+  window->icon_find = xfce_appfinder_model_load_pixbuf (GTK_STOCK_FIND, ICON_LARGE);
+
+  /* drop cached pixbufs */
+  xfce_appfinder_model_icon_theme_changed (window->model);
+  xfce_appfinder_category_model_icon_theme_changed (window->category_model);
+
+  /* update state */
+  xfce_appfinder_window_entry_changed (window);
+  xfce_appfinder_window_item_changed (window);
+}
+
+
+
 static gboolean
 xfce_appfinder_window_execute_command (const gchar  *cmd,
                                        GdkScreen    *screen,
@@ -726,7 +748,7 @@ xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
   GtkWidget          *parent;
   GtkEntryCompletion *completion;
 
-  g_debug ("set expand = %s", expanded ? "true" : "false");
+  APPFINDER_DEBUG ("set expand = %s", expanded ? "true" : "false");
 
   /* force window geomentry */
   if (expanded)

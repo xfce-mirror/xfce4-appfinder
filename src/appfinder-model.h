@@ -44,6 +44,12 @@ G_STMT_START { \
 } G_STMT_END
 #define IS_STRING(str) ((str) != NULL && *(str) != '\0')
 
+#ifdef DEBUG
+#define APPFINDER_DEBUG(...) g_print ("xfce4-appfinder: "); g_print (__VA_ARGS__); g_print ("\n")
+#else
+#define APPFINDER_DEBUG(...) G_STMT_START{ (void)0; }G_STMT_END
+#endif
+
 enum
 {
   XFCE_APPFINDER_MODEL_COLUMN_ABSTRACT,
@@ -83,6 +89,8 @@ gboolean            xfce_appfinder_model_save_command         (XfceAppfinderMode
 
 GdkPixbuf          *xfce_appfinder_model_get_icon_for_command (XfceAppfinderModel  *model,
                                                                const gchar         *command);
+
+void                xfce_appfinder_model_icon_theme_changed   (XfceAppfinderModel  *model);
 
 G_END_DECLS
 

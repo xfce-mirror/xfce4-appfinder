@@ -28,6 +28,7 @@
 #include <libxfce4util/libxfce4util.h>
 #include <garcon/garcon.h>
 
+#include <src/appfinder-model.h>
 #include <src/appfinder-window.h>
 
 
@@ -101,7 +102,7 @@ main (gint argc, gchar **argv)
   xfce_appfinder_window_set_expanded (XFCE_APPFINDER_WINDOW (window), opt_finder);
   gtk_widget_show (window);
 
-  g_debug ("enter mainloop");
+  APPFINDER_DEBUG ("enter mainloop");
 
   gtk_main ();
 

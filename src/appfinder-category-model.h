@@ -55,6 +55,8 @@ gboolean                    xfce_appfinder_category_model_row_separator_func (Gt
                                                                               GtkTreeIter                *iter,
                                                                               gpointer                    user_data);
 
+void                        xfce_appfinder_category_model_icon_theme_changed (XfceAppfinderCategoryModel *model);
+
 G_END_DECLS
 
 #endif /* !__XFCE_APPFINDER_CATEGORY_MODEL_H__ */
