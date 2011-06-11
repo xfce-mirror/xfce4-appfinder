@@ -33,29 +33,11 @@ typedef struct _XfceAppfinderModel      XfceAppfinderModel;
 #define XFCE_IS_APPFINDER_MODEL_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), XFCE_TYPE_APPFINDER_MODEL))
 #define XFCE_APPFINDER_MODEL_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), XFCE_TYPE_APPFINDER_MODEL, XfceAppfinderModelClass))
 
-#define ICON_SMALL   32
-#define ICON_LARGE   48
-
-#define ITER_GET_DATA(iter)          (((GSList *) (iter)->user_data)->data)
-#define ITER_INIT(iter, iter_stamp, iter_data) \
-G_STMT_START { \
-  (iter).stamp = iter_stamp; \
-  (iter).user_data = iter_data; \
-} G_STMT_END
-#define IS_STRING(str) ((str) != NULL && *(str) != '\0')
-
-#ifdef DEBUG
-#define APPFINDER_DEBUG(...) g_print ("xfce4-appfinder: "); g_print (__VA_ARGS__); g_print ("\n")
-#else
-#define APPFINDER_DEBUG(...) G_STMT_START{ (void)0; }G_STMT_END
-#endif
-
 enum
 {
   XFCE_APPFINDER_MODEL_COLUMN_ABSTRACT,
   XFCE_APPFINDER_MODEL_COLUMN_ICON_SMALL,
   XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE,
-  XFCE_APPFINDER_MODEL_COLUMN_VISIBLE,
   XFCE_APPFINDER_MODEL_COLUMN_COMMAND,
   XFCE_APPFINDER_MODEL_COLUMN_URI,
   XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP,
@@ -66,16 +48,15 @@ enum
 
 GType               xfce_appfinder_model_get_type             (void) G_GNUC_CONST;
 
-XfceAppfinderModel *xfce_appfinder_model_new                  (void) G_GNUC_MALLOC;
+XfceAppfinderModel *xfce_appfinder_model_get                  (void) G_GNUC_MALLOC;
 
-void                xfce_appfinder_model_filter_category      (XfceAppfinderModel  *model,
-                                                               const gchar         *category);
-
-void                xfce_appfinder_model_filter_string        (XfceAppfinderModel  *model,
-                                                               const gchar         *seach_string);
+gboolean            xfce_appfinder_model_get_visible          (XfceAppfinderModel  *model,
+                                                               const GtkTreeIter   *iter,
+                                                               const gchar         *category,
+                                                               const gchar         *string);
 
 gboolean            xfce_appfinder_model_execute              (XfceAppfinderModel  *model,
-                                                               GtkTreeIter         *iter,
+                                                               const GtkTreeIter   *iter,
                                                                GdkScreen           *screen,
                                                                gboolean            *is_regular_command,
                                                                GError             **error);

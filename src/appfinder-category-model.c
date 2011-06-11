@@ -29,6 +29,7 @@
 
 #include <src/appfinder-model.h>
 #include <src/appfinder-category-model.h>
+#include <src/appfinder-private.h>
 
 
 

@@ -29,6 +29,7 @@
 #include <garcon/garcon.h>
 
 #include <src/appfinder-model.h>
+#include <src/appfinder-private.h>
 
 
 
@@ -89,10 +90,6 @@ struct _XfceAppfinderModel
   GdkPixbuf         *command_icon_small;
   GdkPixbuf         *command_icon_large;
 
-  gchar             *filter_category;
-  gchar             *filter_string;
-  guint              filter_idle_id;
-
   guint              collect_idle_id;
   GSList            *collect_items;
   GSList            *collect_categories;
@@ -109,7 +106,6 @@ typedef struct
   GPtrArray      *categories;
   gchar          *command;
   gchar          *tooltip;
-  guint           visible : 1;
 
   GdkPixbuf      *icon_small;
   GdkPixbuf      *icon_large;
@@ -124,7 +120,7 @@ enum
 
 
 
-static guint    model_signals[LAST_SIGNAL];
+static guint model_signals[LAST_SIGNAL];
 
 
 
@@ -207,15 +203,9 @@ xfce_appfinder_model_finalize (GObject *object)
   g_slist_foreach (model->items, (GFunc) xfce_appfinder_model_item_free, NULL);
   g_slist_free (model->items);
 
-  if (G_UNLIKELY (model->filter_idle_id != 0))
-    g_source_remove (model->filter_idle_id);
-
   if (model->collect_desktop_ids != NULL)
     g_hash_table_destroy (model->collect_desktop_ids);
   g_hash_table_destroy (model->items_hash);
-
-  g_free (model->filter_category);
-  g_free (model->filter_string);
 
   g_object_unref (G_OBJECT (model->command_icon_large));
   g_object_unref (G_OBJECT (model->command_icon_small));
@@ -258,9 +248,6 @@ xfce_appfinder_model_get_column_type (GtkTreeModel *tree_model,
     case XFCE_APPFINDER_MODEL_COLUMN_ICON_SMALL:
     case XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE:
       return GDK_TYPE_PIXBUF;
-
-    case XFCE_APPFINDER_MODEL_COLUMN_VISIBLE:
-      return G_TYPE_BOOLEAN;
 
     default:
       g_assert_not_reached ();
@@ -334,11 +321,6 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
 
   switch (column)
     {
-    case XFCE_APPFINDER_MODEL_COLUMN_VISIBLE:
-      g_value_init (value, G_TYPE_BOOLEAN);
-      g_value_set_boolean (value, item->visible);
-      break;
-
     case XFCE_APPFINDER_MODEL_COLUMN_ABSTRACT:
       if (item->abstract == NULL)
         {
@@ -704,7 +686,6 @@ xfce_appfinder_model_item_new (GarconMenuItem *menu_item)
 
   item = g_slice_new0 (ModelItem);
   item->item = g_object_ref (G_OBJECT (menu_item));
-  item->visible = TRUE;
 
   command = garcon_menu_item_get_command (menu_item);
   if (G_LIKELY (command != NULL))
@@ -983,153 +964,77 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
 
 
 
-static gboolean
-xfce_appfinder_model_filter_idle (gpointer data)
-{
-  XfceAppfinderModel *model = XFCE_APPFINDER_MODEL (data);
-  GSList             *li;
-  gint                idx;
-  ModelItem          *item;
-  gboolean            visible;
-  GtkTreeIter         iter;
-  GtkTreePath        *path;
-
-  GDK_THREADS_ENTER ();
-
-  for (li = model->items, idx = 0; li != NULL; li = li->next, idx++)
-    {
-      item = li->data;
-      visible = TRUE;
-
-      g_return_val_if_fail ((item->item == NULL && item->command != NULL)
-                            || (item->item != NULL && GARCON_IS_MENU_ITEM (item->item)), FALSE);
-
-      if (item->item != NULL)
-        {
-          if (model->filter_category != NULL
-              && !xfce_appfinder_model_ptr_array_strcmp (item->categories, model->filter_category))
-            {
-              visible = FALSE;
-            }
-          else if (model->filter_string != NULL)
-            {
-              if (item->key == NULL)
-                item->key = xfce_appfinder_model_item_key (item->item);
-
-              visible = strstr (item->key, model->filter_string) != NULL;
-            }
-        }
-      else if (item->command != NULL)
-        {
-          if (model->filter_category == NULL
-              || *model->filter_category != '\0')
-            {
-              visible = FALSE;
-            }
-          else if (model->filter_string != NULL)
-            {
-              visible = strstr (item->command, model->filter_string) != NULL;
-            }
-        }
-
-      if (item->visible != visible)
-        {
-          item->visible = visible;
-
-          /* generate an iterator for the path */
-          ITER_INIT (iter, model->stamp, li);
-
-          /* tell the view that the volume has changed in some way */
-          path = gtk_tree_path_new_from_indices (idx, -1);
-          gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
-          gtk_tree_path_free (path);
-        }
-    }
-
-  GDK_THREADS_LEAVE ();
-
-  return FALSE;
-}
-
-
-
-static void
-xfce_appfinder_model_filter_idle_destroyed (gpointer data)
-{
-  XFCE_APPFINDER_MODEL (data)->filter_idle_id = 0;
-}
-
-
-
-static void
-xfce_appfinder_model_filter (XfceAppfinderModel *model)
-{
-  if (model->filter_idle_id == 0)
-    {
-      model->filter_idle_id = g_idle_add_full (G_PRIORITY_HIGH_IDLE, xfce_appfinder_model_filter_idle,
-                                               model, xfce_appfinder_model_filter_idle_destroyed);
-    }
-}
-
-
-
 XfceAppfinderModel *
-xfce_appfinder_model_new (void)
+xfce_appfinder_model_get (void)
 {
-  return g_object_new (XFCE_TYPE_APPFINDER_MODEL, NULL);
-}
+  static XfceAppfinderModel *model = NULL;
 
-
-
-void
-xfce_appfinder_model_filter_category (XfceAppfinderModel *model,
-                                      const gchar        *category)
-{
-  g_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
-
-  if (g_strcmp0 (model->filter_category, category) == 0)
-    return;
-
-  g_free (model->filter_category);
-  model->filter_category = g_strdup (category);
-
-  xfce_appfinder_model_filter (model);
-}
-
-
-
-void
-xfce_appfinder_model_filter_string (XfceAppfinderModel *model,
-                                    const gchar        *seach_string)
-{
-  gchar *normalized;
-
-  g_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
-
-  if (model->filter_string == seach_string)
-    return;
-
-  g_free (model->filter_string);
-
-  if (IS_STRING (seach_string))
+  if (G_LIKELY (model != NULL))
     {
-      normalized = g_utf8_normalize (seach_string, -1, G_NORMALIZE_ALL);
-      model->filter_string = g_utf8_casefold (normalized, -1);
-      g_free (normalized);
+      g_object_ref (G_OBJECT (model));
     }
   else
     {
-      model->filter_string = NULL;
+      model = g_object_new (XFCE_TYPE_APPFINDER_MODEL, NULL);
+      g_message ("new model");
+      g_object_add_weak_pointer (G_OBJECT (model), (gpointer) &model);
     }
 
-  xfce_appfinder_model_filter (model);
+  return model;
+}
+
+
+
+gboolean
+xfce_appfinder_model_get_visible (XfceAppfinderModel *model,
+                                  const GtkTreeIter  *iter,
+                                  const gchar        *category,
+                                  const gchar        *string)
+{
+  ModelItem *item;
+
+  g_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
+  g_return_val_if_fail (iter->stamp == model->stamp, FALSE);
+
+  item = ITER_GET_DATA (iter);
+
+  if (item->item != NULL)
+    {
+      g_return_val_if_fail (GARCON_IS_MENU_ITEM (item->item), FALSE);
+
+      if (category != NULL
+          && (*category == '\0'
+              || !xfce_appfinder_model_ptr_array_strcmp (item->categories, category)))
+        return FALSE;
+
+      if (string != NULL)
+        {
+          if (item->key == NULL)
+            item->key = xfce_appfinder_model_item_key (item->item);
+
+          return strstr (item->key, string) != NULL;
+        }
+    }
+  else /* command item */
+    {
+      g_return_val_if_fail (item->command != NULL, FALSE);
+
+      /* nul string will filter out the commands */
+      if (category == NULL || *category != '\0')
+        return FALSE;
+
+      if (string != NULL)
+        return strstr (item->command, string) != NULL;
+    }
+
+  return TRUE;
 }
 
 
 
 gboolean
 xfce_appfinder_model_execute (XfceAppfinderModel  *model,
-                              GtkTreeIter         *iter,
+                              const GtkTreeIter   *iter,
                               GdkScreen           *screen,
                               gboolean            *is_regular_command,
                               GError             **error)
@@ -1385,7 +1290,7 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
           item->icon_large = g_object_ref (G_OBJECT (model->command_icon_large));
         }
 
-      if (item_changed && item->visible)
+      if (item_changed)
         {
           path = gtk_tree_path_new_from_indices (idx, -1);
           ITER_INIT (iter, model->stamp, li);

@@ -35,8 +35,6 @@ typedef struct _XfceAppfinderWindow      XfceAppfinderWindow;
 
 GType      xfce_appfinder_window_get_type     (void) G_GNUC_CONST;
 
-GtkWidget *xfce_appfinder_window_new          (void) G_GNUC_MALLOC;
-
 void       xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
                                                gboolean             expanded);
 

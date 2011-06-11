@@ -27,18 +27,25 @@
 #include <libxfce4util/libxfce4util.h>
 #include <libxfce4ui/libxfce4ui.h>
 #include <gdk/gdkkeysyms.h>
+#include <xfconf/xfconf.h>
 
 #include <src/appfinder-window.h>
 #include <src/appfinder-model.h>
 #include <src/appfinder-category-model.h>
+#include <src/appfinder-private.h>
+
+
+
+#define DEFAULT_WINDOW_WIDTH   400
+#define DEFAULT_WINDOW_HEIGHT  400
+#define DEFAULT_PANED_POSITION 180
 
 
 
 static void       xfce_appfinder_window_finalize                 (GObject                     *object);
+static void       xfce_appfinder_window_unmap                    (GtkWidget                   *widget);
 static gboolean   xfce_appfinder_window_key_press_event          (GtkWidget                   *widget,
                                                                   GdkEventKey                 *event);
-static gboolean   xfce_appfinder_window_delete_event             (GtkWidget                   *widget,
-                                                                  GdkEventAny                 *event);
 static void       xfce_appfinder_window_set_padding              (GtkWidget                   *entry,
                                                                   GtkWidget                   *align);
 static void       xfce_appfinder_window_entry_changed            (XfceAppfinderWindow         *window);
@@ -62,6 +69,9 @@ static void       xfce_appfinder_window_drag_data_get            (GtkWidget     
                                                                   XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_category_changed         (GtkTreeSelection            *selection,
                                                                   XfceAppfinderWindow         *window);
+static gboolean   xfce_appfinder_window_item_visible             (GtkTreeModel                *model,
+                                                                  GtkTreeIter                 *iter,
+                                                                  gpointer                     data);
 static void       xfce_appfinder_window_item_changed             (XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_row_activated            (XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_icon_theme_changed       (XfceAppfinderWindow         *window);
@@ -78,25 +88,28 @@ struct _XfceAppfinderWindow
 {
   GtkWindow __parent__;
 
-  XfceAppfinderModel *model;
+  XfceAppfinderModel         *model;
 
   XfceAppfinderCategoryModel *category_model;
 
-  GtkEntryCompletion *completion;
+  GtkEntryCompletion         *completion;
 
-  GtkWidget *paned;
-  GtkWidget *entry;
-  GtkWidget *image;
-  GtkWidget *treeview;
+  GtkWidget                  *paned;
+  GtkWidget                  *entry;
+  GtkWidget                  *image;
+  GtkWidget                  *treeview;
 
-  GdkPixbuf *icon_find;
+  GdkPixbuf                  *icon_find;
 
-  GtkWidget *bbox;
-  GtkWidget *button_launch;
-  GtkWidget *bin_collapsed;
-  GtkWidget *bin_expanded;
+  GtkWidget                  *bbox;
+  GtkWidget                  *button_launch;
+  GtkWidget                  *bin_collapsed;
+  GtkWidget                  *bin_expanded;
 
-  gint       last_window_height;
+  gchar                      *filter_category;
+  gchar                      *filter_text;
+
+  gint                        last_window_height;
 };
 
 static const GtkTargetEntry target_list[] =
@@ -120,8 +133,8 @@ xfce_appfinder_window_class_init (XfceAppfinderWindowClass *klass)
   gobject_class->finalize = xfce_appfinder_window_finalize;
 
   gtkwidget_class = GTK_WIDGET_CLASS (klass);
+  gtkwidget_class->unmap = xfce_appfinder_window_unmap;
   gtkwidget_class->key_press_event = xfce_appfinder_window_key_press_event;
-  gtkwidget_class->delete_event = xfce_appfinder_window_delete_event;
 }
 
 
@@ -147,17 +160,21 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   GtkTreePath        *path;
   GtkEntryCompletion *completion;
   GtkIconTheme       *icon_theme;
+  XfconfChannel      *channel;
+  gint                integer;
 
-  window->last_window_height = 400;
+  channel = xfconf_channel_get ("xfce4-appfinder");
+  window->last_window_height = xfconf_channel_get_int (channel, "/LastWindowHeight", DEFAULT_WINDOW_HEIGHT);
 
-  window->model = xfce_appfinder_model_new ();
+  window->model = xfce_appfinder_model_get ();
   window->category_model = xfce_appfinder_category_model_new ();
   g_signal_connect_swapped (G_OBJECT (window->model), "categories-changed",
                             G_CALLBACK (xfce_appfinder_category_model_set_categories),
                             window->category_model);
 
   gtk_window_set_title (GTK_WINDOW (window), _("Application Finder"));
-  gtk_window_set_default_size (GTK_WINDOW (window), 500 /* todo, remember */, -1);
+  integer = xfconf_channel_get_int (channel, "/LastWindowWidth", DEFAULT_WINDOW_WIDTH);
+  gtk_window_set_default_size (GTK_WINDOW (window), integer, -1);
   gtk_window_set_icon_name (GTK_WINDOW (window), GTK_STOCK_EXECUTE);
 
   vbox = gtk_vbox_new (FALSE, 6);
@@ -209,7 +226,9 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   window->paned = pane = gtk_hpaned_new ();
   gtk_box_pack_start (GTK_BOX (vbox), pane, TRUE, TRUE, 0);
-  gtk_paned_set_position (GTK_PANED (pane), 180 /* todo remember */);
+  integer = xfconf_channel_get_int (channel, "/LastPanedPosition", DEFAULT_PANED_POSITION);
+  gtk_paned_set_position (GTK_PANED (pane), integer);
+  g_object_set (G_OBJECT (pane), "position-set", TRUE, NULL);
 
   scroll = gtk_scrolled_window_new (NULL, NULL);
   gtk_paned_add1 (GTK_PANED (pane), scroll);
@@ -257,7 +276,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_widget_show (scroll);
 
   filter_model = gtk_tree_model_filter_new (GTK_TREE_MODEL (window->model), NULL);
-  gtk_tree_model_filter_set_visible_column (GTK_TREE_MODEL_FILTER (filter_model), XFCE_APPFINDER_MODEL_COLUMN_VISIBLE);
+  gtk_tree_model_filter_set_visible_func (GTK_TREE_MODEL_FILTER (filter_model), xfce_appfinder_window_item_visible, window, NULL);
 
   window->treeview = treeview = gtk_tree_view_new_with_model (filter_model);
   gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (treeview), FALSE);
@@ -305,7 +324,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   button = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
   gtk_container_add (GTK_CONTAINER (bbox), button);
-  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (gtk_main_quit), NULL);
+  g_signal_connect_swapped (G_OBJECT (button), "clicked", G_CALLBACK (gtk_widget_destroy), window);
   gtk_widget_show (button);
 
   window->button_launch = button = gtk_button_new_with_mnemonic ("La_unch");
@@ -335,7 +354,33 @@ xfce_appfinder_window_finalize (GObject *object)
   g_object_unref (G_OBJECT (window->completion));
   g_object_unref (G_OBJECT (window->icon_find));
 
+  g_free (window->filter_category);
+  g_free (window->filter_text);
+
   (*G_OBJECT_CLASS (xfce_appfinder_window_parent_class)->finalize) (object);
+}
+
+
+
+static void
+xfce_appfinder_window_unmap (GtkWidget *widget)
+{
+  XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (widget);
+  gint                 width, height;
+  gint                 position;
+  XfconfChannel       *channel;
+
+  position = gtk_paned_get_position (GTK_PANED (window->paned));
+  gtk_window_get_size (GTK_WINDOW (window), &width, &height);
+  if (!gtk_widget_get_visible (window->paned))
+    height = window->last_window_height;
+
+  (*GTK_WIDGET_CLASS (xfce_appfinder_window_parent_class)->unmap) (widget);
+
+  channel = xfconf_channel_get ("xfce4-appfinder");
+  xfconf_channel_set_int (channel, "/LastWindowHeight", height);
+  xfconf_channel_set_int (channel, "/LastWindowWidth", width);
+  xfconf_channel_set_int (channel, "/LastPanedPosition", position);
 }
 
 
@@ -346,22 +391,11 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
 {
   if (event->keyval == GDK_Escape)
     {
-      gtk_main_quit ();
+      gtk_widget_destroy (widget);
       return TRUE;
     }
 
   return  (*GTK_WIDGET_CLASS (xfce_appfinder_window_parent_class)->key_press_event) (widget, event);
-}
-
-
-
-static gboolean
-xfce_appfinder_window_delete_event (GtkWidget   *widget,
-                                    GdkEventAny *event)
-{
-  /* destroy the window after the main loop */
-  gtk_main_quit ();
-  return TRUE;
 }
 
 
@@ -396,14 +430,30 @@ xfce_appfinder_window_set_padding (GtkWidget *entry,
 static void
 xfce_appfinder_window_entry_changed (XfceAppfinderWindow *window)
 {
-  const gchar *text;
-  GdkPixbuf   *pixbuf;
+  const gchar  *text;
+  GdkPixbuf    *pixbuf;
+  gchar        *normalized;
+  GtkTreeModel *model;
 
   text = gtk_entry_get_text (GTK_ENTRY (window->entry));
 
   if (gtk_widget_get_visible (window->paned))
     {
-      xfce_appfinder_model_filter_string (window->model, text);
+      g_free (window->filter_text);
+
+      if (IS_STRING (text))
+        {
+          normalized = g_utf8_normalize (text, -1, G_NORMALIZE_ALL);
+          window->filter_text = g_utf8_casefold (normalized, -1);
+          g_free (normalized);
+        }
+      else
+        {
+          window->filter_text = NULL;
+        }
+
+      model = gtk_tree_view_get_model (GTK_TREE_VIEW (window->treeview));
+      gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (model));
     }
   else
     {
@@ -547,15 +597,33 @@ xfce_appfinder_window_category_changed (GtkTreeSelection    *selection,
     {
       gtk_tree_model_get (model, &iter, XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_NAME, &category, -1);
 
-      if (g_utf8_collate (category, _("All Applications")) == 0)
-        xfce_appfinder_model_filter_category (window->model, NULL);
-      else if (g_utf8_collate (category, _("Commands History")) == 0)
-        xfce_appfinder_model_filter_category (window->model, "\0");
+      g_free (window->filter_category);
+
+      if (g_strcmp0 (category, _("All Applications")) == 0)
+        window->filter_category = NULL;
+      else if (g_strcmp0 (category, _("Commands History")) == 0)
+        window->filter_category = g_strdup ("\0");
       else
-        xfce_appfinder_model_filter_category (window->model, category);
+        window->filter_category = g_strdup (category);
 
       g_free (category);
+
+      model = gtk_tree_view_get_model (GTK_TREE_VIEW (window->treeview));
+      gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (model));
     }
+}
+
+
+
+static gboolean
+xfce_appfinder_window_item_visible (GtkTreeModel *model,
+                                    GtkTreeIter  *iter,
+                                    gpointer      data)
+{
+  XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (data);
+
+  return xfce_appfinder_model_get_visible (XFCE_APPFINDER_MODEL (model), iter,
+                                           window->filter_category, window->filter_text);
 }
 
 
@@ -726,15 +794,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window)
     }
 
   if (result)
-    gtk_main_quit ();
-}
-
-
-
-GtkWidget *
-xfce_appfinder_window_new (void)
-{
-  return g_object_new (XFCE_TYPE_APPFINDER_WINDOW, NULL);
+    gtk_widget_destroy (GTK_WIDGET (window));
 }
 
 
