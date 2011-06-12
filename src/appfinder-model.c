@@ -26,7 +26,6 @@
 
 #include <libxfce4util/libxfce4util.h>
 #include <libxfce4ui/libxfce4ui.h>
-#include <garcon/garcon.h>
 
 #include <src/appfinder-model.h>
 #include <src/appfinder-private.h>
@@ -68,8 +67,11 @@ static gboolean           xfce_appfinder_model_iter_nth_child        (GtkTreeMod
 static gboolean           xfce_appfinder_model_iter_parent           (GtkTreeModel             *tree_model,
                                                                       GtkTreeIter              *iter,
                                                                       GtkTreeIter              *child);
+static void               xfce_appfinder_model_menu_changed          (GarconMenu               *menu,
+                                                                      XfceAppfinderModel       *model);
 static gpointer           xfce_appfinder_model_collect_thread        (gpointer                  user_data);
-static void               xfce_appfinder_model_item_free             (gpointer                  data);
+static void               xfce_appfinder_model_item_free             (gpointer                  data,
+                                                                      XfceAppfinderModel       *model);
 
 
 
@@ -80,22 +82,26 @@ struct _XfceAppfinderModelClass
 
 struct _XfceAppfinderModel
 {
-  GObject            __parent__;
-  gint               stamp;
+  GObject              __parent__;
+  gint                 stamp;
 
-  GSList            *items;
-  GHashTable        *items_hash;
-  GarconMenu        *menu;
+  GSList              *items;
+  GHashTable          *items_hash;
 
-  GdkPixbuf         *command_icon_small;
-  GdkPixbuf         *command_icon_large;
+  GarconMenu          *menu;
 
-  guint              collect_idle_id;
-  GSList            *collect_items;
-  GSList            *collect_categories;
-  GThread           *collect_thread;
-  volatile gboolean  collect_cancelled;
-  GHashTable        *collect_desktop_ids;
+  GdkPixbuf           *command_icon_small;
+  GdkPixbuf           *command_icon_large;
+  GarconMenuDirectory *command_category;
+
+  GSList              *categories;
+
+  guint                collect_idle_id;
+  GSList              *collect_items;
+  GSList              *collect_categories;
+  GThread             *collect_thread;
+  volatile gboolean    collect_cancelled;
+  GHashTable          *collect_desktop_ids;
 };
 
 typedef struct
@@ -157,6 +163,7 @@ xfce_appfinder_model_init (XfceAppfinderModel *model)
   model->items_hash = g_hash_table_new (g_str_hash, g_str_equal);
   model->command_icon_small = xfce_appfinder_model_load_pixbuf (GTK_STOCK_EXECUTE, ICON_SMALL);
   model->command_icon_large = xfce_appfinder_model_load_pixbuf (GTK_STOCK_EXECUTE, ICON_LARGE);
+  model->command_category = xfce_appfinder_model_get_command_category ();
 
   model->menu = garcon_menu_new_applications ();
   model->collect_thread = g_thread_create (xfce_appfinder_model_collect_thread, model, TRUE, NULL);
@@ -195,13 +202,21 @@ xfce_appfinder_model_finalize (GObject *object)
   /* cancel any pending collect idle source */
   if (G_UNLIKELY (model->collect_idle_id != 0))
     g_source_remove (model->collect_idle_id);
-  g_slist_free (model->collect_items);
   g_slist_free (model->collect_categories);
 
+  g_signal_handlers_disconnect_by_func (G_OBJECT (model->menu),
+      G_CALLBACK (xfce_appfinder_model_menu_changed), model);
   g_object_unref (G_OBJECT (model->menu));
 
-  g_slist_foreach (model->items, (GFunc) xfce_appfinder_model_item_free, NULL);
+  g_slist_foreach (model->collect_items, (GFunc) xfce_appfinder_model_item_free, model);
+  g_slist_free (model->collect_items);
+  g_slist_foreach (model->items, (GFunc) xfce_appfinder_model_item_free, model);
   g_slist_free (model->items);
+
+  g_slist_foreach (model->collect_categories, (GFunc) xfce_appfinder_model_category_free, NULL);
+  g_slist_free (model->collect_categories);
+  g_slist_foreach (model->categories, (GFunc) xfce_appfinder_model_category_free, NULL);
+  g_slist_free (model->categories);
 
   if (model->collect_desktop_ids != NULL)
     g_hash_table_destroy (model->collect_desktop_ids);
@@ -209,6 +224,7 @@ xfce_appfinder_model_finalize (GObject *object)
 
   g_object_unref (G_OBJECT (model->command_icon_large));
   g_object_unref (G_OBJECT (model->command_icon_small));
+  g_object_unref (G_OBJECT (model->command_category));
 
   APPFINDER_DEBUG ("model cleared");
 
@@ -516,6 +532,7 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
   GtkTreePath        *path;
   GtkTreeIter         iter;
   GSList             *li, *lnext;
+  GSList             *tmp;
 
   g_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
   g_return_val_if_fail (model->items == NULL, FALSE);
@@ -553,10 +570,14 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
   /* signal new categories */
   if (model->collect_categories != NULL)
     {
-      g_signal_emit (G_OBJECT (model), model_signals[CATEGORIES_CHANGED], 0,
-                     model->collect_categories);
-      g_slist_free (model->collect_categories);
+      tmp = model->categories;
+      model->categories = model->collect_categories;
       model->collect_categories = NULL;
+
+      g_signal_emit (G_OBJECT (model), model_signals[CATEGORIES_CHANGED], 0, model->categories);
+
+      g_slist_foreach (tmp, (GFunc) xfce_appfinder_model_category_free, NULL);
+      g_slist_free (tmp);
     }
 
   GDK_THREADS_LEAVE ();
@@ -597,41 +618,6 @@ xfce_appfinder_model_item_compare (gconstpointer a,
 
   /* sort custom commands */
   return g_utf8_collate (item_a->command, item_b->command);
-}
-
-
-
-static gint
-xfce_appfinder_model_category_compare (gconstpointer a,
-                                       gconstpointer b)
-{
-  g_return_val_if_fail (GARCON_IS_MENU_DIRECTORY (a), 0);
-  g_return_val_if_fail (GARCON_IS_MENU_DIRECTORY (b), 0);
-
-  return g_utf8_collate (garcon_menu_directory_get_name (GARCON_MENU_DIRECTORY (a)),
-                         garcon_menu_directory_get_name (GARCON_MENU_DIRECTORY (b)));
-}
-
-
-
-static void
-xfce_appfinder_model_item_free (gpointer data)
-{
-  ModelItem *item = data;
-
-  if (item->item != NULL)
-    g_object_unref (G_OBJECT (item->item));
-  if (item->icon_small != NULL)
-    g_object_unref (G_OBJECT (item->icon_small));
-  if (item->icon_large != NULL)
-    g_object_unref (G_OBJECT (item->icon_large));
-  if (item->categories != NULL)
-    g_ptr_array_unref (item->categories);
-  g_free (item->abstract);
-  g_free (item->key);
-  g_free (item->command);
-  g_free (item->tooltip);
-  g_slice_free (ModelItem, item);
 }
 
 
@@ -697,6 +683,8 @@ xfce_appfinder_model_item_new (GarconMenuItem *menu_item)
         item->command = g_strdup (command);
     }
 
+  item->key = xfce_appfinder_model_item_key (menu_item);
+
   return item;
 }
 
@@ -725,7 +713,7 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
           APPFINDER_DEBUG ("update item %s", garcon_menu_item_get_desktop_id (menu_item));
 
           g_hash_table_remove (model->items_hash, item->command);
-          xfce_appfinder_model_item_free (item);
+          xfce_appfinder_model_item_free (item, model);
 
           item = xfce_appfinder_model_item_new (menu_item);
           item->categories = categories;
@@ -748,22 +736,72 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
 
 
 
-static gboolean
-xfce_appfinder_model_ptr_array_strcmp (GPtrArray   *array,
-                                       const gchar *str1)
+static void
+xfce_appfinder_model_item_free (gpointer            data,
+                                XfceAppfinderModel *model)
 {
-  guint        i;
-  const gchar *str2;
+  ModelItem *item = data;
 
-  if (array != NULL && str1 != NULL)
+  if (item->item != NULL)
     {
-      for (i = 0; i < array->len; i++)
-        {
-          str2 = g_ptr_array_index (array, i);
-          if (str2 != NULL && strcmp (str1, str2) == 0)
-            return TRUE;
-        }
+      g_signal_handlers_disconnect_by_func (G_OBJECT (item->item),
+          G_CALLBACK (xfce_appfinder_model_item_changed), model);
+      g_object_unref (G_OBJECT (item->item));
     }
+  if (item->icon_small != NULL)
+    g_object_unref (G_OBJECT (item->icon_small));
+  if (item->icon_large != NULL)
+    g_object_unref (G_OBJECT (item->icon_large));
+  if (item->categories != NULL)
+    g_ptr_array_unref (item->categories);
+  g_free (item->abstract);
+  g_free (item->key);
+  g_free (item->command);
+  g_free (item->tooltip);
+  g_slice_free (ModelItem, item);
+}
+
+
+
+
+static gint
+xfce_appfinder_model_category_compare (gconstpointer a,
+                                       gconstpointer b)
+{
+  const CategoryItem *cat_a = a;
+  const CategoryItem *cat_b = b;
+
+  g_return_val_if_fail (GARCON_IS_MENU_DIRECTORY (cat_a->directory), 0);
+  g_return_val_if_fail (GARCON_IS_MENU_DIRECTORY (cat_b->directory), 0);
+
+  return g_utf8_collate (garcon_menu_directory_get_name (cat_a->directory),
+                         garcon_menu_directory_get_name (cat_b->directory));
+}
+
+
+
+void
+xfce_appfinder_model_category_free (CategoryItem *item)
+{
+  if (item->directory != NULL)
+    g_object_unref (G_OBJECT (item->directory));
+  if (item->pixbuf != NULL)
+    g_object_unref (G_OBJECT (item->pixbuf));
+  g_slice_free (CategoryItem, item);
+}
+
+
+
+static gboolean
+xfce_appfinder_model_ptr_array_find (GPtrArray     *array,
+                                     gconstpointer  data)
+{
+  guint i;
+
+  if (array != NULL && data != NULL)
+    for (i = 0; i < array->len; i++)
+      if (g_ptr_array_index (array, i) == data)
+        return TRUE;
 
   return FALSE;
 }
@@ -771,17 +809,19 @@ xfce_appfinder_model_ptr_array_strcmp (GPtrArray   *array,
 
 
 static gboolean
-xfce_appfinder_model_collect_items (XfceAppfinderModel *model,
-                                    GarconMenu         *menu,
-                                    const gchar        *category)
+xfce_appfinder_model_collect_items (XfceAppfinderModel  *model,
+                                    GarconMenu          *menu,
+                                    GarconMenuDirectory *category)
 {
   GList               *elements, *li;
   GarconMenuDirectory *directory;
   ModelItem           *item;
   gboolean             has_items = FALSE;
   const gchar         *desktop_id;
+  CategoryItem        *citem;
 
   g_return_val_if_fail (GARCON_IS_MENU (menu), FALSE);
+  g_return_val_if_fail (category == NULL || GARCON_IS_MENU_DIRECTORY (category), FALSE);
 
   directory = garcon_menu_get_directory (menu);
   if (directory != NULL)
@@ -789,8 +829,9 @@ xfce_appfinder_model_collect_items (XfceAppfinderModel *model,
       if (!garcon_menu_directory_get_visible (directory))
         return FALSE;
 
+      /* this way we only have two levels */
       if (category == NULL)
-        category = garcon_menu_directory_get_name (directory);
+        category = directory;
     }
 
   /* collect all the elements in this menu and its sub menus */
@@ -808,8 +849,9 @@ xfce_appfinder_model_collect_items (XfceAppfinderModel *model,
             {
               item = xfce_appfinder_model_item_new (li->data);
 
-              item->categories = g_ptr_array_new_with_free_func (g_free);
-              g_ptr_array_add (item->categories, g_strdup (category));
+              item->categories = g_ptr_array_new_with_free_func (g_object_unref);
+              if (category != NULL)
+                g_ptr_array_add (item->categories, g_object_ref (G_OBJECT (category)));
 
               model->collect_items = g_slist_prepend (model->collect_items, item);
               g_hash_table_insert (model->collect_desktop_ids, (gchar *) desktop_id, item);
@@ -819,10 +861,11 @@ xfce_appfinder_model_collect_items (XfceAppfinderModel *model,
               g_signal_connect (G_OBJECT (item->item), "changed",
                   G_CALLBACK (xfce_appfinder_model_item_changed), model);
             }
-          else if (!xfce_appfinder_model_ptr_array_strcmp (item->categories, category))
+          else if (category != NULL
+                   && !xfce_appfinder_model_ptr_array_find (item->categories, category))
             {
               /* add category to existing item */
-              g_ptr_array_add (item->categories, g_strdup (category));
+              g_ptr_array_add (item->categories, g_object_ref (G_OBJECT (category)));
               APPFINDER_DEBUG ("%s is in %d categories", desktop_id, item->categories->len);
             }
 
@@ -836,9 +879,12 @@ xfce_appfinder_model_collect_items (XfceAppfinderModel *model,
     }
   g_list_free (elements);
 
-  if (directory != NULL
-      && has_items)
-    model->collect_categories = g_slist_prepend (model->collect_categories, directory);
+  if (directory != NULL && has_items)
+    {
+      citem = g_slice_new0 (CategoryItem);
+      citem->directory = g_object_ref (G_OBJECT (directory));
+      model->collect_categories = g_slist_prepend (model->collect_categories, citem);
+    }
 
   return has_items;
 }
@@ -976,8 +1022,8 @@ xfce_appfinder_model_get (void)
   else
     {
       model = g_object_new (XFCE_TYPE_APPFINDER_MODEL, NULL);
-      g_message ("new model");
       g_object_add_weak_pointer (G_OBJECT (model), (gpointer) &model);
+      APPFINDER_DEBUG ("allocate new model");
     }
 
   return model;
@@ -985,16 +1031,27 @@ xfce_appfinder_model_get (void)
 
 
 
+GSList *
+xfce_appfinder_model_get_categories (XfceAppfinderModel *model)
+{
+  g_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), NULL);
+  return model->categories;
+}
+
+
+
 gboolean
-xfce_appfinder_model_get_visible (XfceAppfinderModel *model,
-                                  const GtkTreeIter  *iter,
-                                  const gchar        *category,
-                                  const gchar        *string)
+xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
+                                  const GtkTreeIter         *iter,
+                                  const GarconMenuDirectory *category,
+                                  const gchar               *string)
 {
   ModelItem *item;
 
   g_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
   g_return_val_if_fail (iter->stamp == model->stamp, FALSE);
+  g_return_val_if_fail (category == NULL || GARCON_IS_MENU_DIRECTORY (category), FALSE);
+  g_return_val_if_fail (GARCON_IS_MENU_DIRECTORY (model->command_category), FALSE);
 
   item = ITER_GET_DATA (iter);
 
@@ -1003,24 +1060,18 @@ xfce_appfinder_model_get_visible (XfceAppfinderModel *model,
       g_return_val_if_fail (GARCON_IS_MENU_ITEM (item->item), FALSE);
 
       if (category != NULL
-          && (*category == '\0'
-              || !xfce_appfinder_model_ptr_array_strcmp (item->categories, category)))
+          && !xfce_appfinder_model_ptr_array_find (item->categories, category))
         return FALSE;
 
-      if (string != NULL)
-        {
-          if (item->key == NULL)
-            item->key = xfce_appfinder_model_item_key (item->item);
-
-          return strstr (item->key, string) != NULL;
-        }
+      if (string != NULL
+          && item->key != NULL)
+        return strstr (item->key, string) != NULL;
     }
   else /* command item */
     {
       g_return_val_if_fail (item->command != NULL, FALSE);
 
-      /* nul string will filter out the commands */
-      if (category == NULL || *category != '\0')
+      if (category != model->command_category)
         return FALSE;
 
       if (string != NULL)
@@ -1298,4 +1349,27 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
           gtk_tree_path_free (path);
         }
     }
+}
+
+
+
+GarconMenuDirectory *
+xfce_appfinder_model_get_command_category (void)
+{
+  static GarconMenuDirectory *category = NULL;
+
+  if (G_LIKELY (category != NULL))
+    {
+      g_object_ref (G_OBJECT (category));
+    }
+  else
+    {
+      category = g_object_new (GARCON_TYPE_MENU_DIRECTORY,
+                               "name", _("Commands History"),
+                               "icon-name", GTK_STOCK_EXECUTE,
+                               NULL);
+      g_object_add_weak_pointer (G_OBJECT (category), (gpointer) &category);
+    }
+
+  return category;
 }

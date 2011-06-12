@@ -106,7 +106,7 @@ struct _XfceAppfinderWindow
   GtkWidget                  *bin_collapsed;
   GtkWidget                  *bin_expanded;
 
-  gchar                      *filter_category;
+  GarconMenuDirectory        *filter_category;
   gchar                      *filter_text;
 
   gint                        last_window_height;
@@ -162,12 +162,18 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   GtkIconTheme       *icon_theme;
   XfconfChannel      *channel;
   gint                integer;
+  GSList             *categories;
 
   channel = xfconf_channel_get ("xfce4-appfinder");
   window->last_window_height = xfconf_channel_get_int (channel, "/LastWindowHeight", DEFAULT_WINDOW_HEIGHT);
 
-  window->model = xfce_appfinder_model_get ();
   window->category_model = xfce_appfinder_category_model_new ();
+  window->model = xfce_appfinder_model_get ();
+
+  /* load categories in the model */
+  categories = xfce_appfinder_model_get_categories (window->model);
+  if (categories != NULL)
+    xfce_appfinder_category_model_set_categories (window->category_model, categories);
   g_signal_connect_swapped (G_OBJECT (window->model), "categories-changed",
                             G_CALLBACK (xfce_appfinder_category_model_set_categories),
                             window->category_model);
@@ -354,7 +360,8 @@ xfce_appfinder_window_finalize (GObject *object)
   g_object_unref (G_OBJECT (window->completion));
   g_object_unref (G_OBJECT (window->icon_find));
 
-  g_free (window->filter_category);
+  if (window->filter_category != NULL)
+    g_object_unref (G_OBJECT (window->filter_category));
   g_free (window->filter_text);
 
   (*G_OBJECT_CLASS (xfce_appfinder_window_parent_class)->finalize) (object);
@@ -453,6 +460,7 @@ xfce_appfinder_window_entry_changed (XfceAppfinderWindow *window)
         }
 
       model = gtk_tree_view_get_model (GTK_TREE_VIEW (window->treeview));
+      APPFINDER_DEBUG ("refilter entry");
       gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (model));
     }
   else
@@ -589,26 +597,24 @@ static void
 xfce_appfinder_window_category_changed (GtkTreeSelection    *selection,
                                         XfceAppfinderWindow *window)
 {
-  GtkTreeIter   iter;
-  GtkTreeModel *model;
-  gchar        *category;
+  GtkTreeIter          iter;
+  GtkTreeModel        *model;
+  GarconMenuDirectory *category;
 
   if (gtk_tree_selection_get_selected (selection, &model, &iter))
     {
-      gtk_tree_model_get (model, &iter, XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_NAME, &category, -1);
+      gtk_tree_model_get (model, &iter, XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_DIRECTORY, &category, -1);
 
-      g_free (window->filter_category);
+      if (window->filter_category != NULL)
+        g_object_unref (G_OBJECT (window->filter_category));
 
-      if (g_strcmp0 (category, _("All Applications")) == 0)
+      if (category == NULL)
         window->filter_category = NULL;
-      else if (g_strcmp0 (category, _("Commands History")) == 0)
-        window->filter_category = g_strdup ("\0");
       else
-        window->filter_category = g_strdup (category);
-
-      g_free (category);
+        window->filter_category = category;
 
       model = gtk_tree_view_get_model (GTK_TREE_VIEW (window->treeview));
+      APPFINDER_DEBUG ("refilter category");
       gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (model));
     }
 }
@@ -853,7 +859,7 @@ xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
   if (completion != NULL)
     gtk_editable_delete_selection (GTK_EDITABLE (window->entry));
   gtk_entry_set_completion (GTK_ENTRY (window->entry), expanded ? NULL : window->completion);
-  if (!expanded)
+  if (!expanded && gtk_entry_get_text_length (GTK_ENTRY (window->entry)) > 0)
     gtk_entry_completion_insert_prefix (window->completion);
 
   /* update state */

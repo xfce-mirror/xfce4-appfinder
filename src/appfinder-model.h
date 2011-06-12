@@ -20,6 +20,7 @@
 #define __XFCE_APPFINDER_MODEL_H__
 
 #include <gtk/gtk.h>
+#include <garcon/garcon.h>
 
 G_BEGIN_DECLS
 
@@ -44,34 +45,47 @@ enum
   XFCE_APPFINDER_MODEL_N_COLUMNS,
 };
 
+typedef struct
+{
+  GarconMenuDirectory *directory;
+  GdkPixbuf           *pixbuf;
+}
+CategoryItem;
 
 
-GType               xfce_appfinder_model_get_type             (void) G_GNUC_CONST;
 
-XfceAppfinderModel *xfce_appfinder_model_get                  (void) G_GNUC_MALLOC;
+GType                xfce_appfinder_model_get_type             (void) G_GNUC_CONST;
 
-gboolean            xfce_appfinder_model_get_visible          (XfceAppfinderModel  *model,
-                                                               const GtkTreeIter   *iter,
-                                                               const gchar         *category,
-                                                               const gchar         *string);
+XfceAppfinderModel  *xfce_appfinder_model_get                  (void) G_GNUC_MALLOC;
 
-gboolean            xfce_appfinder_model_execute              (XfceAppfinderModel  *model,
-                                                               const GtkTreeIter   *iter,
-                                                               GdkScreen           *screen,
-                                                               gboolean            *is_regular_command,
-                                                               GError             **error);
+GSList              *xfce_appfinder_model_get_categories       (XfceAppfinderModel        *model);
 
-GdkPixbuf          *xfce_appfinder_model_load_pixbuf          (const gchar         *icon_name,
-                                                               gint                 size) G_GNUC_MALLOC;
+gboolean             xfce_appfinder_model_get_visible          (XfceAppfinderModel        *model,
+                                                                const GtkTreeIter         *iter,
+                                                                const GarconMenuDirectory *category,
+                                                                const gchar               *string);
 
-gboolean            xfce_appfinder_model_save_command         (XfceAppfinderModel  *model,
-                                                               const gchar         *command,
-                                                               GError             **error);
+gboolean             xfce_appfinder_model_execute              (XfceAppfinderModel        *model,
+                                                                const GtkTreeIter         *iter,
+                                                                GdkScreen                 *screen,
+                                                                gboolean                  *is_regular_command,
+                                                                GError                   **error);
 
-GdkPixbuf          *xfce_appfinder_model_get_icon_for_command (XfceAppfinderModel  *model,
-                                                               const gchar         *command);
+GdkPixbuf           *xfce_appfinder_model_load_pixbuf          (const gchar               *icon_name,
+                                                                gint                       size) G_GNUC_MALLOC;
 
-void                xfce_appfinder_model_icon_theme_changed   (XfceAppfinderModel  *model);
+gboolean             xfce_appfinder_model_save_command         (XfceAppfinderModel        *model,
+                                                                const gchar               *command,
+                                                                GError                   **error);
+
+GdkPixbuf           *xfce_appfinder_model_get_icon_for_command (XfceAppfinderModel        *model,
+                                                                const gchar               *command);
+
+void                 xfce_appfinder_model_icon_theme_changed   (XfceAppfinderModel        *model);
+
+GarconMenuDirectory *xfce_appfinder_model_get_command_category (void);
+
+void                 xfce_appfinder_model_category_free        (CategoryItem              *category);
 
 G_END_DECLS
 

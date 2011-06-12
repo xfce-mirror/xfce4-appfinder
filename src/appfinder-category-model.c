@@ -25,7 +25,6 @@
 #endif
 
 #include <libxfce4util/libxfce4util.h>
-#include <garcon/garcon.h>
 
 #include <src/appfinder-model.h>
 #include <src/appfinder-category-model.h>
@@ -64,7 +63,6 @@ static gboolean           xfce_appfinder_category_model_iter_nth_child        (G
 static gboolean           xfce_appfinder_category_model_iter_parent           (GtkTreeModel             *tree_model,
                                                                                GtkTreeIter              *iter,
                                                                                GtkTreeIter              *child);
-static void               xfce_appfinder_category_item_free                   (gpointer                  data);
 
 
 
@@ -75,18 +73,13 @@ struct _XfceAppfinderCategoryModelClass
 
 struct _XfceAppfinderCategoryModel
 {
-  GObject            __parent__;
-  gint               stamp;
+  GObject              __parent__;
+  gint                 stamp;
 
-  GSList *categories;
+  GSList              *categories;
+
+  GarconMenuDirectory *all_applications;
 };
-
-typedef struct
-{
-  GarconMenuDirectory *directory;
-  GdkPixbuf           *pixbuf;
-}
-Categoryitem;
 
 
 
@@ -109,28 +102,11 @@ xfce_appfinder_category_model_class_init (XfceAppfinderCategoryModelClass *klass
 static void
 xfce_appfinder_category_model_init (XfceAppfinderCategoryModel *model)
 {
-  Categoryitem *item;
-
   /* generate a unique stamp */
   model->stamp = g_random_int ();
-
-    /* separator */
-  item = g_slice_new0 (Categoryitem);
-  model->categories = g_slist_prepend (model->categories, item);
-
-  item = g_slice_new0 (Categoryitem);
-  item->directory = g_object_new (GARCON_TYPE_MENU_DIRECTORY,
-                                  "name", _("Commands History"),
-                                  "icon-name", GTK_STOCK_EXECUTE,
-                                  NULL);
-  model->categories = g_slist_prepend (model->categories, item);
-
-  item = g_slice_new0 (Categoryitem);
-  item->directory = g_object_new (GARCON_TYPE_MENU_DIRECTORY,
-                                  "name", _("All Applications"),
-                                  "icon-name", "applications-other",
-                                  NULL);
-  model->categories = g_slist_prepend (model->categories, item);
+  model->all_applications = g_object_new (GARCON_TYPE_MENU_DIRECTORY,
+                                          "name", _("All Applications"),
+                                          "icon-name", "applications-other", NULL);
 }
 
 
@@ -158,9 +134,15 @@ static void
 xfce_appfinder_category_model_finalize (GObject *object)
 {
   XfceAppfinderCategoryModel *model = XFCE_APPFINDER_CATEGORY_MODEL (object);
+  GSList                     *li;
+  guint                       n;
 
-  g_slist_foreach (model->categories, (GFunc) xfce_appfinder_category_item_free, NULL);
+  /* clear the first three items */
+  for (li = model->categories, n = 0; li != NULL && n < 3; li = li->next, n++)
+    xfce_appfinder_model_category_free (li->data);
   g_slist_free (model->categories);
+
+  g_object_unref (G_OBJECT (model->all_applications));
 
   (*G_OBJECT_CLASS (xfce_appfinder_category_model_parent_class)->finalize) (object);
 }
@@ -194,6 +176,9 @@ xfce_appfinder_category_model_get_column_type (GtkTreeModel *tree_model,
 
     case XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_ICON:
       return GDK_TYPE_PIXBUF;
+
+    case XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_DIRECTORY:
+      return GARCON_TYPE_MENU_DIRECTORY;
 
     default:
       g_assert_not_reached ();
@@ -248,7 +233,7 @@ xfce_appfinder_category_model_get_value (GtkTreeModel *tree_model,
                                          GValue       *value)
 {
   XfceAppfinderCategoryModel *model = XFCE_APPFINDER_CATEGORY_MODEL (tree_model);
-  Categoryitem               *item;
+  CategoryItem               *item;
   const gchar                *icon_name;
 
   g_return_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model));
@@ -275,6 +260,13 @@ xfce_appfinder_category_model_get_value (GtkTreeModel *tree_model,
 
       g_value_init (value, GDK_TYPE_PIXBUF);
       g_value_set_object (value, item->pixbuf);
+      break;
+
+    case XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_DIRECTORY:
+      g_value_init (value, G_TYPE_OBJECT);
+      /* return null for all applications */
+      if (item->directory != model->all_applications)
+        g_value_set_object (value, item->directory);
       break;
 
     default:
@@ -373,20 +365,6 @@ xfce_appfinder_category_model_iter_parent (GtkTreeModel *tree_model,
 
 
 
-static void
-xfce_appfinder_category_item_free (gpointer data)
-{
-  Categoryitem *item = data;
-
-  if (item->directory != NULL)
-    g_object_unref (G_OBJECT (item->directory));
-  if (item->pixbuf != NULL)
-    g_object_unref (G_OBJECT (item->pixbuf));
-  g_slice_free (Categoryitem, item);
-}
-
-
-
 XfceAppfinderCategoryModel *
 xfce_appfinder_category_model_new (void)
 {
@@ -399,7 +377,7 @@ void
 xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
                                               GSList                     *categories)
 {
-  Categoryitem *item;
+  CategoryItem *item;
   GSList       *li, *lnext;
   gint          idx;
   GtkTreePath  *path;
@@ -407,36 +385,57 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
 
   APPFINDER_DEBUG ("insert %d categories", g_slist_length (categories));
 
-  /* remove shortcuts after hard-coded before inserting */
-  li = g_slist_nth (model->categories, 3);
-  for (idx = 3; li != NULL; li = lnext, idx++)
+  /* remove items from the model */
+  for (li = model->categories, idx = 0; li != NULL; li = lnext, idx++)
     {
       lnext = li->next;
-      item = li->data;
 
       model->categories = g_slist_delete_link (model->categories, li);
+
+      /* remove the items we own */
+      if (idx < 3)
+        xfce_appfinder_model_category_free (li->data);
 
       path = gtk_tree_path_new_from_indices (idx, -1);
       gtk_tree_model_row_deleted (GTK_TREE_MODEL (model), path);
       gtk_tree_path_free (path);
-
-      xfce_appfinder_category_item_free (item);
     }
 
-  /* insert after the hard-coded items */
-  for (li = categories, idx = 3; li != NULL; li = li->next, idx++)
+  g_assert (model->categories == NULL);
+
+  /* separator and the main categories */
+  item = g_slice_new0 (CategoryItem);
+  model->categories = g_slist_prepend (model->categories, item);
+
+  item = g_slice_new0 (CategoryItem);
+  item->directory = xfce_appfinder_model_get_command_category ();
+  model->categories = g_slist_prepend (model->categories, item);
+
+  item = g_slice_new0 (CategoryItem);
+  item->directory = g_object_ref (G_OBJECT (model->all_applications));
+  model->categories = g_slist_prepend (model->categories, item);
+
+  /* move the categories online */
+  model->categories = g_slist_concat (model->categories, g_slist_copy (categories));
+
+  path = gtk_tree_path_new_first ();
+  for (li = model->categories; li != NULL; li = li->next)
     {
-      g_return_if_fail (GARCON_IS_MENU_DIRECTORY (li->data));
+      /* remember the next item */
+      lnext = li->next;
+      li->next = NULL;
 
-      item = g_slice_new0 (Categoryitem);
-      item->directory = g_object_ref (G_OBJECT (li->data));
-      model->categories = g_slist_append (model->categories, item);
-
-      path = gtk_tree_path_new_from_indices (idx, -1);
-      gtk_tree_model_get_iter (GTK_TREE_MODEL (model), &iter, path);
+      /* emit the "row-inserted" signal */
+      ITER_INIT (iter, model->stamp, li);
       gtk_tree_model_row_inserted (GTK_TREE_MODEL (model), path, &iter);
-      gtk_tree_path_free (path);
+
+      /* advance the path */
+      gtk_tree_path_next (path);
+
+      /* reset the next item */
+      li->next = lnext;
     }
+  gtk_tree_path_free (path);
 }
 
 
@@ -446,7 +445,7 @@ xfce_appfinder_category_model_row_separator_func (GtkTreeModel *tree_model,
                                                   GtkTreeIter  *iter,
                                                   gpointer      user_data)
 {
-  Categoryitem *item = ITER_GET_DATA (iter);
+  CategoryItem *item = ITER_GET_DATA (iter);
 
   g_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (tree_model), FALSE);
 
@@ -458,7 +457,7 @@ xfce_appfinder_category_model_row_separator_func (GtkTreeModel *tree_model,
 void
 xfce_appfinder_category_model_icon_theme_changed (XfceAppfinderCategoryModel *model)
 {
-  Categoryitem *item;
+  CategoryItem *item;
   GSList       *li;
   gint          idx;
   GtkTreeIter   iter;
