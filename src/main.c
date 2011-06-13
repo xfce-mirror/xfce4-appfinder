@@ -58,7 +58,7 @@ static gboolean  opt_version = FALSE;
 static gboolean  opt_replace = FALSE;
 static gboolean  opt_quit = FALSE;
 static gchar    *opt_filename = NULL;
-static gboolean  opt_no_daemon = FALSE;
+static gboolean  opt_disable_server = FALSE;
 static GSList   *windows = NULL;
 static gboolean  service_owner = FALSE;
 
@@ -70,7 +70,7 @@ static GOptionEntry option_entries[] =
   { "version", 'V', 0, G_OPTION_ARG_NONE, &opt_version, N_("Print version information and exit"), NULL },
   { "replace", 'r', 0, G_OPTION_ARG_NONE, &opt_replace, N_("Replace the existing service"), NULL },
   { "quit", 'q', 0, G_OPTION_ARG_NONE, &opt_quit, N_("Quit all instances"), NULL },
-  { "no-daemon", 0, 0, G_OPTION_ARG_NONE, &opt_no_daemon, N_("Do not fork to the background"), NULL },
+  { "disable-server", 0, 0, G_OPTION_ARG_NONE, &opt_disable_server, N_("Do not try to use or become a D-Bus service"), NULL },
   { G_OPTION_REMAINING, '\0', 0, G_OPTION_ARG_FILENAME, &opt_filename, NULL, NULL },
   { NULL }
 };
@@ -299,18 +299,102 @@ appfinder_daemonize (void)
 
 
 
-gint
-main (gint argc, gchar **argv)
+static DBusConnection *
+appfinder_dbus_service (const gchar *startup_id)
 {
-  GError               *error = NULL;
-  const gchar          *desktop;
+  DBusError             derror;
   DBusConnection       *dbus_connection;
   guint                 dbus_flags;
   DBusObjectPathVTable  vtable = { NULL, appfinder_dbus_message, NULL, };
   gint                  result;
-  const gchar          *startup_id;
-  DBusError             derror;
-  GSList               *windows_destroy;
+
+  /* become the serivce owner or ask the current owner to spawn an instance */
+  dbus_error_init (&derror);
+  dbus_connection = dbus_bus_get (DBUS_BUS_SESSION, &derror);
+  if (G_LIKELY (dbus_connection != NULL))
+    {
+      dbus_connection_set_exit_on_disconnect (dbus_connection, FALSE);
+
+      dbus_flags = DBUS_NAME_FLAG_DO_NOT_QUEUE | DBUS_NAME_FLAG_ALLOW_REPLACEMENT;
+      if (opt_replace)
+        dbus_flags |= DBUS_NAME_FLAG_REPLACE_EXISTING;
+
+      result = dbus_bus_request_name (dbus_connection, APPFINDER_DBUS_SERVICE, dbus_flags, &derror);
+      if (result == DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER)
+        {
+          dbus_connection_setup_with_g_main (dbus_connection, NULL);
+
+          /* watch owner changes */
+          dbus_bus_add_match (dbus_connection, "type='signal',member='NameOwnerChanged',"
+                                               "arg0='"APPFINDER_DBUS_SERVICE"'", NULL);
+
+          /* method handling for the appfinder */
+          if (dbus_connection_register_object_path (dbus_connection, APPFINDER_DBUS_PATH, &vtable, NULL)
+              && dbus_connection_add_filter (dbus_connection, appfinder_dbus_message, NULL, NULL))
+            {
+              APPFINDER_DEBUG ("registered dbus service");
+
+              /* successfully registered the service */
+              service_owner = TRUE;
+
+              /* fork to the background */
+              if (appfinder_daemonize () == -1)
+                {
+                  xfce_message_dialog (NULL, _("Application Finder"),
+                                       GTK_STOCK_DIALOG_ERROR,
+                                       _("Unable to daemonize the process"),
+                                       g_strerror (errno),
+                                       GTK_STOCK_QUIT, GTK_RESPONSE_ACCEPT,
+                                       NULL);
+
+                  _exit (EXIT_FAILURE);
+                }
+
+              APPFINDER_DEBUG ("daemonized the process");
+
+            }
+          else
+            {
+              g_warning ("Failed to register D-Bus filter or vtable");
+            }
+        }
+      else if (result == DBUS_REQUEST_NAME_REPLY_EXISTS)
+        {
+          if (appfinder_dbus_open_window (dbus_connection, startup_id, opt_filename))
+            {
+               /* successfully opened a window in the other instance */
+               dbus_connection_unref (dbus_connection);
+               _exit (EXIT_SUCCESS);
+            }
+        }
+      else
+        {
+          g_warning ("Unable to request D-Bus name: %s", derror.message);
+          dbus_error_free (&derror);
+
+          dbus_connection_unref (dbus_connection);
+          dbus_connection = NULL;
+        }
+    }
+  else
+    {
+      g_warning ("Unable to open D-Bus connection: %s", derror.message);
+      dbus_error_free (&derror);
+    }
+
+  return dbus_connection;
+}
+
+
+
+gint
+main (gint argc, gchar **argv)
+{
+  GError         *error = NULL;
+  const gchar    *desktop;
+  DBusConnection *dbus_connection = NULL;
+  const gchar    *startup_id;
+  GSList         *windows_destroy;
 
   /* set translation domain */
   xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
@@ -351,6 +435,11 @@ main (gint argc, gchar **argv)
   if (opt_quit)
     return appfinder_dbus_quit ();
 
+  /* become the serivce owner or ask the current
+   * owner to spawn an instance */
+  if (G_LIKELY (!opt_disable_server))
+    dbus_connection = appfinder_dbus_service (startup_id);
+
   /* if the value is unset, fallback to XFCE, if the
    * value is empty, allow all applications in the menu */
   desktop = g_getenv ("XDG_CURRENT_DESKTOP");
@@ -360,79 +449,12 @@ main (gint argc, gchar **argv)
     desktop = NULL;
   garcon_set_environment (desktop);
 
-  xfconf_init (NULL);
-
-  /* become the serivce owner or ask the current owner to spawn an instance */
-  dbus_error_init (&derror);
-  dbus_connection = dbus_bus_get (DBUS_BUS_SESSION, &derror);
-  if (G_LIKELY (dbus_connection != NULL))
+  if (!xfconf_init (&error))
     {
-      dbus_connection_set_exit_on_disconnect (dbus_connection, FALSE);
+       g_critical ("Failed to initialized xfconf: %s", error->message);
+       g_error_free (error);
 
-      dbus_flags = DBUS_NAME_FLAG_DO_NOT_QUEUE | DBUS_NAME_FLAG_ALLOW_REPLACEMENT;
-      if (opt_replace)
-        dbus_flags |= DBUS_NAME_FLAG_REPLACE_EXISTING;
-
-      result = dbus_bus_request_name (dbus_connection, APPFINDER_DBUS_SERVICE, dbus_flags, &derror);
-      if (result == DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER)
-        {
-          dbus_connection_setup_with_g_main (dbus_connection, NULL);
-
-          /* watch owner changes */
-          dbus_bus_add_match (dbus_connection, "type='signal',member='NameOwnerChanged',"
-                                               "arg0='"APPFINDER_DBUS_SERVICE"'", NULL);
-
-          /* method handling for the appfinder */
-          if (dbus_connection_register_object_path (dbus_connection, APPFINDER_DBUS_PATH, &vtable, NULL)
-              && dbus_connection_add_filter (dbus_connection, appfinder_dbus_message, NULL, NULL))
-            {
-              APPFINDER_DEBUG ("registered dbus service");
-
-              /* successfully registered the service */
-              service_owner = TRUE;
-
-              if (!opt_no_daemon)
-                {
-                  /* fork to the background */
-                  if (appfinder_daemonize () == -1)
-                    {
-                      xfce_message_dialog (NULL, _("Application Finder"),
-                                           GTK_STOCK_DIALOG_ERROR,
-                                           _("Unable to daemonize the process"),
-                                           g_strerror (errno),
-                                           GTK_STOCK_QUIT, GTK_RESPONSE_ACCEPT,
-                                           NULL);
-
-                      return EXIT_FAILURE;
-                    }
-
-                  APPFINDER_DEBUG ("daemonized the process");
-                }
-            }
-          else
-            {
-              g_warning ("Failed to register D-Bus filter or vtable");
-            }
-        }
-      else if (result == DBUS_REQUEST_NAME_REPLY_EXISTS)
-        {
-          if (appfinder_dbus_open_window (dbus_connection, startup_id, opt_filename))
-            {
-               /* successfully opened a window in the other instance */
-               dbus_connection_unref (dbus_connection);
-               return EXIT_SUCCESS;
-            }
-        }
-      else
-        {
-          g_warning ("Unable to request D-Bus name: %s", derror.message);
-          dbus_error_free (&derror);
-        }
-    }
-  else
-    {
-      g_warning ("Unable to open D-Bus connection: %s", derror.message);
-      dbus_error_free (&derror);
+       return EXIT_FAILURE;
     }
 
   /* create initial window */
