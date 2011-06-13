@@ -934,7 +934,7 @@ xfce_appfinder_model_menu_changed (GarconMenu         *menu,
   g_return_if_fail (GARCON_IS_MENU (menu));
   g_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
 
-
+  /* TODO */
 }
 
 
@@ -1159,6 +1159,7 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
 
   return succeed;
 }
+
 
 
 GdkPixbuf *

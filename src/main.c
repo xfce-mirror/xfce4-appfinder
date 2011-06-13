@@ -23,9 +23,16 @@
 #ifdef HAVE_STDLIB_H
 #include <stdlib.h>
 #endif
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+#ifdef HAVE_ERRNO_H
+#include <errno.h>
+#endif
 
 #include <gtk/gtk.h>
 #include <libxfce4util/libxfce4util.h>
+#include <libxfce4ui/libxfce4ui.h>
 #include <garcon/garcon.h>
 #include <xfconf/xfconf.h>
 
@@ -51,6 +58,7 @@ static gboolean  opt_version = FALSE;
 static gboolean  opt_replace = FALSE;
 static gboolean  opt_quit = FALSE;
 static gchar    *opt_filename = NULL;
+static gboolean  opt_no_daemon = FALSE;
 static GSList   *windows = NULL;
 static gboolean  service_owner = FALSE;
 
@@ -62,6 +70,7 @@ static GOptionEntry option_entries[] =
   { "version", 'V', 0, G_OPTION_ARG_NONE, &opt_version, N_("Print version information and exit"), NULL },
   { "replace", 'r', 0, G_OPTION_ARG_NONE, &opt_replace, N_("Replace the existing service"), NULL },
   { "quit", 'q', 0, G_OPTION_ARG_NONE, &opt_quit, N_("Quit all instances"), NULL },
+  { "no-daemon", 0, 0, G_OPTION_ARG_NONE, &opt_no_daemon, N_("Do not fork to the background"), NULL },
   { G_OPTION_REMAINING, '\0', 0, G_OPTION_ARG_FILENAME, &opt_filename, NULL, NULL },
   { NULL }
 };
@@ -264,6 +273,32 @@ appfinder_dbus_unregister (DBusConnection *dbus_connection)
 
 
 
+static gint
+appfinder_daemonize (void)
+{
+#ifdef HAVE_DAEMON
+  return daemon (1, 1);
+#else
+  pid_t pid;
+
+  pid = fork ();
+  if (pid < 0)
+    return -1;
+
+  if (pid > 0)
+    _exit (EXIT_SUCCESS);
+
+#ifdef HAVE_SETSID
+  if (setsid () < 0)
+    return -1;
+#endif
+
+  return 0;
+#endif
+}
+
+
+
 gint
 main (gint argc, gchar **argv)
 {
@@ -355,6 +390,24 @@ main (gint argc, gchar **argv)
 
               /* successfully registered the service */
               service_owner = TRUE;
+
+              if (!opt_no_daemon)
+                {
+                  /* fork to the background */
+                  if (appfinder_daemonize () == -1)
+                    {
+                      xfce_message_dialog (NULL, _("Application Finder"),
+                                           GTK_STOCK_DIALOG_ERROR,
+                                           _("Unable to daemonize the process"),
+                                           g_strerror (errno),
+                                           GTK_STOCK_QUIT, GTK_RESPONSE_ACCEPT,
+                                           NULL);
+
+                      return EXIT_FAILURE;
+                    }
+
+                  APPFINDER_DEBUG ("daemonized the process");
+                }
             }
           else
             {

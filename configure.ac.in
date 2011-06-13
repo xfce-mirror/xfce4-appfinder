@@ -60,7 +60,8 @@ dnl **********************************
 dnl *** Check for standard headers ***
 dnl **********************************
 AC_HEADER_STDC()
-AC_CHECK_HEADERS([stdlib.h string.h])
+AC_CHECK_HEADERS([stdlib.h string.h errno.h unistd.h])
+AC_CHECK_FUNCS([daemon setsid])
 
 dnl ******************************
 dnl *** Check for i18n support ***
