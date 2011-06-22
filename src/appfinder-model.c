@@ -148,9 +148,8 @@ xfce_appfinder_model_class_init (XfceAppfinderModelClass *klass)
                   G_TYPE_FROM_CLASS (gobject_class),
                   G_SIGNAL_RUN_LAST,
                   0, NULL, NULL,
-                  g_cclosure_marshal_VOID__POINTER,
-                  G_TYPE_NONE, 1,
-                  G_TYPE_POINTER /* GSList */);
+                  g_cclosure_marshal_VOID__VOID,
+                  G_TYPE_NONE, 0);
 }
 
 
@@ -574,7 +573,7 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
       model->categories = model->collect_categories;
       model->collect_categories = NULL;
 
-      g_signal_emit (G_OBJECT (model), model_signals[CATEGORIES_CHANGED], 0, model->categories);
+      g_signal_emit (G_OBJECT (model), model_signals[CATEGORIES_CHANGED], 0);
 
       g_slist_foreach (tmp, (GFunc) xfce_appfinder_model_category_free, NULL);
       g_slist_free (tmp);
@@ -935,6 +934,7 @@ xfce_appfinder_model_menu_changed (GarconMenu         *menu,
   g_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
 
   /* TODO */
+  APPFINDER_DEBUG ("menu changed");
 }
 
 

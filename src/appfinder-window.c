@@ -69,6 +69,7 @@ static void       xfce_appfinder_window_drag_data_get            (GtkWidget     
                                                                   XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_category_changed         (GtkTreeSelection            *selection,
                                                                   XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_category_set_categories  (XfceAppfinderWindow         *window);
 static gboolean   xfce_appfinder_window_item_visible             (GtkTreeModel                *model,
                                                                   GtkTreeIter                 *iter,
                                                                   gpointer                     data);
@@ -98,6 +99,7 @@ struct _XfceAppfinderWindow
   GtkWidget                  *entry;
   GtkWidget                  *image;
   GtkWidget                  *treeview;
+  GtkWidget                  *sidepane;
 
   GdkPixbuf                  *icon_find;
 
@@ -157,12 +159,10 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   GtkTreeSelection   *selection;
   GtkWidget          *bbox;
   GtkWidget          *button;
-  GtkTreePath        *path;
   GtkEntryCompletion *completion;
   GtkIconTheme       *icon_theme;
   XfconfChannel      *channel;
   gint                integer;
-  GSList             *categories;
 
   channel = xfconf_channel_get ("xfce4-appfinder");
   window->last_window_height = xfconf_channel_get_int (channel, "/LastWindowHeight", DEFAULT_WINDOW_HEIGHT);
@@ -171,12 +171,11 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   window->model = xfce_appfinder_model_get ();
 
   /* load categories in the model */
-  categories = xfce_appfinder_model_get_categories (window->model);
-  if (categories != NULL)
-    xfce_appfinder_category_model_set_categories (window->category_model, categories);
+  if (xfce_appfinder_model_get_categories (window->model) != NULL)
+    xfce_appfinder_window_category_set_categories (window);
   g_signal_connect_swapped (G_OBJECT (window->model), "categories-changed",
-                            G_CALLBACK (xfce_appfinder_category_model_set_categories),
-                            window->category_model);
+                            G_CALLBACK (xfce_appfinder_window_category_set_categories),
+                            window);
 
   gtk_window_set_title (GTK_WINDOW (window), _("Application Finder"));
   integer = xfconf_channel_get_int (channel, "/LastWindowWidth", DEFAULT_WINDOW_WIDTH);
@@ -242,7 +241,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
   gtk_widget_show (scroll);
 
-  sidepane = gtk_tree_view_new_with_model (GTK_TREE_MODEL (window->category_model));
+  sidepane = window->sidepane = gtk_tree_view_new_with_model (GTK_TREE_MODEL (window->category_model));
   gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (sidepane), FALSE);
   gtk_tree_view_set_enable_search (GTK_TREE_VIEW (sidepane), FALSE);
   g_signal_connect_swapped (GTK_TREE_VIEW (sidepane), "start-interactive-search", G_CALLBACK (gtk_widget_grab_focus), entry);
@@ -250,10 +249,6 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
       xfce_appfinder_category_model_row_separator_func, NULL, NULL);
   gtk_container_add (GTK_CONTAINER (scroll), sidepane);
   gtk_widget_show (sidepane);
-
-  path = gtk_tree_path_new_first ();
-  gtk_tree_view_set_cursor (GTK_TREE_VIEW (sidepane), path, NULL, FALSE);
-  gtk_tree_path_free (path);
 
   selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (sidepane));
   gtk_tree_selection_set_mode (selection, GTK_SELECTION_BROWSE);
@@ -617,6 +612,23 @@ xfce_appfinder_window_category_changed (GtkTreeSelection    *selection,
       APPFINDER_DEBUG ("refilter category");
       gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (model));
     }
+}
+
+
+
+static void
+xfce_appfinder_window_category_set_categories (XfceAppfinderWindow *window)
+{
+  GSList      *categories;
+  GtkTreePath *path;
+
+  categories = xfce_appfinder_model_get_categories (window->model);
+  if (categories != NULL)
+    xfce_appfinder_category_model_set_categories (window->category_model, categories);
+
+  path = gtk_tree_path_new_first ();
+  gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->sidepane), path, NULL, FALSE);
+  gtk_tree_path_free (path);
 }
 
 
