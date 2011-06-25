@@ -244,13 +244,6 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_container_add (GTK_CONTAINER (scroll), sidepane);
   gtk_widget_show (sidepane);
 
-  /* load categories in the model */
-  if (xfce_appfinder_model_get_categories (window->model) != NULL)
-    xfce_appfinder_window_category_set_categories (window);
-  g_signal_connect_swapped (G_OBJECT (window->model), "categories-changed",
-                            G_CALLBACK (xfce_appfinder_window_category_set_categories),
-                            window);
-
   selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (sidepane));
   gtk_tree_selection_set_mode (selection, GTK_SELECTION_BROWSE);
   g_signal_connect (G_OBJECT (selection), "changed",
@@ -340,6 +333,13 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   icon_theme = gtk_icon_theme_get_for_screen (gtk_window_get_screen (GTK_WINDOW (window)));
   g_signal_connect_swapped (G_OBJECT (icon_theme), "changed", G_CALLBACK (xfce_appfinder_window_icon_theme_changed), window);
+
+  /* load categories in the model */
+  if (xfce_appfinder_model_get_categories (window->model) != NULL)
+    xfce_appfinder_window_category_set_categories (window);
+  g_signal_connect_swapped (G_OBJECT (window->model), "categories-changed",
+                            G_CALLBACK (xfce_appfinder_window_category_set_categories),
+                            window);
 
   APPFINDER_DEBUG ("constructed window");
 }
