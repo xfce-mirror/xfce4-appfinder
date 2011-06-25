@@ -488,3 +488,29 @@ xfce_appfinder_category_model_icon_theme_changed (XfceAppfinderCategoryModel *mo
         }
     }
 }
+
+
+
+GtkTreePath *
+xfce_appfinder_category_model_find_category (XfceAppfinderCategoryModel *model,
+                                             const gchar                *name)
+{
+  CategoryItem *item;
+  GSList       *li;
+  gint          idx;
+
+  g_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model), NULL);
+
+  if (IS_STRING (name))
+    {
+      for (li = model->categories, idx = 0; li != NULL; li = li->next, idx++)
+        {
+          item = li->data;
+          if (item->directory != NULL
+              && g_strcmp0 (garcon_menu_directory_get_name (item->directory), name) == 0)
+            return gtk_tree_path_new_from_indices (idx, -1);
+        }
+    }
+
+  return gtk_tree_path_new_first ();
+}
