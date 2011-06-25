@@ -31,7 +31,7 @@ G_STMT_START { \
 #define IS_STRING(str) ((str) != NULL && *(str) != '\0')
 
 #ifdef DEBUG
-#define APPFINDER_DEBUG(...) g_print ("xfce4-appfinder: "); g_print (__VA_ARGS__); g_print ("\n")
+#define APPFINDER_DEBUG(...) g_print ("xfce4-appfinder-dbg: "); g_print (__VA_ARGS__); g_print ("\n")
 #else
 #define APPFINDER_DEBUG(...) G_STMT_START{ (void)0; }G_STMT_END
 #endif

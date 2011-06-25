@@ -171,13 +171,6 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   window->category_model = xfce_appfinder_category_model_new ();
   window->model = xfce_appfinder_model_get ();
 
-  /* load categories in the model */
-  if (xfce_appfinder_model_get_categories (window->model) != NULL)
-    xfce_appfinder_window_category_set_categories (window);
-  g_signal_connect_swapped (G_OBJECT (window->model), "categories-changed",
-                            G_CALLBACK (xfce_appfinder_window_category_set_categories),
-                            window);
-
   gtk_window_set_title (GTK_WINDOW (window), _("Application Finder"));
   integer = xfconf_channel_get_int (window->channel, "/LastWindowWidth", DEFAULT_WINDOW_WIDTH);
   gtk_window_set_default_size (GTK_WINDOW (window), integer, -1);
@@ -250,6 +243,13 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
       xfce_appfinder_category_model_row_separator_func, NULL, NULL);
   gtk_container_add (GTK_CONTAINER (scroll), sidepane);
   gtk_widget_show (sidepane);
+
+  /* load categories in the model */
+  if (xfce_appfinder_model_get_categories (window->model) != NULL)
+    xfce_appfinder_window_category_set_categories (window);
+  g_signal_connect_swapped (G_OBJECT (window->model), "categories-changed",
+                            G_CALLBACK (xfce_appfinder_window_category_set_categories),
+                            window);
 
   selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (sidepane));
   gtk_tree_selection_set_mode (selection, GTK_SELECTION_BROWSE);
@@ -630,6 +630,8 @@ xfce_appfinder_window_category_set_categories (XfceAppfinderWindow *window)
   GSList      *categories;
   GtkTreePath *path;
   gchar       *name;
+
+  g_return_if_fail (GTK_IS_TREE_VIEW (window->sidepane));
 
   categories = xfce_appfinder_model_get_categories (window->model);
   if (categories != NULL)

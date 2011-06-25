@@ -41,6 +41,7 @@
 
 #include <src/appfinder-window.h>
 #include <src/appfinder-private.h>
+#include <src/appfinder-model.h>
 
 
 
@@ -53,13 +54,14 @@
 
 
 
-static gboolean  opt_expanded = FALSE;
-static gboolean  opt_version = FALSE;
-static gboolean  opt_replace = FALSE;
-static gboolean  opt_quit = FALSE;
-static gboolean  opt_disable_server = FALSE;
-static GSList   *windows = NULL;
-static gboolean  service_owner = FALSE;
+static gboolean            opt_expanded = FALSE;
+static gboolean            opt_version = FALSE;
+static gboolean            opt_replace = FALSE;
+static gboolean            opt_quit = FALSE;
+static gboolean            opt_disable_server = FALSE;
+static GSList             *windows = NULL;
+static gboolean            service_owner = FALSE;
+static XfceAppfinderModel *model_cache = NULL;
 
 
 
@@ -84,6 +86,13 @@ appfinder_window_destroyed (GtkWidget *window)
 {
   if (windows == NULL)
     return;
+
+  /* take a reference on the model */
+  if (model_cache == NULL)
+    {
+      APPFINDER_DEBUG ("main took reference on the main model");
+      model_cache = xfce_appfinder_model_get ();
+    }
 
   /* remove from internal list */
   windows = g_slist_remove (windows, window);
@@ -456,6 +465,10 @@ main (gint argc, gchar **argv)
   gtk_main ();
 
   xfconf_shutdown ();
+
+  /* release the model cache */
+  if (model_cache != NULL)
+    g_object_unref (G_OBJECT (model_cache));
 
   if (G_LIKELY (dbus_connection != NULL))
     {
