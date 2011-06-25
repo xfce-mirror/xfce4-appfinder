@@ -57,7 +57,6 @@ static gboolean  opt_expanded = FALSE;
 static gboolean  opt_version = FALSE;
 static gboolean  opt_replace = FALSE;
 static gboolean  opt_quit = FALSE;
-static gchar    *opt_filename = NULL;
 static gboolean  opt_disable_server = FALSE;
 static GSList   *windows = NULL;
 static gboolean  service_owner = FALSE;
@@ -71,7 +70,6 @@ static GOptionEntry option_entries[] =
   { "replace", 'r', 0, G_OPTION_ARG_NONE, &opt_replace, N_("Replace the existing service"), NULL },
   { "quit", 'q', 0, G_OPTION_ARG_NONE, &opt_quit, N_("Quit all instances"), NULL },
   { "disable-server", 0, 0, G_OPTION_ARG_NONE, &opt_disable_server, N_("Do not try to use or become a D-Bus service"), NULL },
-  { G_OPTION_REMAINING, '\0', 0, G_OPTION_ARG_FILENAME, &opt_filename, NULL, NULL },
   { NULL }
 };
 
@@ -99,8 +97,7 @@ appfinder_window_destroyed (GtkWidget *window)
 
 static void
 appfinder_window_new (const gchar *startup_id,
-                      gboolean     expanded,
-                      const gchar *menu_filename)
+                      gboolean     expanded)
 {
   GtkWidget *window;
 
@@ -126,7 +123,6 @@ appfinder_dbus_message (DBusConnection *dbus_connection,
   gboolean     expanded;
   gchar       *startup_id;
   DBusError    derror;
-  gchar       *menu_filename;
 
   if (dbus_message_is_method_call (message, APPFINDER_DBUS_INTERFACE, APPFINDER_DBUS_METHOD_OPEN))
     {
@@ -134,10 +130,9 @@ appfinder_dbus_message (DBusConnection *dbus_connection,
       if (dbus_message_get_args (message, &derror,
                                  DBUS_TYPE_BOOLEAN, &expanded,
                                  DBUS_TYPE_STRING, &startup_id,
-                                 DBUS_TYPE_STRING, &menu_filename,
                                  DBUS_TYPE_INVALID))
         {
-          appfinder_window_new (startup_id, expanded, menu_filename);
+          appfinder_window_new (startup_id, expanded);
           reply = dbus_message_new_method_return (message);
         }
       else
@@ -181,8 +176,7 @@ appfinder_dbus_message (DBusConnection *dbus_connection,
 
 static gboolean
 appfinder_dbus_open_window (DBusConnection *dbus_connection,
-                            const gchar    *startup_id,
-                            const gchar    *menu_filename)
+                            const gchar    *startup_id)
 {
 
   DBusError    derror;
@@ -195,13 +189,10 @@ appfinder_dbus_open_window (DBusConnection *dbus_connection,
 
   if (startup_id == NULL)
     startup_id = "";
-  if (menu_filename == NULL)
-    menu_filename = "";
 
   dbus_message_append_args (method,
                             DBUS_TYPE_BOOLEAN, &opt_expanded,
                             DBUS_TYPE_STRING, &startup_id,
-                            DBUS_TYPE_STRING, &menu_filename,
                             DBUS_TYPE_INVALID);
 
   dbus_message_set_auto_start (method, TRUE);
@@ -360,7 +351,7 @@ appfinder_dbus_service (const gchar *startup_id)
         }
       else if (result == DBUS_REQUEST_NAME_REPLY_EXISTS)
         {
-          if (appfinder_dbus_open_window (dbus_connection, startup_id, opt_filename))
+          if (appfinder_dbus_open_window (dbus_connection, startup_id))
             {
                /* successfully opened a window in the other instance */
                dbus_connection_unref (dbus_connection);
@@ -411,7 +402,7 @@ main (gint argc, gchar **argv)
   /* get the startup notification id */
   startup_id = g_getenv ("DESKTOP_STARTUP_ID");
 
-  if (!gtk_init_with_args (&argc, &argv, _("[MENUFILE]"), option_entries, GETTEXT_PACKAGE, &error))
+  if (!gtk_init_with_args (&argc, &argv, NULL, option_entries, GETTEXT_PACKAGE, &error))
     {
       g_printerr ("%s: %s.\n", PACKAGE_NAME, error->message);
       g_printerr (_("Type \"%s --help\" for usage."), PACKAGE_NAME);
@@ -424,7 +415,7 @@ main (gint argc, gchar **argv)
   if (opt_version)
     {
       g_print ("%s %s (Xfce %s)\n\n", PACKAGE_NAME, PACKAGE_VERSION, xfce_version_string ());
-      g_print ("%s\n", "Copyright (c) 2004-2010");
+      g_print ("%s\n", "Copyright (c) 2004-2011");
       g_print ("\t%s\n\n", _("The Xfce development team. All rights reserved."));
       g_print (_("Please report bugs to <%s>."), PACKAGE_BUGREPORT);
       g_print ("\n");
@@ -458,7 +449,7 @@ main (gint argc, gchar **argv)
     }
 
   /* create initial window */
-  appfinder_window_new (NULL, opt_expanded, opt_filename);
+  appfinder_window_new (NULL, opt_expanded);
 
   APPFINDER_DEBUG ("enter mainloop");
 
