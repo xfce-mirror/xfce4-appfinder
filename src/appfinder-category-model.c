@@ -144,6 +144,8 @@ xfce_appfinder_category_model_finalize (GObject *object)
 
   g_object_unref (G_OBJECT (model->all_applications));
 
+  APPFINDER_DEBUG ("category model finalized");
+
   (*G_OBJECT_CLASS (xfce_appfinder_category_model_parent_class)->finalize) (object);
 }
 
@@ -379,26 +381,31 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
 {
   CategoryItem *item;
   GSList       *li, *lnext;
-  gint          idx;
   GtkTreePath  *path;
   GtkTreeIter   iter;
+  guint         children, i;
 
   APPFINDER_DEBUG ("insert %d categories", g_slist_length (categories));
 
   /* remove items from the model */
-  for (li = model->categories, idx = 0; li != NULL; li = lnext, idx++)
+  if (model->categories != NULL)
     {
-      lnext = li->next;
+      /* reverse remove all the items */
+      children = g_slist_length (model->categories);
+      path = gtk_tree_path_new_from_indices (children, -1);
+      for (;;)
+        {
+          gtk_tree_model_row_deleted (GTK_TREE_MODEL (model), path);
+          if (!gtk_tree_path_prev (path))
+            break;
+        }
+     gtk_tree_path_free (path);
 
-      model->categories = g_slist_delete_link (model->categories, li);
-
-      /* remove the items we own */
-      if (idx < 3)
-        xfce_appfinder_model_category_free (li->data);
-
-      path = gtk_tree_path_new_from_indices (idx, -1);
-      gtk_tree_model_row_deleted (GTK_TREE_MODEL (model), path);
-      gtk_tree_path_free (path);
+     /* clean the first three categories and drop the list */
+     for (i = 0, li = model->categories; i < 3 && li != NULL; i++, li = li->next)
+       xfce_appfinder_model_category_free (li->data);
+     g_slist_free (model->categories);
+     model->categories = NULL;
     }
 
   g_assert (model->categories == NULL);
@@ -419,7 +426,7 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
   model->categories = g_slist_concat (model->categories, g_slist_copy (categories));
 
   path = gtk_tree_path_new_first ();
-  for (li = model->categories; li != NULL; li = li->next)
+  for (li = model->categories; li != NULL; li = lnext)
     {
       /* remember the next item */
       lnext = li->next;
