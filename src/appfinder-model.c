@@ -1320,8 +1320,10 @@ GdkPixbuf *
 xfce_appfinder_model_load_pixbuf (const gchar *icon_name,
                                   gint         size)
 {
-  GdkPixbuf *pixbuf = NULL;
-  GdkPixbuf *scaled;
+  GdkPixbuf    *pixbuf = NULL;
+  GdkPixbuf    *scaled;
+  gchar        *p, *name;
+  GtkIconTheme *icon_theme;
 
   APPFINDER_DEBUG ("load icon %s at %dpx", icon_name, size);
 
@@ -1329,13 +1331,40 @@ xfce_appfinder_model_load_pixbuf (const gchar *icon_name,
     {
       if (g_path_is_absolute (icon_name))
         {
-          pixbuf = gdk_pixbuf_new_from_file_at_scale (icon_name, size,
-                                                      size, TRUE, NULL);
+          pixbuf = gdk_pixbuf_new_from_file_at_scale (icon_name, size, size, TRUE, NULL);
         }
       else
         {
-          pixbuf = gtk_icon_theme_load_icon (gtk_icon_theme_get_default (),
-                                             icon_name, size, 0, NULL);
+          icon_theme = gtk_icon_theme_get_default ();
+          pixbuf = gtk_icon_theme_load_icon (icon_theme, icon_name, size, 0, NULL);
+
+          if (pixbuf == NULL)
+            {
+              p = strrchr (icon_name, '.');
+              if (p != NULL)
+                {
+                  /* strip extension and try for theme icon */
+                  name = g_strndup (icon_name, p - icon_name);
+                  APPFINDER_DEBUG ("  try icon as %s", name);
+                  pixbuf = gtk_icon_theme_load_icon (icon_theme, name, size, 0, NULL);
+                  g_free (name);
+
+                  if (pixbuf == NULL)
+                    {
+                      /* maybe the . means a file in the pixmaps folder */
+                      p = g_build_filename ("pixmaps", icon_name, NULL);
+                      name = xfce_resource_lookup (XFCE_RESOURCE_DATA, p);
+                      g_free (p);
+
+                      if (name != NULL)
+                        {
+                          APPFINDER_DEBUG ("  try icon as %s", name);
+                          pixbuf = gdk_pixbuf_new_from_file_at_scale (name, size, size, TRUE, NULL);
+                          g_free (name);
+                        }
+                    }
+                }
+            }
         }
     }
 
