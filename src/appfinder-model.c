@@ -112,6 +112,7 @@ typedef struct
   GPtrArray      *categories;
   gchar          *command;
   gchar          *tooltip;
+  guint           not_visible : 1;
 
   GdkPixbuf      *icon_small;
   GdkPixbuf      *icon_large;
@@ -694,6 +695,7 @@ xfce_appfinder_model_item_new (GarconMenuItem *menu_item)
     }
 
   item->key = xfce_appfinder_model_item_key (menu_item);
+  item->not_visible = !garcon_menu_element_get_visible (GARCON_MENU_ELEMENT (menu_item));
 
   return item;
 }
@@ -1208,7 +1210,7 @@ xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
     {
       g_return_val_if_fail (GARCON_IS_MENU_ITEM (item->item), FALSE);
 
-      if (!garcon_menu_element_get_visible (GARCON_MENU_ELEMENT (item->item)))
+      if (item->not_visible)
         return FALSE;
 
       if (category != NULL
