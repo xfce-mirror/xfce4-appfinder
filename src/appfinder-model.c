@@ -731,6 +731,9 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
           if (G_LIKELY (item->command != NULL))
             g_hash_table_insert (model->items_hash, item->command, item);
 
+          g_signal_connect (G_OBJECT (menu_item), "changed",
+                            G_CALLBACK (xfce_appfinder_model_item_changed), model);
+
           g_object_unref (G_OBJECT (menu_item));
 
           path = gtk_tree_path_new_from_indices (idx, -1);
@@ -892,9 +895,6 @@ xfce_appfinder_model_collect_items (GarconMenu           *menu,
     {
       if (GARCON_IS_MENU_ITEM (li->data))
         {
-          if (!garcon_menu_element_get_visible (li->data))
-            continue;
-
           desktop_id = garcon_menu_item_get_desktop_id (li->data);
           item = g_hash_table_lookup (desktop_ids, desktop_id);
           if (G_LIKELY (item == NULL))
@@ -1207,6 +1207,9 @@ xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
   if (item->item != NULL)
     {
       g_return_val_if_fail (GARCON_IS_MENU_ITEM (item->item), FALSE);
+
+      if (!garcon_menu_element_get_visible (GARCON_MENU_ELEMENT (item->item)))
+        return FALSE;
 
       if (category != NULL
           && !xfce_appfinder_model_ptr_array_find (item->categories, category))
