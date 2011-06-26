@@ -113,6 +113,8 @@ struct _XfceAppfinderWindow
   GarconMenuDirectory        *filter_category;
   gchar                      *filter_text;
 
+  guint                       idle_entry_changed_id;
+
   gint                        last_window_height;
 };
 
@@ -351,6 +353,9 @@ xfce_appfinder_window_finalize (GObject *object)
 {
   XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (object);
 
+  if (window->idle_entry_changed_id != 0)
+    g_source_remove (window->idle_entry_changed_id);
+
   g_object_unref (G_OBJECT (window->model));
   g_object_unref (G_OBJECT (window->category_model));
   g_object_unref (G_OBJECT (window->completion));
@@ -427,14 +432,16 @@ xfce_appfinder_window_set_padding (GtkWidget *entry,
 
 
 
-/* TODO idle */
-static void
-xfce_appfinder_window_entry_changed (XfceAppfinderWindow *window)
+static gboolean
+xfce_appfinder_window_entry_changed_idle (gpointer data)
 {
-  const gchar  *text;
-  GdkPixbuf    *pixbuf;
-  gchar        *normalized;
-  GtkTreeModel *model;
+  XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (data);
+  const gchar         *text;
+  GdkPixbuf           *pixbuf;
+  gchar               *normalized;
+  GtkTreeModel        *model;
+
+  GDK_THREADS_ENTER ();
 
   text = gtk_entry_get_text (GTK_ENTRY (window->entry));
 
@@ -466,6 +473,31 @@ xfce_appfinder_window_entry_changed (XfceAppfinderWindow *window)
       if (pixbuf != NULL)
         g_object_unref (G_OBJECT (pixbuf));
     }
+
+  GDK_THREADS_LEAVE ();
+
+  return FALSE;
+}
+
+
+
+static void
+xfce_appfinder_window_entry_changed_idle_destroyed (gpointer data)
+{
+  XFCE_APPFINDER_WINDOW (data)->idle_entry_changed_id = 0;
+}
+
+
+
+static void
+xfce_appfinder_window_entry_changed (XfceAppfinderWindow *window)
+{
+  if (window->idle_entry_changed_id != 0)
+    g_source_remove (window->idle_entry_changed_id);
+
+  window->idle_entry_changed_id =
+      g_idle_add_full (G_PRIORITY_LOW, xfce_appfinder_window_entry_changed_idle,
+                       window, xfce_appfinder_window_entry_changed_idle_destroyed);
 }
 
 
