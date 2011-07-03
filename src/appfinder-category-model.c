@@ -183,7 +183,7 @@ xfce_appfinder_category_model_get_column_type (GtkTreeModel *tree_model,
       return GARCON_TYPE_MENU_DIRECTORY;
 
     default:
-      g_assert_not_reached ();
+      appfinder_assert_not_reached ();
       return G_TYPE_INVALID;
     }
 }
@@ -197,8 +197,8 @@ xfce_appfinder_category_model_get_iter (GtkTreeModel *tree_model,
 {
   XfceAppfinderCategoryModel *model = XFCE_APPFINDER_CATEGORY_MODEL (tree_model);
 
-  g_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model), FALSE);
-  g_return_val_if_fail (gtk_tree_path_get_depth (path) > 0, FALSE);
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model), FALSE);
+  appfinder_return_val_if_fail (gtk_tree_path_get_depth (path) > 0, FALSE);
 
   iter->stamp = model->stamp;
   iter->user_data = g_slist_nth (model->categories, gtk_tree_path_get_indices (path)[0]);
@@ -215,8 +215,8 @@ xfce_appfinder_category_model_get_path (GtkTreeModel *tree_model,
   XfceAppfinderCategoryModel *model = XFCE_APPFINDER_CATEGORY_MODEL (tree_model);
   gint                        idx;
 
-  g_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model), NULL);
-  g_return_val_if_fail (iter->stamp == model->stamp, NULL);
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model), NULL);
+  appfinder_return_val_if_fail (iter->stamp == model->stamp, NULL);
 
   /* determine the index of the iter */
   idx = g_slist_position (model->categories, iter->user_data);
@@ -238,11 +238,11 @@ xfce_appfinder_category_model_get_value (GtkTreeModel *tree_model,
   CategoryItem               *item;
   const gchar                *icon_name;
 
-  g_return_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model));
-  g_return_if_fail (iter->stamp == model->stamp);
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model));
+  appfinder_return_if_fail (iter->stamp == model->stamp);
 
   item = ITER_GET_DATA (iter);
-  g_return_if_fail (item->directory == NULL || GARCON_IS_MENU_DIRECTORY (item->directory));
+  appfinder_return_if_fail (item->directory == NULL || GARCON_IS_MENU_DIRECTORY (item->directory));
 
   switch (column)
     {
@@ -272,7 +272,7 @@ xfce_appfinder_category_model_get_value (GtkTreeModel *tree_model,
       break;
 
     default:
-      g_assert_not_reached ();
+      appfinder_assert_not_reached ();
       break;
     }
 }
@@ -283,8 +283,8 @@ static gboolean
 xfce_appfinder_category_model_iter_next (GtkTreeModel *tree_model,
                                          GtkTreeIter  *iter)
 {
-  g_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (tree_model), FALSE);
-  g_return_val_if_fail (iter->stamp == XFCE_APPFINDER_CATEGORY_MODEL (tree_model)->stamp, FALSE);
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (tree_model), FALSE);
+  appfinder_return_val_if_fail (iter->stamp == XFCE_APPFINDER_CATEGORY_MODEL (tree_model)->stamp, FALSE);
 
   iter->user_data = g_slist_next (iter->user_data);
   return (iter->user_data != NULL);
@@ -299,7 +299,7 @@ xfce_appfinder_category_model_iter_children (GtkTreeModel *tree_model,
 {
   XfceAppfinderCategoryModel *model = XFCE_APPFINDER_CATEGORY_MODEL (tree_model);
 
-  g_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model), FALSE);
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model), FALSE);
 
   if (G_LIKELY (parent == NULL && model->categories != NULL))
     {
@@ -328,7 +328,7 @@ xfce_appfinder_category_model_iter_n_children (GtkTreeModel *tree_model,
 {
   XfceAppfinderCategoryModel *model = XFCE_APPFINDER_CATEGORY_MODEL (tree_model);
 
-  g_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model), 0);
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model), 0);
 
   return (iter == NULL) ? g_slist_length (model->categories) : 0;
 }
@@ -343,7 +343,7 @@ xfce_appfinder_category_model_iter_nth_child (GtkTreeModel *tree_model,
 {
   XfceAppfinderCategoryModel *model = XFCE_APPFINDER_CATEGORY_MODEL (tree_model);
 
-  g_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model), FALSE);
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model), FALSE);
 
   if (G_LIKELY (parent != NULL))
     {
@@ -408,7 +408,7 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
      model->categories = NULL;
     }
 
-  g_assert (model->categories == NULL);
+  appfinder_assert (model->categories == NULL);
 
   /* separator and the main categories */
   item = g_slice_new0 (CategoryItem);
@@ -454,7 +454,7 @@ xfce_appfinder_category_model_row_separator_func (GtkTreeModel *tree_model,
 {
   CategoryItem *item = ITER_GET_DATA (iter);
 
-  g_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (tree_model), FALSE);
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (tree_model), FALSE);
 
   return (item->directory == NULL);
 }
@@ -470,7 +470,7 @@ xfce_appfinder_category_model_icon_theme_changed (XfceAppfinderCategoryModel *mo
   GtkTreeIter   iter;
   GtkTreePath  *path;
 
-  g_return_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model));
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model));
 
   for (li = model->categories, idx = 0; li != NULL; li = li->next, idx++)
     {
@@ -499,7 +499,7 @@ xfce_appfinder_category_model_find_category (XfceAppfinderCategoryModel *model,
   GSList       *li;
   gint          idx;
 
-  g_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model), NULL);
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model), NULL);
 
   if (IS_STRING (name))
     {

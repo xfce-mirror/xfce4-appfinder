@@ -36,4 +36,16 @@ G_STMT_START { \
 #define APPFINDER_DEBUG(...) G_STMT_START{ (void)0; }G_STMT_END
 #endif
 
+#ifdef DEBUG
+#define appfinder_assert(expr)                 g_assert (expr)
+#define appfinder_assert_not_reached()         g_assert_not_reached ()
+#define appfinder_return_if_fail(expr)         g_return_if_fail (expr)
+#define appfinder_return_val_if_fail(expr,val) g_return_val_if_fail (expr, val)
+#else
+#define appfinder_assert(expr)                 G_STMT_START{ (void)0; }G_STMT_END
+#define appfinder_assert_not_reached()         G_STMT_START{ (void)0; }G_STMT_END
+#define appfinder_return_if_fail(expr)         G_STMT_START{ (void)0; }G_STMT_END
+#define appfinder_return_val_if_fail(expr,val) G_STMT_START{ (void)0; }G_STMT_END
+#endif
+
 #endif /* !__XFCE_APPFINDER_PRIVATE_H__ */

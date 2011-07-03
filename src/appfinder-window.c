@@ -663,7 +663,7 @@ xfce_appfinder_window_category_set_categories (XfceAppfinderWindow *window)
   GtkTreePath *path;
   gchar       *name;
 
-  g_return_if_fail (GTK_IS_TREE_VIEW (window->sidepane));
+  appfinder_return_if_fail (GTK_IS_TREE_VIEW (window->sidepane));
 
   categories = xfce_appfinder_model_get_categories (window->model);
   if (categories != NULL)
