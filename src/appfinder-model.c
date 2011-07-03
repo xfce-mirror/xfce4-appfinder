@@ -119,6 +119,14 @@ typedef struct
 }
 ModelItem;
 
+typedef struct
+{
+  GSList              *items;
+  GarconMenuDirectory *category;
+  GHashTable          *desktop_ids;
+}
+CollectContext;
+
 enum
 {
   CATEGORIES_CHANGED,
@@ -858,6 +866,41 @@ xfce_appfinder_model_collect_history (XfceAppfinderModel *model,
 
 
 
+static void
+xfce_appfinder_model_collect_item (const gchar    *desktop_id,
+                                   GarconMenuItem *menu_item,
+                                   CollectContext *context)
+{
+  ModelItem *item;
+
+  g_return_if_fail (GARCON_IS_MENU_ITEM (menu_item));
+  g_return_if_fail (desktop_id != NULL);
+
+  /* check if we alread have the item */
+  item = g_hash_table_lookup (context->desktop_ids, desktop_id);
+  if (G_LIKELY (item == NULL))
+    {
+      item = xfce_appfinder_model_item_new (menu_item);
+
+      item->categories = g_ptr_array_new_with_free_func (g_object_unref);
+      if (context->category != NULL)
+        g_ptr_array_add (item->categories,
+                         g_object_ref (G_OBJECT (context->category)));
+
+      context->items = g_slist_prepend (context->items, item);
+      g_hash_table_insert (context->desktop_ids, (gchar *) desktop_id, item);
+    }
+  else if (context->category != NULL
+           && !xfce_appfinder_model_ptr_array_find (item->categories, context->category))
+    {
+      /* add category to existing item */
+      g_ptr_array_add (item->categories, g_object_ref (G_OBJECT (context->category)));
+      APPFINDER_DEBUG ("%s is in %d categories", desktop_id, item->categories->len);
+    }
+}
+
+
+
 static gboolean
 xfce_appfinder_model_collect_items (GarconMenu           *menu,
                                     GCancellable         *cancelled,
@@ -866,12 +909,12 @@ xfce_appfinder_model_collect_items (GarconMenu           *menu,
                                     GSList              **categories,
                                     GHashTable           *desktop_ids)
 {
-  GList               *elements, *li;
+  GList               *menus, *li;
   GarconMenuDirectory *directory;
-  ModelItem           *item;
   gboolean             has_items = FALSE;
-  const gchar         *desktop_id;
   CategoryItem        *citem;
+  GarconMenuItemPool  *pool;
+  CollectContext      *context;
 
   g_return_val_if_fail (GARCON_IS_MENU (menu), FALSE);
   g_return_val_if_fail (cancelled == NULL || G_IS_CANCELLABLE (cancelled), FALSE);
@@ -879,6 +922,9 @@ xfce_appfinder_model_collect_items (GarconMenu           *menu,
   g_return_val_if_fail (items != NULL, FALSE);
   g_return_val_if_fail (categories != NULL, FALSE);
   g_return_val_if_fail (desktop_ids != NULL, FALSE);
+
+  if (g_cancellable_is_cancelled (cancelled))
+    return FALSE;
 
   directory = garcon_menu_get_directory (menu);
   if (directory != NULL)
@@ -891,43 +937,40 @@ xfce_appfinder_model_collect_items (GarconMenu           *menu,
         category = directory;
     }
 
-  /* collect all the elements in this menu and its sub menus */
-  elements = garcon_menu_get_elements (menu);
-  for (li = elements; li != NULL && !g_cancellable_is_cancelled (cancelled); li = li->next)
+  /* collect all the items in the menu's pool. we walk
+   * the pool directory to avoid the sorting of items
+   * that is done within garcon for _get_elements and
+   * _get_items */
+  pool = garcon_menu_get_item_pool (menu);
+  if (G_LIKELY (pool != NULL))
     {
-      if (GARCON_IS_MENU_ITEM (li->data))
+      context = g_slice_new (CollectContext);
+      context->desktop_ids = desktop_ids;
+      context->category = category;
+      context->items = NULL;
+
+      garcon_menu_item_pool_foreach (pool, (GHFunc)
+          xfce_appfinder_model_collect_item, context);
+
+      if (context->items != NULL)
         {
-          desktop_id = garcon_menu_item_get_desktop_id (li->data);
-          item = g_hash_table_lookup (desktop_ids, desktop_id);
-          if (G_LIKELY (item == NULL))
-            {
-              item = xfce_appfinder_model_item_new (li->data);
-
-              item->categories = g_ptr_array_new_with_free_func (g_object_unref);
-              if (category != NULL)
-                g_ptr_array_add (item->categories, g_object_ref (G_OBJECT (category)));
-
-              *items = g_slist_prepend (*items, item);
-              g_hash_table_insert (desktop_ids, (gchar *) desktop_id, item);
-            }
-          else if (category != NULL
-                   && !xfce_appfinder_model_ptr_array_find (item->categories, category))
-            {
-              /* add category to existing item */
-              g_ptr_array_add (item->categories, g_object_ref (G_OBJECT (category)));
-              APPFINDER_DEBUG ("%s is in %d categories", desktop_id, item->categories->len);
-            }
-
           has_items = TRUE;
+          *items = g_slist_concat (*items, context->items);
         }
-      else if (GARCON_IS_MENU (li->data))
-        {
-          if (xfce_appfinder_model_collect_items (li->data, cancelled, category, items,
-                                                  categories, desktop_ids))
-            has_items = TRUE;
-        }
+
+      g_slice_free (CollectContext, context);
     }
-  g_list_free (elements);
+
+
+  /* also collect items in the submenus */
+  menus = garcon_menu_get_menus (menu);
+  for (li = menus; li != NULL; li = li->next)
+    {
+      if (xfce_appfinder_model_collect_items (li->data, cancelled, category, items,
+                                              categories, desktop_ids))
+        has_items = TRUE;
+    }
+  g_list_free (menus);
 
   if (directory != NULL
       && has_items)
