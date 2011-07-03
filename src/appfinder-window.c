@@ -42,41 +42,45 @@
 
 
 
-static void       xfce_appfinder_window_finalize                 (GObject                     *object);
-static void       xfce_appfinder_window_unmap                    (GtkWidget                   *widget);
-static gboolean   xfce_appfinder_window_key_press_event          (GtkWidget                   *widget,
-                                                                  GdkEventKey                 *event);
-static void       xfce_appfinder_window_set_padding              (GtkWidget                   *entry,
-                                                                  GtkWidget                   *align);
-static void       xfce_appfinder_window_entry_changed            (XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_entry_activate           (GtkEditable                 *entry,
-                                                                  XfceAppfinderWindow         *window);
-static gboolean   xfce_appfinder_window_entry_key_press_event    (GtkWidget                   *entry,
-                                                                  GdkEventKey                 *event,
-                                                                  XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_entry_icon_released      (GtkEntry                    *entry,
-                                                                  GtkEntryIconPosition         icon_pos,
-                                                                  GdkEvent                    *event,
-                                                                  XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_drag_begin               (GtkWidget                   *widget,
-                                                                  GdkDragContext              *drag_context,
-                                                                  XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_drag_data_get            (GtkWidget                   *widget,
-                                                                  GdkDragContext              *drag_context,
-                                                                  GtkSelectionData            *data,
-                                                                  guint                        info,
-                                                                  guint                        drag_time,
-                                                                  XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_category_changed         (GtkTreeSelection            *selection,
-                                                                  XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_category_set_categories  (XfceAppfinderWindow         *window);
-static gboolean   xfce_appfinder_window_item_visible             (GtkTreeModel                *model,
-                                                                  GtkTreeIter                 *iter,
-                                                                  gpointer                     data);
-static void       xfce_appfinder_window_item_changed             (XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_row_activated            (XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_icon_theme_changed       (XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_execute                  (XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_finalize                      (GObject                     *object);
+static void       xfce_appfinder_window_unmap                         (GtkWidget                   *widget);
+static gboolean   xfce_appfinder_window_key_press_event               (GtkWidget                   *widget,
+                                                                       GdkEventKey                 *event);
+static void       xfce_appfinder_window_set_padding                   (GtkWidget                   *entry,
+                                                                       GtkWidget                   *align);
+static void       xfce_appfinder_window_entry_changed                 (XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_entry_activate                (GtkEditable                 *entry,
+                                                                       XfceAppfinderWindow         *window);
+static gboolean   xfce_appfinder_window_entry_key_press_event         (GtkWidget                   *entry,
+                                                                       GdkEventKey                 *event,
+                                                                       XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_entry_icon_released           (GtkEntry                    *entry,
+                                                                       GtkEntryIconPosition         icon_pos,
+                                                                       GdkEvent                    *event,
+                                                                       XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_drag_begin                    (GtkWidget                   *widget,
+                                                                       GdkDragContext              *drag_context,
+                                                                       XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_drag_data_get                 (GtkWidget                   *widget,
+                                                                       GdkDragContext              *drag_context,
+                                                                       GtkSelectionData            *data,
+                                                                       guint                        info,
+                                                                       guint                        drag_time,
+                                                                       XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_category_changed              (GtkTreeSelection            *selection,
+                                                                       XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_category_set_categories       (XfceAppfinderWindow         *window);
+static gboolean   xfce_appfinder_window_item_visible                  (GtkTreeModel                *model,
+                                                                       GtkTreeIter                 *iter,
+                                                                       gpointer                     data);
+static void       xfce_appfinder_window_item_changed                  (XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_row_activated                 (XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_icon_theme_changed            (XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_execute                       (XfceAppfinderWindow         *window);
+static gboolean   xfce_appfinder_window_sidepane_popup_menu           (XfceAppfinderWindow         *window);
+static gboolean   xfce_appfinder_window_sidepane_button_release_event (GtkWidget                   *sidepane,
+                                                                       GdkEventButton              *event,
+                                                                       XfceAppfinderWindow         *window);
 
 
 
@@ -240,7 +244,9 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   sidepane = window->sidepane = gtk_tree_view_new_with_model (GTK_TREE_MODEL (window->category_model));
   gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (sidepane), FALSE);
   gtk_tree_view_set_enable_search (GTK_TREE_VIEW (sidepane), FALSE);
-  g_signal_connect_swapped (GTK_TREE_VIEW (sidepane), "start-interactive-search", G_CALLBACK (gtk_widget_grab_focus), entry);
+  g_signal_connect_swapped (G_OBJECT (sidepane), "start-interactive-search", G_CALLBACK (gtk_widget_grab_focus), entry);
+  g_signal_connect_swapped (G_OBJECT (sidepane), "popup-menu", G_CALLBACK (xfce_appfinder_window_sidepane_popup_menu), window);
+  g_signal_connect (G_OBJECT (sidepane), "button-release-event", G_CALLBACK (xfce_appfinder_window_sidepane_button_release_event), window);
   gtk_tree_view_set_row_separator_func (GTK_TREE_VIEW (sidepane),
       xfce_appfinder_category_model_row_separator_func, NULL, NULL);
   gtk_container_add (GTK_CONTAINER (scroll), sidepane);
@@ -864,6 +870,90 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window)
 
   if (result)
     gtk_widget_destroy (GTK_WIDGET (window));
+}
+
+
+
+static void
+xfce_appfinder_window_sidepane_clear (XfceAppfinderWindow *window)
+{
+  if (xfce_dialog_confirm (GTK_WINDOW (window), GTK_STOCK_CLEAR,
+                           _("Clear Command History"),
+                           _("This will permanently remove the custom command history."),
+                           _("Are you sure you want to clear the command history?")))
+    {
+      xfce_appfinder_model_commands_clear (window->model);
+    }
+}
+
+
+static gboolean
+xfce_appfinder_window_sidepane_menu (XfceAppfinderWindow *window,
+                                     guint32              timestamp)
+{
+  GarconMenuDirectory *category;
+  gboolean             result = FALSE;
+  GtkWidget           *menu;
+  GtkWidget           *mi;
+  GtkWidget           *image;
+
+  category = xfce_appfinder_model_get_command_category ();
+  if (window->filter_category == category)
+    {
+      menu = gtk_menu_new ();
+      g_signal_connect (menu, "selection-done", G_CALLBACK (gtk_widget_destroy), NULL);
+
+      mi = gtk_image_menu_item_new_with_label (_("Clear Command History"));
+      gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
+      g_signal_connect_swapped (G_OBJECT (mi), "activate", G_CALLBACK (xfce_appfinder_window_sidepane_clear), window);
+      gtk_widget_show (mi);
+
+      image = gtk_image_new_from_stock (GTK_STOCK_CLEAR, GTK_ICON_SIZE_MENU);
+      gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (mi), image);
+
+      gtk_menu_popup (GTK_MENU (menu), NULL, NULL, NULL, NULL,
+                      3, timestamp);
+
+      result = TRUE;
+    }
+  g_object_unref (G_OBJECT (category));
+
+  return result;
+}
+
+
+
+static gboolean
+xfce_appfinder_window_sidepane_popup_menu (XfceAppfinderWindow *window)
+{
+  return xfce_appfinder_window_sidepane_menu (window, gtk_get_current_event_time ());
+}
+
+
+
+static gboolean
+xfce_appfinder_window_sidepane_button_release_event (GtkWidget           *sidepane,
+                                                     GdkEventButton      *event,
+                                                     XfceAppfinderWindow *window)
+{
+  GtkTreePath      *path;
+  gboolean          result = FALSE;
+  GtkTreeSelection *selection;
+
+  if (event->button == 3
+      && event->type == GDK_BUTTON_RELEASE
+      && gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (sidepane),
+                                        event->x, event->y, &path,
+                                        NULL, NULL, NULL))
+    {
+      /* only try to popup if the clicked item is already selected */
+      selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (sidepane));
+      if (gtk_tree_selection_path_is_selected (selection, path))
+        result = xfce_appfinder_window_sidepane_menu (window, event->time);
+      gtk_tree_path_free (path);
+    }
+
+  return result;
 }
 
 

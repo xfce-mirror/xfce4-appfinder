@@ -24,6 +24,7 @@
 #include <string.h>
 #endif
 
+#include <glib/gstdio.h>
 #include <libxfce4util/libxfce4util.h>
 #include <libxfce4ui/libxfce4ui.h>
 
@@ -1578,6 +1579,42 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
           gtk_tree_path_free (path);
         }
     }
+}
+
+
+
+void
+xfce_appfinder_model_commands_clear (XfceAppfinderModel *model)
+{
+  ModelItem   *item;
+  GSList      *li, *lnext;
+  gint         idx;
+  GtkTreePath *path;
+  gchar       *filename;
+
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
+
+  for (li = model->items, idx = 0; li != NULL; li = lnext, idx++)
+    {
+      lnext = li->next;
+      item = li->data;
+      if (item->item != NULL)
+        continue;
+
+      model->items = g_slist_delete_link (model->items, li);
+
+      path = gtk_tree_path_new_from_indices (idx--, -1);
+      gtk_tree_model_row_deleted (GTK_TREE_MODEL (model), path);
+      gtk_tree_path_free (path);
+
+      xfce_appfinder_model_item_free (item, model);
+    }
+
+  /* remove the history file */
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, HISTORY_PATH, FALSE);
+  if (filename != NULL)
+    g_unlink (filename);
+  g_free (filename);
 }
 
 
