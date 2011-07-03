@@ -844,7 +844,7 @@ xfce_appfinder_model_collect_history (XfceAppfinderModel *model,
   if (contents == NULL)
     return;
 
-  for (;!model->collect_cancelled;)
+  for (;!g_cancellable_is_cancelled (model->collect_cancelled);)
     {
       end = strchr (contents, '\n');
       if (G_UNLIKELY (end == NULL))
@@ -1168,6 +1168,8 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
   filename = xfce_resource_lookup (XFCE_RESOURCE_CACHE, HISTORY_PATH);
   if (G_LIKELY (filename != NULL))
     {
+      APPFINDER_DEBUG ("load commands from %s", filename);
+
       history = g_mapped_file_new (filename, FALSE, &error);
       if (G_LIKELY (history != NULL))
         {
