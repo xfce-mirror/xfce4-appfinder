@@ -634,23 +634,29 @@ xfce_appfinder_window_category_changed (GtkTreeSelection    *selection,
                           XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_DIRECTORY, &category,
                           XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_NAME, &name, -1);
 
-      if (window->filter_category != NULL)
-        g_object_unref (G_OBJECT (window->filter_category));
+      if (window->filter_category != category)
+        {
+          if (window->filter_category != NULL)
+            g_object_unref (G_OBJECT (window->filter_category));
 
-      if (category == NULL)
-        window->filter_category = NULL;
-      else
-        window->filter_category = category;
+          if (category == NULL)
+            window->filter_category = NULL;
+          else
+            window->filter_category = g_object_ref (G_OBJECT (category));
 
-      APPFINDER_DEBUG ("refilter category");
+          APPFINDER_DEBUG ("refilter category");
 
-      /* update visible items */
-      model = gtk_tree_view_get_model (GTK_TREE_VIEW (window->treeview));
-      gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (model));
+          /* update visible items */
+          model = gtk_tree_view_get_model (GTK_TREE_VIEW (window->treeview));
+          gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (model));
 
-      /* store last category */
-      xfconf_channel_set_string (window->channel, "/LastCategory", name);
+          /* store last category */
+          xfconf_channel_set_string (window->channel, "/LastCategory", name);
+        }
+
       g_free (name);
+      if (category != NULL)
+        g_object_unref (G_OBJECT (category));
     }
 }
 
