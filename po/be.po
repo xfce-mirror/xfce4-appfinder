@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 16:52+0100\n"
+"POT-Creation-Date: 2011-07-09 16:15+0200\n"
 "PO-Revision-Date: 2008-11-18 01:09+0200\n"
 "Last-Translator: Alexander Nyakhaychyk <nyakhaychyk@gmail.com>\n"
 "Language-Team: Belorussian <i18n@mova.org>\n"
@@ -16,91 +16,141 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/main.c:42
-msgid "Version information"
-msgstr "Зьвесткі пра вэрсію"
+#: ../src/appfinder-category-model.c:108
+#, fuzzy
+msgid "All Applications"
+msgstr "Шукач дастасаваньняў"
 
-#: ../src/main.c:43
-msgid "[MENUFILE]"
-msgstr "[ФАЙЛ_МЭНЮ]"
+#: ../src/appfinder-model.c:422
+msgid "Name"
+msgstr ""
 
-#: ../src/main.c:64
-#, c-format
-msgid "Type '%s --help' for usage information."
-msgstr "Увядзіце \"%s --help\" для зьвестак пра выкарыстаньне."
+#: ../src/appfinder-model.c:423
+msgid "Command"
+msgstr ""
+
+#: ../src/appfinder-model.c:424
+msgid "Categories"
+msgstr "Катэгорыі"
+
+#: ../src/appfinder-model.c:425
+#, fuzzy
+msgid "Filename"
+msgstr "Кіраваньне файламі"
+
+#: ../src/appfinder-model.c:1317
+#, fuzzy
+msgid "Application has no command"
+msgstr "Шукач дастасаваньняў"
+
+#: ../src/appfinder-model.c:1634
+msgid "Commands History"
+msgstr ""
+
+#: ../src/appfinder-window.c:176 ../src/main.c:343
+#: ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr "Шукач дастасаваньняў"
+
+#: ../src/appfinder-window.c:214
+msgid "Toggle view mode"
+msgstr ""
 
 #: ../src/main.c:70
-msgid "Unable to initialize GTK+."
-msgstr "Немагчыма ініцыялізаваць GTK+."
+msgid "Start in expanded mode"
+msgstr ""
 
-#: ../src/main.c:80
+#: ../src/main.c:71
+#, fuzzy
+msgid "Print version information and exit"
+msgstr "Зьвесткі пра вэрсію"
+
+#: ../src/main.c:72
+msgid "Replace the existing service"
+msgstr ""
+
+#: ../src/main.c:73
+msgid "Quit all instances"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Do not try to use or become a D-Bus service"
+msgstr ""
+
+#. close all windows and quit
+#: ../src/main.c:159
+msgid "Forced to quit"
+msgstr ""
+
+#: ../src/main.c:345
+msgid "Unable to daemonize the process"
+msgstr ""
+
+#: ../src/main.c:417
+#, fuzzy, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr "Увядзіце \"%s --help\" для зьвестак пра выкарыстаньне."
+
+#: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
 msgstr "Каманда распрацоўкі Xfce. Усе правы абароненыя."
 
-#: ../src/main.c:81
+#: ../src/main.c:429
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Калі ласка, паведамляйце пра памылкі на <%s>."
 
-#: ../src/main.c:92
-#, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "Немагчыма далучыцца да дэмана xfconf. Прычына: %s"
-
-#: ../src/main.c:96
-msgid "Failed to connect to xfconf daemon."
-msgstr "Немагчыма далучыцца да дэмана xfconf."
-
-#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
-msgid "Application Finder"
-msgstr "Шукач дастасаваньняў"
-
-#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Шукае й запускае ўсталяваныя дастасаваньні"
 
-#: ../src/xfce-appfinder-window.c:242
+#: ../data/xfce4-run.desktop.in.h:1
 #, fuzzy
-msgid "Search"
-msgstr "<b>Пошук:</b>"
+msgid "Run Program..."
+msgstr "Выканаць праграму"
 
-#: ../src/xfce-appfinder-window.c:270
-msgid "Categories"
-msgstr "Катэгорыі"
-
-#: ../src/xfce-appfinder-window.c:320
+#: ../data/xfce4-run.desktop.in.h:2
 #, fuzzy
-msgid "C_lose after launch"
-msgstr "За_крыць пасьля запуску"
+msgid "Run a program"
+msgstr "Выканаць праграму"
 
-#: ../src/xfce-appfinder-window.c:328
-msgid "Launch"
-msgstr ""
+#~ msgid "[MENUFILE]"
+#~ msgstr "[ФАЙЛ_МЭНЮ]"
 
-#: ../src/xfce-appfinder-window.c:458
-#, c-format
-msgid "Could not load menu from %s"
-msgstr "Немагчыма загрузіць мэню з %s"
+#~ msgid "Unable to initialize GTK+."
+#~ msgstr "Немагчыма ініцыялізаваць GTK+."
 
-#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
-#: ../src/xfce-appfinder-window.c:1115
-msgid "All"
-msgstr "Усе"
+#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
+#~ msgstr "Немагчыма далучыцца да дэмана xfconf. Прычына: %s"
 
-#: ../src/xfce-appfinder-window.c:793
-#, fuzzy, c-format
-msgid "Failed to execute command \"%s\"."
-msgstr "Немагчыма выканаць дастасаваньне %s"
+#~ msgid "Failed to connect to xfconf daemon."
+#~ msgstr "Немагчыма далучыцца да дэмана xfconf."
 
-#: ../src/xfce-appfinder-window.c:951
-#, fuzzy, c-format
-msgid "<b>Categories:</b> %s"
-msgstr "<b>Катэгорыі</b>"
+#, fuzzy
+#~ msgid "Search"
+#~ msgstr "<b>Пошук:</b>"
 
-#: ../src/xfce-appfinder-window.c:962
-#, fuzzy, c-format
-msgid "<b>Command:</b> %s"
-msgstr "<b>Загад</b>"
+#, fuzzy
+#~ msgid "C_lose after launch"
+#~ msgstr "За_крыць пасьля запуску"
+
+#~ msgid "Could not load menu from %s"
+#~ msgstr "Немагчыма загрузіць мэню з %s"
+
+#~ msgid "All"
+#~ msgstr "Усе"
+
+#, fuzzy
+#~ msgid "Failed to execute command \"%s\"."
+#~ msgstr "Немагчыма выканаць дастасаваньне %s"
+
+#, fuzzy
+#~ msgid "<b>Categories:</b> %s"
+#~ msgstr "<b>Катэгорыі</b>"
+
+#, fuzzy
+#~ msgid "<b>Command:</b> %s"
+#~ msgstr "<b>Загад</b>"
 
 #~ msgid "Could not load system menu"
 #~ msgstr "Немагчыма загрузіць сыстэмнае мэню"
@@ -125,9 +175,6 @@ msgstr "<b>Загад</b>"
 
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Камэнтар</b>"
-
-#~ msgid "Run program"
-#~ msgstr "Выканаць праграму"
 
 #~ msgid "Show Categories"
 #~ msgstr "Паказваць катэгорыі"
@@ -158,9 +205,6 @@ msgstr "<b>Загад</b>"
 
 #~ msgid "System"
 #~ msgstr "Сыстэма"
-
-#~ msgid "Filemanager"
-#~ msgstr "Кіраваньне файламі"
 
 #~ msgid "Utility"
 #~ msgstr "Прыблуды"

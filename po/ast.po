@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 16:52+0100\n"
+"POT-Creation-Date: 2011-07-09 16:15+0200\n"
 "PO-Revision-Date: 2009-07-03 23:59+0100\n"
 "Last-Translator: Marcos Alvarez Costales <marcos.alvarez.costales@gmail."
 "com>\n"
@@ -12,90 +12,133 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/main.c:42
-msgid "Version information"
-msgstr "Información de versión"
+#: ../src/appfinder-category-model.c:108
+#, fuzzy
+msgid "All Applications"
+msgstr "Guetador d'aplicaciones"
 
-#: ../src/main.c:43
-msgid "[MENUFILE]"
-msgstr "[FICHERUDEMENÚ]"
+#: ../src/appfinder-model.c:422
+msgid "Name"
+msgstr ""
 
-#: ../src/main.c:64
-#, c-format
-msgid "Type '%s --help' for usage information."
-msgstr "Escriba '%s --help' pa obtener información d'usu."
+#: ../src/appfinder-model.c:423
+msgid "Command"
+msgstr ""
+
+#: ../src/appfinder-model.c:424
+msgid "Categories"
+msgstr "Categoríes"
+
+#: ../src/appfinder-model.c:425
+msgid "Filename"
+msgstr ""
+
+#: ../src/appfinder-model.c:1317
+#, fuzzy
+msgid "Application has no command"
+msgstr "Guetador d'aplicaciones"
+
+#: ../src/appfinder-model.c:1634
+msgid "Commands History"
+msgstr ""
+
+#: ../src/appfinder-window.c:176 ../src/main.c:343
+#: ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr "Guetador d'aplicaciones"
+
+#: ../src/appfinder-window.c:214
+msgid "Toggle view mode"
+msgstr ""
 
 #: ../src/main.c:70
-msgid "Unable to initialize GTK+."
-msgstr "Imposible anicializar GTK+."
+msgid "Start in expanded mode"
+msgstr ""
 
-#: ../src/main.c:80
+#: ../src/main.c:71
+#, fuzzy
+msgid "Print version information and exit"
+msgstr "Información de versión"
+
+#: ../src/main.c:72
+msgid "Replace the existing service"
+msgstr ""
+
+#: ../src/main.c:73
+msgid "Quit all instances"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Do not try to use or become a D-Bus service"
+msgstr ""
+
+#. close all windows and quit
+#: ../src/main.c:159
+msgid "Forced to quit"
+msgstr ""
+
+#: ../src/main.c:345
+msgid "Unable to daemonize the process"
+msgstr ""
+
+#: ../src/main.c:417
+#, fuzzy, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr "Escriba '%s --help' pa obtener información d'usu."
+
+#: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
 msgstr "L'equipu de desendolcu de Xfce. Tolos drechos reservaos."
 
-#: ../src/main.c:81
+#: ../src/main.c:429
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Por favor, informe d'errores a <%s>."
 
-#: ../src/main.c:92
-#, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "Fallu al coneutar al degorriu xfconf. Motivu: %s"
-
-#: ../src/main.c:96
-msgid "Failed to connect to xfconf daemon."
-msgstr "Fallu al coneutar al degorriu xfconf."
-
-#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
-msgid "Application Finder"
-msgstr "Guetador d'aplicaciones"
-
-#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Alcuentre y execute aplicaciones instalaes nel sistema"
 
-#: ../src/xfce-appfinder-window.c:242
-msgid "Search"
-msgstr "Guetar"
+#: ../data/xfce4-run.desktop.in.h:1
+msgid "Run Program..."
+msgstr ""
 
-#: ../src/xfce-appfinder-window.c:270
-msgid "Categories"
-msgstr "Categoríes"
+#: ../data/xfce4-run.desktop.in.h:2
+msgid "Run a program"
+msgstr ""
 
-#: ../src/xfce-appfinder-window.c:320
+#~ msgid "[MENUFILE]"
+#~ msgstr "[FICHERUDEMENÚ]"
+
+#~ msgid "Unable to initialize GTK+."
+#~ msgstr "Imposible anicializar GTK+."
+
+#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
+#~ msgstr "Fallu al coneutar al degorriu xfconf. Motivu: %s"
+
+#~ msgid "Failed to connect to xfconf daemon."
+#~ msgstr "Fallu al coneutar al degorriu xfconf."
+
+#~ msgid "Search"
+#~ msgstr "Guetar"
+
 #, fuzzy
-msgid "C_lose after launch"
-msgstr "_Zarrar dempués d'executar"
+#~ msgid "C_lose after launch"
+#~ msgstr "_Zarrar dempués d'executar"
 
-#: ../src/xfce-appfinder-window.c:328
-msgid "Launch"
-msgstr ""
+#~ msgid "Could not load menu from %s"
+#~ msgstr "Nun pudo cargase'l menú dende %s"
 
-#: ../src/xfce-appfinder-window.c:458
-#, c-format
-msgid "Could not load menu from %s"
-msgstr "Nun pudo cargase'l menú dende %s"
+#~ msgid "All"
+#~ msgstr "Toos"
 
-#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
-#: ../src/xfce-appfinder-window.c:1115
-msgid "All"
-msgstr "Toos"
+#, fuzzy
+#~ msgid "Failed to execute command \"%s\"."
+#~ msgstr "Nun pudo executase l'aplicación %s"
 
-#: ../src/xfce-appfinder-window.c:793
-#, fuzzy, c-format
-msgid "Failed to execute command \"%s\"."
-msgstr "Nun pudo executase l'aplicación %s"
-
-#: ../src/xfce-appfinder-window.c:951
-#, fuzzy, c-format
-msgid "<b>Categories:</b> %s"
-msgstr "Categoríes"
-
-#: ../src/xfce-appfinder-window.c:962
-#, c-format
-msgid "<b>Command:</b> %s"
-msgstr ""
+#, fuzzy
+#~ msgid "<b>Categories:</b> %s"
+#~ msgstr "Categoríes"
 
 #~ msgid "Could not load system menu"
 #~ msgstr "Nun pudo cargase'l menú de sistema"

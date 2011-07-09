@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 16:52+0100\n"
+"POT-Creation-Date: 2011-07-09 16:15+0200\n"
 "PO-Revision-Date: 2008-11-03 03:31+0100\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@gmail.com>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
@@ -16,91 +16,122 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/main.c:42
+#: ../src/appfinder-category-model.c:108
 #, fuzzy
-msgid "Version information"
-msgstr "Zêdetir Agahî..."
+msgid "All Applications"
+msgstr "Bînerê Sepanan"
 
-#: ../src/main.c:43
-msgid "[MENUFILE]"
+#: ../src/appfinder-model.c:422
+msgid "Name"
 msgstr ""
 
-#: ../src/main.c:64
-#, c-format
-msgid "Type '%s --help' for usage information."
+#: ../src/appfinder-model.c:423
+msgid "Command"
+msgstr ""
+
+#: ../src/appfinder-model.c:424
+msgid "Categories"
+msgstr "Kategorî"
+
+#: ../src/appfinder-model.c:425
+#, fuzzy
+msgid "Filename"
+msgstr "Gerînendeyê Pelan"
+
+#: ../src/appfinder-model.c:1317
+#, fuzzy
+msgid "Application has no command"
+msgstr "Bînerê Sepanan"
+
+#: ../src/appfinder-model.c:1634
+msgid "Commands History"
+msgstr ""
+
+#: ../src/appfinder-window.c:176 ../src/main.c:343
+#: ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr "Bînerê Sepanan"
+
+#: ../src/appfinder-window.c:214
+msgid "Toggle view mode"
 msgstr ""
 
 #: ../src/main.c:70
-msgid "Unable to initialize GTK+."
+msgid "Start in expanded mode"
 msgstr ""
 
-#: ../src/main.c:80
+#: ../src/main.c:71
+#, fuzzy
+msgid "Print version information and exit"
+msgstr "Zêdetir Agahî..."
+
+#: ../src/main.c:72
+msgid "Replace the existing service"
+msgstr ""
+
+#: ../src/main.c:73
+msgid "Quit all instances"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Do not try to use or become a D-Bus service"
+msgstr ""
+
+#. close all windows and quit
+#: ../src/main.c:159
+msgid "Forced to quit"
+msgstr ""
+
+#: ../src/main.c:345
+msgid "Unable to daemonize the process"
+msgstr ""
+
+#: ../src/main.c:417
+#, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr ""
+
+#: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
 msgstr ""
 
-#: ../src/main.c:81
+#: ../src/main.c:429
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr ""
 
-#: ../src/main.c:92
-#, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr ""
-
-#: ../src/main.c:96
-msgid "Failed to connect to xfconf daemon."
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
-msgid "Application Finder"
-msgstr "Bînerê Sepanan"
-
-#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:242
+#: ../data/xfce4-run.desktop.in.h:1
 #, fuzzy
-msgid "Search"
-msgstr "<b>Lê bigere:</b>"
+msgid "Run Program..."
+msgstr "Bername bixebitîne"
 
-#: ../src/xfce-appfinder-window.c:270
-msgid "Categories"
-msgstr "Kategorî"
+#: ../data/xfce4-run.desktop.in.h:2
+#, fuzzy
+msgid "Run a program"
+msgstr "Bername bixebitîne"
 
-#: ../src/xfce-appfinder-window.c:320
-msgid "C_lose after launch"
-msgstr ""
+#, fuzzy
+#~ msgid "Search"
+#~ msgstr "<b>Lê bigere:</b>"
 
-#: ../src/xfce-appfinder-window.c:328
-msgid "Launch"
-msgstr ""
+#~ msgid "All"
+#~ msgstr "Hemû"
 
-#: ../src/xfce-appfinder-window.c:458
-#, c-format
-msgid "Could not load menu from %s"
-msgstr ""
+#, fuzzy
+#~ msgid "Failed to execute command \"%s\"."
+#~ msgstr "Nikare sepana %s bixebitîne"
 
-#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
-#: ../src/xfce-appfinder-window.c:1115
-msgid "All"
-msgstr "Hemû"
+#, fuzzy
+#~ msgid "<b>Categories:</b> %s"
+#~ msgstr "<b>Kategorî</b>"
 
-#: ../src/xfce-appfinder-window.c:793
-#, fuzzy, c-format
-msgid "Failed to execute command \"%s\"."
-msgstr "Nikare sepana %s bixebitîne"
-
-#: ../src/xfce-appfinder-window.c:951
-#, fuzzy, c-format
-msgid "<b>Categories:</b> %s"
-msgstr "<b>Kategorî</b>"
-
-#: ../src/xfce-appfinder-window.c:962
-#, fuzzy, c-format
-msgid "<b>Command:</b> %s"
-msgstr "<b>Ferman</b>"
+#, fuzzy
+#~ msgid "<b>Command:</b> %s"
+#~ msgstr "<b>Ferman</b>"
 
 #~ msgid "Filter"
 #~ msgstr "Parzûn"
@@ -116,9 +147,6 @@ msgstr "<b>Ferman</b>"
 
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>Şîrove</b>"
-
-#~ msgid "Run program"
-#~ msgstr "Bername bixebitîne"
 
 #~ msgid "Show Categories"
 #~ msgstr "Kategoriyan Nîşan bide"
@@ -149,9 +177,6 @@ msgstr "<b>Ferman</b>"
 
 #~ msgid "System"
 #~ msgstr "Pergal"
-
-#~ msgid "Filemanager"
-#~ msgstr "Gerînendeyê Pelan"
 
 #~ msgid "Utility"
 #~ msgstr "Bernameyên alîkar"

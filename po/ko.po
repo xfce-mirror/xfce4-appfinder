@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 16:52+0100\n"
+"POT-Creation-Date: 2011-07-09 16:15+0200\n"
 "PO-Revision-Date: 2008-07-28 23:54+0900\n"
 "Last-Translator: ByungHyun Choi <byunghyunchoi@debianusers.org>\n"
 "Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge."
@@ -17,92 +17,115 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/main.c:42
+#: ../src/appfinder-category-model.c:108
 #, fuzzy
-msgid "Version information"
-msgstr "버전 정보"
+msgid "All Applications"
+msgstr "응용프로그램"
 
-#: ../src/main.c:43
-msgid "[MENUFILE]"
-msgstr "[MENUFILE]"
+#: ../src/appfinder-model.c:422
+msgid "Name"
+msgstr ""
 
-#: ../src/main.c:64
-#, c-format
-msgid "Type '%s --help' for usage information."
+#: ../src/appfinder-model.c:423
+msgid "Command"
+msgstr ""
+
+#: ../src/appfinder-model.c:424
+msgid "Categories"
+msgstr "분류"
+
+#: ../src/appfinder-model.c:425
+msgid "Filename"
+msgstr ""
+
+#: ../src/appfinder-model.c:1317
+#, fuzzy
+msgid "Application has no command"
+msgstr "응용프로그램 검색"
+
+#: ../src/appfinder-model.c:1634
+msgid "Commands History"
+msgstr ""
+
+#: ../src/appfinder-window.c:176 ../src/main.c:343
+#: ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr "응용프로그램 검색"
+
+#: ../src/appfinder-window.c:214
+msgid "Toggle view mode"
 msgstr ""
 
 #: ../src/main.c:70
-msgid "Unable to initialize GTK+."
+msgid "Start in expanded mode"
 msgstr ""
 
-#: ../src/main.c:80
+#: ../src/main.c:71
+#, fuzzy
+msgid "Print version information and exit"
+msgstr "버전 정보"
+
+#: ../src/main.c:72
+msgid "Replace the existing service"
+msgstr ""
+
+#: ../src/main.c:73
+msgid "Quit all instances"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Do not try to use or become a D-Bus service"
+msgstr ""
+
+#. close all windows and quit
+#: ../src/main.c:159
+msgid "Forced to quit"
+msgstr ""
+
+#: ../src/main.c:345
+msgid "Unable to daemonize the process"
+msgstr ""
+
+#: ../src/main.c:417
+#, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr ""
+
+#: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
 msgstr "The Xfce development team. All rights reserved."
 
-#: ../src/main.c:81
+#: ../src/main.c:429
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "버그가 생기면 <%s>에게 알려 주십시오."
 
-#: ../src/main.c:92
-#, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr ""
-
-#: ../src/main.c:96
-msgid "Failed to connect to xfconf daemon."
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
-msgid "Application Finder"
-msgstr "응용프로그램 검색"
-
-#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../data/xfce4-appfinder.desktop.in.h:2
 #, fuzzy
 msgid "Find and launch applications installed on your system"
 msgstr "시스템에 설치된 응용프로그램 찾기"
 
-#: ../src/xfce-appfinder-window.c:242
-msgid "Search"
+#: ../data/xfce4-run.desktop.in.h:1
+msgid "Run Program..."
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:270
-msgid "Categories"
-msgstr "분류"
+#: ../data/xfce4-run.desktop.in.h:2
+msgid "Run a program"
+msgstr ""
 
-#: ../src/xfce-appfinder-window.c:320
+#~ msgid "[MENUFILE]"
+#~ msgstr "[MENUFILE]"
+
 #, fuzzy
-msgid "C_lose after launch"
-msgstr "실행후 닫기(_l)"
+#~ msgid "C_lose after launch"
+#~ msgstr "실행후 닫기(_l)"
 
-#: ../src/xfce-appfinder-window.c:328
-msgid "Launch"
-msgstr ""
+#~ msgid "All"
+#~ msgstr "모두"
 
-#: ../src/xfce-appfinder-window.c:458
-#, c-format
-msgid "Could not load menu from %s"
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
-#: ../src/xfce-appfinder-window.c:1115
-msgid "All"
-msgstr "모두"
-
-#: ../src/xfce-appfinder-window.c:793
-#, c-format
-msgid "Failed to execute command \"%s\"."
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:951
-#, fuzzy, c-format
-msgid "<b>Categories:</b> %s"
-msgstr "분류"
-
-#: ../src/xfce-appfinder-window.c:962
-#, c-format
-msgid "<b>Command:</b> %s"
-msgstr ""
+#, fuzzy
+#~ msgid "<b>Categories:</b> %s"
+#~ msgstr "분류"
 
 #~ msgid "Filter"
 #~ msgstr "거르기"
@@ -119,6 +142,3 @@ msgstr ""
 
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Copyright (c) 2008"
-
-#~ msgid "Applications"
-#~ msgstr "응용프로그램"

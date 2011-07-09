@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 16:52+0100\n"
+"POT-Creation-Date: 2011-07-09 16:15+0200\n"
 "PO-Revision-Date: 2010-04-06 06:29+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <kde-i18n-doc@kde.org>\n"
@@ -21,89 +21,140 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/main.c:42
-msgid "Version information"
-msgstr "ਵਰਜਨ ਜਾਣਕਾਰੀ"
+#: ../src/appfinder-category-model.c:108
+#, fuzzy
+msgid "All Applications"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਫਾਈਡਰ"
 
-#: ../src/main.c:43
-msgid "[MENUFILE]"
-msgstr "[MENUFILE]"
+#: ../src/appfinder-model.c:422
+msgid "Name"
+msgstr ""
 
-#: ../src/main.c:64
-#, c-format
-msgid "Type '%s --help' for usage information."
-msgstr "ਮੱਦਦ ਲਈ '%s --help' ਲਿਖੋ।"
+#: ../src/appfinder-model.c:423
+msgid "Command"
+msgstr ""
+
+#: ../src/appfinder-model.c:424
+msgid "Categories"
+msgstr "ਕੈਟਾਗਰੀ"
+
+#: ../src/appfinder-model.c:425
+#, fuzzy
+msgid "Filename"
+msgstr "ਫਾਇਲ-ਮੈਨੇਜਰ"
+
+#: ../src/appfinder-model.c:1317
+#, fuzzy
+msgid "Application has no command"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਫਾਈਡਰ"
+
+#: ../src/appfinder-model.c:1634
+msgid "Commands History"
+msgstr ""
+
+#: ../src/appfinder-window.c:176 ../src/main.c:343
+#: ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਫਾਈਡਰ"
+
+#: ../src/appfinder-window.c:214
+msgid "Toggle view mode"
+msgstr ""
 
 #: ../src/main.c:70
-msgid "Unable to initialize GTK+."
-msgstr "GTK+ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਅਸਮਰੱਥ ਹੈ।"
+msgid "Start in expanded mode"
+msgstr ""
 
-#: ../src/main.c:80
+#: ../src/main.c:71
+#, fuzzy
+msgid "Print version information and exit"
+msgstr "ਵਰਜਨ ਜਾਣਕਾਰੀ"
+
+#: ../src/main.c:72
+msgid "Replace the existing service"
+msgstr ""
+
+#: ../src/main.c:73
+msgid "Quit all instances"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Do not try to use or become a D-Bus service"
+msgstr ""
+
+#. close all windows and quit
+#: ../src/main.c:159
+msgid "Forced to quit"
+msgstr ""
+
+#: ../src/main.c:345
+msgid "Unable to daemonize the process"
+msgstr ""
+
+#: ../src/main.c:417
+#, fuzzy, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr "ਮੱਦਦ ਲਈ '%s --help' ਲਿਖੋ।"
+
+#: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce ਡਿਵੈਲਪਮੈਂਟ ਟੀਮ। ਸਭ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।"
 
-#: ../src/main.c:81
+#: ../src/main.c:429
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "ਬੱਗ ਦੀ ਜਾਣਕਾਰੀ <%s> ਉੱਤੇ ਦਿਓ ਜੀ।"
 
-#: ../src/main.c:92
-#, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "xfconf ਡੈਮਨ ਨਾਲ ਕੁਨੈਕਟ ਕਰਨ ਲਈ ਫੇਲ੍ਹ ਹੈ। ਕਾਰਨ: %s"
-
-#: ../src/main.c:96
-msgid "Failed to connect to xfconf daemon."
-msgstr "xfconf ਡੈਮਨ ਨਾਲ ਕੁਨੈਕਟ ਕਰਨ ਲਈ ਫੇਲ੍ਹ ਹੈ।"
-
-#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
-msgid "Application Finder"
-msgstr "ਐਪਲੀਕੇਸ਼ਨ ਫਾਈਡਰ"
-
-#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "ਆਪਣੇ ਸਿਸਟਮ ਉੱਤੇ ਇੰਸਟਾਲ ਹੋਈਆਂ ਐਪਲੀਕੇਸ਼ਨ ਲੱਭੋ ਤੇ ਚਲਾਓ"
 
-#: ../src/xfce-appfinder-window.c:242
-msgid "Search"
-msgstr "ਖੋਜ"
+#: ../data/xfce4-run.desktop.in.h:1
+#, fuzzy
+msgid "Run Program..."
+msgstr "ਪ੍ਰੋਗਰਾਮ ਚਲਾਓ"
 
-#: ../src/xfce-appfinder-window.c:270
-msgid "Categories"
-msgstr "ਕੈਟਾਗਰੀ"
+#: ../data/xfce4-run.desktop.in.h:2
+#, fuzzy
+msgid "Run a program"
+msgstr "ਪ੍ਰੋਗਰਾਮ ਚਲਾਓ"
 
-#: ../src/xfce-appfinder-window.c:320
-msgid "C_lose after launch"
-msgstr "ਚਲਾਉਣ ਬਾਅਦ ਬੰਦ ਕਰੋ(_l)"
+#~ msgid "[MENUFILE]"
+#~ msgstr "[MENUFILE]"
 
-#: ../src/xfce-appfinder-window.c:328
-msgid "Launch"
-msgstr "ਚਲਾਓ"
+#~ msgid "Unable to initialize GTK+."
+#~ msgstr "GTK+ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਅਸਮਰੱਥ ਹੈ।"
 
-#: ../src/xfce-appfinder-window.c:458
-#, c-format
-msgid "Could not load menu from %s"
-msgstr "%s ਤੋਂ ਮੇਨੂ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ"
+#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
+#~ msgstr "xfconf ਡੈਮਨ ਨਾਲ ਕੁਨੈਕਟ ਕਰਨ ਲਈ ਫੇਲ੍ਹ ਹੈ। ਕਾਰਨ: %s"
 
-#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
-#: ../src/xfce-appfinder-window.c:1115
-msgid "All"
-msgstr "ਸਭ"
+#~ msgid "Failed to connect to xfconf daemon."
+#~ msgstr "xfconf ਡੈਮਨ ਨਾਲ ਕੁਨੈਕਟ ਕਰਨ ਲਈ ਫੇਲ੍ਹ ਹੈ।"
 
-#: ../src/xfce-appfinder-window.c:793
-#, fuzzy, c-format
-msgid "Failed to execute command \"%s\"."
-msgstr "%s ਐਪਲੀਕੇਸ਼ਨ ਚਲਾਈ ਨਹੀਂ ਜਾ ਸਕੀ।"
+#~ msgid "Search"
+#~ msgstr "ਖੋਜ"
 
-#: ../src/xfce-appfinder-window.c:951
-#, c-format
-msgid "<b>Categories:</b> %s"
-msgstr "<b>ਕੈਟਾਗਰੀ:</b> %s"
+#~ msgid "C_lose after launch"
+#~ msgstr "ਚਲਾਉਣ ਬਾਅਦ ਬੰਦ ਕਰੋ(_l)"
 
-#: ../src/xfce-appfinder-window.c:962
-#, c-format
-msgid "<b>Command:</b> %s"
-msgstr "<b>ਕਮਾਂਡ:</b> %s"
+#~ msgid "Launch"
+#~ msgstr "ਚਲਾਓ"
+
+#~ msgid "Could not load menu from %s"
+#~ msgstr "%s ਤੋਂ ਮੇਨੂ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ"
+
+#~ msgid "All"
+#~ msgstr "ਸਭ"
+
+#, fuzzy
+#~ msgid "Failed to execute command \"%s\"."
+#~ msgstr "%s ਐਪਲੀਕੇਸ਼ਨ ਚਲਾਈ ਨਹੀਂ ਜਾ ਸਕੀ।"
+
+#~ msgid "<b>Categories:</b> %s"
+#~ msgstr "<b>ਕੈਟਾਗਰੀ:</b> %s"
+
+#~ msgid "<b>Command:</b> %s"
+#~ msgstr "<b>ਕਮਾਂਡ:</b> %s"
 
 #~ msgid "Could not load system menu"
 #~ msgstr "ਸਿਸਟਮ ਮੇਨੂ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ"
@@ -119,9 +170,6 @@ msgstr "<b>ਕਮਾਂਡ:</b> %s"
 
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>ਟਿੱਪਣੀ</b>"
-
-#~ msgid "Run program"
-#~ msgstr "ਪ੍ਰੋਗਰਾਮ ਚਲਾਓ"
 
 #~ msgid "Show Categories"
 #~ msgstr "ਕੈਟਾਗਰੀ ਵੇਖਾਓ"
@@ -152,9 +200,6 @@ msgstr "<b>ਕਮਾਂਡ:</b> %s"
 
 #~ msgid "System"
 #~ msgstr "ਸਿਸਟਮ"
-
-#~ msgid "Filemanager"
-#~ msgstr "ਫਾਇਲ-ਮੈਨੇਜਰ"
 
 #~ msgid "Utility"
 #~ msgstr "ਯੂਟੈਲਟੀ"

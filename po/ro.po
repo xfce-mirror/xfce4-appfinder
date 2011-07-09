@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 16:52+0100\n"
+"POT-Creation-Date: 2011-07-09 16:15+0200\n"
 "PO-Revision-Date: 2011-01-07 14:24+0200\n"
 "Last-Translator: Mișu Moldovan <dumol@xfce.org>\n"
 "Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
@@ -18,86 +18,133 @@ msgstr ""
 "Plural-Forms: nplurals=3;plural=(n==1?0:(n==0||((n%100)>0&&(n%100)<20))?"
 "1:2)\n"
 
-#: ../src/main.c:42
-msgid "Version information"
-msgstr "Detalii despre versiune"
+#: ../src/appfinder-category-model.c:108
+#, fuzzy
+msgid "All Applications"
+msgstr "Căutare de programe"
 
-#: ../src/main.c:43
-msgid "[MENUFILE]"
-msgstr "[FIȘIER_MENIU]"
+#: ../src/appfinder-model.c:422
+msgid "Name"
+msgstr ""
 
-#: ../src/main.c:64
-#, c-format
-msgid "Type '%s --help' for usage information."
-msgstr "Utilizați „%s --help” pentru detalii despre opțiunile de utilizare"
+#: ../src/appfinder-model.c:423
+msgid "Command"
+msgstr ""
+
+#: ../src/appfinder-model.c:424
+msgid "Categories"
+msgstr "Categorii"
+
+#: ../src/appfinder-model.c:425
+msgid "Filename"
+msgstr ""
+
+#: ../src/appfinder-model.c:1317
+#, fuzzy
+msgid "Application has no command"
+msgstr "Căutare de programe"
+
+#: ../src/appfinder-model.c:1634
+msgid "Commands History"
+msgstr ""
+
+#: ../src/appfinder-window.c:176 ../src/main.c:343
+#: ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr "Căutare de programe"
+
+#: ../src/appfinder-window.c:214
+msgid "Toggle view mode"
+msgstr ""
 
 #: ../src/main.c:70
-msgid "Unable to initialize GTK+."
-msgstr "Nu s-a putut inițializa GTK+."
+msgid "Start in expanded mode"
+msgstr ""
 
-#: ../src/main.c:80
+#: ../src/main.c:71
+#, fuzzy
+msgid "Print version information and exit"
+msgstr "Detalii despre versiune"
+
+#: ../src/main.c:72
+msgid "Replace the existing service"
+msgstr ""
+
+#: ../src/main.c:73
+msgid "Quit all instances"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Do not try to use or become a D-Bus service"
+msgstr ""
+
+#. close all windows and quit
+#: ../src/main.c:159
+msgid "Forced to quit"
+msgstr ""
+
+#: ../src/main.c:345
+msgid "Unable to daemonize the process"
+msgstr ""
+
+#: ../src/main.c:417
+#, fuzzy, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr "Utilizați „%s --help” pentru detalii despre opțiunile de utilizare"
+
+#: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
 msgstr "Echipa de dezvoltare Xfce. Toate drepturile sunt rezervate."
 
-#: ../src/main.c:81
+#: ../src/main.c:429
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Raportați problemele la <%s>."
 
-#: ../src/main.c:92
-#, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "Conectarea la demonul xfconf a eșuat. Motiv: %s"
-
-#: ../src/main.c:96
-msgid "Failed to connect to xfconf daemon."
-msgstr "Conectarea la demonul xfconf a eșuat."
-
-#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
-msgid "Application Finder"
-msgstr "Căutare de programe"
-
-#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Caută și lansează programe instalate în sistem"
 
-#: ../src/xfce-appfinder-window.c:242
-msgid "Search"
-msgstr "Caută"
+#: ../data/xfce4-run.desktop.in.h:1
+msgid "Run Program..."
+msgstr ""
 
-#: ../src/xfce-appfinder-window.c:270
-msgid "Categories"
-msgstr "Categorii"
+#: ../data/xfce4-run.desktop.in.h:2
+msgid "Run a program"
+msgstr ""
 
-#: ../src/xfce-appfinder-window.c:320
-msgid "C_lose after launch"
-msgstr "Închide _după lansare"
+#~ msgid "[MENUFILE]"
+#~ msgstr "[FIȘIER_MENIU]"
 
-#: ../src/xfce-appfinder-window.c:328
-msgid "Launch"
-msgstr "Lansare"
+#~ msgid "Unable to initialize GTK+."
+#~ msgstr "Nu s-a putut inițializa GTK+."
 
-#: ../src/xfce-appfinder-window.c:458
-#, c-format
-msgid "Could not load menu from %s"
-msgstr "Nu s-a putut încărca meniul din %s"
+#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
+#~ msgstr "Conectarea la demonul xfconf a eșuat. Motiv: %s"
 
-#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
-#: ../src/xfce-appfinder-window.c:1115
-msgid "All"
-msgstr "Toate"
+#~ msgid "Failed to connect to xfconf daemon."
+#~ msgstr "Conectarea la demonul xfconf a eșuat."
 
-#: ../src/xfce-appfinder-window.c:793
-#, c-format
-msgid "Failed to execute command \"%s\"."
-msgstr "Nu s-a putut executa comanda „%s”"
+#~ msgid "Search"
+#~ msgstr "Caută"
 
-#: ../src/xfce-appfinder-window.c:951
-#, c-format
-msgid "<b>Categories:</b> %s"
-msgstr "<b>Categorii:</b> %s"
+#~ msgid "C_lose after launch"
+#~ msgstr "Închide _după lansare"
 
-#: ../src/xfce-appfinder-window.c:962
-#, c-format
-msgid "<b>Command:</b> %s"
-msgstr "<b>Comandă:</b> %s"
+#~ msgid "Launch"
+#~ msgstr "Lansare"
+
+#~ msgid "Could not load menu from %s"
+#~ msgstr "Nu s-a putut încărca meniul din %s"
+
+#~ msgid "All"
+#~ msgstr "Toate"
+
+#~ msgid "Failed to execute command \"%s\"."
+#~ msgstr "Nu s-a putut executa comanda „%s”"
+
+#~ msgid "<b>Categories:</b> %s"
+#~ msgstr "<b>Categorii:</b> %s"
+
+#~ msgid "<b>Command:</b> %s"
+#~ msgstr "<b>Comandă:</b> %s"

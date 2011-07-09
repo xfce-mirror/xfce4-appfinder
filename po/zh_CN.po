@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 16:52+0100\n"
+"POT-Creation-Date: 2011-07-09 16:15+0200\n"
 "PO-Revision-Date: 2010-11-23 23:14+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -20,89 +20,139 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/main.c:42
-msgid "Version information"
-msgstr "版本信息"
+#: ../src/appfinder-category-model.c:108
+#, fuzzy
+msgid "All Applications"
+msgstr "程序查找工具"
 
-#: ../src/main.c:43
-msgid "[MENUFILE]"
-msgstr "[菜单文件]"
+#: ../src/appfinder-model.c:422
+msgid "Name"
+msgstr ""
 
-#: ../src/main.c:64
-#, c-format
-msgid "Type '%s --help' for usage information."
-msgstr "输入 '%s --help' 查看用法信息。"
+#: ../src/appfinder-model.c:423
+msgid "Command"
+msgstr ""
+
+#: ../src/appfinder-model.c:424
+msgid "Categories"
+msgstr "类别"
+
+#: ../src/appfinder-model.c:425
+#, fuzzy
+msgid "Filename"
+msgstr "文件管理器"
+
+#: ../src/appfinder-model.c:1317
+#, fuzzy
+msgid "Application has no command"
+msgstr "程序查找工具"
+
+#: ../src/appfinder-model.c:1634
+msgid "Commands History"
+msgstr ""
+
+#: ../src/appfinder-window.c:176 ../src/main.c:343
+#: ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr "程序查找工具"
+
+#: ../src/appfinder-window.c:214
+msgid "Toggle view mode"
+msgstr ""
 
 #: ../src/main.c:70
-msgid "Unable to initialize GTK+."
-msgstr "无法初始化 GTK+。"
+msgid "Start in expanded mode"
+msgstr ""
 
-#: ../src/main.c:80
+#: ../src/main.c:71
+#, fuzzy
+msgid "Print version information and exit"
+msgstr "版本信息"
+
+#: ../src/main.c:72
+msgid "Replace the existing service"
+msgstr ""
+
+#: ../src/main.c:73
+msgid "Quit all instances"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Do not try to use or become a D-Bus service"
+msgstr ""
+
+#. close all windows and quit
+#: ../src/main.c:159
+msgid "Forced to quit"
+msgstr ""
+
+#: ../src/main.c:345
+msgid "Unable to daemonize the process"
+msgstr ""
+
+#: ../src/main.c:417
+#, fuzzy, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr "输入 '%s --help' 查看用法信息。"
+
+#: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce 开发团队。版权所有。"
 
-#: ../src/main.c:81
+#: ../src/main.c:429
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "请提交错误报告至 <%s>。"
 
-#: ../src/main.c:92
-#, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "无法连接至 xfconf 守护进程。原因：%s"
-
-#: ../src/main.c:96
-msgid "Failed to connect to xfconf daemon."
-msgstr "无法连接至 xfconf 守护进程。"
-
-#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
-msgid "Application Finder"
-msgstr "程序查找工具"
-
-#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "查找并启动您系统上安装的程序"
 
-#: ../src/xfce-appfinder-window.c:242
-msgid "Search"
-msgstr "搜索"
+#: ../data/xfce4-run.desktop.in.h:1
+#, fuzzy
+msgid "Run Program..."
+msgstr "运行程序"
 
-#: ../src/xfce-appfinder-window.c:270
-msgid "Categories"
-msgstr "类别"
+#: ../data/xfce4-run.desktop.in.h:2
+#, fuzzy
+msgid "Run a program"
+msgstr "运行程序"
 
-#: ../src/xfce-appfinder-window.c:320
-msgid "C_lose after launch"
-msgstr "启动后关闭(_L)"
+#~ msgid "[MENUFILE]"
+#~ msgstr "[菜单文件]"
 
-#: ../src/xfce-appfinder-window.c:328
-msgid "Launch"
-msgstr "启动"
+#~ msgid "Unable to initialize GTK+."
+#~ msgstr "无法初始化 GTK+。"
 
-#: ../src/xfce-appfinder-window.c:458
-#, c-format
-msgid "Could not load menu from %s"
-msgstr "无法从 %s 载入菜单"
+#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
+#~ msgstr "无法连接至 xfconf 守护进程。原因：%s"
 
-#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
-#: ../src/xfce-appfinder-window.c:1115
-msgid "All"
-msgstr "全部"
+#~ msgid "Failed to connect to xfconf daemon."
+#~ msgstr "无法连接至 xfconf 守护进程。"
 
-#: ../src/xfce-appfinder-window.c:793
-#, c-format
-msgid "Failed to execute command \"%s\"."
-msgstr "执行命令 \"%s\" 失败。"
+#~ msgid "Search"
+#~ msgstr "搜索"
 
-#: ../src/xfce-appfinder-window.c:951
-#, c-format
-msgid "<b>Categories:</b> %s"
-msgstr "<b>类别:</b> %s"
+#~ msgid "C_lose after launch"
+#~ msgstr "启动后关闭(_L)"
 
-#: ../src/xfce-appfinder-window.c:962
-#, c-format
-msgid "<b>Command:</b> %s"
-msgstr "<b>命令:</b> %s"
+#~ msgid "Launch"
+#~ msgstr "启动"
+
+#~ msgid "Could not load menu from %s"
+#~ msgstr "无法从 %s 载入菜单"
+
+#~ msgid "All"
+#~ msgstr "全部"
+
+#~ msgid "Failed to execute command \"%s\"."
+#~ msgstr "执行命令 \"%s\" 失败。"
+
+#~ msgid "<b>Categories:</b> %s"
+#~ msgstr "<b>类别:</b> %s"
+
+#~ msgid "<b>Command:</b> %s"
+#~ msgstr "<b>命令:</b> %s"
 
 #~ msgid "Could not load system menu"
 #~ msgstr "无法载入系统菜单"
@@ -127,9 +177,6 @@ msgstr "<b>命令:</b> %s"
 
 #~ msgid "<b>Comment</b>"
 #~ msgstr "<b>注释</b>"
-
-#~ msgid "Run program"
-#~ msgstr "运行程序"
 
 #~ msgid "Show Categories"
 #~ msgstr "显示类别"
@@ -160,9 +207,6 @@ msgstr "<b>命令:</b> %s"
 
 #~ msgid "System"
 #~ msgstr "系统"
-
-#~ msgid "Filemanager"
-#~ msgstr "文件管理器"
 
 #~ msgid "Utility"
 #~ msgstr "工具程序"

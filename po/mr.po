@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 16:52+0100\n"
+"POT-Creation-Date: 2011-07-09 16:15+0200\n"
 "PO-Revision-Date: 2005-10-15 01:49+0900\n"
 "Last-Translator: Pallavi Nikam <pallavi_edu@rediffmail.com>\n"
 "Language-Team: Marathi <LL@li.org>\n"
@@ -17,90 +17,109 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9\n"
 
-#: ../src/main.c:42
-msgid "Version information"
+#: ../src/appfinder-category-model.c:108
+msgid "All Applications"
 msgstr ""
 
-#: ../src/main.c:43
-msgid "[MENUFILE]"
+#: ../src/appfinder-model.c:422
+msgid "Name"
 msgstr ""
 
-#: ../src/main.c:64
-#, c-format
-msgid "Type '%s --help' for usage information."
+#: ../src/appfinder-model.c:423
+msgid "Command"
+msgstr ""
+
+#: ../src/appfinder-model.c:424
+msgid "Categories"
+msgstr "विभाग"
+
+#: ../src/appfinder-model.c:425
+#, fuzzy
+msgid "Filename"
+msgstr " फाईल व्यवस्थापक"
+
+#: ../src/appfinder-model.c:1317
+msgid "Application has no command"
+msgstr ""
+
+#: ../src/appfinder-model.c:1634
+msgid "Commands History"
+msgstr ""
+
+#: ../src/appfinder-window.c:176 ../src/main.c:343
+#: ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr ""
+
+#: ../src/appfinder-window.c:214
+msgid "Toggle view mode"
 msgstr ""
 
 #: ../src/main.c:70
-msgid "Unable to initialize GTK+."
+msgid "Start in expanded mode"
 msgstr ""
 
-#: ../src/main.c:80
+#: ../src/main.c:71
+msgid "Print version information and exit"
+msgstr ""
+
+#: ../src/main.c:72
+msgid "Replace the existing service"
+msgstr ""
+
+#: ../src/main.c:73
+msgid "Quit all instances"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Do not try to use or become a D-Bus service"
+msgstr ""
+
+#. close all windows and quit
+#: ../src/main.c:159
+msgid "Forced to quit"
+msgstr ""
+
+#: ../src/main.c:345
+msgid "Unable to daemonize the process"
+msgstr ""
+
+#: ../src/main.c:417
+#, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr ""
+
+#: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
 msgstr ""
 
-#: ../src/main.c:81
+#: ../src/main.c:429
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr ""
 
-#: ../src/main.c:92
-#, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr ""
-
-#: ../src/main.c:96
-msgid "Failed to connect to xfconf daemon."
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
-msgid "Application Finder"
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr ""
 
-#: ../src/xfce-appfinder-window.c:242
+#: ../data/xfce4-run.desktop.in.h:1
+msgid "Run Program..."
+msgstr ""
+
+#: ../data/xfce4-run.desktop.in.h:2
+msgid "Run a program"
+msgstr ""
+
 #, fuzzy
-msgid "Search"
-msgstr "<b>शोधा:</b>"
+#~ msgid "Search"
+#~ msgstr "<b>शोधा:</b>"
 
-#: ../src/xfce-appfinder-window.c:270
-msgid "Categories"
-msgstr "विभाग"
+#~ msgid "All"
+#~ msgstr "सर्व"
 
-#: ../src/xfce-appfinder-window.c:320
-msgid "C_lose after launch"
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:328
-msgid "Launch"
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:458
-#, c-format
-msgid "Could not load menu from %s"
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
-#: ../src/xfce-appfinder-window.c:1115
-msgid "All"
-msgstr "सर्व"
-
-#: ../src/xfce-appfinder-window.c:793
-#, c-format
-msgid "Failed to execute command \"%s\"."
-msgstr ""
-
-#: ../src/xfce-appfinder-window.c:951
-#, fuzzy, c-format
-msgid "<b>Categories:</b> %s"
-msgstr "विभाग"
-
-#: ../src/xfce-appfinder-window.c:962
-#, c-format
-msgid "<b>Command:</b> %s"
-msgstr ""
+#, fuzzy
+#~ msgid "<b>Categories:</b> %s"
+#~ msgstr "विभाग"
 
 #, fuzzy
 #~ msgid "<b>Name</b>"
@@ -136,9 +155,6 @@ msgstr ""
 
 #~ msgid "System"
 #~ msgstr "यंत्रणा"
-
-#~ msgid "Filemanager"
-#~ msgstr " फाईल व्यवस्थापक"
 
 #~ msgid "Utility"
 #~ msgstr "उपयुक्तता"
