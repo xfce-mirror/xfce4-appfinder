@@ -1,14 +1,1 @@
-= GUI =
-
-* (better) error reporting
-* dnd dest: allow dragging files on applications to run them with arguments?
-
-= Menu =
-
-* special categories: GNOME, KDE, Xfce?
-
-= Other =
-
-* save and/or manage a 'Favorites' category?
-* add documentation
-* make the DBG macro work
+See the Xfce bugzilla for feature requests.
