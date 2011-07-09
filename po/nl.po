@@ -3,33 +3,32 @@
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Jasper Huijsmans <jasper@xfce.org>, 2008.
 # Pjotr, 2011.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-09 16:15+0200\n"
+"POT-Creation-Date: 2011-07-09 16:11+0000\n"
 "PO-Revision-Date: 2011-06-15 09:26+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
-"Language: nl (Dutch)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl (Dutch)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/appfinder-category-model.c:108
-#, fuzzy
 msgid "All Applications"
-msgstr "Toepassingen"
+msgstr "Alle Toepassingen"
 
 #: ../src/appfinder-model.c:422
 msgid "Name"
-msgstr ""
+msgstr "Naam"
 
 #: ../src/appfinder-model.c:423
 msgid "Command"
-msgstr ""
+msgstr "Opdracht"
 
 #: ../src/appfinder-model.c:424
 msgid "Categories"
@@ -37,16 +36,15 @@ msgstr "Categorieën"
 
 #: ../src/appfinder-model.c:425
 msgid "Filename"
-msgstr ""
+msgstr "Bestandnaam"
 
 #: ../src/appfinder-model.c:1317
-#, fuzzy
 msgid "Application has no command"
-msgstr "Toepassingenzoeker"
+msgstr "Toepassing heeft geen opdracht"
 
 #: ../src/appfinder-model.c:1634
 msgid "Commands History"
-msgstr ""
+msgstr "Opdrachtgeschiedenis"
 
 #: ../src/appfinder-window.c:176 ../src/main.c:343
 #: ../data/xfce4-appfinder.desktop.in.h:1
@@ -55,40 +53,39 @@ msgstr "Toepassingenzoeker"
 
 #: ../src/appfinder-window.c:214
 msgid "Toggle view mode"
-msgstr ""
+msgstr "Schakel de bekijkmodus"
 
 #: ../src/main.c:70
 msgid "Start in expanded mode"
-msgstr ""
+msgstr "Start in uitgeklapte modus"
 
 #: ../src/main.c:71
-#, fuzzy
 msgid "Print version information and exit"
-msgstr "Versie-informatie"
+msgstr "Druk versie-informatie af en sluit af"
 
 #: ../src/main.c:72
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Vervang de bestaande dienst"
 
 #: ../src/main.c:73
 msgid "Quit all instances"
-msgstr ""
+msgstr "Sluit alle onderdelen"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "Probeer niet om een D-Bus-dienst te gebruiken of er een te worden"
 
 #. close all windows and quit
 #: ../src/main.c:159
 msgid "Forced to quit"
-msgstr ""
+msgstr "Gedwongen om af te sluiten"
 
 #: ../src/main.c:345
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "Niet in staat om het proces als achtergronddienst te draaien"
 
 #: ../src/main.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Tik '%s -- help' voor gebruikinformatie."
 
@@ -107,11 +104,11 @@ msgstr "Toepassingen zoeken en uitvoeren die geïnstalleerd zijn in uw systeem."
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr ""
+msgstr "Start Programma..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr ""
+msgstr "Start een programma"
 
 #~ msgid "[MENUFILE]"
 #~ msgstr "[MENUBESTAND]"
