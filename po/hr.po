@@ -86,7 +86,7 @@ msgstr ""
 #: ../src/main.c:417
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Upiši '%s --help' za uporabu. "
+msgstr "Upiši  \"%s --help\" za uporabu. "
 
 #: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
