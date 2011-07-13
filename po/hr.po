@@ -7,29 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-09 16:15+0200\n"
+"POT-Creation-Date: 2011-07-13 22:11+0000\n"
 "PO-Revision-Date: 2010-06-05 10:42+0200\n"
 "Last-Translator: Ivica Kolić<ikoli@yahoo.com> <>\n"
 "Language-Team: Croatian <>\n"
-"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/appfinder-category-model.c:108
-#, fuzzy
 msgid "All Applications"
-msgstr "Nalaznik programa"
+msgstr "Svi programi"
 
 #: ../src/appfinder-model.c:422
 msgid "Name"
-msgstr ""
+msgstr "Ime"
 
 #: ../src/appfinder-model.c:423
 msgid "Command"
-msgstr ""
+msgstr "Naredba"
 
 #: ../src/appfinder-model.c:424
 msgid "Categories"
@@ -37,16 +35,15 @@ msgstr "Kategorije"
 
 #: ../src/appfinder-model.c:425
 msgid "Filename"
-msgstr ""
+msgstr "Ime datoteke"
 
 #: ../src/appfinder-model.c:1317
-#, fuzzy
 msgid "Application has no command"
-msgstr "Nalaznik programa"
+msgstr "Program nema naredbe"
 
 #: ../src/appfinder-model.c:1634
 msgid "Commands History"
-msgstr ""
+msgstr "Povijest naredbi"
 
 #: ../src/appfinder-window.c:176 ../src/main.c:343
 #: ../data/xfce4-appfinder.desktop.in.h:1
@@ -59,16 +56,15 @@ msgstr ""
 
 #: ../src/main.c:70
 msgid "Start in expanded mode"
-msgstr ""
+msgstr "Početak u proširenom načinu"
 
 #: ../src/main.c:71
-#, fuzzy
 msgid "Print version information and exit"
-msgstr "Informacija o verziji"
+msgstr "Ispiši informaciju o verziji i izađi"
 
 #: ../src/main.c:72
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Zamijenite postojeći servis"
 
 #: ../src/main.c:73
 msgid "Quit all instances"
@@ -81,16 +77,16 @@ msgstr ""
 #. close all windows and quit
 #: ../src/main.c:159
 msgid "Forced to quit"
-msgstr ""
+msgstr "Prisilno isključivanje"
 
 #: ../src/main.c:345
 msgid "Unable to daemonize the process"
 msgstr ""
 
 #: ../src/main.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Upiši '%s --help' za informacije o uporabi. "
+msgstr "Upiši '%s --help' za uporabu. "
 
 #: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
