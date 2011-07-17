@@ -2,32 +2,31 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Eduard Roccatello <eduard@xfce.org>, 2004.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-09 16:15+0200\n"
+"POT-Creation-Date: 2011-07-17 04:11+0000\n"
 "PO-Revision-Date: 2009-04-15 21:48+0100\n"
 "Last-Translator: Cristian Cozzolino <cristiancozzolino@libero.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
-"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 
 #: ../src/appfinder-category-model.c:108
-#, fuzzy
 msgid "All Applications"
-msgstr "Trova applicazioni"
+msgstr "Tutte le applicazioni"
 
 #: ../src/appfinder-model.c:422
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: ../src/appfinder-model.c:423
 msgid "Command"
-msgstr ""
+msgstr "Comando"
 
 #: ../src/appfinder-model.c:424
 msgid "Categories"
@@ -35,16 +34,15 @@ msgstr "Categorie"
 
 #: ../src/appfinder-model.c:425
 msgid "Filename"
-msgstr ""
+msgstr "Nome file"
 
 #: ../src/appfinder-model.c:1317
-#, fuzzy
 msgid "Application has no command"
-msgstr "Trova applicazioni"
+msgstr "L'applicazione non ha un comando"
 
 #: ../src/appfinder-model.c:1634
 msgid "Commands History"
-msgstr ""
+msgstr "Cronologia dei comandi"
 
 #: ../src/appfinder-window.c:176 ../src/main.c:343
 #: ../data/xfce4-appfinder.desktop.in.h:1
@@ -53,42 +51,41 @@ msgstr "Trova applicazioni"
 
 #: ../src/appfinder-window.c:214
 msgid "Toggle view mode"
-msgstr ""
+msgstr "Modifica lo stile di visualizzazione"
 
 #: ../src/main.c:70
 msgid "Start in expanded mode"
-msgstr ""
+msgstr "Avvia in modalità estesa"
 
 #: ../src/main.c:71
-#, fuzzy
 msgid "Print version information and exit"
-msgstr "Informazioni di versione"
+msgstr "Stampa le informazioni di versione ed esce"
 
 #: ../src/main.c:72
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Sostituisce il servizio esistente"
 
 #: ../src/main.c:73
 msgid "Quit all instances"
-msgstr ""
+msgstr "Esce da tutte le istanze"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "Non usa o diventa un servizio D-Bus"
 
 #. close all windows and quit
 #: ../src/main.c:159
 msgid "Forced to quit"
-msgstr ""
+msgstr "Uscita forzata"
 
 #: ../src/main.c:345
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "Impossibile avviare il processo in modalità demone"
 
 #: ../src/main.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Digitare '%s --help' per informazioni sull'uso."
+msgstr "Digitare \"%s --help\" per informazioni sull'uso."
 
 #: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
@@ -104,14 +101,12 @@ msgid "Find and launch applications installed on your system"
 msgstr "Trova e lancia le applicazioni installate nel sistema"
 
 #: ../data/xfce4-run.desktop.in.h:1
-#, fuzzy
 msgid "Run Program..."
-msgstr "Avvia programma"
+msgstr "Esegui programma..."
 
 #: ../data/xfce4-run.desktop.in.h:2
-#, fuzzy
 msgid "Run a program"
-msgstr "Avvia programma"
+msgstr "Esegue un programma"
 
 #~ msgid "[MENUFILE]"
 #~ msgstr "[MENUFILE]"
