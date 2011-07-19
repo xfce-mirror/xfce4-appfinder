@@ -9,47 +9,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-09 16:15+0200\n"
-"PO-Revision-Date: 2009-12-18 19:48+0100\n"
-"Last-Translator: Abel Martín Ruiz <abel.martin.ruiz@gmail.com>\n"
+"POT-Creation-Date: 2011-07-19 10:12+0000\n"
+"PO-Revision-Date: 2011-07-19 07:26-0500\n"
+"Last-Translator: Andres Sanchez <afsanchez93@gmail.com>\n"
 "Language-Team: Spanish/ES <xfce-i18n@xfce.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 
 #: ../src/appfinder-category-model.c:108
-#, fuzzy
 msgid "All Applications"
-msgstr "Aplicaciones"
+msgstr "Todas las aplicaciones"
 
 #: ../src/appfinder-model.c:422
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: ../src/appfinder-model.c:423
 msgid "Command"
-msgstr ""
+msgstr "Comando"
 
 #: ../src/appfinder-model.c:424
 msgid "Categories"
 msgstr "Categorías"
 
 #: ../src/appfinder-model.c:425
-#, fuzzy
 msgid "Filename"
-msgstr "Gestión de archivos"
+msgstr "Nombre del archivo"
 
 #: ../src/appfinder-model.c:1317
-#, fuzzy
 msgid "Application has no command"
-msgstr "Buscador de aplicaciones"
+msgstr "La aplicación no tiene comandos"
 
 #: ../src/appfinder-model.c:1634
 msgid "Commands History"
-msgstr ""
+msgstr "Historial de comandos"
 
-#: ../src/appfinder-window.c:176 ../src/main.c:343
+#: ../src/appfinder-window.c:176
+#: ../src/main.c:343
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Buscador de aplicaciones"
@@ -60,20 +58,19 @@ msgstr ""
 
 #: ../src/main.c:70
 msgid "Start in expanded mode"
-msgstr ""
+msgstr "Comenzar en modo extendido"
 
 #: ../src/main.c:71
-#, fuzzy
 msgid "Print version information and exit"
-msgstr "Información de versión"
+msgstr "Imprimir información de la versión y salir"
 
 #: ../src/main.c:72
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Reemplazar el servicio existente"
 
 #: ../src/main.c:73
 msgid "Quit all instances"
-msgstr ""
+msgstr "Cerrar todas las instancias"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
@@ -107,14 +104,12 @@ msgid "Find and launch applications installed on your system"
 msgstr "Encuentre y ejecute aplicaciones instaladas en el sistema"
 
 #: ../data/xfce4-run.desktop.in.h:1
-#, fuzzy
 msgid "Run Program..."
-msgstr "Ejecutar programa"
+msgstr "Ejecutar Programa..."
 
 #: ../data/xfce4-run.desktop.in.h:2
-#, fuzzy
 msgid "Run a program"
-msgstr "Ejecutar programa"
+msgstr "Ejecutar un programa"
 
 #~ msgid "[MENUFILE]"
 #~ msgstr "[ARCHIVODEMENÚ]"
