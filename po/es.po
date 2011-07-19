@@ -4,12 +4,12 @@
 # Edscott Wilson Garcia <edscott@xfce.org>, 2004.
 # Rudy Godoy <rudy@stone-head.org>, 2005.
 # Abel Martín <abel.martin.ruiz@gmail.com>, 2008-2009.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-19 10:12+0000\n"
+"POT-Creation-Date: 2011-07-19 16:11+0000\n"
 "PO-Revision-Date: 2011-07-19 07:26-0500\n"
 "Last-Translator: Andres Sanchez <afsanchez93@gmail.com>\n"
 "Language-Team: Spanish/ES <xfce-i18n@xfce.org>\n"
@@ -46,15 +46,14 @@ msgstr "La aplicación no tiene comandos"
 msgid "Commands History"
 msgstr "Historial de comandos"
 
-#: ../src/appfinder-window.c:176
-#: ../src/main.c:343
+#: ../src/appfinder-window.c:176 ../src/main.c:343
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Buscador de aplicaciones"
 
 #: ../src/appfinder-window.c:214
 msgid "Toggle view mode"
-msgstr ""
+msgstr "Cambiar el modo de vista"
 
 #: ../src/main.c:70
 msgid "Start in expanded mode"
@@ -73,22 +72,23 @@ msgid "Quit all instances"
 msgstr "Cerrar todas las instancias"
 
 #: ../src/main.c:74
+#, fuzzy
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "No trate de usar o convertirse en un servicio D-Bus"
 
 #. close all windows and quit
 #: ../src/main.c:159
 msgid "Forced to quit"
-msgstr ""
+msgstr "Forzado a cerrar"
 
 #: ../src/main.c:345
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "Imposible volver daemon al proceso"
 
 #: ../src/main.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Escriba '%s --help' para obtener información de uso."
+msgstr "Escriba \\'%s --help'\\ para obtener información de uso."
 
 #: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
