@@ -72,9 +72,8 @@ msgid "Quit all instances"
 msgstr "Cerrar todas las instancias"
 
 #: ../src/main.c:74
-#, fuzzy
 msgid "Do not try to use or become a D-Bus service"
-msgstr "No trate de usar o convertirse en un servicio D-Bus"
+msgstr "No trate de usar o convertir D-Bus en un servicio"
 
 #. close all windows and quit
 #: ../src/main.c:159
