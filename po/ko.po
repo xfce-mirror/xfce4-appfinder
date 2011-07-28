@@ -2,23 +2,21 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # ByungHyun Choi <byunghyun.choi@gmail.com>, 2005.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 16:52+0100\n"
+"POT-Creation-Date: 2011-07-28 10:34+0000\n"
 "PO-Revision-Date: 2008-07-28 23:54+0900\n"
 "Last-Translator: ByungHyun Choi <byunghyunchoi@debianusers.org>\n"
-"Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge."
-"net>\n"
-"Language: \n"
+"Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 
 #: ../src/main.c:42
-#, fuzzy
 msgid "Version information"
 msgstr "버전 정보"
 
@@ -29,11 +27,11 @@ msgstr "[MENUFILE]"
 #: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr ""
+msgstr "사용 정보를 보려면  '%s --help' 를 입력합니다."
 
 #: ../src/main.c:70
 msgid "Unable to initialize GTK+."
-msgstr ""
+msgstr "GTK+를 초기화 할 수 없습니다."
 
 #: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
@@ -47,42 +45,40 @@ msgstr "버그가 생기면 <%s>에게 알려 주십시오."
 #: ../src/main.c:92
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr ""
+msgstr "xfconf 데몬에 연결하는데 실패했습니다. 이유는 다음과 같습니다: %s"
 
 #: ../src/main.c:96
 msgid "Failed to connect to xfconf daemon."
-msgstr ""
+msgstr "xfconf 데몬에 연결하는데 실패했습니다."
 
 #: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "응용프로그램 검색"
 
 #: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
-#, fuzzy
 msgid "Find and launch applications installed on your system"
-msgstr "시스템에 설치된 응용프로그램 찾기"
+msgstr "시스템에 설치된 프로그램 찾고 실행하기"
 
 #: ../src/xfce-appfinder-window.c:242
 msgid "Search"
-msgstr ""
+msgstr "검색"
 
 #: ../src/xfce-appfinder-window.c:270
 msgid "Categories"
 msgstr "분류"
 
 #: ../src/xfce-appfinder-window.c:320
-#, fuzzy
 msgid "C_lose after launch"
-msgstr "실행후 닫기(_l)"
+msgstr "실행 후 닫기 (_l)"
 
 #: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
-msgstr ""
+msgstr "실행"
 
 #: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
-msgstr ""
+msgstr "%s로 부터 메뉴를 로드할 수 없습니다"
 
 #: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
 #: ../src/xfce-appfinder-window.c:1115
@@ -92,22 +88,21 @@ msgstr "모두"
 #: ../src/xfce-appfinder-window.c:793
 #, c-format
 msgid "Failed to execute command \"%s\"."
-msgstr ""
+msgstr "\"%s\" 명령을 실행하는데 실패했습니다."
 
 #: ../src/xfce-appfinder-window.c:951
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "분류"
+msgstr "<b>분류:</b> %s"
 
 #: ../src/xfce-appfinder-window.c:962
 #, c-format
 msgid "<b>Command:</b> %s"
-msgstr ""
+msgstr "<b>명령:</b> %s"
 
 #~ msgid "Filter"
 #~ msgstr "거르기"
 
-#, fuzzy
 #~ msgid "Find and launch applications installed on the system"
 #~ msgstr "시스템에 설치된 응용프로그램 찾기"
 
