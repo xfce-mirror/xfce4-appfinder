@@ -32,6 +32,7 @@
 #include <src/appfinder-window.h>
 #include <src/appfinder-model.h>
 #include <src/appfinder-category-model.h>
+#include <src/appfinder-preferences.h>
 #include <src/appfinder-private.h>
 
 
@@ -70,6 +71,7 @@ static void       xfce_appfinder_window_drag_data_get                 (GtkWidget
 static void       xfce_appfinder_window_category_changed              (GtkTreeSelection            *selection,
                                                                        XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_category_set_categories       (XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_preferences                   (GtkWidget                   *button);
 static gboolean   xfce_appfinder_window_item_visible                  (GtkTreeModel                *model,
                                                                        GtkTreeIter                 *iter,
                                                                        gpointer                     data);
@@ -107,6 +109,7 @@ struct _XfceAppfinderWindow
 
   GtkWidget                  *bbox;
   GtkWidget                  *button_launch;
+  GtkWidget                  *button_preferences;
   GtkWidget                  *bin_collapsed;
   GtkWidget                  *bin_expanded;
 
@@ -177,6 +180,9 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   integer = xfconf_channel_get_int (window->channel, "/LastWindowWidth", DEFAULT_WINDOW_WIDTH);
   gtk_window_set_default_size (GTK_WINDOW (window), integer, -1);
   gtk_window_set_icon_name (GTK_WINDOW (window), GTK_STOCK_EXECUTE);
+
+  if (xfconf_channel_get_bool (window->channel, "/AlwaysCenter", FALSE))
+    gtk_window_set_position (GTK_WINDOW (window), GTK_WIN_POS_CENTER);
 
   vbox = gtk_vbox_new (FALSE, 6);
   gtk_container_add (GTK_CONTAINER (window), vbox);
@@ -314,9 +320,18 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_box_pack_start (GTK_BOX (vbox), window->bin_expanded, FALSE, TRUE, 0);
   gtk_widget_show (window->bin_expanded);
 
-  window->bbox = bbox = gtk_hbutton_box_new ();
+  window->bbox = hbox = gtk_hbox_new (FALSE, 6);
+  gtk_widget_show (hbox);
+
+  window->button_preferences = button = gtk_button_new_from_stock (GTK_STOCK_PREFERENCES);
+  gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
+  g_signal_connect (G_OBJECT (button), "clicked",
+      G_CALLBACK (xfce_appfinder_window_preferences), NULL);
+
+  bbox = gtk_hbutton_box_new ();
   gtk_button_box_set_layout (GTK_BUTTON_BOX (bbox), GTK_BUTTONBOX_END);
   gtk_button_box_set_spacing (GTK_BUTTON_BOX (bbox), 6);
+  gtk_box_pack_start (GTK_BOX (hbox), bbox, TRUE, TRUE, 0);
   gtk_widget_show (bbox);
 
   button = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
@@ -651,7 +666,8 @@ xfce_appfinder_window_category_changed (GtkTreeSelection    *selection,
           gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (model));
 
           /* store last category */
-          xfconf_channel_set_string (window->channel, "/LastCategory", name);
+          if (xfconf_channel_get_bool (window->channel, "/RememberCategory", FALSE))
+            xfconf_channel_set_string (window->channel, "/LastCategory", name);
         }
 
       g_free (name);
@@ -675,11 +691,25 @@ xfce_appfinder_window_category_set_categories (XfceAppfinderWindow *window)
   if (categories != NULL)
     xfce_appfinder_category_model_set_categories (window->category_model, categories);
 
-  name = xfconf_channel_get_string (window->channel, "/LastCategory", NULL);
+  if (xfconf_channel_get_bool (window->channel, "/RememberCategory", FALSE))
+    name = xfconf_channel_get_string (window->channel, "/LastCategory", NULL);
+  else
+    name = NULL;
+
   path = xfce_appfinder_category_model_find_category (window->category_model, name);
   gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->sidepane), path, NULL, FALSE);
   gtk_tree_path_free (path);
   g_free (name);
+}
+
+
+
+static void
+xfce_appfinder_window_preferences (GtkWidget *button)
+{
+  appfinder_return_if_fail (GTK_IS_WIDGET (button));
+
+  xfce_appfinder_preferences_show (gtk_widget_get_screen (button));
 }
 
 
@@ -907,6 +937,7 @@ xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
     gtk_container_add (GTK_CONTAINER (window->bin_collapsed), window->bbox);
   gtk_widget_set_visible (window->bin_expanded, expanded);
   gtk_widget_set_visible (window->bin_collapsed, !expanded);
+  gtk_widget_set_visible (window->button_preferences, expanded);
   g_object_unref (G_OBJECT (window->bbox));
 
   /* show/hide pane with treeviews */

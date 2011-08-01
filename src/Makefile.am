@@ -8,11 +8,17 @@ INCLUDES = \
 
 bin_PROGRAMS = xfce4-appfinder
 
+xfce4_appfinder_built_sources = \
+	appfinder-preferences-ui.h
+
 xfce4_appfinder_SOURCES = \
+	$(xfce4_appfinder_built_sources) \
 	appfinder-category-model.c \
 	appfinder-category-model.h \
 	appfinder-model.c \
 	appfinder-model.h \
+	appfinder-preferences.c \
+	appfinder-preferences.h \
 	appfinder-private.h \
 	appfinder-window.c \
 	appfinder-window.h \
@@ -42,3 +48,19 @@ xfce4_appfinder_LDADD = \
 xfce4_appfinder_LDFLAGS = \
 	-no-undefined \
 	$(PLATFORM_LDFLAGS)
+
+if MAINTAINER_MODE
+
+appfinder-preferences-ui.h: $(srcdir)/appfinder-preferences.glade Makefile
+	$(AM_V_GEN) exo-csource --static --strip-comments --strip-content --name=appfinder_preferences_ui $< >$@
+
+DISTCLEANFILES = \
+	$(xfce4_appfinder_built_sources)
+
+BUILT_SOURCES = \
+	$(xfce4_appfinder_built_sources)
+
+endif
+
+EXTRA_DIST = \
+	appfinder-preferences.glade
