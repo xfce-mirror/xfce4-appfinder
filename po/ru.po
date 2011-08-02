@@ -1,25 +1,33 @@
-# translation of xfce4-appfinder.po to Russian
+# Russian translations for xfce4-appfinder package.
 # Copyright (C) 2004-2009 The Xfce development team.
 # This file is distributed under the same license as the xfce4-appfinder package.
+# Anthony Ivanoff <a-i@bk.ru>, 2005.
+# Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006.
+# Sergey Fedoseev <fedoseev.sergey@gmail.com>, 2006.
+# Maxim Zenin <webmechanics@gmail.com>, 2006.
+# Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2008.
+# NIkitaBelobrov <qvzqvz@gmail.com>, 2008.
+# Dmitrij Smirnov <other@igus.lv>, 2010.
+# Denis Koryavov <dkoryavov@yandex.ru>, 2009, 2010.
+# Artem Zolochevskiy <artem.zolochevskiy@gmail.com>, 2011.
 #
-# Denis Koryavov <dkoryavov@yandex.ru>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder\n"
+"Project-Id-Version: xfce4-appfinder 4.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 16:52+0100\n"
-"PO-Revision-Date: 2009-05-14 17:12+0400\n"
-"Last-Translator: Denis Koryavov <dkoryavov@yandex.ru>\n"
+"POT-Creation-Date: 2011-08-02 10:35+0000\n"
+"PO-Revision-Date: 2011-08-02 19:18+0300\n"
+"Last-Translator: Artem Zolochevskiy <artem.zolochevskiy@gmail.com>\n"
 "Language-Team: Russian\n"
-"Language: \n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/main.c:42
 msgid "Version information"
-msgstr "Информация о версии "
+msgstr "Информация о версии"
 
 #: ../src/main.c:43
 msgid "[MENUFILE]"
@@ -28,38 +36,39 @@ msgstr "[ФАЙЛ МЕНЮ]"
 #: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr ""
-"Выполните '%s --help' для просмотра параметров использования программы. "
+msgstr "Выполните '%s --help' для получения информации об использовании."
 
 #: ../src/main.c:70
 msgid "Unable to initialize GTK+."
-msgstr "Невозможно загрузить GTK+ "
+msgstr "Невозможно загрузить GTK+."
 
 #: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
-msgstr "Команда разработчиков Xfce. Все права защищены. "
+msgstr "Команда разработчиков Xfce. Все права защищены."
 
 #: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Пожалуйста, направляйте отчеты об ошибках по этому адресу: <%s>. "
+msgstr "Об ошибках сообщайте на <%s>."
 
 #: ../src/main.c:92
 #, c-format
 msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "Невозможно соединиться с менеджером настроек Xfce. Причина: %s "
+msgstr "Невозможно соединиться со службой xfconf. Причина: %s"
 
 #: ../src/main.c:96
 msgid "Failed to connect to xfconf daemon."
-msgstr "Невозможно соединиться с менеджером настроек Xfce. "
+msgstr "Невозможно соединиться со службой xfconf."
 
-#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217
+#: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Поиск приложений"
 
-#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Ищите и запускайте приложения установленные в вашей системе "
+msgstr "Поиск и запуск установленных в вашей системе приложений"
 
 #: ../src/xfce-appfinder-window.c:242
 msgid "Search"
@@ -80,17 +89,18 @@ msgstr "Запустить"
 #: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
-msgstr "Не удалось загрузить меню из источника %s"
+msgstr "Не удалось загрузить меню из %s"
 
-#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:470
+#: ../src/xfce-appfinder-window.c:477
 #: ../src/xfce-appfinder-window.c:1115
 msgid "All"
-msgstr "Все "
+msgstr "Все"
 
 #: ../src/xfce-appfinder-window.c:793
 #, c-format
 msgid "Failed to execute command \"%s\"."
-msgstr "Не удалось запустить команду\"%s\"."
+msgstr "Не удалось запустить команду «%s»."
 
 #: ../src/xfce-appfinder-window.c:951
 #, c-format
@@ -102,11 +112,3 @@ msgstr "<b>Категории:</b> %s"
 msgid "<b>Command:</b> %s"
 msgstr "<b>Команда:</b> %s"
 
-#~ msgid "Could not load system menu"
-#~ msgstr "Не удалось загрузить системное меню"
-
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "Невозможно запустить приложение %s. Причина: %s "
-
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "Невозможно загрузить меню из источника %s. Причина: %s "
