@@ -13,6 +13,8 @@ xfce4_appfinder_built_sources = \
 
 xfce4_appfinder_SOURCES = \
 	$(xfce4_appfinder_built_sources) \
+	appfinder-actions.c \
+	appfinder-actions.h \
 	appfinder-category-model.c \
 	appfinder-category-model.h \
 	appfinder-model.c \

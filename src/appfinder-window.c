@@ -33,6 +33,7 @@
 #include <src/appfinder-model.h>
 #include <src/appfinder-category-model.h>
 #include <src/appfinder-preferences.h>
+#include <src/appfinder-actions.h>
 #include <src/appfinder-private.h>
 
 
@@ -171,17 +172,17 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gint                integer;
 
   window->channel = xfconf_channel_get ("xfce4-appfinder");
-  window->last_window_height = xfconf_channel_get_int (window->channel, "/LastWindowHeight", DEFAULT_WINDOW_HEIGHT);
+  window->last_window_height = xfconf_channel_get_int (window->channel, "/last/window-height", DEFAULT_WINDOW_HEIGHT);
 
   window->category_model = xfce_appfinder_category_model_new ();
   window->model = xfce_appfinder_model_get ();
 
   gtk_window_set_title (GTK_WINDOW (window), _("Application Finder"));
-  integer = xfconf_channel_get_int (window->channel, "/LastWindowWidth", DEFAULT_WINDOW_WIDTH);
+  integer = xfconf_channel_get_int (window->channel, "/last/window-width", DEFAULT_WINDOW_WIDTH);
   gtk_window_set_default_size (GTK_WINDOW (window), integer, -1);
   gtk_window_set_icon_name (GTK_WINDOW (window), GTK_STOCK_EXECUTE);
 
-  if (xfconf_channel_get_bool (window->channel, "/AlwaysCenter", FALSE))
+  if (xfconf_channel_get_bool (window->channel, "/always-center", FALSE))
     gtk_window_set_position (GTK_WINDOW (window), GTK_WIN_POS_CENTER);
 
   vbox = gtk_vbox_new (FALSE, 6);
@@ -233,7 +234,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   window->paned = pane = gtk_hpaned_new ();
   gtk_box_pack_start (GTK_BOX (vbox), pane, TRUE, TRUE, 0);
-  integer = xfconf_channel_get_int (window->channel, "/LastPanedPosition", DEFAULT_PANED_POSITION);
+  integer = xfconf_channel_get_int (window->channel, "/last/pane-position", DEFAULT_PANED_POSITION);
   gtk_paned_set_position (GTK_PANED (pane), integer);
   g_object_set (G_OBJECT (pane), "position-set", TRUE, NULL);
 
@@ -399,9 +400,9 @@ xfce_appfinder_window_unmap (GtkWidget *widget)
 
   (*GTK_WIDGET_CLASS (xfce_appfinder_window_parent_class)->unmap) (widget);
 
-  xfconf_channel_set_int (window->channel, "/LastWindowHeight", height);
-  xfconf_channel_set_int (window->channel, "/LastWindowWidth", width);
-  xfconf_channel_set_int (window->channel, "/LastPanedPosition", position);
+  xfconf_channel_set_int (window->channel, "/last/window-height", height);
+  xfconf_channel_set_int (window->channel, "/last/window-width", width);
+  xfconf_channel_set_int (window->channel, "/last/pane-position", position);
 }
 
 
@@ -666,8 +667,8 @@ xfce_appfinder_window_category_changed (GtkTreeSelection    *selection,
           gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (model));
 
           /* store last category */
-          if (xfconf_channel_get_bool (window->channel, "/RememberCategory", FALSE))
-            xfconf_channel_set_string (window->channel, "/LastCategory", name);
+          if (xfconf_channel_get_bool (window->channel, "/remember-category", FALSE))
+            xfconf_channel_set_string (window->channel, "/last/category", name);
         }
 
       g_free (name);
@@ -691,8 +692,8 @@ xfce_appfinder_window_category_set_categories (XfceAppfinderWindow *window)
   if (categories != NULL)
     xfce_appfinder_category_model_set_categories (window->category_model, categories);
 
-  if (xfconf_channel_get_bool (window->channel, "/RememberCategory", FALSE))
-    name = xfconf_channel_get_string (window->channel, "/LastCategory", NULL);
+  if (xfconf_channel_get_bool (window->channel, "/remember-category", FALSE))
+    name = xfconf_channel_get_string (window->channel, "/last/category", NULL);
   else
     name = NULL;
 
@@ -792,51 +793,17 @@ xfce_appfinder_window_execute_command (const gchar  *cmd,
                                        GdkScreen    *screen,
                                        GError      **error)
 {
-  gboolean          in_terminal;
-  gchar            *cmdline, *exo_open;
-  const gchar      *exo_open_prefix[] = { "file://", "http://", "https://" };
-  guint             i;
-  gboolean          result = FALSE;
+  XfceAppfinderActions *actions;
+  gboolean              succeed = FALSE;
 
-  if (g_str_has_prefix (cmd, "#"))
-    {
-      /* open manual page in the terminal */
-      cmdline = g_strconcat ("man ", cmd + 1, NULL);
-      in_terminal = TRUE;
-    }
-  else if (g_str_has_prefix (cmd, "$"))
-    {
-      /* open in the terminal */
-      cmdline = xfce_expand_variables (cmd + 1, NULL);
-      in_terminal = TRUE;
-    }
-  else
-    {
-      cmdline = xfce_expand_variables (cmd, NULL);
-      in_terminal = FALSE;
-    }
+  actions = xfce_appfinder_actions_get ();
 
-  result = xfce_spawn_command_line_on_screen (screen, cmdline, in_terminal, FALSE, error);
-  if (!result)
-    {
-      /* TODO instead check the exo exit code */
-      /* check if this is something exo-open can handle */
-      for (i = 0; !result && i < G_N_ELEMENTS (exo_open_prefix); i++)
-        if (g_str_has_prefix (cmdline, exo_open_prefix[i]))
-          result = TRUE;
+  if (xfce_appfinder_actions_execute (actions, cmd, screen, error) == XFCE_APPFINDER_ACTIONS_SUCCEED)
+    succeed = TRUE;
 
-      if (result)
-        {
-          /* try to spawn again */
-          exo_open = g_strconcat ("exo-open ", cmdline, NULL);
-          result = xfce_spawn_command_line_on_screen (screen, exo_open, FALSE, FALSE, error);
-          g_free (exo_open);
-        }
-    }
+  g_object_unref (G_OBJECT (actions));
 
-  g_free (cmdline);
-
-  return result;
+  return succeed;
 }
 
 
