@@ -4,14 +4,14 @@
 # Moritz Heiber <moe@xfce.org>, 2004.
 # Enrico Tröger <enrico.troeger@uvena.de>, 2006, 2008.
 # Nico Schümann <nico@prog.nico22.de>, 2008.
-# Fabian Nowak <timystery@arcor.de>, 2008.
+# Fabian Nowak <timystery@arcor.de>, 2008, 2011.
 # Jannis Pohlmann <jannis@xfce.org>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-09 16:15+0200\n"
+"POT-Creation-Date: 2011-08-22 19:51+0200\n"
 "PO-Revision-Date: 2009-01-02 13:33+0100\n"
 "Last-Translator: Jannis Pohlmann <jannis@xfce.org>\n"
 "Language-Team: German <de@li.org>\n"
@@ -21,35 +21,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/appfinder-category-model.c:108
-#, fuzzy
 msgid "All Applications"
-msgstr "Anwendungen"
+msgstr "Alle Anwendungen"
 
 #: ../src/appfinder-model.c:422
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: ../src/appfinder-model.c:423
 msgid "Command"
-msgstr ""
+msgstr "Befehl"
 
 #: ../src/appfinder-model.c:424
 msgid "Categories"
 msgstr "Kategorien"
 
 #: ../src/appfinder-model.c:425
-#, fuzzy
 msgid "Filename"
-msgstr "Dateimanager"
+msgstr "Dateiname"
 
 #: ../src/appfinder-model.c:1317
-#, fuzzy
 msgid "Application has no command"
-msgstr "Anwendungsfinder"
+msgstr "Anwendung hat keinen Befehl"
 
 #: ../src/appfinder-model.c:1634
 msgid "Commands History"
-msgstr ""
+msgstr "Befehlsverlauf"
 
 #: ../src/appfinder-window.c:176 ../src/main.c:343
 #: ../data/xfce4-appfinder.desktop.in.h:1
@@ -58,42 +55,43 @@ msgstr "Anwendungsfinder"
 
 #: ../src/appfinder-window.c:214
 msgid "Toggle view mode"
-msgstr ""
+msgstr "Ansichtsmodus umstellen"
 
 #: ../src/main.c:70
 msgid "Start in expanded mode"
-msgstr ""
+msgstr "Im erweiterten Modus starten"
 
 #: ../src/main.c:71
-#, fuzzy
 msgid "Print version information and exit"
-msgstr "Versionsinformationen anzeigen"
+msgstr "Versionsinformationen anzeigen und Programm beenden"
 
 #: ../src/main.c:72
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Vorhandenen Dienst ersetzen"
 
 #: ../src/main.c:73
 msgid "Quit all instances"
-msgstr ""
+msgstr "Alle Instanzen beenden"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
 msgstr ""
+"Nicht versuchen, einen Dienst für D-Bus zu verwenden oder ein solcher zu "
+"werden"
 
 #. close all windows and quit
 #: ../src/main.c:159
 msgid "Forced to quit"
-msgstr ""
+msgstr "Beenden erzwungen"
 
 #: ../src/main.c:345
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "Kann Prozess nicht in den Hintergrund setzen"
 
 #: ../src/main.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Geben Sie »%s --help« ein, um weitere Informationen zu erhalten."
+msgstr "Geben Sie »%s --help« ein, um Hinweise zur Verwendung zu erhalten."
 
 #: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
@@ -109,14 +107,12 @@ msgid "Find and launch applications installed on your system"
 msgstr "Im System installierte Anwendungen finden und starten"
 
 #: ../data/xfce4-run.desktop.in.h:1
-#, fuzzy
 msgid "Run Program..."
-msgstr "Programm ausführen"
+msgstr "Programm ausführen…"
 
 #: ../data/xfce4-run.desktop.in.h:2
-#, fuzzy
 msgid "Run a program"
-msgstr "Programm ausführen"
+msgstr "Ein Programm ausführen"
 
 #~ msgid "[MENUFILE]"
 #~ msgstr "[Menüdatei]"
