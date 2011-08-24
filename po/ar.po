@@ -5,91 +5,89 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-09 16:15+0200\n"
-"PO-Revision-Date: 2007-01-30 15:47+0100\n"
-"Last-Translator: Hakeem Dimashq\n"
-"Language-Team: Arabeyes Translation & Documentation <admin@arabeyes.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2011-08-23 22:11+0000\n"
+"PO-Revision-Date: 2011-08-24 02:49-0000\n"
+"Last-Translator: كريم أولاد الشلحة <herr.linux88@gmail.com>\n"
+"Language-Team: Arabic Xfce Translation Team <herr.linux88@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "X-Poedit-Language: Arabic\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Country: Morocco\n"
 
 #: ../src/appfinder-category-model.c:108
-#, fuzzy
 msgid "All Applications"
-msgstr "مكتشف التطبيقات"
+msgstr "كل التطبيقات"
 
 #: ../src/appfinder-model.c:422
 msgid "Name"
-msgstr ""
+msgstr "إسم"
 
 #: ../src/appfinder-model.c:423
 msgid "Command"
-msgstr ""
+msgstr "أمر"
 
 #: ../src/appfinder-model.c:424
 msgid "Categories"
 msgstr "تصانيف"
 
 #: ../src/appfinder-model.c:425
-#, fuzzy
 msgid "Filename"
-msgstr "مدير ملفات"
+msgstr "إسم الملف"
 
 #: ../src/appfinder-model.c:1317
-#, fuzzy
 msgid "Application has no command"
-msgstr "مكتشف التطبيقات"
+msgstr "التطبيق لا يتوفر على أمر"
 
 #: ../src/appfinder-model.c:1634
 msgid "Commands History"
-msgstr ""
+msgstr "تاريخ الاوامر"
 
-#: ../src/appfinder-window.c:176 ../src/main.c:343
+#: ../src/appfinder-window.c:176
+#: ../src/main.c:343
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "مكتشف التطبيقات"
 
 #: ../src/appfinder-window.c:214
 msgid "Toggle view mode"
-msgstr ""
+msgstr "تبديل لوضع العرض"
 
 #: ../src/main.c:70
 msgid "Start in expanded mode"
-msgstr ""
+msgstr "بدء في الوضع الموسع"
 
 #: ../src/main.c:71
-#, fuzzy
 msgid "Print version information and exit"
-msgstr "معلومات النسخة"
+msgstr "طباعة معلومات النسخة والخروج"
 
 #: ../src/main.c:72
 msgid "Replace the existing service"
-msgstr ""
+msgstr "إستبدال الخدمات الموجودة"
 
 #: ../src/main.c:73
 msgid "Quit all instances"
-msgstr ""
+msgstr "الخروج من كل الحالات"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "لا تقم بإستعمال أو تحميل خدمة D-Bus"
 
 #. close all windows and quit
 #: ../src/main.c:159
 msgid "Forced to quit"
-msgstr ""
+msgstr "إجبار على الخروج"
 
 #: ../src/main.c:345
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "تعطيل إخفاء الإجراء"
 
 #: ../src/main.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "طباعة '%s --help' للحصول على معلومات الإستعمال."
+msgstr "طباعة \"%s --help\" للحصول على معلومات الإستعمال."
 
 #: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
@@ -105,14 +103,12 @@ msgid "Find and launch applications installed on your system"
 msgstr "العثور و إطلاق التطبيقات المثبتة في نظامك"
 
 #: ../data/xfce4-run.desktop.in.h:1
-#, fuzzy
 msgid "Run Program..."
-msgstr "نفذ البرنامج"
+msgstr "نفذ البرنامج..."
 
 #: ../data/xfce4-run.desktop.in.h:2
-#, fuzzy
 msgid "Run a program"
-msgstr "نفذ البرنامج"
+msgstr "نفذ برنامج"
 
 #~ msgid "[MENUFILE]"
 #~ msgstr "[قائمة]"
