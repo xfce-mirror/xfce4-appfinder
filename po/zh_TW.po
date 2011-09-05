@@ -8,89 +8,86 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-09 16:15+0200\n"
-"PO-Revision-Date: 2010-05-08 15:31+0800\n"
+"POT-Creation-Date: 2011-09-04 22:12+0000\n"
+"PO-Revision-Date: 2011-09-05 12:07+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
-"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
 
 #: ../src/appfinder-category-model.c:108
-#, fuzzy
 msgid "All Applications"
-msgstr "應用程式協尋器"
+msgstr "所有應用程式"
 
 #: ../src/appfinder-model.c:422
 msgid "Name"
-msgstr ""
+msgstr "名稱"
 
 #: ../src/appfinder-model.c:423
 msgid "Command"
-msgstr ""
+msgstr "指令"
 
 #: ../src/appfinder-model.c:424
 msgid "Categories"
 msgstr "類別"
 
 #: ../src/appfinder-model.c:425
-#, fuzzy
 msgid "Filename"
-msgstr "檔案管理器"
+msgstr "檔案名稱"
 
 #: ../src/appfinder-model.c:1317
-#, fuzzy
 msgid "Application has no command"
-msgstr "應用程式協尋器"
+msgstr "應用程式沒有指令"
 
 #: ../src/appfinder-model.c:1634
 msgid "Commands History"
-msgstr ""
+msgstr "指令歷史"
 
-#: ../src/appfinder-window.c:176 ../src/main.c:343
+#: ../src/appfinder-window.c:176
+#: ../src/main.c:343
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "應用程式協尋器"
 
 #: ../src/appfinder-window.c:214
 msgid "Toggle view mode"
-msgstr ""
+msgstr "切換檢視模式"
 
 #: ../src/main.c:70
 msgid "Start in expanded mode"
-msgstr ""
+msgstr "以擴展模式啟動"
 
 #: ../src/main.c:71
-#, fuzzy
 msgid "Print version information and exit"
-msgstr "版本資訊"
+msgstr "列印版本資訊並離開"
 
 #: ../src/main.c:72
 msgid "Replace the existing service"
-msgstr ""
+msgstr "替換現有的服務"
 
 #: ../src/main.c:73
 msgid "Quit all instances"
-msgstr ""
+msgstr "退出所有實體"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "不要嘗試使用或成為 D-Bus 服務"
 
 #. close all windows and quit
 #: ../src/main.c:159
 msgid "Forced to quit"
-msgstr ""
+msgstr "強迫退出"
 
 #: ../src/main.c:345
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "無法將程序幕後化"
 
 #: ../src/main.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "輸入 '%s --help' 以取得用法資訊。"
+msgstr "輸入 \"%s --help\" 以取得用法資訊。"
 
 #: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
@@ -106,12 +103,10 @@ msgid "Find and launch applications installed on your system"
 msgstr "尋找並啟動您系統上安裝的應用程式"
 
 #: ../data/xfce4-run.desktop.in.h:1
-#, fuzzy
 msgid "Run Program..."
-msgstr "執行程式"
+msgstr "執行程式..."
 
 #: ../data/xfce4-run.desktop.in.h:2
-#, fuzzy
 msgid "Run a program"
 msgstr "執行程式"
 
