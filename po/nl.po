@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-09 16:11+0000\n"
-"PO-Revision-Date: 2011-06-15 09:26+0200\n"
+"POT-Creation-Date: 2011-09-08 16:11+0000\n"
+"PO-Revision-Date: 2011-09-08 09:26+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../src/appfinder-category-model.c:108
 msgid "All Applications"
-msgstr "Alle Toepassingen"
+msgstr "Alle toepassingen"
 
 #: ../src/appfinder-model.c:422
 msgid "Name"
@@ -104,11 +104,11 @@ msgstr "Toepassingen zoeken en uitvoeren die geïnstalleerd zijn in uw systeem."
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr "Start Programma..."
+msgstr "Draai programma..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr "Start een programma"
+msgstr "Draai een programma"
 
 #~ msgid "[MENUFILE]"
 #~ msgstr "[MENUBESTAND]"
