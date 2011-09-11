@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-17 10:12+0000\n"
+"POT-Creation-Date: 2011-09-11 04:12+0000\n"
 "PO-Revision-Date: 2010-11-23 23:14+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -75,7 +75,7 @@ msgstr "退出所有实例"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "不要尝试使用或成为 D-Bus 服务"
 
 #. close all windows and quit
 #: ../src/main.c:159
@@ -87,9 +87,9 @@ msgid "Unable to daemonize the process"
 msgstr ""
 
 #: ../src/main.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "输入 '%s --help' 查看用法信息。"
+msgstr "输入 \"%s --help\" 查看用法信息。"
 
 #: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
