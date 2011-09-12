@@ -40,7 +40,7 @@ msgstr "Xfce 개발 팀. All rights reserved."
 #: ../src/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "버그가 생기면 <%s>에게 알려 주십시오."
+msgstr "버그가 생기면 <%s>에게 알려 주시기 바랍니다."
 
 #: ../src/main.c:92
 #, c-format
@@ -100,20 +100,3 @@ msgstr "<b>분류:</b> %s"
 msgid "<b>Command:</b> %s"
 msgstr "<b>명령:</b> %s"
 
-#~ msgid "Filter"
-#~ msgstr "거르기"
-
-#~ msgid "Find and launch applications installed on the system"
-#~ msgstr "시스템에 설치된 응용프로그램 찾기"
-
-#~ msgid "Find applications installed on the system."
-#~ msgstr "시스템에 설치된 응용프로그램 찾기"
-
-#~ msgid "Failed to open display"
-#~ msgstr "디스플레이를 열지 못 했습니다."
-
-#~ msgid "Copyright (c) 2008"
-#~ msgstr "Copyright (c) 2008"
-
-#~ msgid "Applications"
-#~ msgstr "응용프로그램"
