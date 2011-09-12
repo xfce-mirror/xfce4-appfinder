@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-28 10:34+0000\n"
+"POT-Creation-Date: 2011-09-12 10:36+0000\n"
 "PO-Revision-Date: 2008-07-28 23:54+0900\n"
 "Last-Translator: ByungHyun Choi <byunghyunchoi@debianusers.org>\n"
 "Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
@@ -27,7 +27,7 @@ msgstr "[MENUFILE]"
 #: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr "사용 정보를 보려면  '%s --help' 를 입력합니다."
+msgstr "사용 정보를 보려면  '%s --help'를 입력합니다."
 
 #: ../src/main.c:70
 msgid "Unable to initialize GTK+."
@@ -35,7 +35,7 @@ msgstr "GTK+를 초기화 할 수 없습니다."
 
 #: ../src/main.c:80
 msgid "The Xfce development team. All rights reserved."
-msgstr "The Xfce development team. All rights reserved."
+msgstr "Xfce 개발 팀. All rights reserved."
 
 #: ../src/main.c:81
 #, c-format
@@ -53,7 +53,7 @@ msgstr "xfconf 데몬에 연결하는데 실패했습니다."
 
 #: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "응용프로그램 검색"
+msgstr "프로그램 검색기"
 
 #: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -78,7 +78,7 @@ msgstr "실행"
 #: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
-msgstr "%s로 부터 메뉴를 로드할 수 없습니다"
+msgstr "%s(으)로 부터 메뉴를 로드할 수 없습니다"
 
 #: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
 #: ../src/xfce-appfinder-window.c:1115
