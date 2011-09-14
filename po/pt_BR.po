@@ -4,50 +4,47 @@
 # Rodrigo Coacci <rcoacci@gmail.com>, 2004.
 # Adriano Winter Bess <awbess@gmail.com>, 2005.
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-09 16:15+0200\n"
+"POT-Creation-Date: 2011-09-13 22:12+0000\n"
 "PO-Revision-Date: 2011-04-21 12:13-0300\n"
 "Last-Translator: Sérgio Cipolla <secipolla@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
-"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
 
 #: ../src/appfinder-category-model.c:108
-#, fuzzy
 msgid "All Applications"
-msgstr "Aplicativos"
+msgstr "Todos os aplicativos"
 
 #: ../src/appfinder-model.c:422
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: ../src/appfinder-model.c:423
 msgid "Command"
-msgstr ""
+msgstr "Comando"
 
 #: ../src/appfinder-model.c:424
 msgid "Categories"
 msgstr "Categorias"
 
 #: ../src/appfinder-model.c:425
-#, fuzzy
 msgid "Filename"
-msgstr "Gerenciador de arquivos "
+msgstr "Nome do arquivo"
 
 #: ../src/appfinder-model.c:1317
-#, fuzzy
 msgid "Application has no command"
-msgstr "Localizador de aplicativos"
+msgstr "O aplicativo não tem comando"
 
 #: ../src/appfinder-model.c:1634
 msgid "Commands History"
-msgstr ""
+msgstr "Histórico de comandos"
 
 #: ../src/appfinder-window.c:176 ../src/main.c:343
 #: ../data/xfce4-appfinder.desktop.in.h:1
@@ -56,40 +53,39 @@ msgstr "Localizador de aplicativos"
 
 #: ../src/appfinder-window.c:214
 msgid "Toggle view mode"
-msgstr ""
+msgstr "Alternar modo de visão"
 
 #: ../src/main.c:70
 msgid "Start in expanded mode"
-msgstr ""
+msgstr "Iniciar no modo expandido"
 
 #: ../src/main.c:71
-#, fuzzy
 msgid "Print version information and exit"
-msgstr "Informações da versão"
+msgstr "Imprime Informações da versão e sai"
 
 #: ../src/main.c:72
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Substitui o serviço existente"
 
 #: ../src/main.c:73
 msgid "Quit all instances"
-msgstr ""
+msgstr "Fechar todas as instâncias"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "Não tentar usar ou se tornar um serviço D-Bus"
 
 #. close all windows and quit
 #: ../src/main.c:159
 msgid "Forced to quit"
-msgstr ""
+msgstr "Forçado a sair"
 
 #: ../src/main.c:345
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "Impossível colocar o processo em modo daemon"
 
 #: ../src/main.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Digite \"%s --help\" para opções de uso."
 
@@ -107,14 +103,12 @@ msgid "Find and launch applications installed on your system"
 msgstr "Localize e execute aplicativos instalados no seu sistema"
 
 #: ../data/xfce4-run.desktop.in.h:1
-#, fuzzy
 msgid "Run Program..."
-msgstr "Executar programa"
+msgstr "Executar programa..."
 
 #: ../data/xfce4-run.desktop.in.h:2
-#, fuzzy
 msgid "Run a program"
-msgstr "Executar programa"
+msgstr "Executa um programa"
 
 #~ msgid "[MENUFILE]"
 #~ msgstr "[ARQUIVO-DE-MENU]"
