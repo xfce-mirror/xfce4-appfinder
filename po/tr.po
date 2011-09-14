@@ -42,9 +42,8 @@ msgid "Filename"
 msgstr "Dosya İsmi"
 
 #: ../src/appfinder-model.c:1317
-#, fuzzy
 msgid "Application has no command"
-msgstr "Uygulama Bulucu"
+msgstr "Uygulama herhangi bir komuta sahip değil"
 
 #: ../src/appfinder-model.c:1634
 msgid "Commands History"
@@ -57,11 +56,11 @@ msgstr "Uygulama Bulucu"
 
 #: ../src/appfinder-window.c:214
 msgid "Toggle view mode"
-msgstr ""
+msgstr "Görünüm moduna geç"
 
 #: ../src/main.c:70
 msgid "Start in expanded mode"
-msgstr ""
+msgstr "Genişletilmiş modda başla"
 
 #: ../src/main.c:71
 msgid "Print version information and exit"
@@ -73,11 +72,11 @@ msgstr ""
 
 #: ../src/main.c:73
 msgid "Quit all instances"
-msgstr ""
+msgstr "Bütün örnekleri kapat"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "D-Bus servisi olmaya ya da kullanmaya çalışma"
 
 #. close all windows and quit
 #: ../src/main.c:159
