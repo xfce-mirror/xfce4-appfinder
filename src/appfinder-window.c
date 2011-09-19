@@ -72,7 +72,8 @@ static void       xfce_appfinder_window_drag_data_get                 (GtkWidget
 static void       xfce_appfinder_window_category_changed              (GtkTreeSelection            *selection,
                                                                        XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_category_set_categories       (XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_preferences                   (GtkWidget                   *button);
+static void       xfce_appfinder_window_preferences                   (GtkWidget                   *button,
+                                                                       XfceAppfinderWindow         *window);
 static gboolean   xfce_appfinder_window_item_visible                  (GtkTreeModel                *model,
                                                                        GtkTreeIter                 *iter,
                                                                        gpointer                     data);
@@ -95,6 +96,8 @@ struct _XfceAppfinderWindow
   XfceAppfinderModel         *model;
 
   XfceAppfinderCategoryModel *category_model;
+
+  XfceAppfinderActions       *actions;
 
   GtkEntryCompletion         *completion;
 
@@ -327,7 +330,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   window->button_preferences = button = gtk_button_new_from_stock (GTK_STOCK_PREFERENCES);
   gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
   g_signal_connect (G_OBJECT (button), "clicked",
-      G_CALLBACK (xfce_appfinder_window_preferences), NULL);
+      G_CALLBACK (xfce_appfinder_window_preferences), window);
 
   bbox = gtk_hbutton_box_new ();
   gtk_button_box_set_layout (GTK_BUTTON_BOX (bbox), GTK_BUTTONBOX_END);
@@ -376,6 +379,7 @@ xfce_appfinder_window_finalize (GObject *object)
   g_object_unref (G_OBJECT (window->category_model));
   g_object_unref (G_OBJECT (window->completion));
   g_object_unref (G_OBJECT (window->icon_find));
+  g_object_unref (G_OBJECT (window->actions));
 
   if (window->filter_category != NULL)
     g_object_unref (G_OBJECT (window->filter_category));
@@ -706,9 +710,14 @@ xfce_appfinder_window_category_set_categories (XfceAppfinderWindow *window)
 
 
 static void
-xfce_appfinder_window_preferences (GtkWidget *button)
+xfce_appfinder_window_preferences (GtkWidget           *button,
+                                   XfceAppfinderWindow *window)
 {
   appfinder_return_if_fail (GTK_IS_WIDGET (button));
+
+  /* preload the actions, to make sure there are default values */
+  if (window->actions == NULL)
+    window->actions = xfce_appfinder_actions_get ();
 
   xfce_appfinder_preferences_show (gtk_widget_get_screen (button));
 }
@@ -789,19 +798,19 @@ xfce_appfinder_window_icon_theme_changed (XfceAppfinderWindow *window)
 
 
 static gboolean
-xfce_appfinder_window_execute_command (const gchar  *cmd,
-                                       GdkScreen    *screen,
-                                       GError      **error)
+xfce_appfinder_window_execute_command (const gchar          *cmd,
+                                       GdkScreen            *screen,
+                                       XfceAppfinderWindow  *window,
+                                       GError              **error)
 {
-  XfceAppfinderActions *actions;
-  gboolean              succeed = FALSE;
+  gboolean succeed = FALSE;
 
-  actions = xfce_appfinder_actions_get ();
+  if (window->actions == NULL)
+    window->actions = xfce_appfinder_actions_get ();
 
-  if (xfce_appfinder_actions_execute (actions, cmd, screen, error) == XFCE_APPFINDER_ACTIONS_SUCCEED)
+  if (xfce_appfinder_actions_execute (window->actions, cmd, screen, error)
+        == XFCE_APPFINDER_ACTIONS_SUCCEED)
     succeed = TRUE;
-
-  g_object_unref (G_OBJECT (actions));
 
   return succeed;
 }
@@ -836,7 +845,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window)
          if (!result && regular_command)
             {
               gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
-              result = xfce_appfinder_window_execute_command (cmd, screen, &error);
+              result = xfce_appfinder_window_execute_command (cmd, screen, window, &error);
               g_free (cmd);
             }
         }
@@ -844,7 +853,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window)
   else
     {
       text = gtk_entry_get_text (GTK_ENTRY (window->entry));
-      if (xfce_appfinder_window_execute_command (text, screen, &error))
+      if (xfce_appfinder_window_execute_command (text, screen, window, &error))
         result = xfce_appfinder_model_save_command (window->model, text, &error);
     }
 

@@ -131,6 +131,7 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
   object = gtk_builder_get_object (GTK_BUILDER (preferences), "actions-treeview");
 
   selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (object));
+  gtk_tree_selection_set_mode (selection, GTK_SELECTION_BROWSE);
   g_signal_connect (G_OBJECT (selection), "changed",
       G_CALLBACK (xfce_appfinder_preferences_selection_changed), preferences);
 
@@ -374,6 +375,10 @@ xfce_appfinder_preferences_selection_changed (GtkTreeSelection         *selectio
           preferences->bindings[i] = xfconf_g_property_bind (preferences->channel, prop,
                                                              objects[i].prop_type, object,
                                                              objects[i].prop_name);
+        }
+      else if (GTK_IS_ENTRY (object))
+        {
+          gtk_entry_set_text (GTK_ENTRY (object), "");
         }
     }
 

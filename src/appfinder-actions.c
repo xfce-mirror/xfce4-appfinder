@@ -145,9 +145,10 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
   XfceAppfinderAction *action;
   XfceAppfinderAction  defaults[] =
   {
-    { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
-      "#",
-      "exo-open --launch TerminalEmulator man %s",
+    /* default actions, sorted */
+    { XFCE_APPFINDER_ACTION_TYPE_REGEX, 0,
+      "^(file|http|https):\\/\\/(.*)$",
+      "exo-open \\0",
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "!",
@@ -157,9 +158,9 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
       "!w",
       "exo-open --launch WebBrowser http://en.wikipedia.org/wiki/%s",
       NULL },
-    { XFCE_APPFINDER_ACTION_TYPE_REGEX, 0,
-      "^(file|http|https):\\/\\/(.*)$",
-      "exo-open \\0",
+    { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
+      "#",
+      "exo-open --launch TerminalEmulator man %s",
       NULL }
   };
 
@@ -274,7 +275,8 @@ xfce_appfinder_actions_save (XfceAppfinderActions *actions,
   GPtrArray           *array;
   gchar                prop[32];
 
-  g_signal_handler_block (actions->channel, actions->property_watch_id);
+  if (actions->property_watch_id > 0)
+    g_signal_handler_block (actions->channel, actions->property_watch_id);
 
   array = g_ptr_array_new ();
 
@@ -304,7 +306,8 @@ xfce_appfinder_actions_save (XfceAppfinderActions *actions,
 
   xfconf_array_free (array);
 
-  g_signal_handler_unblock (actions->channel, actions->property_watch_id);
+  if (actions->property_watch_id > 0)
+    g_signal_handler_unblock (actions->channel, actions->property_watch_id);
 }
 
 
