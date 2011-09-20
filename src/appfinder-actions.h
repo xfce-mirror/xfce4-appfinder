@@ -43,14 +43,16 @@ typedef enum
 }
 XfceAppfinderActionsResult;
 
-GType                       xfce_appfinder_actions_get_type    (void) G_GNUC_CONST;
+GType                       xfce_appfinder_actions_get_type      (void) G_GNUC_CONST;
 
-XfceAppfinderActions       *xfce_appfinder_actions_get         (void) G_GNUC_MALLOC;
+XfceAppfinderActions       *xfce_appfinder_actions_get           (void) G_GNUC_MALLOC;
 
-XfceAppfinderActionsResult  xfce_appfinder_actions_execute     (XfceAppfinderActions  *actions,
-                                                                const gchar           *text,
-                                                                GdkScreen             *screen,
-                                                                GError               **error);
+gint                        xfce_appfinder_actions_get_unique_id (XfceAppfinderActions  *actions);
+
+XfceAppfinderActionsResult  xfce_appfinder_actions_execute       (XfceAppfinderActions  *actions,
+                                                                  const gchar           *text,
+                                                                  GdkScreen             *screen,
+                                                                  GError               **error);
 
 G_END_DECLS
 

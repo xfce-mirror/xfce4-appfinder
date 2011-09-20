@@ -32,6 +32,7 @@
 #include <src/appfinder-preferences-ui.h>
 #include <src/appfinder-model.h>
 #include <src/appfinder-private.h>
+#include <src/appfinder-actions.h>
 
 
 
@@ -61,12 +62,14 @@ struct _XfceAppfinderPreferences
 {
   GtkBuilder __parent__;
 
-  GObject       *dialog;
+  GObject          *dialog;
 
-  XfconfChannel *channel;
+  XfconfChannel    *channel;
 
-  gulong         bindings[3];
-  gulong         property_watch_id;
+  GtkTreeSelection *selection;
+
+  gulong            bindings[3];
+  gulong            property_watch_id;
 };
 
 enum
@@ -91,9 +94,8 @@ xfce_appfinder_preferences_class_init (XfceAppfinderPreferencesClass *klass)
 static void
 xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
 {
-  GObject          *object;
-  GtkTreeSelection *selection;
-  GtkTreePath      *path;
+  GObject     *object;
+  GtkTreePath *path;
 
   preferences->channel = xfconf_channel_get ("xfce4-appfinder");
 
@@ -126,17 +128,17 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
   g_signal_connect (G_OBJECT (object), "clicked",
       G_CALLBACK (xfce_appfinder_preferences_action_remove), preferences);
 
+  object = gtk_builder_get_object (GTK_BUILDER (preferences), "actions-treeview");
+  preferences->selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (object));
+
   xfce_appfinder_preferences_action_populate (preferences);
 
-  object = gtk_builder_get_object (GTK_BUILDER (preferences), "actions-treeview");
-
-  selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (object));
-  gtk_tree_selection_set_mode (selection, GTK_SELECTION_BROWSE);
-  g_signal_connect (G_OBJECT (selection), "changed",
+  gtk_tree_selection_set_mode (preferences->selection, GTK_SELECTION_BROWSE);
+  g_signal_connect (G_OBJECT (preferences->selection), "changed",
       G_CALLBACK (xfce_appfinder_preferences_selection_changed), preferences);
 
   path = gtk_tree_path_new_first ();
-  gtk_tree_selection_select_path (selection, path);
+  gtk_tree_selection_select_path (preferences->selection, path);
   gtk_tree_path_free (path);
 
   preferences->property_watch_id =
@@ -182,10 +184,79 @@ xfce_appfinder_preferences_clear_history (XfceAppfinderPreferences *preferences)
 
 
 
+static gboolean
+xfce_appfinder_preferences_action_save_foreach (GtkTreeModel *model,
+                                                GtkTreePath  *path,
+                                                GtkTreeIter  *iter,
+                                                gpointer      data)
+{
+  GPtrArray *array = data;
+  gint       id;
+  GValue    *value;
+
+  gtk_tree_model_get (model, iter, COLUMN_UNIQUE_ID, &id, -1);
+
+  value = g_new0 (GValue, 1);
+  g_value_init (value, G_TYPE_INT);
+  g_value_set_int (value, id);
+  g_ptr_array_add (array, value);
+
+  return FALSE;
+}
+
+
+
+static void
+xfce_appfinder_preferences_action_save (XfceAppfinderPreferences *preferences,
+                                        GtkTreeModel             *model)
+{
+  GPtrArray *array;
+
+  appfinder_return_if_fail (GTK_IS_TREE_MODEL (model));
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_PREFERENCES (preferences));
+
+  g_signal_handler_block (preferences->channel, preferences->property_watch_id);
+
+  array = g_ptr_array_new ();
+  gtk_tree_model_foreach (model, xfce_appfinder_preferences_action_save_foreach, array);
+  xfconf_channel_set_arrayv (preferences->channel, "/actions", array);
+  xfconf_array_free (array);
+
+  g_signal_handler_unblock (preferences->channel, preferences->property_watch_id);
+}
+
+
+
 static void
 xfce_appfinder_preferences_action_add (XfceAppfinderPreferences *preferences)
 {
+  XfceAppfinderActions *actions;
+  gint                  id;
+  GObject              *store;
+  GtkTreeIter           iter;
+  gchar                 prop[32];
 
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_PREFERENCES (preferences));
+
+  /* get an unused id */
+  actions = xfce_appfinder_actions_get ();
+  id = xfce_appfinder_actions_get_unique_id (actions);
+  g_object_unref (G_OBJECT (actions));
+
+  /* make sure property does not exist */
+  g_snprintf (prop, sizeof (prop), "/actions/action-%d", id);
+  xfconf_channel_reset_property (preferences->channel, prop, TRUE);
+
+  /* add new item to store */
+  store = gtk_builder_get_object (GTK_BUILDER (preferences), "actions-store");
+  gtk_list_store_append (GTK_LIST_STORE (store), &iter);
+  gtk_list_store_set (GTK_LIST_STORE (store), &iter, COLUMN_UNIQUE_ID, id, -1);
+
+  /* select item */
+  gtk_tree_selection_select_iter (preferences->selection, &iter);
+
+  /* save new id */
+  xfce_appfinder_preferences_action_save (preferences, GTK_TREE_MODEL (store));
 }
 
 
@@ -194,17 +265,40 @@ static void
 xfce_appfinder_preferences_action_remove (GtkWidget                *button,
                                           XfceAppfinderPreferences *preferences)
 {
-  GObject *object;
+  GtkTreeModel     *model;
+  GtkTreeIter       iter;
+  gchar            *pattern;
+  gint              id;
+  gchar             prop[32];
 
-  object = gtk_builder_get_object (GTK_BUILDER (preferences), "pattern");
+  appfinder_return_if_fail (GTK_IS_WIDGET (button));
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_PREFERENCES (preferences));
+
+  if (!gtk_tree_selection_get_selected (preferences->selection, &model, &iter))
+    return;
+
+  gtk_tree_model_get (model, &iter,
+                      COLUMN_PATTERN, &pattern,
+                      COLUMN_UNIQUE_ID, &id,
+                      -1);
+
   if (xfce_dialog_confirm (GTK_WINDOW (gtk_widget_get_toplevel (button)),
                            GTK_STOCK_DELETE, NULL,
                            _("The custom action will be deleted permanently."),
                            _("Are you sure you want to delete pattern \"%s\"?"),
-                           gtk_entry_get_text (GTK_ENTRY (object))))
+                           pattern))
     {
+      gtk_list_store_remove (GTK_LIST_STORE (model), &iter);
 
+      /* remove data from channel */
+      g_snprintf (prop, sizeof (prop), "/actions/action-%d", id);
+      xfconf_channel_reset_property (preferences->channel, prop, TRUE);
+
+      /* save */
+      xfce_appfinder_preferences_action_save (preferences, model);
     }
+
+  g_free (pattern);
 }
 
 
@@ -273,19 +367,25 @@ xfce_appfinder_preferences_action_changed (XfconfChannel            *channel,
 }
 
 
+
 static void
 xfce_appfinder_preferences_action_populate (XfceAppfinderPreferences *preferences)
 {
   GPtrArray    *array;
-  GObject      *store;
+  GtkTreeModel *store;
   const GValue *value;
   gint          unique_id;
   gchar         prop[32];
   gchar        *pattern, *command;
   guint         i;
+  gint          restore_id = -1;
+  GtkTreeIter   iter;
 
-  store = gtk_builder_get_object (GTK_BUILDER (preferences), "actions-store");
-  appfinder_assert (GTK_IS_LIST_STORE (store));
+  APPFINDER_DEBUG ("populate tree model");
+
+  if (gtk_tree_selection_get_selected (preferences->selection, &store, &iter))
+    gtk_tree_model_get (store, &iter, COLUMN_UNIQUE_ID, &restore_id, -1);
+
   gtk_list_store_clear (GTK_LIST_STORE (store));
 
   array = xfconf_channel_get_arrayv (preferences->channel, "/actions");
@@ -303,10 +403,13 @@ xfce_appfinder_preferences_action_populate (XfceAppfinderPreferences *preference
         g_snprintf (prop, sizeof (prop), "/actions/action-%d/command", unique_id);
         command = xfconf_channel_get_string (preferences->channel, prop, NULL);
 
-        gtk_list_store_insert_with_values (GTK_LIST_STORE (store), NULL, i,
+        gtk_list_store_insert_with_values (GTK_LIST_STORE (store), &iter, i,
                                            COLUMN_UNIQUE_ID, unique_id,
                                            COLUMN_PATTERN, pattern,
                                            -1);
+
+        if (restore_id == unique_id)
+          gtk_tree_selection_select_iter (preferences->selection, &iter);
 
         g_free (pattern);
         g_free (command);
@@ -369,16 +472,19 @@ xfce_appfinder_preferences_selection_changed (GtkTreeSelection         *selectio
       object = gtk_builder_get_object (GTK_BUILDER (preferences), objects[i].name);
       appfinder_return_if_fail (GTK_IS_WIDGET (object));
       gtk_widget_set_sensitive (GTK_WIDGET (object), unique_id != -1);
+
+      /* clear contents */
+      if (GTK_IS_ENTRY (object))
+        gtk_entry_set_text (GTK_ENTRY (object), "");
+      else if (GTK_IS_COMBO_BOX (object))
+        gtk_combo_box_set_active (GTK_COMBO_BOX (object), 0);
+
       if (unique_id > -1)
         {
           g_snprintf (prop, sizeof (prop), "/actions/action-%d/%s", unique_id, objects[i].name);
           preferences->bindings[i] = xfconf_g_property_bind (preferences->channel, prop,
                                                              objects[i].prop_type, object,
                                                              objects[i].prop_name);
-        }
-      else if (GTK_IS_ENTRY (object))
-        {
-          gtk_entry_set_text (GTK_ENTRY (object), "");
         }
     }
 

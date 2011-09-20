@@ -35,7 +35,8 @@
 
 static void xfce_appfinder_actions_finalize (GObject              *object);
 static void xfce_appfinder_actions_free     (XfceAppfinderAction  *action);
-static void xfce_appfinder_actions_load     (XfceAppfinderActions *actions);
+static void xfce_appfinder_actions_load     (XfceAppfinderActions *actions,
+                                             gboolean              steal);
 static void xfce_appfinder_actions_save     (XfceAppfinderActions *actions,
                                              gboolean              save_actions);
 static void xfce_appfinder_actions_changed  (XfconfChannel        *channel,
@@ -56,6 +57,8 @@ struct _XfceAppfinderActions
 
   XfconfChannel *channel;
   gulong         property_watch_id;
+
+  guint          reload_idle_id;
 
   GSList        *actions;
 };
@@ -100,7 +103,7 @@ xfce_appfinder_actions_init (XfceAppfinderActions *actions)
 {
   actions->channel = xfconf_channel_get ("xfce4-appfinder");
 
-  xfce_appfinder_actions_load (actions);
+  xfce_appfinder_actions_load (actions, FALSE);
 
   actions->property_watch_id =
     g_signal_connect (G_OBJECT (actions->channel), "property-changed",
@@ -113,6 +116,9 @@ static void
 xfce_appfinder_actions_finalize (GObject *object)
 {
   XfceAppfinderActions *actions = XFCE_APPFINDER_ACTIONS (object);
+
+  if (actions->reload_idle_id != 0)
+    g_source_remove (actions->reload_idle_id);
 
   g_signal_handler_disconnect (actions->channel, actions->property_watch_id);
 
@@ -197,7 +203,8 @@ xfce_appfinder_actions_sort (gconstpointer a,
 
 
 static void
-xfce_appfinder_actions_load (XfceAppfinderActions *actions)
+xfce_appfinder_actions_load (XfceAppfinderActions *actions,
+                             gboolean              steal)
 {
   XfceAppfinderAction *action;
   gchar                prop[32];
@@ -207,6 +214,16 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions)
   guint                i;
   gint                 unique_id;
   GPtrArray           *array;
+  GSList              *li, *old_actions = NULL;
+
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_ACTIONS (actions));
+  appfinder_return_if_fail (steal || actions->actions == NULL);
+
+  if (steal)
+    {
+      old_actions = actions->actions;
+      actions->actions = NULL;
+    }
 
   if (xfconf_channel_has_property (actions->channel, "/actions"))
     {
@@ -219,8 +236,26 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions)
               appfinder_assert (value != NULL);
               unique_id = g_value_get_int (value);
 
+              /* look for the id in the old actions */
+              for (li = old_actions; li != NULL; li = li->next)
+                {
+                  action = li->data;
+                  if (action->unique_id == unique_id)
+                    break;
+                }
+
+              if (li != NULL)
+                {
+                  /* use the old action */
+                  old_actions = g_slist_delete_link (old_actions, li);
+                  actions->actions = g_slist_prepend (actions->actions, action);
+
+                  continue;
+                }
+
+              /* no usable actions was found, create a new one */
               g_snprintf (prop, sizeof (prop), "/actions/action-%d/type", unique_id);
-              type = xfconf_channel_get_int (actions->channel, prop, -1);
+              type = xfconf_channel_get_int (actions->channel, prop, XFCE_APPFINDER_ACTION_TYPE_PREFIX);
               if (type < XFCE_APPFINDER_ACTION_TYPE_PREFIX
                   || type > XFCE_APPFINDER_ACTION_TYPE_REGEX)
                 continue;
@@ -231,21 +266,13 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions)
               g_snprintf (prop, sizeof (prop), "/actions/action-%d/command", unique_id);
               command = xfconf_channel_get_string (actions->channel, prop, NULL);
 
-              if (pattern != NULL && command != NULL)
-                {
-                  action = g_slice_new0 (XfceAppfinderAction);
-                  action->type = type;
-                  action->unique_id = unique_id;
-                  action->pattern = pattern;
-                  action->command = command;
+              action = g_slice_new0 (XfceAppfinderAction);
+              action->type = type;
+              action->unique_id = unique_id;
+              action->pattern = pattern;
+              action->command = command;
 
-                  actions->actions = g_slist_prepend (actions->actions, action);
-                }
-              else
-                {
-                  g_free (pattern);
-                  g_free (command);
-                }
+              actions->actions = g_slist_prepend (actions->actions, action);
             }
 
           xfconf_array_free (array);
@@ -254,13 +281,35 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions)
   else
     {
       xfce_appfinder_actions_load_defaults (actions);
-
       xfce_appfinder_actions_save (actions, TRUE);
+    }
+
+  if (old_actions != NULL)
+    {
+      g_slist_foreach (old_actions, (GFunc) xfce_appfinder_actions_free, NULL);
+      g_slist_free (old_actions);
     }
 
   actions->actions = g_slist_sort (actions->actions, xfce_appfinder_actions_sort);
 
   APPFINDER_DEBUG ("loaded %d actions", g_slist_length (actions->actions));
+}
+
+
+
+static gboolean
+xfce_appfinder_actions_reload_idle (gpointer data)
+{
+  xfce_appfinder_actions_load (XFCE_APPFINDER_ACTIONS (data), TRUE);
+  return FALSE;
+}
+
+
+
+static void
+xfce_appfinder_actions_reload_idle_destroyed (gpointer data)
+{
+  XFCE_APPFINDER_ACTIONS (data)->reload_idle_id = 0;
 }
 
 
@@ -275,8 +324,7 @@ xfce_appfinder_actions_save (XfceAppfinderActions *actions,
   GPtrArray           *array;
   gchar                prop[32];
 
-  if (actions->property_watch_id > 0)
-    g_signal_handler_block (actions->channel, actions->property_watch_id);
+  g_signal_handler_block (actions->channel, actions->property_watch_id);
 
   array = g_ptr_array_new ();
 
@@ -306,9 +354,9 @@ xfce_appfinder_actions_save (XfceAppfinderActions *actions,
 
   xfconf_array_free (array);
 
-  if (actions->property_watch_id > 0)
-    g_signal_handler_unblock (actions->channel, actions->property_watch_id);
+  g_signal_handler_unblock (actions->channel, actions->property_watch_id);
 }
+
 
 
 
@@ -328,7 +376,12 @@ xfce_appfinder_actions_changed (XfconfChannel        *channel,
 
   if (strcmp (prop_name, "/actions") == 0)
     {
-
+      if (actions->reload_idle_id == 0)
+        {
+          actions->reload_idle_id = g_idle_add_full (G_PRIORITY_LOW,
+              xfce_appfinder_actions_reload_idle, actions,
+              xfce_appfinder_actions_reload_idle_destroyed);
+        }
     }
   else if (sscanf (prop_name, "/actions/action-%d/%30s",
                    &unique_id, field) == 2)
@@ -431,10 +484,36 @@ xfce_appfinder_actions_get (void)
     {
       actions = g_object_new (XFCE_TYPE_APPFINDER_ACTIONS, NULL);
       g_object_add_weak_pointer (G_OBJECT (actions), (gpointer) &actions);
-      APPFINDER_DEBUG ("allocate actions");
     }
 
   return actions;
+}
+
+
+
+gint
+xfce_appfinder_actions_get_unique_id (XfceAppfinderActions *actions)
+{
+  static gint          unique_id = 1;
+  GSList              *li;
+  XfceAppfinderAction *action;
+
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_ACTIONS (actions), -1);
+
+  for (; unique_id < G_MAXINT; unique_id++)
+    {
+      for (li = actions->actions; li != NULL; li = li->next)
+        {
+          action = li->data;
+          if (action->unique_id == unique_id)
+            break;
+        }
+
+      if (li == NULL)
+        return unique_id;
+    }
+
+  return -1;
 }
 
 
@@ -463,6 +542,11 @@ xfce_appfinder_actions_execute (XfceAppfinderActions  *actions,
        li = li->next)
     {
       action = li->data;
+
+      /* skip empty actions */
+      if (!IS_STRING (action->pattern)
+          || !IS_STRING (action->command))
+        continue;
 
       switch (action->type)
         {
