@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-15 04:11+0000\n"
+"POT-Creation-Date: 2011-09-20 21:55+0200\n"
 "PO-Revision-Date: 2011-07-15 09:24+0100\n"
 "Last-Translator: Tomáš Vadina <kyberdev@gmail.com>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sk\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
 "X-Poedit-Language: Slovak\n"
 "X-Poedit-Country: SLOVAKIA\n"
@@ -48,13 +48,13 @@ msgstr "Aplikácia nemá príkaz"
 msgid "Commands History"
 msgstr "História príkazov"
 
-#: ../src/appfinder-window.c:176
-#: ../src/main.c:343
+#: ../src/appfinder-window.c:183 ../src/main.c:343
+#: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Vyhľadávač aplikácií"
 
-#: ../src/appfinder-window.c:214
+#: ../src/appfinder-window.c:224
 msgid "Toggle view mode"
 msgstr "Prepnúť režim zobrazenia"
 
@@ -100,6 +100,81 @@ msgstr "Tím vývojárov Xfce. Všetky práva vyhradené."
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Prosíme, chyby hláste na <%s>."
+
+#: ../src/appfinder-preferences.glade.h:1
+msgid "Add a new custom action."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:2
+msgid "Always c_enter the window"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Behaviour"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:5
+#, fuzzy
+msgid "C_lear Custom Command History"
+msgstr "História príkazov"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Center the window on startup."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:7
+#, fuzzy
+msgid "Co_mmand:"
+msgstr "Príkaz"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Custom _Actions"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:9
+#, fuzzy
+msgid "History"
+msgstr "História príkazov"
+
+#: ../src/appfinder-preferences.glade.h:11
+#, no-c-format
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:12
+msgid "Patte_rn:"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:13
+msgid "Pattern"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Prefix"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:15
+msgid "Regular Expression"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Remember last _selected category"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "Remove the currently selected action."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "_General"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "_Type:"
+msgstr ""
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"

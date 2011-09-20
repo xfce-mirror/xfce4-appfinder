@@ -2,20 +2,20 @@
 # Euskara translations for xfce4-appfinder package.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-# 
+#
 # Piarres Beobide Egaña <pi@beobide.net>, 2004, 2005, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-25 10:12+0000\n"
+"POT-Creation-Date: 2011-09-20 21:55+0200\n"
 "PO-Revision-Date: 2009-10-21 13:53+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Basque <debian-l10n-eu@debian.lists.org>\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: eu\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.0\n"
 
@@ -47,12 +47,13 @@ msgstr "Aplikazioak ez du komandorik"
 msgid "Commands History"
 msgstr "Komando historia"
 
-#: ../src/appfinder-window.c:176 ../src/main.c:343
+#: ../src/appfinder-window.c:183 ../src/main.c:343
+#: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Aplikazio bilatzailea"
 
-#: ../src/appfinder-window.c:214
+#: ../src/appfinder-window.c:224
 msgid "Toggle view mode"
 msgstr "Txandakatu ikuste modua"
 
@@ -98,6 +99,81 @@ msgstr "Xfce garapen taldea. Eskubide guztiak erreserbaturik."
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Erroreen berri eman <%s>-ra."
+
+#: ../src/appfinder-preferences.glade.h:1
+msgid "Add a new custom action."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:2
+msgid "Always c_enter the window"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Behaviour"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:5
+#, fuzzy
+msgid "C_lear Custom Command History"
+msgstr "Komando historia"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Center the window on startup."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:7
+#, fuzzy
+msgid "Co_mmand:"
+msgstr "Komandoa"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Custom _Actions"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:9
+#, fuzzy
+msgid "History"
+msgstr "Komando historia"
+
+#: ../src/appfinder-preferences.glade.h:11
+#, no-c-format
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:12
+msgid "Patte_rn:"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:13
+msgid "Pattern"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Prefix"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:15
+msgid "Regular Expression"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Remember last _selected category"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "Remove the currently selected action."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "_General"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "_Type:"
+msgstr ""
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"

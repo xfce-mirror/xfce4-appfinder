@@ -2,19 +2,19 @@
 # Copyright (C) 2004-2008 The Xfce development team.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Collet Etienne <xanaxlnx@gmail.com>, 2005.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.6 RC1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-15 04:11+0000\n"
+"POT-Creation-Date: 2011-09-20 21:55+0200\n"
 "PO-Revision-Date: 2009-11-30 20:40+0100\n"
 "Last-Translator: Jérôme Guelfucci <jeromeg@xfce.org>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../src/appfinder-category-model.c:108
@@ -46,12 +46,13 @@ msgstr "L'application n'a pas de commande"
 msgid "Commands History"
 msgstr "Historique des commandes"
 
-#: ../src/appfinder-window.c:176 ../src/main.c:343
+#: ../src/appfinder-window.c:183 ../src/main.c:343
+#: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Liste des applications"
 
-#: ../src/appfinder-window.c:214
+#: ../src/appfinder-window.c:224
 msgid "Toggle view mode"
 msgstr "Changer le mode de vue"
 
@@ -87,7 +88,8 @@ msgstr "Impossible d'installer le démon du processus"
 #: ../src/main.c:417
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Saisissez '%s ---help' pour obtenir des informations sur l'utilisation."
+msgstr ""
+"Saisissez '%s ---help' pour obtenir des informations sur l'utilisation."
 
 #: ../src/main.c:428
 msgid "The Xfce development team. All rights reserved."
@@ -97,6 +99,81 @@ msgstr "L'équipe de développement Xfce. Tous droits réservés."
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Veuillez signaler les bogues à <%s>."
+
+#: ../src/appfinder-preferences.glade.h:1
+msgid "Add a new custom action."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:2
+msgid "Always c_enter the window"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Behaviour"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:5
+#, fuzzy
+msgid "C_lear Custom Command History"
+msgstr "Historique des commandes"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Center the window on startup."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:7
+#, fuzzy
+msgid "Co_mmand:"
+msgstr "Commande"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Custom _Actions"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:9
+#, fuzzy
+msgid "History"
+msgstr "Historique des commandes"
+
+#: ../src/appfinder-preferences.glade.h:11
+#, no-c-format
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:12
+msgid "Patte_rn:"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:13
+msgid "Pattern"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Prefix"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:15
+msgid "Regular Expression"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Remember last _selected category"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "Remove the currently selected action."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "_General"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "_Type:"
+msgstr ""
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
