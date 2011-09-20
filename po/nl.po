@@ -3,19 +3,19 @@
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Jasper Huijsmans <jasper@xfce.org>, 2008.
 # Pjotr, 2011.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-20 21:55+0200\n"
+"POT-Creation-Date: 2011-09-20 22:12+0000\n"
 "PO-Revision-Date: 2011-09-08 09:26+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
-"Language: nl (Dutch)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl (Dutch)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/appfinder-category-model.c:108
@@ -101,78 +101,72 @@ msgstr "Gelieve fouten te melden aan <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
-msgstr ""
+msgstr "Voeg een nieuwe aangepaste actie toe."
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "Centreer het venster altijd"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Behaviour"
-msgstr ""
+msgstr "Gedrag"
 
 #: ../src/appfinder-preferences.glade.h:5
-#, fuzzy
 msgid "C_lear Custom Command History"
-msgstr "Opdrachtgeschiedenis"
+msgstr "Verwijder geschiedenis van aangepaste opdrachten"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Centreer het venster bij het opstarten."
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Co_mmand:"
-msgstr "Opdracht"
+msgstr "Opdracht:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Custom _Actions"
-msgstr ""
+msgstr "Aangepaste acties"
 
 #: ../src/appfinder-preferences.glade.h:9
-#, fuzzy
 msgid "History"
-msgstr "Opdrachtgeschiedenis"
+msgstr "Geschiedenis"
 
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
-msgid ""
-"If the type is set to prefix, %s will be replaced with the string after the "
-"pattern, %S with the complete entry text. For regular expressions you can "
-"use \\0 and \\<num>."
-msgstr ""
+msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
+msgstr "Indien het type is ingesteld op voorvoegsel, dan zal %s worden vervangen door de tekenreeks na het patroon, %S door de volledige tekst van de invoer. Voor reguliere uitdrukkingen kunt u \\0 en \\<num> gebruiken."
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
-msgstr ""
+msgstr "Patroon:"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Pattern"
-msgstr ""
+msgstr "Patroon"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Prefix"
-msgstr ""
+msgstr "Voorvoegsel"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Regular Expression"
-msgstr ""
+msgstr "Reguliere uitdrukking"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Onthoud laatst gekozen categorie"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Verwijder de thans gekozen actie."
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "_General"
-msgstr ""
+msgstr "Algemeen"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_Type:"
-msgstr ""
+msgstr "Type:"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
