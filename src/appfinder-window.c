@@ -379,7 +379,9 @@ xfce_appfinder_window_finalize (GObject *object)
   g_object_unref (G_OBJECT (window->category_model));
   g_object_unref (G_OBJECT (window->completion));
   g_object_unref (G_OBJECT (window->icon_find));
-  g_object_unref (G_OBJECT (window->actions));
+
+  if (window->actions != NULL)
+    g_object_unref (G_OBJECT (window->actions));
 
   if (window->filter_category != NULL)
     g_object_unref (G_OBJECT (window->filter_category));
@@ -842,7 +844,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window)
           gtk_tree_model_filter_convert_iter_to_child_iter (GTK_TREE_MODEL_FILTER (model), &orig, &iter);
           result = xfce_appfinder_model_execute (window->model, &orig, screen, &regular_command, &error);
 
-         if (!result && regular_command)
+          if (!result && regular_command)
             {
               gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
               result = xfce_appfinder_window_execute_command (cmd, screen, window, &error);
