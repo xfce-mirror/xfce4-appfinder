@@ -1,3 +1,9 @@
+4.9.0
+=====
+- Rewrite of the the application finder to merge the functionality
+  of the appfinder as we know it in 4.8 and xfrun4 (start with
+  --collapsed).
+
 4.8.0
 =====
 - Translation updates: French, Romanian.
