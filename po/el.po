@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder git\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-20 21:55+0200\n"
+"POT-Creation-Date: 2011-09-21 20:43+0200\n"
 "PO-Revision-Date: 2010-02-01 08:39+0200\n"
 "Last-Translator: Evaggelos Balaskas <ebalaskas@ebalaskas.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -53,7 +53,28 @@ msgstr "Εύρεση εφαρμογών"
 msgid "Commands History"
 msgstr ""
 
-#: ../src/appfinder-window.c:183 ../src/main.c:343
+#: ../src/appfinder-preferences.c:175
+msgid "C_lear"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:176
+msgid "This will permanently clear the custom command history."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:177
+msgid "Are you sure you want to clear the command history?"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:287
+msgid "The custom action will be deleted permanently."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:288
+#, c-format
+msgid "Are you sure you want to delete pattern \"%s\"?"
+msgstr ""
+
+#: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -64,7 +85,7 @@ msgid "Toggle view mode"
 msgstr ""
 
 #: ../src/main.c:70
-msgid "Start in expanded mode"
+msgid "Start in collapsed mode"
 msgstr ""
 
 #: ../src/main.c:71
@@ -89,20 +110,20 @@ msgstr ""
 msgid "Forced to quit"
 msgstr ""
 
-#: ../src/main.c:345
+#: ../src/main.c:346
 msgid "Unable to daemonize the process"
 msgstr ""
 
-#: ../src/main.c:417
+#: ../src/main.c:418
 #, fuzzy, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Πληκτρολογήστε  '%s --help' για πληροφορίες χρήσης."
 
-#: ../src/main.c:428
+#: ../src/main.c:429
 msgid "The Xfce development team. All rights reserved."
 msgstr "Η ομάδα ανάπτυξης του xfce. Όλα τα δικαιώματα είναι δεσμευμένα."
 
-#: ../src/main.c:429
+#: ../src/main.c:430
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Παρακαλώ να αναφέρετε σφάλματα στο <%s>"

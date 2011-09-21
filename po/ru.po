@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-20 21:55+0200\n"
+"POT-Creation-Date: 2011-09-21 20:43+0200\n"
 "PO-Revision-Date: 2011-08-02 18:31+0300\n"
 "Last-Translator: Artem Zolochevskiy <artem.zolochevskiy@gmail.com>\n"
 "Language-Team: Russian\n"
@@ -54,7 +54,28 @@ msgstr "Приложению не присвоена команда"
 msgid "Commands History"
 msgstr "История команд"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:343
+#: ../src/appfinder-preferences.c:175
+msgid "C_lear"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:176
+msgid "This will permanently clear the custom command history."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:177
+msgid "Are you sure you want to clear the command history?"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:287
+msgid "The custom action will be deleted permanently."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:288
+#, c-format
+msgid "Are you sure you want to delete pattern \"%s\"?"
+msgstr ""
+
+#: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -65,7 +86,8 @@ msgid "Toggle view mode"
 msgstr "Переключить режим отображения"
 
 #: ../src/main.c:70
-msgid "Start in expanded mode"
+#, fuzzy
+msgid "Start in collapsed mode"
 msgstr "Запустить в развёрнутом режиме"
 
 #: ../src/main.c:71
@@ -89,20 +111,20 @@ msgstr "Не пытаться использовать или быть служ�
 msgid "Forced to quit"
 msgstr "Принудительное завершение"
 
-#: ../src/main.c:345
+#: ../src/main.c:346
 msgid "Unable to daemonize the process"
 msgstr "Не удалось запустить процесс в фоновом режиме"
 
-#: ../src/main.c:417
+#: ../src/main.c:418
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Выполните «%s --help» для получения информации об использовании."
 
-#: ../src/main.c:428
+#: ../src/main.c:429
 msgid "The Xfce development team. All rights reserved."
 msgstr "Команда разработчиков Xfce. Все права защищены."
 
-#: ../src/main.c:429
+#: ../src/main.c:430
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Об ошибках сообщайте на <%s>."

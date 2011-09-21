@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-20 21:55+0200\n"
+"POT-Creation-Date: 2011-09-21 20:43+0200\n"
 "PO-Revision-Date: 2009-10-21 13:53+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Basque <debian-l10n-eu@debian.lists.org>\n"
@@ -47,7 +47,28 @@ msgstr "Aplikazioak ez du komandorik"
 msgid "Commands History"
 msgstr "Komando historia"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:343
+#: ../src/appfinder-preferences.c:175
+msgid "C_lear"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:176
+msgid "This will permanently clear the custom command history."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:177
+msgid "Are you sure you want to clear the command history?"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:287
+msgid "The custom action will be deleted permanently."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:288
+#, c-format
+msgid "Are you sure you want to delete pattern \"%s\"?"
+msgstr ""
+
+#: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -58,7 +79,8 @@ msgid "Toggle view mode"
 msgstr "Txandakatu ikuste modua"
 
 #: ../src/main.c:70
-msgid "Start in expanded mode"
+#, fuzzy
+msgid "Start in collapsed mode"
 msgstr "Abiatu irekitako moduan"
 
 #: ../src/main.c:71
@@ -82,20 +104,20 @@ msgstr "Ez saiatu erabiltzen edo bihurtu D-Bus zerbitzua"
 msgid "Forced to quit"
 msgstr "Irtetera beharturik"
 
-#: ../src/main.c:345
+#: ../src/main.c:346
 msgid "Unable to daemonize the process"
 msgstr "Ezin da prozesua deabru bihurtu"
 
-#: ../src/main.c:417
+#: ../src/main.c:418
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Idatzi '%s --help' erabilera argibideentzat."
 
-#: ../src/main.c:428
+#: ../src/main.c:429
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce garapen taldea. Eskubide guztiak erreserbaturik."
 
-#: ../src/main.c:429
+#: ../src/main.c:430
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Erroreen berri eman <%s>-ra."

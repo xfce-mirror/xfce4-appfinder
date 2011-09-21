@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-20 21:55+0200\n"
+"POT-Creation-Date: 2011-09-21 20:43+0200\n"
 "PO-Revision-Date: 2009-07-03 23:59+0100\n"
 "Last-Translator: Marcos Alvarez Costales <marcos.alvarez.costales@gmail."
 "com>\n"
@@ -42,7 +42,28 @@ msgstr "Guetador d'aplicaciones"
 msgid "Commands History"
 msgstr ""
 
-#: ../src/appfinder-window.c:183 ../src/main.c:343
+#: ../src/appfinder-preferences.c:175
+msgid "C_lear"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:176
+msgid "This will permanently clear the custom command history."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:177
+msgid "Are you sure you want to clear the command history?"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:287
+msgid "The custom action will be deleted permanently."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:288
+#, c-format
+msgid "Are you sure you want to delete pattern \"%s\"?"
+msgstr ""
+
+#: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -53,7 +74,7 @@ msgid "Toggle view mode"
 msgstr ""
 
 #: ../src/main.c:70
-msgid "Start in expanded mode"
+msgid "Start in collapsed mode"
 msgstr ""
 
 #: ../src/main.c:71
@@ -78,20 +99,20 @@ msgstr ""
 msgid "Forced to quit"
 msgstr ""
 
-#: ../src/main.c:345
+#: ../src/main.c:346
 msgid "Unable to daemonize the process"
 msgstr ""
 
-#: ../src/main.c:417
+#: ../src/main.c:418
 #, fuzzy, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Escriba '%s --help' pa obtener información d'usu."
 
-#: ../src/main.c:428
+#: ../src/main.c:429
 msgid "The Xfce development team. All rights reserved."
 msgstr "L'equipu de desendolcu de Xfce. Tolos drechos reservaos."
 
-#: ../src/main.c:429
+#: ../src/main.c:430
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Por favor, informe d'errores a <%s>."

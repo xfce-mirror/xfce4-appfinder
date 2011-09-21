@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-20 21:55+0200\n"
+"POT-Creation-Date: 2011-09-21 20:43+0200\n"
 "PO-Revision-Date: 2010-11-23 23:14+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -48,7 +48,28 @@ msgstr "应用程序没有命令"
 msgid "Commands History"
 msgstr "历史命令"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:343
+#: ../src/appfinder-preferences.c:175
+msgid "C_lear"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:176
+msgid "This will permanently clear the custom command history."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:177
+msgid "Are you sure you want to clear the command history?"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:287
+msgid "The custom action will be deleted permanently."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:288
+#, c-format
+msgid "Are you sure you want to delete pattern \"%s\"?"
+msgstr ""
+
+#: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -59,7 +80,8 @@ msgid "Toggle view mode"
 msgstr "切换视图模式"
 
 #: ../src/main.c:70
-msgid "Start in expanded mode"
+#, fuzzy
+msgid "Start in collapsed mode"
 msgstr "在扩展模式启动"
 
 #: ../src/main.c:71
@@ -83,20 +105,20 @@ msgstr "不要尝试使用或成为 D-Bus 服务"
 msgid "Forced to quit"
 msgstr "强制退出"
 
-#: ../src/main.c:345
+#: ../src/main.c:346
 msgid "Unable to daemonize the process"
 msgstr "无法守护该进程"
 
-#: ../src/main.c:417
+#: ../src/main.c:418
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "输入 \"%s --help\" 查看用法信息。"
 
-#: ../src/main.c:428
+#: ../src/main.c:429
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce 开发团队。版权所有。"
 
-#: ../src/main.c:429
+#: ../src/main.c:430
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "请提交错误报告至 <%s>。"

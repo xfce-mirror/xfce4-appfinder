@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-20 21:55+0200\n"
+"POT-Creation-Date: 2011-09-21 20:43+0200\n"
 "PO-Revision-Date: 2011-09-13 06:45+0900\n"
 "Last-Translator: Seong-ho, Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge."
@@ -46,7 +46,28 @@ msgstr "프로그램에 명령을 보유하고 있지 않습니다"
 msgid "Commands History"
 msgstr "명령 이력"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:343
+#: ../src/appfinder-preferences.c:175
+msgid "C_lear"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:176
+msgid "This will permanently clear the custom command history."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:177
+msgid "Are you sure you want to clear the command history?"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:287
+msgid "The custom action will be deleted permanently."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:288
+#, c-format
+msgid "Are you sure you want to delete pattern \"%s\"?"
+msgstr ""
+
+#: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -57,7 +78,8 @@ msgid "Toggle view mode"
 msgstr "보기 상태 전환"
 
 #: ../src/main.c:70
-msgid "Start in expanded mode"
+#, fuzzy
+msgid "Start in collapsed mode"
 msgstr "확장 모드로 시작하기"
 
 #: ../src/main.c:71
@@ -81,20 +103,20 @@ msgstr "D-Bus 서비스를 사용하거나 서비스와 함께 동작하도록 �
 msgid "Forced to quit"
 msgstr "종료를 강제합니다"
 
-#: ../src/main.c:345
+#: ../src/main.c:346
 msgid "Unable to daemonize the process"
 msgstr "프로세스를 데몬화 할 수 없습니다"
 
-#: ../src/main.c:417
+#: ../src/main.c:418
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "사용 정보를 보려면 \"%s --help\"를 입력합니다."
 
-#: ../src/main.c:428
+#: ../src/main.c:429
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce 개발 팀. All rights reserved."
 
-#: ../src/main.c:429
+#: ../src/main.c:430
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "버그가 생기면 <%s>에게 알려 주시기 바랍니다."

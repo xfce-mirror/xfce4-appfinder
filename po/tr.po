@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-20 21:55+0200\n"
+"POT-Creation-Date: 2011-09-21 20:43+0200\n"
 "PO-Revision-Date: 2009-01-30 18:10+0200\n"
 "Last-Translator: Gökmen Görgen <gkmngrgn@gmail.com>\n"
 "Language-Team: Turkish <turkce@pardus.org.tr>\n"
@@ -49,7 +49,28 @@ msgstr "Uygulama herhangi bir komuta sahip değil"
 msgid "Commands History"
 msgstr "Komutlar Geçmişi"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:343
+#: ../src/appfinder-preferences.c:175
+msgid "C_lear"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:176
+msgid "This will permanently clear the custom command history."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:177
+msgid "Are you sure you want to clear the command history?"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:287
+msgid "The custom action will be deleted permanently."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:288
+#, c-format
+msgid "Are you sure you want to delete pattern \"%s\"?"
+msgstr ""
+
+#: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -60,7 +81,8 @@ msgid "Toggle view mode"
 msgstr "Görünüm moduna geç"
 
 #: ../src/main.c:70
-msgid "Start in expanded mode"
+#, fuzzy
+msgid "Start in collapsed mode"
 msgstr "Genişletilmiş modda başla"
 
 #: ../src/main.c:71
@@ -84,20 +106,20 @@ msgstr "D-Bus servisi olmaya ya da kullanmaya çalışma"
 msgid "Forced to quit"
 msgstr "Çıkmaya zorla"
 
-#: ../src/main.c:345
+#: ../src/main.c:346
 msgid "Unable to daemonize the process"
 msgstr ""
 
-#: ../src/main.c:417
+#: ../src/main.c:418
 #, fuzzy, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Kullanım bilgisi için '%s --help' yazın."
 
-#: ../src/main.c:428
+#: ../src/main.c:429
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce geliştirici takımı. Tüm hakları saklıdır."
 
-#: ../src/main.c:429
+#: ../src/main.c:430
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Lütfen hataları <%s> adresine bildirin."

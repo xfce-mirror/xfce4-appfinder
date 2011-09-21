@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-20 21:55+0200\n"
+"POT-Creation-Date: 2011-09-21 20:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Vinh Nguyen <kureikain@gmail.com>\n"
 "Language-Team: Vietnamese <kureikain@gmail.com>\n"
@@ -44,7 +44,28 @@ msgstr "Không có lệnh"
 msgid "Commands History"
 msgstr "Lịch sử lệnh"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:343
+#: ../src/appfinder-preferences.c:175
+msgid "C_lear"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:176
+msgid "This will permanently clear the custom command history."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:177
+msgid "Are you sure you want to clear the command history?"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:287
+msgid "The custom action will be deleted permanently."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:288
+#, c-format
+msgid "Are you sure you want to delete pattern \"%s\"?"
+msgstr ""
+
+#: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -55,7 +76,8 @@ msgid "Toggle view mode"
 msgstr "Bật chế độ xem"
 
 #: ../src/main.c:70
-msgid "Start in expanded mode"
+#, fuzzy
+msgid "Start in collapsed mode"
 msgstr "Khởi động ở chế độ mở rộng"
 
 #: ../src/main.c:71
@@ -79,21 +101,21 @@ msgstr "Đừng thử để sử dụng hay chuyển thành một dịch vụ D-
 msgid "Forced to quit"
 msgstr "Bắt buộc thoát"
 
-#: ../src/main.c:345
+#: ../src/main.c:346
 msgid "Unable to daemonize the process"
 msgstr "Không thể damon hóa tiến trình"
 
-#: ../src/main.c:417
+#: ../src/main.c:418
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Gõ \"%s --help\" để xem cách dùng"
 
-#: ../src/main.c:428
+#: ../src/main.c:429
 #, fuzzy
 msgid "The Xfce development team. All rights reserved."
 msgstr "Nhóm phát triển Xfce. Tất cả quyền được bảo lưu."
 
-#: ../src/main.c:429
+#: ../src/main.c:430
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Hãy gởi báo lỗi đến <%s>."
