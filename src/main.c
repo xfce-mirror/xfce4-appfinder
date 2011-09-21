@@ -54,7 +54,7 @@
 
 
 
-static gboolean            opt_expanded = FALSE;
+static gboolean            opt_collapsed = FALSE;
 static gboolean            opt_version = FALSE;
 static gboolean            opt_replace = FALSE;
 static gboolean            opt_quit = FALSE;
@@ -67,7 +67,7 @@ static XfceAppfinderModel *model_cache = NULL;
 
 static GOptionEntry option_entries[] =
 {
-  { "expanded", 'x', 0, G_OPTION_ARG_NONE, &opt_expanded, N_("Start in expanded mode"), NULL },
+  { "collapsed", 'c', 0, G_OPTION_ARG_NONE, &opt_collapsed, N_("Start in collapsed mode"), NULL },
   { "version", 'V', 0, G_OPTION_ARG_NONE, &opt_version, N_("Print version information and exit"), NULL },
   { "replace", 'r', 0, G_OPTION_ARG_NONE, &opt_replace, N_("Replace the existing service"), NULL },
   { "quit", 'q', 0, G_OPTION_ARG_NONE, &opt_quit, N_("Quit all instances"), NULL },
@@ -190,6 +190,7 @@ appfinder_dbus_open_window (DBusConnection *dbus_connection,
 
   DBusError    derror;
   DBusMessage *method, *result;
+  gboolean     expanded = !opt_collapsed;
 
   method = dbus_message_new_method_call (APPFINDER_DBUS_SERVICE,
                                          APPFINDER_DBUS_PATH,
@@ -200,7 +201,7 @@ appfinder_dbus_open_window (DBusConnection *dbus_connection,
     startup_id = "";
 
   dbus_message_append_args (method,
-                            DBUS_TYPE_BOOLEAN, &opt_expanded,
+                            DBUS_TYPE_BOOLEAN, &expanded,
                             DBUS_TYPE_STRING, &startup_id,
                             DBUS_TYPE_INVALID);
 
@@ -458,7 +459,7 @@ main (gint argc, gchar **argv)
     }
 
   /* create initial window */
-  appfinder_window_new (NULL, opt_expanded);
+  appfinder_window_new (NULL, !opt_collapsed);
 
   APPFINDER_DEBUG ("enter mainloop");
 

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
-Exec=xfce4-appfinder -x
+Exec=xfce4-appfinder
 Icon=gtk-find
 StartupNotify=true
 Terminal=false
