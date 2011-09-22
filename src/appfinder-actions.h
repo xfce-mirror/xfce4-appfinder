@@ -35,23 +35,14 @@ typedef struct _XfceAppfinderAction       XfceAppfinderAction;
 #define XFCE_IS_APPFINDER_ACTIONS_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), XFCE_TYPE_APPFINDER_ACTIONS))
 #define XFCE_APPFINDER_ACTIONS_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), XFCE_TYPE_APPFINDER_ACTIONS, XfceAppfinderActionsClass))
 
-typedef enum
-{
-  XFCE_APPFINDER_ACTIONS_SUCCEED, /* launched an action */
-  XFCE_APPFINDER_ACTIONS_NOTHING_FOUND, /* no suitable action found */
-  XFCE_APPFINDER_ACTIONS_ERROR /* action found, but spawn error */
-}
-XfceAppfinderActionsResult;
-
 GType                       xfce_appfinder_actions_get_type      (void) G_GNUC_CONST;
 
 XfceAppfinderActions       *xfce_appfinder_actions_get           (void) G_GNUC_MALLOC;
 
 gint                        xfce_appfinder_actions_get_unique_id (XfceAppfinderActions  *actions);
 
-XfceAppfinderActionsResult  xfce_appfinder_actions_execute       (XfceAppfinderActions  *actions,
+gchar                      *xfce_appfinder_actions_execute       (XfceAppfinderActions  *actions,
                                                                   const gchar           *text,
-                                                                  GdkScreen             *screen,
                                                                   GError               **error);
 
 G_END_DECLS

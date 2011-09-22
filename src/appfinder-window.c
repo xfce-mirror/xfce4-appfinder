@@ -800,19 +800,43 @@ xfce_appfinder_window_icon_theme_changed (XfceAppfinderWindow *window)
 
 
 static gboolean
-xfce_appfinder_window_execute_command (const gchar          *cmd,
+xfce_appfinder_window_execute_command (const gchar          *text,
                                        GdkScreen            *screen,
                                        XfceAppfinderWindow  *window,
                                        GError              **error)
 {
-  gboolean succeed = FALSE;
+  gboolean  succeed = FALSE;
+  gchar    *action_cmd = NULL;
+  gchar    *expanded;
+
+  appfinder_return_val_if_fail (error != NULL && *error == NULL, FALSE);
+  appfinder_return_val_if_fail (GDK_IS_SCREEN (screen), FALSE);
+
+  if (!IS_STRING (text))
+    return TRUE;
 
   if (window->actions == NULL)
     window->actions = xfce_appfinder_actions_get ();
 
-  if (xfce_appfinder_actions_execute (window->actions, cmd, screen, error)
-        == XFCE_APPFINDER_ACTIONS_SUCCEED)
-    succeed = TRUE;
+  /* try to match a custom action */
+  action_cmd = xfce_appfinder_actions_execute (window->actions, text, error);
+  if (*error != NULL)
+    return FALSE;
+  else if (action_cmd != NULL)
+    text = action_cmd;
+
+  if (IS_STRING (text))
+    {
+      /* expand variables */
+      expanded = xfce_expand_variables (text, NULL);
+
+      /* spawn the command */
+      APPFINDER_DEBUG ("spawn \"%s\"", expanded);
+      succeed = xfce_spawn_command_line_on_screen (screen, expanded, FALSE, FALSE, error);
+      g_free (expanded);
+    }
+
+  g_free (action_cmd);
 
   return succeed;
 }

@@ -518,28 +518,23 @@ xfce_appfinder_actions_get_unique_id (XfceAppfinderActions *actions)
 
 
 
-XfceAppfinderActionsResult
+gchar *
 xfce_appfinder_actions_execute (XfceAppfinderActions  *actions,
                                 const gchar           *text,
-                                GdkScreen             *screen,
                                 GError               **error)
 {
-  GSList                     *li;
-  XfceAppfinderAction        *action;
-  XfceAppfinderActionsResult  result = XFCE_APPFINDER_ACTIONS_NOTHING_FOUND;
-  GError                     *err = NULL;
-  gchar                      *cmd = NULL;
-  GMatchInfo                 *match_info = NULL;
-  gchar                      *expanded;
+  GSList              *li;
+  XfceAppfinderAction *action;
+  GError              *err = NULL;
+  gchar               *cmd = NULL;
+  GMatchInfo          *match_info = NULL;
+  gboolean             found = FALSE;
 
-  appfinder_return_val_if_fail (error != NULL && *error == NULL, XFCE_APPFINDER_ACTIONS_NOTHING_FOUND);
-  appfinder_return_val_if_fail (GDK_IS_SCREEN (screen), XFCE_APPFINDER_ACTIONS_NOTHING_FOUND);
-  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_ACTIONS (actions), XFCE_APPFINDER_ACTIONS_NOTHING_FOUND);
-  appfinder_return_val_if_fail (text != NULL, XFCE_APPFINDER_ACTIONS_NOTHING_FOUND);
+  appfinder_return_val_if_fail (error != NULL && *error == NULL, NULL);
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_ACTIONS (actions), NULL);
+  appfinder_return_val_if_fail (text != NULL, NULL);
 
-  for (li = actions->actions;
-       result == XFCE_APPFINDER_ACTIONS_NOTHING_FOUND && li != NULL;
-       li = li->next)
+  for (li = actions->actions; !found && li != NULL; li = li->next)
     {
       action = li->data;
 
@@ -554,13 +549,14 @@ xfce_appfinder_actions_execute (XfceAppfinderActions  *actions,
           if (g_str_has_prefix (text, action->pattern))
             {
               cmd = xfce_appfinder_actions_expand_command (action, text);
-              result = XFCE_APPFINDER_ACTIONS_SUCCEED;
+              found = TRUE;
             }
           break;
 
         case XFCE_APPFINDER_ACTION_TYPE_REGEX:
           if (action->regex == NULL)
             {
+              /* allocate the regex */
               action->regex = g_regex_new (action->pattern, 0, 0, &err);
               if (action->regex == NULL)
                 {
@@ -576,9 +572,13 @@ xfce_appfinder_actions_execute (XfceAppfinderActions  *actions,
             {
               /* expand the command string */
               cmd = g_match_info_expand_references (match_info, action->command, &err);
-
               if (G_UNLIKELY (err != NULL))
-                *error = err;
+                {
+                  *error = err;
+                  cmd = NULL;
+                }
+
+              found = TRUE;
             }
 
           if (match_info != NULL)
@@ -588,24 +588,7 @@ xfce_appfinder_actions_execute (XfceAppfinderActions  *actions,
         }
     }
 
-  if (result == XFCE_APPFINDER_ACTIONS_SUCCEED
-      && cmd != NULL
-      && *error == NULL)
-    {
-      /* also expand variables... */
-      expanded = xfce_expand_variables (cmd, NULL);
-      g_free (cmd);
-      cmd = expanded;
+  appfinder_assert ((cmd != NULL) == found);
 
-      APPFINDER_DEBUG ("spawn command \"%s\"", cmd);
-
-      if (xfce_spawn_command_line_on_screen (screen, cmd, FALSE, FALSE, error))
-        result = XFCE_APPFINDER_ACTIONS_SUCCEED;
-      else
-        result = XFCE_APPFINDER_ACTIONS_ERROR;
-    }
-
-  g_free (cmd);
-
-  return result;
+  return cmd;
 }
