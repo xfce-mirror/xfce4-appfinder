@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-22 16:12+0000\n"
+"POT-Creation-Date: 2011-09-23 22:13+0000\n"
 "PO-Revision-Date: 2010-06-05 10:42+0200\n"
 "Last-Translator: Ivica Kolić<ikoli@yahoo.com> <>\n"
 "Language-Team: Croatian <>\n"
@@ -47,15 +47,15 @@ msgstr "Povijest naredbi"
 
 #: ../src/appfinder-preferences.c:175
 msgid "C_lear"
-msgstr ""
+msgstr "O_čisti"
 
 #: ../src/appfinder-preferences.c:176
 msgid "This will permanently clear the custom command history."
-msgstr ""
+msgstr "Ovo će trajno očistiti povijest prilagođenih naredbi."
 
 #: ../src/appfinder-preferences.c:177
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "Jeste li sigurni da želite očistiti povijest naredbi?"
 
 #: ../src/appfinder-preferences.c:287
 msgid "The custom action will be deleted permanently."
@@ -64,7 +64,7 @@ msgstr ""
 #: ../src/appfinder-preferences.c:288
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgstr "Jeste li sigurni da želite izbrisati uzorak \"%s\"?"
 
 #: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
@@ -77,9 +77,8 @@ msgid "Toggle view mode"
 msgstr ""
 
 #: ../src/main.c:70
-#, fuzzy
 msgid "Start in collapsed mode"
-msgstr "Početak u proširenom načinu"
+msgstr ""
 
 #: ../src/main.c:71
 msgid "Print version information and exit"
@@ -126,11 +125,11 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "Uvijek c_entriraj prozor"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Behaviour"
-msgstr ""
+msgstr "Ponašanje"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "C_lear Custom Command History"
@@ -138,7 +137,7 @@ msgstr "O_čisti povijest prilagođenih naredbi"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Centriraj prozor pri pokretanju"
 
 #: ../src/appfinder-preferences.glade.h:7
 msgid "Co_mmand:"
@@ -159,11 +158,11 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
-msgstr ""
+msgstr "Uzor_ak:"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Pattern"
-msgstr ""
+msgstr "Uzorak"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Prefix"
@@ -183,7 +182,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "_General"
-msgstr ""
+msgstr "_Općenito"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_Type:"
@@ -195,11 +194,11 @@ msgstr "Nađi i pokreni programe instalirane u vašem sustavu."
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr ""
+msgstr "Pokreni program..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr ""
+msgstr "Pokreni program"
 
 #~ msgid "[MENUFILE]"
 #~ msgstr "[DATOTEKA IZBORNIKA]"
