@@ -5,14 +5,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-21 20:43+0200\n"
-"PO-Revision-Date: 2011-08-24 02:49-0000\n"
+"POT-Creation-Date: 2011-09-25 16:12+0000\n"
+"PO-Revision-Date: 2011-09-25 23:18-0000\n"
 "Last-Translator: كريم أولاد الشلحة <herr.linux88@gmail.com>\n"
 "Language-Team: Arabic Xfce Translation Team <herr.linux88@gmail.com>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "X-Poedit-Language: Arabic\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Country: Morocco\n"
@@ -47,7 +47,7 @@ msgstr "تاريخ الاوامر"
 
 #: ../src/appfinder-preferences.c:175
 msgid "C_lear"
-msgstr ""
+msgstr "مح_و"
 
 #: ../src/appfinder-preferences.c:176
 msgid "This will permanently clear the custom command history."
@@ -66,7 +66,8 @@ msgstr ""
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr ""
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
+#: ../src/appfinder-window.c:183
+#: ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -77,7 +78,6 @@ msgid "Toggle view mode"
 msgstr "تبديل لوضع العرض"
 
 #: ../src/main.c:70
-#, fuzzy
 msgid "Start in collapsed mode"
 msgstr "بدء في الوضع الموسع"
 
@@ -113,7 +113,7 @@ msgstr "طباعة \"%s --help\" للحصول على معلومات الإستع
 
 #: ../src/main.c:429
 msgid "The Xfce development team. All rights reserved."
-msgstr "فريق تطوير Xfce . كل الحقوق محفوظة."
+msgstr "فريق تطوير إكسفس . كل الحقوق محفوظة."
 
 #: ../src/main.c:430
 #, c-format
@@ -130,37 +130,31 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Behaviour"
-msgstr ""
+msgstr "سلوك"
 
 #: ../src/appfinder-preferences.glade.h:5
-#, fuzzy
 msgid "C_lear Custom Command History"
-msgstr "تاريخ الاوامر"
+msgstr "محو _تاريخ أوامر المخصصة"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "Center the window on startup."
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Co_mmand:"
-msgstr "أمر"
+msgstr "أم_ر:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Custom _Actions"
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:9
-#, fuzzy
 msgid "History"
-msgstr "تاريخ الاوامر"
+msgstr "تاريخ"
 
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
-msgid ""
-"If the type is set to prefix, %s will be replaced with the string after the "
-"pattern, %S with the complete entry text. For regular expressions you can "
-"use \\0 and \\<num>."
+msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:12
@@ -189,11 +183,11 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "_General"
-msgstr ""
+msgstr "_عام"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_Type:"
-msgstr ""
+msgstr "_نوع:"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
