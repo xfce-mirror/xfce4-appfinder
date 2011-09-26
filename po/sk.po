@@ -161,27 +161,27 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
-msgstr ""
+msgstr "Vzo_r"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Pattern"
-msgstr ""
+msgstr "Vzor"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Prefix"
-msgstr ""
+msgstr "Prefix"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Regular Expression"
-msgstr ""
+msgstr "Regulárny výraz"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Zapamätať poslednú vybranú kategóriu"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Odstrániť práve vybrané akcie."
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "_General"
