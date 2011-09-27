@@ -155,7 +155,7 @@ msgstr "Історія"
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
 msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
-msgstr ""
+msgstr "Якщо встановлено тип префікса,%s буде замінено на рядок за зразком, %S з повним текстом. Для регулярних виразів можна використовувати \\0 і \\ <num>."
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
