@@ -324,7 +324,8 @@ xfce_appfinder_actions_save (XfceAppfinderActions *actions,
   GPtrArray           *array;
   gchar                prop[32];
 
-  g_signal_handler_block (actions->channel, actions->property_watch_id);
+  if (actions->property_watch_id > 0)
+    g_signal_handler_block (actions->channel, actions->property_watch_id);
 
   array = g_ptr_array_new ();
 
@@ -354,7 +355,8 @@ xfce_appfinder_actions_save (XfceAppfinderActions *actions,
 
   xfconf_array_free (array);
 
-  g_signal_handler_unblock (actions->channel, actions->property_watch_id);
+  if (actions->property_watch_id > 0)
+    g_signal_handler_unblock (actions->channel, actions->property_watch_id);
 }
 
 
