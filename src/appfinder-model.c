@@ -661,8 +661,8 @@ xfce_appfinder_model_item_key (GarconMenuItem *item)
   value = garcon_menu_item_get_command (item);
   if (value != NULL)
     {
-      /* only add first part of the command */
-      p = strchr (value, ' ');
+      /* only the non-expanding command items */
+      p = strchr (value, '%');
       g_string_append_len (str, value, p != NULL ? p - value : -1);
     }
   g_string_append_c (str, '\n');
@@ -696,7 +696,7 @@ xfce_appfinder_model_item_new (GarconMenuItem *menu_item)
   command = garcon_menu_item_get_command (menu_item);
   if (G_LIKELY (command != NULL))
     {
-      p = strchr (command, ' ');
+      p = strstr (command, " %");
       if (p != NULL)
         item->command = g_strndup (command, p - command);
       else
