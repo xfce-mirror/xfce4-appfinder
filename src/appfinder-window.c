@@ -560,7 +560,8 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
     {
       /* only switch modes when there is no text in the entry */
       text = gtk_entry_get_text (GTK_ENTRY (window->entry));
-      if (IS_STRING (text))
+      if (IS_STRING (text)
+          && !gtk_widget_get_visible (window->paned))
         return FALSE;
 
       expand = (event->keyval == GDK_KEY_Down);
