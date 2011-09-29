@@ -553,20 +553,19 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
                                              GdkEventKey         *event,
                                              XfceAppfinderWindow *window)
 {
-  gboolean     expand;
-  const gchar *text;
+  gboolean expand, is_expanded;
 
   if (event->keyval == GDK_KEY_Up || event->keyval == GDK_KEY_Down)
     {
-      /* only switch modes when there is no text in the entry */
-      text = gtk_entry_get_text (GTK_ENTRY (window->entry));
-      if (IS_STRING (text)
-          && !gtk_widget_get_visible (window->paned))
-        return FALSE;
-
       expand = (event->keyval == GDK_KEY_Down);
-      if (gtk_widget_get_visible (window->paned) != expand)
+      is_expanded = gtk_widget_get_visible (window->paned);
+      if (is_expanded != expand)
         {
+          /* don't break entry completion navigation in collapsed mode */
+          if (!is_expanded
+              && gdk_pointer_is_grabbed ())
+            return FALSE;
+
           xfce_appfinder_window_set_expanded (window, expand);
           return TRUE;
         }
