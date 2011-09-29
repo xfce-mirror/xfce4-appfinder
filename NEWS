@@ -1,3 +1,11 @@
+4.9.1
+=====
+- Fix launching in collapsed mode.
+- Don't ignore arguments of the desktop file command.
+- Always allow up/down unless the completion menu is shown.
+- Fix segfault when loading default actions.
+- Translation updates (da, uk, pt_BR, sk, ar, zh_TW, hr, nl).
+
 4.9.0
 =====
 - Rewrite of the the application finder to merge the functionality
