@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce-4-appfinder 4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-23 16:12+0000\n"
+"POT-Creation-Date: 2011-09-29 16:12+0000\n"
 "PO-Revision-Date: 2009-10-21 20:33+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -128,34 +128,31 @@ msgstr "Føj en ny tilpasset aktion."
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "C_entrér altid vinduet"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Behaviour"
 msgstr "Opførsel"
 
 #: ../src/appfinder-preferences.glade.h:5
-#, fuzzy
 msgid "C_lear Custom Command History"
-msgstr "Kommandohistorik"
+msgstr "Ryd tilpassede kommandohistorik"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Centrér vinduet ved opstart"
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Co_mmand:"
-msgstr "Kommando"
+msgstr "Ko_mmando:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Custom _Actions"
-msgstr ""
+msgstr "Tilpassede _handlinger"
 
 #: ../src/appfinder-preferences.glade.h:9
-#, fuzzy
 msgid "History"
-msgstr "Kommandohistorik"
+msgstr "Historik"
 
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
@@ -164,35 +161,35 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
-msgstr ""
+msgstr "Mø_nster:"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Pattern"
-msgstr ""
+msgstr "Mønster"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Prefix"
-msgstr ""
+msgstr "Præfiks"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Regular Expression"
-msgstr ""
+msgstr "Regulært udtryk"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Husk sidst v_algte kategori"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Fjern den nuværende valgte handling"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "_General"
-msgstr ""
+msgstr "_Generelt"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_Type:"
-msgstr ""
+msgstr "_Type:"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
