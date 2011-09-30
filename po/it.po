@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-21 20:43+0200\n"
-"PO-Revision-Date: 2009-04-15 21:48+0100\n"
-"Last-Translator: Cristian Cozzolino <cristiancozzolino@libero.it>\n"
+"PO-Revision-Date: 2011-09-30 08:59+0100\n"
+"Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -46,26 +46,27 @@ msgstr "Cronologia dei comandi"
 
 #: ../src/appfinder-preferences.c:175
 msgid "C_lear"
-msgstr ""
+msgstr "P_ulisci"
 
 #: ../src/appfinder-preferences.c:176
 msgid "This will permanently clear the custom command history."
-msgstr ""
+msgstr "La cronologia dei comandi personalizzati verrà rimossa in modo permanente."
 
 #: ../src/appfinder-preferences.c:177
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "Eliminare davvero la cronologia dei comandi?"
 
 #: ../src/appfinder-preferences.c:287
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "L'azione personalizzata verrò rimossa definitivamente."
 
 #: ../src/appfinder-preferences.c:288
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgstr "Eliminare davvero lo schema \"%s\"?"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
+#: ../src/appfinder-window.c:183
+#: ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -76,9 +77,8 @@ msgid "Toggle view mode"
 msgstr "Modifica lo stile di visualizzazione"
 
 #: ../src/main.c:70
-#, fuzzy
 msgid "Start in collapsed mode"
-msgstr "Avvia in modalità estesa"
+msgstr "Avvia in modalità collassata"
 
 #: ../src/main.c:71
 msgid "Print version information and exit"
@@ -119,80 +119,78 @@ msgstr "Il team di sviluppo di Xfce. Tutti i diritti riservati."
 msgid "Please report bugs to <%s>."
 msgstr "Segnalare i problemi a <%s>."
 
+# tooltip
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
-msgstr ""
+msgstr "Aggiunge una nuova azione personalizzata"
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "C_entra sempre la finestra"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Behaviour"
-msgstr ""
+msgstr "Comportamento"
 
 #: ../src/appfinder-preferences.glade.h:5
-#, fuzzy
 msgid "C_lear Custom Command History"
-msgstr "Cronologia dei comandi"
+msgstr "S_vuota la cronologia dei comandi personalizzati"
 
+# tooltip
 #: ../src/appfinder-preferences.glade.h:6
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Centra la finestra all'avvio"
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Co_mmand:"
-msgstr "Comando"
+msgstr "C_omando:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Custom _Actions"
-msgstr ""
+msgstr "_Azioni personalizzate"
 
 #: ../src/appfinder-preferences.glade.h:9
-#, fuzzy
 msgid "History"
-msgstr "Cronologia dei comandi"
+msgstr "Cronologia"
 
+# tooltip
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
-msgid ""
-"If the type is set to prefix, %s will be replaced with the string after the "
-"pattern, %S with the complete entry text. For regular expressions you can "
-"use \\0 and \\<num>."
-msgstr ""
+msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
+msgstr "Se il \"Tipo\" è impostato a \"Prefisso\", %s sarà sostituito con la stringa dopo lo schema, %S con il testo completo dell'elemento; per le espressioni regolari si possono utilizzare \\0 e \\<num>"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
-msgstr ""
+msgstr "_Schema:"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Pattern"
-msgstr ""
+msgstr "Schema"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Prefix"
-msgstr ""
+msgstr "Prefisso"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Regular Expression"
-msgstr ""
+msgstr "Espressione regolare"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Ricorda l'ulti_ma categoria selezionata"
 
+# tooltip
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Elimina l'azione selezionata"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "_General"
-msgstr ""
+msgstr "_Generali"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_Type:"
-msgstr ""
+msgstr "_Tipo:"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
