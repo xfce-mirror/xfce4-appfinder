@@ -2,19 +2,19 @@
 # Copyright (C) 2004-2008 The Xfce development team.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Collet Etienne <xanaxlnx@gmail.com>, 2005.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.6 RC1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-21 20:43+0200\n"
+"POT-Creation-Date: 2011-09-24 22:12+0000\n"
 "PO-Revision-Date: 2009-11-30 20:40+0100\n"
 "Last-Translator: Jérôme Guelfucci <jeromeg@xfce.org>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../src/appfinder-category-model.c:108
@@ -47,25 +47,29 @@ msgid "Commands History"
 msgstr "Historique des commandes"
 
 #: ../src/appfinder-preferences.c:175
+#, fuzzy
 msgid "C_lear"
-msgstr ""
+msgstr "_Effacer"
 
 #: ../src/appfinder-preferences.c:176
+#, fuzzy
 msgid "This will permanently clear the custom command history."
-msgstr ""
+msgstr "Ceci va effacer l'historique des commandes personnalisées de manière permanente."
 
 #: ../src/appfinder-preferences.c:177
+#, fuzzy
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "Êtes-vous sûr de vouloir effacer l'historique des commandes ?"
 
 #: ../src/appfinder-preferences.c:287
+#, fuzzy
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "L'action personnalisée va être supprimée de manière permanente."
 
 #: ../src/appfinder-preferences.c:288
-#, c-format
+#, c-format, fuzzy
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgstr "Êtes-vous sûr de vouloir supprimer le modèle « %s » ?"
 
 #: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
@@ -95,8 +99,9 @@ msgid "Quit all instances"
 msgstr "Ferme toutes les instances"
 
 #: ../src/main.c:74
+#, fuzzy
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "Ne pas essayer d'utiliser ou de devenir un service D-Bus."
 
 #. close all windows and quit
 #: ../src/main.c:159
@@ -110,8 +115,7 @@ msgstr "Impossible d'installer le démon du processus"
 #: ../src/main.c:418
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr ""
-"Saisissez '%s ---help' pour obtenir des informations sur l'utilisation."
+msgstr "Saisissez '%s ---help' pour obtenir des informations sur l'utilisation."
 
 #: ../src/main.c:429
 msgid "The Xfce development team. All rights reserved."
@@ -123,16 +127,18 @@ msgid "Please report bugs to <%s>."
 msgstr "Veuillez signaler les bogues à <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
+#, fuzzy
 msgid "Add a new custom action."
-msgstr ""
+msgstr "Ajouter une nouvelle action personnalisée."
 
 #: ../src/appfinder-preferences.glade.h:2
+#, fuzzy
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "Toujours _centrer la fenêtre."
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Behaviour"
-msgstr ""
+msgstr "Comportement"
 
 #: ../src/appfinder-preferences.glade.h:5
 #, fuzzy
@@ -140,17 +146,19 @@ msgid "C_lear Custom Command History"
 msgstr "Historique des commandes"
 
 #: ../src/appfinder-preferences.glade.h:6
+#, fuzzy
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Centrer la fenêtre au démarrage."
 
 #: ../src/appfinder-preferences.glade.h:7
 #, fuzzy
 msgid "Co_mmand:"
-msgstr "Commande"
+msgstr "Co_mmande"
 
 #: ../src/appfinder-preferences.glade.h:8
+#, fuzzy
 msgid "Custom _Actions"
-msgstr ""
+msgstr "Actions _personnalisées"
 
 #: ../src/appfinder-preferences.glade.h:9
 #, fuzzy
@@ -159,43 +167,48 @@ msgstr "Historique des commandes"
 
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
-msgid ""
-"If the type is set to prefix, %s will be replaced with the string after the "
-"pattern, %S with the complete entry text. For regular expressions you can "
-"use \\0 and \\<num>."
+msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:12
+#, fuzzy
 msgid "Patte_rn:"
-msgstr ""
+msgstr "_Modèle :"
 
 #: ../src/appfinder-preferences.glade.h:13
+#, fuzzy
 msgid "Pattern"
-msgstr ""
+msgstr "Modèle"
 
 #: ../src/appfinder-preferences.glade.h:14
+#, fuzzy
 msgid "Prefix"
-msgstr ""
+msgstr "Préfixe"
 
 #: ../src/appfinder-preferences.glade.h:15
+#, fuzzy
 msgid "Regular Expression"
-msgstr ""
+msgstr "Expression Régulière"
 
 #: ../src/appfinder-preferences.glade.h:16
+#, fuzzy
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Se souvenir de la dernière catégorie _sélectionnée"
 
 #: ../src/appfinder-preferences.glade.h:17
+#, fuzzy
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Retirer la dernière action sélectionnée."
 
 #: ../src/appfinder-preferences.glade.h:18
+#, fuzzy
 msgid "_General"
-msgstr ""
+msgstr "_Général"
 
 #: ../src/appfinder-preferences.glade.h:19
+#, fuzzy
 msgid "_Type:"
-msgstr ""
+msgstr "_Type :"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
