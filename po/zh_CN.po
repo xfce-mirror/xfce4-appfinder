@@ -6,7 +6,8 @@
 # Huang Huan <unicon221@gmail.com>, 2006.
 # Jick Nan <jick.nan@gmail.com>, 2006.
 # Hunt Xu <huntxu@live.cn>, 2008, 2010.
-# Chris K. Zhang <plutino@gmail.com>, 2009
+# Chris K. Zhang <plutino@gmail.com>, 2009.
+# Chipong Luo <chipong_l@yahoo.com, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
