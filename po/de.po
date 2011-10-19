@@ -6,19 +6,19 @@
 # Nico Schümann <nico@prog.nico22.de>, 2008.
 # Fabian Nowak <timystery@arcor.de>, 2008, 2011.
 # Jannis Pohlmann <jannis@xfce.org>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-21 20:43+0200\n"
+"POT-Creation-Date: 2011-10-19 16:31+0000\n"
 "PO-Revision-Date: 2009-01-02 13:33+0100\n"
 "Last-Translator: Jannis Pohlmann <jannis@xfce.org>\n"
 "Language-Team: German <de@li.org>\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 
 #: ../src/appfinder-category-model.c:108
 msgid "All Applications"
@@ -49,25 +49,28 @@ msgid "Commands History"
 msgstr "Befehlsverlauf"
 
 #: ../src/appfinder-preferences.c:175
+#, fuzzy
 msgid "C_lear"
-msgstr ""
+msgstr "Leeren"
 
 #: ../src/appfinder-preferences.c:176
 msgid "This will permanently clear the custom command history."
 msgstr ""
 
 #: ../src/appfinder-preferences.c:177
+#, fuzzy
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "Sind sie sicher, dass sie den Befehlsverlauf löschen möchten?"
 
 #: ../src/appfinder-preferences.c:287
+#, fuzzy
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "Die benutzerdefinierte Aktion wird dauerhaft gelöscht."
 
 #: ../src/appfinder-preferences.c:288
-#, c-format
+#, c-format, fuzzy
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgstr "Möchten sie das Muster \"%s\" dauerhaft löschen?"
 
 #: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
@@ -126,16 +129,19 @@ msgid "Please report bugs to <%s>."
 msgstr "Bitte melden Sie Probleme an <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
+#, fuzzy
 msgid "Add a new custom action."
-msgstr ""
+msgstr "Eine neue benutzerdefinierte Aktion hinzufügen."
 
 #: ../src/appfinder-preferences.glade.h:2
+#, fuzzy
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "Fenster immer zentrieren"
 
 #: ../src/appfinder-preferences.glade.h:4
+#, fuzzy
 msgid "Behaviour"
-msgstr ""
+msgstr "Verhalten"
 
 #: ../src/appfinder-preferences.glade.h:5
 #, fuzzy
@@ -143,8 +149,9 @@ msgid "C_lear Custom Command History"
 msgstr "Befehlsverlauf"
 
 #: ../src/appfinder-preferences.glade.h:6
+#, fuzzy
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Fenster beim Starten zentrieren."
 
 #: ../src/appfinder-preferences.glade.h:7
 #, fuzzy
@@ -152,8 +159,9 @@ msgid "Co_mmand:"
 msgstr "Befehl"
 
 #: ../src/appfinder-preferences.glade.h:8
+#, fuzzy
 msgid "Custom _Actions"
-msgstr ""
+msgstr "Benutzerdefinierte Aktionen"
 
 #: ../src/appfinder-preferences.glade.h:9
 #, fuzzy
@@ -177,12 +185,14 @@ msgid "Pattern"
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:14
+#, fuzzy
 msgid "Prefix"
-msgstr ""
+msgstr "Präfix"
 
 #: ../src/appfinder-preferences.glade.h:15
+#, fuzzy
 msgid "Regular Expression"
-msgstr ""
+msgstr "Regulärer Ausdruck"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Remember last _selected category"
@@ -193,8 +203,9 @@ msgid "Remove the currently selected action."
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:18
+#, fuzzy
 msgid "_General"
-msgstr ""
+msgstr "Allgemein"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_Type:"
