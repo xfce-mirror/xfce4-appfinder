@@ -18,9 +18,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../src/appfinder-category-model.c:108
-#, fuzzy
 msgid "All Applications"
-msgstr "Liste des applications"
+msgstr "Toutes les applications"
 
 #: ../src/appfinder-model.c:422
 msgid "Name"
@@ -47,29 +46,25 @@ msgid "Commands History"
 msgstr "Historique des commandes"
 
 #: ../src/appfinder-preferences.c:175
-#, fuzzy
 msgid "C_lear"
 msgstr "_Effacer"
 
 #: ../src/appfinder-preferences.c:176
-#, fuzzy
 msgid "This will permanently clear the custom command history."
-msgstr "Ceci va effacer l'historique des commandes personnalisées de manière permanente."
+msgstr "Ceci va effacer l'historique des commandes de manière permanente."
 
 #: ../src/appfinder-preferences.c:177
-#, fuzzy
 msgid "Are you sure you want to clear the command history?"
 msgstr "Êtes-vous sûr de vouloir effacer l'historique des commandes ?"
 
 #: ../src/appfinder-preferences.c:287
-#, fuzzy
 msgid "The custom action will be deleted permanently."
-msgstr "L'action personnalisée va être supprimée de manière permanente."
+msgstr "Ceci va supprimer l'action personnalisée de manière permanente."
 
 #: ../src/appfinder-preferences.c:288
-#, c-format, fuzzy
+#, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "Êtes-vous sûr de vouloir supprimer le modèle « %s » ?"
+msgstr "Êtes-vous sûr de vouloir supprimer le motif « %s » ?"
 
 #: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
@@ -82,9 +77,8 @@ msgid "Toggle view mode"
 msgstr "Changer le mode de vue"
 
 #: ../src/main.c:70
-#, fuzzy
 msgid "Start in collapsed mode"
-msgstr "Démarrer en mode étendu"
+msgstr "Démarrer en mode compact"
 
 #: ../src/main.c:71
 msgid "Print version information and exit"
@@ -99,7 +93,6 @@ msgid "Quit all instances"
 msgstr "Ferme toutes les instances"
 
 #: ../src/main.c:74
-#, fuzzy
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Ne pas essayer d'utiliser ou de devenir un service D-Bus."
 
@@ -127,86 +120,71 @@ msgid "Please report bugs to <%s>."
 msgstr "Veuillez signaler les bogues à <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
-#, fuzzy
 msgid "Add a new custom action."
 msgstr "Ajouter une nouvelle action personnalisée."
 
 #: ../src/appfinder-preferences.glade.h:2
-#, fuzzy
 msgid "Always c_enter the window"
-msgstr "Toujours _centrer la fenêtre."
+msgstr "Toujours _centrer la fenêtre"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Behaviour"
 msgstr "Comportement"
 
 #: ../src/appfinder-preferences.glade.h:5
-#, fuzzy
 msgid "C_lear Custom Command History"
-msgstr "Historique des commandes"
+msgstr "E_ffacer l'historique des commandes"
 
 #: ../src/appfinder-preferences.glade.h:6
-#, fuzzy
 msgid "Center the window on startup."
 msgstr "Centrer la fenêtre au démarrage."
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Co_mmand:"
-msgstr "Co_mmande"
+msgstr "Co_mmande :"
 
 #: ../src/appfinder-preferences.glade.h:8
-#, fuzzy
 msgid "Custom _Actions"
 msgstr "Actions _personnalisées"
 
 #: ../src/appfinder-preferences.glade.h:9
-#, fuzzy
 msgid "History"
-msgstr "Historique des commandes"
+msgstr "Historique"
 
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
 msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
-msgstr ""
+msgstr "Si le type est positionné sur préfixe, %s sera remplacer dans la chaîne par le texte après le motif, %S avec le texte complet. Pour les expressions régulières vous pouvez utiliser \\0 et \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:12
-#, fuzzy
 msgid "Patte_rn:"
-msgstr "_Modèle :"
+msgstr "_Motif :"
 
 #: ../src/appfinder-preferences.glade.h:13
-#, fuzzy
 msgid "Pattern"
-msgstr "Modèle"
+msgstr "Motif"
 
 #: ../src/appfinder-preferences.glade.h:14
-#, fuzzy
 msgid "Prefix"
 msgstr "Préfixe"
 
 #: ../src/appfinder-preferences.glade.h:15
-#, fuzzy
 msgid "Regular Expression"
-msgstr "Expression Régulière"
+msgstr "Expression régulière"
 
 #: ../src/appfinder-preferences.glade.h:16
-#, fuzzy
 msgid "Remember last _selected category"
 msgstr "Se souvenir de la dernière catégorie _sélectionnée"
 
 #: ../src/appfinder-preferences.glade.h:17
-#, fuzzy
 msgid "Remove the currently selected action."
-msgstr "Retirer la dernière action sélectionnée."
+msgstr "Effacer l'action actuellement sélectionné."
 
 #: ../src/appfinder-preferences.glade.h:18
-#, fuzzy
 msgid "_General"
 msgstr "_Général"
 
 #: ../src/appfinder-preferences.glade.h:19
-#, fuzzy
 msgid "_Type:"
 msgstr "_Type :"
 
@@ -221,48 +199,3 @@ msgstr "Lancer le programme..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Lancer un programme"
-
-#~ msgid "[MENUFILE]"
-#~ msgstr "[MENUFILE]"
-
-#~ msgid "Unable to initialize GTK+."
-#~ msgstr "Impossible d'initialiser GTK+."
-
-#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
-#~ msgstr "Impossible de se connecter au démon xfconf. Raison  : %s"
-
-#~ msgid "Failed to connect to xfconf daemon."
-#~ msgstr "Impossible de se connecter au démon xfconf."
-
-#~ msgid "Search"
-#~ msgstr "Rechercher"
-
-#~ msgid "C_lose after launch"
-#~ msgstr "_Fermer après exécution"
-
-#~ msgid "Launch"
-#~ msgstr "Exécuter"
-
-#~ msgid "Could not load menu from %s"
-#~ msgstr "Impossible de charger le menu depuis %s"
-
-#~ msgid "All"
-#~ msgstr "Toutes"
-
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "Impossible d'exécuter la commande \"%s\"."
-
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>Catégories :</b> %s"
-
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>Commande :</b> %s"
-
-#~ msgid "Could not load system menu"
-#~ msgstr "Impossible de charger le menu système"
-
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "Impossible de lancer l'application %s. Raison : %s"
-
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "Impossible de charger le menu depuis %s. Raison : %s"
