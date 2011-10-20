@@ -159,7 +159,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Mota aurrizkira ezartzen bada, %s patroiaren ondoko kateaz ordeztuko da, %S testu sarrera osoarekin. Espresio erregularrentzat \\0 eta \\<zenb> erabili ditzakezu."
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
