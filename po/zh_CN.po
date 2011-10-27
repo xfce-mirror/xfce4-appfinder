@@ -6,14 +6,15 @@
 # Huang Huan <unicon221@gmail.com>, 2006.
 # Jick Nan <jick.nan@gmail.com>, 2006.
 # Hunt Xu <huntxu@live.cn>, 2008, 2010.
-# Chris K. Zhang <plutino@gmail.com>, 2009
+# Chris K. Zhang <plutino@gmail.com>, 2009.
+# Chipong Luo <chipong_l@yahoo.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-21 20:43+0200\n"
+"POT-Creation-Date: 2011-10-27 10:06+0000\n"
 "PO-Revision-Date: 2010-11-23 23:14+0800\n"
-"Last-Translator: Hunt Xu <huntxu@live.cn>\n"
+"Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -46,43 +47,42 @@ msgstr "应用程序没有命令"
 
 #: ../src/appfinder-model.c:1634
 msgid "Commands History"
-msgstr "历史命令"
+msgstr "命令历史"
 
 #: ../src/appfinder-preferences.c:175
 msgid "C_lear"
-msgstr ""
+msgstr "清除(_L)"
 
 #: ../src/appfinder-preferences.c:176
 msgid "This will permanently clear the custom command history."
-msgstr ""
+msgstr "这会永久清除自定义的命令历史。"
 
 #: ../src/appfinder-preferences.c:177
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "您确定要清除命令历史吗？"
 
 #: ../src/appfinder-preferences.c:287
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "将永久删除自定义的动作"
 
 #: ../src/appfinder-preferences.c:288
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgstr "您确定要删除范式 “%s” 吗？"
 
 #: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "程序查找工具"
+msgstr "应用程序查找器"
 
 #: ../src/appfinder-window.c:224
 msgid "Toggle view mode"
 msgstr "切换视图模式"
 
 #: ../src/main.c:70
-#, fuzzy
 msgid "Start in collapsed mode"
-msgstr "在扩展模式启动"
+msgstr "以崩溃模式启动"
 
 #: ../src/main.c:71
 msgid "Print version information and exit"
@@ -90,7 +90,7 @@ msgstr "打印版本信息并退出"
 
 #: ../src/main.c:72
 msgid "Replace the existing service"
-msgstr "替换现有服务"
+msgstr "替换现有的服务"
 
 #: ../src/main.c:73
 msgid "Quit all instances"
@@ -107,12 +107,12 @@ msgstr "强制退出"
 
 #: ../src/main.c:346
 msgid "Unable to daemonize the process"
-msgstr "无法守护该进程"
+msgstr "未能守护此进程"
 
 #: ../src/main.c:418
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "输入 \"%s --help\" 查看用法信息。"
+msgstr "输入 “%s --help” 获取使用说明。"
 
 #: ../src/main.c:429
 msgid "The Xfce development team. All rights reserved."
@@ -121,42 +121,39 @@ msgstr "Xfce 开发团队。版权所有。"
 #: ../src/main.c:430
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "请提交错误报告至 <%s>。"
+msgstr "请向 <%s> 报告缺陷。"
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
-msgstr ""
+msgstr "添加新的自定义动作。"
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "窗口总是居中(_E)"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Behaviour"
-msgstr ""
+msgstr "行为"
 
 #: ../src/appfinder-preferences.glade.h:5
-#, fuzzy
 msgid "C_lear Custom Command History"
-msgstr "历史命令"
+msgstr "清除自定义命令历史(_L)"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "Center the window on startup."
-msgstr ""
+msgstr "窗口在启动时居中"
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Co_mmand:"
-msgstr "命令"
+msgstr "命令(_M)："
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Custom _Actions"
-msgstr ""
+msgstr "自定义动作(_A)"
 
 #: ../src/appfinder-preferences.glade.h:9
-#, fuzzy
 msgid "History"
-msgstr "历史命令"
+msgstr "历史"
 
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
@@ -165,42 +162,44 @@ msgid ""
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
 msgstr ""
+"如果 prefix 设置了类型，会在型后用此字符串替换 %s、用完整的条目文本"
+"替换 %S。对于正则表达您可以使用 \\0 和 \\<num>。"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
-msgstr ""
+msgstr "型(_R)"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Pattern"
-msgstr ""
+msgstr "型"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Prefix"
-msgstr ""
+msgstr "前缀"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Regular Expression"
-msgstr ""
+msgstr "正则表达"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "记住上次选中的类别(_S)"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "移除当前选中的动作。"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "_General"
-msgstr ""
+msgstr "一般(_G)"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_Type:"
-msgstr ""
+msgstr "类型(_T)："
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "查找并启动您系统上安装的程序"
+msgstr "查找并启动您系统上安装的应用程序"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
@@ -209,105 +208,3 @@ msgstr "运行程序..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "运行程序"
-
-#~ msgid "[MENUFILE]"
-#~ msgstr "[菜单文件]"
-
-#~ msgid "Unable to initialize GTK+."
-#~ msgstr "无法初始化 GTK+。"
-
-#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
-#~ msgstr "无法连接至 xfconf 守护进程。原因：%s"
-
-#~ msgid "Failed to connect to xfconf daemon."
-#~ msgstr "无法连接至 xfconf 守护进程。"
-
-#~ msgid "Search"
-#~ msgstr "搜索"
-
-#~ msgid "C_lose after launch"
-#~ msgstr "启动后关闭(_L)"
-
-#~ msgid "Launch"
-#~ msgstr "启动"
-
-#~ msgid "Could not load menu from %s"
-#~ msgstr "无法从 %s 载入菜单"
-
-#~ msgid "All"
-#~ msgstr "全部"
-
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "执行命令 \"%s\" 失败。"
-
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>类别:</b> %s"
-
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>命令:</b> %s"
-
-#~ msgid "Could not load system menu"
-#~ msgstr "无法载入系统菜单"
-
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "无法运行程序 %s。原因如下：%s"
-
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "无法从 %s 载入菜单。原因如下：%s"
-
-#~ msgid "Filter"
-#~ msgstr "过滤器"
-
-#~ msgid "Xfce 4 Appfinder"
-#~ msgstr "Xfce 4 程序查找工具"
-
-#~ msgid "<b>Name</b>"
-#~ msgstr "<b>名称</b>"
-
-#~ msgid "N/A"
-#~ msgstr "N/A"
-
-#~ msgid "<b>Comment</b>"
-#~ msgstr "<b>注释</b>"
-
-#~ msgid "Show Categories"
-#~ msgstr "显示类别"
-
-#~ msgid "Core"
-#~ msgstr "核心"
-
-#~ msgid "Development"
-#~ msgstr "开发"
-
-#~ msgid "Office"
-#~ msgstr "办公"
-
-#~ msgid "Graphics"
-#~ msgstr "图形"
-
-#~ msgid "Network"
-#~ msgstr "网络"
-
-#~ msgid "AudioVideo"
-#~ msgstr "声音和图象"
-
-#~ msgid "Game"
-#~ msgstr "游戏"
-
-#~ msgid "Education"
-#~ msgstr "教育"
-
-#~ msgid "System"
-#~ msgstr "系统"
-
-#~ msgid "Utility"
-#~ msgstr "工具程序"
-
-#~ msgid "No items available"
-#~ msgstr "无可用项目"
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "抱歉，没有找到。"
-
-#~ msgid "Appfinder"
-#~ msgstr "程序查找工具"
