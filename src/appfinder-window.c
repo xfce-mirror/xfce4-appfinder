@@ -69,6 +69,9 @@ static void       xfce_appfinder_window_drag_data_get                 (GtkWidget
                                                                        guint                        info,
                                                                        guint                        drag_time,
                                                                        XfceAppfinderWindow         *window);
+static gboolean   xfce_appfinder_window_treeview_key_press_event      (GtkWidget                   *widget,
+                                                                       GdkEventKey                 *event,
+                                                                       XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_category_changed              (GtkTreeSelection            *selection,
                                                                        XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_category_set_categories       (XfceAppfinderWindow         *window);
@@ -251,6 +254,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (sidepane), FALSE);
   gtk_tree_view_set_enable_search (GTK_TREE_VIEW (sidepane), FALSE);
   g_signal_connect_swapped (G_OBJECT (sidepane), "start-interactive-search", G_CALLBACK (gtk_widget_grab_focus), entry);
+  g_signal_connect (G_OBJECT (sidepane), "key-press-event", G_CALLBACK (xfce_appfinder_window_treeview_key_press_event), window);
   gtk_tree_view_set_row_separator_func (GTK_TREE_VIEW (sidepane),
       xfce_appfinder_category_model_row_separator_func, NULL, NULL);
   gtk_container_add (GTK_CONTAINER (scroll), sidepane);
@@ -295,6 +299,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_drag_source_set (treeview, GDK_BUTTON1_MASK, target_list, G_N_ELEMENTS (target_list), GDK_ACTION_COPY);
   g_signal_connect (G_OBJECT (treeview), "drag-begin", G_CALLBACK (xfce_appfinder_window_drag_begin), window);
   g_signal_connect (G_OBJECT (treeview), "drag-data-get", G_CALLBACK (xfce_appfinder_window_drag_data_get), window);
+  g_signal_connect (G_OBJECT (treeview), "key-press-event", G_CALLBACK (xfce_appfinder_window_treeview_key_press_event), window);
   gtk_container_add (GTK_CONTAINER (scroll), treeview);
   gtk_widget_show (treeview);
   g_object_unref (G_OBJECT (filter_model));
@@ -625,6 +630,33 @@ xfce_appfinder_window_drag_data_get (GtkWidget           *widget,
       gtk_selection_data_set_uris (data, uris);
       g_free (uris[0]);
     }
+}
+
+
+
+static gboolean
+xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
+                                                GdkEventKey         *event,
+                                                XfceAppfinderWindow *window)
+{
+  if (widget == window->treeview)
+    {
+      if (event->keyval == GDK_Left)
+        {
+          gtk_widget_grab_focus (window->sidepane);
+          return TRUE;
+        }
+    }
+  else if (widget == window->sidepane)
+    {
+      if (event->keyval == GDK_Right)
+        {
+          gtk_widget_grab_focus (window->treeview);
+          return TRUE;
+        }
+    }
+
+  return FALSE;
 }
 
 
