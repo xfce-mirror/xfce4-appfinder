@@ -518,7 +518,7 @@ xfce_appfinder_window_entry_changed (XfceAppfinderWindow *window)
     g_source_remove (window->idle_entry_changed_id);
 
   window->idle_entry_changed_id =
-      g_idle_add_full (G_PRIORITY_LOW, xfce_appfinder_window_entry_changed_idle,
+      g_idle_add_full (G_PRIORITY_DEFAULT, xfce_appfinder_window_entry_changed_idle,
                        window, xfce_appfinder_window_entry_changed_idle_destroyed);
 }
 
