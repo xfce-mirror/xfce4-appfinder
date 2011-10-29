@@ -71,10 +71,19 @@ static gboolean           xfce_appfinder_model_iter_parent           (GtkTreeMod
 static void               xfce_appfinder_model_menu_changed          (GarconMenu               *menu,
                                                                       XfceAppfinderModel       *model);
 static gpointer           xfce_appfinder_model_collect_thread        (gpointer                  user_data);
-static void               xfce_appfinder_model_item_free             (gpointer                  data,
-                                                                      XfceAppfinderModel       *model);
 static void               xfce_appfinder_model_item_changed          (GarconMenuItem           *menu_item,
                                                                       XfceAppfinderModel       *model);
+static void               xfce_appfinder_model_item_free             (gpointer                  data,
+                                                                      XfceAppfinderModel       *model);
+static void               xfce_appfinder_model_history_changed       (GFileMonitor             *monitor,
+                                                                      GFile                    *file,
+                                                                      GFile                    *other_file,
+                                                                      GFileMonitorEvent         event_type,
+                                                                      XfceAppfinderModel       *model);
+static void               xfce_appfinder_model_history_monitor_stop  (XfceAppfinderModel       *model);
+static void               xfce_appfinder_model_history_monitor       (XfceAppfinderModel       *model,
+                                                                      const gchar              *path);
+
 
 
 struct _XfceAppfinderModelClass
@@ -103,6 +112,10 @@ struct _XfceAppfinderModel
   GSList              *collect_categories;
   GThread             *collect_thread;
   GCancellable        *collect_cancelled;
+
+  GFileMonitor        *history_monitor;
+  GFile               *history_file;
+  guint64              history_mtime;
 };
 
 typedef struct
@@ -214,6 +227,9 @@ xfce_appfinder_model_finalize (GObject *object)
   if (G_UNLIKELY (model->collect_idle_id != 0))
     g_source_remove (model->collect_idle_id);
   g_slist_free (model->collect_categories);
+
+  /* stop history file monitoring */
+  xfce_appfinder_model_history_monitor_stop (model);
 
   g_signal_handlers_disconnect_by_func (G_OBJECT (model->menu),
       G_CALLBACK (xfce_appfinder_model_menu_changed), model);
@@ -789,6 +805,239 @@ xfce_appfinder_model_item_free (gpointer            data,
 
 
 
+static void
+xfce_appfinder_model_history_remove_items (XfceAppfinderModel *model)
+{
+  ModelItem   *item;
+  GSList      *li, *lnext;
+  gint         idx;
+  GtkTreePath *path;
+
+  /* no need to remove the items if the stamp is already zero */
+  if (model->history_mtime == 0)
+    return;
+
+  APPFINDER_DEBUG ("clear history items");
+
+  for (li = model->items, idx = 0; li != NULL; li = lnext, idx++)
+    {
+      lnext = li->next;
+      item = li->data;
+      if (item->item != NULL)
+        continue;
+
+      model->items = g_slist_delete_link (model->items, li);
+
+      path = gtk_tree_path_new_from_indices (idx--, -1);
+      gtk_tree_model_row_deleted (GTK_TREE_MODEL (model), path);
+      gtk_tree_path_free (path);
+
+      xfce_appfinder_model_item_free (item, model);
+    }
+
+  /* unset stamp */
+  model->history_mtime = 0;
+}
+
+
+
+static guint64
+xfce_appfinder_model_history_get_mtime (GFile *file)
+{
+  GFileInfo *info;
+  guint64    mtime = 0;
+
+  if (G_LIKELY (file != NULL))
+    {
+      info = g_file_query_info (file, G_FILE_ATTRIBUTE_TIME_MODIFIED,
+                                G_FILE_QUERY_INFO_NONE, NULL, NULL);
+      if (G_LIKELY (info != NULL))
+        {
+          mtime = g_file_info_get_attribute_uint64 (info, G_FILE_ATTRIBUTE_TIME_MODIFIED);
+          g_object_unref (G_OBJECT (info));
+        }
+    }
+
+  /* never return 1, because we use that for an empty history */
+  return MAX (mtime, 1);
+}
+
+
+static void
+xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
+                                     const gchar        *command)
+{
+  ModelItem    *item;
+  GtkTreeIter   iter;
+  GtkTreePath  *path;
+  GSList       *lp;
+  guint         idx;
+
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
+  appfinder_return_if_fail (IS_STRING (command));
+
+  /* add new command */
+  item = g_slice_new0 (ModelItem);
+  item->command = g_strdup (command);
+  item->icon_small = g_object_ref (G_OBJECT (model->command_icon_small));
+  item->icon_large = g_object_ref (G_OBJECT (model->command_icon_large));
+  model->items = g_slist_insert_sorted (model->items, item, xfce_appfinder_model_item_compare);
+
+  /* find the item and the position */
+  for (lp = model->items, idx = 0; lp != NULL; lp = lp->next, idx++)
+    if (lp->data == item)
+      break;
+  g_assert (lp != NULL);
+
+  APPFINDER_DEBUG ("insert %s in the model", command);
+
+  /* emit the insert-row signal */
+  path = gtk_tree_path_new_from_indices (idx, -1);
+  ITER_INIT (iter, model->stamp, lp);
+  gtk_tree_model_row_inserted (GTK_TREE_MODEL (model), path, &iter);
+  gtk_tree_path_free (path);
+
+  g_hash_table_insert (model->items_hash, item->command, item);
+}
+
+
+
+static void
+xfce_appfinder_model_history_changed (GFileMonitor       *monitor,
+                                      GFile              *file,
+                                      GFile              *other_file,
+                                      GFileMonitorEvent   event_type,
+                                      XfceAppfinderModel *model)
+{
+  guint64      mtime;
+  gchar       *path;
+  GError      *error = NULL;
+  gchar       *command;
+  gchar       *contents;
+  gchar       *end;
+  GMappedFile *history;
+
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
+  appfinder_return_if_fail (model->history_monitor == monitor);
+  appfinder_return_if_fail (G_IS_FILE_MONITOR (monitor));
+  appfinder_return_if_fail (G_IS_FILE (model->history_file));
+
+  switch (event_type)
+    {
+    case G_FILE_MONITOR_EVENT_DELETED:
+      xfce_appfinder_model_history_remove_items (model);
+      break;
+
+    case G_FILE_MONITOR_EVENT_CREATED:
+      mtime = xfce_appfinder_model_history_get_mtime (model->history_file);
+      if (mtime > model->history_mtime)
+        {
+          /* read the new file and update the commands */
+          path = g_file_get_path (file);
+          history = g_mapped_file_new (path, FALSE, &error);
+          if (G_LIKELY (history != NULL))
+            {
+              contents = g_mapped_file_get_contents (history);
+              if (G_LIKELY (contents != NULL))
+                {
+                  /* walk the file */
+                  for (;;)
+                    {
+                      end = strchr (contents, '\n');
+                      if (G_UNLIKELY (end == NULL))
+                        break;
+
+                      if (end != contents)
+                        {
+                          /* look for new commands */
+                          command = g_strndup (contents, end - contents);
+                          if (g_hash_table_lookup (model->items_hash, command) == NULL)
+                            xfce_appfinder_model_history_insert (model, command);
+                          g_free (command);
+                        }
+                      contents = end + 1;
+                    }
+                }
+
+              g_mapped_file_free (history);
+            }
+          else
+            {
+              g_warning ("Failed to open history file: %s", error->message);
+              g_clear_error (&error);
+            }
+
+          model->history_mtime = mtime;
+        }
+      break;
+
+    default:
+      break;
+    }
+}
+
+
+
+static void
+xfce_appfinder_model_history_monitor_stop (XfceAppfinderModel *model)
+{
+  if (model->history_monitor != NULL)
+    {
+      g_signal_handlers_disconnect_by_func (model->history_monitor,
+          G_CALLBACK (xfce_appfinder_model_history_changed), model);
+
+      g_object_unref (G_OBJECT (model->history_monitor));
+      model->history_monitor = NULL;
+    }
+
+  if (model->history_file != NULL)
+    {
+      g_object_unref (G_OBJECT (model->history_file));
+      model->history_file = NULL;
+    }
+}
+
+
+
+static void
+xfce_appfinder_model_history_monitor (XfceAppfinderModel *model,
+                                      const gchar        *path)
+{
+  GFile  *file;
+  GError *error = NULL;
+
+  file = g_file_new_for_path (path);
+
+  if (model->history_file == NULL
+      || model->history_monitor == NULL
+      || !g_file_equal (file, model->history_file))
+    {
+      xfce_appfinder_model_history_monitor_stop (model);
+
+      /* monitor the file for changes */
+      model->history_monitor = g_file_monitor_file (file, G_FILE_MONITOR_NONE, model->collect_cancelled, &error);
+      if (model->history_monitor != NULL)
+        {
+          APPFINDER_DEBUG ("monitor history file %s", path);
+
+          model->history_file = g_object_ref (G_OBJECT (file));
+          g_signal_connect (G_OBJECT (model->history_monitor), "changed",
+              G_CALLBACK (xfce_appfinder_model_history_changed), model);
+        }
+      else
+        {
+          g_warning ("Failed to setup a monitor for %s: %s", path, error->message);
+          g_error_free (error);
+        }
+    }
+
+  model->history_mtime = xfce_appfinder_model_history_get_mtime (file);
+
+  g_object_unref (G_OBJECT (file));
+}
+
+
+
 static gint
 xfce_appfinder_model_category_compare (gconstpointer a,
                                        gconstpointer b)
@@ -837,8 +1086,8 @@ static void
 xfce_appfinder_model_collect_history (XfceAppfinderModel *model,
                                       GMappedFile        *history)
 {
-  gchar     *contents, *end;
-  gsize      len;
+  gchar     *contents;
+  gchar     *end;
   ModelItem *item;
 
   contents = g_mapped_file_get_contents (history);
@@ -851,17 +1100,16 @@ xfce_appfinder_model_collect_history (XfceAppfinderModel *model,
       if (G_UNLIKELY (end == NULL))
         break;
 
-      len = end - contents;
-      if (len > 0)
+      if (end != contents)
         {
           item = g_slice_new0 (ModelItem);
-          item->command = g_strndup (contents, len);
+          item->command = g_strndup (contents, end - contents);
           item->icon_small = g_object_ref (G_OBJECT (model->command_icon_small));
           item->icon_large = g_object_ref (G_OBJECT (model->command_icon_large));
           model->collect_items = g_slist_prepend (model->collect_items, item);
         }
 
-      contents += len + 1;
+      contents = end + 1;
     }
 }
 
@@ -1180,8 +1428,13 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
       else
         {
           g_warning ("Failed to open history file: %s", error->message);
-          g_error_free (error);
+          g_clear_error (&error);
         }
+
+      /* start monitoring and update mtime */
+      xfce_appfinder_model_history_monitor (model, filename);
+
+      g_free (filename);
     }
 
   if (model->collect_items != NULL
@@ -1440,11 +1693,12 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
                                    const gchar         *command,
                                    GError             **error)
 {
-  GSList    *li;
-  GString   *contents;
-  gboolean   succeed = FALSE;
-  gchar     *filename;
-  ModelItem *item;
+  GSList       *li;
+  GString      *contents;
+  gboolean      succeed = FALSE;
+  gchar        *filename;
+  ModelItem    *item;
+  static gsize  old_len = 0;
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
 
@@ -1452,11 +1706,14 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
       || g_hash_table_lookup (model->items_hash, command) != NULL)
     return TRUE;
 
-  contents = g_string_new (NULL);
+  /* add command to the model */
+  xfce_appfinder_model_history_insert (model, command);
 
+  /* add to the hashtable */
   APPFINDER_DEBUG ("saving history");
 
   /* store all the custom commands */
+  contents = g_string_sized_new (old_len + strlen (command) + 1);
   for (li = model->items; li != NULL; li = li->next)
     {
       item = li->data;
@@ -1468,24 +1725,22 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
       g_string_append_c (contents, '\n');
     }
 
-  /* add the new command */
-  g_string_append (contents, command);
-  g_string_append_c (contents, '\n');
-
-  if (contents->len > 0)
-    {
-      filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, HISTORY_PATH, TRUE);
-      if (G_LIKELY (filename != NULL))
-        succeed = g_file_set_contents (filename, contents->str, contents->len, error);
-      else
-        g_set_error_literal (error, 0, 0, "Unable to create history cache file");
-      g_free (filename);
-    }
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, HISTORY_PATH, TRUE);
+  if (G_LIKELY (filename != NULL))
+    succeed = g_file_set_contents (filename, contents->str, contents->len, error);
   else
+    g_set_error_literal (error, 0, 0, "Unable to create history cache file");
+
+  if (succeed)
     {
-      succeed = TRUE;
+      /* possible restart monitoring and update mtime */
+      xfce_appfinder_model_history_monitor (model, filename);
     }
 
+  /* optimization for next run */
+  old_len = contents->allocated_len;
+
+  g_free (filename);
   g_string_free (contents, TRUE);
 
   return succeed;
@@ -1584,31 +1839,14 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
 
 
 void
-xfce_appfinder_model_commands_clear (XfceAppfinderModel *model)
+xfce_appfinder_model_history_clear (XfceAppfinderModel *model)
 {
-  ModelItem   *item;
-  GSList      *li, *lnext;
-  gint         idx;
-  GtkTreePath *path;
-  gchar       *filename;
+  gchar *filename;
 
   appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
 
-  for (li = model->items, idx = 0; li != NULL; li = lnext, idx++)
-    {
-      lnext = li->next;
-      item = li->data;
-      if (item->item != NULL)
-        continue;
-
-      model->items = g_slist_delete_link (model->items, li);
-
-      path = gtk_tree_path_new_from_indices (idx--, -1);
-      gtk_tree_model_row_deleted (GTK_TREE_MODEL (model), path);
-      gtk_tree_path_free (path);
-
-      xfce_appfinder_model_item_free (item, model);
-    }
+  /* remove items from model */
+  xfce_appfinder_model_history_remove_items (model);
 
   /* remove the history file */
   filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, HISTORY_PATH, FALSE);

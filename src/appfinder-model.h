@@ -85,7 +85,7 @@ void                 xfce_appfinder_model_icon_theme_changed   (XfceAppfinderMod
 
 GarconMenuDirectory *xfce_appfinder_model_get_command_category (void);
 
-void                 xfce_appfinder_model_commands_clear       (XfceAppfinderModel        *model);
+void                 xfce_appfinder_model_history_clear       (XfceAppfinderModel        *model);
 
 void                 xfce_appfinder_model_category_free        (CategoryItem              *category);
 
