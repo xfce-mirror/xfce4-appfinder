@@ -68,7 +68,7 @@ struct _XfceAppfinderPreferences
 
   GtkTreeSelection *selection;
 
-  gulong            bindings[3];
+  gulong            bindings[4];
   gulong            property_watch_id;
 };
 
@@ -376,7 +376,7 @@ xfce_appfinder_preferences_action_populate (XfceAppfinderPreferences *preference
   const GValue *value;
   gint          unique_id;
   gchar         prop[32];
-  gchar        *pattern, *command;
+  gchar        *pattern;
   guint         i;
   gint          restore_id = -1;
   GtkTreeIter   iter;
@@ -400,9 +400,6 @@ xfce_appfinder_preferences_action_populate (XfceAppfinderPreferences *preference
         g_snprintf (prop, sizeof (prop), "/actions/action-%d/pattern", unique_id);
         pattern = xfconf_channel_get_string (preferences->channel, prop, NULL);
 
-        g_snprintf (prop, sizeof (prop), "/actions/action-%d/command", unique_id);
-        command = xfconf_channel_get_string (preferences->channel, prop, NULL);
-
         gtk_list_store_insert_with_values (GTK_LIST_STORE (store), &iter, i,
                                            COLUMN_UNIQUE_ID, unique_id,
                                            COLUMN_PATTERN, pattern,
@@ -412,7 +409,6 @@ xfce_appfinder_preferences_action_populate (XfceAppfinderPreferences *preference
           gtk_tree_selection_select_iter (preferences->selection, &iter);
 
         g_free (pattern);
-        g_free (command);
       }
 
       xfconf_array_free (array);
@@ -445,7 +441,8 @@ xfce_appfinder_preferences_selection_changed (GtkTreeSelection         *selectio
   {
      { "type", "active", G_TYPE_INT },
      { "pattern", "text", G_TYPE_STRING },
-     { "command", "text", G_TYPE_STRING }
+     { "command", "text", G_TYPE_STRING },
+     { "save", "active", G_TYPE_BOOLEAN }
   };
 
   appfinder_return_if_fail (GTK_IS_TREE_SELECTION (selection));
@@ -478,6 +475,10 @@ xfce_appfinder_preferences_selection_changed (GtkTreeSelection         *selectio
         gtk_entry_set_text (GTK_ENTRY (object), "");
       else if (GTK_IS_COMBO_BOX (object))
         gtk_combo_box_set_active (GTK_COMBO_BOX (object), 0);
+      else if (GTK_IS_TOGGLE_BUTTON (object))
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (object), FALSE);
+      else
+        appfinder_assert_not_reached ();
 
       if (unique_id > -1)
         {

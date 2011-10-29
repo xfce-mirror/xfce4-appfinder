@@ -803,6 +803,7 @@ static gboolean
 xfce_appfinder_window_execute_command (const gchar          *text,
                                        GdkScreen            *screen,
                                        XfceAppfinderWindow  *window,
+                                       gboolean             *save_cmd,
                                        GError              **error)
 {
   gboolean  succeed = FALSE;
@@ -819,7 +820,7 @@ xfce_appfinder_window_execute_command (const gchar          *text,
     window->actions = xfce_appfinder_actions_get ();
 
   /* try to match a custom action */
-  action_cmd = xfce_appfinder_actions_execute (window->actions, text, error);
+  action_cmd = xfce_appfinder_actions_execute (window->actions, text, save_cmd, error);
   if (*error != NULL)
     return FALSE;
   else if (action_cmd != NULL)
@@ -855,6 +856,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window)
   const gchar      *text;
   gchar            *cmd = NULL;
   gboolean          regular_command = FALSE;
+  gboolean          save_cmd;
 
   if (!gtk_widget_get_sensitive (window->button_launch))
     return;
@@ -871,7 +873,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window)
           if (!result && regular_command)
             {
               gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
-              result = xfce_appfinder_window_execute_command (cmd, screen, window, &error);
+              result = xfce_appfinder_window_execute_command (cmd, screen, window, NULL, &error);
               g_free (cmd);
             }
         }
@@ -879,8 +881,15 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window)
   else
     {
       text = gtk_entry_get_text (GTK_ENTRY (window->entry));
-      if (xfce_appfinder_window_execute_command (text, screen, window, &error))
-        result = xfce_appfinder_model_save_command (window->model, text, &error);
+      save_cmd = TRUE;
+
+      if (xfce_appfinder_window_execute_command (text, screen, window, &save_cmd, &error))
+        {
+          if (save_cmd)
+            result = xfce_appfinder_model_save_command (window->model, text, &error);
+          else
+            result = TRUE;
+        }
     }
 
   gtk_entry_set_icon_from_stock (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY,

@@ -77,6 +77,7 @@ struct _XfceAppfinderAction
   gint                 unique_id;
   gchar               *pattern;
   gchar               *command;
+  guint                save : 1;
 
   GRegex              *regex;
 };
@@ -155,18 +156,22 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
     { XFCE_APPFINDER_ACTION_TYPE_REGEX, 0,
       "^(file|http|https):\\/\\/(.*)$",
       "exo-open \\0",
+      FALSE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "!",
       "exo-open --launch TerminalEmulator %s",
+      FALSE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "!w",
       "exo-open --launch WebBrowser http://en.wikipedia.org/wiki/%s",
+      FALSE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "#",
       "exo-open --launch TerminalEmulator man %s",
+      FALSE,
       NULL }
   };
 
@@ -179,6 +184,7 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
       action->unique_id = i + 1;
       action->pattern = g_strdup (defaults[i].pattern);
       action->command = g_strdup (defaults[i].command);
+      action->save = defaults[i].save;
 
       actions->actions = g_slist_prepend (actions->actions, action);
     }
@@ -210,6 +216,7 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
   gchar                prop[32];
   gint                 type;
   gchar               *pattern, *command;
+  gboolean             save;
   const GValue        *value;
   guint                i;
   gint                 unique_id;
@@ -266,11 +273,15 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
               g_snprintf (prop, sizeof (prop), "/actions/action-%d/command", unique_id);
               command = xfconf_channel_get_string (actions->channel, prop, NULL);
 
+              g_snprintf (prop, sizeof (prop), "/actions/action-%d/save", unique_id);
+              save = xfconf_channel_get_bool (actions->channel, prop, FALSE);
+
               action = g_slice_new0 (XfceAppfinderAction);
               action->type = type;
               action->unique_id = unique_id;
               action->pattern = pattern;
               action->command = command;
+              action->save = save;
 
               actions->actions = g_slist_prepend (actions->actions, action);
             }
@@ -348,6 +359,9 @@ xfce_appfinder_actions_save (XfceAppfinderActions *actions,
 
           g_snprintf (prop, sizeof (prop), "/actions/action-%d/command", action->unique_id);
           xfconf_channel_set_string (actions->channel, prop, action->command);
+
+          g_snprintf (prop, sizeof (prop), "/actions/action-%d/save", action->unique_id);
+          xfconf_channel_set_bool (actions->channel, prop, action->save);
         }
     }
 
@@ -416,6 +430,11 @@ xfce_appfinder_actions_changed (XfconfChannel        *channel,
                 {
                   g_free (action->command);
                   action->command = g_value_dup_string (value);
+                }
+              else if (strcmp (field, "save") == 0
+                       && G_VALUE_HOLDS_BOOLEAN (value))
+                {
+                  action->save = g_value_get_boolean (value);
                 }
 
               break;
@@ -523,6 +542,7 @@ xfce_appfinder_actions_get_unique_id (XfceAppfinderActions *actions)
 gchar *
 xfce_appfinder_actions_execute (XfceAppfinderActions  *actions,
                                 const gchar           *text,
+                                gboolean              *save_cmd,
                                 GError               **error)
 {
   GSList              *li;
@@ -536,7 +556,7 @@ xfce_appfinder_actions_execute (XfceAppfinderActions  *actions,
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_ACTIONS (actions), NULL);
   appfinder_return_val_if_fail (text != NULL, NULL);
 
-  for (li = actions->actions; !found && li != NULL; li = li->next)
+  for (li = actions->actions; li != NULL; li = li->next)
     {
       action = li->data;
 
@@ -586,6 +606,13 @@ xfce_appfinder_actions_execute (XfceAppfinderActions  *actions,
           if (match_info != NULL)
             g_match_info_free (match_info);
 
+          break;
+        }
+
+      if (found)
+        {
+          if (save_cmd != NULL)
+            *save_cmd = action->save;
           break;
         }
     }

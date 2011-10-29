@@ -229,9 +229,9 @@
                             <property name="can_focus">True</property>
                             <property name="model">actions-store</property>
                             <property name="headers_clickable">False</property>
+                            <property name="rules_hint">True</property>
                             <property name="enable_search">False</property>
                             <property name="search_column">0</property>
-                            <property name="rules_hint">True</property>
                             <child>
                               <object class="GtkTreeViewColumn" id="treeviewcolumn1">
                                 <property name="title" translatable="yes">Pattern</property>
@@ -326,7 +326,7 @@
                   <object class="GtkTable" id="table1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="n_rows">3</property>
+                    <property name="n_rows">4</property>
                     <property name="n_columns">2</property>
                     <property name="column_spacing">12</property>
                     <property name="row_spacing">6</property>
@@ -334,11 +334,11 @@
                       <object class="GtkEntry" id="command">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \0 and \&lt;num&gt;.</property>
                         <property name="invisible_char">•</property>
                         <property name="invisible_char_set">True</property>
                         <property name="primary_icon_activatable">False</property>
                         <property name="secondary_icon_activatable">False</property>
-                        <property name="tooltip_text" translatable="yes">If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \0 and \&lt;num&gt;.</property>
                         <property name="primary_icon_sensitive">True</property>
                         <property name="secondary_icon_sensitive">True</property>
                       </object>
@@ -433,6 +433,26 @@
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="right_attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <object class="GtkCheckButton" id="save">
+                        <property name="label" translatable="yes">_Save match in command history</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">False</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="draw_indicator">True</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">3</property>
+                        <property name="bottom_attach">4</property>
                       </packing>
                     </child>
                   </object>

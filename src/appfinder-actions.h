@@ -43,6 +43,7 @@ gint                        xfce_appfinder_actions_get_unique_id (XfceAppfinderA
 
 gchar                      *xfce_appfinder_actions_execute       (XfceAppfinderActions  *actions,
                                                                   const gchar           *text,
+                                                                  gboolean              *save_cmd,
                                                                   GError               **error);
 
 G_END_DECLS
