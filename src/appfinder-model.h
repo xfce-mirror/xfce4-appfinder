@@ -65,6 +65,10 @@ gboolean             xfce_appfinder_model_get_visible          (XfceAppfinderMod
                                                                 const GarconMenuDirectory *category,
                                                                 const gchar               *string);
 
+gboolean             xfce_appfinder_model_get_visible_command  (XfceAppfinderModel        *model,
+                                                                const GtkTreeIter         *iter,
+                                                                const gchar               *string);
+
 gboolean             xfce_appfinder_model_execute              (XfceAppfinderModel        *model,
                                                                 const GtkTreeIter         *iter,
                                                                 GdkScreen                 *screen,
@@ -85,7 +89,7 @@ void                 xfce_appfinder_model_icon_theme_changed   (XfceAppfinderMod
 
 GarconMenuDirectory *xfce_appfinder_model_get_command_category (void);
 
-void                 xfce_appfinder_model_history_clear       (XfceAppfinderModel        *model);
+void                 xfce_appfinder_model_history_clear        (XfceAppfinderModel        *model);
 
 void                 xfce_appfinder_model_category_free        (CategoryItem              *category);
 

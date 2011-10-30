@@ -1537,6 +1537,34 @@ xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
 
 
 gboolean
+xfce_appfinder_model_get_visible_command (XfceAppfinderModel *model,
+                                          const GtkTreeIter  *iter,
+                                          const gchar        *string)
+{
+  ModelItem *item;
+
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
+  appfinder_return_val_if_fail (iter->stamp == model->stamp, FALSE);
+
+  item = ITER_GET_DATA (iter);
+
+  if (item->item != NULL)
+    {
+      appfinder_return_val_if_fail (GARCON_IS_MENU_ITEM (item->item), FALSE);
+
+      if (item->not_visible)
+        return FALSE;
+    }
+
+  if (item->command != NULL && string != NULL)
+    return strncmp (item->command, string, strlen (string)) == 0;
+
+  return FALSE;
+}
+
+
+
+gboolean
 xfce_appfinder_model_execute (XfceAppfinderModel  *model,
                               const GtkTreeIter   *iter,
                               GdkScreen           *screen,
