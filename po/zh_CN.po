@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-27 10:06+0000\n"
+"POT-Creation-Date: 2011-10-30 23:07+0000\n"
 "PO-Revision-Date: 2010-11-23 23:14+0800\n"
 "Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -25,27 +25,27 @@ msgstr ""
 msgid "All Applications"
 msgstr "所有应用程序"
 
-#: ../src/appfinder-model.c:422
+#: ../src/appfinder-model.c:438
 msgid "Name"
 msgstr "名称"
 
-#: ../src/appfinder-model.c:423
+#: ../src/appfinder-model.c:439
 msgid "Command"
 msgstr "命令"
 
-#: ../src/appfinder-model.c:424
+#: ../src/appfinder-model.c:440
 msgid "Categories"
 msgstr "类别"
 
-#: ../src/appfinder-model.c:425
+#: ../src/appfinder-model.c:441
 msgid "Filename"
 msgstr "文件名"
 
-#: ../src/appfinder-model.c:1317
+#: ../src/appfinder-model.c:1598
 msgid "Application has no command"
 msgstr "应用程序没有命令"
 
-#: ../src/appfinder-model.c:1634
+#: ../src/appfinder-model.c:1900
 msgid "Commands History"
 msgstr "命令历史"
 
@@ -70,13 +70,13 @@ msgstr "将永久删除自定义的动作"
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "您确定要删除范式 “%s” 吗？"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
+#: ../src/appfinder-window.c:190 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "应用程序查找器"
 
-#: ../src/appfinder-window.c:224
+#: ../src/appfinder-window.c:231
 msgid "Toggle view mode"
 msgstr "切换视图模式"
 
@@ -162,8 +162,8 @@ msgid ""
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
 msgstr ""
-"如果 prefix 设置了类型，会在型后用此字符串替换 %s、用完整的条目文本"
-"替换 %S。对于正则表达您可以使用 \\0 和 \\<num>。"
+"如果 prefix 设置了类型，会在型后用此字符串替换 %s、用完整的条目文本替换 %S。"
+"对于正则表达您可以使用 \\0 和 \\<num>。"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
@@ -194,6 +194,10 @@ msgid "_General"
 msgstr "一般(_G)"
 
 #: ../src/appfinder-preferences.glade.h:19
+msgid "_Save match in command history"
+msgstr "在命令历史中保存配对的(_S)"
+
+#: ../src/appfinder-preferences.glade.h:20
 msgid "_Type:"
 msgstr "类型(_T)："
 
