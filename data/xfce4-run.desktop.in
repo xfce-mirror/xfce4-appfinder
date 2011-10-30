@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Exec=xfce4-appfinder -c
+Exec=xfce4-appfinder --collapsed
 Icon=gtk-execute
 StartupNotify=true
 Terminal=false
