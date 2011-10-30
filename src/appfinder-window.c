@@ -588,9 +588,9 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
 {
   gboolean expand, is_expanded;
 
-  if (event->keyval == GDK_KEY_Up || event->keyval == GDK_KEY_Down)
+  if (event->keyval == GDK_Up || event->keyval == GDK_Down)
     {
-      expand = (event->keyval == GDK_KEY_Down);
+      expand = (event->keyval == GDK_Down);
       is_expanded = gtk_widget_get_visible (window->paned);
       if (is_expanded != expand)
         {
