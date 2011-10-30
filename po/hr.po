@@ -59,7 +59,7 @@ msgstr "Jeste li sigurni da želite očistiti povijest naredbi?"
 
 #: ../src/appfinder-preferences.c:287
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "Prilagođena akcija biti će trajno izbrisana."
 
 #: ../src/appfinder-preferences.c:288
 #, c-format
@@ -90,7 +90,7 @@ msgstr "Zamijenite postojeći servis"
 
 #: ../src/main.c:73
 msgid "Quit all instances"
-msgstr ""
+msgstr "Isključi sve instance"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
@@ -121,7 +121,7 @@ msgstr "Prijavite probleme u <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
-msgstr ""
+msgstr "Dodaj novu prilagođenu akciju."
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
@@ -145,7 +145,7 @@ msgstr "Na_redba:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Custom _Actions"
-msgstr ""
+msgstr "Prilagođene _Akcije"
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "History"
@@ -169,7 +169,7 @@ msgstr "Uzorak"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Prefix"
-msgstr ""
+msgstr "Prefiks"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Regular Expression"
@@ -177,11 +177,11 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Zapamti posljednju _izabranu kategoriju"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Uklonite trenutno odabranu akciju."
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "_General"
