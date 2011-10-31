@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-27 16:12+0000\n"
+"POT-Creation-Date: 2011-10-31 17:07+0000\n"
 "PO-Revision-Date: 2009-01-26 11:48+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
@@ -22,27 +22,27 @@ msgstr ""
 msgid "All Applications"
 msgstr "Всі програми"
 
-#: ../src/appfinder-model.c:422
+#: ../src/appfinder-model.c:438
 msgid "Name"
 msgstr "Назва"
 
-#: ../src/appfinder-model.c:423
+#: ../src/appfinder-model.c:439
 msgid "Command"
 msgstr "Команда"
 
-#: ../src/appfinder-model.c:424
+#: ../src/appfinder-model.c:440
 msgid "Categories"
 msgstr "Категорії"
 
-#: ../src/appfinder-model.c:425
+#: ../src/appfinder-model.c:441
 msgid "Filename"
 msgstr "Назва файлу"
 
-#: ../src/appfinder-model.c:1317
+#: ../src/appfinder-model.c:1598
 msgid "Application has no command"
 msgstr "Програми без команди"
 
-#: ../src/appfinder-model.c:1634
+#: ../src/appfinder-model.c:1900
 msgid "Commands History"
 msgstr "Історія команд"
 
@@ -67,13 +67,13 @@ msgstr "Дію користувача буде вилучено безповор
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Ви дійсно бажаєте вилучити шаблон \"%s\"?"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
+#: ../src/appfinder-window.c:190 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Пошук встановлених програм"
 
-#: ../src/appfinder-window.c:224
+#: ../src/appfinder-window.c:231
 msgid "Toggle view mode"
 msgstr "Переключити режим перегляду"
 
@@ -154,8 +154,13 @@ msgstr "Історія"
 
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
-msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
-msgstr "Якщо встановлено тип префікса,%s буде замінено на рядок за зразком, %S з повним текстом. Для регулярних виразів можна використовувати \\0 і \\ <num>."
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr ""
+"Якщо встановлено тип префікса,%s буде замінено на рядок за зразком, %S з "
+"повним текстом. Для регулярних виразів можна використовувати \\0 і \\ <num>."
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
@@ -186,6 +191,10 @@ msgid "_General"
 msgstr "_Загальне"
 
 #: ../src/appfinder-preferences.glade.h:19
+msgid "_Save match in command history"
+msgstr "_Зберегти співпадіння в історії команд"
+
+#: ../src/appfinder-preferences.glade.h:20
 msgid "_Type:"
 msgstr "_Тип:"
 
