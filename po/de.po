@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-19 16:31+0000\n"
+"POT-Creation-Date: 2011-11-03 23:07+0000\n"
 "PO-Revision-Date: 2009-01-02 13:33+0100\n"
 "Last-Translator: Jannis Pohlmann <jannis@xfce.org>\n"
 "Language-Team: German <de@li.org>\n"
@@ -24,68 +24,65 @@ msgstr ""
 msgid "All Applications"
 msgstr "Alle Anwendungen"
 
-#: ../src/appfinder-model.c:422
+#: ../src/appfinder-model.c:438
 msgid "Name"
 msgstr "Name"
 
-#: ../src/appfinder-model.c:423
+#: ../src/appfinder-model.c:439
 msgid "Command"
 msgstr "Befehl"
 
-#: ../src/appfinder-model.c:424
+#: ../src/appfinder-model.c:440
 msgid "Categories"
 msgstr "Kategorien"
 
-#: ../src/appfinder-model.c:425
+#: ../src/appfinder-model.c:441
 msgid "Filename"
 msgstr "Dateiname"
 
-#: ../src/appfinder-model.c:1317
+#: ../src/appfinder-model.c:1598
 msgid "Application has no command"
 msgstr "Anwendung hat keinen Befehl"
 
-#: ../src/appfinder-model.c:1634
+#: ../src/appfinder-model.c:1900
 msgid "Commands History"
 msgstr "Befehlsverlauf"
 
 #: ../src/appfinder-preferences.c:175
-#, fuzzy
 msgid "C_lear"
-msgstr "Leeren"
+msgstr "_Leeren"
 
 #: ../src/appfinder-preferences.c:176
 msgid "This will permanently clear the custom command history."
-msgstr ""
+msgstr "Dies wird den Verlauf der benutzerdefinierten Befehle dauerhaft löschen."
 
 #: ../src/appfinder-preferences.c:177
-#, fuzzy
 msgid "Are you sure you want to clear the command history?"
-msgstr "Sind sie sicher, dass sie den Befehlsverlauf löschen möchten?"
+msgstr "Soll der Befehlsverlauf wirklich gelöscht werden?"
 
 #: ../src/appfinder-preferences.c:287
-#, fuzzy
 msgid "The custom action will be deleted permanently."
 msgstr "Die benutzerdefinierte Aktion wird dauerhaft gelöscht."
 
 #: ../src/appfinder-preferences.c:288
-#, c-format, fuzzy
+#, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "Möchten sie das Muster \"%s\" dauerhaft löschen?"
+msgstr "Soll das Muster »%s« wirklich gelöscht werden?"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
+#: ../src/appfinder-window.c:190 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Anwendungsfinder"
 
-#: ../src/appfinder-window.c:224
+#: ../src/appfinder-window.c:231
 msgid "Toggle view mode"
 msgstr "Ansichtsmodus umstellen"
 
 #: ../src/main.c:70
 #, fuzzy
 msgid "Start in collapsed mode"
-msgstr "Im erweiterten Modus starten"
+msgstr "Im einfachen Modus starten"
 
 #: ../src/main.c:71
 msgid "Print version information and exit"
@@ -129,87 +126,80 @@ msgid "Please report bugs to <%s>."
 msgstr "Bitte melden Sie Probleme an <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
-#, fuzzy
 msgid "Add a new custom action."
 msgstr "Eine neue benutzerdefinierte Aktion hinzufügen."
 
 #: ../src/appfinder-preferences.glade.h:2
-#, fuzzy
 msgid "Always c_enter the window"
-msgstr "Fenster immer zentrieren"
+msgstr "Fenster immer z_entrieren"
 
 #: ../src/appfinder-preferences.glade.h:4
-#, fuzzy
 msgid "Behaviour"
 msgstr "Verhalten"
 
 #: ../src/appfinder-preferences.glade.h:5
-#, fuzzy
 msgid "C_lear Custom Command History"
-msgstr "Befehlsverlauf"
+msgstr "Befehlsverlauf _löschen"
 
 #: ../src/appfinder-preferences.glade.h:6
-#, fuzzy
 msgid "Center the window on startup."
 msgstr "Fenster beim Starten zentrieren."
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Co_mmand:"
-msgstr "Befehl"
+msgstr "_Befehl:"
 
 #: ../src/appfinder-preferences.glade.h:8
-#, fuzzy
 msgid "Custom _Actions"
-msgstr "Benutzerdefinierte Aktionen"
+msgstr "Benutzerdefinierte _Aktionen"
 
 #: ../src/appfinder-preferences.glade.h:9
-#, fuzzy
 msgid "History"
-msgstr "Befehlsverlauf"
+msgstr "Verlauf"
 
 #: ../src/appfinder-preferences.glade.h:11
-#, no-c-format
+#, no-c-format, fuzzy
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Wenn der Typ »Präfix« gewählt ist, wird »%s« mit der Zeichenkette nach dem Muster ersetzt, »%S« mit dem kompletten Text des Eintrags. Für reguläre Ausdrücke kann \\0 and \\<num> verwendet werden."
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
-msgstr ""
+msgstr "Muste_r:"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Pattern"
-msgstr ""
+msgstr "Muster"
 
 #: ../src/appfinder-preferences.glade.h:14
-#, fuzzy
 msgid "Prefix"
 msgstr "Präfix"
 
 #: ../src/appfinder-preferences.glade.h:15
-#, fuzzy
 msgid "Regular Expression"
 msgstr "Regulärer Ausdruck"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Zuletzt gewählte Kategorie _speichern"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Die ausgewählte Aktion löschen."
 
 #: ../src/appfinder-preferences.glade.h:18
-#, fuzzy
 msgid "_General"
-msgstr "Allgemein"
+msgstr "All_gemein"
 
 #: ../src/appfinder-preferences.glade.h:19
+msgid "_Save match in command history"
+msgstr "Übereinstimmungen im Befehlsverlauf _speichern"
+
+#: ../src/appfinder-preferences.glade.h:20
 msgid "_Type:"
-msgstr ""
+msgstr "_Typ:"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
