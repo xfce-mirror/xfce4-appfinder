@@ -427,9 +427,21 @@ static gboolean
 xfce_appfinder_window_key_press_event (GtkWidget   *widget,
                                        GdkEventKey *event)
 {
+  GtkWidget *entry;
+
   if (event->keyval == GDK_Escape)
     {
       gtk_widget_destroy (widget);
+      return TRUE;
+    }
+  else if (event->keyval == GDK_l
+           && (event->state && GDK_CONTROL_MASK) != 0)
+    {
+      entry = XFCE_APPFINDER_WINDOW (widget)->entry;
+
+      gtk_widget_grab_focus (entry);
+      gtk_editable_select_region (GTK_EDITABLE (entry), 0, -1);
+
       return TRUE;
     }
 
