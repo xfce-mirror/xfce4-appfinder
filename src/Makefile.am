@@ -53,6 +53,11 @@ xfce4_appfinder_LDFLAGS = \
 	-no-undefined \
 	$(PLATFORM_LDFLAGS)
 
+# install symlink to 'xfrun4'
+install-exec-hook:
+	$(mkinstalldirs) $(DESTDIR)$(bindir)
+	-( cd $(DESTDIR)$(bindir) ; test -x xfrun4 || ln -sf xfce4-appfinder xfrun4 )
+
 if MAINTAINER_MODE
 
 appfinder-preferences-ui.h: $(srcdir)/appfinder-preferences.glade Makefile

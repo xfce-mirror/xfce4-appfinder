@@ -436,6 +436,10 @@ main (gint argc, gchar **argv)
   if (opt_quit)
     return appfinder_dbus_quit ();
 
+  /* if started with the xfrun4 executable, start in collapsed mode */
+  if (!opt_collapsed && strcmp (*argv, "xfrun4") == 0)
+    opt_collapsed = TRUE;
+
   /* become the serivce owner or ask the current
    * owner to spawn an instance */
   if (G_LIKELY (!opt_disable_server))
