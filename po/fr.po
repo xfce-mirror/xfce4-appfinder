@@ -159,7 +159,7 @@ msgid ""
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
 msgstr ""
-"Si le type est positionné sur préfixe, %s sera remplacer dans la chaîne par "
+"Si le type est positionné sur préfixe, %s sera remplacé dans la chaîne par "
 "le texte après le motif, %S avec le texte complet. Pour les expressions "
 "régulières vous pouvez utiliser \\0 et \\<num>."
 
@@ -193,7 +193,7 @@ msgstr "_Général"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_Save match in command history"
-msgstr "Sauvegarder les doublons dans l'historique des commandes"
+msgstr "Mémo_riser les saisies dans l'historique des commandes"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "_Type:"
