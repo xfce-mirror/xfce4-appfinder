@@ -2,52 +2,52 @@
 # Copyright (C) 2003-2011 Xfce Development Team 2011.
 # This file is distributed under the same license as the PACKAGE package.
 # Praveen Illa <mail2ipn@gmail.com>, 2011.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-21 20:43+0200\n"
+"POT-Creation-Date: 2011-11-19 09:04+0000\n"
 "PO-Revision-Date: 2011-04-21 18:21+0530\n"
 "Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
 "Language-Team: Telugu <telugulinux@gmail.com>\n"
-"Language: te\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: te\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/appfinder-category-model.c:108
 msgid "All Applications"
 msgstr "అన్ని అనువర్తనాలు"
 
-#: ../src/appfinder-model.c:422
+#: ../src/appfinder-model.c:438
 msgid "Name"
 msgstr "పేరు"
 
-#: ../src/appfinder-model.c:423
+#: ../src/appfinder-model.c:439
 msgid "Command"
 msgstr "ఆదేశం"
 
-#: ../src/appfinder-model.c:424
+#: ../src/appfinder-model.c:440
 msgid "Categories"
 msgstr "విభాగాలు"
 
-#: ../src/appfinder-model.c:425
+#: ../src/appfinder-model.c:441
 msgid "Filename"
 msgstr "ఫైల్ పేరు"
 
-#: ../src/appfinder-model.c:1317
+#: ../src/appfinder-model.c:1598
 msgid "Application has no command"
 msgstr "అనువర్తనముకి ఏ ఆదేశము లేదు"
 
-#: ../src/appfinder-model.c:1634
+#: ../src/appfinder-model.c:1900
 msgid "Commands History"
 msgstr "ఆదేశాల చరిత్ర"
 
 #: ../src/appfinder-preferences.c:175
 msgid "C_lear"
-msgstr ""
+msgstr "శుభ్రపరుచు (_l)"
 
 #: ../src/appfinder-preferences.c:176
 msgid "This will permanently clear the custom command history."
@@ -66,13 +66,13 @@ msgstr ""
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr ""
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
+#: ../src/appfinder-window.c:190 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "అనువర్తన శోధకం"
 
-#: ../src/appfinder-window.c:224
+#: ../src/appfinder-window.c:231
 msgid "Toggle view mode"
 msgstr ""
 
@@ -90,7 +90,7 @@ msgstr "ఉన్నటువంటి సేవను పునఃస్థా�
 
 #: ../src/main.c:73
 msgid "Quit all instances"
-msgstr ""
+msgstr "అన్ని ప్రక్రియలను త్యజించు"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
@@ -129,30 +129,27 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Behaviour"
-msgstr ""
+msgstr "ప్రవర్తన"
 
 #: ../src/appfinder-preferences.glade.h:5
-#, fuzzy
 msgid "C_lear Custom Command History"
-msgstr "ఆదేశాల చరిత్ర"
+msgstr "అనురూపిత ఆదేశాల చరిత్ర (_l)"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "Center the window on startup."
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Co_mmand:"
-msgstr "ఆదేశం"
+msgstr "ఆదేశం (_m):"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Custom _Actions"
-msgstr ""
+msgstr "అనురూపిత చర్యలు (_A)"
 
 #: ../src/appfinder-preferences.glade.h:9
-#, fuzzy
 msgid "History"
-msgstr "ఆదేశాల చరిత్ర"
+msgstr "చరిత్ర"
 
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
@@ -188,11 +185,15 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "_General"
-msgstr ""
+msgstr "సాధారణం (_G)"
 
 #: ../src/appfinder-preferences.glade.h:19
+msgid "_Save match in command history"
+msgstr "ఆదేశ చరిత్ర పోలికను భద్రపరుచు (_S)"
+
+#: ../src/appfinder-preferences.glade.h:20
 msgid "_Type:"
-msgstr ""
+msgstr "రకం (_T):"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
