@@ -435,7 +435,7 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
       return TRUE;
     }
   else if (event->keyval == GDK_l
-           && (event->state && GDK_CONTROL_MASK) != 0)
+           && (event->state & GDK_CONTROL_MASK) != 0)
     {
       entry = XFCE_APPFINDER_WINDOW (widget)->entry;
 
