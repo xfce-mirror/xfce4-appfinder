@@ -1,22 +1,21 @@
-# ----zh_CN.po (xfce4-appfinder 4.3.90.2)  ----
 # Simplified Chinese translations for xfce4-appfinder package.
-# Copyright (C) 2002-2005 Eduard Roccatello.
-# This file is distributed under the same license as the xfce4-appfinder package.
+# This file is distributed under the same license as 
+# the xfce4-appfinder package.
 # Yongtao Yang <yongtao.yang@telia.com>, 2004.
 # Huang Huan <unicon221@gmail.com>, 2006.
 # Jick Nan <jick.nan@gmail.com>, 2006.
 # Hunt Xu <huntxu@live.cn>, 2008, 2010.
 # Chris K. Zhang <plutino@gmail.com>, 2009.
 # Chipong Luo <chipong_l@yahoo.com>, 2011.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-30 23:07+0000\n"
+"POT-Creation-Date: 2011-11-25 16:32+0000\n"
 "PO-Revision-Date: 2010-11-23 23:14+0800\n"
 "Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,7 +54,7 @@ msgstr "清除(_L)"
 
 #: ../src/appfinder-preferences.c:176
 msgid "This will permanently clear the custom command history."
-msgstr "这会永久清除自定义的命令历史。"
+msgstr "这会永远清除自定义的命令历史。"
 
 #: ../src/appfinder-preferences.c:177
 msgid "Are you sure you want to clear the command history?"
@@ -63,12 +62,12 @@ msgstr "您确定要清除命令历史吗？"
 
 #: ../src/appfinder-preferences.c:287
 msgid "The custom action will be deleted permanently."
-msgstr "将永久删除自定义的动作"
+msgstr "将永远删除自定义的动作"
 
 #: ../src/appfinder-preferences.c:288
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "您确定要删除范式 “%s” 吗？"
+msgstr "您确定要删除类型 “%s” 吗？"
 
 #: ../src/appfinder-window.c:190 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
@@ -82,11 +81,11 @@ msgstr "切换视图模式"
 
 #: ../src/main.c:70
 msgid "Start in collapsed mode"
-msgstr "以崩溃模式启动"
+msgstr "以安全模式启动"
 
 #: ../src/main.c:71
 msgid "Print version information and exit"
-msgstr "打印版本信息并退出"
+msgstr "列印版本信息并退出"
 
 #: ../src/main.c:72
 msgid "Replace the existing service"
@@ -98,7 +97,7 @@ msgstr "退出所有实例"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
-msgstr "不要尝试使用或成为 D-Bus 服务"
+msgstr "不要试图使用或成为 D-Bus 服务"
 
 #. close all windows and quit
 #: ../src/main.c:159
@@ -112,11 +111,11 @@ msgstr "未能守护此进程"
 #: ../src/main.c:418
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "输入 “%s --help” 获取使用说明。"
+msgstr "输入 “%s --help” 获取用法。"
 
 #: ../src/main.c:429
 msgid "The Xfce development team. All rights reserved."
-msgstr "Xfce 开发团队。版权所有。"
+msgstr "Xfce 开发团队。保留所以权利。"
 
 #: ../src/main.c:430
 #, c-format
@@ -162,16 +161,17 @@ msgid ""
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
 msgstr ""
-"如果 prefix 设置了类型，会在型后用此字符串替换 %s、用完整的条目文本替换 %S。"
-"对于正则表达您可以使用 \\0 和 \\<num>。"
+"如果类型设置为 prefix，会用此类型后的字符串替换 "
+"%s、用完整的条目文本替换 %S。对于正则表达您可以"
+"使用 \\0 和 \\<num>。"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
-msgstr "型(_R)"
+msgstr "类型(_R)："
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Pattern"
-msgstr "型"
+msgstr "类型"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Prefix"
@@ -195,7 +195,7 @@ msgstr "一般(_G)"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_Save match in command history"
-msgstr "在命令历史中保存配对的(_S)"
+msgstr "在命令历史中保存匹配的(_S)"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "_Type:"
