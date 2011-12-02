@@ -161,9 +161,9 @@ msgid ""
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
 msgstr ""
-"如果类型设置为 prefix，会用此类型后的字符串替换 "
-"%s、用完整的条目文本替换 %S。对于正则表达您可以"
-"使用 \\0 和 \\<num>。"
+"如果类型设置为前缀，会用此类型后的字符串替换 %s、"
+"用完整的条目文本替换 %S。对于正则表达您可以使用 "
+"\\0 和 \\<num>。"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
