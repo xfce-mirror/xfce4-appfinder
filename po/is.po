@@ -1,0 +1,210 @@
+# translation of xfce4-appfinder.master.untitled.po to Icelandic
+# Copyright (C) 2011 Free Software Foundation
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sveinn í Felli <sveinki@nett.is>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-appfinder.master.untitled\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-12-03 02:12+0000\n"
+"PO-Revision-Date: 2011-12-03 08:23+0000\n"
+"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
+"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../src/appfinder-category-model.c:108
+msgid "All Applications"
+msgstr "Öll forrit"
+
+#: ../src/appfinder-model.c:438
+msgid "Name"
+msgstr "Heiti"
+
+#: ../src/appfinder-model.c:439
+msgid "Command"
+msgstr "Skipun"
+
+#: ../src/appfinder-model.c:440
+msgid "Categories"
+msgstr "Flokkar"
+
+#: ../src/appfinder-model.c:441
+msgid "Filename"
+msgstr "Skráarheiti"
+
+#: ../src/appfinder-model.c:1598
+msgid "Application has no command"
+msgstr ""
+
+#: ../src/appfinder-model.c:1900
+msgid "Commands History"
+msgstr "Skipanaferill"
+
+#: ../src/appfinder-preferences.c:175
+msgid "C_lear"
+msgstr "Hr_einsa"
+
+#: ../src/appfinder-preferences.c:176
+msgid "This will permanently clear the custom command history."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:177
+msgid "Are you sure you want to clear the command history?"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:287
+msgid "The custom action will be deleted permanently."
+msgstr ""
+
+#: ../src/appfinder-preferences.c:288
+#, c-format
+msgid "Are you sure you want to delete pattern \"%s\"?"
+msgstr ""
+
+#: ../src/appfinder-window.c:190 ../src/main.c:344
+#: ../src/appfinder-preferences.glade.h:3
+#: ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr "Forritaleit"
+
+#: ../src/appfinder-window.c:231
+msgid "Toggle view mode"
+msgstr "Víxla skoðunarham"
+
+#: ../src/main.c:70
+msgid "Start in collapsed mode"
+msgstr ""
+
+#: ../src/main.c:71
+msgid "Print version information and exit"
+msgstr "Prenta upplýsingar um útgáfu og hætta"
+
+#: ../src/main.c:72
+msgid "Replace the existing service"
+msgstr ""
+
+#: ../src/main.c:73
+msgid "Quit all instances"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Do not try to use or become a D-Bus service"
+msgstr ""
+
+#. close all windows and quit
+#: ../src/main.c:159
+msgid "Forced to quit"
+msgstr ""
+
+#: ../src/main.c:346
+msgid "Unable to daemonize the process"
+msgstr ""
+
+#: ../src/main.c:418
+#, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr ""
+
+#: ../src/main.c:429
+msgid "The Xfce development team. All rights reserved."
+msgstr "Xfce þróunarteymið. Allur réttur áskilinn."
+
+#: ../src/main.c:430
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr "Tilkynntu villur til <%s>."
+
+#: ../src/appfinder-preferences.glade.h:1
+msgid "Add a new custom action."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:2
+msgid "Always c_enter the window"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Behaviour"
+msgstr "Hegðun"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "C_lear Custom Command History"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Center the window on startup."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Co_mmand:"
+msgstr "Skipu_n:"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Custom _Actions"
+msgstr "Sérsniðnar _aðgerðir"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "History"
+msgstr "Ferill"
+
+#: ../src/appfinder-preferences.glade.h:11
+#, no-c-format
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:12
+msgid "Patte_rn:"
+msgstr "M_ynstur:"
+
+#: ../src/appfinder-preferences.glade.h:13
+msgid "Pattern"
+msgstr "Mynstur"
+
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Prefix"
+msgstr "Forskeyti"
+
+#: ../src/appfinder-preferences.glade.h:15
+msgid "Regular Expression"
+msgstr "Regluleg segð"
+
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Remember last _selected category"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "Remove the currently selected action."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "_General"
+msgstr "_Almennt"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "_Save match in command history"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "_Type:"
+msgstr "_Gerð:"
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find and launch applications installed on your system"
+msgstr "Finna og ræsa forrit sem uppsett eru á kerfinu"
+
+#: ../data/xfce4-run.desktop.in.h:1
+msgid "Run Program..."
+msgstr "Keyra forrit..."
+
+#: ../data/xfce4-run.desktop.in.h:2
+msgid "Run a program"
+msgstr "Keyra forrit"
+
