@@ -82,7 +82,7 @@ msgstr "切换视图模式"
 
 #: ../src/main.c:70
 msgid "Start in collapsed mode"
-msgstr "以安全模式启动"
+msgstr "以简洁模式启动"
 
 #: ../src/main.c:71
 msgid "Print version information and exit"
