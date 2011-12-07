@@ -1,14 +1,14 @@
-# translation of xfce4-appfinder.master.untitled.po to Icelandic
+# translation of is.po to Icelandic
 # Copyright (C) 2011 Free Software Foundation
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Sveinn í Felli <sveinki@nett.is>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder.master.untitled\n"
+"Project-Id-Version: is\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-12-06 04:24+0000\n"
-"PO-Revision-Date: 2011-12-03 08:23+0000\n"
+"PO-Revision-Date: 2011-12-07 06:50+0000\n"
 "Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -52,7 +52,7 @@ msgstr "Hr_einsa"
 
 #: ../src/appfinder-preferences.c:176
 msgid "This will permanently clear the custom command history."
-msgstr ""
+msgstr "Þetta hreinsar algerlega feril sérsniðinna skipana."
 
 #: ../src/appfinder-preferences.c:177
 msgid "Are you sure you want to clear the command history?"
@@ -60,7 +60,7 @@ msgstr "Ertu viss um að þú viljir feril skipana?"
 
 #: ../src/appfinder-preferences.c:287
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "Sérsniðnu aðgerðinni verður eytt endanlega."
 
 #: ../src/appfinder-preferences.c:288
 #, c-format
@@ -79,7 +79,7 @@ msgstr "Víxla skoðunarham"
 
 #: ../src/main.c:70
 msgid "Start in collapsed mode"
-msgstr ""
+msgstr "Byrja í þjöppuðum ham"
 
 #: ../src/main.c:71
 msgid "Print version information and exit"
@@ -87,7 +87,7 @@ msgstr "Prenta upplýsingar um útgáfu og hætta"
 
 #: ../src/main.c:72
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Skipta út upprunalegri þjónustu"
 
 #: ../src/main.c:73
 msgid "Quit all instances"
@@ -95,7 +95,7 @@ msgstr "Slökkva á öllum tilvikum"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "Ekki reyna að nota eða vera D-BUS þjónusta"
 
 #. close all windows and quit
 #: ../src/main.c:159
@@ -104,7 +104,7 @@ msgstr "Þvinga til að slökkva"
 
 #: ../src/main.c:346
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "Tekst ekki að gera ferlið að bakgrunnsþjónustu (púka)"
 
 #: ../src/main.c:418
 #, c-format
@@ -126,7 +126,7 @@ msgstr "Bæta við nýrri aðgerð."
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
-msgstr "Alltaf miðja gluggan"
+msgstr "Alltaf _miðja gluggann"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Behaviour"
@@ -134,7 +134,7 @@ msgstr "Hegðun"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "C_lear Custom Command History"
-msgstr ""
+msgstr "_Hreinsa feril sérsniðinna skipana"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "Center the window on startup."
@@ -158,7 +158,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Ef gerðin er sett sama sem forskeyti, verður %s skipt út með strengnum á eftir mynstrinu, %S með öllum textanum sem var settur inn. Fyrir reglulegar segðir geturðu notað \\0 og \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
@@ -178,11 +178,11 @@ msgstr "Regluleg segð"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Muna _flokkinn sem síðast var valinn"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Fjarlægja valda aðgerð."
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "_General"
@@ -190,7 +190,7 @@ msgstr "_Almennt"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_Save match in command history"
-msgstr ""
+msgstr "Vi_sta samsvörun í skipanaferil"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "_Type:"
@@ -207,3 +207,4 @@ msgstr "Keyra forrit..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Keyra forrit"
+
