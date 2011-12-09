@@ -1,5 +1,6 @@
-# Simplified Chinese translations for xfce4-appfinder package.
-# This file is distributed under the same license as 
+# Simplified Chinese translations for
+# the xfce4-appfinder package.
+# This file is distributed under the same license as
 # the xfce4-appfinder package.
 # Yongtao Yang <yongtao.yang@telia.com>, 2004.
 # Huang Huan <unicon221@gmail.com>, 2006.
