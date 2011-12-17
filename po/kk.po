@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2009.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: trunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-10-06 04:06+0000\n"
-"PO-Revision-Date: 2010-02-20 00:40+0600\n"
+"PO-Revision-Date: 2011-12-17 22:46+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -51,22 +51,23 @@ msgstr "Та_зарту"
 
 #: ../src/appfinder-preferences.c:176
 msgid "This will permanently clear the custom command history."
-msgstr ""
+msgstr "Бұл пайдаланушы командалар тарихын өшіреді."
 
 #: ../src/appfinder-preferences.c:177
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "Командалар тарихын өшіруді шынымен қалайсыз ба?"
 
 #: ../src/appfinder-preferences.c:287
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "Пайдаланушы әрекеті өшіріледі."
 
 #: ../src/appfinder-preferences.c:288
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgstr "\"%s\" шаблонын өшіруді шынымен қалайсыз ба?"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
+#: ../src/appfinder-window.c:183
+#: ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -77,9 +78,8 @@ msgid "Toggle view mode"
 msgstr "Қарау түрін ауыстыру"
 
 #: ../src/main.c:70
-#, fuzzy
 msgid "Start in collapsed mode"
-msgstr "Кеңейтілген түрде іске қосылу"
+msgstr "Қайырылған түрде іске қосылу"
 
 #: ../src/main.c:71
 msgid "Print version information and exit"
@@ -100,11 +100,11 @@ msgstr "D-Bus қызметін көру не болуды болдырмау"
 #. close all windows and quit
 #: ../src/main.c:159
 msgid "Forced to quit"
-msgstr ""
+msgstr "Шығуға мәжбүрленген"
 
 #: ../src/main.c:346
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "Үрдісті фонға жіберу сәтсіз"
 
 #: ../src/main.c:418
 #, c-format
@@ -126,19 +126,19 @@ msgstr "Жаңа таңдауыңызша әрекетті қосу."
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "Тере_зені әрқашан ортаға туралау"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Behaviour"
-msgstr ""
+msgstr "Мінез-құлығы"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "C_lear Custom Command History"
-msgstr ""
+msgstr "Пайдаланушы командалар тар_ихын өшіру"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Іске қосылғанда, терезені ортаға қарай туралау."
 
 #: ../src/appfinder-preferences.glade.h:7
 msgid "Co_mmand:"
@@ -146,7 +146,7 @@ msgstr "Ко_манда:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Custom _Actions"
-msgstr ""
+msgstr "Пайдалану_шы әрекеттері"
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "History"
@@ -154,43 +154,40 @@ msgstr "Тарих"
 
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
-msgid ""
-"If the type is set to prefix, %s will be replaced with the string after the "
-"pattern, %S with the complete entry text. For regular expressions you can "
-"use \\0 and \\<num>."
-msgstr ""
+msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
+msgstr "Егер түрі префикске орнатылса, %s орнына шаблоннан кейінгі мәтін қойылады, ал %S жазбаның толық мәтіні болады. Тұрақты өрнектер үшін сіз \\0 пен \\<сан> қолдана аласын."
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
-msgstr ""
+msgstr "Шаб_лон:"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Pattern"
-msgstr ""
+msgstr "Шаблон"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Prefix"
-msgstr ""
+msgstr "Префикс"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Regular Expression"
-msgstr ""
+msgstr "Тұрақты өрнек"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Соңғы таңдалған са_натты есте сақтау"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Ағымдағы таңдалған әрекетті өшіру."
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "_General"
-msgstr ""
+msgstr "Жал_пы"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_Type:"
-msgstr ""
+msgstr "_Түрі:"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -198,11 +195,11 @@ msgstr "Жүйеңізде орнатылған қолданбаларды та�
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr ""
+msgstr "Бағдарламаны жөнелту..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr ""
+msgstr "Бағдарламаны жөнелту"
 
 #~ msgid "[MENUFILE]"
 #~ msgstr "[МӘЗІРФАЙЛЫ]"
