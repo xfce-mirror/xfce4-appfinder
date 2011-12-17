@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-27 16:12+0000\n"
+"POT-Creation-Date: 2011-12-17 14:54+0000\n"
 "PO-Revision-Date: 2011-04-21 12:13-0300\n"
 "Last-Translator: Sérgio Cipolla <secipolla@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
@@ -22,27 +22,27 @@ msgstr ""
 msgid "All Applications"
 msgstr "Todos os aplicativos"
 
-#: ../src/appfinder-model.c:422
+#: ../src/appfinder-model.c:438
 msgid "Name"
 msgstr "Nome"
 
-#: ../src/appfinder-model.c:423
+#: ../src/appfinder-model.c:439
 msgid "Command"
 msgstr "Comando"
 
-#: ../src/appfinder-model.c:424
+#: ../src/appfinder-model.c:440
 msgid "Categories"
 msgstr "Categorias"
 
-#: ../src/appfinder-model.c:425
+#: ../src/appfinder-model.c:441
 msgid "Filename"
 msgstr "Nome do arquivo"
 
-#: ../src/appfinder-model.c:1317
+#: ../src/appfinder-model.c:1598
 msgid "Application has no command"
 msgstr "O aplicativo não tem comando"
 
-#: ../src/appfinder-model.c:1634
+#: ../src/appfinder-model.c:1900
 msgid "Commands History"
 msgstr "Histórico de comandos"
 
@@ -67,13 +67,13 @@ msgstr "A ação personalizada será excluída permanentemente."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Você tem certeza de que quer excluir o padrão \"%s\"?"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
+#: ../src/appfinder-window.c:190 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Localizador de aplicativos"
 
-#: ../src/appfinder-window.c:224
+#: ../src/appfinder-window.c:231
 msgid "Toggle view mode"
 msgstr "Alternar modo de visão"
 
@@ -154,8 +154,14 @@ msgstr "Histórico"
 
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
-msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
-msgstr "Se o tipo estiver definido como prefixo, %s será substituído com a string após o padrão, %S com o texto digitado por completo. Para expressões regulares, você pode usar \\0 e \\<num>."
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr ""
+"Se o tipo estiver definido como prefixo, %s será substituído com a string "
+"após o padrão, %S com o texto digitado por completo. Para expressões "
+"regulares, você pode usar \\0 e \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
@@ -186,6 +192,10 @@ msgid "_General"
 msgstr "_Geral"
 
 #: ../src/appfinder-preferences.glade.h:19
+msgid "_Save match in command history"
+msgstr "_Salvar correspondente no histórico de comandos"
+
+#: ../src/appfinder-preferences.glade.h:20
 msgid "_Type:"
 msgstr "_Tipo:"
 
