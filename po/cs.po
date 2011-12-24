@@ -2,14 +2,14 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Alois Nespor <Alois.Nespor@seznam.cz>, 2004.
-# Michal Várady <miko.vaji@gmail.com>, 2006-2010.
+# Michal Várady <miko.vaji@gmail.com>, 2006-2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-21 20:43+0200\n"
-"PO-Revision-Date: 2010-12-11 00:52+0100\n"
+"POT-Creation-Date: 2011-12-24 05:30+0000\n"
+"PO-Revision-Date: 2011-12-24 12:07+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "Language: cs\n"
@@ -21,101 +21,98 @@ msgstr ""
 "X-Poedit-Country: CZECH REPUBLIC\n"
 
 #: ../src/appfinder-category-model.c:108
-#, fuzzy
 msgid "All Applications"
-msgstr "Aplikace"
+msgstr "Všechny aplikace"
 
-#: ../src/appfinder-model.c:422
+#: ../src/appfinder-model.c:438
 msgid "Name"
-msgstr ""
+msgstr "Název"
 
-#: ../src/appfinder-model.c:423
+#: ../src/appfinder-model.c:439
 msgid "Command"
-msgstr ""
+msgstr "Příkaz"
 
-#: ../src/appfinder-model.c:424
+#: ../src/appfinder-model.c:440
 msgid "Categories"
 msgstr "Kategorie"
 
-#: ../src/appfinder-model.c:425
-#, fuzzy
+#: ../src/appfinder-model.c:441
 msgid "Filename"
-msgstr "Správce souborů"
+msgstr "Název souboru"
 
-#: ../src/appfinder-model.c:1317
-#, fuzzy
+#: ../src/appfinder-model.c:1598
 msgid "Application has no command"
-msgstr "Vyhledávač aplikací"
+msgstr "Aplikace nemá žádný příkaz"
 
-#: ../src/appfinder-model.c:1634
+#: ../src/appfinder-model.c:1900
 msgid "Commands History"
-msgstr ""
+msgstr "Historie příkazů"
 
 #: ../src/appfinder-preferences.c:175
 msgid "C_lear"
-msgstr ""
+msgstr "_Vymazat"
 
 #: ../src/appfinder-preferences.c:176
 msgid "This will permanently clear the custom command history."
-msgstr ""
+msgstr "Tato akce trvale vymaže historii vlastních příkazů."
 
 #: ../src/appfinder-preferences.c:177
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "Opravdu chcete vymazat historii příkazů?"
 
 #: ../src/appfinder-preferences.c:287
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "Vlastní akce bude trvale smazána."
 
 #: ../src/appfinder-preferences.c:288
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgstr "Opravdu chcete vymazat vzorek \"%s\"?"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
+#: ../src/appfinder-window.c:190
+#: ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Vyhledávač aplikací"
 
-#: ../src/appfinder-window.c:224
+#: ../src/appfinder-window.c:231
 msgid "Toggle view mode"
-msgstr ""
+msgstr "Přepnout režim pohledu"
 
 #: ../src/main.c:70
 msgid "Start in collapsed mode"
-msgstr ""
+msgstr "Spustit ve sbaleném režimu"
 
 #: ../src/main.c:71
-#, fuzzy
 msgid "Print version information and exit"
-msgstr "Informace o verzi"
+msgstr "Zobrazí informace o verzi a ukončí se"
 
 #: ../src/main.c:72
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Nahradit existující službu"
 
 #: ../src/main.c:73
 msgid "Quit all instances"
-msgstr ""
+msgstr "Ukončit všechny instance"
 
 #: ../src/main.c:74
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "Nepokoušet se použít nebo stát se službou sběrnice D-Bus"
 
 #. close all windows and quit
 #: ../src/main.c:159
 msgid "Forced to quit"
-msgstr ""
+msgstr "Vynucené ukončení"
 
 #: ../src/main.c:346
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "Tento proces nelze přepnout do režimu démon"
 
 #: ../src/main.c:418
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Informace o použití získáte příkazem '%s --help'."
+msgstr "Informace o použití získáte příkazem \"%s --help\"."
 
 #: ../src/main.c:429
 msgid "The Xfce development team. All rights reserved."
@@ -128,87 +125,86 @@ msgstr "Prosíme, abyste chyby nahlásili na adresu <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
-msgstr ""
+msgstr "Přidat novou vlastní akci."
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "Vždy vy_středit okno"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Behaviour"
-msgstr ""
+msgstr "Chování"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "C_lear Custom Command History"
-msgstr ""
+msgstr "_Smazat historii vlastních příkazů"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Při startu vystředit okno."
 
 #: ../src/appfinder-preferences.glade.h:7
 msgid "Co_mmand:"
-msgstr ""
+msgstr "_Příkaz:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Custom _Actions"
-msgstr ""
+msgstr "Vlastní _akce"
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "History"
-msgstr ""
+msgstr "Historie"
 
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
-msgid ""
-"If the type is set to prefix, %s will be replaced with the string after the "
-"pattern, %S with the complete entry text. For regular expressions you can "
-"use \\0 and \\<num>."
-msgstr ""
+msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
+msgstr "Pokud je typ nastaven na předponu, %s se nahradí řetězcem po vzorku a %S kompletním vstupním textem. Regulární výrazy použijte pomocí \\0 a \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
-msgstr ""
+msgstr "V_zorek:"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Pattern"
-msgstr ""
+msgstr "Vzorek"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Prefix"
-msgstr ""
+msgstr "Předpona"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Regular Expression"
-msgstr ""
+msgstr "Regulární výraz"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Zapamatovat _si poslední vybranou kategorii"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Smazat aktuálně vybranou akci."
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "_General"
-msgstr ""
+msgstr "_Obecné"
 
 #: ../src/appfinder-preferences.glade.h:19
+msgid "_Save match in command history"
+msgstr "_Uložit shodu v historii příkazů"
+
+#: ../src/appfinder-preferences.glade.h:20
 msgid "_Type:"
-msgstr ""
+msgstr "_Typ:"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Umožňuje najít a spouštět aplikace nainstalované v systému."
 
 #: ../data/xfce4-run.desktop.in.h:1
-#, fuzzy
 msgid "Run Program..."
-msgstr "Spustit program"
+msgstr "Spustit program..."
 
 #: ../data/xfce4-run.desktop.in.h:2
-#, fuzzy
 msgid "Run a program"
 msgstr "Spustit program"
 
