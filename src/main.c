@@ -504,11 +504,13 @@ main (gint argc, gchar **argv)
 
   if (windows != NULL)
     {
+      /* avoid calling appfinder_window_destroyed */
       windows_destroy = windows;
       windows = NULL;
 
-      /* destroy all windows without poking gtk_main_quit */
+      /* destroy all windows */
       g_slist_foreach (windows_destroy, (GFunc) gtk_widget_destroy, NULL);
+      g_slist_free (windows_destroy);
     }
 
   xfconf_shutdown ();
