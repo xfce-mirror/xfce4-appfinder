@@ -492,8 +492,6 @@ main (gint argc, gchar **argv)
 
   gtk_main ();
 
-  xfconf_shutdown ();
-
   /* release the model cache */
   if (model_cache != NULL)
     g_object_unref (G_OBJECT (model_cache));
@@ -512,6 +510,8 @@ main (gint argc, gchar **argv)
       /* destroy all windows without poking gtk_main_quit */
       g_slist_foreach (windows_destroy, (GFunc) gtk_widget_destroy, NULL);
     }
+
+  xfconf_shutdown ();
 
   return EXIT_SUCCESS;
 }
