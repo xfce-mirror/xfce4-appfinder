@@ -521,8 +521,10 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
           item->tooltip = g_markup_printf_escaped ("<b>%s:</b> %s\n"
                                                    "<b>%s:</b> %s\n"
                                                    "<b>%s:</b> %s\n"
+                                                   "<b>%s:</b> %s\n"
                                                    "<b>%s:</b> %s",
                                                    _("Name"), garcon_menu_item_get_name (item->item),
+                                                   _("Comment"), garcon_menu_item_get_comment (item->item),
                                                    _("Command"), garcon_menu_item_get_command (item->item),
                                                    _("Categories"), cat_str,
                                                    _("Filename"), parse_name);
