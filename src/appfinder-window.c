@@ -234,12 +234,19 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   window->entry = entry = gtk_entry_new ();
   gtk_container_add (GTK_CONTAINER (align), entry);
-  g_signal_connect (G_OBJECT (entry), "icon-release", G_CALLBACK (xfce_appfinder_window_entry_icon_released), window);
-  g_signal_connect (G_OBJECT (entry), "realize", G_CALLBACK (xfce_appfinder_window_set_padding), align);
-  g_signal_connect_swapped (G_OBJECT (entry), "changed", G_CALLBACK (xfce_appfinder_window_entry_changed), window);
-  g_signal_connect (G_OBJECT (entry), "activate", G_CALLBACK (xfce_appfinder_window_entry_activate), window);
-  g_signal_connect (G_OBJECT (entry), "key-press-event", G_CALLBACK (xfce_appfinder_window_entry_key_press_event), window);
-  gtk_entry_set_icon_tooltip_text (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_SECONDARY, _("Toggle view mode"));
+  g_signal_connect (G_OBJECT (entry), "icon-release",
+      G_CALLBACK (xfce_appfinder_window_entry_icon_released), window);
+  g_signal_connect (G_OBJECT (entry), "realize",
+      G_CALLBACK (xfce_appfinder_window_set_padding), align);
+  g_signal_connect_swapped (G_OBJECT (entry), "changed",
+      G_CALLBACK (xfce_appfinder_window_entry_changed), window);
+  g_signal_connect (G_OBJECT (entry), "activate",
+      G_CALLBACK (xfce_appfinder_window_entry_activate), window);
+  g_signal_connect (G_OBJECT (entry), "key-press-event",
+      G_CALLBACK (xfce_appfinder_window_entry_key_press_event), window);
+  gtk_entry_set_icon_tooltip_text (GTK_ENTRY (window->entry),
+                                   GTK_ENTRY_ICON_SECONDARY,
+                                   _("Toggle view mode"));
   gtk_widget_show (entry);
 
   window->completion = completion = gtk_entry_completion_new ();
@@ -269,8 +276,10 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   sidepane = window->sidepane = gtk_tree_view_new_with_model (GTK_TREE_MODEL (window->category_model));
   gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (sidepane), FALSE);
   gtk_tree_view_set_enable_search (GTK_TREE_VIEW (sidepane), FALSE);
-  g_signal_connect_swapped (G_OBJECT (sidepane), "start-interactive-search", G_CALLBACK (gtk_widget_grab_focus), entry);
-  g_signal_connect (G_OBJECT (sidepane), "key-press-event", G_CALLBACK (xfce_appfinder_window_treeview_key_press_event), window);
+  g_signal_connect_swapped (G_OBJECT (sidepane), "start-interactive-search",
+      G_CALLBACK (gtk_widget_grab_focus), entry);
+  g_signal_connect (G_OBJECT (sidepane), "key-press-event",
+      G_CALLBACK (xfce_appfinder_window_treeview_key_press_event), window);
   gtk_tree_view_set_row_separator_func (GTK_TREE_VIEW (sidepane),
       xfce_appfinder_category_model_row_separator_func, NULL, NULL);
   gtk_container_add (GTK_CONTAINER (scroll), sidepane);
@@ -286,13 +295,13 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_tree_view_append_column (GTK_TREE_VIEW (sidepane), GTK_TREE_VIEW_COLUMN (column));
 
   renderer = gtk_cell_renderer_pixbuf_new ();
-  gtk_tree_view_column_pack_start (GTK_TREE_VIEW_COLUMN (column), renderer, FALSE);
+  gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (column), renderer, FALSE);
   gtk_tree_view_column_set_attributes (GTK_TREE_VIEW_COLUMN (column), renderer,
                                        "pixbuf", XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_ICON, NULL);
 
   renderer = gtk_cell_renderer_text_new ();
   g_object_set (renderer, "ellipsize", PANGO_ELLIPSIZE_END, NULL);
-  gtk_tree_view_column_pack_start (GTK_TREE_VIEW_COLUMN (column), renderer, TRUE);
+  gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (column), renderer, TRUE);
   gtk_tree_view_column_set_attributes (GTK_TREE_VIEW_COLUMN (column), renderer,
                                        "text", XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_NAME, NULL);
 
@@ -325,12 +334,14 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   button = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
   gtk_container_add (GTK_CONTAINER (bbox), button);
-  g_signal_connect_swapped (G_OBJECT (button), "clicked", G_CALLBACK (gtk_widget_destroy), window);
+  g_signal_connect_swapped (G_OBJECT (button), "clicked",
+      G_CALLBACK (gtk_widget_destroy), window);
   gtk_widget_show (button);
 
   window->button_launch = button = gtk_button_new_with_mnemonic ("La_unch");
   gtk_container_add (GTK_CONTAINER (bbox), button);
-  g_signal_connect_swapped (G_OBJECT (button), "clicked", G_CALLBACK (xfce_appfinder_window_execute), window);
+  g_signal_connect_swapped (G_OBJECT (button), "clicked",
+      G_CALLBACK (xfce_appfinder_window_execute), window);
   gtk_widget_set_sensitive (button, FALSE);
   gtk_widget_show (button);
 
@@ -338,7 +349,8 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_button_set_image (GTK_BUTTON (button), image);
 
   icon_theme = gtk_icon_theme_get_for_screen (gtk_window_get_screen (GTK_WINDOW (window)));
-  g_signal_connect_swapped (G_OBJECT (icon_theme), "changed", G_CALLBACK (xfce_appfinder_window_icon_theme_changed), window);
+  g_signal_connect_swapped (G_OBJECT (icon_theme), "changed",
+      G_CALLBACK (xfce_appfinder_window_icon_theme_changed), window);
 
   /* load categories in the model */
   if (xfce_appfinder_model_get_categories (window->model) != NULL)
