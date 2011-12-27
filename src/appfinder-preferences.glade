@@ -203,7 +203,7 @@
                             <property name="row_spacing">6</property>
                             <child>
                               <object class="GtkCheckButton" id="icon-view">
-                                <property name="label" translatable="yes">Show items in an icon _view</property>
+                                <property name="label" translatable="yes">_View items as icons</property>
                                 <property name="use_action_appearance">False</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
