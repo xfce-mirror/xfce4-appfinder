@@ -23,11 +23,15 @@
 #ifdef HAVE_STRING_H
 #include <string.h>
 #endif
+#ifdef HAVE_ERRNO_H
+#include <errno.h>
+#endif
 
 #include <libxfce4util/libxfce4util.h>
 #include <libxfce4ui/libxfce4ui.h>
 #include <gdk/gdkkeysyms.h>
 #include <xfconf/xfconf.h>
+#include <glib/gstdio.h>
 
 #include <src/appfinder-window.h>
 #include <src/appfinder-model.h>
@@ -49,6 +53,8 @@ static void       xfce_appfinder_window_unmap                         (GtkWidget
 static gboolean   xfce_appfinder_window_key_press_event               (GtkWidget                   *widget,
                                                                        GdkEventKey                 *event);
 static void       xfce_appfinder_window_view                          (XfceAppfinderWindow         *window);
+static gboolean   xfce_appfinder_window_popup_menu                    (GtkWidget                   *view,
+                                                                       XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_set_padding                   (GtkWidget                   *entry,
                                                                        GtkWidget                   *align);
 static gboolean   xfce_appfinder_window_completion_match_func         (GtkEntryCompletion          *completion,
@@ -546,6 +552,51 @@ xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
 
 
 
+static gboolean
+xfce_appfinder_window_view_button_press_event (GtkWidget           *widget,
+                                               GdkEventButton      *event,
+                                               XfceAppfinderWindow *window)
+{
+  gint         x, y;
+  GtkTreePath *path;
+  gboolean     have_selection = FALSE;
+
+  if (event->button == 3
+      && event->type == GDK_BUTTON_PRESS)
+    {
+      if (GTK_IS_TREE_VIEW (widget))
+        {
+          gtk_tree_view_convert_widget_to_bin_window_coords (GTK_TREE_VIEW (widget),
+                                                             event->x, event->y, &x, &y);
+
+          if (gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (widget), x, y, &path, NULL, NULL, NULL))
+            {
+              gtk_tree_view_set_cursor (GTK_TREE_VIEW (widget), path, NULL, FALSE);
+              gtk_tree_path_free (path);
+              have_selection = TRUE;
+            }
+        }
+      else
+        {
+          path = gtk_icon_view_get_path_at_pos (GTK_ICON_VIEW (widget), event->x, event->y);
+          if (path != NULL)
+            {
+              gtk_icon_view_select_path (GTK_ICON_VIEW (widget), path);
+              gtk_icon_view_set_cursor (GTK_ICON_VIEW (widget), path, NULL, FALSE);
+              gtk_tree_path_free (path);
+              have_selection = TRUE;
+            }
+        }
+
+      if (have_selection)
+        return xfce_appfinder_window_popup_menu (widget, window);
+    }
+
+  return FALSE;
+}
+
+
+
 static void
 xfce_appfinder_window_view (XfceAppfinderWindow *window)
 {
@@ -622,6 +673,10 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
       G_CALLBACK (xfce_appfinder_window_drag_begin), window);
   g_signal_connect (G_OBJECT (view), "drag-data-get",
       G_CALLBACK (xfce_appfinder_window_drag_data_get), window);
+  g_signal_connect (G_OBJECT (view), "popup-menu",
+      G_CALLBACK (xfce_appfinder_window_popup_menu), window);
+  g_signal_connect (G_OBJECT (view), "button-press-event",
+      G_CALLBACK (xfce_appfinder_window_view_button_press_event), window);
   gtk_container_add (GTK_CONTAINER (window->viewscroll), view);
   gtk_widget_show (view);
 
@@ -667,6 +722,129 @@ xfce_appfinder_window_view_get_selected (XfceAppfinderWindow  *window,
     }
 
   return have_iter;
+}
+
+
+
+static void
+xfce_appfinder_window_popup_menu_edit (GtkWidget           *mi,
+                                       XfceAppfinderWindow *window)
+{
+  GError      *error = NULL;
+  gchar       *cmd;
+  const gchar *uri;
+
+  uri = g_object_get_data (G_OBJECT (mi), "uri");
+  if (uri == NULL)
+    return;
+
+  cmd = g_strdup_printf ("exo-desktop-item-edit '%s'", uri);
+  if (!g_spawn_command_line_async (cmd, &error))
+    {
+      xfce_dialog_show_error (GTK_WINDOW (window), error, _("Failed to launch desktop item editor"));
+      g_error_free (error);
+    }
+  g_free (cmd);
+}
+
+
+
+static void
+xfce_appfinder_window_popup_menu_revert (GtkWidget           *mi,
+                                         XfceAppfinderWindow *window)
+{
+  const gchar *uri;
+  const gchar *name;
+  GError      *error;
+
+  name = g_object_get_data (G_OBJECT (mi), "name");
+  if (name == NULL)
+    return;
+
+  if (xfce_dialog_confirm (GTK_WINDOW (window), GTK_STOCK_REVERT_TO_SAVED, NULL,
+      _("This will permanently remove the custom desktop file from your home directory."),
+      _("Are you sure you want to revert \"%s\"?"), name))
+    {
+      uri = g_object_get_data (G_OBJECT (mi), "uri");
+      if (uri != NULL)
+        {
+          if (g_unlink (uri + 7) == -1)
+            {
+              error = g_error_new (G_FILE_ERROR, g_file_error_from_errno (errno),
+                                   "%s: %s", uri + 7, g_strerror (errno));
+              xfce_dialog_show_error (GTK_WINDOW (window), error,
+                                      _("Failed to remove desktop file"));
+              g_error_free (error);
+            }
+        }
+    }
+}
+
+
+
+static gboolean
+xfce_appfinder_window_popup_menu (GtkWidget           *view,
+                                  XfceAppfinderWindow *window)
+{
+  GtkWidget    *menu;
+  GtkTreeModel *model;
+  GtkTreeIter   iter;
+  gchar        *title;
+  gchar        *uri;
+  GtkWidget    *mi;
+  gchar        *path;
+
+  if (xfce_appfinder_window_view_get_selected (window, &model, &iter))
+    {
+      gtk_tree_model_get (model, &iter,
+                          XFCE_APPFINDER_MODEL_COLUMN_TITLE, &title,
+                          XFCE_APPFINDER_MODEL_COLUMN_URI, &uri, -1);
+
+      menu = gtk_menu_new ();
+      g_signal_connect (G_OBJECT (menu), "selection-done",
+          G_CALLBACK (gtk_widget_destroy), NULL);
+
+      mi = gtk_menu_item_new_with_label (title);
+      gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
+      gtk_widget_set_sensitive (mi, FALSE);
+      gtk_widget_show (mi);
+
+      mi = gtk_separator_menu_item_new ();
+      gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
+      gtk_widget_show (mi);
+
+      mi = gtk_image_menu_item_new_from_stock (GTK_STOCK_EDIT, NULL);
+      gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
+      g_object_set_data_full (G_OBJECT (mi), "uri", g_strdup (uri), g_free);
+      g_signal_connect (G_OBJECT (mi), "activate",
+          G_CALLBACK (xfce_appfinder_window_popup_menu_edit), window);
+      gtk_widget_show (mi);
+
+      mi = gtk_image_menu_item_new_from_stock (GTK_STOCK_REVERT_TO_SAVED, NULL);
+      gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
+      g_object_set_data_full (G_OBJECT (mi), "uri", g_strdup (uri), g_free);
+      g_object_set_data_full (G_OBJECT (mi), "name", g_strdup (title), g_free);
+      g_signal_connect (G_OBJECT (mi), "activate",
+          G_CALLBACK (xfce_appfinder_window_popup_menu_revert), window);
+      path = xfce_resource_save_location (XFCE_RESOURCE_DATA, "applications/", FALSE);
+      gtk_widget_set_sensitive (mi, g_str_has_prefix (uri, "file://")
+                                && g_str_has_prefix (uri + 7, path));
+      gtk_widget_show (mi);
+      g_free (path);
+
+      g_free (title);
+      g_free (uri);
+
+      gtk_menu_popup (GTK_MENU (menu),
+                      NULL, NULL,
+                      NULL, NULL,
+                      3,
+                      gtk_get_current_event_time ());
+
+      return TRUE;
+    }
+
+  return FALSE;
 }
 
 
