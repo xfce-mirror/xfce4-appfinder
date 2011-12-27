@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2009.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-06 04:06+0000\n"
+"POT-Creation-Date: 2011-12-27 06:42+0000\n"
 "PO-Revision-Date: 2011-12-17 22:46+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
@@ -21,27 +21,27 @@ msgstr ""
 msgid "All Applications"
 msgstr "Барлық қолданбалар"
 
-#: ../src/appfinder-model.c:422
+#: ../src/appfinder-model.c:438
 msgid "Name"
 msgstr "Аты"
 
-#: ../src/appfinder-model.c:423
+#: ../src/appfinder-model.c:439
 msgid "Command"
 msgstr "Команда"
 
-#: ../src/appfinder-model.c:424
+#: ../src/appfinder-model.c:440
 msgid "Categories"
 msgstr "Санаттар"
 
-#: ../src/appfinder-model.c:425
+#: ../src/appfinder-model.c:441
 msgid "Filename"
 msgstr "Файл аты"
 
-#: ../src/appfinder-model.c:1317
+#: ../src/appfinder-model.c:1598
 msgid "Application has no command"
 msgstr "Қолданбада команда жоқ"
 
-#: ../src/appfinder-model.c:1634
+#: ../src/appfinder-model.c:1900
 msgid "Commands History"
 msgstr "Командалар тарихы"
 
@@ -66,14 +66,13 @@ msgstr "Пайдаланушы әрекеті өшіріледі."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "\"%s\" шаблонын өшіруді шынымен қалайсыз ба?"
 
-#: ../src/appfinder-window.c:183
-#: ../src/main.c:344
+#: ../src/appfinder-window.c:190 ../src/main.c:361
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Қолданбаларды табушы"
 
-#: ../src/appfinder-window.c:224
+#: ../src/appfinder-window.c:231
 msgid "Toggle view mode"
 msgstr "Қарау түрін ауыстыру"
 
@@ -102,20 +101,20 @@ msgstr "D-Bus қызметін көру не болуды болдырмау"
 msgid "Forced to quit"
 msgstr "Шығуға мәжбүрленген"
 
-#: ../src/main.c:346
+#: ../src/main.c:363
 msgid "Unable to daemonize the process"
 msgstr "Үрдісті фонға жіберу сәтсіз"
 
-#: ../src/main.c:418
+#: ../src/main.c:437
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Қолдану ақпараты үшін \"%s --help\" енгізіңіз."
 
-#: ../src/main.c:429
+#: ../src/main.c:448
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce өндіру тобы. Барлық құқықтары қорғалған."
 
-#: ../src/main.c:430
+#: ../src/main.c:449
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Ақаулықтар жөнінде хабарласыңыз: <%s>."
@@ -154,8 +153,14 @@ msgstr "Тарих"
 
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
-msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
-msgstr "Егер түрі префикске орнатылса, %s орнына шаблоннан кейінгі мәтін қойылады, ал %S жазбаның толық мәтіні болады. Тұрақты өрнектер үшін сіз \\0 пен \\<сан> қолдана аласын."
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr ""
+"Егер түрі префикске орнатылса, %s орнына шаблоннан кейінгі мәтін қойылады, "
+"ал %S жазбаның толық мәтіні болады. Тұрақты өрнектер үшін сіз \\0 пен "
+"\\<сан> қолдана аласын."
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
@@ -186,6 +191,10 @@ msgid "_General"
 msgstr "Жал_пы"
 
 #: ../src/appfinder-preferences.glade.h:19
+msgid "_Save match in command history"
+msgstr "Сә_йкестікті командалар тарихында сақтау"
+
+#: ../src/appfinder-preferences.glade.h:20
 msgid "_Type:"
 msgstr "_Түрі:"
 
