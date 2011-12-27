@@ -420,22 +420,54 @@ static gboolean
 xfce_appfinder_window_key_press_event (GtkWidget   *widget,
                                        GdkEventKey *event)
 {
-  GtkWidget *entry;
+  XfceAppfinderWindow   *window = XFCE_APPFINDER_WINDOW (widget);
+  GtkWidget             *entry;
+  XfceAppfinderIconSize  icon_size = XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM;
 
   if (event->keyval == GDK_Escape)
     {
       gtk_widget_destroy (widget);
       return TRUE;
     }
-  else if (event->keyval == GDK_l
-           && (event->state & GDK_CONTROL_MASK) != 0)
-    {
-      entry = XFCE_APPFINDER_WINDOW (widget)->entry;
+  else if ((event->state & GDK_CONTROL_MASK) != 0)
+    {g_message ("%d", event->keyval);
+      switch (event->keyval)
+        {
+        case GDK_l:
+          entry = XFCE_APPFINDER_WINDOW (widget)->entry;
 
-      gtk_widget_grab_focus (entry);
-      gtk_editable_select_region (GTK_EDITABLE (entry), 0, -1);
+          gtk_widget_grab_focus (entry);
+          gtk_editable_select_region (GTK_EDITABLE (entry), 0, -1);
 
-      return TRUE;
+          return TRUE;
+
+        case GDK_1:
+        case GDK_2:
+          /* toggle between icon and tree view */
+          xfconf_channel_set_bool (window->channel, "/icon-view",
+                                   event->keyval == GDK_1);
+          return TRUE;
+
+        case GDK_plus:
+        case GDK_minus:
+        case GDK_KP_Add:
+        case GDK_KP_Subtract:
+          g_object_get (G_OBJECT (window->model), "icon-size", &icon_size, NULL);
+          if ((event->keyval == GDK_plus || event->keyval == GDK_KP_Add))
+            {
+              if (icon_size < XFCE_APPFINDER_ICON_SIZE_LARGEST)
+                icon_size++;
+            }
+          else if (icon_size > XFCE_APPFINDER_ICON_SIZE_SMALLEST)
+            {
+              icon_size--;
+            }
+
+        case GDK_0:
+        case GDK_KP_0:
+          g_object_set (G_OBJECT (window->model), "icon-size", icon_size, NULL);
+          return TRUE;
+        }
     }
 
   return  (*GTK_WIDGET_CLASS (xfce_appfinder_window_parent_class)->key_press_event) (widget, event);
