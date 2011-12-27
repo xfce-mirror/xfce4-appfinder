@@ -353,8 +353,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
       G_CALLBACK (xfce_appfinder_window_icon_theme_changed), window);
 
   /* load categories in the model */
-  if (xfce_appfinder_model_get_categories (window->model) != NULL)
-    xfce_appfinder_window_category_set_categories (window);
+  xfce_appfinder_window_category_set_categories (window);
   g_signal_connect_swapped (G_OBJECT (window->model), "categories-changed",
                             G_CALLBACK (xfce_appfinder_window_category_set_categories),
                             window);
@@ -970,6 +969,7 @@ xfce_appfinder_window_category_set_categories (XfceAppfinderWindow *window)
   categories = xfce_appfinder_model_get_categories (window->model);
   if (categories != NULL)
     xfce_appfinder_category_model_set_categories (window->category_model, categories);
+  g_slist_free (categories);
 
   if (xfconf_channel_get_bool (window->channel, "/remember-category", FALSE))
     name = xfconf_channel_get_string (window->channel, "/last/category", NULL);

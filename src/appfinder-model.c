@@ -114,6 +114,7 @@ struct _XfceAppfinderModel
   GarconMenuDirectory   *command_category;
 
   GSList                *categories;
+  guint                  categories_changed_idle_id;
 
   guint                  collect_idle_id;
   GSList                *collect_items;
@@ -305,6 +306,9 @@ xfce_appfinder_model_finalize (GObject *object)
   if (G_UNLIKELY (model->collect_idle_id != 0))
     g_source_remove (model->collect_idle_id);
   g_slist_free (model->collect_categories);
+
+  if (G_UNLIKELY (model->categories_changed_idle_id != 0))
+    g_source_remove (model->categories_changed_idle_id);
 
   /* stop history file monitoring */
   xfce_appfinder_model_history_monitor_stop (model);
@@ -640,6 +644,34 @@ xfce_appfinder_model_iter_parent (GtkTreeModel *tree_model,
 
 
 static gboolean
+xfce_appfinder_model_categories_changed_idle (gpointer data)
+{
+  XfceAppfinderModel *model = XFCE_APPFINDER_MODEL (data);
+
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
+
+  model->categories_changed_idle_id = 0;
+
+  g_signal_emit (G_OBJECT (model), model_signals[CATEGORIES_CHANGED], 0);
+
+  return FALSE;
+}
+
+
+
+static void
+xfce_appfinder_model_categories_changed (XfceAppfinderModel *model)
+{
+  if (model->categories_changed_idle_id == 0)
+    {
+      model->categories_changed_idle_id =
+        g_idle_add_full (G_PRIORITY_HIGH_IDLE, xfce_appfinder_model_categories_changed_idle, model, NULL);
+    }
+}
+
+
+
+static gboolean
 xfce_appfinder_model_collect_idle (gpointer user_data)
 {
   XfceAppfinderModel *model = XFCE_APPFINDER_MODEL (user_data);
@@ -699,7 +731,7 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
       model->categories = model->collect_categories;
       model->collect_categories = NULL;
 
-      g_signal_emit (G_OBJECT (model), model_signals[CATEGORIES_CHANGED], 0);
+      xfce_appfinder_model_categories_changed (model);
 
       g_slist_foreach (tmp, (GFunc) xfce_appfinder_model_category_free, NULL);
       g_slist_free (tmp);
@@ -826,6 +858,7 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
   GtkTreeIter  iter;
   GtkTreePath *path;
   GPtrArray   *categories;
+  gboolean     old_not_visible;
 
   /* lookup the item in the list */
   for (li = model->items, idx = 0; li != NULL; li = li->next, idx++)
@@ -837,6 +870,8 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
           g_object_ref (G_OBJECT (menu_item));
 
           APPFINDER_DEBUG ("update item %s", garcon_menu_item_get_desktop_id (menu_item));
+
+          old_not_visible = item->not_visible;
 
           xfce_appfinder_model_item_free (item, model);
 
@@ -856,6 +891,10 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
           ITER_INIT (iter, model->stamp, li);
           gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
           gtk_tree_path_free (path);
+
+          /* update the categories if the visibility changed */
+          if (old_not_visible != item->not_visible)
+            xfce_appfinder_model_categories_changed (model);
 
           break;
         }
@@ -1155,7 +1194,7 @@ xfce_appfinder_model_category_free (CategoryItem *item)
 
 
 
-static gboolean
+static inline gboolean
 xfce_appfinder_model_ptr_array_find (GPtrArray     *array,
                                      gconstpointer  data)
 {
@@ -1461,7 +1500,7 @@ xfce_appfinder_model_menu_changed (GarconMenu         *menu,
           model->categories = collect_categories;
           collect_categories = tmp;
 
-          g_signal_emit (G_OBJECT (model), model_signals[CATEGORIES_CHANGED], 0);
+          xfce_appfinder_model_categories_changed (model);
 
           break;
         }
@@ -1573,8 +1612,39 @@ xfce_appfinder_model_get (void)
 GSList *
 xfce_appfinder_model_get_categories (XfceAppfinderModel *model)
 {
+  GSList       *categories = NULL;
+  GSList       *li, *lp;
+  CategoryItem *category;
+  gboolean      visible;
+  ModelItem    *item;
+
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), NULL);
-  return model->categories;
+
+  for (li = model->categories; li != NULL; li = li->next)
+    {
+      category = li->data;
+      appfinder_assert (GARCON_IS_MENU_DIRECTORY (category->directory));
+      visible = FALSE;
+
+      /* check if the category has a visible item */
+      for (lp = model->items; lp != NULL; lp = lp->next)
+        {
+          item = lp->data;
+          if (!item->not_visible
+              && xfce_appfinder_model_ptr_array_find (item->categories, category->directory))
+            {
+              visible = TRUE;
+              break;
+            }
+        }
+
+      if (!visible)
+        continue;
+
+      categories = g_slist_prepend (categories, category);
+    }
+
+  return g_slist_reverse (categories);
 }
 
 
