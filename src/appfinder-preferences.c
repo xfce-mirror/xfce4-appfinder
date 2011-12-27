@@ -39,6 +39,8 @@
 static void xfce_appfinder_preferences_response          (GtkWidget                *window,
                                                           gint                      response_id,
                                                           XfceAppfinderPreferences *preferences);
+static void xfce_appfinder_preferences_beside_sensitive  (GtkWidget                *show_icons,
+                                                          GtkWidget                *text_beside_icon);
 static void xfce_appfinder_preferences_clear_history     (XfceAppfinderPreferences *preferences);
 static void xfce_appfinder_preferences_action_add        (XfceAppfinderPreferences *preferences);
 static void xfce_appfinder_preferences_action_remove     (GtkWidget                *button,
@@ -96,6 +98,7 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
 {
   GObject     *object;
   GtkTreePath *path;
+  GObject     *icons;
 
   preferences->channel = xfconf_channel_get ("xfce4-appfinder");
 
@@ -114,6 +117,28 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
 
   object = gtk_builder_get_object (GTK_BUILDER (preferences), "always-center");
   xfconf_g_property_bind (preferences->channel, "/always-center", G_TYPE_BOOLEAN,
+                          G_OBJECT (object), "active");
+
+  icons = gtk_builder_get_object (GTK_BUILDER (preferences), "icon-view");
+  xfconf_g_property_bind (preferences->channel, "/icon-view", G_TYPE_BOOLEAN,
+                          G_OBJECT (icons), "active");
+
+  object = gtk_builder_get_object (GTK_BUILDER (preferences), "text-beside-icons");
+  xfconf_g_property_bind (preferences->channel, "/text-beside-icons", G_TYPE_BOOLEAN,
+                          G_OBJECT (object), "active");
+
+  g_signal_connect (G_OBJECT (icons), "toggled",
+      G_CALLBACK (xfce_appfinder_preferences_beside_sensitive), object);
+  xfce_appfinder_preferences_beside_sensitive (GTK_WIDGET (icons), GTK_WIDGET (object));
+
+  object = gtk_builder_get_object (GTK_BUILDER (preferences), "item-icon-size");
+  gtk_combo_box_set_active (GTK_COMBO_BOX (object), XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM);
+  xfconf_g_property_bind (preferences->channel, "/item-icon-size", G_TYPE_UINT,
+                          G_OBJECT (object), "active");
+
+  object = gtk_builder_get_object (GTK_BUILDER (preferences), "category-icon-size");
+  gtk_combo_box_set_active (GTK_COMBO_BOX (object), XFCE_APPFINDER_ICON_SIZE_DEFAULT_CATEGORY);
+  xfconf_g_property_bind (preferences->channel, "/category-icon-size", G_TYPE_UINT,
                           G_OBJECT (object), "active");
 
   object = gtk_builder_get_object (GTK_BUILDER (preferences), "button-clear");
@@ -161,6 +186,16 @@ xfce_appfinder_preferences_response (GtkWidget                *window,
   gtk_widget_destroy (window);
 
   g_object_unref (G_OBJECT (preferences));
+}
+
+
+
+static void
+xfce_appfinder_preferences_beside_sensitive (GtkWidget *show_icons,
+                                             GtkWidget *text_beside_icon)
+{
+  gtk_widget_set_sensitive (text_beside_icon,
+      gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (show_icons)));
 }
 
 

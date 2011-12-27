@@ -19,9 +19,6 @@
 #ifndef __XFCE_APPFINDER_PRIVATE_H__
 #define __XFCE_APPFINDER_PRIVATE_H__
 
-#define ICON_SMALL   32
-#define ICON_LARGE   48
-
 #define ITER_GET_DATA(iter)          (((GSList *) (iter)->user_data)->data)
 #define ITER_INIT(iter, iter_stamp, iter_data) \
 G_STMT_START { \

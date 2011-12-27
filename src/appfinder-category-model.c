@@ -33,6 +33,14 @@
 
 
 static void               xfce_appfinder_category_model_tree_model_init       (GtkTreeModelIface        *iface);
+static void               xfce_appfinder_category_model_get_property          (GObject                  *object,
+                                                                               guint                     prop_id,
+                                                                               GValue                   *value,
+                                                                               GParamSpec               *pspec);
+static void               xfce_appfinder_category_model_set_property          (GObject                  *object,
+                                                                               guint                     prop_id,
+                                                                               const GValue             *value,
+                                                                               GParamSpec               *pspec);
 static void               xfce_appfinder_category_model_finalize              (GObject                  *object);
 static GtkTreeModelFlags  xfce_appfinder_category_model_get_flags             (GtkTreeModel             *tree_model);
 static gint               xfce_appfinder_category_model_get_n_columns         (GtkTreeModel             *tree_model);
@@ -73,12 +81,20 @@ struct _XfceAppfinderCategoryModelClass
 
 struct _XfceAppfinderCategoryModel
 {
-  GObject              __parent__;
-  gint                 stamp;
+  GObject                __parent__;
+  gint                   stamp;
 
-  GSList              *categories;
+  GSList                *categories;
 
-  GarconMenuDirectory *all_applications;
+  GarconMenuDirectory   *all_applications;
+
+  XfceAppfinderIconSize  icon_size;
+};
+
+enum
+{
+  PROP_0,
+  PROP_ICON_SIZE
 };
 
 
@@ -94,7 +110,17 @@ xfce_appfinder_category_model_class_init (XfceAppfinderCategoryModelClass *klass
   GObjectClass *gobject_class;
 
   gobject_class = G_OBJECT_CLASS (klass);
+  gobject_class->get_property = xfce_appfinder_category_model_get_property;
+  gobject_class->set_property = xfce_appfinder_category_model_set_property;
   gobject_class->finalize = xfce_appfinder_category_model_finalize;
+
+  g_object_class_install_property (gobject_class,
+                                   PROP_ICON_SIZE,
+                                   g_param_spec_uint ("icon-size", NULL, NULL,
+                                                      XFCE_APPFINDER_ICON_SIZE_SMALLEST,
+                                                      XFCE_APPFINDER_ICON_SIZE_LARGEST,
+                                                      XFCE_APPFINDER_ICON_SIZE_DEFAULT_CATEGORY,
+                                                      G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 }
 
 
@@ -104,6 +130,7 @@ xfce_appfinder_category_model_init (XfceAppfinderCategoryModel *model)
 {
   /* generate a unique stamp */
   model->stamp = g_random_int ();
+  model->icon_size = XFCE_APPFINDER_ICON_SIZE_DEFAULT_CATEGORY;
   model->all_applications = g_object_new (GARCON_TYPE_MENU_DIRECTORY,
                                           "name", _("All Applications"),
                                           "icon-name", "applications-other", NULL);
@@ -126,6 +153,58 @@ xfce_appfinder_category_model_tree_model_init (GtkTreeModelIface *iface)
   iface->iter_n_children = xfce_appfinder_category_model_iter_n_children;
   iface->iter_nth_child = xfce_appfinder_category_model_iter_nth_child;
   iface->iter_parent = xfce_appfinder_category_model_iter_parent;
+}
+
+
+
+static void
+xfce_appfinder_category_model_get_property (GObject      *object,
+                                            guint         prop_id,
+                                            GValue       *value,
+                                            GParamSpec   *pspec)
+{
+  XfceAppfinderCategoryModel *model = XFCE_APPFINDER_CATEGORY_MODEL (object);
+
+  switch (prop_id)
+    {
+    case PROP_ICON_SIZE:
+      g_value_set_uint (value, model->icon_size);
+      break;
+
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+      break;
+    }
+}
+
+
+
+static void
+xfce_appfinder_category_model_set_property (GObject      *object,
+                                            guint         prop_id,
+                                            const GValue *value,
+                                            GParamSpec   *pspec)
+{
+  XfceAppfinderCategoryModel *model = XFCE_APPFINDER_CATEGORY_MODEL (object);
+  XfceAppfinderIconSize       icon_size;
+
+  switch (prop_id)
+    {
+    case PROP_ICON_SIZE:
+      icon_size = g_value_get_uint (value);
+      if (model->icon_size != icon_size)
+        {
+          model->icon_size = icon_size;
+
+          /* trigger a theme change to reload icons */
+          xfce_appfinder_category_model_icon_theme_changed (model);
+        }
+      break;
+
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+      break;
+    }
 }
 
 
@@ -257,7 +336,7 @@ xfce_appfinder_category_model_get_value (GtkTreeModel *tree_model,
           && item->directory != NULL)
         {
           icon_name = garcon_menu_directory_get_icon_name (item->directory);
-          item->pixbuf = xfce_appfinder_model_load_pixbuf (icon_name, 24);
+          item->pixbuf = xfce_appfinder_model_load_pixbuf (icon_name, model->icon_size);
         }
 
       g_value_init (value, GDK_TYPE_PIXBUF);

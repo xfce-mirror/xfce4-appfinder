@@ -37,13 +37,30 @@ typedef struct _XfceAppfinderModel      XfceAppfinderModel;
 enum
 {
   XFCE_APPFINDER_MODEL_COLUMN_ABSTRACT,
-  XFCE_APPFINDER_MODEL_COLUMN_ICON_SMALL,
+  XFCE_APPFINDER_MODEL_COLUMN_TITLE,
+  XFCE_APPFINDER_MODEL_COLUMN_ICON,
   XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE,
   XFCE_APPFINDER_MODEL_COLUMN_COMMAND,
   XFCE_APPFINDER_MODEL_COLUMN_URI,
   XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP,
   XFCE_APPFINDER_MODEL_N_COLUMNS,
 };
+
+typedef enum
+{
+  XFCE_APPFINDER_ICON_SIZE_SMALLEST, /* 16 */
+  XFCE_APPFINDER_ICON_SIZE_SMALLER,  /* 24 */
+  XFCE_APPFINDER_ICON_SIZE_SMALL,    /* 36 */
+  XFCE_APPFINDER_ICON_SIZE_NORMAL,   /* 48 */
+  XFCE_APPFINDER_ICON_SIZE_LARGE,    /* 64 */
+  XFCE_APPFINDER_ICON_SIZE_LARGER,   /* 96 */
+  XFCE_APPFINDER_ICON_SIZE_LARGEST   /* 128 */
+}
+XfceAppfinderIconSize;
+
+#define XFCE_APPFINDER_ICON_SIZE_DEFAULT_CATEGORY XFCE_APPFINDER_ICON_SIZE_SMALLER
+#define XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM     XFCE_APPFINDER_ICON_SIZE_SMALL
+#define XFCE_APPFINDER_ICON_SIZE_48               XFCE_APPFINDER_ICON_SIZE_NORMAL
 
 typedef struct
 {
@@ -76,7 +93,7 @@ gboolean             xfce_appfinder_model_execute              (XfceAppfinderMod
                                                                 GError                   **error);
 
 GdkPixbuf           *xfce_appfinder_model_load_pixbuf          (const gchar               *icon_name,
-                                                                gint                       size) G_GNUC_MALLOC;
+                                                                XfceAppfinderIconSize      icon_size) G_GNUC_MALLOC;
 
 gboolean             xfce_appfinder_model_save_command         (XfceAppfinderModel        *model,
                                                                 const gchar               *command,
