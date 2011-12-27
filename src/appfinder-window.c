@@ -1010,7 +1010,8 @@ xfce_appfinder_window_property_changed (XfconfChannel       *channel,
     }
   else if (g_strcmp0 (prop, "/text-beside-icons") == 0)
     {
-      xfce_appfinder_window_set_item_width (window);
+      if (GTK_IS_ICON_VIEW (window->view))
+        xfce_appfinder_window_set_item_width (window);
     }
 }
 
