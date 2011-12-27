@@ -79,7 +79,8 @@ static gboolean   xfce_appfinder_window_treeview_key_press_event      (GtkWidget
                                                                        XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_category_changed              (GtkTreeSelection            *selection,
                                                                        XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_category_set_categories       (XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_category_set_categories       (XfceAppfinderModel          *model,
+                                                                       XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_preferences                   (GtkWidget                   *button,
                                                                        XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_property_changed              (XfconfChannel               *channel,
@@ -353,10 +354,10 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
       G_CALLBACK (xfce_appfinder_window_icon_theme_changed), window);
 
   /* load categories in the model */
-  xfce_appfinder_window_category_set_categories (window);
-  g_signal_connect_swapped (G_OBJECT (window->model), "categories-changed",
-                            G_CALLBACK (xfce_appfinder_window_category_set_categories),
-                            window);
+  xfce_appfinder_window_category_set_categories (NULL, window);
+  g_signal_connect (G_OBJECT (window->model), "categories-changed",
+                    G_CALLBACK (xfce_appfinder_window_category_set_categories),
+                    window);
 
   /* monitor xfconf property changes */
   window->property_watch_id =
@@ -990,23 +991,34 @@ xfce_appfinder_window_category_changed (GtkTreeSelection    *selection,
 
 
 static void
-xfce_appfinder_window_category_set_categories (XfceAppfinderWindow *window)
+xfce_appfinder_window_category_set_categories (XfceAppfinderModel  *signal_from_model,
+                                               XfceAppfinderWindow *window)
 {
-  GSList      *categories;
-  GtkTreePath *path;
-  gchar       *name;
+  GSList           *categories;
+  GtkTreePath      *path;
+  gchar            *name = NULL;
+  GtkTreeModel     *model;
+  GtkTreeIter       iter;
+  GtkTreeSelection *selection;
 
   appfinder_return_if_fail (GTK_IS_TREE_VIEW (window->sidepane));
 
+  if (signal_from_model != NULL)
+    {
+      /* reload from the model, make sure we restore the selected category */
+      selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (window->sidepane));
+      if (gtk_tree_selection_get_selected (selection, &model, &iter))
+        gtk_tree_model_get (model, &iter, XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_NAME, &name, -1);
+    }
+
+  /* update the categories */
   categories = xfce_appfinder_model_get_categories (window->model);
   if (categories != NULL)
     xfce_appfinder_category_model_set_categories (window->category_model, categories);
   g_slist_free (categories);
 
-  if (xfconf_channel_get_bool (window->channel, "/remember-category", FALSE))
+  if (name == NULL && xfconf_channel_get_bool (window->channel, "/remember-category", FALSE))
     name = xfconf_channel_get_string (window->channel, "/last/category", NULL);
-  else
-    name = NULL;
 
   path = xfce_appfinder_category_model_find_category (window->category_model, name);
   if (path != NULL)
@@ -1014,6 +1026,7 @@ xfce_appfinder_window_category_set_categories (XfceAppfinderWindow *window)
       gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->sidepane), path, NULL, FALSE);
       gtk_tree_path_free (path);
     }
+
   g_free (name);
 }
 

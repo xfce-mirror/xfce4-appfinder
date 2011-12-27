@@ -62,13 +62,6 @@ XfceAppfinderIconSize;
 #define XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM     XFCE_APPFINDER_ICON_SIZE_SMALL
 #define XFCE_APPFINDER_ICON_SIZE_48               XFCE_APPFINDER_ICON_SIZE_NORMAL
 
-typedef struct
-{
-  GarconMenuDirectory *directory;
-  GdkPixbuf           *pixbuf;
-}
-CategoryItem;
-
 
 
 GType                xfce_appfinder_model_get_type             (void) G_GNUC_CONST;
@@ -107,8 +100,6 @@ void                 xfce_appfinder_model_icon_theme_changed   (XfceAppfinderMod
 GarconMenuDirectory *xfce_appfinder_model_get_command_category (void);
 
 void                 xfce_appfinder_model_history_clear        (XfceAppfinderModel        *model);
-
-void                 xfce_appfinder_model_category_free        (CategoryItem              *category);
 
 G_END_DECLS
 

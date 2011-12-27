@@ -32,6 +32,10 @@
 
 
 
+typedef struct _CategoryItem CategoryItem;
+
+
+
 static void               xfce_appfinder_category_model_tree_model_init       (GtkTreeModelIface        *iface);
 static void               xfce_appfinder_category_model_get_property          (GObject                  *object,
                                                                                guint                     prop_id,
@@ -71,6 +75,7 @@ static gboolean           xfce_appfinder_category_model_iter_nth_child        (G
 static gboolean           xfce_appfinder_category_model_iter_parent           (GtkTreeModel             *tree_model,
                                                                                GtkTreeIter              *iter,
                                                                                GtkTreeIter              *child);
+static void               xfce_appfinder_category_category_free               (CategoryItem             *item);
 
 
 
@@ -89,6 +94,12 @@ struct _XfceAppfinderCategoryModel
   GarconMenuDirectory   *all_applications;
 
   XfceAppfinderIconSize  icon_size;
+};
+
+struct _CategoryItem
+{
+  GarconMenuDirectory *directory;
+  GdkPixbuf           *pixbuf;
 };
 
 enum
@@ -218,7 +229,7 @@ xfce_appfinder_category_model_finalize (GObject *object)
 
   /* clear the first three items */
   for (li = model->categories, n = 0; li != NULL && n < 3; li = li->next, n++)
-    xfce_appfinder_model_category_free (li->data);
+    xfce_appfinder_category_category_free (li->data);
   g_slist_free (model->categories);
 
   g_object_unref (G_OBJECT (model->all_applications));
@@ -446,6 +457,20 @@ xfce_appfinder_category_model_iter_parent (GtkTreeModel *tree_model,
 
 
 
+
+static void
+xfce_appfinder_category_category_free (CategoryItem *item)
+{
+  if (item->directory != NULL)
+    g_object_unref (G_OBJECT (item->directory));
+  if (item->pixbuf != NULL)
+    g_object_unref (G_OBJECT (item->pixbuf));
+  g_slice_free (CategoryItem, item);
+}
+
+
+
+
 XfceAppfinderCategoryModel *
 xfce_appfinder_category_model_new (void)
 {
@@ -482,12 +507,19 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
 
      /* clean the first three categories and drop the list */
      for (i = 0, li = model->categories; i < 3 && li != NULL; i++, li = li->next)
-       xfce_appfinder_model_category_free (li->data);
+       xfce_appfinder_category_category_free (li->data);
      g_slist_free (model->categories);
      model->categories = NULL;
     }
 
   appfinder_assert (model->categories == NULL);
+
+  for (li = categories; li != NULL; li = li->next)
+    {
+      item = g_slice_new0 (CategoryItem);
+      item->directory = g_object_ref (li->data);
+      model->categories = g_slist_prepend (model->categories, item);
+    }
 
   /* separator and the main categories */
   item = g_slice_new0 (CategoryItem);
@@ -500,9 +532,6 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
   item = g_slice_new0 (CategoryItem);
   item->directory = g_object_ref (G_OBJECT (model->all_applications));
   model->categories = g_slist_prepend (model->categories, item);
-
-  /* move the categories online */
-  model->categories = g_slist_concat (model->categories, g_slist_copy (categories));
 
   path = gtk_tree_path_new_first ();
   for (li = model->categories; li != NULL; li = lnext)
