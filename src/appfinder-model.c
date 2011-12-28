@@ -2054,7 +2054,8 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
 
   appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
 
-  APPFINDER_DEBUG ("icon theme changed");
+  APPFINDER_DEBUG ("icon theme or size changed, updating %d items",
+                   g_slist_length (model->items));
 
   /* reload the command icons */
   if (model->command_icon != NULL)
