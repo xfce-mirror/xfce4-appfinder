@@ -824,10 +824,12 @@ xfce_appfinder_window_popup_menu_hide (GtkWidget           *mi,
     return;
 
   path = xfce_resource_save_location (XFCE_RESOURCE_DATA, "applications/", FALSE);
+  /* I18N: the first %s will be replace with users' applications directory, the
+   * second with Hidden=true */
   message = g_strdup_printf (_("To unhide the item you have to manually "
                                "remove the desktop file from \"%s\" or "
-                               "open the file in that directory and set "
-                               "\"%s\"."), path, "Hidden=true");
+                               "open the file in the same directory and "
+                               "remove the line \"%s\"."), path, "Hidden=true");
 
   if (xfce_dialog_confirm (GTK_WINDOW (window), NULL, _("_Hide"), message,
           _("Are you sure you want to hide \"%s\"?"), name))
