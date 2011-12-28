@@ -145,6 +145,7 @@ struct _XfceAppfinderWindow
   gint                        last_window_height;
 
   gulong                      property_watch_id;
+  gulong                      categories_changed_id;
 };
 
 static const GtkTargetEntry target_list[] =
@@ -361,9 +362,10 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   /* load categories in the model */
   xfce_appfinder_window_category_set_categories (NULL, window);
-  g_signal_connect (G_OBJECT (window->model), "categories-changed",
-                    G_CALLBACK (xfce_appfinder_window_category_set_categories),
-                    window);
+  window->categories_changed_id =
+      g_signal_connect (G_OBJECT (window->model), "categories-changed",
+                        G_CALLBACK (xfce_appfinder_window_category_set_categories),
+                        window);
 
   /* monitor xfconf property changes */
   window->property_watch_id =
@@ -384,6 +386,7 @@ xfce_appfinder_window_finalize (GObject *object)
     g_source_remove (window->idle_entry_changed_id);
 
   g_signal_handler_disconnect (window->channel, window->property_watch_id);
+  g_signal_handler_disconnect (window->model, window->categories_changed_id);
 
   g_object_unref (G_OBJECT (window->model));
   g_object_unref (G_OBJECT (window->category_model));
