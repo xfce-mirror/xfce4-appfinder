@@ -224,12 +224,9 @@ static void
 xfce_appfinder_category_model_finalize (GObject *object)
 {
   XfceAppfinderCategoryModel *model = XFCE_APPFINDER_CATEGORY_MODEL (object);
-  GSList                     *li;
-  guint                       n;
 
-  /* clear the first three items */
-  for (li = model->categories, n = 0; li != NULL && n < 3; li = li->next, n++)
-    xfce_appfinder_category_category_free (li->data);
+  /* remove the categories */
+  g_slist_foreach (model->categories, (GFunc) xfce_appfinder_category_category_free, NULL);
   g_slist_free (model->categories);
 
   g_object_unref (G_OBJECT (model->all_applications));
@@ -487,7 +484,7 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
   GSList       *li, *lnext;
   GtkTreePath  *path;
   GtkTreeIter   iter;
-  guint         children, i;
+  guint         children;
 
   APPFINDER_DEBUG ("insert %d categories", g_slist_length (categories));
 
@@ -505,9 +502,8 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
         }
      gtk_tree_path_free (path);
 
-     /* clean the first three categories and drop the list */
-     for (i = 0, li = model->categories; i < 3 && li != NULL; i++, li = li->next)
-       xfce_appfinder_category_category_free (li->data);
+     /* cleanup structures */
+     g_slist_foreach (model->categories, (GFunc)xfce_appfinder_category_category_free, NULL); 
      g_slist_free (model->categories);
      model->categories = NULL;
     }
