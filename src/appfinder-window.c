@@ -40,6 +40,13 @@
 #include <src/appfinder-actions.h>
 #include <src/appfinder-private.h>
 
+#ifdef GDK_WINDOWING_X11
+#include <gdk/gdkx.h>
+#define APPFINDER_WIDGET_XID(widget) ((guint) GDK_WINDOW_XID (GDK_WINDOW (GTK_WIDGET (widget)->window)))
+#else
+#define APPFINDER_WIDGET_XID(widget) (0)
+#endif
+
 
 
 #define DEFAULT_WINDOW_WIDTH   400
@@ -741,7 +748,8 @@ xfce_appfinder_window_popup_menu_edit (GtkWidget           *mi,
   if (uri == NULL)
     return;
 
-  cmd = g_strdup_printf ("exo-desktop-item-edit '%s'", uri);
+  cmd = g_strdup_printf ("exo-desktop-item-edit --xid=0x%x '%s'",
+                         APPFINDER_WIDGET_XID (window), uri);
   if (!g_spawn_command_line_async (cmd, &error))
     {
       xfce_dialog_show_error (GTK_WINDOW (window), error, _("Failed to launch desktop item editor"));
