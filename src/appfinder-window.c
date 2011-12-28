@@ -743,19 +743,24 @@ xfce_appfinder_window_popup_menu_edit (GtkWidget           *mi,
   GError      *error = NULL;
   gchar       *cmd;
   const gchar *uri;
+  GtkWidget   *menu = gtk_widget_get_parent (mi);
 
-  uri = g_object_get_data (G_OBJECT (mi), "uri");
-  if (uri == NULL)
-    return;
+  appfinder_return_if_fail (GTK_IS_MENU (menu));
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
 
-  cmd = g_strdup_printf ("exo-desktop-item-edit --xid=0x%x '%s'",
-                         APPFINDER_WIDGET_XID (window), uri);
-  if (!g_spawn_command_line_async (cmd, &error))
+  uri = g_object_get_data (G_OBJECT (menu), "uri");
+  if (G_LIKELY (uri != NULL))
     {
-      xfce_dialog_show_error (GTK_WINDOW (window), error, _("Failed to launch desktop item editor"));
-      g_error_free (error);
+      cmd = g_strdup_printf ("exo-desktop-item-edit --xid=0x%x '%s'",
+                             APPFINDER_WIDGET_XID (window), uri);
+      if (!g_spawn_command_line_async (cmd, &error))
+        {
+          xfce_dialog_show_error (GTK_WINDOW (window), error,
+                                  _("Failed to launch desktop item editor"));
+          g_error_free (error);
+        }
+      g_free (cmd);
     }
-  g_free (cmd);
 }
 
 
@@ -767,16 +772,20 @@ xfce_appfinder_window_popup_menu_revert (GtkWidget           *mi,
   const gchar *uri;
   const gchar *name;
   GError      *error;
+  GtkWidget   *menu = gtk_widget_get_parent (mi);
 
-  name = g_object_get_data (G_OBJECT (mi), "name");
+  appfinder_return_if_fail (GTK_IS_MENU (menu));
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
+
+  name = g_object_get_data (G_OBJECT (menu), "name");
   if (name == NULL)
     return;
 
   if (xfce_dialog_confirm (GTK_WINDOW (window), GTK_STOCK_REVERT_TO_SAVED, NULL,
-      _("This will permanently remove the custom desktop file from your home directory."),
-      _("Are you sure you want to revert \"%s\"?"), name))
+          _("This will permanently remove the custom desktop file from your home directory."),
+          _("Are you sure you want to revert \"%s\"?"), name))
     {
-      uri = g_object_get_data (G_OBJECT (mi), "uri");
+      uri = g_object_get_data (G_OBJECT (menu), "uri");
       if (uri != NULL)
         {
           if (g_unlink (uri + 7) == -1)
@@ -793,6 +802,67 @@ xfce_appfinder_window_popup_menu_revert (GtkWidget           *mi,
 
 
 
+static void
+xfce_appfinder_window_popup_menu_hide (GtkWidget           *mi,
+                                       XfceAppfinderWindow *window)
+{
+  const gchar  *uri;
+  const gchar  *name;
+  GtkWidget    *menu = gtk_widget_get_parent (mi);
+  gchar        *path;
+  gchar        *message;
+  gchar       **dirs;
+  guint         i;
+  const gchar  *relpath;
+  XfceRc       *rc;
+
+  appfinder_return_if_fail (GTK_IS_MENU (menu));
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
+
+  name = g_object_get_data (G_OBJECT (menu), "name");
+  if (name == NULL)
+    return;
+
+  path = xfce_resource_save_location (XFCE_RESOURCE_DATA, "applications/", FALSE);
+  message = g_strdup_printf (_("To unhide the item you have to manually "
+                               "remove the desktop file from \"%s\" or "
+                               "open the file in that directory and set "
+                               "\"%s\"."), path, "Hidden=true");
+
+  if (xfce_dialog_confirm (GTK_WINDOW (window), NULL, _("_Hide"), message,
+          _("Are you sure you want to hide \"%s\"?"), name))
+    {
+      uri = g_object_get_data (G_OBJECT (menu), "uri");
+      if (uri != NULL)
+        {
+          /* lookup the correct relative path */
+          dirs = xfce_resource_lookup_all (XFCE_RESOURCE_DATA, "applications/");
+          for (i = 0; dirs[i] != NULL; i++)
+            {
+              if (g_str_has_prefix (uri + 7, dirs[i]))
+                {
+                  /* relative path to XFCE_RESOURCE_DATA */
+                  relpath = uri + 7 + strlen (dirs[i]) - 13;
+
+                  /* xfcerc can handle everything else */
+                  rc = xfce_rc_config_open (XFCE_RESOURCE_DATA, relpath, FALSE);
+                  xfce_rc_set_group (rc, G_KEY_FILE_DESKTOP_GROUP);
+                  xfce_rc_write_bool_entry (rc, G_KEY_FILE_DESKTOP_KEY_HIDDEN, TRUE);
+                  xfce_rc_close (rc);
+
+                  break;
+                }
+            }
+          g_strfreev (dirs);
+        }
+    }
+
+  g_free (path);
+  g_free (message);
+}
+
+
+
 static gboolean
 xfce_appfinder_window_popup_menu (GtkWidget           *view,
                                   XfceAppfinderWindow *window)
@@ -804,6 +874,7 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
   gchar        *uri;
   GtkWidget    *mi;
   gchar        *path;
+  gboolean      uri_is_local;
 
   if (xfce_appfinder_window_view_get_selected (window, &model, &iter))
     {
@@ -811,7 +882,11 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
                           XFCE_APPFINDER_MODEL_COLUMN_TITLE, &title,
                           XFCE_APPFINDER_MODEL_COLUMN_URI, &uri, -1);
 
+      uri_is_local = g_str_has_prefix (uri, "file://");
+
       menu = gtk_menu_new ();
+      g_object_set_data_full (G_OBJECT (menu), "uri", uri, g_free);
+      g_object_set_data_full (G_OBJECT (menu), "name", title, g_free);
       g_signal_connect (G_OBJECT (menu), "selection-done",
           G_CALLBACK (gtk_widget_destroy), NULL);
 
@@ -826,30 +901,28 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
 
       mi = gtk_image_menu_item_new_from_stock (GTK_STOCK_EDIT, NULL);
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
-      g_object_set_data_full (G_OBJECT (mi), "uri", g_strdup (uri), g_free);
       g_signal_connect (G_OBJECT (mi), "activate",
           G_CALLBACK (xfce_appfinder_window_popup_menu_edit), window);
       gtk_widget_show (mi);
 
       mi = gtk_image_menu_item_new_from_stock (GTK_STOCK_REVERT_TO_SAVED, NULL);
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
-      g_object_set_data_full (G_OBJECT (mi), "uri", g_strdup (uri), g_free);
-      g_object_set_data_full (G_OBJECT (mi), "name", g_strdup (title), g_free);
       g_signal_connect (G_OBJECT (mi), "activate",
           G_CALLBACK (xfce_appfinder_window_popup_menu_revert), window);
       path = xfce_resource_save_location (XFCE_RESOURCE_DATA, "applications/", FALSE);
-      gtk_widget_set_sensitive (mi, g_str_has_prefix (uri, "file://")
-                                && g_str_has_prefix (uri + 7, path));
+      gtk_widget_set_sensitive (mi, uri_is_local && g_str_has_prefix (uri + 7, path));
       gtk_widget_show (mi);
       g_free (path);
 
-      g_free (title);
-      g_free (uri);
+      mi = gtk_image_menu_item_new_with_mnemonic (_("_Hide"));
+      gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
+      gtk_widget_set_sensitive (mi, uri_is_local);
+      g_signal_connect (G_OBJECT (mi), "activate",
+          G_CALLBACK (xfce_appfinder_window_popup_menu_hide), window);
+      gtk_widget_show (mi);
 
       gtk_menu_popup (GTK_MENU (menu),
-                      NULL, NULL,
-                      NULL, NULL,
-                      3,
+                      NULL, NULL, NULL, NULL, 3,
                       gtk_get_current_event_time ());
 
       return TRUE;
