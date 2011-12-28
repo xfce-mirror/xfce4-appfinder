@@ -437,7 +437,7 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
       return TRUE;
     }
   else if ((event->state & GDK_CONTROL_MASK) != 0)
-    {g_message ("%d", event->keyval);
+    {
       switch (event->keyval)
         {
         case GDK_l:
