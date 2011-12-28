@@ -427,24 +427,24 @@ xfce_appfinder_preferences_action_populate (XfceAppfinderPreferences *preference
   if (G_LIKELY (array != NULL))
     {
       for (i = 0; i < array->len; i++)
-      {
-        value = g_ptr_array_index (array, i);
-        appfinder_assert (value != NULL);
-        unique_id = g_value_get_int (value);
+        {
+          value = g_ptr_array_index (array, i);
+          appfinder_assert (value != NULL);
+          unique_id = g_value_get_int (value);
 
-        g_snprintf (prop, sizeof (prop), "/actions/action-%d/pattern", unique_id);
-        pattern = xfconf_channel_get_string (preferences->channel, prop, NULL);
+          g_snprintf (prop, sizeof (prop), "/actions/action-%d/pattern", unique_id);
+          pattern = xfconf_channel_get_string (preferences->channel, prop, NULL);
 
-        gtk_list_store_insert_with_values (GTK_LIST_STORE (store), &iter, i,
-                                           COLUMN_UNIQUE_ID, unique_id,
-                                           COLUMN_PATTERN, pattern,
-                                           -1);
+          gtk_list_store_insert_with_values (GTK_LIST_STORE (store), &iter, i,
+                                             COLUMN_UNIQUE_ID, unique_id,
+                                             COLUMN_PATTERN, pattern,
+                                             -1);
 
-        if (restore_id == unique_id)
-          gtk_tree_selection_select_iter (preferences->selection, &iter);
+          if (restore_id == unique_id)
+            gtk_tree_selection_select_iter (preferences->selection, &iter);
 
-        g_free (pattern);
-      }
+          g_free (pattern);
+        }
 
       xfconf_array_free (array);
     }
