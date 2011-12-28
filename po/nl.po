@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-31 11:07+0000\n"
+"POT-Creation-Date: 2011-12-28 07:06+0000\n"
 "PO-Revision-Date: 2011-09-08 09:26+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
@@ -18,64 +18,87 @@ msgstr ""
 "Language: nl (Dutch)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/appfinder-category-model.c:108
+#: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "Alle toepassingen"
 
-#: ../src/appfinder-model.c:438
+#: ../src/appfinder-model.c:538
 msgid "Name"
 msgstr "Naam"
 
-#: ../src/appfinder-model.c:439
+#: ../src/appfinder-model.c:539
+msgid "Comment"
+msgstr "Commentaar"
+
+#: ../src/appfinder-model.c:540
 msgid "Command"
 msgstr "Opdracht"
 
-#: ../src/appfinder-model.c:440
+#: ../src/appfinder-model.c:541
 msgid "Categories"
 msgstr "Categorieën"
 
-#: ../src/appfinder-model.c:441
+#: ../src/appfinder-model.c:542
 msgid "Filename"
 msgstr "Bestandnaam"
 
-#: ../src/appfinder-model.c:1598
+#: ../src/appfinder-model.c:1805
 msgid "Application has no command"
 msgstr "Toepassing heeft geen opdracht"
 
-#: ../src/appfinder-model.c:1900
+#: ../src/appfinder-model.c:2119
 msgid "Commands History"
 msgstr "Opdrachtgeschiedenis"
 
-#: ../src/appfinder-preferences.c:175
+#: ../src/appfinder-preferences.c:210
 msgid "C_lear"
 msgstr "Wis"
 
-#: ../src/appfinder-preferences.c:176
+#: ../src/appfinder-preferences.c:211
 msgid "This will permanently clear the custom command history."
 msgstr "Dit zal de geschiedenis van de aangepaste opdrachten blijvend wissen"
 
-#: ../src/appfinder-preferences.c:177
+#: ../src/appfinder-preferences.c:212
 msgid "Are you sure you want to clear the command history?"
 msgstr "Weet u zeker dat u de geschiedenis van de opdrachten wil wissen?"
 
-#: ../src/appfinder-preferences.c:287
+#: ../src/appfinder-preferences.c:322
 msgid "The custom action will be deleted permanently."
 msgstr "De aangepaste actie zal blijvend worden verwijderd."
 
-#: ../src/appfinder-preferences.c:288
+#: ../src/appfinder-preferences.c:323
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Weet u zeker dat u patroon \"%s\" wil verwijderen?"
 
-#: ../src/appfinder-window.c:190 ../src/main.c:344
-#: ../src/appfinder-preferences.glade.h:3
+#: ../src/appfinder-window.c:208 ../src/main.c:361
+#: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Toepassingenzoeker"
 
-#: ../src/appfinder-window.c:231
+#: ../src/appfinder-window.c:256
 msgid "Toggle view mode"
 msgstr "Schakel de bekijkmodus"
+
+#: ../src/appfinder-window.c:744
+msgid "Failed to launch desktop item editor"
+msgstr "Kon bewerker van bureaublad-elementen niet starten"
+
+#: ../src/appfinder-window.c:765
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr "Dit zal het aangepaste bureaubladbestand blijvend verwijderen uit uw thuismap."
+
+#: ../src/appfinder-window.c:766
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr "Weet u zeker dat u  \"%s\" wil terugdraaien?"
+
+#: ../src/appfinder-window.c:776
+msgid "Failed to remove desktop file"
+msgstr "Kon bureaubladbestand niet verwijderen"
 
 #: ../src/main.c:70
 msgid "Start in collapsed mode"
@@ -102,20 +125,20 @@ msgstr "Probeer niet om een D-Bus-dienst te gebruiken of er een te worden"
 msgid "Forced to quit"
 msgstr "Gedwongen om af te sluiten"
 
-#: ../src/main.c:346
+#: ../src/main.c:363
 msgid "Unable to daemonize the process"
 msgstr "Niet in staat om het proces als achtergronddienst te draaien"
 
-#: ../src/main.c:418
+#: ../src/main.c:437
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Tik '%s -- help' voor gebruikinformatie."
 
-#: ../src/main.c:429
+#: ../src/main.c:448
 msgid "The Xfce development team. All rights reserved."
 msgstr "De Xfce-ontwikkelploeg. Alle rechten voorbehouden."
 
-#: ../src/main.c:430
+#: ../src/main.c:449
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Gelieve fouten te melden aan <%s>."
@@ -128,31 +151,39 @@ msgstr "Voeg een nieuwe aangepaste actie toe."
 msgid "Always c_enter the window"
 msgstr "Centreer het venster altijd"
 
-#: ../src/appfinder-preferences.glade.h:4
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Appearance"
+msgstr "Uiterlijk"
+
+#: ../src/appfinder-preferences.glade.h:5
 msgid "Behaviour"
 msgstr "Gedrag"
 
-#: ../src/appfinder-preferences.glade.h:5
+#: ../src/appfinder-preferences.glade.h:6
 msgid "C_lear Custom Command History"
 msgstr "Verwijder geschiedenis van aangepaste opdrachten"
 
-#: ../src/appfinder-preferences.glade.h:6
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Categ_ory icon size:"
+msgstr "Pictogramgrootte van categorie:"
+
+#: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
 msgstr "Centreer het venster bij het opstarten."
 
-#: ../src/appfinder-preferences.glade.h:7
+#: ../src/appfinder-preferences.glade.h:9
 msgid "Co_mmand:"
 msgstr "Opdracht:"
 
-#: ../src/appfinder-preferences.glade.h:8
+#: ../src/appfinder-preferences.glade.h:10
 msgid "Custom _Actions"
 msgstr "Aangepaste acties"
 
-#: ../src/appfinder-preferences.glade.h:9
+#: ../src/appfinder-preferences.glade.h:11
 msgid "History"
 msgstr "Geschiedenis"
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:13
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -163,41 +194,81 @@ msgstr ""
 "door de tekenreeks na het patroon, %S door de volledige tekst van de invoer. "
 "Voor reguliere uitdrukkingen kunt u \\0 en \\<num> gebruiken."
 
-#: ../src/appfinder-preferences.glade.h:12
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Ite_m icon size:"
+msgstr "Pictogramgrootte van element:"
+
+#: ../src/appfinder-preferences.glade.h:15
+msgid "Large"
+msgstr "Groot"
+
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Larger"
+msgstr "Groter"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "Normal"
+msgstr "Normaal"
+
+#: ../src/appfinder-preferences.glade.h:18
 msgid "Patte_rn:"
 msgstr "Patroon:"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:19
 msgid "Pattern"
 msgstr "Patroon"
 
-#: ../src/appfinder-preferences.glade.h:14
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Prefix"
 msgstr "Voorvoegsel"
 
-#: ../src/appfinder-preferences.glade.h:15
+#: ../src/appfinder-preferences.glade.h:21
 msgid "Regular Expression"
 msgstr "Reguliere uitdrukking"
 
-#: ../src/appfinder-preferences.glade.h:16
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Remember last _selected category"
 msgstr "Onthoud laatst gekozen categorie"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: ../src/appfinder-preferences.glade.h:23
 msgid "Remove the currently selected action."
 msgstr "Verwijder de thans gekozen actie."
 
-#: ../src/appfinder-preferences.glade.h:18
+#: ../src/appfinder-preferences.glade.h:24
+msgid "Small"
+msgstr "Klein"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Smaller"
+msgstr "Kleiner"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Text besi_de icons"
+msgstr "Tekst naast pictogrammen"
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Very Large"
+msgstr "Zeer groot"
+
+#: ../src/appfinder-preferences.glade.h:28
+msgid "Very Small"
+msgstr "Zeer klein"
+
+#: ../src/appfinder-preferences.glade.h:29
 msgid "_General"
 msgstr "Algemeen"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:30
 msgid "_Save match in command history"
 msgstr "Sla vondst op in opdrachtgeschiedenis"
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:31
 msgid "_Type:"
 msgstr "Type:"
+
+#: ../src/appfinder-preferences.glade.h:32
+msgid "_View items as icons"
+msgstr "Toon elementen als pictogrammen"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -258,9 +329,6 @@ msgstr "Draai een programma"
 
 #~ msgid "Find applications installed on the system."
 #~ msgstr "Vind toepassingen die geïnstalleerd zijn in het systeem."
-
-#~ msgid "Failed to open display"
-#~ msgstr "Kon scherm niet openen"
 
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Auteursrecht (c) 2008"
