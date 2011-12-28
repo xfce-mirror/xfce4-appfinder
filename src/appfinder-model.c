@@ -218,6 +218,8 @@ xfce_appfinder_model_init (XfceAppfinderModel *model)
   model->collect_cancelled = g_cancellable_new ();
 
   model->menu = garcon_menu_new_applications ();
+  appfinder_refcount_debug_add (G_OBJECT (model->menu), "main menu");
+
   model->collect_thread = g_thread_create (xfce_appfinder_model_collect_thread, model, TRUE, NULL);
 }
 
@@ -838,6 +840,9 @@ xfce_appfinder_model_item_new (GarconMenuItem *menu_item)
   item = g_slice_new0 (ModelItem);
   item->item = g_object_ref (G_OBJECT (menu_item));
 
+  appfinder_refcount_debug_add (G_OBJECT (menu_item),
+     garcon_menu_item_get_desktop_id (menu_item));
+
   command = garcon_menu_item_get_command (menu_item);
   if (G_LIKELY (command != NULL))
     {
@@ -1152,6 +1157,7 @@ xfce_appfinder_model_history_monitor (XfceAppfinderModel *model,
 
       /* monitor the file for changes */
       model->history_monitor = g_file_monitor_file (file, G_FILE_MONITOR_NONE, model->collect_cancelled, &error);
+      appfinder_refcount_debug_add (G_OBJECT (model->history_monitor), "history file monitor");
       if (model->history_monitor != NULL)
         {
           APPFINDER_DEBUG ("monitor history file %s", path);
@@ -1316,6 +1322,9 @@ xfce_appfinder_model_collect_items (GarconMenu           *menu,
   directory = garcon_menu_get_directory (menu);
   if (directory != NULL)
     {
+      appfinder_refcount_debug_add (G_OBJECT (directory),
+          garcon_menu_directory_get_name (directory));
+
       if (!garcon_menu_directory_get_visible (directory))
         return FALSE;
 
@@ -1356,9 +1365,14 @@ xfce_appfinder_model_collect_items (GarconMenu           *menu,
   menus = garcon_menu_get_menus (menu);
   for (li = menus; li != NULL; li = li->next)
     {
+      appfinder_refcount_debug_add (G_OBJECT (li->data),
+          garcon_menu_element_get_name (li->data));
+
       if (xfce_appfinder_model_collect_items (li->data, cancelled, category, items,
                                               categories, desktop_ids))
-        has_items = TRUE;
+        {
+          has_items = TRUE;
+        }
     }
   g_list_free (menus);
 
@@ -1648,6 +1662,7 @@ xfce_appfinder_model_get (void)
     {
       model = g_object_new (XFCE_TYPE_APPFINDER_MODEL, NULL);
       g_object_add_weak_pointer (G_OBJECT (model), (gpointer) &model);
+      appfinder_refcount_debug_add (G_OBJECT (model), "appfinder-model");
       APPFINDER_DEBUG ("allocate new model");
     }
 
@@ -1930,6 +1945,8 @@ xfce_appfinder_model_load_pixbuf (const gchar           *icon_name,
       pixbuf = scaled;
     }
 
+  appfinder_refcount_debug_add (G_OBJECT (pixbuf), icon_name);
+
   return pixbuf;
 }
 
@@ -2119,6 +2136,7 @@ xfce_appfinder_model_get_command_category (void)
                                "name", _("Commands History"),
                                "icon-name", GTK_STOCK_EXECUTE,
                                NULL);
+      appfinder_refcount_debug_add (G_OBJECT (category), "commands");
       g_object_add_weak_pointer (G_OBJECT (category), (gpointer) &category);
     }
 

@@ -63,6 +63,11 @@ static GSList             *windows = NULL;
 static gboolean            service_owner = FALSE;
 static XfceAppfinderModel *model_cache = NULL;
 
+#ifdef DEBUG
+static GHashTable         *objects_table = NULL;
+static guint               objects_table_count = 0;
+#endif
+
 
 
 static GOptionEntry option_entries[] =
@@ -78,6 +83,68 @@ static GOptionEntry option_entries[] =
 
 
 static void appfinder_dbus_unregister (DBusConnection *dbus_connection);
+
+
+
+#ifdef DEBUG
+static void
+appfinder_refcount_debug_weak_notify (gpointer  data,
+                                      GObject  *where_the_object_was)
+{
+  /* remove the unreffed object pixbuf from the table */
+  if (!g_hash_table_remove (objects_table, where_the_object_was))
+    appfinder_assert_not_reached ();
+}
+
+
+
+static void
+appfinder_refcount_debug_print (gpointer object,
+                                gpointer desc,
+                                gpointer data)
+{
+  APPFINDER_DEBUG ("object %p (type = %s, desc = %s) not released",
+                   object, G_OBJECT_TYPE_NAME (object), (gchar *) desc);
+}
+
+
+
+void
+appfinder_refcount_debug_add (GObject     *object,
+                              const gchar *description)
+{
+  /* silently ignore objects that are already registered */
+  if (object != NULL
+      && g_hash_table_lookup (objects_table, object) == NULL)
+    {
+      objects_table_count++;
+      g_object_weak_ref (G_OBJECT (object), appfinder_refcount_debug_weak_notify, NULL);
+      g_hash_table_insert (objects_table, object, g_strdup (description));
+    }
+}
+
+
+
+static void
+appfinder_refcount_debug_init (void)
+{
+  objects_table = g_hash_table_new_full (g_direct_hash, g_direct_equal, NULL, g_free);
+}
+
+
+
+static void
+appfinder_refcount_debug_finalize (void)
+{
+  /* leakup refcount hashtable */
+  APPFINDER_DEBUG ("%d objects leaked, %d registered",
+                   g_hash_table_size (objects_table),
+                   objects_table_count);
+
+  g_hash_table_foreach (objects_table, appfinder_refcount_debug_print, NULL);
+  g_hash_table_destroy (objects_table);
+}
+#endif
 
 
 
@@ -113,6 +180,7 @@ appfinder_window_new (const gchar *startup_id,
   window = g_object_new (XFCE_TYPE_APPFINDER_WINDOW,
                          "startup-id", IS_STRING (startup_id) ? startup_id : NULL,
                          NULL);
+  appfinder_refcount_debug_add (G_OBJECT (window), startup_id);
   xfce_appfinder_window_set_expanded (XFCE_APPFINDER_WINDOW (window), expanded);
   gtk_widget_show (window);
 
@@ -485,6 +553,10 @@ main (gint argc, gchar **argv)
        return EXIT_FAILURE;
     }
 
+#ifdef DEBUG
+  appfinder_refcount_debug_init ();
+#endif
+
   /* create initial window */
   appfinder_window_new (NULL, !opt_collapsed);
 
@@ -514,6 +586,10 @@ main (gint argc, gchar **argv)
     }
 
   xfconf_shutdown ();
+
+#ifdef DEBUG
+  appfinder_refcount_debug_finalize ();
+#endif
 
   return EXIT_SUCCESS;
 }

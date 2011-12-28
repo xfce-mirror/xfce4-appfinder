@@ -145,6 +145,7 @@ xfce_appfinder_category_model_init (XfceAppfinderCategoryModel *model)
   model->all_applications = g_object_new (GARCON_TYPE_MENU_DIRECTORY,
                                           "name", _("All Applications"),
                                           "icon-name", "applications-other", NULL);
+  appfinder_refcount_debug_add (G_OBJECT (model->all_applications), "all-applications");
 }
 
 
@@ -471,7 +472,9 @@ xfce_appfinder_category_category_free (CategoryItem *item)
 XfceAppfinderCategoryModel *
 xfce_appfinder_category_model_new (void)
 {
-  return g_object_new (XFCE_TYPE_APPFINDER_CATEGORY_MODEL, NULL);
+  gpointer model = g_object_new (XFCE_TYPE_APPFINDER_CATEGORY_MODEL, NULL);
+  appfinder_refcount_debug_add (G_OBJECT (model), "category-model");
+  return model;
 }
 
 
@@ -503,7 +506,7 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
      gtk_tree_path_free (path);
 
      /* cleanup structures */
-     g_slist_foreach (model->categories, (GFunc)xfce_appfinder_category_category_free, NULL); 
+     g_slist_foreach (model->categories, (GFunc)xfce_appfinder_category_category_free, NULL);
      g_slist_free (model->categories);
      model->categories = NULL;
     }

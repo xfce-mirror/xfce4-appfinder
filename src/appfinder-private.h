@@ -34,6 +34,13 @@ G_STMT_START { \
 #endif
 
 #ifdef DEBUG
+void    appfinder_refcount_debug_add (GObject     *object,
+                                      const gchar *description);
+#else
+#define appfinder_refcount_debug_add(object, description) G_STMT_START{ (void)0; }G_STMT_END
+#endif
+
+#ifdef DEBUG
 #define appfinder_assert(expr)                 g_assert (expr)
 #define appfinder_assert_not_reached()         g_assert_not_reached ()
 #define appfinder_return_if_fail(expr)         g_return_if_fail (expr)

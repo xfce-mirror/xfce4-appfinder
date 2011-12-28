@@ -505,6 +505,7 @@ xfce_appfinder_actions_get (void)
     {
       actions = g_object_new (XFCE_TYPE_APPFINDER_ACTIONS, NULL);
       g_object_add_weak_pointer (G_OBJECT (actions), (gpointer) &actions);
+      appfinder_refcount_debug_add (G_OBJECT (actions), "actions");
     }
 
   return actions;
