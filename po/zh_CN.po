@@ -120,7 +120,7 @@ msgstr ""
 
 #: ../src/appfinder-window.c:834 ../src/appfinder-window.c:919
 msgid "_Hide"
-msgstr "隐藏"
+msgstr "隐藏(_H)"
 
 #: ../src/appfinder-window.c:835
 #, c-format
@@ -137,7 +137,7 @@ msgstr "列印版本信息并退出"
 
 #: ../src/main.c:77
 msgid "Replace the existing service"
-msgstr "替换现有的服务"
+msgstr "替换已存在的服务"
 
 #: ../src/main.c:78
 msgid "Quit all instances"
@@ -145,7 +145,7 @@ msgstr "退出所有实例"
 
 #: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
-msgstr "不要试图使用或成为 D-Bus 服务"
+msgstr "不试图使用或成为 D-Bus 服务"
 
 #. close all windows and quit
 #: ../src/main.c:227
@@ -163,7 +163,7 @@ msgstr "输入 “%s --help” 获取用法。"
 
 #: ../src/main.c:516
 msgid "The Xfce development team. All rights reserved."
-msgstr "Xfce 开发团队。保留所以权利。"
+msgstr "Xfce 开发团队。保留所有权利。"
 
 #: ../src/main.c:517
 #, c-format
@@ -217,8 +217,10 @@ msgid ""
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
 msgstr ""
-"如果类型设置为前缀，会用此类型后的字符串替换 %s、用完整的条目文本替换 %S。对"
-"于正则表达您可以使用 \\0 和 \\<num>。"
+"如果此类型设置为前缀，会用此类型后的"
+"字符串替换 %s、用完整的条目文字替换 "
+"%S。对于正则表达您可以使用 \\0 和 "
+"\\<num>。"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Ite_m icon size:"
@@ -294,11 +296,12 @@ msgstr "类型(_T)："
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_View items as icons"
-msgstr "以图标方式查看(_V)："
+msgstr "以图标方式查看项目(_V)："
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "查找并启动您系统上安装的应用程序"
+msgstr ""
+"查找并启动您系统上安装的应用程序"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
