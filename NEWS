@@ -1,3 +1,20 @@
+4.9.3
+=====
+- Start in collapsed mode if xfrun4 symlink is used.
+- Select entry when Ctrl+L is pressed.
+- Quit the mainloop when receiving an exit signal.
+- Avoid xfconf error when closing windows on quit.
+- Add icon view mode and add preferences to set icon sizes.
+- Only show categories with items.
+- Add keybinds to switch modes (Ctrl-1 and Ctrl-2).
+- Improve reloading of items and directories.
+- Add popup menu to edit, hide and revert desktop files.
+- Add refcount debugging.
+- Remove xfrun from the utility menu.
+- Fix some segfaults.
+- Translation updates (ar, ca, cs, da, de, eu, fr, hu, is, it, kk,
+  ko, nl, pl, pt_BR, ru, te, zh_CN).
+
 4.9.2
 =====
 - Add option to save custom command matches.
@@ -67,36 +84,36 @@
 
 4.6.0
 ========
-- Try to load items from xfce-applications.menu before trying 
+- Try to load items from xfce-applications.menu before trying
   applications.menu in order to provide the same items as xfdesktop
   does (reported by Mark Trompell).
-- Translation updates: gl (Leandro Regueiro), id (Andhika Padmawan), 
+- Translation updates: gl (Leandro Regueiro), id (Andhika Padmawan),
   pl (Piotr Sokół), en_GB (Jeff Bailes), tr (Gökmen Görgen, Samed Beyribey),
   uk (Dmitry Nikitin)
-  
+
 
 4.5.99.1
 ========
-- Translation updates: da (Per Kongstad), es (Abel Martín), eu (Piarres 
-  Beobide), fr (Jérôme Guelfucci), ja (Masato Hashimoto), nb_NO (Terje 
-  Uriansrud), pt_BR (Og Maciel), sv (Alexander Toresson), zh_CN (Hunt 
+- Translation updates: da (Per Kongstad), es (Abel Martín), eu (Piarres
+  Beobide), fr (Jérôme Guelfucci), ja (Masato Hashimoto), nb_NO (Terje
+  Uriansrud), pt_BR (Og Maciel), sv (Alexander Toresson), zh_CN (Hunt
   Xu, Chris. K. Zhang).
 
 4.5.93
 ======
 - Assume "All" category if the current category string is empty (Bug #4613).
 - Review strings.
-- Translation updates: be (Alexander Nyakhaychyk), ca (Carles Muños Gorriz), 
-  cs (Michal Varady), da (Lars Nielsen), de (Fabian Nowak, Jannis Pohlmann), 
-  el (Stavros Giannouris), es (Abel Martín), eu (Piarres Beobide), fi (Jari 
-  Rahkonen), gl (Leandro Regueiro), ja (Nobuhiro Iwamatsu), sv (Daniel 
+- Translation updates: be (Alexander Nyakhaychyk), ca (Carles Muños Gorriz),
+  cs (Michal Varady), da (Lars Nielsen), de (Fabian Nowak, Jannis Pohlmann),
+  el (Stavros Giannouris), es (Abel Martín), eu (Piarres Beobide), fi (Jari
+  Rahkonen), gl (Leandro Regueiro), ja (Nobuhiro Iwamatsu), sv (Daniel
   Nylander), tr (Eren Turkay), uk (Dimitry Nikitin), zh_CN (Hunt Xu).
 
 4.5.92
 ======
 - Fix runtime warnings and toplevel menu items always being displayed
   on top of every category.
-- Translation updates: Carles Munõz Gorriz (ca), Abel Martín (es), 
+- Translation updates: Carles Munõz Gorriz (ca), Abel Martín (es),
   Maximilian Schleiss (fr), Andhika Padmawan (id), Terje Uriansrud (nb_NO).
 
 4.5.91
@@ -111,9 +128,9 @@
 4.5.90
 ======
 - Rewrite based on libxfce4menu.
-- Translations: Amharic, Arabic, Basque, Brazilian Portuguese, British English, 
-  Czech, Catalan, Finnish, French, Galician, German, Hungarian, Indonesian, 
-  Korean, Latvian, Polish, Portuguese, Sinhala, Slovak, Slovene, Turkish, 
+- Translations: Amharic, Arabic, Basque, Brazilian Portuguese, British English,
+  Czech, Catalan, Finnish, French, Galician, German, Hungarian, Indonesian,
+  Korean, Latvian, Polish, Portuguese, Sinhala, Slovak, Slovene, Turkish,
   Ukrainian.
 
 4.4.2
