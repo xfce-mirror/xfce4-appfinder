@@ -259,6 +259,9 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
       G_CALLBACK (xfce_appfinder_window_entry_activate), window);
   g_signal_connect (G_OBJECT (entry), "key-press-event",
       G_CALLBACK (xfce_appfinder_window_entry_key_press_event), window);
+  gtk_entry_set_icon_from_icon_name (GTK_ENTRY (entry),
+                                     GTK_ENTRY_ICON_SECONDARY,
+                                     GTK_STOCK_GO_DOWN);
   gtk_entry_set_icon_tooltip_text (GTK_ENTRY (entry),
                                    GTK_ENTRY_ICON_SECONDARY,
                                    _("Toggle view mode"));
