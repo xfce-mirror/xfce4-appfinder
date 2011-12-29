@@ -563,10 +563,14 @@ xfce_appfinder_category_model_row_separator_func (GtkTreeModel *tree_model,
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (tree_model), FALSE);
   appfinder_return_val_if_fail (iter->stamp == XFCE_APPFINDER_CATEGORY_MODEL (tree_model)->stamp, FALSE);
-  appfinder_return_val_if_fail (iter->user_data != NULL, FALSE);
 
-  item = ITER_GET_DATA (iter);
-  return (item->directory == NULL);
+  if (iter->user_data != NULL)
+    {
+      item = ITER_GET_DATA (iter);
+      return (item->directory == NULL);
+    }
+
+  return FALSE;
 }
 
 
