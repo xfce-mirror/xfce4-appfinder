@@ -266,7 +266,7 @@ msgstr "molto piccola"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Text besi_de icons"
-msgstr "Tes_to sotto alle icone"
+msgstr "Tes_to di fianco alle icone"
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Very Large"
