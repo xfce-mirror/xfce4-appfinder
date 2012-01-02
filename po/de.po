@@ -183,7 +183,7 @@ msgstr "Fenster immer z_entrieren"
 #: ../src/appfinder-preferences.glade.h:3
 #, fuzzy
 msgid "Appearance"
-msgstr "Aussehen"
+msgstr "Erscheinungsbild"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "Behaviour"
