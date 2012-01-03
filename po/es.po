@@ -64,7 +64,7 @@ msgstr "Esta seguro de querer limpiar el historial de comandos?"
 
 #: ../src/appfinder-preferences.c:322
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "La acción personalizada será borrada permanentemente."
 
 #: ../src/appfinder-preferences.c:323
 #, c-format
@@ -94,7 +94,7 @@ msgstr ""
 #: ../src/appfinder-window.c:789
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr ""
+msgstr "Está seguro de querer revertir \"%s\"?"
 
 #: ../src/appfinder-window.c:799
 #, fuzzy
@@ -117,12 +117,11 @@ msgstr "_Oculto"
 #: ../src/appfinder-window.c:838
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr ""
+msgstr "Está seguro de querer ocultar \"%s\"?"
 
 #: ../src/main.c:75
-#, fuzzy
 msgid "Start in collapsed mode"
-msgstr "Comenzar en modo extendido"
+msgstr "Comenzar en modo colapsado"
 
 #: ../src/main.c:76
 msgid "Print version information and exit"
@@ -165,11 +164,11 @@ msgstr "Por favor, informe de errores a <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
-msgstr ""
+msgstr "Agregar una nueva acción personalizada."
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "Siempre c_entrar la ventana"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Appearance"
@@ -191,7 +190,7 @@ msgstr "Categorías"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Centrar la ventana en el inicio."
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Co_mmand:"
@@ -227,7 +226,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Patte_rn:"
@@ -239,11 +238,11 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Prefix"
-msgstr ""
+msgstr "Prefijo"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Regular Expression"
-msgstr ""
+msgstr "Expresión Regular"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Remember last _selected category"
@@ -275,7 +274,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "_General"
-msgstr ""
+msgstr "_General"
 
 #: ../src/appfinder-preferences.glade.h:30
 #, fuzzy
@@ -284,11 +283,11 @@ msgstr "Historial de comandos"
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "_Type:"
-msgstr ""
+msgstr "_Tipo"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_View items as icons"
-msgstr ""
+msgstr "_Ver elementos como iconos"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
