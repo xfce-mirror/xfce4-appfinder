@@ -100,9 +100,9 @@ msgid ""
 msgstr "Ваш desktop файл будет навсегда удален из вашей домашней директории."
 
 #: ../src/appfinder-window.c:789
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Удалить шаблон \"%s\"?"
+msgstr "Обратить шаблон \"%s\"?"
 
 #: ../src/appfinder-window.c:799
 msgid "Failed to remove desktop file"
