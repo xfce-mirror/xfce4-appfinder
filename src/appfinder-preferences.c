@@ -181,11 +181,18 @@ xfce_appfinder_preferences_response (GtkWidget                *window,
   appfinder_return_if_fail (GTK_IS_DIALOG (window));
   appfinder_return_if_fail (XFCE_IS_APPFINDER_PREFERENCES (preferences));
 
-  g_signal_handler_disconnect (preferences->channel, preferences->property_watch_id);
+  if (response_id == GTK_RESPONSE_HELP)
+    {
+      xfce_dialog_show_help (GTK_WINDOW (window), "xfce4-appfinder", "preferences", NULL);
+    }
+  else
+    {
+      g_signal_handler_disconnect (preferences->channel, preferences->property_watch_id);
 
-  gtk_widget_destroy (window);
+      gtk_widget_destroy (window);
 
-  g_object_unref (G_OBJECT (preferences));
+      g_object_unref (G_OBJECT (preferences));
+    }
 }
 
 
