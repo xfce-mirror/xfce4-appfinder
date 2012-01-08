@@ -112,29 +112,28 @@ msgstr ""
 
 #: ../src/appfinder-window.c:837 ../src/appfinder-window.c:922
 msgid "_Hide"
-msgstr ""
+msgstr "_Ocultar"
 
 #: ../src/appfinder-window.c:838
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr ""
+msgstr "Tem a certeza que pretende ocultar \"%s\"?"
 
 #: ../src/main.c:75
 msgid "Start in collapsed mode"
-msgstr ""
+msgstr "Iniciar no modo recolhido"
 
 #: ../src/main.c:76
-#, fuzzy
 msgid "Print version information and exit"
-msgstr "Informações da versão"
+msgstr "Imprimir informações da versão e sair"
 
 #: ../src/main.c:77
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Substituir o serviço existente"
 
 #: ../src/main.c:78
 msgid "Quit all instances"
-msgstr ""
+msgstr "Sair de todas as instâncias"
 
 #: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
@@ -150,7 +149,7 @@ msgid "Unable to daemonize the process"
 msgstr ""
 
 #: ../src/main.c:505
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Digite \"%s --help\" para informações de utilização."
 
@@ -165,11 +164,11 @@ msgstr "Por favor, reporte os erros em <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
-msgstr ""
+msgstr "Adicionar uma acção personalizada."
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "C_entrar sempre a janela"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Appearance"
@@ -184,13 +183,12 @@ msgid "C_lear Custom Command History"
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Categ_ory icon size:"
-msgstr "Categorias"
+msgstr "Tamanh_o dos ícones das categorias:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Centrar janela ao iniciar."
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Co_mmand:"
@@ -198,7 +196,7 @@ msgstr "Co_mando:"
 
 #: ../src/appfinder-preferences.glade.h:10
 msgid "Custom _Actions"
-msgstr ""
+msgstr "_Acções personalizadas"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "History"
@@ -214,7 +212,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Ite_m icon size:"
-msgstr ""
+msgstr "Tamanho dos ícones dos ite_ns:"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Large"
