@@ -173,11 +173,11 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Appearance"
-msgstr ""
+msgstr "Aparência"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "Behaviour"
-msgstr ""
+msgstr "Comportamento"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "C_lear Custom Command History"
@@ -194,7 +194,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Co_mmand:"
-msgstr ""
+msgstr "Co_mando:"
 
 #: ../src/appfinder-preferences.glade.h:10
 msgid "Custom _Actions"
@@ -202,7 +202,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "History"
-msgstr ""
+msgstr "Histórico"
 
 #: ../src/appfinder-preferences.glade.h:13
 #, no-c-format
@@ -225,24 +225,25 @@ msgid "Larger"
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:17
+#, fuzzy
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Patte_rn:"
-msgstr ""
+msgstr "Pad_rão:"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Pattern"
-msgstr ""
+msgstr "Padrão"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Prefix"
-msgstr ""
+msgstr "Prefixo"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Regular Expression"
-msgstr ""
+msgstr "Expressão normal"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Remember last _selected category"
@@ -274,7 +275,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "_General"
-msgstr ""
+msgstr "_Geral"
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "_Save match in command history"
@@ -282,7 +283,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "_Type:"
-msgstr ""
+msgstr "_Tipo:"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_View items as icons"
@@ -294,11 +295,11 @@ msgstr "Procura e inicia as aplicações instaladas no seu sistema"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr ""
+msgstr "Executar programa..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr ""
+msgstr "Executar um programa"
 
 #~ msgid "[MENUFILE]"
 #~ msgstr "[MENUFICHEIRO]"
