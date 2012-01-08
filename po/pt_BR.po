@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-17 14:54+0000\n"
+"POT-Creation-Date: 2012-01-08 17:09+0000\n"
 "PO-Revision-Date: 2011-04-21 12:13-0300\n"
 "Last-Translator: Sérgio Cipolla <secipolla@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
@@ -18,104 +18,145 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
 
-#: ../src/appfinder-category-model.c:108
+#: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "Todos os aplicativos"
 
-#: ../src/appfinder-model.c:438
+#: ../src/appfinder-model.c:540
 msgid "Name"
 msgstr "Nome"
 
-#: ../src/appfinder-model.c:439
+#: ../src/appfinder-model.c:541
+msgid "Comment"
+msgstr "Comentário"
+
+#: ../src/appfinder-model.c:542
 msgid "Command"
 msgstr "Comando"
 
-#: ../src/appfinder-model.c:440
+#: ../src/appfinder-model.c:543
 msgid "Categories"
 msgstr "Categorias"
 
-#: ../src/appfinder-model.c:441
+#: ../src/appfinder-model.c:544
 msgid "Filename"
 msgstr "Nome do arquivo"
 
-#: ../src/appfinder-model.c:1598
+#: ../src/appfinder-model.c:1820
 msgid "Application has no command"
 msgstr "O aplicativo não tem comando"
 
-#: ../src/appfinder-model.c:1900
+#: ../src/appfinder-model.c:2137
 msgid "Commands History"
 msgstr "Histórico de comandos"
 
-#: ../src/appfinder-preferences.c:175
+#: ../src/appfinder-preferences.c:217
 msgid "C_lear"
 msgstr "_Limpar"
 
-#: ../src/appfinder-preferences.c:176
+#: ../src/appfinder-preferences.c:218
 msgid "This will permanently clear the custom command history."
 msgstr "Isto irá limpar permanentemente o histórico de comandos."
 
-#: ../src/appfinder-preferences.c:177
+#: ../src/appfinder-preferences.c:219
 msgid "Are you sure you want to clear the command history?"
 msgstr "Você tem certeza de que quer limpar o histórico de comandos?"
 
-#: ../src/appfinder-preferences.c:287
+#: ../src/appfinder-preferences.c:329
 msgid "The custom action will be deleted permanently."
 msgstr "A ação personalizada será excluída permanentemente."
 
-#: ../src/appfinder-preferences.c:288
+#: ../src/appfinder-preferences.c:330
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Você tem certeza de que quer excluir o padrão \"%s\"?"
 
-#: ../src/appfinder-window.c:190 ../src/main.c:344
-#: ../src/appfinder-preferences.glade.h:3
+#: ../src/appfinder-window.c:216 ../src/main.c:429
+#: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Localizador de aplicativos"
 
-#: ../src/appfinder-window.c:231
+#: ../src/appfinder-window.c:267
 msgid "Toggle view mode"
 msgstr "Alternar modo de visão"
 
-#: ../src/main.c:70
+#: ../src/appfinder-window.c:762
+msgid "Failed to launch desktop item editor"
+msgstr "Falha ao lançar o editor de item do desktop"
+
+#: ../src/appfinder-window.c:788
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr "Isto irá remover permanentemente o arquivo de área de trabalho personalizado de seu diretório \"home\"."
+
+#: ../src/appfinder-window.c:789
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr "Você tem certeza de que quer reverter \"%s\"?"
+
+#: ../src/appfinder-window.c:799
+msgid "Failed to remove desktop file"
+msgstr "Falha ao remover arquivo de área de trabalho"
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: ../src/appfinder-window.c:832
+#, c-format
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr "Para mostrar o item, você tem que manualmente remover o arquivo de área de trabalho de \"%s\" ou abrir o arquivo no mesmo diretório e remover a linha \"%s\"."
+
+#: ../src/appfinder-window.c:837 ../src/appfinder-window.c:922
+msgid "_Hide"
+msgstr "_Ocultar"
+
+#: ../src/appfinder-window.c:838
+#, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr "Você tem certeza de que quer ocultar \"%s\"?"
+
+#: ../src/main.c:75
 msgid "Start in collapsed mode"
 msgstr "Iniciar no modo recolhido"
 
-#: ../src/main.c:71
+#: ../src/main.c:76
 msgid "Print version information and exit"
 msgstr "Imprime Informações da versão e sai"
 
-#: ../src/main.c:72
+#: ../src/main.c:77
 msgid "Replace the existing service"
 msgstr "Substitui o serviço existente"
 
-#: ../src/main.c:73
+#: ../src/main.c:78
 msgid "Quit all instances"
 msgstr "Fechar todas as instâncias"
 
-#: ../src/main.c:74
+#: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Não tentar usar ou se tornar um serviço D-Bus"
 
 #. close all windows and quit
-#: ../src/main.c:159
+#: ../src/main.c:227
 msgid "Forced to quit"
 msgstr "Forçado a sair"
 
-#: ../src/main.c:346
+#: ../src/main.c:431
 msgid "Unable to daemonize the process"
 msgstr "Impossível colocar o processo em modo daemon"
 
-#: ../src/main.c:418
+#: ../src/main.c:505
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Digite \"%s --help\" para opções de uso."
 
-#: ../src/main.c:429
+#: ../src/main.c:516
 msgid "The Xfce development team. All rights reserved."
 msgstr "O time de desenvolvedores do Xfce. Todos os direitos reservados."
 
-#: ../src/main.c:430
+#: ../src/main.c:517
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Por favor, envie relatórios sobre erros para <%s>."
@@ -128,31 +169,39 @@ msgstr "Adicionar uma nova ação personalizada."
 msgid "Always c_enter the window"
 msgstr "Sempre c_entralizar a janela"
 
-#: ../src/appfinder-preferences.glade.h:4
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Appearance"
+msgstr "Aparência"
+
+#: ../src/appfinder-preferences.glade.h:5
 msgid "Behaviour"
 msgstr "Comportamento"
 
-#: ../src/appfinder-preferences.glade.h:5
+#: ../src/appfinder-preferences.glade.h:6
 msgid "C_lear Custom Command History"
 msgstr "Li_mpar Histórico de comandos personalizado"
 
-#: ../src/appfinder-preferences.glade.h:6
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Categ_ory icon size:"
+msgstr "Tamanho do ícone de categ_orias:"
+
+#: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
 msgstr "Centraliza a janela no início."
 
-#: ../src/appfinder-preferences.glade.h:7
+#: ../src/appfinder-preferences.glade.h:9
 msgid "Co_mmand:"
 msgstr "C_omando:"
 
-#: ../src/appfinder-preferences.glade.h:8
+#: ../src/appfinder-preferences.glade.h:10
 msgid "Custom _Actions"
 msgstr "_Ações personalizadas"
 
-#: ../src/appfinder-preferences.glade.h:9
+#: ../src/appfinder-preferences.glade.h:11
 msgid "History"
 msgstr "Histórico"
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:13
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -163,41 +212,81 @@ msgstr ""
 "após o padrão, %S com o texto digitado por completo. Para expressões "
 "regulares, você pode usar \\0 e \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:12
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Ite_m icon size:"
+msgstr "Ta_manho do ícone de ítens:"
+
+#: ../src/appfinder-preferences.glade.h:15
+msgid "Large"
+msgstr "Grande"
+
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Larger"
+msgstr "Maior"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "Normal"
+msgstr "Normal"
+
+#: ../src/appfinder-preferences.glade.h:18
 msgid "Patte_rn:"
 msgstr "_Padrão:"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:19
 msgid "Pattern"
 msgstr "Padrão"
 
-#: ../src/appfinder-preferences.glade.h:14
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Prefix"
 msgstr "Prefixo"
 
-#: ../src/appfinder-preferences.glade.h:15
+#: ../src/appfinder-preferences.glade.h:21
 msgid "Regular Expression"
 msgstr "Expressão regular"
 
-#: ../src/appfinder-preferences.glade.h:16
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Remember last _selected category"
 msgstr "Lembrar última categoria _selecionada"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: ../src/appfinder-preferences.glade.h:23
 msgid "Remove the currently selected action."
 msgstr "Remove a ação atualmente selecionada."
 
-#: ../src/appfinder-preferences.glade.h:18
+#: ../src/appfinder-preferences.glade.h:24
+msgid "Small"
+msgstr "Pequeno"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Smaller"
+msgstr "Minúsculo"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Text besi_de icons"
+msgstr "Te_xto ao lado dos ícones"
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Very Large"
+msgstr "Muito grande"
+
+#: ../src/appfinder-preferences.glade.h:28
+msgid "Very Small"
+msgstr "Muito pequeno"
+
+#: ../src/appfinder-preferences.glade.h:29
 msgid "_General"
 msgstr "_Geral"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:30
 msgid "_Save match in command history"
 msgstr "_Salvar correspondente no histórico de comandos"
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:31
 msgid "_Type:"
 msgstr "_Tipo:"
+
+#: ../src/appfinder-preferences.glade.h:32
+msgid "_View items as icons"
+msgstr "_Ver ítens como ícones"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -264,9 +353,6 @@ msgstr "Executa um programa"
 
 #~ msgid "Find applications installed on the system."
 #~ msgstr "Localize aplicativos instalados no sistema."
-
-#~ msgid "Failed to open display"
-#~ msgstr "Falhou ao abrir exibição"
 
 #~ msgid "Copyright (c) 2008"
 #~ msgstr "Copyright (c) 2008"
