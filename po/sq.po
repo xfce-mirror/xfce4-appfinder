@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-16 16:52+0100\n"
-"PO-Revision-Date: 2009-09-25 16:58+0200\n"
+"PO-Revision-Date: 2012-01-10 21:11+0200\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <translation-team-sq@lists.sourceforge.net>\n"
 "Language: sq\n"
@@ -51,11 +51,13 @@ msgstr "Dështoi në lidhjen me demonin xfconf. Arsyeja: %s"
 msgid "Failed to connect to xfconf daemon."
 msgstr "Dështoi lidhja me demonin  xfconf."
 
-#: ../src/xfce-appfinder-window.c:217 ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/xfce-appfinder-window.c:217
+#: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Gjetës Zbatimesh"
 
-#: ../src/xfce-appfinder-window.c:219 ../data/xfce4-appfinder.desktop.in.h:2
+#: ../src/xfce-appfinder-window.c:219
+#: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Gjeni dhe nisni zbatime të instaluar në sistemin tuaj"
 
@@ -68,38 +70,38 @@ msgid "Categories"
 msgstr "Kategori"
 
 #: ../src/xfce-appfinder-window.c:320
-#, fuzzy
 msgid "C_lose after launch"
-msgstr "_Mbylle pas ekzekutimit"
+msgstr "_Mbylle pas nisjes"
 
 #: ../src/xfce-appfinder-window.c:328
 msgid "Launch"
-msgstr ""
+msgstr "Nise"
 
 #: ../src/xfce-appfinder-window.c:458
 #, c-format
 msgid "Could not load menu from %s"
 msgstr "S'ngarkoi dot menu prej %s"
 
-#: ../src/xfce-appfinder-window.c:470 ../src/xfce-appfinder-window.c:477
+#: ../src/xfce-appfinder-window.c:470
+#: ../src/xfce-appfinder-window.c:477
 #: ../src/xfce-appfinder-window.c:1115
 msgid "All"
 msgstr "Tërë"
 
 #: ../src/xfce-appfinder-window.c:793
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to execute command \"%s\"."
-msgstr "Nuk përmbush dot zbatimin %s"
+msgstr "Nuk përmbushi dot urdhrin \"%s\"."
 
 #: ../src/xfce-appfinder-window.c:951
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Categories:</b> %s"
-msgstr "<b>Kategori</b> "
+msgstr "<b>Kategori:</b> %s"
 
 #: ../src/xfce-appfinder-window.c:962
-#, fuzzy, c-format
+#, c-format
 msgid "<b>Command:</b> %s"
-msgstr "<b>Urdhër</b> "
+msgstr "<b>Urdhër:</b> %s"
 
 #~ msgid "Could not load system menu"
 #~ msgstr "S'ngarkoi dot menu sistemi"
