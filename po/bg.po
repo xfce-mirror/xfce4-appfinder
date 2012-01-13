@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder.xfce-4-8\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-13 12:12+0000\n"
-"PO-Revision-Date: 2012-01-13 18:27+0200\n"
+"PO-Revision-Date: 2012-01-13 18:43+0200\n"
 "Last-Translator: Milen Milev <fanfolet@gmail.com>\n"
 "Language-Team: BULGARIAN\n"
 "Language: \n"
@@ -62,7 +62,7 @@ msgstr "Търсене на програми"
 #: ../src/xfce-appfinder-window.c:219
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Намера и стартира програма инсталирана на Вашата система"
+msgstr "Намира и стартира програма инсталирана на Вашата система"
 
 #: ../src/xfce-appfinder-window.c:242
 msgid "Search"
