@@ -8,40 +8,40 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-30 05:06+0000\n"
-"PO-Revision-Date: 2011-10-30 16:05+0800\n"
+"POT-Creation-Date: 2011-09-24 04:12+0000\n"
+"PO-Revision-Date: 2011-09-24 14:23+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
-"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
 
 #: ../src/appfinder-category-model.c:108
 msgid "All Applications"
 msgstr "所有應用程式"
 
-#: ../src/appfinder-model.c:438
+#: ../src/appfinder-model.c:422
 msgid "Name"
 msgstr "名稱"
 
-#: ../src/appfinder-model.c:439
+#: ../src/appfinder-model.c:423
 msgid "Command"
 msgstr "指令"
 
-#: ../src/appfinder-model.c:440
+#: ../src/appfinder-model.c:424
 msgid "Categories"
 msgstr "類別"
 
-#: ../src/appfinder-model.c:441
+#: ../src/appfinder-model.c:425
 msgid "Filename"
 msgstr "檔案名稱"
 
-#: ../src/appfinder-model.c:1570
+#: ../src/appfinder-model.c:1317
 msgid "Application has no command"
 msgstr "應用程式沒有指令"
 
-#: ../src/appfinder-model.c:1872
+#: ../src/appfinder-model.c:1634
 msgid "Commands History"
 msgstr "指令歷史"
 
@@ -66,14 +66,14 @@ msgstr "自訂動作會永遠刪除。"
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "您確定要刪除「%s」樣式？"
 
-#: ../src/appfinder-window.c:186
+#: ../src/appfinder-window.c:183
 #: ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "應用程式協尋器"
 
-#: ../src/appfinder-window.c:227
+#: ../src/appfinder-window.c:224
 msgid "Toggle view mode"
 msgstr "切換檢視模式"
 
@@ -186,10 +186,6 @@ msgid "_General"
 msgstr "一般(_G)"
 
 #: ../src/appfinder-preferences.glade.h:19
-msgid "_Save match in command history"
-msgstr "儲存指令歷史中符合的項目(_L)"
-
-#: ../src/appfinder-preferences.glade.h:20
 msgid "_Type:"
 msgstr "類型(_T)："
 
