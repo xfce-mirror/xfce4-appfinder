@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-31 08:18+0000\n"
+"POT-Creation-Date: 2012-01-18 05:27+0000\n"
 "PO-Revision-Date: 2009-01-30 18:10+0200\n"
 "Last-Translator: Gökmen Görgen <gkmngrgn@gmail.com>\n"
 "Language-Team: Turkish <turkce@pardus.org.tr>\n"
@@ -53,23 +53,23 @@ msgstr "Uygulama herhangi bir komuta sahip değil"
 msgid "Commands History"
 msgstr "Komutlar Geçmişi"
 
-#: ../src/appfinder-preferences.c:210
+#: ../src/appfinder-preferences.c:217
 msgid "C_lear"
 msgstr "T_emizle"
 
-#: ../src/appfinder-preferences.c:211
+#: ../src/appfinder-preferences.c:218
 msgid "This will permanently clear the custom command history."
 msgstr "Komut geçmişini kalıcı olarak temizleyecek."
 
-#: ../src/appfinder-preferences.c:212
+#: ../src/appfinder-preferences.c:219
 msgid "Are you sure you want to clear the command history?"
 msgstr "Komut geçmişini temizlemek istediğinizden emin misiniz?"
 
-#: ../src/appfinder-preferences.c:322
+#: ../src/appfinder-preferences.c:329
 msgid "The custom action will be deleted permanently."
 msgstr ""
 
-#: ../src/appfinder-preferences.c:323
+#: ../src/appfinder-preferences.c:330
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "\"%s\" desenini silmek istediğinize emin misiniz?"
@@ -249,11 +249,11 @@ msgstr "Düzenli İfade"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Son seçilen bölümü _hatırla"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Şu anda seçilmiş işlemi sil"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Small"
