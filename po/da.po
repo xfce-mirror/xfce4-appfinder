@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce-4-appfinder 4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-10 20:54+0000\n"
+"POT-Creation-Date: 2012-01-19 21:42+0000\n"
 "PO-Revision-Date: 2009-10-21 20:33+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -88,16 +88,15 @@ msgid "Failed to launch desktop item editor"
 msgstr "Kunne ikke indlæse redigering af skrivebordet"
 
 #: ../src/appfinder-window.c:788
-#, fuzzy
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Det vil rydde din historik over tilpassede kommandoer permanent"
+msgstr "Det vil permanent fjerne din tilpassede skrivbordsfil fra din hjemmemappe."
 
 #: ../src/appfinder-window.c:789
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Er du sikker på at du vil slette mønstret \"%s\"?"
+msgstr "Er du sikker på at du vil vende tilbage til \"%s\"?"
 
 #: ../src/appfinder-window.c:799
 msgid "Failed to remove desktop file"
@@ -117,9 +116,9 @@ msgid "_Hide"
 msgstr "_Skjul"
 
 #: ../src/appfinder-window.c:838
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Er du sikker på at du vil slette mønstret \"%s\"?"
+msgstr "Er du sikker på at du vil skjule \"%s\"?"
 
 #: ../src/main.c:75
 msgid "Start in collapsed mode"
@@ -185,9 +184,8 @@ msgid "C_lear Custom Command History"
 msgstr "Ryd tilpassede kommandohistorik"
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Categ_ory icon size:"
-msgstr "Kategorier"
+msgstr "Kategorie_ikonstørrelse:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
@@ -218,7 +216,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Ite_m icon size:"
-msgstr ""
+msgstr "Ele_mentikonstørrelse:"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Large"
@@ -266,7 +264,7 @@ msgstr "Mindre"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Text besi_de icons"
-msgstr ""
+msgstr "Tekst ved _siden af ikoner"
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Very Large"
@@ -290,7 +288,7 @@ msgstr "_Type:"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_View items as icons"
-msgstr ""
+msgstr "_Fremvis elementer som ikoner"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
