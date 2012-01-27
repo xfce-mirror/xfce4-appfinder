@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-02 15:12+0000\n"
+"POT-Creation-Date: 2012-01-27 14:48+0000\n"
 "PO-Revision-Date: 2009-01-02 13:33+0100\n"
 "Last-Translator: Jannis Pohlmann <jannis@xfce.org>\n"
 "Language-Team: German <de@li.org>\n"
@@ -31,7 +31,7 @@ msgstr "Name"
 #: ../src/appfinder-model.c:541
 #, fuzzy
 msgid "Comment"
-msgstr "Befehl"
+msgstr "Kommentar"
 
 #: ../src/appfinder-model.c:542
 msgid "Command"
@@ -53,24 +53,24 @@ msgstr "Anwendung hat keinen Befehl"
 msgid "Commands History"
 msgstr "Befehlsverlauf"
 
-#: ../src/appfinder-preferences.c:210
+#: ../src/appfinder-preferences.c:217
 msgid "C_lear"
 msgstr "_Leeren"
 
-#: ../src/appfinder-preferences.c:211
+#: ../src/appfinder-preferences.c:218
 msgid "This will permanently clear the custom command history."
 msgstr ""
 "Dies wird den Verlauf der benutzerdefinierten Befehle dauerhaft löschen."
 
-#: ../src/appfinder-preferences.c:212
+#: ../src/appfinder-preferences.c:219
 msgid "Are you sure you want to clear the command history?"
 msgstr "Soll der Befehlsverlauf wirklich gelöscht werden?"
 
-#: ../src/appfinder-preferences.c:322
+#: ../src/appfinder-preferences.c:329
 msgid "The custom action will be deleted permanently."
 msgstr "Die benutzerdefinierte Aktion wird dauerhaft gelöscht."
 
-#: ../src/appfinder-preferences.c:323
+#: ../src/appfinder-preferences.c:330
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Soll das Muster »%s« wirklich gelöscht werden?"
@@ -86,8 +86,9 @@ msgid "Toggle view mode"
 msgstr "Ansichtsmodus umstellen"
 
 #: ../src/appfinder-window.c:762
+#, fuzzy
 msgid "Failed to launch desktop item editor"
-msgstr ""
+msgstr "Der Editor für die Starter konnte nicht aufgerufen werden"
 
 #: ../src/appfinder-window.c:788
 #, fuzzy
@@ -100,21 +101,21 @@ msgstr ""
 #: ../src/appfinder-window.c:789
 #, fuzzy, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Soll das Muster »%s« wirklich gelöscht werden?"
+msgstr "Soll »%s« wirklich zurückgesetzt werden?"
 
 #: ../src/appfinder-window.c:799
 #, fuzzy
 msgid "Failed to remove desktop file"
-msgstr "Konnte Display nicht öffnen"
+msgstr "Starter konnte nicht gelöscht werden"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
 #: ../src/appfinder-window.c:832
-#, c-format
+#, c-format, fuzzy
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
+msgstr "Um den Eintrag anzuzeigen, müssen Sie den Starter manuell aus »%s« löschen oder die Datei öffnen und die Zeile »%s« entfernen."
 
 #: ../src/appfinder-window.c:837 ../src/appfinder-window.c:922
 #, fuzzy
@@ -124,7 +125,7 @@ msgstr "_Verstecken"
 #: ../src/appfinder-window.c:838
 #, fuzzy, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Soll das Muster »%s« wirklich gelöscht werden?"
+msgstr "Soll »%s« wirklich versteckt werden?"
 
 #: ../src/main.c:75
 #, fuzzy
@@ -196,7 +197,7 @@ msgstr "Befehlsverlauf _löschen"
 #: ../src/appfinder-preferences.glade.h:7
 #, fuzzy
 msgid "Categ_ory icon size:"
-msgstr "Kategorien"
+msgstr "Kategoriesymbole:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
@@ -226,8 +227,9 @@ msgstr ""
 "Ausdrücke kann \\0 and \\<num> verwendet werden."
 
 #: ../src/appfinder-preferences.glade.h:14
+#, fuzzy
 msgid "Ite_m icon size:"
-msgstr ""
+msgstr "Anwendungssymbole:"
 
 #: ../src/appfinder-preferences.glade.h:15
 #, fuzzy
@@ -281,7 +283,7 @@ msgstr "Kleiner"
 #: ../src/appfinder-preferences.glade.h:26
 #, fuzzy
 msgid "Text besi_de icons"
-msgstr "Text neben Symbolen"
+msgstr "Text neben _den Symbolen"
 
 #: ../src/appfinder-preferences.glade.h:27
 #, fuzzy
@@ -306,8 +308,9 @@ msgid "_Type:"
 msgstr "_Typ:"
 
 #: ../src/appfinder-preferences.glade.h:32
+#, fuzzy
 msgid "_View items as icons"
-msgstr ""
+msgstr "Einträge als _Symbole anzeigen"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
