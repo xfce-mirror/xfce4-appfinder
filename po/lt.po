@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-09 04:39+0000\n"
-"PO-Revision-Date: 2012-01-09 11:38+0200\n"
+"POT-Creation-Date: 2012-01-28 02:24+0000\n"
+"PO-Revision-Date: 2012-01-28 08:42+0200\n"
 "Last-Translator: Algimantas Margevičius <margevicius.algimantas@gmail.com>\n"
 "Language-Team: Lietuvių <>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bits\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2)\n"
 
@@ -160,12 +160,12 @@ msgstr "Rašykite „%s --help” norėdami gauti informaciją apie naudojimą."
 
 #: ../src/main.c:516
 msgid "The Xfce development team. All rights reserved."
-msgstr "Xfce kūrimo komanda. Visos teisės saugomos."
+msgstr "Xfce kūrėjų komanda. Visos teisės saugomos."
 
 #: ../src/main.c:517
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Prašome pranešti apie klaidą į <%s>."
+msgstr "Apie klaidas pranešti <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
@@ -173,7 +173,7 @@ msgstr "Pridėti naują pasirinktinį veiksmą."
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
-msgstr "Visada centruoti langą"
+msgstr "Visada _centruoti langą"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Appearance"
