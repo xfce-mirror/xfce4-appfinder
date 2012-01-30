@@ -171,8 +171,9 @@ msgid "Add a new custom action."
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:2
+#, fuzzy
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "Pencereyi her zaman o_rtala"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Appearance"
@@ -193,8 +194,9 @@ msgid "Categ_ory icon size:"
 msgstr "Sınıflandırmalar"
 
 #: ../src/appfinder-preferences.glade.h:8
+#, fuzzy
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Açılışta pencereyi ortala."
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Co_mmand:"
