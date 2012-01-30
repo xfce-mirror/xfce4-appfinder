@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-18 05:27+0000\n"
+"POT-Creation-Date: 2012-01-30 18:12+0000\n"
 "PO-Revision-Date: 2009-01-30 18:10+0200\n"
 "Last-Translator: Gökmen Görgen <gkmngrgn@gmail.com>\n"
 "Language-Team: Turkish <turkce@pardus.org.tr>\n"
@@ -131,8 +131,9 @@ msgid "Print version information and exit"
 msgstr "Sürüm bilgisini yaz ve çık"
 
 #: ../src/main.c:77
+#, fuzzy
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Varolan servisi değiştir"
 
 #: ../src/main.c:78
 msgid "Quit all instances"
@@ -217,7 +218,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Ite_m icon size:"
-msgstr ""
+msgstr "Öğ_e simge boyutu:"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Large"
@@ -264,8 +265,9 @@ msgid "Smaller"
 msgstr "Daha Küçük"
 
 #: ../src/appfinder-preferences.glade.h:26
+#, fuzzy
 msgid "Text besi_de icons"
-msgstr ""
+msgstr "Simgelerin yanın_da metin"
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Very Large"
@@ -281,15 +283,16 @@ msgstr "_Genel"
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "_Save match in command history"
-msgstr ""
+msgstr "_Eşleşmeleri komut geçmişinde sakla"
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "_Type:"
 msgstr "_Tip:"
 
 #: ../src/appfinder-preferences.glade.h:32
+#, fuzzy
 msgid "_View items as icons"
-msgstr ""
+msgstr "_Öğeleri simge olarak gör"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
