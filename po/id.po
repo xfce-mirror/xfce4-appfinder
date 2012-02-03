@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-14 05:24+0000\n"
+"POT-Creation-Date: 2012-02-03 09:12+0000\n"
 "PO-Revision-Date: 2009-01-27 22:28+0700\n"
 "Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
@@ -105,7 +105,10 @@ msgstr "Gagal menghapus berkas desktop"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Untuk menampilkan kembali item ini, anda harus menghapus berkas desktop dari \"%s\" atau membuka berkas tersebut di folder yang sama dan menghapus baris \"%s\"."
+msgstr ""
+"Untuk menampilkan kembali item ini, anda harus menghapus berkas desktop dari "
+"\"%s\" atau membuka berkas tersebut di folder yang sama dan menghapus baris "
+"\"%s\"."
 
 #: ../src/appfinder-window.c:837 ../src/appfinder-window.c:922
 msgid "_Hide"
@@ -130,7 +133,7 @@ msgstr "Ganti servis yang ada"
 
 #: ../src/main.c:78
 msgid "Quit all instances"
-msgstr ""
+msgstr "Hentikan semua instansi"
 
 #: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
@@ -139,16 +142,16 @@ msgstr "Jangan menggunakan atau memanipulasi servis D-Bus"
 #. close all windows and quit
 #: ../src/main.c:227
 msgid "Forced to quit"
-msgstr ""
+msgstr "Paksa berhenti"
 
 #: ../src/main.c:431
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "Tak dapat menjurik proses"
 
 #: ../src/main.c:505
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Ketik '%s --help' untuk informasi penggunaan"
+msgstr "Ketik \"%s --help\" untuk penggunaan."
 
 #: ../src/main.c:516
 msgid "The Xfce development team. All rights reserved."
@@ -161,44 +164,43 @@ msgstr "Silakan laporkan kutu ke <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
-msgstr ""
+msgstr "Tambah aksi suai baru."
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "Selalu t_engahkan jendela"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Appearance"
-msgstr ""
+msgstr "Tampilan"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "Behaviour"
-msgstr ""
+msgstr "Perilaku"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "C_lear Custom Command History"
-msgstr ""
+msgstr "H_apus Riwayat Perintah Suai"
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Categ_ory icon size:"
-msgstr "Kategori"
+msgstr "Kategori ukuran ikon:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Tengahkan jendela saat hidupkan."
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Co_mmand:"
-msgstr ""
+msgstr "P_erintah:"
 
 #: ../src/appfinder-preferences.glade.h:10
 msgid "Custom _Actions"
-msgstr ""
+msgstr "_Aksi Suai"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "History"
-msgstr ""
+msgstr "Riwayat"
 
 #: ../src/appfinder-preferences.glade.h:13
 #, no-c-format
@@ -206,83 +208,83 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Jika tipe diatur ke awalan, %s akan digantikan dengan tali setelah pola, %S dengan teks entri lengkap. Untuk ekspresi reguler anda dapat menggunakan \\0 dan \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Ite_m icon size:"
-msgstr ""
+msgstr "Ite_m ukuran ikon:"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Large"
-msgstr ""
+msgstr "Besar"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Larger"
-msgstr ""
+msgstr "Lebih Besar"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Patte_rn:"
-msgstr ""
+msgstr "Po_la:"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Pattern"
-msgstr ""
+msgstr "Pola"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Prefix"
-msgstr ""
+msgstr "Awalan"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Regular Expression"
-msgstr ""
+msgstr "Ekspresi Reguler"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Ingat kategori _terpilih terakhir"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Hapus aksi terpilih saat ini."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Small"
-msgstr ""
+msgstr "Kecil"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Smaller"
-msgstr ""
+msgstr "Lebih Kecil"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Text besi_de icons"
-msgstr ""
+msgstr "T_eks di samping ikon"
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Very Large"
-msgstr ""
+msgstr "Sangat Besar"
 
 #: ../src/appfinder-preferences.glade.h:28
 msgid "Very Small"
-msgstr ""
+msgstr "Sangat Kecil"
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "_General"
-msgstr ""
+msgstr "_Umum"
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "_Save match in command history"
-msgstr ""
+msgstr "_Simpan kecocokan di riwayat perintah"
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "_Type:"
-msgstr ""
+msgstr "_Tipe:"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_View items as icons"
-msgstr ""
+msgstr "Tampilkan _item sebagai ikon"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -290,11 +292,11 @@ msgstr "Mencari dan menjalankan aplikasi terinstal di sistem anda"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr ""
+msgstr "Jalankan Program..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr ""
+msgstr "Jalankan program"
 
 #~ msgid "[MENUFILE]"
 #~ msgstr "[MENUBERKAS]"
