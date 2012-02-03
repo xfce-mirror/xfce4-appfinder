@@ -114,9 +114,9 @@ msgid "_Hide"
 msgstr "_Masquer"
 
 #: ../src/appfinder-window.c:838
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Êtes-vous sûr de vouloir supprimer le motif « %s » ?"
+msgstr "Êtes-vous sûr de vouloir masquer « %s » ?"
 
 #: ../src/main.c:75
 msgid "Start in collapsed mode"
