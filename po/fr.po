@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.6 RC1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-05 10:18+0000\n"
+"POT-Creation-Date: 2012-02-03 09:12+0000\n"
 "PO-Revision-Date: 2009-11-30 20:40+0100\n"
 "Last-Translator: Jérôme Guelfucci <jeromeg@xfce.org>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
@@ -26,9 +26,8 @@ msgid "Name"
 msgstr "Nom"
 
 #: ../src/appfinder-model.c:541
-#, fuzzy
 msgid "Comment"
-msgstr "Commande"
+msgstr "Commentaire"
 
 #: ../src/appfinder-model.c:542
 msgid "Command"
@@ -50,23 +49,23 @@ msgstr "L'application n'a pas de commande"
 msgid "Commands History"
 msgstr "Historique des commandes"
 
-#: ../src/appfinder-preferences.c:210
+#: ../src/appfinder-preferences.c:217
 msgid "C_lear"
 msgstr "_Effacer"
 
-#: ../src/appfinder-preferences.c:211
+#: ../src/appfinder-preferences.c:218
 msgid "This will permanently clear the custom command history."
 msgstr "Ceci va effacer l'historique des commandes de manière permanente."
 
-#: ../src/appfinder-preferences.c:212
+#: ../src/appfinder-preferences.c:219
 msgid "Are you sure you want to clear the command history?"
 msgstr "Êtes-vous sûr de vouloir effacer l'historique des commandes ?"
 
-#: ../src/appfinder-preferences.c:322
+#: ../src/appfinder-preferences.c:329
 msgid "The custom action will be deleted permanently."
 msgstr "Ceci va supprimer l'action personnalisée de manière permanente."
 
-#: ../src/appfinder-preferences.c:323
+#: ../src/appfinder-preferences.c:330
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Êtes-vous sûr de vouloir supprimer le motif « %s » ?"
@@ -112,7 +111,7 @@ msgstr ""
 
 #: ../src/appfinder-window.c:837 ../src/appfinder-window.c:922
 msgid "_Hide"
-msgstr ""
+msgstr "_Masquer"
 
 #: ../src/appfinder-window.c:838
 #, fuzzy, c-format
@@ -220,17 +219,14 @@ msgid "Ite_m icon size:"
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:15
-#, fuzzy
 msgid "Large"
 msgstr "Grand"
 
 #: ../src/appfinder-preferences.glade.h:16
-#, fuzzy
 msgid "Larger"
 msgstr "Plus grand"
 
 #: ../src/appfinder-preferences.glade.h:17
-#, fuzzy
 msgid "Normal"
 msgstr "Normal"
 
@@ -259,27 +255,22 @@ msgid "Remove the currently selected action."
 msgstr "Effacer l'action actuellement sélectionné."
 
 #: ../src/appfinder-preferences.glade.h:24
-#, fuzzy
 msgid "Small"
 msgstr "Petit"
 
 #: ../src/appfinder-preferences.glade.h:25
-#, fuzzy
 msgid "Smaller"
 msgstr "Plus petit"
 
 #: ../src/appfinder-preferences.glade.h:26
-#, fuzzy
 msgid "Text besi_de icons"
 msgstr "Texte à _côté des icônes"
 
 #: ../src/appfinder-preferences.glade.h:27
-#, fuzzy
 msgid "Very Large"
 msgstr "Très grand"
 
 #: ../src/appfinder-preferences.glade.h:28
-#, fuzzy
 msgid "Very Small"
 msgstr "Très petit"
 
