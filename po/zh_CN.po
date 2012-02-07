@@ -7,13 +7,13 @@
 # Jick Nan <jick.nan@gmail.com>, 2006.
 # Hunt Xu <huntxu@live.cn>, 2008, 2010.
 # Chris K. Zhang <plutino@gmail.com>, 2009.
-# Chipong Luo <chipong_l@yahoo.com>, 2011.
+# Chipong Luo <chipong_l@yahoo.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-29 07:30+0000\n"
+"POT-Creation-Date: 2012-02-07 06:00+0000\n"
 "PO-Revision-Date: 2010-11-23 23:14+0800\n"
 "Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -54,23 +54,23 @@ msgstr "应用程序没有命令"
 msgid "Commands History"
 msgstr "命令历史"
 
-#: ../src/appfinder-preferences.c:210
+#: ../src/appfinder-preferences.c:217
 msgid "C_lear"
 msgstr "清除(_L)"
 
-#: ../src/appfinder-preferences.c:211
+#: ../src/appfinder-preferences.c:218
 msgid "This will permanently clear the custom command history."
 msgstr "这会永远清除自定义的命令历史。"
 
-#: ../src/appfinder-preferences.c:212
+#: ../src/appfinder-preferences.c:219
 msgid "Are you sure you want to clear the command history?"
 msgstr "您确定要清除命令历史吗？"
 
-#: ../src/appfinder-preferences.c:322
+#: ../src/appfinder-preferences.c:329
 msgid "The custom action will be deleted permanently."
 msgstr "将永远删除自定义的动作"
 
-#: ../src/appfinder-preferences.c:323
+#: ../src/appfinder-preferences.c:330
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "您确定要删除类型 “%s” 吗？"
@@ -81,48 +81,47 @@ msgstr "您确定要删除类型 “%s” 吗？"
 msgid "Application Finder"
 msgstr "应用程序查找器"
 
-#: ../src/appfinder-window.c:264
+#: ../src/appfinder-window.c:267
 msgid "Toggle view mode"
 msgstr "切换视图模式"
 
-#: ../src/appfinder-window.c:759
+#: ../src/appfinder-window.c:762
 msgid "Failed to launch desktop item editor"
 msgstr "无法启动桌面项目编辑器"
 
-#: ../src/appfinder-window.c:785
+#: ../src/appfinder-window.c:788
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr ""
-"这会从您的主文件夹中永远移除自定义的"
-"桌面文件。"
+"这会从您的主文件夹中永远移除自定义的桌面"
+"文件。"
 
-#: ../src/appfinder-window.c:786
+#: ../src/appfinder-window.c:789
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "您确定要回归 “%s” 吗？"
+msgstr "您确定要恢复 “%s” 吗？"
 
-#: ../src/appfinder-window.c:796
+#: ../src/appfinder-window.c:799
 msgid "Failed to remove desktop file"
 msgstr "无法移除桌面文件"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:829
+#: ../src/appfinder-window.c:832
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr ""
-"您只得从 “%s” 手动移除桌面文件或在"
-"相同的目录中打开此文件并移除行 “%s” "
-"来隐藏项目"
+"您只得从 “%s” 手动移除桌面文件或在相同的"
+"目录中打开此文件并移除行 “%s” 来隐藏项目。"
 
-#: ../src/appfinder-window.c:834 ../src/appfinder-window.c:919
+#: ../src/appfinder-window.c:837 ../src/appfinder-window.c:922
 msgid "_Hide"
 msgstr "隐藏(_H)"
 
-#: ../src/appfinder-window.c:835
+#: ../src/appfinder-window.c:838
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "您确定要隐藏 “%s” 吗？"
@@ -217,10 +216,9 @@ msgid ""
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
 msgstr ""
-"如果此类型设置为前缀，会用此类型后的"
-"字符串替换 %s、用完整的条目文字替换 "
-"%S。对于正则表达您可以使用 \\0 和 "
-"\\<num>。"
+"如果此类型设置为前缀，会用此类型后的字符串"
+"替换 %s、用完整的条目文字替换 %S。对于正则"
+"表达您可以使用 \\0 和 \\<num>。"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Ite_m icon size:"
@@ -296,12 +294,11 @@ msgstr "类型(_T)："
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_View items as icons"
-msgstr "以图标方式查看项目(_V)："
+msgstr "以图标查看项目(_V)："
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr ""
-"查找并启动您系统上安装的应用程序"
+msgstr "查找并启动在您系统上安装的应用程序"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
