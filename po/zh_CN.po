@@ -7,13 +7,13 @@
 # Jick Nan <jick.nan@gmail.com>, 2006.
 # Hunt Xu <huntxu@live.cn>, 2008, 2010.
 # Chris K. Zhang <plutino@gmail.com>, 2009.
-# Chipong Luo <chipong_l@yahoo.com>, 2011, 2012.
+# Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-07 06:00+0000\n"
+"POT-Creation-Date: 2012-02-08 05:12+0000\n"
 "PO-Revision-Date: 2010-11-23 23:14+0800\n"
 "Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -93,9 +93,7 @@ msgstr "无法启动桌面项目编辑器"
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr ""
-"这会从您的主文件夹中永远移除自定义的桌面"
-"文件。"
+msgstr "这会从您的主文件夹中永远移除自定义的桌面文件。"
 
 #: ../src/appfinder-window.c:789
 #, c-format
@@ -114,8 +112,8 @@ msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr ""
-"您只得从 “%s” 手动移除桌面文件或在相同的"
-"目录中打开此文件并移除行 “%s” 来隐藏项目。"
+"您只得从 “%s” 手动移除桌面文件或在相同的目录中打开此文件并移除行 “%s” 来隐藏"
+"项目。"
 
 #: ../src/appfinder-window.c:837 ../src/appfinder-window.c:922
 msgid "_Hide"
@@ -216,9 +214,8 @@ msgid ""
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
 msgstr ""
-"如果此类型设置为前缀，会用此类型后的字符串"
-"替换 %s、用完整的条目文字替换 %S。对于正则"
-"表达您可以使用 \\0 和 \\<num>。"
+"如果此类型设置为前缀，会用此类型后的字符串替换 %s、用完整的条目文字替换 %S。"
+"对于正则表达您可以使用 \\0 和 \\<num>。"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Ite_m icon size:"
