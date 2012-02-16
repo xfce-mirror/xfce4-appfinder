@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 14:48+0000\n"
+"POT-Creation-Date: 2012-02-16 16:21+0000\n"
 "PO-Revision-Date: 2009-01-02 13:33+0100\n"
 "Last-Translator: Thomas Schütz <xfce@thschuetz.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -30,7 +30,6 @@ msgid "Name"
 msgstr "Name"
 
 #: ../src/appfinder-model.c:541
-#, fuzzy
 msgid "Comment"
 msgstr "Kommentar"
 
@@ -89,7 +88,7 @@ msgstr "Ansichtsmodus umstellen"
 #: ../src/appfinder-window.c:762
 #, fuzzy
 msgid "Failed to launch desktop item editor"
-msgstr "Der Editor für die Starter konnte nicht aufgerufen werden"
+msgstr "Der Editor für die Arbeitsflächensymbole konnte nicht aufgerufen werden"
 
 #: ../src/appfinder-window.c:788
 #, fuzzy
@@ -107,31 +106,32 @@ msgstr "Soll »%s« wirklich zurückgesetzt werden?"
 #: ../src/appfinder-window.c:799
 #, fuzzy
 msgid "Failed to remove desktop file"
-msgstr "Starter konnte nicht gelöscht werden"
+msgstr "Starter konnte nicht entfernt werden"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
 #: ../src/appfinder-window.c:832
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Um den Eintrag anzuzeigen, müssen Sie den Starter manuell aus »%s« löschen oder die Datei öffnen und die Zeile »%s« entfernen."
+msgstr ""
+"Um den Eintrag anzuzeigen, müssen Sie den Starter manuell aus »%s« löschen "
+"oder die Datei öffnen und die Zeile »%s« entfernen."
 
 #: ../src/appfinder-window.c:837 ../src/appfinder-window.c:922
-#, fuzzy
 msgid "_Hide"
 msgstr "_Verstecken"
 
 #: ../src/appfinder-window.c:838
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Soll »%s« wirklich versteckt werden?"
 
 #: ../src/main.c:75
 #, fuzzy
 msgid "Start in collapsed mode"
-msgstr "Im einfachen Modus starten"
+msgstr "Im eingeklappten Modus starten"
 
 #: ../src/main.c:76
 msgid "Print version information and exit"
@@ -183,7 +183,6 @@ msgid "Always c_enter the window"
 msgstr "Fenster immer z_entrieren"
 
 #: ../src/appfinder-preferences.glade.h:3
-#, fuzzy
 msgid "Appearance"
 msgstr "Erscheinungsbild"
 
@@ -198,7 +197,7 @@ msgstr "Befehlsverlauf _löschen"
 #: ../src/appfinder-preferences.glade.h:7
 #, fuzzy
 msgid "Categ_ory icon size:"
-msgstr "Kategoriesymbole:"
+msgstr "_Größe der Kategoriesymbole:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
@@ -230,20 +229,17 @@ msgstr ""
 #: ../src/appfinder-preferences.glade.h:14
 #, fuzzy
 msgid "Ite_m icon size:"
-msgstr "Anwendungssymbole:"
+msgstr "Größe der _Anwendungssymbole:"
 
 #: ../src/appfinder-preferences.glade.h:15
-#, fuzzy
 msgid "Large"
 msgstr "Groß"
 
 #: ../src/appfinder-preferences.glade.h:16
-#, fuzzy
 msgid "Larger"
 msgstr "Größer"
 
 #: ../src/appfinder-preferences.glade.h:17
-#, fuzzy
 msgid "Normal"
 msgstr "Normal"
 
@@ -272,27 +268,22 @@ msgid "Remove the currently selected action."
 msgstr "Die ausgewählte Aktion löschen."
 
 #: ../src/appfinder-preferences.glade.h:24
-#, fuzzy
 msgid "Small"
 msgstr "Klein"
 
 #: ../src/appfinder-preferences.glade.h:25
-#, fuzzy
 msgid "Smaller"
 msgstr "Kleiner"
 
 #: ../src/appfinder-preferences.glade.h:26
-#, fuzzy
 msgid "Text besi_de icons"
 msgstr "Text neben _den Symbolen"
 
 #: ../src/appfinder-preferences.glade.h:27
-#, fuzzy
 msgid "Very Large"
 msgstr "Sehr groß"
 
 #: ../src/appfinder-preferences.glade.h:28
-#, fuzzy
 msgid "Very Small"
 msgstr "Sehr klein"
 
@@ -311,7 +302,7 @@ msgstr "_Typ:"
 #: ../src/appfinder-preferences.glade.h:32
 #, fuzzy
 msgid "_View items as icons"
-msgstr "Einträge als _Symbole anzeigen"
+msgstr "Elemente als _Symbole anzeigen"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
