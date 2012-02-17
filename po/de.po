@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-16 16:21+0000\n"
+"POT-Creation-Date: 2012-02-17 09:54+0000\n"
 "PO-Revision-Date: 2009-01-02 13:33+0100\n"
 "Last-Translator: Thomas Schütz <xfce@thschuetz.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -86,12 +86,11 @@ msgid "Toggle view mode"
 msgstr "Ansichtsmodus umstellen"
 
 #: ../src/appfinder-window.c:762
-#, fuzzy
 msgid "Failed to launch desktop item editor"
-msgstr "Der Editor für die Arbeitsflächensymbole konnte nicht aufgerufen werden"
+msgstr ""
+"Der Editor für die Arbeitsflächensymbole konnte nicht aufgerufen werden"
 
 #: ../src/appfinder-window.c:788
-#, fuzzy
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
@@ -99,19 +98,18 @@ msgstr ""
 "Dies wird den Verlauf der benutzerdefinierten Befehle dauerhaft löschen."
 
 #: ../src/appfinder-window.c:789
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Soll »%s« wirklich zurückgesetzt werden?"
 
 #: ../src/appfinder-window.c:799
-#, fuzzy
 msgid "Failed to remove desktop file"
 msgstr "Starter konnte nicht entfernt werden"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
 #: ../src/appfinder-window.c:832
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
@@ -129,7 +127,6 @@ msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Soll »%s« wirklich versteckt werden?"
 
 #: ../src/main.c:75
-#, fuzzy
 msgid "Start in collapsed mode"
 msgstr "Im eingeklappten Modus starten"
 
@@ -195,7 +192,6 @@ msgid "C_lear Custom Command History"
 msgstr "Befehlsverlauf _löschen"
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Categ_ory icon size:"
 msgstr "_Größe der Kategoriesymbole:"
 
@@ -216,7 +212,7 @@ msgid "History"
 msgstr "Verlauf"
 
 #: ../src/appfinder-preferences.glade.h:13
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
@@ -227,7 +223,6 @@ msgstr ""
 "Ausdrücke kann \\0 and \\<num> verwendet werden."
 
 #: ../src/appfinder-preferences.glade.h:14
-#, fuzzy
 msgid "Ite_m icon size:"
 msgstr "Größe der _Anwendungssymbole:"
 
@@ -300,7 +295,6 @@ msgid "_Type:"
 msgstr "_Typ:"
 
 #: ../src/appfinder-preferences.glade.h:32
-#, fuzzy
 msgid "_View items as icons"
 msgstr "Elemente als _Symbole anzeigen"
 
