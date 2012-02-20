@@ -236,6 +236,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   window->icon_find = xfce_appfinder_model_load_pixbuf (GTK_STOCK_FIND, XFCE_APPFINDER_ICON_SIZE_48);
   window->image = image = gtk_image_new_from_pixbuf (window->icon_find);
+  gtk_widget_set_size_request (image, 48, 48);
   gtk_container_add (GTK_CONTAINER (align), image);
   gtk_widget_show (image);
 

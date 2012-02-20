@@ -1884,6 +1884,7 @@ xfce_appfinder_model_load_pixbuf (const gchar           *icon_name,
     case XFCE_APPFINDER_ICON_SIZE_LARGE:    size = 64;  break;
     case XFCE_APPFINDER_ICON_SIZE_LARGER:   size = 96;  break;
     case XFCE_APPFINDER_ICON_SIZE_LARGEST:  size = 128; break;
+    default: return NULL;
     }
 
   APPFINDER_DEBUG ("load icon %s at %dpx", icon_name, size);
