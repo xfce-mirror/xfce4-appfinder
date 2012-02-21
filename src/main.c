@@ -151,6 +151,8 @@ appfinder_refcount_debug_finalize (void)
 static void
 appfinder_window_destroyed (GtkWidget *window)
 {
+  XfconfChannel *channel;
+
   if (windows == NULL)
     return;
 
@@ -164,9 +166,24 @@ appfinder_window_destroyed (GtkWidget *window)
   /* remove from internal list */
   windows = g_slist_remove (windows, window);
 
-  /* leave if all windows are closed and we're not service owner */
-  if (windows == NULL && !service_owner)
-    gtk_main_quit ();
+  /* check if we're going to the background
+   * if the last window is closed */
+  if (windows == NULL)
+    {
+      if (!service_owner)
+        {
+          /* leave if we're not the daemon or started
+           * with --disable-server */
+          gtk_main_quit ();
+        }
+      else
+        {
+          /* leave if the user disable the service in the prefereces */
+          channel = xfconf_channel_get ("xfce4-appfinder");
+          if (!xfconf_channel_get_bool (channel, "/enable-service", TRUE))
+            gtk_main_quit ();
+        }
+    }
 }
 
 
