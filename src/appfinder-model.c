@@ -460,7 +460,12 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
               comment = garcon_menu_item_get_comment (item->item);
 
               if (comment != NULL)
-                item->abstract = g_markup_printf_escaped ("<b>%s</b>\n%s", name, comment);
+                {
+                  if (model->icon_size < XFCE_APPFINDER_ICON_SIZE_SMALL)
+                    item->abstract = g_markup_printf_escaped ("<b>%s</b> &#8212; %s", name, comment);
+                  else
+                    item->abstract = g_markup_printf_escaped ("<b>%s</b>\n%s", name, comment);
+                }
               else
                 item->abstract = g_markup_printf_escaped ("<b>%s</b>", name);
             }
@@ -2083,6 +2088,12 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
         {
           g_object_unref (G_OBJECT (item->icon_large));
           item->icon_large = NULL;
+          item_changed = TRUE;
+        }
+      if (item->abstract != NULL)
+        {
+          g_free (item->abstract);
+          item->abstract = NULL;
           item_changed = TRUE;
         }
 
