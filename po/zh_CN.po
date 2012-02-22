@@ -112,8 +112,8 @@ msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr ""
-"您只得从 “%s” 手动移除桌面文件或在相同的目录中打开此文件并移除行 “%s” 来隐藏"
-"项目。"
+"您只得从 “%s” 手动移除桌面文件或在相同的"
+"目录中打开此文件并移除行 “%s” 来隐藏项目。"
 
 #: ../src/appfinder-window.c:838 ../src/appfinder-window.c:923
 msgid "_Hide"
