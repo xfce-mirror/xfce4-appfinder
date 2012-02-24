@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce-4-appfinder 4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-02-24 23:15+0000\n"
-"PO-Revision-Date: 2012-02-25 00:16+0100\n"
+"PO-Revision-Date: 2012-02-25 00:23+0100\n"
 "Last-Translator: Erik Schmidt <erischmi@gmail.com>\n"
 "Language-Team: Dansk <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -226,9 +226,9 @@ msgid ""
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr ""
-"Lad applikationen vedblive med at køre når det sidste vindue lukkes, for "
-"derved hurtigt at kunne åbne nye vinduer. Du kan vælge at slå denne funktion "
-"fra med henblik på at reducere hukommelsesforbruget."
+"Lad programmet vedblive med at køre når det sidste vindue lukkes, for derved "
+"hurtigt at kunne åbne nye vinduer. Du kan vælge at slå denne funktion fra "
+"med henblik på at reducere hukommelsesforbruget."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
@@ -236,7 +236,7 @@ msgstr "Ele_mentikonstørrelse:"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Keep running _instance in the background"
-msgstr "Hold _applikationen kørende i baggrunden"
+msgstr "Hold _programmet kørende i baggrunden"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
