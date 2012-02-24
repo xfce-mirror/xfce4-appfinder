@@ -153,7 +153,7 @@ msgstr "طباعة \"%s --help\" للحصول على معلومات الإستع
 
 #: ../src/main.c:516
 msgid "The Xfce development team. All rights reserved."
-msgstr "فريق تطوير إكسفسي . كل الحقوق محفوظة."
+msgstr "فريق تطوير إكسفس . كل الحقوق محفوظة."
 
 #: ../src/main.c:517
 #, c-format
