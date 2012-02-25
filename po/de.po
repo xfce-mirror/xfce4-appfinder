@@ -7,19 +7,19 @@
 # Fabian Nowak <timystery@arcor.de>, 2008, 2011.
 # Jannis Pohlmann <jannis@xfce.org>, 2008.
 # Thomas Schütz <xfce@thschuetz.de>, 2012.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-25 10:57+0000\n"
+"POT-Creation-Date: 2012-02-25 16:48+0000\n"
 "PO-Revision-Date: 2009-01-02 13:33+0100\n"
 "Last-Translator: Thomas Schütz <xfce@thschuetz.de>\n"
-"Language-Team: German <de@li.org>\n"
+"Language-Team: German <xfce-i18n-de@xfce.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -228,7 +228,10 @@ msgid ""
 "Instead of quiting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Behält beim Beenden der Anwendung eine laufende Instanz im Speicher, damit neue Fenster schneller geöffnet werden. Deaktivieren Sie diese Einstellung um Speicher zu sparen."
+msgstr ""
+"Behält beim Beenden der Anwendung eine laufende Instanz im Speicher, damit "
+"neue Fenster schneller geöffnet werden. Deaktivieren Sie diese Einstellung "
+"um Speicher zu sparen."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
