@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-15 10:24+0000\n"
+"POT-Creation-Date: 2012-02-25 05:06+0000\n"
 "PO-Revision-Date: 2011-09-13 06:45+0900\n"
 "Last-Translator: Seong-ho, Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
@@ -17,104 +17,147 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: \n"
 
-#: ../src/appfinder-category-model.c:108
+#: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "모든 프로그램"
 
-#: ../src/appfinder-model.c:438
+#: ../src/appfinder-model.c:545
 msgid "Name"
 msgstr "이름"
 
-#: ../src/appfinder-model.c:439
+#: ../src/appfinder-model.c:546
+#, fuzzy
+msgid "Comment"
+msgstr "명령"
+
+#: ../src/appfinder-model.c:547
 msgid "Command"
 msgstr "명령"
 
-#: ../src/appfinder-model.c:440
+#: ../src/appfinder-model.c:548
 msgid "Categories"
 msgstr "분류"
 
-#: ../src/appfinder-model.c:441
+#: ../src/appfinder-model.c:549
 msgid "Filename"
 msgstr "파일 이름"
 
-#: ../src/appfinder-model.c:1598
+#: ../src/appfinder-model.c:1825
 msgid "Application has no command"
 msgstr "프로그램에 명령을 보유하고 있지 않습니다"
 
-#: ../src/appfinder-model.c:1900
+#: ../src/appfinder-model.c:2149
 msgid "Commands History"
 msgstr "명령 이력"
 
-#: ../src/appfinder-preferences.c:175
+#: ../src/appfinder-preferences.c:221
 msgid "C_lear"
 msgstr "지우기(_l)"
 
-#: ../src/appfinder-preferences.c:176
+#: ../src/appfinder-preferences.c:222
 msgid "This will permanently clear the custom command history."
 msgstr "사용자 정의 명령 이력을 영구적으로 지울 것입니다."
 
-#: ../src/appfinder-preferences.c:177
+#: ../src/appfinder-preferences.c:223
 msgid "Are you sure you want to clear the command history?"
 msgstr "명령 이력을 정말로 지우시렵니까?"
 
-#: ../src/appfinder-preferences.c:287
+#: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
 msgstr "사용자 정의 동작이 영구적으로 지워질 것입니다."
 
-#: ../src/appfinder-preferences.c:288
+#: ../src/appfinder-preferences.c:334
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "패턴 \"%s\"를 정말로 삭제하시렵니까?"
 
-#: ../src/appfinder-window.c:190 ../src/main.c:344
-#: ../src/appfinder-preferences.glade.h:3
+#: ../src/appfinder-window.c:216 ../src/main.c:446
+#: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "프로그램 검색기"
 
-#: ../src/appfinder-window.c:231
+#: ../src/appfinder-window.c:268
 msgid "Toggle view mode"
 msgstr "보기 상태 전환"
 
-#: ../src/main.c:70
+#: ../src/appfinder-window.c:763
+msgid "Failed to launch desktop item editor"
+msgstr "데스크탑 항목 에디터 작동 실패"
+
+#: ../src/appfinder-window.c:789
+#, fuzzy
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr "사용자 정의 명령 이력을 영구적으로 지울 것입니다."
+
+#: ../src/appfinder-window.c:790
+#, fuzzy, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr "패턴 \"%s\"를 정말로 삭제하시렵니까?"
+
+#: ../src/appfinder-window.c:800
+msgid "Failed to remove desktop file"
+msgstr "데스크탑 파일 삭제 실패"
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: ../src/appfinder-window.c:833
+#, c-format
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr "수동으로 \"%s\"에서 바탕 화면에 파일을 제거하거나 파일을 열 동일한 디렉토리에 \"%s\" 라인을 제거해야 할 항목 숨기기를 해제합니다."
+
+#: ../src/appfinder-window.c:838 ../src/appfinder-window.c:923
+msgid "_Hide"
+msgstr "숨김(_H)"
+
+#: ../src/appfinder-window.c:839
+#, fuzzy, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr "패턴 \"%s\"를 정말로 삭제하시렵니까?"
+
+#: ../src/main.c:75
 msgid "Start in collapsed mode"
 msgstr "축소 모드로 시작하기"
 
-#: ../src/main.c:71
+#: ../src/main.c:76
 msgid "Print version information and exit"
 msgstr "버전 정보를 출력하고 끝냅니다"
 
-#: ../src/main.c:72
+#: ../src/main.c:77
 msgid "Replace the existing service"
 msgstr "존재하는 서비스 바꾸기"
 
-#: ../src/main.c:73
+#: ../src/main.c:78
 msgid "Quit all instances"
 msgstr "모든 인스턴스 끝내기"
 
-#: ../src/main.c:74
+#: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
 msgstr "D-Bus 서비스를 사용하거나 서비스와 함께 동작하도록 시도하지 않음"
 
 #. close all windows and quit
-#: ../src/main.c:159
+#: ../src/main.c:244
 msgid "Forced to quit"
 msgstr "종료를 강제합니다"
 
-#: ../src/main.c:346
+#: ../src/main.c:448
 msgid "Unable to daemonize the process"
 msgstr "프로세스를 데몬화 할 수 없습니다"
 
-#: ../src/main.c:418
+#: ../src/main.c:522
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "사용 정보를 보려면 \"%s --help\"를 입력합니다."
 
-#: ../src/main.c:429
+#: ../src/main.c:533
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce 개발 팀. All rights reserved."
 
-#: ../src/main.c:430
+#: ../src/main.c:534
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "버그가 생기면 <%s>에게 알려 주시기 바랍니다."
@@ -127,31 +170,39 @@ msgstr "새 사용자 정의 동작을 추가합니다."
 msgid "Always c_enter the window"
 msgstr "항상 창을 가운데로 하기(_e)"
 
-#: ../src/appfinder-preferences.glade.h:4
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Appearance"
+msgstr "외관"
+
+#: ../src/appfinder-preferences.glade.h:5
 msgid "Behaviour"
 msgstr "행동"
 
-#: ../src/appfinder-preferences.glade.h:5
+#: ../src/appfinder-preferences.glade.h:6
 msgid "C_lear Custom Command History"
 msgstr "사용자 정의 명령 이력 지우기(_l)"
 
-#: ../src/appfinder-preferences.glade.h:6
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Categ_ory icon size:"
+msgstr "분류 아이콘 크기(_O)"
+
+#: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
 msgstr "시작시 창을 가운데로 합니다."
 
-#: ../src/appfinder-preferences.glade.h:7
+#: ../src/appfinder-preferences.glade.h:9
 msgid "Co_mmand:"
 msgstr "명령(_m)"
 
-#: ../src/appfinder-preferences.glade.h:8
+#: ../src/appfinder-preferences.glade.h:10
 msgid "Custom _Actions"
 msgstr "사용자 정의 동작(_A)"
 
-#: ../src/appfinder-preferences.glade.h:9
+#: ../src/appfinder-preferences.glade.h:11
 msgid "History"
 msgstr "이력"
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:13
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -161,41 +212,92 @@ msgstr ""
 "접두어로 유형을 지정하였다면, %s은(는) 완전한 목록 텍스트로 된 다음 패턴  %S"
 "(으)로 대체될 것입니다. 정규 표현식에 \\0과 \\<숫자>를 사용할 수 있습니다."
 
-#: ../src/appfinder-preferences.glade.h:12
+#: ../src/appfinder-preferences.glade.h:14
+msgid ""
+"Instead of quiting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "\r\n"
+
+#: ../src/appfinder-preferences.glade.h:15
+msgid "Ite_m icon size:"
+msgstr "항목 아이콘 크기(_M)"
+
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Keep running _instance in the background"
+msgstr "백그라운드에서 인스탄스 유지 실행 (_I)"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "Large"
+msgstr "더 크게"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Larger"
+msgstr "크게"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Normal"
+msgstr "보통"
+
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Patte_rn:"
 msgstr "패턴(_r):"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:21
 msgid "Pattern"
 msgstr "패턴"
 
-#: ../src/appfinder-preferences.glade.h:14
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Prefix"
 msgstr "접두어"
 
-#: ../src/appfinder-preferences.glade.h:15
+#: ../src/appfinder-preferences.glade.h:23
 msgid "Regular Expression"
 msgstr "정규 표현식"
 
-#: ../src/appfinder-preferences.glade.h:16
+#: ../src/appfinder-preferences.glade.h:24
 msgid "Remember last _selected category"
 msgstr "최근 선택된 카테고리 기억(_s)"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: ../src/appfinder-preferences.glade.h:25
 msgid "Remove the currently selected action."
 msgstr "현재 선택된 동작 제거"
 
-#: ../src/appfinder-preferences.glade.h:18
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Small"
+msgstr "작게"
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Smaller"
+msgstr "더 작게"
+
+#: ../src/appfinder-preferences.glade.h:28
+msgid "Text besi_de icons"
+msgstr "아이콘 옆의 텍스트 (_D)"
+
+#: ../src/appfinder-preferences.glade.h:29
+msgid "Very Large"
+msgstr "가장 크게"
+
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Very Small"
+msgstr "가장 작게"
+
+#: ../src/appfinder-preferences.glade.h:31
 msgid "_General"
 msgstr "일반(_G)"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:32
 msgid "_Save match in command history"
 msgstr "명령 이력내 일치 항목 저장하기(_S)"
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
 msgstr "유형(_T):"
+
+#: ../src/appfinder-preferences.glade.h:34
+msgid "_View items as icons"
+msgstr "아이콘과 같은 항목 보기 (_V)"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
