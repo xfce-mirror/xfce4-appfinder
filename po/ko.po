@@ -157,7 +157,7 @@ msgstr "Xfce 개발 팀. All rights reserved."
 #: ../src/main.c:534
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "<%s>에게 버그를 알려 주시기 바랍니다."
+msgstr "<%s>에게 버그를 알려주시기 바랍니다."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
