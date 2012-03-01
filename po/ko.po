@@ -290,7 +290,7 @@ msgstr "아이콘과 같은 항목 보기(_V)"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "시스템에 설치된 프로그램 찾고 실행하기"
+msgstr "시스템에 설치된 프로그램을 찾고 실행합니다"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
@@ -300,38 +300,3 @@ msgstr "프로그램 실행..."
 msgid "Run a program"
 msgstr "프로그램을 실행합니다"
 
-#~ msgid "[MENUFILE]"
-#~ msgstr "[MENUFILE]"
-
-#~ msgid "Unable to initialize GTK+."
-#~ msgstr "GTK+를 초기화 할 수 없습니다."
-
-#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
-#~ msgstr "xfconf 데몬에 연결하는데 실패했습니다. 이유는 다음과 같습니다: %s"
-
-#~ msgid "Failed to connect to xfconf daemon."
-#~ msgstr "xfconf 데몬에 연결하는데 실패했습니다."
-
-#~ msgid "Search"
-#~ msgstr "검색"
-
-#~ msgid "C_lose after launch"
-#~ msgstr "실행 후 닫기 (_l)"
-
-#~ msgid "Launch"
-#~ msgstr "실행"
-
-#~ msgid "Could not load menu from %s"
-#~ msgstr "%s(으)로 부터 메뉴를 로드할 수 없습니다"
-
-#~ msgid "All"
-#~ msgstr "모두"
-
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "\"%s\" 명령을 실행하는데 실패했습니다."
-
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>분류:</b> %s"
-
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>명령:</b> %s"
