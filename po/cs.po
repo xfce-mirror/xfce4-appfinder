@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-24 11:33+0000\n"
-"PO-Revision-Date: 2012-02-24 14:07+0100\n"
+"POT-Creation-Date: 2012-03-02 13:12+0000\n"
+"PO-Revision-Date: 2012-03-02 17:56+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "Language: cs\n"
@@ -207,7 +207,7 @@ msgid "If the type is set to prefix, %s will be replaced with the string after t
 msgstr "Pokud je typ nastaven na předponu, %s se nahradí řetězcem po vzorku a %S kompletním vstupním textem. Regulární výrazy použijte pomocí \\0 a \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:14
-msgid "Instead of quiting the application when the last window is closed, keep a running instance to speed up opening new windows. You might want to disable this to reduce memory usage."
+msgid "Instead of quitting the application when the last window is closed, keep a running instance to speed up opening new windows. You might want to disable this to reduce memory usage."
 msgstr "Ponechat spuštěnou instanci na pozadí namísto ukončení aplikace po uzavření jejího posledního okna z důvodu zrychlení otevírání nových oken. Tuto možnost zakažte, pokud chcete snížit spotřebu paměti."
 
 #: ../src/appfinder-preferences.glade.h:15
