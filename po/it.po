@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-08 14:39+0000\n"
-"PO-Revision-Date: 2012-03-08 19:56+0100\n"
+"PO-Revision-Date: 2012-03-08 20:14+0100\n"
 "Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
@@ -207,7 +207,7 @@ msgstr "Se il \"Tipo\" è impostato a \"Prefisso\", %s sarà sostituito con la s
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Instead of quitting the application when the last window is closed, keep a running instance to speed up opening new windows. You might want to disable this to reduce memory usage."
-msgstr "Invece di chiudere l'applicazione quando l'ultima finestre viene chiusa, mantiene un'istanza in esecuzione in background per velocizzare l'apertura di nuove finestre. Disabilitare questa opzione per ridurre l'utilizzo di memoria"
+msgstr "Invece di uscire dall'applicazione quando l'ultima finestra viene chiusa, mantiene un'istanza in esecuzione per velocizzare l'apertura di nuove finestre. Disabilitare questa opzione per ridurre l'utilizzo di memoria"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
