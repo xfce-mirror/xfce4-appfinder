@@ -2,7 +2,7 @@
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Eduard Roccatello <eduard@xfce.org>, 2004.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
@@ -11,10 +11,10 @@ msgstr ""
 "PO-Revision-Date: 2012-03-08 20:14+0100\n"
 "Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
-"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -69,8 +69,7 @@ msgstr "L'azione personalizzata verrò rimossa definitivamente."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Eliminare davvero lo schema \"%s\"?"
 
-#: ../src/appfinder-window.c:216
-#: ../src/main.c:446
+#: ../src/appfinder-window.c:216 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -104,8 +103,7 @@ msgstr "Impossibile rimuovere il file desktop"
 msgid "To unhide the item you have to manually remove the desktop file from \"%s\" or open the file in the same directory and remove the line \"%s\"."
 msgstr "Per far ricomparire l'elemento è necessario rimuovere manualmente il file desktop da \"%s\" o aprire il file nella stessa cartella e rimuovere lariga \"%s\"."
 
-#: ../src/appfinder-window.c:838
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:838 ../src/appfinder-window.c:923
 msgid "_Hide"
 msgstr "_Nascondi"
 
@@ -215,7 +213,7 @@ msgstr "Dimensione icona e_lemento"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Keep running _instance in the background"
-msgstr "Mantieni un'_istanza in esecuzione in background"
+msgstr "Mantieni un'istan_za in esecuzione in background"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
@@ -288,7 +286,7 @@ msgstr "_Tipo:"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "_View items as icons"
-msgstr "Mostra gli elementi come icon_e"
+msgstr "Mostra gli elementi come ic_one"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
