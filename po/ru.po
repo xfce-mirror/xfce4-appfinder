@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-10 07:15+0000\n"
+"POT-Creation-Date: 2012-03-18 06:39+0000\n"
 "PO-Revision-Date: 2011-08-02 18:31+0300\n"
 "Last-Translator: Artem Zolochevskiy <artem.zolochevskiy@gmail.com>\n"
 "Language-Team: Russian\n"
@@ -228,16 +228,18 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Задержать работающий экземпляр программы в памяти вместо выхода из приложения при закрытии последнего окна, чтобы ускорить открытие новых окон. Вы можете отключить эту опцию для уменьшения использования памяти."
+msgstr ""
+"Задержать работающий экземпляр программы в памяти вместо выхода из "
+"приложения при закрытии последнего окна, чтобы ускорить открытие новых окон. "
+"Вы можете отключить эту опцию для уменьшения использования памяти."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
 msgstr "Размер иконки элемента"
 
 #: ../src/appfinder-preferences.glade.h:16
-#, fuzzy
 msgid "Keep running _instance in the background"
-msgstr "Сохранить запущенный экземпляр в фоне"
+msgstr "Запускать в фоне"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
