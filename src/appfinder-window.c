@@ -59,6 +59,8 @@ static void       xfce_appfinder_window_finalize                      (GObject  
 static void       xfce_appfinder_window_unmap                         (GtkWidget                   *widget);
 static gboolean   xfce_appfinder_window_key_press_event               (GtkWidget                   *widget,
                                                                        GdkEventKey                 *event);
+static gboolean   xfce_appfinder_window_window_state_event            (GtkWidget                   *widget,
+                                                                       GdkEventWindowState         *event);
 static void       xfce_appfinder_window_view                          (XfceAppfinderWindow         *window);
 static gboolean   xfce_appfinder_window_popup_menu                    (GtkWidget                   *view,
                                                                        XfceAppfinderWindow         *window);
@@ -178,6 +180,7 @@ xfce_appfinder_window_class_init (XfceAppfinderWindowClass *klass)
   gtkwidget_class = GTK_WIDGET_CLASS (klass);
   gtkwidget_class->unmap = xfce_appfinder_window_unmap;
   gtkwidget_class->key_press_event = xfce_appfinder_window_key_press_event;
+  gtkwidget_class->window_state_event = xfce_appfinder_window_window_state_event;
 }
 
 
@@ -492,6 +495,36 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
     }
 
   return  (*GTK_WIDGET_CLASS (xfce_appfinder_window_parent_class)->key_press_event) (widget, event);
+}
+
+
+
+static gboolean
+xfce_appfinder_window_window_state_event (GtkWidget           *widget,
+                                          GdkEventWindowState *event)
+{
+  XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (widget);
+  gint                 width;
+
+  if (!gtk_widget_get_visible (window->paned))
+    {
+      if ((event->new_window_state & GDK_WINDOW_STATE_MAXIMIZED) != 0)
+        {
+          gtk_window_unmaximize (GTK_WINDOW (widget));
+
+          /* set sensible width instead of taking entire width */
+          width = xfconf_channel_get_int (window->channel, "/last/window-width", DEFAULT_WINDOW_WIDTH);
+          gtk_window_resize (GTK_WINDOW (widget), width, 100 /* should be corrected by wm */);
+        }
+
+      if ((event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN) != 0)
+        gtk_window_unfullscreen (GTK_WINDOW (widget));
+    }
+
+  if ((*GTK_WIDGET_CLASS (xfce_appfinder_window_parent_class)->window_state_event) != NULL)
+    return (*GTK_WIDGET_CLASS (xfce_appfinder_window_parent_class)->window_state_event) (widget, event);
+
+  return FALSE;
 }
 
 
