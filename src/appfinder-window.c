@@ -436,6 +436,8 @@ xfce_appfinder_window_unmap (GtkWidget *widget)
   xfconf_channel_set_int (window->channel, "/last/window-height", height);
   xfconf_channel_set_int (window->channel, "/last/window-width", width);
   xfconf_channel_set_int (window->channel, "/last/pane-position", position);
+
+  return (*GTK_WIDGET_CLASS (xfce_appfinder_window_parent_class)->unmap) (widget);
 }
 
 
