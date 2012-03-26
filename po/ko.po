@@ -64,7 +64,7 @@ msgstr "명령 기록을 정말로 지우시렵니까?"
 
 #: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
-msgstr "사용자 정의 동작이 영구적으로 지워질 것입니다."
+msgstr "사용자 정의 동작을 영구적으로 지울 것입니다."
 
 #: ../src/appfinder-preferences.c:334
 #, c-format
