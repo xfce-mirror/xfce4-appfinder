@@ -84,7 +84,7 @@ msgstr "보기 상태 전환"
 
 #: ../src/appfinder-window.c:763
 msgid "Failed to launch desktop item editor"
-msgstr "데스크톱 항목 에디터 작동 실패"
+msgstr "데스크톱 항목 편집기 실행 실패"
 
 #: ../src/appfinder-window.c:789
 msgid "This will permanently remove the custom desktop file from your home directory."
