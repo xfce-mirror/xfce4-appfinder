@@ -1,3 +1,14 @@
+4.9.4
+=====
+- Add Help button to preferences dialog.
+- Make sure the header icon does not shrink (bug #8489).
+- Set single line label for icon sizes < "small" (bug #8490).
+- Add option to disable the background service.
+- Block maximize and fullscreen in collapsed mode (bug #8491).
+- Chain-up unmap.
+- Translation updates (ar, ca, cs, da, de, es, eu, fi, fr, hu, id, it,
+  kk, ko, lt, nl, nn, pl, pt, pt_BR, ru, sk, sv, tr, uk, zh_CN, zh_TW).
+
 4.9.3
 =====
 - Start in collapsed mode if xfrun4 symlink is used.
