@@ -250,7 +250,7 @@ msgstr "최근 선택한 카테고리 기억(_S)"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Remove the currently selected action."
-msgstr "현재 선택된 동작을 제거합니다."
+msgstr "현재 선택한 동작을 제거합니다."
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Small"
