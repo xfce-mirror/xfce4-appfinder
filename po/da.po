@@ -4,19 +4,19 @@
 # Ole Guldberg <olegb@omgwtf.dk>, 2008.
 # Per Kongstad <p_kongstad@op.pl>, 2009.
 # Erik Schmidt <erischmi@gmail.com>, 2012.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce-4-appfinder 4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-24 23:15+0000\n"
+"POT-Creation-Date: 2012-03-31 07:51+0000\n"
 "PO-Revision-Date: 2012-02-25 00:23+0100\n"
 "Last-Translator: Erik Schmidt <erischmi@gmail.com>\n"
 "Language-Team: Dansk <dansk@dansk-gruppen.dk>\n"
-"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bits\n"
+"Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-Language: Danish\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -75,39 +75,39 @@ msgstr "Den tilpassede aktion vil blive slettet permanent."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Er du sikker på at du vil slette mønstret \"%s\"?"
 
-#: ../src/appfinder-window.c:216 ../src/main.c:446
+#: ../src/appfinder-window.c:219 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Programfinder"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:271
 msgid "Toggle view mode"
 msgstr "Skift mellem visningstilstande"
 
-#: ../src/appfinder-window.c:763
+#: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
 msgstr "Kunne ikke indlæse redigering af skrivebordet"
 
-#: ../src/appfinder-window.c:789
+#: ../src/appfinder-window.c:824
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr ""
 "Det vil permanent fjerne din tilpassede skrivbordsfil fra din hjemmemappe."
 
-#: ../src/appfinder-window.c:790
+#: ../src/appfinder-window.c:825
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Er du sikker på at du vil vende tilbage til \"%s\"?"
 
-#: ../src/appfinder-window.c:800
+#: ../src/appfinder-window.c:835
 msgid "Failed to remove desktop file"
 msgstr "Kunne ikke fjerne skrivebordsfil"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:833
+#: ../src/appfinder-window.c:868
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
@@ -117,11 +117,11 @@ msgstr ""
 "skrivebordsfilen fra \"%s\" eller åbne filen  i den samme mappe og fjerne "
 "linjen \"%s\"."
 
-#: ../src/appfinder-window.c:838 ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
 msgid "_Hide"
 msgstr "_Skjul"
 
-#: ../src/appfinder-window.c:839
+#: ../src/appfinder-window.c:874
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Er du sikker på at du vil skjule \"%s\"?"
@@ -221,8 +221,9 @@ msgstr ""
 "\\<num>."
 
 #: ../src/appfinder-preferences.glade.h:14
+#, fuzzy
 msgid ""
-"Instead of quiting the application when the last window is closed, keep a "
+"Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr ""
@@ -236,7 +237,7 @@ msgstr "Ele_mentikonstørrelse:"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Keep running _instance in the background"
-msgstr "Hold _programmet kørende i baggrunden"
+msgstr "Hold kørende _instans i baggrunden"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
