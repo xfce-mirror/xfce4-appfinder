@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-03 05:27+0000\n"
+"POT-Creation-Date: 2012-04-04 16:15+0000\n"
 "PO-Revision-Date: 2009-01-30 18:10+0200\n"
 "Last-Translator: Gökmen Görgen <gkmngrgn@gmail.com>\n"
 "Language-Team: Turkish <turkce@pardus.org.tr>\n"
@@ -66,8 +66,9 @@ msgid "Are you sure you want to clear the command history?"
 msgstr "Komut geçmişini temizlemek istediğinizden emin misiniz?"
 
 #: ../src/appfinder-preferences.c:333
+#, fuzzy
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "Özelleştirilmiş davranış kalıcı olarak silinecektir."
 
 #: ../src/appfinder-preferences.c:334
 #, c-format
@@ -168,8 +169,9 @@ msgid "Please report bugs to <%s>."
 msgstr "Lütfen hataları <%s> adresine bildirin."
 
 #: ../src/appfinder-preferences.glade.h:1
+#, fuzzy
 msgid "Add a new custom action."
-msgstr ""
+msgstr "Özelleştirilmiş bir davranış ekle."
 
 #: ../src/appfinder-preferences.glade.h:2
 #, fuzzy
@@ -187,12 +189,12 @@ msgstr "Davranış"
 #: ../src/appfinder-preferences.glade.h:6
 #, fuzzy
 msgid "C_lear Custom Command History"
-msgstr "Komutlar Geçmişi"
+msgstr "Özelleştirilmiş Komutlar Geçmişini Temizle"
 
 #: ../src/appfinder-preferences.glade.h:7
 #, fuzzy
 msgid "Categ_ory icon size:"
-msgstr "Sınıflandırmalar"
+msgstr "Sınıflandırmalar:"
 
 #: ../src/appfinder-preferences.glade.h:8
 #, fuzzy
@@ -204,8 +206,9 @@ msgid "Co_mmand:"
 msgstr "Ko_mut:"
 
 #: ../src/appfinder-preferences.glade.h:10
+#, fuzzy
 msgid "Custom _Actions"
-msgstr ""
+msgstr "Özelleştirilmiş Davranışlar"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "History"
@@ -220,19 +223,21 @@ msgid ""
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:14
+#, fuzzy
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr ""
+msgstr "En son pencere kapatıldığında uygulamadan çıkmak yerine, yenisinin açılışını hızlandırmak için, uygulamanın çalışan bir tanesini açık bırak. Bu davranışı, hafıza kullanımını azaltmak için etkisizleştirmek isteyebilirsiniz."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
 msgstr "Öğ_e simge boyutu:"
 
 #: ../src/appfinder-preferences.glade.h:16
+#, fuzzy
 msgid "Keep running _instance in the background"
-msgstr ""
+msgstr "Uygulamanın çalışan bir tanesini arka planda tutmaya devam et"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
