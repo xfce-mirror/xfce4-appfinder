@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-06 02:54+0000\n"
+"POT-Creation-Date: 2012-04-07 13:24+0000\n"
 "PO-Revision-Date: 2011-11-22 17:03+0100\n"
 "Last-Translator: Piotr Sokół <psokol@jabster.pl>\n"
 "Language-Team: polski <>\n"
@@ -99,9 +99,8 @@ msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Usunąć wzór „%s”?"
 
 #: ../src/appfinder-window.c:835
-#, fuzzy
 msgid "Failed to remove desktop file"
-msgstr "Nie udało się otworzyć okna"
+msgstr "Nie udało się usunąć pliku desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -135,7 +134,7 @@ msgstr "Zamień istniejącą usługę."
 
 #: ../src/main.c:78
 msgid "Quit all instances"
-msgstr "Kończy wszystkie wystąpienia programu"
+msgstr "Kończy działanie wszystkich wystąpień programu"
 
 #: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
@@ -203,7 +202,7 @@ msgstr "_Czynności"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "History"
-msgstr "_Historia"
+msgstr "Historia"
 
 #: ../src/appfinder-preferences.glade.h:13
 #, no-c-format
@@ -222,11 +221,11 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
-msgstr ""
+msgstr "Rozmiar ikon _zawartości:"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Keep running _instance in the background"
-msgstr ""
+msgstr "_Działanie programu w tle"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
@@ -274,7 +273,7 @@ msgstr "Mniejszy"
 
 #: ../src/appfinder-preferences.glade.h:28
 msgid "Text besi_de icons"
-msgstr ""
+msgstr "Etykiety _obok ikon"
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "Very Large"
@@ -298,7 +297,7 @@ msgstr "_Typ:"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "_View items as icons"
-msgstr ""
+msgstr "_Wyświetlanie zawartości jako ikony"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
