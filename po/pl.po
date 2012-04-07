@@ -130,7 +130,7 @@ msgstr "Wypisuje informacje o wersji i kończy"
 
 #: ../src/main.c:77
 msgid "Replace the existing service"
-msgstr "Zamień istniejącą usługę."
+msgstr "Zastępuje istniejącą usługę"
 
 #: ../src/main.c:78
 msgid "Quit all instances"
