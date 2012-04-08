@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-08 14:39+0000\n"
+"POT-Creation-Date: 2012-04-08 12:24+0000\n"
 "PO-Revision-Date: 2012-03-08 20:14+0100\n"
 "Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -54,7 +54,8 @@ msgstr "P_ulisci"
 
 #: ../src/appfinder-preferences.c:222
 msgid "This will permanently clear the custom command history."
-msgstr "La cronologia dei comandi personalizzati verrà rimossa in modo permanente."
+msgstr ""
+"La cronologia dei comandi personalizzati verrà rimossa in modo permanente."
 
 #: ../src/appfinder-preferences.c:223
 msgid "Are you sure you want to clear the command history?"
@@ -69,45 +70,57 @@ msgstr "L'azione personalizzata verrò rimossa definitivamente."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Eliminare davvero lo schema \"%s\"?"
 
-#: ../src/appfinder-window.c:216 ../src/main.c:446
+#: ../src/appfinder-window.c:219 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Trova applicazioni"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:271
 msgid "Toggle view mode"
 msgstr "Modifica lo stile di visualizzazione"
 
-#: ../src/appfinder-window.c:763
+#: ../src/appfinder-window.c:363
+msgid "La_unch"
+msgstr "A_vvia"
+
+#: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
 msgstr "Impossibile avviare l'editor degli elementi della scrivania"
 
-#: ../src/appfinder-window.c:789
-msgid "This will permanently remove the custom desktop file from your home directory."
-msgstr "La cronologia dei comandi personalizzati verrà rimossa in modo permanente."
+#: ../src/appfinder-window.c:824
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr ""
+"La cronologia dei comandi personalizzati verrà rimossa in modo permanente."
 
-#: ../src/appfinder-window.c:790
+#: ../src/appfinder-window.c:825
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Ripristinare veramente \"%s\"?"
 
-#: ../src/appfinder-window.c:800
+#: ../src/appfinder-window.c:835
 msgid "Failed to remove desktop file"
 msgstr "Impossibile rimuovere il file desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:833
+#: ../src/appfinder-window.c:868
 #, c-format
-msgid "To unhide the item you have to manually remove the desktop file from \"%s\" or open the file in the same directory and remove the line \"%s\"."
-msgstr "Per far ricomparire l'elemento è necessario rimuovere manualmente il file desktop da \"%s\" o aprire il file nella stessa cartella e rimuovere lariga \"%s\"."
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr ""
+"Per far ricomparire l'elemento è necessario rimuovere manualmente il file "
+"desktop da \"%s\" o aprire il file nella stessa cartella e rimuovere lariga "
+"\"%s\"."
 
-#: ../src/appfinder-window.c:838 ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
 msgid "_Hide"
 msgstr "_Nascondi"
 
-#: ../src/appfinder-window.c:839
+#: ../src/appfinder-window.c:874
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Nascondere davvero \"%s\"?"
@@ -200,12 +213,24 @@ msgstr "Cronologia"
 # tooltip
 #: ../src/appfinder-preferences.glade.h:13
 #, no-c-format
-msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
-msgstr "Se il \"Tipo\" è impostato a \"Prefisso\", %s sarà sostituito con la stringa dopo lo schema, %S con il testo completo dell'elemento; per le espressioni regolari si possono utilizzare \\0 e \\<num>"
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr ""
+"Se il \"Tipo\" è impostato a \"Prefisso\", %s sarà sostituito con la stringa "
+"dopo lo schema, %S con il testo completo dell'elemento; per le espressioni "
+"regolari si possono utilizzare \\0 e \\<num>"
 
 #: ../src/appfinder-preferences.glade.h:14
-msgid "Instead of quitting the application when the last window is closed, keep a running instance to speed up opening new windows. You might want to disable this to reduce memory usage."
-msgstr "Invece di uscire dall'applicazione quando l'ultima finestra viene chiusa, mantiene un'istanza in esecuzione per velocizzare l'apertura di nuove finestre. Disabilitare questa opzione per ridurre l'utilizzo di memoria"
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr ""
+"Invece di uscire dall'applicazione quando l'ultima finestra viene chiusa, "
+"mantiene un'istanza in esecuzione per velocizzare l'apertura di nuove "
+"finestre. Disabilitare questa opzione per ridurre l'utilizzo di memoria"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
@@ -317,9 +342,6 @@ msgstr "Esegue un programma"
 
 #~ msgid "C_lose after launch"
 #~ msgstr "_Chiudi dopo l'avvio"
-
-#~ msgid "Launch"
-#~ msgstr "Avvia"
 
 #~ msgid "Could not load menu from %s"
 #~ msgstr "Impossibile caricare il menù da %s"
