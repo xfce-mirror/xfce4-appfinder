@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder.master\n"
-"Report-Msgid-Bugs-To: xfce-i18n <xfce-i18n@xfce.org>\n"
-"POT-Creation-Date: 2012-02-27 15:36+0000\n"
-"PO-Revision-Date: 2012-02-28 02:13+0900\n"
-"Last-Translator: Seong-ho, Cho <darkcircle.0426@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-08 10:42+0000\n"
+"PO-Revision-Date: 2012-04-08 20:22+0900\n"
+"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -56,7 +56,7 @@ msgstr "지우기(_L)"
 
 #: ../src/appfinder-preferences.c:222
 msgid "This will permanently clear the custom command history."
-msgstr "사용자 정의 명령 기록을 영구적으로 지울 것입니다."
+msgstr "사용자 정의 명령 기록을 완전히 지울 것입니다."
 
 #: ../src/appfinder-preferences.c:223
 msgid "Are you sure you want to clear the command history?"
@@ -64,54 +64,58 @@ msgstr "명령 기록을 정말로 지우시렵니까?"
 
 #: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
-msgstr "사용자 정의 동작을 영구적으로 지울 것입니다."
+msgstr "사용자 정의 동작을 완전히 지울 것입니다."
 
 #: ../src/appfinder-preferences.c:334
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "패턴 \"%s\"을(를) 정말로 삭제하시렵니까?"
 
-#: ../src/appfinder-window.c:216
+#: ../src/appfinder-window.c:219
 #: ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "프로그램 탐색기"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:271
 msgid "Toggle view mode"
 msgstr "보기 상태 전환"
 
-#: ../src/appfinder-window.c:763
+#: ../src/appfinder-window.c:363
+msgid "La_unch"
+msgstr "실행(_U)"
+
+#: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
 msgstr "데스크톱 항목 편집기 실행 실패"
 
-#: ../src/appfinder-window.c:789
+#: ../src/appfinder-window.c:824
 msgid "This will permanently remove the custom desktop file from your home directory."
-msgstr "홈 디렉터리로부터 사용자 정의 desktop 파일을 영원히 지울 것입니다."
+msgstr "홈 디렉터리로부터 사용자 정의 desktop 파일을 완전히 지울 것입니다."
 
-#: ../src/appfinder-window.c:790
+#: ../src/appfinder-window.c:825
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "\"%s\"을(를) 정말로 복원하시렵니까?"
 
-#: ../src/appfinder-window.c:800
+#: ../src/appfinder-window.c:835
 msgid "Failed to remove desktop file"
 msgstr "데스크톱 파일 제거 실패"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:833
+#: ../src/appfinder-window.c:868
 #, c-format
 msgid "To unhide the item you have to manually remove the desktop file from \"%s\" or open the file in the same directory and remove the line \"%s\"."
 msgstr "수동으로 \"%s\"에서 바탕 화면에 파일을 제거하거나 파일을 열 동일한 디렉터리에 \"%s\" 라인을 제거해야 할 항목 숨기기를 해제합니다."
 
-#: ../src/appfinder-window.c:838
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:873
+#: ../src/appfinder-window.c:958
 msgid "_Hide"
 msgstr "숨기기(_H)"
 
-#: ../src/appfinder-window.c:839
+#: ../src/appfinder-window.c:874
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "\"%s\"을(를) 정말로 숨기시렵니까?"
