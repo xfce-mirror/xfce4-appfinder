@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-07 13:24+0000\n"
+"POT-Creation-Date: 2012-04-08 18:09+0000\n"
 "PO-Revision-Date: 2011-11-22 17:03+0100\n"
 "Last-Translator: Piotr Sokół <psokol@jabster.pl>\n"
 "Language-Team: polski <>\n"
@@ -82,21 +82,25 @@ msgstr "Wyszukiwanie programów"
 msgid "Toggle view mode"
 msgstr "Przełącza tryb wyświetlania"
 
+#: ../src/appfinder-window.c:363
+#, fuzzy
+msgid "La_unch"
+msgstr "Uruchom"
+
 #: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
-msgstr ""
+msgstr "Błąd uruchomienia edytora ikon pulpitu"
 
 #: ../src/appfinder-window.c:824
-#, fuzzy
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Historia poleceń zostanie trwale usunięta."
+msgstr "Opcja usunienie trwale plik ustawień pulpitu z twojego katalogu domowego."
 
 #: ../src/appfinder-window.c:825
-#, fuzzy, c-format
+#, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Usunąć wzór „%s”?"
+msgstr "Czy chcesz przywrócić \"%s\"?"
 
 #: ../src/appfinder-window.c:835
 msgid "Failed to remove desktop file"
@@ -109,7 +113,7 @@ msgstr "Nie udało się usunąć pliku desktop"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
+msgstr "W celu pokazania obiektu, trzeba ręcznie usunąć plik pulptu z \"%s\" lub otworzyć plik w tym samym katalog i usunąć linię \"%s\"."
 
 #: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
 msgid "_Hide"
@@ -184,9 +188,8 @@ msgid "C_lear Custom Command History"
 msgstr "_Wyczyść historię poleceń"
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Categ_ory icon size:"
-msgstr "Kategorie"
+msgstr "Kategoria rozmiaru ikon:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
@@ -210,14 +213,14 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Jeżeli typ jest ustawiony na prefix, %s będzie zastąpiony przez znak po wzorze, %S z pełnym wpisem tekstowym. Dla wyrażeń regularnych można użyć \\0 i \\<numer>."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr ""
+msgstr "Zamiast wychodzi z aplikacji, po zamknięci ostatniego okna, utrzymuj aplikację uruchomioną, w celu przyspieszenia otwierania nowych okien. Można to wyłączyć, w cemu zmniejszenia zużycia pamięci."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
@@ -328,9 +331,6 @@ msgstr "Uruchom program"
 
 #~ msgid "C_lose after launch"
 #~ msgstr "Za_kończenie po uruchomieniu programu"
-
-#~ msgid "Launch"
-#~ msgstr "Uruchom"
 
 #~ msgid "Could not load menu from %s"
 #~ msgstr "Nie można wczytać menu z pliku „%s”"
