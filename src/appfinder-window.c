@@ -360,7 +360,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
       G_CALLBACK (gtk_widget_destroy), window);
   gtk_widget_show (button);
 
-  window->button_launch = button = gtk_button_new_with_mnemonic ("La_unch");
+  window->button_launch = button = gtk_button_new_with_mnemonic (_("La_unch"));
   gtk_container_add (GTK_CONTAINER (bbox), button);
   g_signal_connect_swapped (G_OBJECT (button), "clicked",
       G_CALLBACK (xfce_appfinder_window_execute), window);
