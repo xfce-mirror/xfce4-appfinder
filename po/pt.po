@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-27 15:36+0000\n"
+"POT-Creation-Date: 2012-04-08 10:42+0000\n"
 "PO-Revision-Date: 2012-01-18 11:50-0000\n"
 "Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
 "Language-Team: \n"
@@ -72,21 +72,25 @@ msgstr "A ação personalizada vai ser eliminada permanentemente!"
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Tem a certeza que pretende eliminar o padrão \"%s\"?"
 
-#: ../src/appfinder-window.c:216 ../src/main.c:446
+#: ../src/appfinder-window.c:219 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Localizador de aplicações"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:271
 msgid "Toggle view mode"
 msgstr "Trocar modo de visualização"
 
-#: ../src/appfinder-window.c:763
+#: ../src/appfinder-window.c:363
+msgid "La_unch"
+msgstr "I_niciar"
+
+#: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
 msgstr "Falha ao iniciar o editor de itens do ambiente de trabalho"
 
-#: ../src/appfinder-window.c:789
+#: ../src/appfinder-window.c:824
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
@@ -94,18 +98,18 @@ msgstr ""
 "Vai remover permanentemente o ficheiro de ambiente de trabalho personalizado "
 "existente na suas pasta pessoal"
 
-#: ../src/appfinder-window.c:790
+#: ../src/appfinder-window.c:825
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Tem a certeza que pretende reverter \"%s\"?"
 
-#: ../src/appfinder-window.c:800
+#: ../src/appfinder-window.c:835
 msgid "Failed to remove desktop file"
 msgstr "Falha ao remover o ficheiro"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:833
+#: ../src/appfinder-window.c:868
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
@@ -114,11 +118,11 @@ msgstr ""
 "Para mostrar o item, tem que remover ficheiro de ambiente de trabalho em \"%s"
 "\" ou abrir o ficheiro no mesmo diretório e remover a linha \"%s\""
 
-#: ../src/appfinder-window.c:838 ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
 msgid "_Hide"
 msgstr "_Ocultar"
 
-#: ../src/appfinder-window.c:839
+#: ../src/appfinder-window.c:874
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Tem a certeza que pretende ocultar \"%s\"?"
