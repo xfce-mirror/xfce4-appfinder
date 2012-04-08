@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-02 06:15+0000\n"
+"POT-Creation-Date: 2012-04-08 12:24+0000\n"
 "PO-Revision-Date: 2011-09-08 09:26+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
@@ -80,6 +80,10 @@ msgstr "Toepassingenzoeker"
 #: ../src/appfinder-window.c:271
 msgid "Toggle view mode"
 msgstr "Schakel de kijkmodus om"
+
+#: ../src/appfinder-window.c:363
+msgid "La_unch"
+msgstr "Starten"
 
 #: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
@@ -337,9 +341,6 @@ msgstr "Draai een programma"
 
 #~ msgid "C_lose after launch"
 #~ msgstr "Sluit _af na uitvoeren"
-
-#~ msgid "Launch"
-#~ msgstr "Uitvoeren"
 
 #~ msgid "Could not load menu from %s"
 #~ msgstr "Kon geen menu vanuit %s laden"
