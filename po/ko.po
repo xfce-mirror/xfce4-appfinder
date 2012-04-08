@@ -294,7 +294,7 @@ msgstr "아이콘과 같은 항목 보기(_V)"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "시스템에 설치된 프로그램을 찾고 실행합니다"
+msgstr "시스템에 설치한 프로그램을 찾고 실행합니다"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
