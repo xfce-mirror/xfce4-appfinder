@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce-4-appfinder 4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-31 07:51+0000\n"
+"POT-Creation-Date: 2012-04-09 05:39+0000\n"
 "PO-Revision-Date: 2012-02-25 00:23+0100\n"
 "Last-Translator: Erik Schmidt <erischmi@gmail.com>\n"
 "Language-Team: Dansk <dansk@dansk-gruppen.dk>\n"
@@ -84,6 +84,10 @@ msgstr "Programfinder"
 #: ../src/appfinder-window.c:271
 msgid "Toggle view mode"
 msgstr "Skift mellem visningstilstande"
+
+#: ../src/appfinder-window.c:363
+msgid "La_unch"
+msgstr "S_tart"
 
 #: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
@@ -339,9 +343,6 @@ msgstr "Kør et program"
 
 #~ msgid "C_lose after launch"
 #~ msgstr "L_uk efter start"
-
-#~ msgid "Launch"
-#~ msgstr "Start"
 
 #~ msgid "Could not load menu from %s"
 #~ msgstr "Kunne ikke indlæse menu fra %s"
