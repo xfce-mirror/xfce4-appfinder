@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-01 02:06+0000\n"
+"POT-Creation-Date: 2012-04-09 05:39+0000\n"
 "PO-Revision-Date: 2011-12-17 22:46+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
@@ -70,39 +70,43 @@ msgstr "Пайдаланушы әрекеті өшіріледі."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "\"%s\" шаблонын өшіруді шынымен қалайсыз ба?"
 
-#: ../src/appfinder-window.c:216 ../src/main.c:446
+#: ../src/appfinder-window.c:219 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Қолданбаларды табушы"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:271
 msgid "Toggle view mode"
 msgstr "Қарау түрін ауыстыру"
 
-#: ../src/appfinder-window.c:763
+#: ../src/appfinder-window.c:363
+msgid "La_unch"
+msgstr "Жө_нелту"
+
+#: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
 msgstr "desktop элементтер түзетушісін жөнелту сәтсіз"
 
-#: ../src/appfinder-window.c:789
+#: ../src/appfinder-window.c:824
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr ""
 "Бұл әрекет нәтижесінде үй бумаңыздан өзіңіз жасаған desktop файлы өшіріледі."
 
-#: ../src/appfinder-window.c:790
+#: ../src/appfinder-window.c:825
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "\"%s\" болдырмауды қалайсыз ба?"
 
-#: ../src/appfinder-window.c:800
+#: ../src/appfinder-window.c:835
 msgid "Failed to remove desktop file"
 msgstr "desktop файлын өшіру сәтсіз"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:833
+#: ../src/appfinder-window.c:868
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
@@ -111,11 +115,11 @@ msgstr ""
 "Жасыруды болдырмау үшін сізге \"%s\" ішінен desktop файлын өшіру немесе "
 "файлды дәл сол бумада ашып, \"%s\" жолын өшіру керек."
 
-#: ../src/appfinder-window.c:838 ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
 msgid "_Hide"
 msgstr "Жа_сыру"
 
-#: ../src/appfinder-window.c:839
+#: ../src/appfinder-window.c:874
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "\"%s\" жасыруды шынымен қалайсыз ба?"
@@ -333,9 +337,6 @@ msgstr "Бағдарламаны жөнелту"
 
 #~ msgid "C_lose after launch"
 #~ msgstr "Жө_нелткеннен кейін жабу"
-
-#~ msgid "Launch"
-#~ msgstr "Жөнелту"
 
 #~ msgid "Could not load menu from %s"
 #~ msgstr "Келесі жерден мәзірді жүктеу мүмкін емес: %s"
