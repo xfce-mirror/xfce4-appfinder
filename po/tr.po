@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-04 16:15+0000\n"
+"POT-Creation-Date: 2012-04-09 17:09+0000\n"
 "PO-Revision-Date: 2009-01-30 18:10+0200\n"
 "Last-Translator: Gökmen Görgen <gkmngrgn@gmail.com>\n"
 "Language-Team: Turkish <turkce@pardus.org.tr>\n"
@@ -66,7 +66,6 @@ msgid "Are you sure you want to clear the command history?"
 msgstr "Komut geçmişini temizlemek istediğinizden emin misiniz?"
 
 #: ../src/appfinder-preferences.c:333
-#, fuzzy
 msgid "The custom action will be deleted permanently."
 msgstr "Özelleştirilmiş davranış kalıcı olarak silinecektir."
 
@@ -84,6 +83,10 @@ msgstr "Uygulama Bulucu"
 #: ../src/appfinder-window.c:271
 msgid "Toggle view mode"
 msgstr "Görünüm moduna geç"
+
+#: ../src/appfinder-window.c:363
+msgid "La_unch"
+msgstr "Ça_lıştır"
 
 #: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
@@ -132,7 +135,6 @@ msgid "Print version information and exit"
 msgstr "Sürüm bilgisini yaz ve çık"
 
 #: ../src/main.c:77
-#, fuzzy
 msgid "Replace the existing service"
 msgstr "Varolan servisi değiştir"
 
@@ -150,14 +152,13 @@ msgid "Forced to quit"
 msgstr "Çıkmaya zorla"
 
 #: ../src/main.c:448
-#, fuzzy
 msgid "Unable to daemonize the process"
 msgstr "Süreç arkaplanda çalıştırılamadı."
 
 #: ../src/main.c:522
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Kullanım bilgisi için '%s --help' yazın."
+msgstr "Kullanım bilgisi için \"%s --help\"\\ yazın."
 
 #: ../src/main.c:533
 msgid "The Xfce development team. All rights reserved."
@@ -169,12 +170,10 @@ msgid "Please report bugs to <%s>."
 msgstr "Lütfen hataları <%s> adresine bildirin."
 
 #: ../src/appfinder-preferences.glade.h:1
-#, fuzzy
 msgid "Add a new custom action."
 msgstr "Özelleştirilmiş bir davranış ekle."
 
 #: ../src/appfinder-preferences.glade.h:2
-#, fuzzy
 msgid "Always c_enter the window"
 msgstr "Pencereyi her zaman o_rtala"
 
@@ -187,7 +186,6 @@ msgid "Behaviour"
 msgstr "Davranış"
 
 #: ../src/appfinder-preferences.glade.h:6
-#, fuzzy
 msgid "C_lear Custom Command History"
 msgstr "Özelleştirilmiş Komutlar Geçmişini Temizle"
 
@@ -206,9 +204,8 @@ msgid "Co_mmand:"
 msgstr "Ko_mut:"
 
 #: ../src/appfinder-preferences.glade.h:10
-#, fuzzy
 msgid "Custom _Actions"
-msgstr "Özelleştirilmiş Davranışlar"
+msgstr "Özelleştirilmiş _Davranışlar"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "History"
@@ -223,12 +220,15 @@ msgid ""
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:14
-#, fuzzy
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "En son pencere kapatıldığında uygulamadan çıkmak yerine, yenisinin açılışını hızlandırmak için, uygulamanın çalışan bir tanesini açık bırak. Bu davranışı, hafıza kullanımını azaltmak için etkisizleştirmek isteyebilirsiniz."
+msgstr ""
+"En son pencere kapatıldığında uygulamadan çıkmak yerine, yenisinin açılışını "
+"hızlandırmak için, uygulamanın çalışan bir tanesini açık bırak. Bu "
+"davranışı, hafıza kullanımını azaltmak için etkisizleştirmek "
+"isteyebilirsiniz."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
@@ -309,7 +309,6 @@ msgid "_Type:"
 msgstr "_Tip:"
 
 #: ../src/appfinder-preferences.glade.h:34
-#, fuzzy
 msgid "_View items as icons"
 msgstr "_Öğeleri simge olarak gör"
 
