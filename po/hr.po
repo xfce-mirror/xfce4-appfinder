@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-02 17:51+0000\n"
+"POT-Creation-Date: 2012-04-09 05:39+0000\n"
 "PO-Revision-Date: 2010-06-05 10:42+0200\n"
 "Last-Translator: Ivica Kolić<ikoli@yahoo.com> <>\n"
 "Language-Team: Croatian <>\n"
@@ -80,6 +80,10 @@ msgstr "Nalaznik programa"
 msgid "Toggle view mode"
 msgstr ""
 
+#: ../src/appfinder-window.c:363
+msgid "La_unch"
+msgstr "Po_kreni"
+
 #: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
 msgstr ""
@@ -88,7 +92,9 @@ msgstr ""
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Ovo će trajno ukloniti prilagođenu datoteku radne površine iz vaše osobne mape."
+msgstr ""
+"Ovo će trajno ukloniti prilagođenu datoteku radne površine iz vaše osobne "
+"mape."
 
 #: ../src/appfinder-window.c:825
 #, c-format
@@ -318,9 +324,6 @@ msgstr "Pokreni program"
 
 #~ msgid "C_lose after launch"
 #~ msgstr "Z_atvori nakon poretanja"
-
-#~ msgid "Launch"
-#~ msgstr "Pokreni"
 
 #~ msgid "Could not load menu from %s"
 #~ msgstr "Ne mogu učitati izbornik iz %s"
