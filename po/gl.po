@@ -78,7 +78,7 @@ msgstr ""
 #: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "Buscador de aplicacións"
+msgstr "Buscador de aplicativos"
 
 #: ../src/appfinder-window.c:271
 msgid "Toggle view mode"
@@ -130,9 +130,8 @@ msgid "Start in collapsed mode"
 msgstr ""
 
 #: ../src/main.c:76
-#, fuzzy
 msgid "Print version information and exit"
-msgstr "Información da versión"
+msgstr "Mostrar información da versión e saír"
 
 #: ../src/main.c:77
 msgid "Replace the existing service"
@@ -140,7 +139,7 @@ msgstr ""
 
 #: ../src/main.c:78
 msgid "Quit all instances"
-msgstr ""
+msgstr "Saír de todas as instancias"
 
 #: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
@@ -149,7 +148,7 @@ msgstr ""
 #. close all windows and quit
 #: ../src/main.c:244
 msgid "Forced to quit"
-msgstr ""
+msgstr "Forzouse a saída"
 
 #: ../src/main.c:448
 msgid "Unable to daemonize the process"
@@ -162,16 +161,16 @@ msgstr "Introduza '%s --help' para ver a información de uso."
 
 #: ../src/main.c:533
 msgid "The Xfce development team. All rights reserved."
-msgstr "O equipo de desenvolvemento de Xfce. Tódolos dereitos reservados."
+msgstr "O equipo de desenvolvemento de Xfce. Todos os dereitos reservados."
 
 #: ../src/main.c:534
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Por favor, comunique os erros a <%s>."
+msgstr "Por favor, comunique os fallos a <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
-msgstr ""
+msgstr "Engadir unha nova acción personalizada"
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
@@ -195,7 +194,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Centrar a xanela ao iniciar."
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Co_mmand:"
@@ -203,7 +202,7 @@ msgstr "_Orde:"
 
 #: ../src/appfinder-preferences.glade.h:10
 msgid "Custom _Actions"
-msgstr ""
+msgstr "_Accións personalizadas"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "History"
@@ -306,7 +305,7 @@ msgstr "_Ver os elementos como iconas"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Busque e execute aplicacións instaladas no sistema"
+msgstr "Busque e execute aplicativos instalados no sistema"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
