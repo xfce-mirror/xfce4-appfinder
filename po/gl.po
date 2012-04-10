@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-10 04:39+0000\n"
+"POT-Creation-Date: 2012-04-10 10:24+0000\n"
 "PO-Revision-Date: 2010-10-19 18:23+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -63,7 +63,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.c:223
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "Está seguro de que desexa limpar o historial de ordes?"
 
 #: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
@@ -123,7 +123,7 @@ msgstr "_Ocultar"
 #: ../src/appfinder-window.c:874
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr ""
+msgstr "Está seguro de que desexa ocultar «%s»?"
 
 #: ../src/main.c:75
 msgid "Start in collapsed mode"
@@ -135,7 +135,7 @@ msgstr "Mostrar información da versión e saír"
 
 #: ../src/main.c:77
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Substituír o servizo existente"
 
 #: ../src/main.c:78
 msgid "Quit all instances"
