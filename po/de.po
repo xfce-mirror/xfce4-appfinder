@@ -8,19 +8,19 @@
 # Jannis Pohlmann <jannis@xfce.org>, 2008.
 # Thomas Schütz <xfce@thschuetz.de>, 2012.
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2012.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 09:27+0000\n"
+"POT-Creation-Date: 2012-04-11 15:09+0000\n"
 "PO-Revision-Date: 2012-03-29 13:02+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <xfce-i18n-de@xfce.org>\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: GERMANY\n"
@@ -63,7 +63,8 @@ msgstr "_Leeren"
 
 #: ../src/appfinder-preferences.c:222
 msgid "This will permanently clear the custom command history."
-msgstr "Dies wird den Verlauf der benutzerdefinierten Befehle dauerhaft löschen."
+msgstr ""
+"Dies wird den Verlauf der benutzerdefinierten Befehle dauerhaft löschen."
 
 #: ../src/appfinder-preferences.c:223
 msgid "Are you sure you want to clear the command history?"
@@ -78,8 +79,7 @@ msgstr "Die benutzerdefinierte Aktion wird dauerhaft gelöscht."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Soll das Muster »%s« wirklich gelöscht werden?"
 
-#: ../src/appfinder-window.c:219
-#: ../src/main.c:446
+#: ../src/appfinder-window.c:219 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -89,13 +89,22 @@ msgstr "Anwendungsfinder"
 msgid "Toggle view mode"
 msgstr "Ansichtsmodus umstellen"
 
+#: ../src/appfinder-window.c:363
+#, fuzzy
+msgid "La_unch"
+msgstr "A_usführen"
+
 #: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
-msgstr "Der Editor für die Arbeitsflächensymbole konnte nicht aufgerufen werden"
+msgstr ""
+"Der Editor für die Arbeitsflächensymbole konnte nicht aufgerufen werden"
 
 #: ../src/appfinder-window.c:824
-msgid "This will permanently remove the custom desktop file from your home directory."
-msgstr "Dies wird den Verlauf der benutzerdefinierten Befehle dauerhaft löschen."
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr ""
+"Dies wird den Verlauf der benutzerdefinierten Befehle dauerhaft löschen."
 
 #: ../src/appfinder-window.c:825
 #, c-format
@@ -110,11 +119,14 @@ msgstr "Starter konnte nicht entfernt werden"
 #. * second with Hidden=true
 #: ../src/appfinder-window.c:868
 #, c-format
-msgid "To unhide the item you have to manually remove the desktop file from \"%s\" or open the file in the same directory and remove the line \"%s\"."
-msgstr "Um den Eintrag anzuzeigen, müssen Sie den Starter manuell aus »%s« löschen oder die Datei öffnen und die Zeile »%s« entfernen."
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr ""
+"Um den Eintrag anzuzeigen, müssen Sie den Starter manuell aus »%s« löschen "
+"oder die Datei öffnen und die Zeile »%s« entfernen."
 
-#: ../src/appfinder-window.c:873
-#: ../src/appfinder-window.c:958
+#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
 msgid "_Hide"
 msgstr "_Verstecken"
 
@@ -141,7 +153,9 @@ msgstr "Alle Instanzen beenden"
 
 #: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
-msgstr "Nicht versuchen, einen Dienst für D-Bus zu verwenden oder ein solcher zu werden"
+msgstr ""
+"Nicht versuchen, einen Dienst für D-Bus zu verwenden oder ein solcher zu "
+"werden"
 
 #. close all windows and quit
 #: ../src/main.c:244
@@ -208,12 +222,24 @@ msgstr "Verlauf"
 
 #: ../src/appfinder-preferences.glade.h:13
 #, no-c-format
-msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
-msgstr "Wenn der Typ »Präfix« gewählt ist, wird »%s« mit der Zeichenkette nach dem Muster ersetzt, »%S« mit dem kompletten Text des Eintrags. Für reguläre Ausdrücke kann \\0 and \\<num> verwendet werden."
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr ""
+"Wenn der Typ »Präfix« gewählt ist, wird »%s« mit der Zeichenkette nach dem "
+"Muster ersetzt, »%S« mit dem kompletten Text des Eintrags. Für reguläre "
+"Ausdrücke kann \\0 and \\<num> verwendet werden."
 
 #: ../src/appfinder-preferences.glade.h:14
-msgid "Instead of quitting the application when the last window is closed, keep a running instance to speed up opening new windows. You might want to disable this to reduce memory usage."
-msgstr "Behält beim Beenden der Anwendung eine laufende Instanz im Speicher, damit neue Fenster schneller geöffnet werden. Deaktivieren Sie diese Einstellung um Speicher zu sparen."
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr ""
+"Behält beim Beenden der Anwendung eine laufende Instanz im Speicher, damit "
+"neue Fenster schneller geöffnet werden. Deaktivieren Sie diese Einstellung "
+"um Speicher zu sparen."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
@@ -324,9 +350,6 @@ msgstr "Ein Programm ausführen"
 
 #~ msgid "C_lose after launch"
 #~ msgstr "Nach Ausführung sch_ließen"
-
-#~ msgid "Launch"
-#~ msgstr "Starten"
 
 #~ msgid "Could not load menu from %s"
 #~ msgstr "Konnte das Menü nicht aus »%s« laden."
