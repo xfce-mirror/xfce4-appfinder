@@ -1,17 +1,18 @@
 # $Id$
 #
 # Japanese translations for xfce4-appfinder package.
-# Copyright (C) 2004-2005 Eduard Roccatello.
+# Copyright (C) 2004-2012 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # Daichi Kawahata <daichi@xfce.org>, 2005.
 # Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2008.
+# Masato Hashimoto <cabezon.hashimoto@gmail.com>, 2009-2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-21 20:43+0200\n"
-"PO-Revision-Date: 2009-10-21 00:49+0900\n"
+"POT-Creation-Date: 2012-04-09 22:14+0900\n"
+"PO-Revision-Date: 2012-04-11 22:29+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
 "Language: ja\n"
@@ -19,182 +20,279 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/appfinder-category-model.c:108
-#, fuzzy
+#: ../src/appfinder-category-model.c:146
 msgid "All Applications"
-msgstr "アプリケーションファインダ"
+msgstr "すべてのアプリケーション"
 
-#: ../src/appfinder-model.c:422
+#: ../src/appfinder-model.c:545
 msgid "Name"
-msgstr ""
+msgstr "名前"
 
-#: ../src/appfinder-model.c:423
+#: ../src/appfinder-model.c:546
+msgid "Comment"
+msgstr "コメント"
+
+#: ../src/appfinder-model.c:547
 msgid "Command"
-msgstr ""
+msgstr "コマンド"
 
-#: ../src/appfinder-model.c:424
+#: ../src/appfinder-model.c:548
 msgid "Categories"
 msgstr "カテゴリ"
 
-#: ../src/appfinder-model.c:425
+#: ../src/appfinder-model.c:549
 msgid "Filename"
-msgstr ""
+msgstr "ファイル名"
 
-#: ../src/appfinder-model.c:1317
-#, fuzzy
+#: ../src/appfinder-model.c:1825
 msgid "Application has no command"
-msgstr "アプリケーションファインダ"
+msgstr "アプリケーションにはコマンドがありません"
 
-#: ../src/appfinder-model.c:1634
+#: ../src/appfinder-model.c:2149
 msgid "Commands History"
-msgstr ""
+msgstr "コマンド履歴"
 
-#: ../src/appfinder-preferences.c:175
+#: ../src/appfinder-preferences.c:221
 msgid "C_lear"
-msgstr ""
+msgstr "クリアー(_L)"
 
-#: ../src/appfinder-preferences.c:176
+#: ../src/appfinder-preferences.c:222
 msgid "This will permanently clear the custom command history."
-msgstr ""
+msgstr "これはカスタムコマンドの履歴を完全にクリアーします。"
 
-#: ../src/appfinder-preferences.c:177
+#: ../src/appfinder-preferences.c:223
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "コマンド履歴をクリアーしてもよろしいですか?"
 
-#: ../src/appfinder-preferences.c:287
+#: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "カスタムアクションは完全に削除されます。"
 
-#: ../src/appfinder-preferences.c:288
+#: ../src/appfinder-preferences.c:334
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgstr "パターン \"%s\" を削除してもよろしいですか?"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
-#: ../src/appfinder-preferences.glade.h:3
+#: ../src/appfinder-window.c:219
+#: ../src/main.c:446
+#: ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "アプリケーションファインダ"
+msgstr "アプリケーションファインダー"
 
-#: ../src/appfinder-window.c:224
+#: ../src/appfinder-window.c:271
 msgid "Toggle view mode"
-msgstr ""
+msgstr "表示モードの切り替え"
 
-#: ../src/main.c:70
+#: ../src/appfinder-window.c:363
+msgid "La_unch"
+msgstr "起動(_U)"
+
+#: ../src/appfinder-window.c:798
+msgid "Failed to launch desktop item editor"
+msgstr "デスクトップアイテムエディターの起動に失敗しました"
+
+#: ../src/appfinder-window.c:824
+msgid "This will permanently remove the custom desktop file from your home directory."
+msgstr "これはカスタムデスクトップファイルをホームディレクトリから完全に削除します。"
+
+#: ../src/appfinder-window.c:825
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr "\"%s\" を元に戻してもよろしいですか?"
+
+#: ../src/appfinder-window.c:835
+msgid "Failed to remove desktop file"
+msgstr "デスクトップファイルの削除に失敗しました"
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: ../src/appfinder-window.c:868
+#, c-format
+msgid "To unhide the item you have to manually remove the desktop file from \"%s\" or open the file in the same directory and remove the line \"%s\"."
+msgstr "隠したアイテムを再び表示させるには、\"%s\" からデスクトップファイルを手動で削除するか、そのディレクトリにあるデスクトップファイルを開き、\"%s\" の行を削除してください。"
+
+#: ../src/appfinder-window.c:873
+#: ../src/appfinder-window.c:958
+msgid "_Hide"
+msgstr "隠す(_H)"
+
+#: ../src/appfinder-window.c:874
+#, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr "\"%s\" を隠してもよろしいですか?"
+
+#: ../src/main.c:75
 msgid "Start in collapsed mode"
-msgstr ""
+msgstr "折り畳みモードで開始する"
 
-#: ../src/main.c:71
-#, fuzzy
+#: ../src/main.c:76
 msgid "Print version information and exit"
-msgstr "バージョン情報を表示する"
+msgstr "バージョン情報を表示して終了する"
 
-#: ../src/main.c:72
+#: ../src/main.c:77
 msgid "Replace the existing service"
-msgstr ""
+msgstr "既存のサービスを置き換える"
 
-#: ../src/main.c:73
+#: ../src/main.c:78
 msgid "Quit all instances"
-msgstr ""
+msgstr "すべてのインスタンスを終了する"
 
-#: ../src/main.c:74
+#: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "D-Bus サービスの使用を試みないか、サービスにならない"
 
 #. close all windows and quit
-#: ../src/main.c:159
+#: ../src/main.c:244
 msgid "Forced to quit"
-msgstr ""
+msgstr "強制終了"
 
-#: ../src/main.c:346
+#: ../src/main.c:448
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "プロセスをデーモン化できません"
 
-#: ../src/main.c:418
-#, fuzzy, c-format
+#: ../src/main.c:522
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "'%s --help' で使用方法を表示します。"
+msgstr "\"%s --help\" で使用方法を表示します。"
 
-#: ../src/main.c:429
+#: ../src/main.c:533
 msgid "The Xfce development team. All rights reserved."
 msgstr "The Xfce development team. All rights reserved."
 
-#: ../src/main.c:430
+#: ../src/main.c:534
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "バグは <%s> へ報告してください。"
+msgstr "バグの報告は <%s> までおねがいします。"
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
-msgstr ""
+msgid "Prefix"
+msgstr "プレフィックス"
 
 #: ../src/appfinder-preferences.glade.h:2
-msgid "Always c_enter the window"
-msgstr ""
+msgid "Regular Expression"
+msgstr "正規表現"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "とても小さい"
 
 #: ../src/appfinder-preferences.glade.h:4
-msgid "Behaviour"
-msgstr ""
+msgid "Smaller"
+msgstr "小さい"
 
 #: ../src/appfinder-preferences.glade.h:5
-msgid "C_lear Custom Command History"
-msgstr ""
+msgid "Small"
+msgstr "少し小さい"
 
 #: ../src/appfinder-preferences.glade.h:6
-msgid "Center the window on startup."
-msgstr ""
+msgid "Normal"
+msgstr "普通"
 
 #: ../src/appfinder-preferences.glade.h:7
-msgid "Co_mmand:"
-msgstr ""
+msgid "Large"
+msgstr "少し大きい"
 
 #: ../src/appfinder-preferences.glade.h:8
-msgid "Custom _Actions"
-msgstr ""
+msgid "Larger"
+msgstr "大きい"
 
 #: ../src/appfinder-preferences.glade.h:9
-msgid "History"
-msgstr ""
+msgid "Very Large"
+msgstr "とても大きい"
 
 #: ../src/appfinder-preferences.glade.h:11
-#, no-c-format
-msgid ""
-"If the type is set to prefix, %s will be replaced with the string after the "
-"pattern, %S with the complete entry text. For regular expressions you can "
-"use \\0 and \\<num>."
-msgstr ""
+msgid "Remember last _selected category"
+msgstr "最後に選択したカテゴリを記憶する(_S)"
 
 #: ../src/appfinder-preferences.glade.h:12
-msgid "Patte_rn:"
-msgstr ""
+msgid "Always c_enter the window"
+msgstr "常に画面中央に表示する(_E)"
 
 #: ../src/appfinder-preferences.glade.h:13
-msgid "Pattern"
-msgstr ""
+msgid "Center the window on startup."
+msgstr "起動時に画面中央にウィンドウを表示します"
 
 #: ../src/appfinder-preferences.glade.h:14
-msgid "Prefix"
-msgstr ""
+msgid "Keep running _instance in the background"
+msgstr "インスタンスをバックグラウンドで常駐する(_I)"
 
 #: ../src/appfinder-preferences.glade.h:15
-msgid "Regular Expression"
-msgstr ""
+msgid "Instead of quitting the application when the last window is closed, keep a running instance to speed up opening new windows. You might want to disable this to reduce memory usage."
+msgstr "最後のウィンドウが閉じられた時、アプリケーションを終了せずにインスタンスをバックグラウンドで常駐させます。これによって新しいウィンドウを開くときのスピードが速くなりますが、常にメモリを消費します。"
 
 #: ../src/appfinder-preferences.glade.h:16
-msgid "Remember last _selected category"
-msgstr ""
+msgid "Behaviour"
+msgstr "振る舞い"
 
 #: ../src/appfinder-preferences.glade.h:17
-msgid "Remove the currently selected action."
-msgstr ""
+msgid "_View items as icons"
+msgstr "アイテムをアイコンで表示する(_V)"
 
 #: ../src/appfinder-preferences.glade.h:18
-msgid "_General"
-msgstr ""
+msgid "Text besi_de icons"
+msgstr "アイコンの横にテキストを表示する(_D)"
 
 #: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "アイテムのアイコンサイズ(_M):"
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr "カテゴリのアイコンサイズ(_O):"
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "外観"
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr "カスタムコマンド履歴のクリアー(_L)"
+
+#: ../src/appfinder-preferences.glade.h:23
+msgid "History"
+msgstr "履歴"
+
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "全般(_G)"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "パターン"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "新しいアクションを追加します。"
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "選択されているアクションを削除します。"
+
+#: ../src/appfinder-preferences.glade.h:29
+#, no-c-format
+msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
+msgstr "タイプがプレフィックスの時、%s はパターンの後の文字列に、%S はテキスト全文に置き換えられます。正規表現の時、\\0 および \\<num> を使って後方参照が行えます。"
+
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "コマンド(_M):"
+
+#: ../src/appfinder-preferences.glade.h:31
+msgid "Patte_rn:"
+msgstr "パターン(_R):"
+
+#: ../src/appfinder-preferences.glade.h:32
 msgid "_Type:"
-msgstr ""
+msgstr "タイプ(_T):"
+
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr "マッチしたコマンドを履歴に保存する(_S)"
+
+#: ../src/appfinder-preferences.glade.h:34
+msgid "Custom _Actions"
+msgstr "カスタムアクション(_A)"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -202,56 +300,9 @@ msgstr "システムにインストールされたアプリケーションの検
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr ""
+msgstr "プログラムの実行..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr ""
+msgstr "プログラムを実行します"
 
-#~ msgid "[MENUFILE]"
-#~ msgstr "[MENUFILE]"
-
-#~ msgid "Unable to initialize GTK+."
-#~ msgstr "GTK+ の初期化に失敗しました。"
-
-#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
-#~ msgstr "xfconf デーモンへの接続に失敗しました。理由: %s"
-
-#~ msgid "Failed to connect to xfconf daemon."
-#~ msgstr "xfconf デーモンへの接続に失敗しました。"
-
-#~ msgid "Search"
-#~ msgstr "検索"
-
-#~ msgid "C_lose after launch"
-#~ msgstr "起動後に閉じる(_L)"
-
-#~ msgid "Launch"
-#~ msgstr "起動"
-
-#~ msgid "Could not load menu from %s"
-#~ msgstr "%s からメニューを読み込めませんでした"
-
-#~ msgid "All"
-#~ msgstr "すべて"
-
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "コマンド \"%s\" の実行に失敗しました。"
-
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>カテゴリ:</b> %s"
-
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>コマンド:</b> %s"
-
-#~ msgid "Could not load system menu"
-#~ msgstr "システムメニューを読み込めませんでした"
-
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "アプリケーション %s を実行できませんでした。理由: %s"
-
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "%s からメニューを読み込めませんでした。理由: %s"
-
-#~ msgid "Filter"
-#~ msgstr "フィルタ"
