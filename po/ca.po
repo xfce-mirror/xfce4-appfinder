@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-06 10:27+0000\n"
+"POT-Creation-Date: 2012-04-12 08:24+0000\n"
 "PO-Revision-Date: 2012-01-15 20:39+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan\n"
@@ -74,21 +74,25 @@ msgstr "L'acció personalitzada s'esborrarà de forma permanent."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Voleu esborrar el patró «%s»?"
 
-#: ../src/appfinder-window.c:216 ../src/main.c:446
+#: ../src/appfinder-window.c:219 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Cercador d'aplicacions"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:271
 msgid "Toggle view mode"
 msgstr "Canvia el mode de vista"
 
-#: ../src/appfinder-window.c:763
+#: ../src/appfinder-window.c:363
+msgid "La_unch"
+msgstr "Exec_uta"
+
+#: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
 msgstr "No s'ha pogut executar l'editor d'elements de l'escriptori"
 
-#: ../src/appfinder-window.c:789
+#: ../src/appfinder-window.c:824
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
@@ -96,18 +100,18 @@ msgstr ""
 "Això esborrarà permanentment el fitxer d'escriptori personalitzar del vostre "
 "directori personal."
 
-#: ../src/appfinder-window.c:790
+#: ../src/appfinder-window.c:825
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Voleu revertir «%s»?"
 
-#: ../src/appfinder-window.c:800
+#: ../src/appfinder-window.c:835
 msgid "Failed to remove desktop file"
 msgstr "No s'ha pogut treure el fitxer d'escriptori"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:833
+#: ../src/appfinder-window.c:868
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
@@ -116,11 +120,11 @@ msgstr ""
 "Per amagar l'element heu d'esborrar manualment el fitxer d'escriptori de "
 "«%s» o obrir el fitxer en el mateix directori i esborrar la línia «%s»."
 
-#: ../src/appfinder-window.c:838 ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
 msgid "_Hide"
 msgstr "_Amaga"
 
-#: ../src/appfinder-window.c:839
+#: ../src/appfinder-window.c:874
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Voleu amagar «%s»?"
@@ -223,7 +227,10 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "En comptes de sortir de l'aplicació quan es tanqui la darrera finestra, mantingues una instància oberta per accelerar l'inici de noves finestres. Potser voldríeu deshabilitar això per tal de reduir l'ús de memòria."
+msgstr ""
+"En comptes de sortir de l'aplicació quan es tanqui la darrera finestra, "
+"mantingues una instància oberta per accelerar l'inici de noves finestres. "
+"Potser voldríeu deshabilitar això per tal de reduir l'ús de memòria."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
@@ -334,9 +341,6 @@ msgstr "Executa un programa"
 
 #~ msgid "C_lose after launch"
 #~ msgstr "_Tanca després d'executar"
-
-#~ msgid "Launch"
-#~ msgstr "Executa"
 
 #~ msgid "Could not load menu from %s"
 #~ msgstr "No s'ha pogut carregar el menú de %s"
