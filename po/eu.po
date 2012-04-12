@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-03 11:15+0000\n"
+"POT-Creation-Date: 2012-04-12 08:24+0000\n"
 "PO-Revision-Date: 2009-10-21 13:53+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Basque <debian-l10n-eu@debian.lists.org>\n"
@@ -81,6 +81,10 @@ msgstr "Aplikazio bilatzailea"
 #: ../src/appfinder-window.c:271
 msgid "Toggle view mode"
 msgstr "Txandakatu ikuste modua"
+
+#: ../src/appfinder-window.c:363
+msgid "La_unch"
+msgstr "Ab_iarazi"
 
 #: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
@@ -222,7 +226,10 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Azken leiho ixterakoan aplikazioa itxi beharrean atzealdean martxan mantendu leiho berrien irekitzea azkartzeko. Agian hau desgaitu nahiko duzu memoria erabilpena murrizteko."
+msgstr ""
+"Azken leiho ixterakoan aplikazioa itxi beharrean atzealdean martxan mantendu "
+"leiho berrien irekitzea azkartzeko. Agian hau desgaitu nahiko duzu memoria "
+"erabilpena murrizteko."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
@@ -333,9 +340,6 @@ msgstr "Exekutatu programa"
 
 #~ msgid "C_lose after launch"
 #~ msgstr "I_txi abiarazi ondoren"
-
-#~ msgid "Launch"
-#~ msgstr "Abiarazi"
 
 #~ msgid "Could not load menu from %s"
 #~ msgstr "Ezin da %s-tik menua kargatu"
