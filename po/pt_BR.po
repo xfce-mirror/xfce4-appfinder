@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-02 00:27+0000\n"
+"POT-Creation-Date: 2012-04-11 20:54+0000\n"
 "PO-Revision-Date: 2011-04-21 12:13-0300\n"
 "Last-Translator: Sérgio Cipolla <secipolla@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
@@ -80,6 +80,10 @@ msgstr "Localizador de aplicativos"
 #: ../src/appfinder-window.c:271
 msgid "Toggle view mode"
 msgstr "Alternar modo de visão"
+
+#: ../src/appfinder-window.c:363
+msgid "La_unch"
+msgstr "La_nçar"
 
 #: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
@@ -222,7 +226,10 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Em vez de sair do aplicativo quando a última janela for fechada, mantenha uma instância em execução para acelerar a abertura de novas janelas. Porém, você pode desabilitar este recurso para reduzir o uso de memória."
+msgstr ""
+"Em vez de sair do aplicativo quando a última janela for fechada, mantenha "
+"uma instância em execução para acelerar a abertura de novas janelas. Porém, "
+"você pode desabilitar este recurso para reduzir o uso de memória."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
@@ -333,9 +340,6 @@ msgstr "Executa um programa"
 
 #~ msgid "C_lose after launch"
 #~ msgstr "F_echar ao executar"
-
-#~ msgid "Launch"
-#~ msgstr "Executar"
 
 #~ msgid "Could not load menu from %s"
 #~ msgstr "Não foi possível carregar o menu de %s"
