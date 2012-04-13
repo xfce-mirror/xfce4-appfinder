@@ -1617,7 +1617,7 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
       if (G_LIKELY (history != NULL))
         {
           xfce_appfinder_model_collect_history (model, history);
-          g_mapped_file_free (history);
+          g_mapped_file_unref (history);
         }
       else
         {
