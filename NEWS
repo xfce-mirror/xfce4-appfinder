@@ -1,3 +1,14 @@
+4.9.5
+=====
+- Don't use deprecated g_mapped_file_free (bug #8649).
+- Bump gtk, glib and xfce dependencies.
+- Make launch button translatable.
+- Translation updates: Catalan (Valencian), Danish, German, Greek, 
+  Basque, Finnish, French, Galician, Croatian, Italian, Japanese, 
+  Kazakh, Korean, Lithuanian, Dutch (Flemish), Norwegian Nynorsk, 
+  Polish, Portuguese, Portuguese (Brazilian), Russian, Slovak, Turkish, 
+  Ukrainian, Chinese (China).
+
 4.9.4
 =====
 - Add Help button to preferences dialog.
