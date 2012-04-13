@@ -3,21 +3,22 @@
 # This file is distributed under the same license as the xfce4-apfinder package.
 # Marek Piechut <mco@o2.pl>, 2005.
 # Piotr Maliński <riklaunim@gmail.com>, 2006.
-# Piotr Sokół <psokol@jabster.pl>, 2009, 2010, 2011.
-# 
+# Piotr Sokół <psokol@jabster.pl>, 2009, 2010, 2011, 2012.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-08 18:09+0000\n"
-"PO-Revision-Date: 2011-11-22 17:03+0100\n"
+"POT-Creation-Date: 2012-04-12 08:24+0000\n"
+"PO-Revision-Date: 2012-04-13 16:49+0200\n"
 "Last-Translator: Piotr Sokół <psokol@jabster.pl>\n"
 "Language-Team: polski <>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bits\n"
-"Language: pl\n"
-"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : ((n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20)) ? 1 : 2));\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : ((n%10>=2 && n%10<=4 && (n"
+"%100<10 || n%100>=20)) ? 1 : 2));\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -83,28 +84,27 @@ msgid "Toggle view mode"
 msgstr "Przełącza tryb wyświetlania"
 
 #: ../src/appfinder-window.c:363
-#, fuzzy
 msgid "La_unch"
-msgstr "Uruchom"
+msgstr "_Uruchom"
 
 #: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
-msgstr "Błąd uruchomienia edytora ikon pulpitu"
+msgstr "Nie udało się uruchomić edytora aktywatorów"
 
 #: ../src/appfinder-window.c:824
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Opcja usunienie trwale plik ustawień pulpitu z twojego katalogu domowego."
+msgstr "Plik aktywatora zostanie trwale usunięty z katalogu użytkownika."
 
 #: ../src/appfinder-window.c:825
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Czy chcesz przywrócić \"%s\"?"
+msgstr "Przywrócić „%s”?"
 
 #: ../src/appfinder-window.c:835
 msgid "Failed to remove desktop file"
-msgstr "Nie udało się usunąć pliku desktop"
+msgstr "Nie udało się usunąć pliku aktywatora"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -113,7 +113,9 @@ msgstr "Nie udało się usunąć pliku desktop"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "W celu pokazania obiektu, trzeba ręcznie usunąć plik pulptu z \"%s\" lub otworzyć plik w tym samym katalog i usunąć linię \"%s\"."
+msgstr ""
+"Aby ponownie wyświetlić element, należy usunąć plik odpowiedni aktywatora z "
+"położenia „%s” lub usunąć z niego wiersz „%s”."
 
 #: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
 msgid "_Hide"
@@ -189,7 +191,7 @@ msgstr "_Wyczyść historię poleceń"
 
 #: ../src/appfinder-preferences.glade.h:7
 msgid "Categ_ory icon size:"
-msgstr "Kategoria rozmiaru ikon:"
+msgstr "Rozmiar ikon _kategorii:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
@@ -213,14 +215,20 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Jeżeli typ jest ustawiony na prefix, %s będzie zastąpiony przez znak po wzorze, %S z pełnym wpisem tekstowym. Dla wyrażeń regularnych można użyć \\0 i \\<numer>."
+msgstr ""
+"Wprowadza polecenie czynności. Jeśli typ ustawiono na prefiks, parametr %s "
+"zostanie zastąpiony ciągiem wprowadzonym po wzorze, a parametr %S całym "
+"ciągiem wraz ze wzorem. Dla wyrażeń regularnych można użyć \\0 i \\<numer>."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Zamiast wychodzi z aplikacji, po zamknięci ostatniego okna, utrzymuj aplikację uruchomioną, w celu przyspieszenia otwierania nowych okien. Można to wyłączyć, w cemu zmniejszenia zużycia pamięci."
+msgstr ""
+"Utrzymuje program uruchomiony w tle po zamknięciu okna, aby zwiększyć "
+"prędkość otwierania nowych okien. Wyłączenie nieznacznie zmniejszy zużycie "
+"pamięci."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
@@ -252,7 +260,7 @@ msgstr "Wzór"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Prefix"
-msgstr "Przedrostek"
+msgstr "Prefiks"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Regular Expression"
@@ -292,7 +300,7 @@ msgstr "_Ogólne"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_Save match in command history"
-msgstr "_Zapisz dopasowanie w historii poleceń"
+msgstr "_Zapisanie dopasowania w historii poleceń"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
