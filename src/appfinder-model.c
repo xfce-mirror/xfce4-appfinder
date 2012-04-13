@@ -1105,7 +1105,7 @@ xfce_appfinder_model_history_changed (GFileMonitor       *monitor,
                     }
                 }
 
-              g_mapped_file_free (history);
+              g_mapped_file_unref (history);
             }
           else
             {
