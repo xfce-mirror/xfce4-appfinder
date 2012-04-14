@@ -5,6 +5,6 @@ Icon=gtk-find
 StartupNotify=true
 Terminal=false
 Type=Application
-Categories=X-XFCE;Utility;
+Categories=Utility;X-XFCE;
 _Name=Application Finder
 _Comment=Find and launch applications installed on your system
