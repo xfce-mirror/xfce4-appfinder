@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-08 12:24+0000\n"
+"POT-Creation-Date: 2012-04-17 09:09+0000\n"
 "PO-Revision-Date: 2011-09-08 09:26+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
@@ -159,7 +159,7 @@ msgstr "Niet in staat om het proces als achtergronddienst te draaien"
 #: ../src/main.c:522
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Tik '%s --help' voor gebruikinformatie."
+msgstr "Tik '%s --help' voor gebruiksaanwijzingen."
 
 #: ../src/main.c:533
 msgid "The Xfce development team. All rights reserved."
@@ -270,7 +270,7 @@ msgstr "Reguliere uitdrukking"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Remember last _selected category"
-msgstr "Onthoud laatst gekozen categorie"
+msgstr "Onthoud laatst _gekozen categorie"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Remove the currently selected action."
@@ -286,7 +286,7 @@ msgstr "Kleiner"
 
 #: ../src/appfinder-preferences.glade.h:28
 msgid "Text besi_de icons"
-msgstr "Tekst naast pictogrammen"
+msgstr "Tekst _naast pictogrammen"
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "Very Large"
@@ -298,19 +298,19 @@ msgstr "Zeer klein"
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "_General"
-msgstr "Algemeen"
+msgstr "_Algemeen"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_Save match in command history"
-msgstr "Sla vondst op in opdrachtgeschiedenis"
+msgstr "_Sla vondst op in opdrachtgeschiedenis"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
-msgstr "Type:"
+msgstr "_Type:"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "_View items as icons"
-msgstr "Toon elementen als pictogrammen"
+msgstr "Toon elementen als _pictogrammen"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
