@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-07 16:35+0000\n"
+"POT-Creation-Date: 2012-04-17 14:57+0000\n"
 "PO-Revision-Date: 2011-09-07 09:26+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
@@ -29,7 +29,7 @@ msgstr "[MENUBESTAND]"
 #: ../src/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage information."
-msgstr "Tik '%s -- help' voor gebruiksinformatie."
+msgstr "Tik '%s -- help' voor gebruiksaanwijzingen."
 
 #: ../src/main.c:70
 msgid "Unable to initialize GTK+."
