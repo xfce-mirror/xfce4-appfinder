@@ -92,7 +92,7 @@ msgstr "데스크톱 항목 편집기 실행 실패"
 
 #: ../src/appfinder-window.c:824
 msgid "This will permanently remove the custom desktop file from your home directory."
-msgstr "홈 디렉터리로부터 사용자 정의 desktop 파일을 완전히 지울 것입니다."
+msgstr "홈 디렉터리에서 사용자 정의 desktop 파일을 완전히 지울 것입니다."
 
 #: ../src/appfinder-window.c:825
 #, c-format
