@@ -392,6 +392,7 @@ xfce_appfinder_preferences_action_changed (XfconfChannel            *channel,
   gint           unique_id;
   GObject       *store;
   UpdateContext  context;
+  gint           offset = 0;
 
   if (prop_name == NULL)
     return;
@@ -400,8 +401,9 @@ xfce_appfinder_preferences_action_changed (XfconfChannel            *channel,
     {
       xfce_appfinder_preferences_action_populate (preferences);
     }
-  else if (sscanf (prop_name, "/actions/action-%d/pattern", &unique_id) == 1
-           && G_VALUE_HOLDS_STRING (value))
+  else if (G_VALUE_HOLDS_STRING (value)
+           && sscanf (prop_name, "/actions/action-%d%n", &unique_id, &offset) == 1
+           && g_strcmp0 (prop_name + offset, "/pattern") == 0)
     {
       context.unique_id = unique_id;
       context.value = value;
