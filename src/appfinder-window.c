@@ -1134,6 +1134,8 @@ xfce_appfinder_window_entry_activate (GtkEditable         *entry,
 
       if (cursor_set)
         gtk_widget_grab_focus (window->view);
+      else
+        xfce_appfinder_window_execute (window);
     }
   else if (gtk_widget_get_sensitive (window->button_launch))
     {
@@ -1465,6 +1467,7 @@ static gboolean
 xfce_appfinder_window_execute_command (const gchar          *text,
                                        GdkScreen            *screen,
                                        XfceAppfinderWindow  *window,
+                                       gboolean              only_custom_cmd,
                                        gboolean             *save_cmd,
                                        GError              **error)
 {
@@ -1487,6 +1490,8 @@ xfce_appfinder_window_execute_command (const gchar          *text,
     return FALSE;
   else if (action_cmd != NULL)
     text = action_cmd;
+  else if (only_custom_cmd)
+    return FALSE;
 
   if (IS_STRING (text))
     {
@@ -1518,13 +1523,17 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window)
   gchar        *cmd = NULL;
   gboolean      regular_command = FALSE;
   gboolean      save_cmd;
-
-  if (!gtk_widget_get_sensitive (window->button_launch))
-    return;
+  gboolean      only_custom_cmd = FALSE;
 
   screen = gtk_window_get_screen (GTK_WINDOW (window));
   if (gtk_widget_get_visible (window->paned))
     {
+      if (!gtk_widget_get_sensitive (window->button_launch))
+        {
+          only_custom_cmd = TRUE;
+          goto entry_execute;
+        }
+
       if (xfce_appfinder_window_view_get_selected (window, &model, &iter))
         {
           gtk_tree_model_filter_convert_iter_to_child_iter (GTK_TREE_MODEL_FILTER (model), &orig, &iter);
@@ -1533,17 +1542,22 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window)
           if (!result && regular_command)
             {
               gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
-              result = xfce_appfinder_window_execute_command (cmd, screen, window, NULL, &error);
+              result = xfce_appfinder_window_execute_command (cmd, screen, window, FALSE, NULL, &error);
               g_free (cmd);
             }
         }
     }
   else
     {
+      if (!gtk_widget_get_sensitive (window->button_launch))
+        return;
+
+      entry_execute:
+
       text = gtk_entry_get_text (GTK_ENTRY (window->entry));
       save_cmd = TRUE;
 
-      if (xfce_appfinder_window_execute_command (text, screen, window, &save_cmd, &error))
+      if (xfce_appfinder_window_execute_command (text, screen, window, only_custom_cmd, &save_cmd, &error))
         {
           if (save_cmd)
             result = xfce_appfinder_model_save_command (window->model, text, &error);
@@ -1552,14 +1566,17 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window)
         }
     }
 
-  gtk_entry_set_icon_from_stock (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY,
-                                 result ? NULL : GTK_STOCK_DIALOG_ERROR);
-  gtk_entry_set_icon_tooltip_text (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY,
-                                   error != NULL ? error->message : NULL);
+  if (!only_custom_cmd)
+    {
+      gtk_entry_set_icon_from_stock (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY,
+                                     result ? NULL : GTK_STOCK_DIALOG_ERROR);
+      gtk_entry_set_icon_tooltip_text (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY,
+                                       error != NULL ? error->message : NULL);
+    }
 
   if (error != NULL)
     {
-      g_warning ("Failed to execute: %s", error->message);
+      g_printerr ("%s: failed to execute: %s\n", G_LOG_DOMAIN, error->message);
       g_error_free (error);
     }
 
