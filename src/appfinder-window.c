@@ -1109,6 +1109,7 @@ xfce_appfinder_window_entry_activate (GtkEditable         *entry,
                                       XfceAppfinderWindow *window)
 {
   GtkTreePath *path;
+  gboolean     cursor_set = FALSE;
 
   if (gtk_widget_get_visible (window->paned))
     {
@@ -1118,6 +1119,8 @@ xfce_appfinder_window_entry_activate (GtkEditable         *entry,
             {
               gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->view), path, NULL, FALSE);
               gtk_tree_path_free (path);
+
+              cursor_set = TRUE;
             }
         }
       else if (gtk_icon_view_get_visible_range (GTK_ICON_VIEW (window->view), &path, NULL))
@@ -1125,9 +1128,12 @@ xfce_appfinder_window_entry_activate (GtkEditable         *entry,
           gtk_icon_view_select_path (GTK_ICON_VIEW (window->view), path);
           gtk_icon_view_set_cursor (GTK_ICON_VIEW (window->view), path, NULL, FALSE);
           gtk_tree_path_free (path);
+
+          cursor_set = TRUE;
         }
 
-      gtk_widget_grab_focus (window->view);
+      if (cursor_set)
+        gtk_widget_grab_focus (window->view);
     }
   else if (gtk_widget_get_sensitive (window->button_launch))
     {
