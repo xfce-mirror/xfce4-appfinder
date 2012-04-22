@@ -1333,8 +1333,12 @@ xfce_appfinder_model_collect_items (GarconMenu           *menu,
       if (!garcon_menu_directory_get_visible (directory))
         return FALSE;
 
-      /* this way we only have two levels */
-      if (category == NULL)
+      /* this way we only have 1 level of categories, but
+       * skip the directory of the root menu because in some
+       * menu files (gnome-menus for example) this puts
+       * everything under "Applications" */
+      if (category == NULL
+          && garcon_menu_get_parent (menu) != NULL)
         category = directory;
     }
 
