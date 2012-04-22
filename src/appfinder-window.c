@@ -923,6 +923,13 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
                           XFCE_APPFINDER_MODEL_COLUMN_TITLE, &title,
                           XFCE_APPFINDER_MODEL_COLUMN_URI, &uri, -1);
 
+      /* custom command don't have an uri */
+      if (uri == NULL)
+        {
+          g_free (title);
+          return FALSE;
+        }
+
       uri_is_local = g_str_has_prefix (uri, "file://");
 
       menu = gtk_menu_new ();
