@@ -101,7 +101,7 @@ msgstr ""
 #: ../src/appfinder-window.c:825
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr ""
+msgstr "Está seguro de que desexa reverter \"%s\"?"
 
 #: ../src/appfinder-window.c:835
 msgid "Failed to remove desktop file"
@@ -152,7 +152,7 @@ msgstr "Forzouse a saída"
 
 #: ../src/main.c:448
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "Non foi posíbel converter o proceso nun daemon"
 
 #: ../src/main.c:522
 #, c-format
