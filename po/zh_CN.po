@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
-"Report-Msgid-Bugs-To: <xfce-i18n@xfce.org>\n"
-"POT-Creation-Date: 2012-04-20 11:54+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-22 21:24+0000\n"
 "PO-Revision-Date: 2010-11-23 23:14+0800\n"
 "Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n-cn@xfce.org>\n"
@@ -47,11 +47,11 @@ msgstr "类别"
 msgid "Filename"
 msgstr "文件名"
 
-#: ../src/appfinder-model.c:1825
+#: ../src/appfinder-model.c:1829
 msgid "Application has no command"
 msgstr "应用程序没有命令"
 
-#: ../src/appfinder-model.c:2149
+#: ../src/appfinder-model.c:2153
 msgid "Commands History"
 msgstr "命令历史"
 
@@ -69,7 +69,7 @@ msgstr "您确定要清除命令历史吗？"
 
 #: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
-msgstr "将永远删除自定义的动作"
+msgstr "将永远删除自定义的动作。"
 
 #: ../src/appfinder-preferences.c:334
 #, c-format
@@ -117,10 +117,10 @@ msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr ""
-"您只得从 “%s” 手动移除桌面文件或在相同的目录中打开此文件并移除行 “%s” 来隐藏"
-"项目。"
+"要隐藏此项目，您只得从 “%s” 手动移除桌面文件、或在相同的目录中"
+"打开此文件并移除行 “%s”。"
 
-#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
+#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:965
 msgid "_Hide"
 msgstr "隐藏(_H)"
 
@@ -135,7 +135,7 @@ msgstr "以简洁模式启动"
 
 #: ../src/main.c:76
 msgid "Print version information and exit"
-msgstr "列印版本信息并退出"
+msgstr "列印版本信息后退出"
 
 #: ../src/main.c:77
 msgid "Replace the existing service"
@@ -190,7 +190,7 @@ msgstr "行为"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "C_lear Custom Command History"
-msgstr "清除自定义命令历史(_L)"
+msgstr "清除自定义命令的历史(_L)"
 
 #: ../src/appfinder-preferences.glade.h:7
 msgid "Categ_ory icon size:"
@@ -198,7 +198,7 @@ msgstr "类别图标大小(_O)："
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
-msgstr "窗口在启动时居中"
+msgstr "窗口在启动时居中。"
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Co_mmand:"
@@ -313,7 +313,7 @@ msgstr "以图标查看项目(_V)："
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "查找并启动在您系统上安装的应用程序"
+msgstr "查找和启动在您系统上安装的应用程序"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
