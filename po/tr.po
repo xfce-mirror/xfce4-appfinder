@@ -2,17 +2,17 @@
 # Turkish translations for xfce4-appfinder package.
 # Copyright (C) 2004-2005 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
-# 
+#
 # Erçin EKER <ercin.eker@linux.org.tr>, 2004.
 # Eren Türkay <turkay.eren@gmail.com>, 2008.
 # Gökmen Görgen <gkmngrgn@gmail.com>, 2008.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-09 17:09+0000\n"
-"PO-Revision-Date: 2009-01-30 18:10+0200\n"
+"POT-Creation-Date: 2012-04-22 21:24+0000\n"
+"PO-Revision-Date: 2012-04-23 06:59+0200\n"
 "Last-Translator: Gökmen Görgen <gkmngrgn@gmail.com>\n"
 "Language-Team: Turkish <turkce@pardus.org.tr>\n"
 "MIME-Version: 1.0\n"
@@ -45,11 +45,11 @@ msgstr "Sınıflandırmalar"
 msgid "Filename"
 msgstr "Dosya İsmi"
 
-#: ../src/appfinder-model.c:1825
+#: ../src/appfinder-model.c:1829
 msgid "Application has no command"
 msgstr "Uygulama herhangi bir komuta sahip değil"
 
-#: ../src/appfinder-model.c:2149
+#: ../src/appfinder-model.c:2153
 msgid "Commands History"
 msgstr "Komutlar Geçmişi"
 
@@ -74,7 +74,8 @@ msgstr "Özelleştirilmiş davranış kalıcı olarak silinecektir."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "\"%s\" desenini silmek istediğinize emin misiniz?"
 
-#: ../src/appfinder-window.c:219 ../src/main.c:446
+#: ../src/appfinder-window.c:219
+#: ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -93,9 +94,7 @@ msgid "Failed to launch desktop item editor"
 msgstr "Masaüstü öğe düzenleyicisi başlatılamadı"
 
 #: ../src/appfinder-window.c:824
-msgid ""
-"This will permanently remove the custom desktop file from your home "
-"directory."
+msgid "This will permanently remove the custom desktop file from your home directory."
 msgstr "Masaüztü dosyası ev dizininizden kalıcı olarak kaldırılacak."
 
 #: ../src/appfinder-window.c:825
@@ -111,12 +110,11 @@ msgstr "Masaüstü dosyası kaldırılamadı"
 #. * second with Hidden=true
 #: ../src/appfinder-window.c:868
 #, c-format
-msgid ""
-"To unhide the item you have to manually remove the desktop file from \"%s\" "
-"or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
+msgid "To unhide the item you have to manually remove the desktop file from \"%s\" or open the file in the same directory and remove the line \"%s\"."
+msgstr "Bir nesneyi göstermek için masaüstü dosyasını \"%s\"'dan kendiniz silmelisiniz yada dosyayı aynı dizinde açarak \"%s\" numaralı satırı silmelisiniz."
 
-#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
+#: ../src/appfinder-window.c:873
+#: ../src/appfinder-window.c:965
 msgid "_Hide"
 msgstr "_Gizle"
 
@@ -126,9 +124,8 @@ msgid "Are you sure you want to hide \"%s\"?"
 msgstr "\"%s\" 'i gizlemek istediğinizden emin misiniz?"
 
 #: ../src/main.c:75
-#, fuzzy
 msgid "Start in collapsed mode"
-msgstr "Genişletilmiş modda başla"
+msgstr "Daraltılmış durumda başla"
 
 #: ../src/main.c:76
 msgid "Print version information and exit"
@@ -190,12 +187,10 @@ msgid "C_lear Custom Command History"
 msgstr "Özelleştirilmiş Komutlar Geçmişini Temizle"
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Categ_ory icon size:"
-msgstr "Sınıflandırmalar:"
+msgstr "Sınıf simge büyüklüğü:"
 
 #: ../src/appfinder-preferences.glade.h:8
-#, fuzzy
 msgid "Center the window on startup."
 msgstr "Açılışta pencereyi ortala."
 
@@ -213,31 +208,20 @@ msgstr "Geçmiş"
 
 #: ../src/appfinder-preferences.glade.h:13
 #, no-c-format
-msgid ""
-"If the type is set to prefix, %s will be replaced with the string after the "
-"pattern, %S with the complete entry text. For regular expressions you can "
-"use \\0 and \\<num>."
+msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:14
-msgid ""
-"Instead of quitting the application when the last window is closed, keep a "
-"running instance to speed up opening new windows. You might want to disable "
-"this to reduce memory usage."
-msgstr ""
-"En son pencere kapatıldığında uygulamadan çıkmak yerine, yenisinin açılışını "
-"hızlandırmak için, uygulamanın çalışan bir tanesini açık bırak. Bu "
-"davranışı, hafıza kullanımını azaltmak için etkisizleştirmek "
-"isteyebilirsiniz."
+msgid "Instead of quitting the application when the last window is closed, keep a running instance to speed up opening new windows. You might want to disable this to reduce memory usage."
+msgstr "En son pencere kapatıldığında uygulamadan çıkmak yerine, yenisinin açılışını hızlandırmak için, uygulamanın çalışan bir tanesini açık bırak. Bu davranışı, hafıza kullanımını azaltmak için etkisizleştirmek isteyebilirsiniz."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
 msgstr "Öğ_e simge boyutu:"
 
 #: ../src/appfinder-preferences.glade.h:16
-#, fuzzy
 msgid "Keep running _instance in the background"
-msgstr "Uygulamanın çalışan bir tanesini arka planda tutmaya devam et"
+msgstr "Arka planda çalışan örneği koru"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
@@ -284,9 +268,8 @@ msgid "Smaller"
 msgstr "Daha Küçük"
 
 #: ../src/appfinder-preferences.glade.h:28
-#, fuzzy
 msgid "Text besi_de icons"
-msgstr "Simgelerin yanın_da metin"
+msgstr "Simgelerin yanında metin"
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "Very Large"
