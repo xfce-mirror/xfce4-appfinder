@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-09 22:14+0900\n"
-"PO-Revision-Date: 2012-04-11 22:29+0900\n"
+"PO-Revision-Date: 2012-04-25 20:35+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
 "Language: ja\n"
@@ -54,15 +54,15 @@ msgstr "コマンド履歴"
 
 #: ../src/appfinder-preferences.c:221
 msgid "C_lear"
-msgstr "クリアー(_L)"
+msgstr "クリア(_L)"
 
 #: ../src/appfinder-preferences.c:222
 msgid "This will permanently clear the custom command history."
-msgstr "これはカスタムコマンドの履歴を完全にクリアーします。"
+msgstr "これはカスタムコマンドの履歴を完全にクリアします。"
 
 #: ../src/appfinder-preferences.c:223
 msgid "Are you sure you want to clear the command history?"
-msgstr "コマンド履歴をクリアーしてもよろしいですか?"
+msgstr "コマンド履歴をクリアしてもよろしいですか?"
 
 #: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
@@ -247,7 +247,7 @@ msgstr "外観"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "C_lear Custom Command History"
-msgstr "カスタムコマンド履歴のクリアー(_L)"
+msgstr "カスタムコマンド履歴のクリア(_L)"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "History"
