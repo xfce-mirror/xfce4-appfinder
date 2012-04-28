@@ -4,19 +4,19 @@
 # Edscott Wilson Garcia <edscott@xfce.org>, 2004.
 # Rudy Godoy <rudy@stone-head.org>, 2005.
 # Abel Martín <abel.martin.ruiz@gmail.com>, 2008-2009.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-24 19:24+0000\n"
-"PO-Revision-Date: 2012-04-23 22:57-0600\n"
+"POT-Creation-Date: 2012-04-27 23:33+0000\n"
+"PO-Revision-Date: 2012-04-27 22:51-0600\n"
 "Last-Translator: Sergio García <oigres200@gmail.com>\n"
 "Language-Team: Spanish/ES <xfce-i18n@xfce.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 
@@ -73,7 +73,8 @@ msgstr "La acción personalizada será borrada permanentemente."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "¿Está seguro de querer eliminar el patrón \"%s\"?"
 
-#: ../src/appfinder-window.c:219 ../src/main.c:446
+#: ../src/appfinder-window.c:219
+#: ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
@@ -92,11 +93,8 @@ msgid "Failed to launch desktop item editor"
 msgstr "Fallo al ejecutar editor de elemento de escritorio"
 
 #: ../src/appfinder-window.c:824
-#, fuzzy
-msgid ""
-"This will permanently remove the custom desktop file from your home "
-"directory."
-msgstr "Esto eliminará permanentemente "
+msgid "This will permanently remove the custom desktop file from your home directory."
+msgstr "Esto eliminará permanentemente el archivo de escritorio personalizado de su directorio home."
 
 #: ../src/appfinder-window.c:825
 #, c-format
@@ -110,16 +108,12 @@ msgstr "Fallo al remover archivo de escritorio"
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
 #: ../src/appfinder-window.c:868
-#, fuzzy, c-format
-msgid ""
-"To unhide the item you have to manually remove the desktop file from \"%s\" "
-"or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
-"Para mostrar el elemento tiene que eliminar manualmente el archivo de "
-"escritorio de \"%s\" o abrir el archivo en el mismo directorio y elminiar la "
-"línea \"%s\"."
+#, c-format
+msgid "To unhide the item you have to manually remove the desktop file from \"%s\" or open the file in the same directory and remove the line \"%s\"."
+msgstr "Para mostrar el elemento tiene que eliminar manualmente el archivo de escritorio de \"%s\" o abrir el archivo en el mismo directorio y elminiar la línea \"%s\"."
 
-#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:965
+#: ../src/appfinder-window.c:873
+#: ../src/appfinder-window.c:965
 msgid "_Hide"
 msgstr "_Oculto"
 
@@ -192,7 +186,6 @@ msgid "C_lear Custom Command History"
 msgstr "L_impiar Historia de Comandos Personalizada"
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Categ_ory icon size:"
 msgstr "Tamaño de ícono de categ_orías:"
 
@@ -214,33 +207,20 @@ msgstr "Historial"
 
 #: ../src/appfinder-preferences.glade.h:13
 #, no-c-format
-msgid ""
-"If the type is set to prefix, %s will be replaced with the string after the "
-"pattern, %S with the complete entry text. For regular expressions you can "
-"use \\0 and \\<num>."
-msgstr ""
+msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
+msgstr "Si el tipo está establecido al prefijo, %s será reemplazado con la cadena despues del patrón. %S con la entrada completa de texto. Para expresiones regulares puede usar\\0 y \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:14
-#, fuzzy
-msgid ""
-"Instead of quitting the application when the last window is closed, keep a "
-"running instance to speed up opening new windows. You might want to disable "
-"this to reduce memory usage."
-msgstr ""
-"En vez de salir de la aplicación cuando la última ventana es cerrada, "
-"mantener una instancia ejecutándose para aumentar la velocidad al abrir "
-"ventanas nuevas. Es posible que desee desactivar esta opción para reducir el "
-"uso de memoria."
+msgid "Instead of quitting the application when the last window is closed, keep a running instance to speed up opening new windows. You might want to disable this to reduce memory usage."
+msgstr "En vez de salir de la aplicación cuando la última ventana es cerrada, mantener una instancia ejecutándose para aumentar la velocidad al abrir ventanas nuevas. Es posible que desee desactivar esta opción para reducir el uso de memoria."
 
 #: ../src/appfinder-preferences.glade.h:15
-#, fuzzy
 msgid "Ite_m icon size:"
-msgstr "Tamaño de ícono de ele_mento:"
+msgstr "Ta_maño de ícono de elemento:"
 
 #: ../src/appfinder-preferences.glade.h:16
-#, fuzzy
 msgid "Keep running _instance in the background"
-msgstr "Mantener una _instancia ejecutándose en segundo plano"
+msgstr "Mantener _instancia ejecutándose en segundo plano"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
@@ -303,9 +283,8 @@ msgid "_General"
 msgstr "_General"
 
 #: ../src/appfinder-preferences.glade.h:32
-#, fuzzy
 msgid "_Save match in command history"
-msgstr "Historial de comandos"
+msgstr "_Guardar coincidencia en el historial de comandos."
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
