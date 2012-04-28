@@ -1,3 +1,16 @@
+4.10.0
+======
+- Add a valid category to xfce4-run.desktop.
+- Fix property-changed matching.
+- Avoid a single category if the root menu has a directory.
+- Avoid segfault when right-clicking a custom command.
+- Only focus view if an item is selected on entry active.
+- Try to spwan a custom command in expanded view as well.
+- Translation updates: Czech, German, English (United Kingdom), 
+  Spanish (Castilian), Galician, Hungarian, Japanese, Korean, Dutch 
+  (Flemish), Portuguese (Brazilian), Romanian, Turkish, Chinese 
+  (China), Chinese (Taiwan).
+
 4.9.5
 =====
 - Don't use deprecated g_mapped_file_free (bug #8649).
