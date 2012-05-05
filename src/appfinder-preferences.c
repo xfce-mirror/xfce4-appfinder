@@ -192,10 +192,8 @@ xfce_appfinder_preferences_response (GtkWidget                *window,
   else
     {
       g_signal_handler_disconnect (preferences->channel, preferences->property_watch_id);
-
-      gtk_widget_destroy (window);
-
       g_object_unref (G_OBJECT (preferences));
+      gtk_widget_destroy (window);
     }
 }
 

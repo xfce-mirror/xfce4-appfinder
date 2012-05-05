@@ -42,7 +42,7 @@
 
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
-#define APPFINDER_WIDGET_XID(widget) ((guint) GDK_WINDOW_XID (GDK_WINDOW (GTK_WIDGET (widget)->window)))
+#define APPFINDER_WIDGET_XID(widget) ((guint) GDK_WINDOW_XID (gtk_widget_get_window (GTK_WIDGET (widget))))
 #else
 #define APPFINDER_WIDGET_XID(widget) (0)
 #endif
@@ -220,16 +220,27 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   integer = xfconf_channel_get_int (window->channel, "/last/window-width", DEFAULT_WINDOW_WIDTH);
   gtk_window_set_default_size (GTK_WINDOW (window), integer, -1);
   gtk_window_set_icon_name (GTK_WINDOW (window), GTK_STOCK_EXECUTE);
+#if GTK_CHECK_VERSION (3, 0, 0)
+  gtk_window_set_has_resize_grip (GTK_WINDOW (window), FALSE);
+#endif
 
   if (xfconf_channel_get_bool (window->channel, "/always-center", FALSE))
     gtk_window_set_position (GTK_WINDOW (window), GTK_WIN_POS_CENTER);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+#else
   vbox = gtk_vbox_new (FALSE, 6);
+#endif
   gtk_container_add (GTK_CONTAINER (window), vbox);
   gtk_container_set_border_width (GTK_CONTAINER (vbox), 6);
   gtk_widget_show (vbox);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+#else
   hbox = gtk_hbox_new (FALSE, 6);
+#endif
   gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, TRUE, 0);
   gtk_widget_show (hbox);
 
@@ -243,7 +254,11 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_container_add (GTK_CONTAINER (align), image);
   gtk_widget_show (image);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox2 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+#else
   vbox2 = gtk_vbox_new (FALSE, 6);
+#endif
   gtk_box_pack_start (GTK_BOX (hbox), vbox2, TRUE, TRUE, 0);
   gtk_widget_show (vbox2);
 
@@ -283,7 +298,11 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_box_pack_start (GTK_BOX (vbox2), window->bin_collapsed, FALSE, TRUE, 0);
   gtk_widget_show (window->bin_collapsed);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  window->paned = pane = gtk_paned_new (GTK_ORIENTATION_HORIZONTAL);
+#else
   window->paned = pane = gtk_hpaned_new ();
+#endif
   gtk_box_pack_start (GTK_BOX (vbox), pane, TRUE, TRUE, 0);
   integer = xfconf_channel_get_int (window->channel, "/last/pane-position", DEFAULT_PANED_POSITION);
   gtk_paned_set_position (GTK_PANED (pane), integer);
@@ -340,7 +359,11 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_box_pack_start (GTK_BOX (vbox), window->bin_expanded, FALSE, TRUE, 0);
   gtk_widget_show (window->bin_expanded);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  window->bbox = hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+#else
   window->bbox = hbox = gtk_hbox_new (FALSE, 6);
+#endif
   gtk_widget_show (hbox);
 
   window->button_preferences = button = gtk_button_new_from_stock (GTK_STOCK_PREFERENCES);
@@ -348,9 +371,14 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   g_signal_connect (G_OBJECT (button), "clicked",
       G_CALLBACK (xfce_appfinder_window_preferences), window);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  bbox = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
+  gtk_box_set_spacing (GTK_BOX (bbox), 6);
+#else
   bbox = gtk_hbutton_box_new ();
-  gtk_button_box_set_layout (GTK_BUTTON_BOX (bbox), GTK_BUTTONBOX_END);
   gtk_button_box_set_spacing (GTK_BUTTON_BOX (bbox), 6);
+#endif
+  gtk_button_box_set_layout (GTK_BUTTON_BOX (bbox), GTK_BUTTONBOX_END);
   gtk_box_pack_start (GTK_BOX (hbox), bbox, TRUE, TRUE, 0);
   gtk_widget_show (bbox);
 
@@ -450,7 +478,7 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
   GtkWidget             *entry;
   XfceAppfinderIconSize  icon_size = XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM;
 
-  if (event->keyval == GDK_Escape)
+  if (event->keyval == GDK_KEY_Escape)
     {
       gtk_widget_destroy (widget);
       return TRUE;
@@ -459,7 +487,7 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
     {
       switch (event->keyval)
         {
-        case GDK_l:
+        case GDK_KEY_l:
           entry = XFCE_APPFINDER_WINDOW (widget)->entry;
 
           gtk_widget_grab_focus (entry);
@@ -467,19 +495,19 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
 
           return TRUE;
 
-        case GDK_1:
-        case GDK_2:
+        case GDK_KEY_1:
+        case GDK_KEY_2:
           /* toggle between icon and tree view */
           xfconf_channel_set_bool (window->channel, "/icon-view",
-                                   event->keyval == GDK_1);
+                                   event->keyval == GDK_KEY_1);
           return TRUE;
 
-        case GDK_plus:
-        case GDK_minus:
-        case GDK_KP_Add:
-        case GDK_KP_Subtract:
+        case GDK_KEY_plus:
+        case GDK_KEY_minus:
+        case GDK_KEY_KP_Add:
+        case GDK_KEY_KP_Subtract:
           g_object_get (G_OBJECT (window->model), "icon-size", &icon_size, NULL);
-          if ((event->keyval == GDK_plus || event->keyval == GDK_KP_Add))
+          if ((event->keyval == GDK_KEY_plus || event->keyval == GDK_KEY_KP_Add))
             {
               if (icon_size < XFCE_APPFINDER_ICON_SIZE_LARGEST)
                 icon_size++;
@@ -489,8 +517,8 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
               icon_size--;
             }
 
-        case GDK_0:
-        case GDK_KP_0:
+        case GDK_KEY_0:
+        case GDK_KEY_KP_0:
           g_object_set (G_OBJECT (window->model), "icon-size", icon_size, NULL);
           return TRUE;
         }
@@ -999,10 +1027,12 @@ static void
 xfce_appfinder_window_set_padding (GtkWidget *entry,
                                    GtkWidget *align)
 {
-  gint padding;
+  gint          padding;
+  GtkAllocation alloc;
 
   /* 48 is the icon size of XFCE_APPFINDER_ICON_SIZE_48 */
-  padding = (48 - entry->allocation.height) / 2;
+  gtk_widget_get_allocation (entry, &alloc);
+  padding = (48 - alloc.height) / 2;
   gtk_alignment_set_padding (GTK_ALIGNMENT (align), MAX (0, padding), 0, 0, 0);
 }
 
@@ -1150,18 +1180,43 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
                                              GdkEventKey         *event,
                                              XfceAppfinderWindow *window)
 {
-  gboolean expand, is_expanded;
+  gboolean          expand, is_expanded;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  GdkDeviceManager *device_manager;
+  GList            *devices, *li;
+  GdkDisplay       *display;
+#endif
 
-  if (event->keyval == GDK_Up || event->keyval == GDK_Down)
+  if (event->keyval == GDK_KEY_Up || event->keyval == GDK_KEY_Down)
     {
-      expand = (event->keyval == GDK_Down);
+      expand = (event->keyval == GDK_KEY_Down);
       is_expanded = gtk_widget_get_visible (window->paned);
       if (is_expanded != expand)
         {
           /* don't break entry completion navigation in collapsed mode */
-          if (!is_expanded
-              && gdk_pointer_is_grabbed ())
-            return FALSE;
+          if (!is_expanded)
+            {
+#if GTK_CHECK_VERSION (3, 0, 0)
+              display = gtk_widget_get_display (entry);
+              device_manager = gdk_display_get_device_manager (display);
+              devices = gdk_device_manager_list_devices (device_manager, GDK_DEVICE_TYPE_MASTER);
+
+              for (li = devices; li != NULL; li = li->next)
+                {
+                  if (gdk_device_get_source (li->data) == GDK_SOURCE_MOUSE
+                      && gdk_display_device_is_grabbed (display, li->data))
+                    {
+                      g_list_free (devices);
+                      return FALSE;
+                    }
+                }
+
+              g_list_free (devices);
+#else
+              if (gdk_pointer_is_grabbed ())
+                return FALSE;
+#endif
+            }
 
           xfce_appfinder_window_set_expanded (window, expand);
           return TRUE;
@@ -1229,7 +1284,7 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
 {
   if (widget == window->view)
     {
-      if (event->keyval == GDK_Left)
+      if (event->keyval == GDK_KEY_Left)
         {
           gtk_widget_grab_focus (window->sidepane);
           return TRUE;
@@ -1237,7 +1292,7 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
     }
   else if (widget == window->sidepane)
     {
-      if (event->keyval == GDK_Right)
+      if (event->keyval == GDK_KEY_Right)
         {
           gtk_widget_grab_focus (window->view);
           return TRUE;
