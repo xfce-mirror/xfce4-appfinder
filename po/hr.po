@@ -7,15 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-09 05:39+0000\n"
-"PO-Revision-Date: 2010-06-05 10:42+0200\n"
-"Last-Translator: Ivica Kolić<ikoli@yahoo.com> <>\n"
+"POT-Creation-Date: 2012-05-05 05:21+0000\n"
+"PO-Revision-Date: 2012-05-05 09:26+0100\n"
+"Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian <>\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hr\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -41,11 +42,11 @@ msgstr "Kategorije"
 msgid "Filename"
 msgstr "Ime datoteke"
 
-#: ../src/appfinder-model.c:1825
+#: ../src/appfinder-model.c:1829
 msgid "Application has no command"
 msgstr "Program nema naredbe"
 
-#: ../src/appfinder-model.c:2149
+#: ../src/appfinder-model.c:2153
 msgid "Commands History"
 msgstr "Povijest naredbi"
 
@@ -86,7 +87,7 @@ msgstr "Po_kreni"
 
 #: ../src/appfinder-window.c:798
 msgid "Failed to launch desktop item editor"
-msgstr ""
+msgstr "Neuspjelo pokretanje uređivača stavki radne površine"
 
 #: ../src/appfinder-window.c:824
 msgid ""
@@ -103,7 +104,7 @@ msgstr ""
 
 #: ../src/appfinder-window.c:835
 msgid "Failed to remove desktop file"
-msgstr ""
+msgstr "Neuspjelo uklanjanje datoteke radne površine"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -114,9 +115,9 @@ msgid ""
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr ""
 
-#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
+#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:965
 msgid "_Hide"
-msgstr ""
+msgstr "_Sakrij"
 
 #: ../src/appfinder-window.c:874
 #, c-format
@@ -176,7 +177,7 @@ msgstr "Uvijek c_entriraj prozor"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Appearance"
-msgstr ""
+msgstr "Izgled"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "Behaviour"
@@ -188,7 +189,7 @@ msgstr "O_čisti povijest prilagođenih naredbi"
 
 #: ../src/appfinder-preferences.glade.h:7
 msgid "Categ_ory icon size:"
-msgstr ""
+msgstr "Veli_čina ikone kategorije"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
@@ -223,7 +224,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
-msgstr ""
+msgstr "Ve_ličina ikone stavke:"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Keep running _instance in the background"
@@ -231,15 +232,15 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
-msgstr ""
+msgstr "Velika"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Larger"
-msgstr ""
+msgstr "Veća"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Normal"
-msgstr ""
+msgstr "Normalna"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Patte_rn:"
@@ -267,11 +268,11 @@ msgstr "Uklonite trenutno odabranu akciju."
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Small"
-msgstr ""
+msgstr "Mala"
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Smaller"
-msgstr ""
+msgstr "Manja"
 
 #: ../src/appfinder-preferences.glade.h:28
 msgid "Text besi_de icons"
@@ -279,11 +280,11 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "Very Large"
-msgstr ""
+msgstr "Vrlo velika"
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Very Small"
-msgstr ""
+msgstr "Vrlo mala"
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "_General"
