@@ -19,17 +19,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/appfinder-category-model.c:108
-#, fuzzy
 msgid "All Applications"
-msgstr "پروگرامما ئىزدىگۈ"
+msgstr ""
 
 #: ../src/appfinder-model.c:422
 msgid "Name"
-msgstr ""
+msgstr "ئاتى"
 
 #: ../src/appfinder-model.c:423
 msgid "Command"
-msgstr ""
+msgstr "بۇيرۇق"
 
 #: ../src/appfinder-model.c:424
 msgid "Categories"
@@ -37,12 +36,11 @@ msgstr "كاتېگورىيە"
 
 #: ../src/appfinder-model.c:425
 msgid "Filename"
-msgstr ""
+msgstr "ھۆججەت ئاتى"
 
 #: ../src/appfinder-model.c:1317
-#, fuzzy
 msgid "Application has no command"
-msgstr "پروگرامما ئىزدىگۈ"
+msgstr ""
 
 #: ../src/appfinder-model.c:1634
 msgid "Commands History"
@@ -67,7 +65,7 @@ msgstr ""
 #: ../src/appfinder-preferences.c:288
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgstr "ئەندىزە «%s» نى راستىنىلا ئۆچۈرەمسىز؟"
 
 #: ../src/appfinder-window.c:183 ../src/main.c:344
 #: ../src/appfinder-preferences.glade.h:3
@@ -84,9 +82,8 @@ msgid "Start in collapsed mode"
 msgstr ""
 
 #: ../src/main.c:71
-#, fuzzy
 msgid "Print version information and exit"
-msgstr "نەشر ئۇچۇرى"
+msgstr "نەشر ئۇچۇرىنى كۆرسىتىپ ئاخىرلاشتۇرۇش"
 
 #: ../src/main.c:72
 msgid "Replace the existing service"
@@ -110,9 +107,9 @@ msgid "Unable to daemonize the process"
 msgstr ""
 
 #: ../src/main.c:418
-#, fuzzy, c-format
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "'%s --help' نى كىرگۈزسىڭىز ئىشلىتىش ئۇسۇلىنى كۆرسىتىپ بېرىدۇ."
+msgstr "\"%s --help\" نى كىرگۈزسىڭىز ئىشلىتىش ئۇسۇلى كۆرۈنىدۇ"
 
 #: ../src/main.c:429
 msgid "The Xfce development team. All rights reserved."
@@ -125,7 +122,7 @@ msgstr "كەمتۈكنى <%s> غا دوكلات قىلىڭ."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
-msgstr ""
+msgstr "يېڭى Custom Actions قوشىدۇ."
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
@@ -133,7 +130,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Behaviour"
-msgstr ""
+msgstr "قىلمىش"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "C_lear Custom Command History"
@@ -153,7 +150,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "History"
-msgstr ""
+msgstr "ئىز"
 
 #: ../src/appfinder-preferences.glade.h:11
 #, no-c-format
@@ -165,15 +162,15 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Patte_rn:"
-msgstr ""
+msgstr "ئەندىزە(_R):"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Pattern"
-msgstr ""
+msgstr "ئەندىزە"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Prefix"
-msgstr ""
+msgstr "ئالدى قوشۇلغۇچى"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Regular Expression"
@@ -189,7 +186,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "_General"
-msgstr ""
+msgstr "ئادەتتىكى(_G)"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_Type:"
@@ -201,7 +198,7 @@ msgstr "كومپيۇتېرىڭىزغا ئورنىتىلغان پروگراممى
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr ""
+msgstr "پروگرامما ئىجرا قىل..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
