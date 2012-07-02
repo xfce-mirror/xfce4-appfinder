@@ -1,14 +1,14 @@
 # translation of is.po to Icelandic
 # Copyright (C) 2011 Free Software Foundation
 # This file is distributed under the same license as the PACKAGE package.
-# 
-# Sveinn í Felli <sveinki@nett.is>, 2011.
+#
+# Sveinn í Felli <sveinki@nett.is>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: is\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-29 17:36+0000\n"
-"PO-Revision-Date: 2011-12-07 06:50+0000\n"
+"PO-Revision-Date: 2012-07-02 15:13+0000\n"
 "Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -90,11 +90,10 @@ msgid "Failed to launch desktop item editor"
 msgstr "Mistókst að ræsa ritil fyrir skjáborðsatriði"
 
 #: ../src/appfinder-window.c:824
-#, fuzzy
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Þetta hreinsar algerlega feril sérsniðinna skipana."
+msgstr "Þetta mun fjarlægja endanlega sérsniðnu skjáborðsskrána úr heimamöppunni þinni."
 
 #: ../src/appfinder-window.c:825
 #, c-format
@@ -113,6 +112,8 @@ msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr ""
+"Til að kalla atriðið aftur fram verðurðu að fjarlægja skjáborðsskrána úr \"%s\" "
+"eða opna skrána í sömu möppu og fjarlægja línuna \"%s\"."
 
 #: ../src/appfinder-window.c:873 ../src/appfinder-window.c:965
 msgid "_Hide"
@@ -222,7 +223,7 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr ""
+msgstr "Í staðinn fyrir að hætta í forritinu þegar síðasta glugganum er lokað, er eintaki af því haldið gangandi til að hraða opnun nýrra glugga. Þú gætir viljað gera þetta óvirkt til að minnka minnisnotkun."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
@@ -230,7 +231,7 @@ msgstr "Stærð tákn_mynda fyrir atriði:"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Keep running _instance in the background"
-msgstr ""
+msgstr "_Halda forriti opnu í bakgrunni"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
@@ -315,3 +316,4 @@ msgstr "Keyra forrit..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Keyra forrit"
+
