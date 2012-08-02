@@ -122,7 +122,7 @@ msgstr "راستلا «%s» نى يوشۇرامسىز؟"
 
 #: ../src/main.c:75
 msgid "Start in collapsed mode"
-msgstr ""
+msgstr "قاتلانغان ھالەتتە باشلانسۇن"
 
 #: ../src/main.c:76
 msgid "Print version information and exit"
@@ -138,12 +138,12 @@ msgstr "بارلىق ئۈلگىنى ئاخىرلاشتۇرىدۇ"
 
 #: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "ئىشلەتمىسۇن ياكى D-Bus مۇلازىمىتى بولمىسۇن"
 
 #. close all windows and quit
 #: ../src/main.c:244
 msgid "Forced to quit"
-msgstr ""
+msgstr "مەجبۇرىي ئاخىرلاشتۇرسۇن"
 
 #: ../src/main.c:448
 msgid "Unable to daemonize the process"
@@ -152,7 +152,7 @@ msgstr "ئىجرانى مۇئەككەل قىلغىلى بولمىدى"
 #: ../src/main.c:522
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "«%s --help» نى كىرگۈزسىڭىز ئىشلىتىش ئۇسۇلى كۆرۈنىدۇ"
+msgstr "ئىشلىتىش ئۇسۇلىنى كۆرۈش ئۈچۈن «%s --help» نى كىرگۈزسە بولىدۇ."
 
 #: ../src/main.c:533
 msgid "The Xfce development team. All rights reserved."
@@ -197,7 +197,7 @@ msgstr "بۇيرۇق(_M):"
 
 #: ../src/appfinder-preferences.glade.h:10
 msgid "Custom _Actions"
-msgstr "ئىختىيارى مەشغۇلات"
+msgstr "ئىختىيارى مەشغۇلاتلار(_A)"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "History"
@@ -209,14 +209,14 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "تىپى ئالدى قوشۇلغۇچى بولسا، %s ئەندىزىنىڭ ئاخىرىدىكى تېكىستىگە، %S بولسا پۈتۈن تېكىستكە ئالمىشىدۇ. مۇنتىزىم ئىپادىدە \\0 ۋە \\<num> ئارقىلىق ئاخىرىنى تېپىشقا بولىدۇ."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr ""
+msgstr "ئەڭ ئاخىرقى كۆزنەك يېپىلغاندا، ئۈلگىنى ئاخىرلاشماستىن ئارقا تەرەپتە تۇرۇۋېرىدۇ. بۇنىڭ بىلەن يېڭى كۆزنەك ئېچىلغاندا تەز ئېچىلىدۇيۇ ئەسلەك خورايدۇ."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
