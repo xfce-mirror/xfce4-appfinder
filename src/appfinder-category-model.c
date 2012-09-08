@@ -589,6 +589,7 @@ xfce_appfinder_category_model_icon_theme_changed (XfceAppfinderCategoryModel *mo
   for (li = model->categories, idx = 0; li != NULL; li = li->next, idx++)
     {
       item = li->data;
+      appfinder_assert (item != NULL);
 
       if (item->pixbuf != NULL)
         {
