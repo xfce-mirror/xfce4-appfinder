@@ -1453,8 +1453,11 @@ xfce_appfinder_window_icon_theme_changed (XfceAppfinderWindow *window)
   window->icon_find = xfce_appfinder_model_load_pixbuf (GTK_STOCK_FIND, XFCE_APPFINDER_ICON_SIZE_48);
 
   /* drop cached pixbufs */
-  xfce_appfinder_model_icon_theme_changed (window->model);
-  xfce_appfinder_category_model_icon_theme_changed (window->category_model);
+  if (G_LIKELY (window->model != NULL))
+    xfce_appfinder_model_icon_theme_changed (window->model);
+
+  if (G_LIKELY (window->category_model != NULL))
+    xfce_appfinder_category_model_icon_theme_changed (window->category_model);
 
   /* update state */
   xfce_appfinder_window_entry_changed (window);
