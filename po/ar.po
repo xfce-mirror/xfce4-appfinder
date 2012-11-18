@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-04 16:51+0000\n"
-"PO-Revision-Date: 2012-10-05 00:33+0300\n"
+"POT-Creation-Date: 2012-11-18 01:30+0000\n"
+"PO-Revision-Date: 2012-11-18 06:16+0300\n"
 "Last-Translator: محمد الحرقان <malham1@gmail.com>\n"
 "Language-Team: http://www.vertaal.com.ar/files/factory/ar/list/\n"
 "Language: ar\n"
@@ -58,20 +58,20 @@ msgstr "مح_و"
 
 #: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
-msgstr "هذا سوف يمحو نهائيا تاريخ الأوامر المخصصة."
+msgstr "هذا سيمحو نهائيا تاريخ الأوامر المخصصة."
 
 #: ../src/appfinder-preferences.c:221
 msgid "Are you sure you want to clear the command history?"
-msgstr "هل أنت متأكد أنك تريد محو تاريخ الاوامر؟"
+msgstr "متأكد أنك تريد محو تاريخ الاوامر؟"
 
 #: ../src/appfinder-preferences.c:331
 msgid "The custom action will be deleted permanently."
-msgstr "سيتم حذف نهائيا الإجراء المخصص."
+msgstr "سيتم حذف الإجراء المخصص نهائيا."
 
 #: ../src/appfinder-preferences.c:332
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "هل أنت متأكد أنك تريد حذف القالب \"%s\"؟"
+msgstr "متأكد أنك تريد حذف القالب \"%s\"؟"
 
 #: ../src/appfinder-window.c:219 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:4
@@ -100,7 +100,7 @@ msgstr "هذا سيحذف ملف سطح المكتب المخصص من مجلد 
 #: ../src/appfinder-window.c:853
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "هل أنت متاكد أنك تريد إرجاع \"%s\"؟"
+msgstr "متاكد أنك تريد إرجاع \"%s\"؟"
 
 #: ../src/appfinder-window.c:863
 msgid "Failed to remove desktop file"
@@ -124,7 +124,7 @@ msgstr "_إخفاء"
 #: ../src/appfinder-window.c:902
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "هل أنت متاكد أنك تريد إخفاء \"%s\"؟"
+msgstr "متاكد أنك تريد إخفاء \"%s\"؟"
 
 #: ../src/main.c:75
 msgid "Start in collapsed mode"
@@ -167,7 +167,7 @@ msgstr "فريق تطوير إكسفس . كل الحقوق محفوظة."
 #: ../src/main.c:534
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "الرجاء الإبلاغ عن الخلل إلى <%s>."
+msgstr "الرجاء الإبلاغ عن علة إلى <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
