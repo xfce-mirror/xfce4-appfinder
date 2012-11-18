@@ -2,12 +2,12 @@
 # Copyright (C) 2004-2011 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # ByungHyun Choi <byunghyun.choi@gmail.com>, 2005.
-# Seong-ho, Cho <darkcircle.0426@gmail.com>, 2011.
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder.master\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: https://bugzilla.xfce.org/enter_bug.cgi?product=Xfce4-appfinder\n"
 "POT-Creation-Date: 2012-04-08 10:42+0000\n"
 "PO-Revision-Date: 2012-04-08 20:22+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
@@ -56,7 +56,7 @@ msgstr "지우기(_L)"
 
 #: ../src/appfinder-preferences.c:222
 msgid "This will permanently clear the custom command history."
-msgstr "사용자 정의 명령 기록을 완전히 지울 것입니다."
+msgstr "사용자 정의 명령 기록을 완전히 지웁니다."
 
 #: ../src/appfinder-preferences.c:223
 msgid "Are you sure you want to clear the command history?"
@@ -64,7 +64,7 @@ msgstr "명령 기록을 정말로 지우시렵니까?"
 
 #: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
-msgstr "사용자 정의 동작을 완전히 지울 것입니다."
+msgstr "사용자 정의 동작을 완전히 지웁니다."
 
 #: ../src/appfinder-preferences.c:334
 #, c-format
@@ -92,7 +92,7 @@ msgstr "데스크톱 항목 편집기 실행 실패"
 
 #: ../src/appfinder-window.c:824
 msgid "This will permanently remove the custom desktop file from your home directory."
-msgstr "홈 디렉터리에서 사용자 정의 desktop 파일을 완전히 지울 것입니다."
+msgstr "홈 디렉터리에서 사용자 정의 desktop 파일을 완전히 지웁니다."
 
 #: ../src/appfinder-window.c:825
 #, c-format
@@ -138,7 +138,7 @@ msgstr "모든 인스턴스 끝내기"
 
 #: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
-msgstr "D-Bus 서비스를 사용하거나 서비스와 함께 동작하도록 시도하지 않음"
+msgstr "D-Bus 서비스를 사용하거나 D-Bus와 동작하도록 시도하지 않음"
 
 #. close all windows and quit
 #: ../src/main.c:244
@@ -161,7 +161,7 @@ msgstr "Xfce 개발 팀. All rights reserved."
 #: ../src/main.c:534
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "<%s>에게 버그를 알려주시기 바랍니다."
+msgstr "<%s>에게 버그를 알려주십시오."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
@@ -206,11 +206,11 @@ msgstr "기록"
 #: ../src/appfinder-preferences.glade.h:13
 #, no-c-format
 msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
-msgstr "접두어로 유형을 지정하였다면, %s은(는) 완전한 목록 텍스트로 된 다음 패턴  %S(으)로 바뀔 것입니다. 정규 표현식에 \\0과 \\<숫자>를 사용할 수 있습니다."
+msgstr "접두어로 유형을 지정하였다면, %s은(는) 완전한 목록 텍스트로 된 다음 패턴  %S(으)로 바뀝니다. 정규 표현식에 \\0과 \\<숫자>를 사용할 수 있습니다."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Instead of quitting the application when the last window is closed, keep a running instance to speed up opening new windows. You might want to disable this to reduce memory usage."
-msgstr "프로그램을 빠져나가는 대신 마지막 창이 닫혔을 경우 새 창을 여는 속도를 올리기 위해 인스턴스 실행을 유지합니다. 메모리 사용을 줄이라면 이것을 비활성화하기를 원하실 것입니다."
+msgstr "프로그램을 빠져나가는 대신 마지막 창이 닫혔을 경우 새 창을 여는 속도를 올리려고 인스턴스 실행을 유지합니다. 메모리 사용을 줄이려면 이것을 비활성화 해보십시오."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
