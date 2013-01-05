@@ -17,6 +17,8 @@ xfce4_appfinder_SOURCES = \
 	appfinder-actions.h \
 	appfinder-category-model.c \
 	appfinder-category-model.h \
+	appfinder-gdbus.c \
+	appfinder-gdbus.h \
 	appfinder-model.c \
 	appfinder-model.h \
 	appfinder-preferences.c \
@@ -34,7 +36,6 @@ xfce4_appfinder_CFLAGS = \
 	$(LIBXFCE4UI_CFLAGS) \
 	$(GARCON_CFLAGS) \
 	$(GIO_CFLAGS) \
-	$(DBUS_GLIB_CFLAGS) \
 	$(XFCONF_CFLAGS) \
 	$(PLATFORM_CFLAGS)
 
@@ -46,8 +47,7 @@ xfce4_appfinder_LDADD = \
 	$(LIBXFCE4UI_LIBS) \
 	$(GARCON_LIBS) \
 	$(XFCONF_LIBS) \
-	$(GIO_LIBS) \
-	$(DBUS_GLIB_LIBS)
+	$(GIO_LIBS)
 
 xfce4_appfinder_LDFLAGS = \
 	-no-undefined \

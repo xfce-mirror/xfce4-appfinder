@@ -52,4 +52,7 @@ void    appfinder_refcount_debug_add (GObject     *object,
 #define appfinder_return_val_if_fail(expr,val) G_STMT_START{ (void)0; }G_STMT_END
 #endif
 
+void appfinder_window_new (const gchar *startup_id,
+                           gboolean     expanded);
+
 #endif /* !__XFCE_APPFINDER_PRIVATE_H__ */
