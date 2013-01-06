@@ -108,7 +108,9 @@ static gboolean   xfce_appfinder_window_item_visible                  (GtkTreeMo
 static void       xfce_appfinder_window_item_changed                  (XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_row_activated                 (XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_icon_theme_changed            (XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_execute                       (XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_launch_clicked                (XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_execute                       (XfceAppfinderWindow         *window,
+                                                                       gboolean                     close_on_succeed);
 
 
 
@@ -391,7 +393,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   window->button_launch = button = gtk_button_new_with_mnemonic (_("La_unch"));
   gtk_container_add (GTK_CONTAINER (bbox), button);
   g_signal_connect_swapped (G_OBJECT (button), "clicked",
-      G_CALLBACK (xfce_appfinder_window_execute), window);
+      G_CALLBACK (xfce_appfinder_window_launch_clicked), window);
   gtk_widget_set_sensitive (button, FALSE);
   gtk_widget_show (button);
 
@@ -804,6 +806,15 @@ xfce_appfinder_window_view_get_selected (XfceAppfinderWindow  *window,
 
 
 static void
+xfce_appfinder_window_popup_menu_execute (GtkWidget           *mi,
+                                          XfceAppfinderWindow *window)
+{
+  xfce_appfinder_window_execute (window, FALSE);
+}
+
+
+
+static void
 xfce_appfinder_window_popup_menu_edit (GtkWidget           *mi,
                                        XfceAppfinderWindow *window)
 {
@@ -973,6 +984,12 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
 
       mi = gtk_separator_menu_item_new ();
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
+      gtk_widget_show (mi);
+
+      mi = gtk_image_menu_item_new_from_stock (GTK_STOCK_EXECUTE, NULL);
+      gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
+      g_signal_connect (G_OBJECT (mi), "activate",
+          G_CALLBACK (xfce_appfinder_window_popup_menu_execute), window);
       gtk_widget_show (mi);
 
       mi = gtk_image_menu_item_new_from_stock (GTK_STOCK_EDIT, NULL);
@@ -1165,7 +1182,7 @@ xfce_appfinder_window_entry_activate (GtkEditable         *entry,
       if (cursor_set)
         gtk_widget_grab_focus (window->view);
       else
-        xfce_appfinder_window_execute (window);
+        xfce_appfinder_window_execute (window, TRUE);
     }
   else if (gtk_widget_get_sensitive (window->button_launch))
     {
@@ -1570,7 +1587,16 @@ xfce_appfinder_window_execute_command (const gchar          *text,
 
 
 static void
-xfce_appfinder_window_execute (XfceAppfinderWindow *window)
+xfce_appfinder_window_launch_clicked (XfceAppfinderWindow *window)
+{
+  xfce_appfinder_window_execute (window, TRUE);
+}
+
+
+
+static void
+xfce_appfinder_window_execute (XfceAppfinderWindow *window,
+                               gboolean             close_on_succeed)
 {
   GtkTreeModel *model;
   GtkTreeIter   iter, orig;
@@ -1638,7 +1664,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window)
       g_error_free (error);
     }
 
-  if (result)
+  if (result && close_on_succeed)
     gtk_widget_destroy (GTK_WIDGET (window));
 }
 
