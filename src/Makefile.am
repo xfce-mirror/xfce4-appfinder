@@ -1,6 +1,6 @@
 # vi:set ts=8 sw=8 noet ai nocindent syntax=automake:
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	-I$(top_srcdir) \
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\" \
 	-DG_LOG_DOMAIN=\"xfce4-appfinder\" \
