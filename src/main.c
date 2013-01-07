@@ -193,23 +193,6 @@ appfinder_window_new (const gchar *startup_id,
 
 
 
-static void
-appfinder_signal_handler (gint signum)
-{
-  static gboolean was_triggered = FALSE;
-
-  /* avoid recursing this handler */
-  if (was_triggered)
-    return;
-  was_triggered = TRUE;
-
-  APPFINDER_DEBUG ("received signal %s", g_strsignal (signum));
-
-  gtk_main_quit ();
-}
-
-
-
 gint
 main (gint argc, gchar **argv)
 {
@@ -217,8 +200,6 @@ main (gint argc, gchar **argv)
   const gchar *desktop;
   const gchar *startup_id;
   GSList      *windows_destroy;
-  const gint   signums[] = { SIGINT, SIGQUIT, SIGTERM, SIGABRT };
-  guint        i;
 
   /* set translation domain */
   xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
@@ -262,10 +243,6 @@ main (gint argc, gchar **argv)
     {
       return appfinder_gdbus_quit (NULL) ? EXIT_SUCCESS : EXIT_FAILURE;
     }
-
-  /* setup signal handlers to properly quit the main loop */
-  for (i = 0; i < G_N_ELEMENTS (signums); i++)
-    signal (signums[i], appfinder_signal_handler);
 
   /* if started with the xfrun4 executable, start in collapsed mode */
   if (!opt_collapsed && strcmp (*argv, "xfrun4") == 0)
