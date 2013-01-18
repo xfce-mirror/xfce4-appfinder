@@ -175,7 +175,7 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "/",
-      "exo-open --launch FileManager man %s",
+      "exo-open --launch FileManager %S",
       FALSE,
       NULL },
   };
