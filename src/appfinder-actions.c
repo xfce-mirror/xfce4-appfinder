@@ -172,7 +172,12 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
       "#",
       "exo-open --launch TerminalEmulator man %s",
       FALSE,
-      NULL }
+      NULL },
+    { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
+      "/",
+      "exo-open --launch FileManager man %s",
+      FALSE,
+      NULL },
   };
 
   APPFINDER_DEBUG ("loaded default actions");
