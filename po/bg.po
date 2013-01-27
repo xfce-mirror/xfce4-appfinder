@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-09 05:27+0000\n"
-"PO-Revision-Date: 2013-01-09 12:08+0200\n"
+"POT-Creation-Date: 2013-01-27 06:48+0000\n"
+"PO-Revision-Date: 2013-01-27 10:41+0200\n"
 "Last-Translator: Cybercop <cybercop_montana@abv.bg>\n"
 "Language-Team: Bulgarian\n"
 "Language: bg\n"
@@ -51,7 +51,7 @@ msgstr "История на командите"
 
 #: ../src/appfinder-preferences.c:221
 msgid "C_lear"
-msgstr "Почистване"
+msgstr "Изчистване"
 
 #: ../src/appfinder-preferences.c:222
 msgid "This will permanently clear the custom command history."
@@ -68,7 +68,7 @@ msgstr "Потребителското действие ще бъде према
 #: ../src/appfinder-preferences.c:334
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "Првемахване на шаблон \"%s\"?"
+msgstr "Премахване на шаблон \"%s\"?"
 
 #: ../src/appfinder-window.c:219
 #: ../src/main.c:446
@@ -188,7 +188,7 @@ msgstr "Категория размер на иконите:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
-msgstr "Центрирай прозореца при стартиране"
+msgstr "Центрирай прозореца при стартиране."
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Co_mmand:"
