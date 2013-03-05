@@ -1,20 +1,21 @@
 # This file is distributed under the same license as the xfce4-appfinder package.
 # salepetronije <salepetronije@gmail.com>, 2012.
+# Саша Петровић <salepetronije@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder.master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-20 08:54+0000\n"
-"PO-Revision-Date: 2012-06-06 18:49+0200\n"
-"Last-Translator: salepetronije <salepetronije@gmail.com>\n"
-"Language-Team: српски <xfce-i18n@xfce.org>\n"
+"PO-Revision-Date: 2013-03-05 14:02+0100\n"
+"Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
+"Language-Team: српски <>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2) \n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -34,7 +35,7 @@ msgstr "Наредба"
 
 #: ../src/appfinder-model.c:548
 msgid "Categories"
-msgstr "Категорије"
+msgstr "Врсте"
 
 #: ../src/appfinder-model.c:549
 msgid "Filename"
@@ -113,8 +114,8 @@ msgid ""
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr ""
 "Да опет прикажете ставку, морате ручно да уклоните датотеку покретача "
-"програма из „%s“ или да отворите датотеку у истом директоријуму и да "
-"уклоните ред „%s“."
+"програма из „%s“ или да отворите датотеку у истој фасцикли и да уклоните ред "
+"„%s“."
 
 #: ../src/appfinder-window.c:873 ../src/appfinder-window.c:965
 msgid "_Hide"
@@ -135,7 +136,7 @@ msgstr "Исписује податке о издању и излази"
 
 #: ../src/main.c:77
 msgid "Replace the existing service"
-msgstr "Мења постојећи сервис"
+msgstr "Мења постојећу услугу"
 
 #: ../src/main.c:78
 msgid "Quit all instances"
@@ -239,15 +240,15 @@ msgstr "Држи тренутно покренути _примерак у поз
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
-msgstr "Велике"
+msgstr "велике"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Larger"
-msgstr "Највеће"
+msgstr "највеће"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Normal"
-msgstr "Нормалне"
+msgstr "обичне"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Patte_rn:"
@@ -275,11 +276,11 @@ msgstr "Уклони тренутно обележену радњу."
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Small"
-msgstr "Мале"
+msgstr "мале"
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Smaller"
-msgstr "Малецне"
+msgstr "малецне"
 
 #: ../src/appfinder-preferences.glade.h:28
 msgid "Text besi_de icons"
@@ -287,11 +288,11 @@ msgstr "Текст пор_ед иконица"
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "Very Large"
-msgstr "Врло велике"
+msgstr "врло велике"
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Very Small"
-msgstr "Врло мале"
+msgstr "врло мале"
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "_General"
