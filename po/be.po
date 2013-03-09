@@ -50,7 +50,7 @@ msgstr "Гісторыя загадаў"
 
 #: ../src/appfinder-preferences.c:219
 msgid "C_lear"
-msgstr "Ачысціць"
+msgstr "_Ачысціць"
 
 #: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
@@ -81,7 +81,7 @@ msgstr "Пераключыць рэжым прагляду"
 
 #: ../src/appfinder-window.c:391
 msgid "La_unch"
-msgstr "Запусціць"
+msgstr "За_пусціць"
 
 #: ../src/appfinder-window.c:826
 msgid "Failed to launch desktop item editor"
@@ -169,7 +169,7 @@ msgstr "Дадаць новае дзеянне."
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
-msgstr "Заўсёды цэнтраваць вакно"
+msgstr "Заўсёды _цэнтраваць вакно"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Appearance"
@@ -181,11 +181,11 @@ msgstr "Паводзіны"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "C_lear Custom Command History"
-msgstr "Ачысціць гісторыю карыстальніцкіх дзеянняў"
+msgstr "_Ачысціць гісторыю карыстальніцкіх дзеянняў"
 
 #: ../src/appfinder-preferences.glade.h:7
 msgid "Categ_ory icon size:"
-msgstr "Памер значкі катэгорыі:"
+msgstr "Памер значкі _катэгорыі:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
@@ -197,7 +197,7 @@ msgstr "За_гад:"
 
 #: ../src/appfinder-preferences.glade.h:10
 msgid "Custom _Actions"
-msgstr "Карыстальніцкія дзеянні"
+msgstr "Карыстальніцкія _дзеянні"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "History"
@@ -220,11 +220,11 @@ msgstr "Замест выхаду з дастасавання пасля зак�
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
-msgstr "Памер значкі элемента:"
+msgstr "Памер значкі _элемента:"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Keep running _instance in the background"
-msgstr "Трымаць працуючы экзэмпляр у фоне"
+msgstr "Трымаць працуючы экзэмпляр у _фоне"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
@@ -240,7 +240,7 @@ msgstr "Звычайны"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Patte_rn:"
-msgstr "Шаблон:"
+msgstr "_Шаблон:"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Pattern"
@@ -256,7 +256,7 @@ msgstr "Рэгулярны выраз"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Remember last _selected category"
-msgstr "Памятаваць апошнюю абраную катэгорыю"
+msgstr "_Памятаваць апошнюю абраную катэгорыю"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Remove the currently selected action."
@@ -272,7 +272,7 @@ msgstr "Яшчэ меньш"
 
 #: ../src/appfinder-preferences.glade.h:28
 msgid "Text besi_de icons"
-msgstr "Тэкст за значкай"
+msgstr "Тэкст за зна_чкай"
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "Very Large"
@@ -284,11 +284,11 @@ msgstr "Вельмі малы"
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "_General"
-msgstr "Асноўныя"
+msgstr "А_сноўныя"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_Save match in command history"
-msgstr "Захоўваць супадзенне ў гісторыі загадаў"
+msgstr "Захоўваць _супадзенне ў гісторыі загадаў"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
@@ -296,7 +296,7 @@ msgstr "_Тып:"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "_View items as icons"
-msgstr "Паказваць элементы як значкі"
+msgstr "Паказваць элементы _як значкі"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
