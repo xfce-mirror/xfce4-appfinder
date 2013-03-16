@@ -127,6 +127,8 @@ struct _XfceAppfinderWindow
 
   XfceAppfinderActions       *actions;
 
+  GtkIconTheme               *icon_theme;
+
   GtkEntryCompletion         *completion;
 
   XfconfChannel              *channel;
@@ -202,7 +204,6 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   GtkWidget          *bbox;
   GtkWidget          *button;
   GtkEntryCompletion *completion;
-  GtkIconTheme       *icon_theme;
   gint                integer;
 
   window->channel = xfconf_channel_get ("xfce4-appfinder");
@@ -370,9 +371,10 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   image = gtk_image_new_from_stock (GTK_STOCK_EXECUTE, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (button), image);
 
-  icon_theme = gtk_icon_theme_get_for_screen (gtk_window_get_screen (GTK_WINDOW (window)));
-  g_signal_connect_swapped (G_OBJECT (icon_theme), "changed",
+  window->icon_theme = gtk_icon_theme_get_for_screen (gtk_window_get_screen (GTK_WINDOW (window)));
+  g_signal_connect_swapped (G_OBJECT (window->icon_theme), "changed",
       G_CALLBACK (xfce_appfinder_window_icon_theme_changed), window);
+  g_object_ref (G_OBJECT (window->icon_theme));
 
   /* load categories in the model */
   xfce_appfinder_window_category_set_categories (NULL, window);
@@ -401,6 +403,11 @@ xfce_appfinder_window_finalize (GObject *object)
 
   g_signal_handler_disconnect (window->channel, window->property_watch_id);
   g_signal_handler_disconnect (window->model, window->categories_changed_id);
+
+  /* release our reference on the icon theme */
+  g_signal_handlers_disconnect_by_func (G_OBJECT (window->icon_theme),
+      xfce_appfinder_window_icon_theme_changed, window);
+  g_object_unref (G_OBJECT (window->icon_theme));
 
   g_object_unref (G_OBJECT (window->model));
   g_object_unref (G_OBJECT (window->category_model));
@@ -1448,6 +1455,8 @@ xfce_appfinder_window_row_activated (XfceAppfinderWindow *window)
 static void
 xfce_appfinder_window_icon_theme_changed (XfceAppfinderWindow *window)
 {
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
+
   if (window->icon_find != NULL)
     g_object_unref (G_OBJECT (window->icon_find));
   window->icon_find = xfce_appfinder_model_load_pixbuf (GTK_STOCK_FIND, XFCE_APPFINDER_ICON_SIZE_48);
