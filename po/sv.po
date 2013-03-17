@@ -66,7 +66,7 @@ msgstr "Är du säker att du vill rensa din kommando historia?"
 
 #: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "Den anpassade åtgärden kommer raderas permanent."
 
 #: ../src/appfinder-preferences.c:334
 #, c-format
@@ -84,7 +84,6 @@ msgid "Toggle view mode"
 msgstr "Växla vy"
 
 #: ../src/appfinder-window.c:364
-#, fuzzy
 msgid "La_unch"
 msgstr "Starta"
 
@@ -176,7 +175,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Add a new custom action."
-msgstr ""
+msgstr "Lägg till en ny anpassad åtgärd."
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Always c_enter the window"
@@ -195,9 +194,8 @@ msgid "C_lear Custom Command History"
 msgstr "Rensa kommando historia"
 
 #: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
 msgid "Categ_ory icon size:"
-msgstr "Kategorier"
+msgstr "Ik_onstorlek för kategori:"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Center the window on startup."
@@ -209,7 +207,7 @@ msgstr "Ko_mmando"
 
 #: ../src/appfinder-preferences.glade.h:10
 msgid "Custom _Actions"
-msgstr ""
+msgstr "_Anpassade Åtgärder"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "History"
