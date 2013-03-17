@@ -221,84 +221,84 @@ msgstr "Pusti primerek teči _v ozadju"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
-msgstr ""
+msgstr "Velik"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Larger"
-msgstr ""
+msgstr "Večji"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Normal"
-msgstr ""
+msgstr "Normalen"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Patte_rn:"
-msgstr ""
+msgstr "Vzo_rec"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Pattern"
-msgstr ""
+msgstr "Vzorec"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Prefix"
-msgstr ""
+msgstr "Predpona"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Regular Expression"
-msgstr ""
+msgstr "Regularni izraz"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Zapomni na_zadnje izbrano kategorijo"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Odstrani trenutno izbrano dejanje"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Small"
-msgstr ""
+msgstr "Majhno"
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Smaller"
-msgstr ""
+msgstr "Manjše"
 
 #: ../src/appfinder-preferences.glade.h:28
 msgid "Text besi_de icons"
-msgstr ""
+msgstr "Besedilo o_b ikonah"
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "Very Large"
-msgstr ""
+msgstr "Zelo veliko"
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Very Small"
-msgstr ""
+msgstr "Zelo majhni"
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "_General"
-msgstr ""
+msgstr "Splo_šno"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_Save match in command history"
-msgstr ""
+msgstr "_Shrani zadetek v zgodovino ukazov"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
-msgstr ""
+msgstr "_Tip:"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "_View items as icons"
-msgstr ""
+msgstr "_Poglej predmete kot ikone"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr ""
+msgstr "Najdi in zaženi aplikacije nameščene na vaš sistem"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr ""
+msgstr "Zaženi program..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr ""
+msgstr "Zaženi program"
