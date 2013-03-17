@@ -202,14 +202,14 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Če je tip nastavljen na prednastavitev bo %s zamenjan z nizom za vzorcem, %S s celotnim vnešenim tekstom. Za regularni izraz lahko uporabite \\0 in \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr ""
+msgstr "Namesto, da bi prekinili aplikacijo ko je zadnje okno zaprto, obdrži primerek teči v ozdaju,  s čimer se bo pospešilo odpiranje novih oken. Morda boste želeli to funkcijo prekiniti, da bi s tem zmanjšali porabo spomina."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
