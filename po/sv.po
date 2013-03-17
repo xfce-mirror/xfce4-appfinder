@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-24 19:15+0000\n"
+"POT-Creation-Date: 2013-03-17 18:30+0000\n"
 "PO-Revision-Date: 2010-10-17 17:10+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -21,9 +21,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/appfinder-category-model.c:146
-#, fuzzy
 msgid "All Applications"
-msgstr "Programlista"
+msgstr "Alla Program"
 
 #: ../src/appfinder-model.c:545
 msgid "Name"
@@ -42,16 +41,14 @@ msgid "Categories"
 msgstr "Kategorier"
 
 #: ../src/appfinder-model.c:549
-#, fuzzy
 msgid "Filename"
-msgstr "Filhanterare"
+msgstr "Filnamn"
 
-#: ../src/appfinder-model.c:1825
-#, fuzzy
+#: ../src/appfinder-model.c:1829
 msgid "Application has no command"
-msgstr "Programlista"
+msgstr "Programet har inget kommando"
 
-#: ../src/appfinder-model.c:2149
+#: ../src/appfinder-model.c:2153
 msgid "Commands History"
 msgstr "Kommando historia"
 
@@ -76,49 +73,57 @@ msgstr ""
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Är du säker att du vill radera mönster \"%s\"?"
 
-#: ../src/appfinder-window.c:216 ../src/main.c:446
+#: ../src/appfinder-window.c:220 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Programlista"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
 msgstr "Växla vy"
 
-#: ../src/appfinder-window.c:763
+#: ../src/appfinder-window.c:364
+#, fuzzy
+msgid "La_unch"
+msgstr "Starta"
+
+#: ../src/appfinder-window.c:805
 msgid "Failed to launch desktop item editor"
 msgstr "Misslyckades med att starta skrivbords objekt redigerare"
 
-#: ../src/appfinder-window.c:789
+#: ../src/appfinder-window.c:831
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Detta kommer att permanent radera din skrivbords fil från din hem mapp."
+msgstr ""
+"Detta kommer att permanent radera din skrivbords fil från din hem mapp."
 
-#: ../src/appfinder-window.c:790
+#: ../src/appfinder-window.c:832
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Är du säker att du vill återställa \"%s\"?"
 
-#: ../src/appfinder-window.c:800
+#: ../src/appfinder-window.c:842
 msgid "Failed to remove desktop file"
 msgstr "Misslyckades med att radera skrivbords fil"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:833
+#: ../src/appfinder-window.c:875
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "För att åter visa objektet måste du manuellt radera skrivbords filen från \"%s\" eller öppna filen i samma mapp och radera linjen \"%s\"."
+msgstr ""
+"För att åter visa objektet måste du manuellt radera skrivbords filen från "
+"\"%s\" eller öppna filen i samma mapp och radera linjen \"%s\"."
 
-#: ../src/appfinder-window.c:838 ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:880 ../src/appfinder-window.c:972
 msgid "_Hide"
 msgstr "dölj"
 
-#: ../src/appfinder-window.c:839
+#: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Är du säker på att du vill dölja \"%s\"?"
@@ -128,9 +133,8 @@ msgid "Start in collapsed mode"
 msgstr "Starta i kollapsat läge"
 
 #: ../src/main.c:76
-#, fuzzy
 msgid "Print version information and exit"
-msgstr "Versionsinformation"
+msgstr "Visa versionsinformation och avsluta"
 
 #: ../src/main.c:77
 msgid "Replace the existing service"
@@ -312,14 +316,12 @@ msgid "Find and launch applications installed on your system"
 msgstr "Sök och starta program som är installerade på din dator"
 
 #: ../data/xfce4-run.desktop.in.h:1
-#, fuzzy
 msgid "Run Program..."
-msgstr "Kör programmet"
+msgstr "Kör program..."
 
 #: ../data/xfce4-run.desktop.in.h:2
-#, fuzzy
 msgid "Run a program"
-msgstr "Kör programmet"
+msgstr "Kör ett program"
 
 #~ msgid "[MENUFILE]"
 #~ msgstr "[MENYFIL]"
@@ -338,9 +340,6 @@ msgstr "Kör programmet"
 
 #~ msgid "C_lose after launch"
 #~ msgstr "S_täng efter start"
-
-#~ msgid "Launch"
-#~ msgstr "Starta"
 
 #~ msgid "Could not load menu from %s"
 #~ msgstr "Kunde inte läsa in meny från %s"
