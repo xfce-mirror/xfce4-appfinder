@@ -2,7 +2,7 @@
 # Copyright (C) 2004-2011 Eduard Roccatello.
 # This file is distributed under the same license as the xfce4-appfinder package.
 # ByungHyun Choi <byunghyun.choi@gmail.com>, 2005.
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2011, 2012.
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2011, 2012, 2013.
 #
 msgid ""
 msgstr ""
@@ -69,7 +69,7 @@ msgstr "사용자 정의 동작을 완전히 지웁니다."
 #: ../src/appfinder-preferences.c:334
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "패턴 \"%s\"을(를) 정말로 삭제하시렵니까?"
+msgstr "\"%s\" 패턴을 정말로 삭제하시렵니까?"
 
 #: ../src/appfinder-window.c:219
 #: ../src/main.c:446
@@ -108,7 +108,7 @@ msgstr "데스크톱 파일 제거 실패"
 #: ../src/appfinder-window.c:868
 #, c-format
 msgid "To unhide the item you have to manually remove the desktop file from \"%s\" or open the file in the same directory and remove the line \"%s\"."
-msgstr "수동으로 \"%s\"에서 바탕 화면에 파일을 제거하거나 파일을 열 동일한 디렉터리에 \"%s\" 라인을 제거해야 할 항목 숨기기를 해제합니다."
+msgstr "항목 숨기기를 해제하려면, \"%s\"에서 데스크톱의 파일을 직접 제거하거나, 같은 디렉터리에서 파일을 열고 \"%s\" 줄을 제거하십시오."
 
 #: ../src/appfinder-window.c:873
 #: ../src/appfinder-window.c:958
@@ -152,7 +152,7 @@ msgstr "프로세스를 데몬화 할 수 없습니다"
 #: ../src/main.c:522
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "사용 정보를 보려면 \"%s --help\"를 입력합니다."
+msgstr "사용 정보를 보려면 \"%s --help\"를 입력하십시오."
 
 #: ../src/main.c:533
 msgid "The Xfce development team. All rights reserved."
@@ -177,7 +177,7 @@ msgstr "모양새"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "Behaviour"
-msgstr "행동"
+msgstr "동작"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "C_lear Custom Command History"
@@ -206,7 +206,7 @@ msgstr "기록"
 #: ../src/appfinder-preferences.glade.h:13
 #, no-c-format
 msgid "If the type is set to prefix, %s will be replaced with the string after the pattern, %S with the complete entry text. For regular expressions you can use \\0 and \\<num>."
-msgstr "접두어로 유형을 지정하였다면, %s은(는) 완전한 목록 텍스트로 된 다음 패턴  %S(으)로 바뀝니다. 정규 표현식에 \\0과 \\<숫자>를 사용할 수 있습니다."
+msgstr "접두어로 유형을 지정하였다면, %s은(는) 완전한 목록 텍스트로 된 다음 패턴 %S(으)로 바뀝니다. 정규 표현식에 \\0과 \\<숫자>를 사용할 수 있습니다."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Instead of quitting the application when the last window is closed, keep a running instance to speed up opening new windows. You might want to disable this to reduce memory usage."
@@ -222,11 +222,11 @@ msgstr "백그라운드에서 인스탄스 유지 실행(_I)"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "Large"
-msgstr "더 크게"
+msgstr "크게"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Larger"
-msgstr "크게"
+msgstr "더 크게"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Normal"
@@ -282,7 +282,7 @@ msgstr "일반(_G)"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_Save match in command history"
-msgstr "명령 기록내 일치 항목 저장하기(_S)"
+msgstr "명령 기록내 일치 항목 저장(_S)"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
