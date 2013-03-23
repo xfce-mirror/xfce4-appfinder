@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-appfinder 4.4.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-03 06:45+0000\n"
+"POT-Creation-Date: 2013-03-23 13:36+0000\n"
 "PO-Revision-Date: 2009-01-27 22:28+0700\n"
 "Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
@@ -40,11 +40,11 @@ msgstr "Kategori"
 msgid "Filename"
 msgstr "Nama Berkas"
 
-#: ../src/appfinder-model.c:1825
+#: ../src/appfinder-model.c:1829
 msgid "Application has no command"
 msgstr "Tidak ada perntah yang tersedia"
 
-#: ../src/appfinder-model.c:2149
+#: ../src/appfinder-model.c:2153
 msgid "Commands History"
 msgstr "Historis Perintah"
 
@@ -69,38 +69,42 @@ msgstr "Deretan aksi akan dihapus."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Apakah anda ingin menghapus pola \"%s\"?"
 
-#: ../src/appfinder-window.c:216 ../src/main.c:446
+#: ../src/appfinder-window.c:220 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Pencari Aplikasi"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
 msgstr "Beralih model tampilan"
 
-#: ../src/appfinder-window.c:763
+#: ../src/appfinder-window.c:364
+msgid "La_unch"
+msgstr "_Jalankan"
+
+#: ../src/appfinder-window.c:805
 msgid "Failed to launch desktop item editor"
 msgstr "Gagal menjalankan penyunting item desktop"
 
-#: ../src/appfinder-window.c:789
+#: ../src/appfinder-window.c:831
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Perintah ini akan menghapus berkas desktop dari folder rumah anda."
 
-#: ../src/appfinder-window.c:790
+#: ../src/appfinder-window.c:832
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Apakah anda ingin mengembalikan kondisi \"%s\"?"
 
-#: ../src/appfinder-window.c:800
+#: ../src/appfinder-window.c:842
 msgid "Failed to remove desktop file"
 msgstr "Gagal menghapus berkas desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:833
+#: ../src/appfinder-window.c:875
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
@@ -110,11 +114,11 @@ msgstr ""
 "\"%s\" atau membuka berkas tersebut di folder yang sama dan menghapus baris "
 "\"%s\"."
 
-#: ../src/appfinder-window.c:838 ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:880 ../src/appfinder-window.c:972
 msgid "_Hide"
 msgstr "_Sembunyi"
 
-#: ../src/appfinder-window.c:839
+#: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Apakah anda ingin menyembunyikan \"%s\"?"
@@ -332,9 +336,6 @@ msgstr "Jalankan program"
 
 #~ msgid "C_lose after launch"
 #~ msgstr "Tutup sete_lah menjalankan"
-
-#~ msgid "Launch"
-#~ msgstr "Jalankan"
 
 #~ msgid "Could not load menu from %s"
 #~ msgstr "Tak dapat memuat menu dari %s"
