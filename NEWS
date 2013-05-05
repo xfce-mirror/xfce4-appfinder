@@ -1,3 +1,12 @@
+4.10.1
+======
+- Use new glib 2.32 api.
+- Autotools updates.
+- Detatch from icon theme to avoid segfault (bug #9730).
+- Protect against possible null pointers (bug #9109).
+- Translation updates: Arabic, Bulgarian, Croatian, Indonesian, Dutch 
+  (Flemish), Serbian, Swedish, Turkish, Uyghur
+
 4.10.0
 ======
 - Add a valid category to xfce4-run.desktop.
