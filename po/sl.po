@@ -2,20 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-#, fuzzy
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-16 15:42+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Nenad Latinovic <nenadlatinovic@lavabit.com>\n"
+"POT-Creation-Date: 2013-06-27 12:24+0000\n"
+"PO-Revision-Date: 2013-06-27 17:31+0100\n"
+"Last-Translator: Klemen Košir <klemen913@gmail.com>\n"
 "Language-Team: Slovenian <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
+"X-Generator: Poedit 1.5.5\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -70,24 +69,24 @@ msgstr "Prilagojeno dejanje bo stalno izbrisano."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Ste prepričani, da želite izbrisati vzorec \"%s\"?"
 
-#: ../src/appfinder-window.c:221 ../src/appfinder-preferences.glade.h:4
+#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:4
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Iskalec aplikacije"
 
-#: ../src/appfinder-window.c:288
+#: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
 msgstr "Preklapljaj način pogleda"
 
-#: ../src/appfinder-window.c:393
+#: ../src/appfinder-window.c:394
 msgid "La_unch"
 msgstr "Za_ženi"
 
-#: ../src/appfinder-window.c:837
+#: ../src/appfinder-window.c:844
 msgid "Failed to launch desktop item editor"
 msgstr "Neuspešno zaganjanje urejevalnika predmetov na namizju"
 
-#: ../src/appfinder-window.c:863
+#: ../src/appfinder-window.c:870
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
@@ -95,29 +94,31 @@ msgstr ""
 "To bo za vedno izbrisalo prilagojen predmet namizja iz vašega domačega "
 "imenika."
 
-#: ../src/appfinder-window.c:864
+#: ../src/appfinder-window.c:871
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Ste prepričani, da želite vrniti \"%s\"?"
 
-#: ../src/appfinder-window.c:874
+#: ../src/appfinder-window.c:881
 msgid "Failed to remove desktop file"
 msgstr "Napaka pri odstranjevanju namizne datoteke"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:907
+#: ../src/appfinder-window.c:914
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Da bi odkrili predmet morate ročno odstraniti namizno datoteko iz \"%s\" ali odpreti datoteko v enakem imeniku in odstraniti vrstico \"%s\"."
+msgstr ""
+"Da bi odkrili predmet morate ročno odstraniti namizno datoteko iz \"%s\" ali "
+"odpreti datoteko v enakem imeniku in odstraniti vrstico \"%s\"."
 
-#: ../src/appfinder-window.c:912 ../src/appfinder-window.c:1010
+#: ../src/appfinder-window.c:919 ../src/appfinder-window.c:1017
 msgid "_Hide"
 msgstr "_Skrij"
 
-#: ../src/appfinder-window.c:913
+#: ../src/appfinder-window.c:920
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Ste prepričani, da želite skriti \"%s\"?"
@@ -202,14 +203,20 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Če je tip nastavljen na prednastavitev bo %s zamenjan z nizom za vzorcem, %S s celotnim vnešenim tekstom. Za regularni izraz lahko uporabite \\0 in \\<num>."
+msgstr ""
+"Če je tip nastavljen na prednastavitev bo %s zamenjan z nizom za vzorcem, %S "
+"s celotnim vnešenim tekstom. Za regularni izraz lahko uporabite \\0 in "
+"\\<num>."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Namesto, da bi prekinili aplikacijo ko je zadnje okno zaprto, obdrži primerek teči v ozdaju,  s čimer se bo pospešilo odpiranje novih oken. Morda boste želeli to funkcijo prekiniti, da bi s tem zmanjšali porabo spomina."
+msgstr ""
+"Namesto, da bi prekinili aplikacijo ko je zadnje okno zaprto, obdrži "
+"primerek teči v ozdaju,  s čimer se bo pospešilo odpiranje novih oken. Morda "
+"boste želeli to funkcijo prekiniti, da bi s tem zmanjšali porabo spomina."
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Ite_m icon size:"
