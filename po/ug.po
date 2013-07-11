@@ -1,50 +1,51 @@
-# Uyghur translation for xfce4-appfinder.
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Gheyret Kenji <gheyret@gmail.com>, YEAR.
-#
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-24 02:18+0000\n"
-"PO-Revision-Date: 2011-11-09 16:10+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
-"Language: \n"
+"POT-Creation-Date: 2013-07-02 22:40+0200\n"
+"PO-Revision-Date: 2013-07-11 06:30+0000\n"
+"Last-Translator: kawichi\n"
+"Language-Team: Uighur (http://www.transifex.com/projects/p/xfce/language/ug/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ug\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "بارلىق پروگراممىلار"
 
-#: ../src/appfinder-model.c:545
+#: ../src/appfinder-model.c:549
 msgid "Name"
 msgstr "ئاتى"
 
-#: ../src/appfinder-model.c:546
+#: ../src/appfinder-model.c:550
 msgid "Comment"
 msgstr "ئىزاھات"
 
-#: ../src/appfinder-model.c:547
+#: ../src/appfinder-model.c:551
 msgid "Command"
 msgstr "بۇيرۇق"
 
-#: ../src/appfinder-model.c:548
+#: ../src/appfinder-model.c:552
 msgid "Categories"
 msgstr "كاتېگورىيە"
 
-#: ../src/appfinder-model.c:549
+#: ../src/appfinder-model.c:553
 msgid "Filename"
 msgstr "ھۆججەت ئاتى"
 
-#: ../src/appfinder-model.c:1829
+#: ../src/appfinder-model.c:1833
 msgid "Application has no command"
 msgstr "پروگراممىنىڭ بۇيرۇقى يوق"
 
-#: ../src/appfinder-model.c:2153
+#: ../src/appfinder-model.c:2157
 msgid "Commands History"
 msgstr "بۇيرۇق ئىزلىرى"
 
@@ -69,141 +70,198 @@ msgstr "ئىختىيارىي مەشغۇلاتلار مەڭگۈلۈككە ئۆچ�
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "ئەندىزە «%s» نى راستىنىلا ئۆچۈرەمسىز؟"
 
-#: ../src/appfinder-window.c:219 ../src/main.c:446
-#: ../src/appfinder-preferences.glade.h:4
+#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "پروگرامما ئىزدىگۈ"
 
-#: ../src/appfinder-window.c:286
+#: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
 msgstr "كۆرۈنۈش ھالىتىنى ئۆزگەرتىش"
 
-#: ../src/appfinder-window.c:391
+#: ../src/appfinder-window.c:394
 msgid "La_unch"
 msgstr "ئىجرا قىل(_U)"
 
-#: ../src/appfinder-window.c:826
+#: ../src/appfinder-window.c:844
 msgid "Failed to launch desktop item editor"
 msgstr "ئۈستەلئۈستى تۇرى تەھرىرلىگۈچىنى ئىجرا قىلىش مەغلۇپ بولدى"
 
-#: ../src/appfinder-window.c:852
+#: ../src/appfinder-window.c:870
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "ئىختىيارىي ئۈستەلئۈستى ھۆججىتى ماكان مۇندەرىجىڭىزدىن مەڭگۈلۈككە يوقىلىدۇ."
 
-#: ../src/appfinder-window.c:853
+#: ../src/appfinder-window.c:871
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "راستلا «%s» نى ئەسلىگە قايتۇرامسىز؟"
 
-#: ../src/appfinder-window.c:863
+#: ../src/appfinder-window.c:881
 msgid "Failed to remove desktop file"
 msgstr "ئۈستەلئۈستى ھۆججىتىنى ئۆچۈرۈش مەغلۇپ بولدى"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:896
+#: ../src/appfinder-window.c:914
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "بىرەر تۇرنى كۆرۈنىدىغان قىلىش ئۈچۈن ئۈستەلئۈستى ھۆججىتىنى «%s» دىن ئۆچۈرسىڭىز ياكى مۇشۇ مۇندەرىجىدىكى  ھۆججەتنى ئېچىپ «%s» دېگەن قۇرنى ئۆچۈرۈۋەتسىڭىز بولىدۇ."
 
-#: ../src/appfinder-window.c:901 ../src/appfinder-window.c:993
+#: ../src/appfinder-window.c:919 ../src/appfinder-window.c:1017
 msgid "_Hide"
 msgstr "يوشۇر(_H)"
 
-#: ../src/appfinder-window.c:902
+#: ../src/appfinder-window.c:920
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "راستلا «%s» نى يوشۇرامسىز؟"
 
-#: ../src/main.c:75
+#: ../src/main.c:64
 msgid "Start in collapsed mode"
 msgstr "قاتلانغان ھالەتتە باشلانسۇن"
 
-#: ../src/main.c:76
+#: ../src/main.c:65
 msgid "Print version information and exit"
 msgstr "نەشر ئۇچۇرىنى كۆرسىتىپ ئاخىرلاشتۇرۇش"
 
-#: ../src/main.c:77
+#: ../src/main.c:66
 msgid "Replace the existing service"
 msgstr "مەۋجۇت مۇلازىمەتنى ئالماشتۇرىدۇ"
 
-#: ../src/main.c:78
+#: ../src/main.c:67
 msgid "Quit all instances"
 msgstr "بارلىق ئۈلگىنى ئاخىرلاشتۇرىدۇ"
 
-#: ../src/main.c:79
+#: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
 msgstr "ئىشلەتمىسۇن ياكى D-Bus مۇلازىمىتى بولمىسۇن"
 
-#. close all windows and quit
-#: ../src/main.c:244
-msgid "Forced to quit"
-msgstr "مەجبۇرىي ئاخىرلاشتۇرسۇن"
-
-#: ../src/main.c:448
-msgid "Unable to daemonize the process"
-msgstr "ئىجرانى مۇئەككەل قىلغىلى بولمىدى"
-
-#: ../src/main.c:522
+#: ../src/main.c:224
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "ئىشلىتىش ئۇسۇلىنى كۆرۈش ئۈچۈن «%s --help» نى كىرگۈزسە بولىدۇ."
 
-#: ../src/main.c:533
+#: ../src/main.c:235
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce ئىجادىيەت گۇرۇپپىسى. نەشر ھوقۇقى ئۆزىمىزگە تەۋە."
 
-#: ../src/main.c:534
+#: ../src/main.c:236
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "كەمتۈكنى <%s> غا دوكلات قىلىڭ."
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
-msgstr "يېڭى ئىختىيارى مەشغۇلات قوشىدۇ."
+msgid "Prefix"
+msgstr "ئالدى قوشۇلغۇچى"
 
 #: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr "مۇنتىزىم ئىپادە"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "ئىنتايىن كىچىك"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "كىچىكرەك"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "كىچىك"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "نورمال"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "چوڭ"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "چوڭراق"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "ئىنتايىن چوڭ"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "ئەڭ ئاخىرى تاللانغان كاتېگورىيەنى ئەستە ساقلىسۇن(_S)"
+
+#: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
 msgstr "كۆزنەك ھەمىشە ئوتتۇرىدا بولسۇن(_C)"
 
-#: ../src/appfinder-preferences.glade.h:3
-msgid "Appearance"
-msgstr "كۆرۈنۈشى"
-
-#: ../src/appfinder-preferences.glade.h:5
-msgid "Behaviour"
-msgstr "قىلمىش"
-
-#: ../src/appfinder-preferences.glade.h:6
-msgid "C_lear Custom Command History"
-msgstr "ئىختىيارى بۇيرۇق ئىزىنى تازىلاش(_C)"
-
-#: ../src/appfinder-preferences.glade.h:7
-msgid "Categ_ory icon size:"
-msgstr "كاتېگورىيە سىنبەلگىسى چوڭلۇقى"
-
-#: ../src/appfinder-preferences.glade.h:8
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
 msgstr "قوزغالغاندا كۆزنەكنى ئوتتۇرىدا كۆرسەت"
 
-#: ../src/appfinder-preferences.glade.h:9
-msgid "Co_mmand:"
-msgstr "بۇيرۇق(_M):"
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
+msgstr "ئىجرا بولۇۋاتقان ئۈلگىسى ئارقىدا تۇرۇۋەرسۇن(_I)"
 
-#: ../src/appfinder-preferences.glade.h:10
-msgid "Custom _Actions"
-msgstr "ئىختىيارى مەشغۇلاتلار(_A)"
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "ئەڭ ئاخىرقى كۆزنەك يېپىلغاندا، ئۈلگىنى ئاخىرلاشماستىن ئارقا تەرەپتە تۇرۇۋېرىدۇ. بۇنىڭ بىلەن يېڭى كۆزنەك ئېچىلغاندا تەز ئېچىلىدۇيۇ ئەسلەك خورايدۇ."
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Behaviour"
+msgstr "قىلمىش"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr "تۈرلەرنى سىنبەلگە سۈپىتىدە كۆرسەتسۇن(_V)"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr "تېكىست سىنبەلگىلەرنىڭ يېنىدا(_D)"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "تۇرنىڭ سىنبەلگە چوڭلۇقى(_M):"
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr "كاتېگورىيە سىنبەلگىسى چوڭلۇقى"
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "كۆرۈنۈشى"
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr "ئىختىيارى بۇيرۇق ئىزىنى تازىلاش(_C)"
+
+#: ../src/appfinder-preferences.glade.h:23
 msgid "History"
 msgstr "ئىز"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "ئادەتتىكى(_G)"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "ئەندىزە"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "يېڭى ئىختىيارى مەشغۇلات قوشىدۇ."
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "ھازىرقى تاللانغان مەشغۇلاتنى ئۆچۈرىدۇ."
+
+#: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -211,92 +269,25 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "تىپى ئالدى قوشۇلغۇچى بولسا، %s ئەندىزىنىڭ ئاخىرىدىكى تېكىستىگە، %S بولسا پۈتۈن تېكىستكە ئالمىشىدۇ. مۇنتىزىم ئىپادىدە \\0 ۋە \\<num> ئارقىلىق ئاخىرىنى تېپىشقا بولىدۇ."
 
-#: ../src/appfinder-preferences.glade.h:14
-msgid ""
-"Instead of quitting the application when the last window is closed, keep a "
-"running instance to speed up opening new windows. You might want to disable "
-"this to reduce memory usage."
-msgstr "ئەڭ ئاخىرقى كۆزنەك يېپىلغاندا، ئۈلگىنى ئاخىرلاشماستىن ئارقا تەرەپتە تۇرۇۋېرىدۇ. بۇنىڭ بىلەن يېڭى كۆزنەك ئېچىلغاندا تەز ئېچىلىدۇيۇ ئەسلەك خورايدۇ."
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "بۇيرۇق(_M):"
 
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Ite_m icon size:"
-msgstr "تۇرنىڭ سىنبەلگە چوڭلۇقى(_M):"
-
-#: ../src/appfinder-preferences.glade.h:16
-msgid "Keep running _instance in the background"
-msgstr "ئىجرا بولۇۋاتقان ئۈلگىسى ئارقىدا تۇرۇۋەرسۇن(_I)"
-
-#: ../src/appfinder-preferences.glade.h:17
-msgid "Large"
-msgstr "چوڭ"
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "Larger"
-msgstr "چوڭراق"
-
-#: ../src/appfinder-preferences.glade.h:19
-msgid "Normal"
-msgstr "نورمال"
-
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
 msgstr "ئەندىزە(_R):"
 
-#: ../src/appfinder-preferences.glade.h:21
-msgid "Pattern"
-msgstr "ئەندىزە"
-
-#: ../src/appfinder-preferences.glade.h:22
-msgid "Prefix"
-msgstr "ئالدى قوشۇلغۇچى"
-
-#: ../src/appfinder-preferences.glade.h:23
-msgid "Regular Expression"
-msgstr "مۇنتىزىم ئىپادە"
-
-#: ../src/appfinder-preferences.glade.h:24
-msgid "Remember last _selected category"
-msgstr "ئەڭ ئاخىرى تاللانغان كاتېگورىيەنى ئەستە ساقلىسۇن(_S)"
-
-#: ../src/appfinder-preferences.glade.h:25
-msgid "Remove the currently selected action."
-msgstr "ھازىرقى تاللانغان مەشغۇلاتنى ئۆچۈرىدۇ."
-
-#: ../src/appfinder-preferences.glade.h:26
-msgid "Small"
-msgstr "كىچىك"
-
-#: ../src/appfinder-preferences.glade.h:27
-msgid "Smaller"
-msgstr "كىچىكرەك"
-
-#: ../src/appfinder-preferences.glade.h:28
-msgid "Text besi_de icons"
-msgstr "تېكىست سىنبەلگىلەرنىڭ يېنىدا(_D)"
-
-#: ../src/appfinder-preferences.glade.h:29
-msgid "Very Large"
-msgstr "ئىنتايىن چوڭ"
-
-#: ../src/appfinder-preferences.glade.h:30
-msgid "Very Small"
-msgstr "ئىنتايىن كىچىك"
-
-#: ../src/appfinder-preferences.glade.h:31
-msgid "_General"
-msgstr "ئادەتتىكى(_G)"
-
 #: ../src/appfinder-preferences.glade.h:32
-msgid "_Save match in command history"
-msgstr "ماسلاشقاننى بۇيرۇق ئىزىدا ساقلىسۇن(_S)"
-
-#: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
 msgstr "تىپى(_T):"
 
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr "ماسلاشقاننى بۇيرۇق ئىزىدا ساقلىسۇن(_S)"
+
 #: ../src/appfinder-preferences.glade.h:34
-msgid "_View items as icons"
-msgstr "تۈرلەرنى سىنبەلگە سۈپىتىدە كۆرسەتسۇن(_V)"
+msgid "Custom _Actions"
+msgstr "ئىختىيارى مەشغۇلاتلار(_A)"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
