@@ -1257,51 +1257,72 @@ xfce_appfinder_window_entry_activate (GtkEditable         *entry,
 
 
 static gboolean
-xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
-                                             GdkEventKey         *event,
-                                             XfceAppfinderWindow *window)
+xfce_appfinder_window_pointer_is_grabbed (GtkWidget *widget)
 {
-  gboolean          expand, is_expanded;
 #if GTK_CHECK_VERSION (3, 0, 0)
   GdkDeviceManager *device_manager;
   GList            *devices, *li;
   GdkDisplay       *display;
-#endif
+  gboolean          is_grabbed = FALSE;
 
-  if (event->keyval == GDK_KEY_Up || event->keyval == GDK_KEY_Down)
+  display = gtk_widget_get_display (widget);
+  device_manager = gdk_display_get_device_manager (display);
+  devices = gdk_device_manager_list_devices (device_manager, GDK_DEVICE_TYPE_MASTER);
+
+  for (li = devices; li != NULL; li = li->next)
+    {
+      if (gdk_device_get_source (li->data) == GDK_SOURCE_MOUSE
+          && gdk_display_device_is_grabbed (display, li->data))
+        {
+          is_grabbed = TRUE;
+          break;
+        }
+    }
+
+  g_list_free (devices);
+
+  return is_grabbed;
+#else
+  return gdk_pointer_is_grabbed ();
+#endif
+}
+
+
+
+static gboolean
+xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
+                                             GdkEventKey         *event,
+                                             XfceAppfinderWindow *window)
+{
+  gboolean          expand;
+  gboolean          is_expanded;
+
+  if (event->keyval == GDK_KEY_Up
+      || event->keyval == GDK_KEY_Down)
     {
       expand = (event->keyval == GDK_KEY_Down);
       is_expanded = gtk_widget_get_visible (window->paned);
       if (is_expanded != expand)
         {
           /* don't break entry completion navigation in collapsed mode */
-          if (!is_expanded)
+          if (!is_expanded
+              && xfce_appfinder_window_pointer_is_grabbed (entry))
             {
-#if GTK_CHECK_VERSION (3, 0, 0)
-              display = gtk_widget_get_display (entry);
-              device_manager = gdk_display_get_device_manager (display);
-              devices = gdk_device_manager_list_devices (device_manager, GDK_DEVICE_TYPE_MASTER);
-
-              for (li = devices; li != NULL; li = li->next)
-                {
-                  if (gdk_device_get_source (li->data) == GDK_SOURCE_MOUSE
-                      && gdk_display_device_is_grabbed (display, li->data))
-                    {
-                      g_list_free (devices);
-                      return FALSE;
-                    }
-                }
-
-              g_list_free (devices);
-#else
-              if (gdk_pointer_is_grabbed ())
-                return FALSE;
-#endif
+              /* window is still collapsed and the pointer is grabbed
+               * by the popup menu, do nothing with the event */
+              return FALSE;
             }
 
           xfce_appfinder_window_set_expanded (window, expand);
           return TRUE;
         }
+    }
+  else if (event->keyval == GDK_KEY_Tab
+           && !gtk_widget_get_visible (window->paned)
+           && xfce_appfinder_window_pointer_is_grabbed (entry))
+    {
+      /* don't tab to the close button */
+      return TRUE;
     }
 
   return FALSE;
