@@ -813,6 +813,42 @@ xfce_appfinder_window_view_get_selected (XfceAppfinderWindow  *window,
 
 
 static void
+xfce_appfinder_window_popup_menu_toggle_bookmark (GtkWidget           *mi,
+                                                  XfceAppfinderWindow *window)
+{
+  const gchar  *uri;
+  GFile        *gfile;
+  gchar        *desktop_id;
+  GtkWidget    *menu = gtk_widget_get_parent (mi);
+  GtkTreeModel *filter;
+  GtkTreeModel *model;
+  GError       *error = NULL;
+
+  uri = g_object_get_data (G_OBJECT (menu), "uri");
+  if (uri != NULL)
+    {
+      gfile = g_file_new_for_uri (uri);
+      desktop_id = g_file_get_basename (gfile);
+      g_object_unref (G_OBJECT (gfile));
+
+      /* toggle bookmarks */
+      filter = g_object_get_data (G_OBJECT (menu), "model");
+      model = gtk_tree_model_filter_get_model (GTK_TREE_MODEL_FILTER (filter));
+      xfce_appfinder_model_bookmark_toggle (XFCE_APPFINDER_MODEL (model), desktop_id, &error);
+
+      g_free (desktop_id);
+
+      if (G_UNLIKELY (error != NULL))
+        {
+          g_printerr ("%s: failed to save bookmarks: %s\n", G_LOG_DOMAIN, error->message);
+          g_error_free (error);
+        }
+    }
+}
+
+
+
+static void
 xfce_appfinder_window_popup_menu_execute (GtkWidget           *mi,
                                           XfceAppfinderWindow *window)
 {
@@ -960,14 +996,18 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
   gchar        *title;
   gchar        *uri;
   GtkWidget    *mi;
+  GtkWidget    *image;
   gchar        *path;
   gboolean      uri_is_local;
+  gboolean      is_bookmark;
 
   if (xfce_appfinder_window_view_get_selected (window, &model, &iter))
     {
       gtk_tree_model_get (model, &iter,
                           XFCE_APPFINDER_MODEL_COLUMN_TITLE, &title,
-                          XFCE_APPFINDER_MODEL_COLUMN_URI, &uri, -1);
+                          XFCE_APPFINDER_MODEL_COLUMN_URI, &uri,
+                          XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK, &is_bookmark,
+                          -1);
 
       /* custom command don't have an uri */
       if (uri == NULL)
@@ -981,6 +1021,7 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
       menu = gtk_menu_new ();
       g_object_set_data_full (G_OBJECT (menu), "uri", uri, g_free);
       g_object_set_data_full (G_OBJECT (menu), "name", title, g_free);
+      g_object_set_data (G_OBJECT (menu), "model", model);
       g_signal_connect (G_OBJECT (menu), "selection-done",
           G_CALLBACK (gtk_widget_destroy), NULL);
 
@@ -988,6 +1029,22 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
       gtk_widget_set_sensitive (mi, FALSE);
       gtk_widget_show (mi);
+
+      mi = gtk_separator_menu_item_new ();
+      gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
+      gtk_widget_show (mi);
+
+      mi = gtk_image_menu_item_new_with_mnemonic (is_bookmark ? _("Remove From Bookmarks") : _("Add to Bookmarks"));
+      gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
+      g_signal_connect (G_OBJECT (mi), "activate",
+          G_CALLBACK (xfce_appfinder_window_popup_menu_toggle_bookmark), window);
+      gtk_widget_show (mi);
+
+      if (is_bookmark)
+        image = gtk_image_new_from_stock (GTK_STOCK_REMOVE, GTK_ICON_SIZE_MENU);
+      else
+        image = gtk_image_new_from_icon_name ("bookmark-new", GTK_ICON_SIZE_MENU);
+      gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (mi), image);
 
       mi = gtk_separator_menu_item_new ();
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
@@ -1479,7 +1536,8 @@ xfce_appfinder_window_item_visible (GtkTreeModel *model,
   XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (data);
 
   return xfce_appfinder_model_get_visible (XFCE_APPFINDER_MODEL (model), iter,
-                                           window->filter_category, window->filter_text);
+                                           window->filter_category,
+                                           window->filter_text);
 }
 
 

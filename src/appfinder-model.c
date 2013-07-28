@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2011 Nick Schermer <nick@xfce.org>
+ * Copyright (C) 2011-2013 Nick Schermer <nick@xfce.org>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,64 +33,73 @@
 
 
 
-#define HISTORY_PATH "xfce4/xfce4-appfinder/history"
+#define HISTORY_PATH   "xfce4/xfce4-appfinder/history"
+#define BOOKMARKS_PATH "xfce4/appfinder/bookmarks"
 
 
 
-static void               xfce_appfinder_model_tree_model_init       (GtkTreeModelIface        *iface);
-static void               xfce_appfinder_model_get_property          (GObject                  *object,
-                                                                      guint                     prop_id,
-                                                                      GValue                   *value,
-                                                                      GParamSpec               *pspec);
-static void               xfce_appfinder_model_set_property          (GObject                  *object,
-                                                                      guint                     prop_id,
-                                                                      const GValue             *value,
-                                                                      GParamSpec               *pspec);
-static void               xfce_appfinder_model_finalize              (GObject                  *object);
-static GtkTreeModelFlags  xfce_appfinder_model_get_flags             (GtkTreeModel             *tree_model);
-static gint               xfce_appfinder_model_get_n_columns         (GtkTreeModel             *tree_model);
-static GType              xfce_appfinder_model_get_column_type       (GtkTreeModel             *tree_model,
-                                                                      gint                      column);
-static gboolean           xfce_appfinder_model_get_iter              (GtkTreeModel             *tree_model,
-                                                                      GtkTreeIter              *iter,
-                                                                      GtkTreePath              *path);
-static GtkTreePath       *xfce_appfinder_model_get_path              (GtkTreeModel             *tree_model,
-                                                                      GtkTreeIter              *iter);
-static void               xfce_appfinder_model_get_value             (GtkTreeModel             *tree_model,
-                                                                      GtkTreeIter              *iter,
-                                                                      gint                      column,
-                                                                      GValue                   *value);
-static gboolean           xfce_appfinder_model_iter_next             (GtkTreeModel             *tree_model,
-                                                                      GtkTreeIter              *iter);
-static gboolean           xfce_appfinder_model_iter_children         (GtkTreeModel             *tree_model,
-                                                                      GtkTreeIter              *iter,
-                                                                      GtkTreeIter              *parent);
-static gboolean           xfce_appfinder_model_iter_has_child        (GtkTreeModel             *tree_model,
-                                                                      GtkTreeIter              *iter);
-static gint               xfce_appfinder_model_iter_n_children       (GtkTreeModel             *tree_model,
-                                                                      GtkTreeIter              *iter);
-static gboolean           xfce_appfinder_model_iter_nth_child        (GtkTreeModel             *tree_model,
-                                                                      GtkTreeIter              *iter,
-                                                                      GtkTreeIter              *parent,
-                                                                      gint                      n);
-static gboolean           xfce_appfinder_model_iter_parent           (GtkTreeModel             *tree_model,
-                                                                      GtkTreeIter              *iter,
-                                                                      GtkTreeIter              *child);
-static void               xfce_appfinder_model_menu_changed          (GarconMenu               *menu,
-                                                                      XfceAppfinderModel       *model);
-static gpointer           xfce_appfinder_model_collect_thread        (gpointer                  user_data);
-static void               xfce_appfinder_model_item_changed          (GarconMenuItem           *menu_item,
-                                                                      XfceAppfinderModel       *model);
-static void               xfce_appfinder_model_item_free             (gpointer                  data,
-                                                                      XfceAppfinderModel       *model);
-static void               xfce_appfinder_model_history_changed       (GFileMonitor             *monitor,
-                                                                      GFile                    *file,
-                                                                      GFile                    *other_file,
-                                                                      GFileMonitorEvent         event_type,
-                                                                      XfceAppfinderModel       *model);
-static void               xfce_appfinder_model_history_monitor_stop  (XfceAppfinderModel       *model);
-static void               xfce_appfinder_model_history_monitor       (XfceAppfinderModel       *model,
-                                                                      const gchar              *path);
+static void               xfce_appfinder_model_tree_model_init        (GtkTreeModelIface        *iface);
+static void               xfce_appfinder_model_get_property           (GObject                  *object,
+                                                                       guint                     prop_id,
+                                                                       GValue                   *value,
+                                                                       GParamSpec               *pspec);
+static void               xfce_appfinder_model_set_property           (GObject                  *object,
+                                                                       guint                     prop_id,
+                                                                       const GValue             *value,
+                                                                       GParamSpec               *pspec);
+static void               xfce_appfinder_model_finalize               (GObject                  *object);
+static GtkTreeModelFlags  xfce_appfinder_model_get_flags              (GtkTreeModel             *tree_model);
+static gint               xfce_appfinder_model_get_n_columns          (GtkTreeModel             *tree_model);
+static GType              xfce_appfinder_model_get_column_type        (GtkTreeModel             *tree_model,
+                                                                       gint                      column);
+static gboolean           xfce_appfinder_model_get_iter               (GtkTreeModel             *tree_model,
+                                                                       GtkTreeIter              *iter,
+                                                                       GtkTreePath              *path);
+static GtkTreePath       *xfce_appfinder_model_get_path               (GtkTreeModel             *tree_model,
+                                                                       GtkTreeIter              *iter);
+static void               xfce_appfinder_model_get_value              (GtkTreeModel             *tree_model,
+                                                                       GtkTreeIter              *iter,
+                                                                       gint                      column,
+                                                                       GValue                   *value);
+static gboolean           xfce_appfinder_model_iter_next              (GtkTreeModel             *tree_model,
+                                                                       GtkTreeIter              *iter);
+static gboolean           xfce_appfinder_model_iter_children          (GtkTreeModel             *tree_model,
+                                                                       GtkTreeIter              *iter,
+                                                                       GtkTreeIter              *parent);
+static gboolean           xfce_appfinder_model_iter_has_child         (GtkTreeModel             *tree_model,
+                                                                       GtkTreeIter              *iter);
+static gint               xfce_appfinder_model_iter_n_children        (GtkTreeModel             *tree_model,
+                                                                       GtkTreeIter              *iter);
+static gboolean           xfce_appfinder_model_iter_nth_child         (GtkTreeModel             *tree_model,
+                                                                       GtkTreeIter              *iter,
+                                                                       GtkTreeIter              *parent,
+                                                                       gint                      n);
+static gboolean           xfce_appfinder_model_iter_parent            (GtkTreeModel             *tree_model,
+                                                                       GtkTreeIter              *iter,
+                                                                       GtkTreeIter              *child);
+static void               xfce_appfinder_model_menu_changed           (GarconMenu               *menu,
+                                                                       XfceAppfinderModel       *model);
+static gpointer           xfce_appfinder_model_collect_thread         (gpointer                  user_data);
+static void               xfce_appfinder_model_item_changed           (GarconMenuItem           *menu_item,
+                                                                       XfceAppfinderModel       *model);
+static void               xfce_appfinder_model_item_free              (gpointer                  data,
+                                                                       XfceAppfinderModel       *model);
+static void               xfce_appfinder_model_history_changed        (GFileMonitor             *monitor,
+                                                                       GFile                    *file,
+                                                                       GFile                    *other_file,
+                                                                       GFileMonitorEvent         event_type,
+                                                                       XfceAppfinderModel       *model);
+static void               xfce_appfinder_model_history_monitor_stop   (XfceAppfinderModel       *model);
+static void               xfce_appfinder_model_history_monitor        (XfceAppfinderModel       *model,
+                                                                       const gchar              *path);
+static void               xfce_appfinder_model_bookmarks_changed      (GFileMonitor             *monitor,
+                                                                       GFile                    *file,
+                                                                       GFile                    *other_file,
+                                                                       GFileMonitorEvent         event_type,
+                                                                       XfceAppfinderModel       *model);
+static void               xfce_appfinder_model_bookmarks_monitor_stop (XfceAppfinderModel       *model);
+static void               xfce_appfinder_model_bookmarks_monitor      (XfceAppfinderModel       *model,
+                                                                       const gchar              *path);
 
 
 
@@ -102,10 +111,17 @@ struct _XfceAppfinderModelClass
 struct _XfceAppfinderModel
 {
   GObject                __parent__;
+
   gint                   stamp;
 
   GSList                *items;
   GHashTable            *items_hash;
+
+  GHashTable            *bookmarks_hash;
+
+  GFileMonitor          *bookmarks_monitor;
+  GFile                 *bookmarks_file;
+  guint64                bookmarks_mtime;
 
   GarconMenu            *menu;
   guint                  menu_changed_idle_id;
@@ -139,6 +155,7 @@ typedef struct
   gchar          *command;
   gchar          *tooltip;
   guint           not_visible : 1;
+  guint           is_bookmark : 1;
 
   GdkPixbuf      *icon;
   GdkPixbuf      *icon_large;
@@ -211,6 +228,7 @@ xfce_appfinder_model_init (XfceAppfinderModel *model)
   /* generate a unique stamp */
   model->stamp = g_random_int ();
   model->items_hash = g_hash_table_new (g_str_hash, g_str_equal);
+  model->bookmarks_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
   model->icon_size = XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM;
   model->command_icon = xfce_appfinder_model_load_pixbuf (GTK_STOCK_EXECUTE, model->icon_size);
   model->command_icon_large = xfce_appfinder_model_load_pixbuf (GTK_STOCK_EXECUTE, XFCE_APPFINDER_ICON_SIZE_48);
@@ -245,6 +263,7 @@ xfce_appfinder_model_tree_model_init (GtkTreeModelIface *iface)
   iface->iter_nth_child = xfce_appfinder_model_iter_nth_child;
   iface->iter_parent = xfce_appfinder_model_iter_parent;
 }
+
 
 
 static void
@@ -323,6 +342,9 @@ xfce_appfinder_model_finalize (GObject *object)
   /* stop history file monitoring */
   xfce_appfinder_model_history_monitor_stop (model);
 
+  /* stop monitoring bookmarks file */
+  xfce_appfinder_model_bookmarks_monitor_stop (model);
+
   g_signal_handlers_disconnect_by_func (G_OBJECT (model->menu),
       G_CALLBACK (xfce_appfinder_model_menu_changed), model);
   g_object_unref (G_OBJECT (model->menu));
@@ -338,6 +360,7 @@ xfce_appfinder_model_finalize (GObject *object)
   g_slist_free (model->categories);
 
   g_hash_table_destroy (model->items_hash);
+  g_hash_table_destroy (model->bookmarks_hash);
 
   g_object_unref (G_OBJECT (model->command_icon_large));
   g_object_unref (G_OBJECT (model->command_icon));
@@ -382,6 +405,9 @@ xfce_appfinder_model_get_column_type (GtkTreeModel *tree_model,
     case XFCE_APPFINDER_MODEL_COLUMN_ICON:
     case XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE:
       return GDK_TYPE_PIXBUF;
+
+    case XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK:
+      return G_TYPE_BOOLEAN;
 
     default:
       g_assert_not_reached ();
@@ -566,6 +592,11 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
         g_value_take_string (value, garcon_menu_item_get_uri (item->item));
       break;
 
+    case XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK:
+      g_value_init (value, G_TYPE_BOOLEAN);
+      g_value_set_boolean (value, item->is_bookmark);
+      break;
+
     default:
       g_assert_not_reached ();
       break;
@@ -699,6 +730,7 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
   GSList             *li, *lnext;
   GSList             *tmp;
   ModelItem          *item;
+  const gchar        *desktop_id;
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
   appfinder_return_val_if_fail (model->items == NULL, FALSE);
@@ -734,8 +766,13 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
       /* watch changes */
       item = li->data;
       if (item->item != NULL)
-        g_signal_connect (G_OBJECT (item->item), "changed",
-                          G_CALLBACK (xfce_appfinder_model_item_changed), model);
+        {
+          g_signal_connect (G_OBJECT (item->item), "changed",
+                            G_CALLBACK (xfce_appfinder_model_item_changed), model);
+
+          desktop_id = garcon_menu_item_get_desktop_id (item->item);
+          item->is_bookmark = g_hash_table_lookup (model->bookmarks_hash, desktop_id) != NULL;
+        }
 
       /* insert in hash table */
       if (G_LIKELY (item->command != NULL))
@@ -881,6 +918,7 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
   GtkTreePath *path;
   GPtrArray   *categories;
   gboolean     old_not_visible;
+  const gchar *desktop_id;
 
   /* lookup the item in the list */
   for (li = model->items, idx = 0; li != NULL; li = li->next, idx++)
@@ -900,6 +938,13 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
           item = xfce_appfinder_model_item_new (menu_item);
           item->categories = categories;
           li->data = item;
+
+          /* check if the item should be a bookmark */
+          desktop_id = garcon_menu_item_get_desktop_id (menu_item);
+          if (desktop_id != NULL)
+            item->is_bookmark = g_hash_table_lookup (model->bookmarks_hash, desktop_id) != NULL;
+          else
+            item->is_bookmark = FALSE;
 
           if (G_LIKELY (item->command != NULL))
             g_hash_table_insert (model->items_hash, item->command, item);
@@ -992,7 +1037,7 @@ xfce_appfinder_model_history_remove_items (XfceAppfinderModel *model)
 
 
 static guint64
-xfce_appfinder_model_history_get_mtime (GFile *file)
+xfce_appfinder_model_file_get_mtime (GFile *file)
 {
   GFileInfo *info;
   guint64    mtime = 0;
@@ -1008,9 +1053,10 @@ xfce_appfinder_model_history_get_mtime (GFile *file)
         }
     }
 
-  /* never return 1, because we use that for an empty history */
+  /* never return 1, because we use that for an empty file */
   return MAX (mtime, 1);
 }
+
 
 
 static void
@@ -1079,7 +1125,7 @@ xfce_appfinder_model_history_changed (GFileMonitor       *monitor,
       break;
 
     case G_FILE_MONITOR_EVENT_CREATED:
-      mtime = xfce_appfinder_model_history_get_mtime (model->history_file);
+      mtime = xfce_appfinder_model_file_get_mtime (model->history_file);
       if (mtime > model->history_mtime)
         {
           /* read the new file and update the commands */
@@ -1182,7 +1228,185 @@ xfce_appfinder_model_history_monitor (XfceAppfinderModel *model,
         }
     }
 
-  model->history_mtime = xfce_appfinder_model_history_get_mtime (file);
+  model->history_mtime = xfce_appfinder_model_file_get_mtime (file);
+
+  g_object_unref (G_OBJECT (file));
+}
+
+
+static void
+xfce_appfinder_model_bookmarks_collect (XfceAppfinderModel *model,
+                                        GMappedFile        *mmap)
+{
+  gchar *line;
+  gchar *end;
+  gchar *contents;
+
+  /* empty the database */
+  g_hash_table_remove_all (model->bookmarks_hash);
+
+  contents = g_mapped_file_get_contents (mmap);
+  if (contents == NULL)
+    return;
+
+  /* walk the file */
+  for (;!g_cancellable_is_cancelled (model->collect_cancelled);)
+    {
+      end = strchr (contents, '\n');
+      if (G_UNLIKELY (end == NULL))
+        break;
+
+      if (end != contents)
+        {
+          /* look for new commands */
+          line = g_strndup (contents, end - contents);
+          g_hash_table_insert (model->bookmarks_hash, line, GUINT_TO_POINTER (1));
+        }
+      contents = end + 1;
+    }
+}
+
+
+
+static void
+xfce_appfinder_model_bookmarks_changed (GFileMonitor       *monitor,
+                                        GFile              *file,
+                                        GFile              *other_file,
+                                        GFileMonitorEvent   event_type,
+                                        XfceAppfinderModel *model)
+{
+  guint64      mtime;
+  gchar       *filename;
+  GError      *error = NULL;
+  GMappedFile *mmap;
+  gboolean     is_bookmark;
+  ModelItem   *item;
+  GSList      *li;
+  const gchar *desktop_id;
+  gint         idx;
+  GtkTreePath *path;
+  GtkTreeIter  iter;
+
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
+  appfinder_return_if_fail (model->bookmarks_monitor == monitor);
+  appfinder_return_if_fail (G_IS_FILE_MONITOR (monitor));
+  appfinder_return_if_fail (G_IS_FILE (model->bookmarks_file));
+
+  switch (event_type)
+    {
+    case G_FILE_MONITOR_EVENT_DELETED:
+      /* TODO */
+      break;
+
+    case G_FILE_MONITOR_EVENT_CREATED:
+      mtime = xfce_appfinder_model_file_get_mtime (model->bookmarks_file);
+      if (mtime > model->bookmarks_mtime)
+        {
+          APPFINDER_DEBUG ("bookmarks file changed");
+
+          /* read the new file and update the commands */
+          filename = g_file_get_path (file);
+          mmap = g_mapped_file_new (filename, FALSE, &error);
+          g_free (filename);
+
+          if (G_LIKELY (mmap != NULL))
+            {
+              xfce_appfinder_model_bookmarks_collect (model, mmap);
+              g_mapped_file_unref (mmap);
+
+              /* update the model items */
+              for (idx = 0, li = model->items; li != NULL; li = li->next, idx++)
+                {
+                  item = li->data;
+                  if (item->item == NULL)
+                    continue;
+
+                  /* check if the item should be a bookmark */
+                  desktop_id = garcon_menu_item_get_desktop_id (item->item);
+                  if (desktop_id != NULL)
+                    is_bookmark = g_hash_table_lookup (model->bookmarks_hash, desktop_id) != NULL;
+                  else
+                    is_bookmark = FALSE;
+
+                  if (item->is_bookmark != is_bookmark)
+                    {
+                      APPFINDER_DEBUG ("bookmark %s changed", desktop_id);
+
+                      item->is_bookmark = is_bookmark;
+
+                      /* let model know what happened */
+                      path = gtk_tree_path_new_from_indices (idx, -1);
+                      ITER_INIT (iter, model->stamp, li);
+                      gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
+                      gtk_tree_path_free (path);
+                    }
+                }
+            }
+        }
+      break;
+
+    default:
+      break;
+    }
+}
+
+
+
+static void
+xfce_appfinder_model_bookmarks_monitor_stop (XfceAppfinderModel *model)
+{
+  if (model->bookmarks_monitor != NULL)
+    {
+      g_signal_handlers_disconnect_by_func (model->bookmarks_monitor,
+          G_CALLBACK (xfce_appfinder_model_bookmarks_changed), model);
+
+      g_object_unref (G_OBJECT (model->bookmarks_monitor));
+      model->bookmarks_monitor = NULL;
+    }
+
+  if (model->bookmarks_file != NULL)
+    {
+      g_object_unref (G_OBJECT (model->bookmarks_file));
+      model->bookmarks_file = NULL;
+    }
+}
+
+
+
+static void
+xfce_appfinder_model_bookmarks_monitor (XfceAppfinderModel *model,
+                                        const gchar        *path)
+{
+  GFile  *file;
+  GError *error = NULL;
+
+  file = g_file_new_for_path (path);
+
+  if (model->bookmarks_file == NULL
+      || model->bookmarks_monitor == NULL
+      || !g_file_equal (file, model->bookmarks_file))
+    {
+      xfce_appfinder_model_bookmarks_monitor_stop (model);
+
+      /* monitor the file for changes */
+      model->bookmarks_monitor = g_file_monitor_file (file, G_FILE_MONITOR_NONE, model->collect_cancelled, &error);
+      appfinder_refcount_debug_add (G_OBJECT (model->bookmarks_monitor), "bookmarks file monitor");
+      if (model->bookmarks_monitor != NULL)
+        {
+          APPFINDER_DEBUG ("monitor bookmarks file %s", path);
+
+          model->bookmarks_file = g_object_ref (G_OBJECT (file));
+          g_signal_connect (G_OBJECT (model->bookmarks_monitor), "changed",
+              G_CALLBACK (xfce_appfinder_model_bookmarks_changed), model);
+        }
+      else
+        {
+          g_warning ("Failed to setup a monitor for %s: %s", path, error->message);
+          g_error_free (error);
+        }
+    }
+
+  model->bookmarks_mtime = xfce_appfinder_model_file_get_mtime (file);
 
   g_object_unref (G_OBJECT (file));
 }
@@ -1269,8 +1493,10 @@ xfce_appfinder_model_collect_item (const gchar    *desktop_id,
 
       item->categories = g_ptr_array_new_with_free_func (g_object_unref);
       if (context->category != NULL)
-        g_ptr_array_add (item->categories,
-                         g_object_ref (G_OBJECT (context->category)));
+        {
+          g_ptr_array_add (item->categories,
+                           g_object_ref (G_OBJECT (context->category)));
+        }
 
       context->items = g_slist_prepend (context->items, item);
       g_hash_table_insert (context->desktop_ids, (gchar *) desktop_id, item);
@@ -1592,7 +1818,7 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
   XfceAppfinderModel *model = XFCE_APPFINDER_MODEL (user_data);
   GError             *error = NULL;
   gchar              *filename;
-  GMappedFile        *history;
+  GMappedFile        *mmap;
 
   appfinder_return_val_if_fail (GARCON_IS_MENU (model->menu), NULL);
   appfinder_return_val_if_fail (model->collect_items == NULL, NULL);
@@ -1605,8 +1831,10 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
     {
       if (garcon_menu_load (model->menu, model->collect_cancelled, &error))
         {
-          xfce_appfinder_model_collect_menu (model->menu, model->collect_cancelled,
-                                             &model->collect_items, &model->collect_categories);
+          xfce_appfinder_model_collect_menu (model->menu,
+                                             model->collect_cancelled,
+                                             &model->collect_items,
+                                             &model->collect_categories);
         }
       else
         {
@@ -1621,11 +1849,11 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
     {
       APPFINDER_DEBUG ("load commands from %s", filename);
 
-      history = g_mapped_file_new (filename, FALSE, &error);
-      if (G_LIKELY (history != NULL))
+      mmap = g_mapped_file_new (filename, FALSE, &error);
+      if (G_LIKELY (mmap != NULL))
         {
-          xfce_appfinder_model_collect_history (model, history);
-          g_mapped_file_unref (history);
+          xfce_appfinder_model_collect_history (model, mmap);
+          g_mapped_file_unref (mmap);
         }
       else
         {
@@ -1635,6 +1863,30 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
 
       /* start monitoring and update mtime */
       xfce_appfinder_model_history_monitor (model, filename);
+
+      g_free (filename);
+    }
+
+  /* load bookmarks */
+  filename = xfce_resource_lookup (XFCE_RESOURCE_CONFIG, BOOKMARKS_PATH);
+  if (G_LIKELY (filename != NULL))
+    {
+      APPFINDER_DEBUG ("load bookmarks from %s", filename);
+
+      mmap = g_mapped_file_new (filename, FALSE, &error);
+      if (G_LIKELY (mmap != NULL))
+        {
+          xfce_appfinder_model_bookmarks_collect (model, mmap);
+          g_mapped_file_unref (mmap);
+        }
+      else
+        {
+          g_warning ("Failed to open bookmarks file: %s", error->message);
+          g_clear_error (&error);
+        }
+
+      /* start monitoring and update mtime */
+      xfce_appfinder_model_bookmarks_monitor (model, filename);
 
       g_free (filename);
     }
@@ -1732,6 +1984,8 @@ xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
                                   const gchar               *string)
 {
   ModelItem *item;
+  GarconMenuDirectory *bookmarks;
+  gboolean             in_category;
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
   appfinder_return_val_if_fail (iter->stamp == model->stamp, FALSE);
@@ -1747,9 +2001,22 @@ xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
       if (item->not_visible)
         return FALSE;
 
-      if (category != NULL
-          && !xfce_appfinder_model_ptr_array_find (item->categories, category))
-        return FALSE;
+      if (category != NULL)
+        {
+          if (!xfce_appfinder_model_ptr_array_find (item->categories, category))
+            {
+              in_category = FALSE;
+              if (item->is_bookmark)
+                {
+                  bookmarks = xfce_appfinder_model_get_bookmarks_category ();
+                  in_category = (bookmarks == category);
+                  g_object_unref (G_OBJECT (bookmarks));
+                }
+
+              if (!in_category)
+                return FALSE;
+            }
+        }
 
       if (string != NULL
           && item->key != NULL)
@@ -1979,6 +2246,7 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
   static gsize  old_len = 0;
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
+  appfinder_return_val_if_fail (error == NULL || *error == NULL, FALSE);
 
   if (!IS_STRING (command)
       || g_hash_table_lookup (model->items_hash, command) != NULL)
@@ -2142,6 +2410,100 @@ xfce_appfinder_model_history_clear (XfceAppfinderModel *model)
 
 
 
+gboolean
+xfce_appfinder_model_bookmark_toggle (XfceAppfinderModel  *model,
+                                      const gchar         *desktop_id,
+                                      GError             **error)
+{
+  ModelItem    *item;
+  GSList       *li;
+  const gchar  *desktop_id2;
+  static gsize  old_len = 0;
+  GString      *contents;
+  gchar        *filename;
+  gboolean      succeed;
+  GtkTreePath  *path;
+  gint          idx;
+  GtkTreeIter   iter;
+
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
+  appfinder_return_val_if_fail (error == NULL || *error == NULL, FALSE);
+  appfinder_return_val_if_fail (desktop_id != NULL, FALSE);
+
+  if (g_hash_table_lookup (model->bookmarks_hash, desktop_id) == NULL)
+    g_hash_table_insert (model->bookmarks_hash, g_strdup (desktop_id), GUINT_TO_POINTER (1));
+  else
+    g_hash_table_remove (model->bookmarks_hash, desktop_id);
+
+  /* string to store custom commands */
+  contents = g_string_sized_new (old_len);
+
+  /* update the model items */
+  for (idx = 0, li = model->items; li != NULL; li = li->next, idx++)
+    {
+      item = li->data;
+      if (item->item == NULL)
+        continue;
+
+      /* find the item we're trying to add/remove */
+      if (desktop_id != NULL)
+        {
+          desktop_id2 = garcon_menu_item_get_desktop_id (item->item);
+          if (desktop_id2 != NULL
+              && strcmp (desktop_id2, desktop_id) == 0)
+            {
+              /* toggle state */
+              item->is_bookmark = !item->is_bookmark;
+
+              /* stop searching, continue collecting */
+              desktop_id = NULL;
+
+              /* update model */
+              path = gtk_tree_path_new_from_indices (idx, -1);
+              ITER_INIT (iter, model->stamp, li);
+              gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
+              gtk_tree_path_free (path);
+            }
+        }
+
+      /* collect bookmarked items */
+      if (item->is_bookmark)
+        {
+          desktop_id2 = garcon_menu_item_get_desktop_id (item->item);
+          if (G_LIKELY (desktop_id2 != NULL))
+            {
+              g_string_append (contents, desktop_id2);
+              g_string_append_c (contents, '\n');
+            }
+        }
+    }
+
+  APPFINDER_DEBUG ("saving bookmarks");
+
+  /* write new bookmarks */
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CONFIG, BOOKMARKS_PATH, TRUE);
+  if (G_LIKELY (filename != NULL))
+    succeed = g_file_set_contents (filename, contents->str, contents->len, error);
+  else
+    g_set_error_literal (error, 0, 0, "Unable to create bookmarks file");
+
+  if (succeed)
+    {
+      /* possible restart monitoring and update mtime */
+      xfce_appfinder_model_bookmarks_monitor (model, filename);
+    }
+
+  /* optimization for next run */
+  old_len = contents->allocated_len;
+
+  g_free (filename);
+  g_string_free (contents, TRUE);
+
+  return succeed;
+}
+
+
+
 GarconMenuDirectory *
 xfce_appfinder_model_get_command_category (void)
 {
@@ -2158,6 +2520,30 @@ xfce_appfinder_model_get_command_category (void)
                                "icon-name", GTK_STOCK_EXECUTE,
                                NULL);
       appfinder_refcount_debug_add (G_OBJECT (category), "commands");
+      g_object_add_weak_pointer (G_OBJECT (category), (gpointer) &category);
+    }
+
+  return category;
+}
+
+
+
+GarconMenuDirectory *
+xfce_appfinder_model_get_bookmarks_category (void)
+{
+  static GarconMenuDirectory *category = NULL;
+
+  if (G_LIKELY (category != NULL))
+    {
+      g_object_ref (G_OBJECT (category));
+    }
+  else
+    {
+      category = g_object_new (GARCON_TYPE_MENU_DIRECTORY,
+                               "name", _("Bookmarks"),
+                               "icon-name", "user-bookmarks",
+                               NULL);
+      appfinder_refcount_debug_add (G_OBJECT (category), "bookmarks");
       g_object_add_weak_pointer (G_OBJECT (category), (gpointer) &category);
     }
 

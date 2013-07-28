@@ -42,6 +42,7 @@ enum
   XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE,
   XFCE_APPFINDER_MODEL_COLUMN_COMMAND,
   XFCE_APPFINDER_MODEL_COLUMN_URI,
+  XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK,
   XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP,
   XFCE_APPFINDER_MODEL_N_COLUMNS,
 };
@@ -64,42 +65,48 @@ XfceAppfinderIconSize;
 
 
 
-GType                xfce_appfinder_model_get_type             (void) G_GNUC_CONST;
+GType                xfce_appfinder_model_get_type               (void) G_GNUC_CONST;
 
-XfceAppfinderModel  *xfce_appfinder_model_get                  (void) G_GNUC_MALLOC;
+XfceAppfinderModel  *xfce_appfinder_model_get                    (void) G_GNUC_MALLOC;
 
-GSList              *xfce_appfinder_model_get_categories       (XfceAppfinderModel        *model);
+GSList              *xfce_appfinder_model_get_categories         (XfceAppfinderModel        *model);
 
-gboolean             xfce_appfinder_model_get_visible          (XfceAppfinderModel        *model,
-                                                                const GtkTreeIter         *iter,
-                                                                const GarconMenuDirectory *category,
-                                                                const gchar               *string);
+gboolean             xfce_appfinder_model_get_visible            (XfceAppfinderModel        *model,
+                                                                  const GtkTreeIter         *iter,
+                                                                  const GarconMenuDirectory *category,
+                                                                  const gchar               *string);
 
-gboolean             xfce_appfinder_model_get_visible_command  (XfceAppfinderModel        *model,
-                                                                const GtkTreeIter         *iter,
-                                                                const gchar               *string);
+gboolean             xfce_appfinder_model_get_visible_command    (XfceAppfinderModel        *model,
+                                                                  const GtkTreeIter         *iter,
+                                                                  const gchar               *string);
 
-gboolean             xfce_appfinder_model_execute              (XfceAppfinderModel        *model,
-                                                                const GtkTreeIter         *iter,
-                                                                GdkScreen                 *screen,
-                                                                gboolean                  *is_regular_command,
-                                                                GError                   **error);
+gboolean             xfce_appfinder_model_execute                (XfceAppfinderModel        *model,
+                                                                  const GtkTreeIter         *iter,
+                                                                  GdkScreen                 *screen,
+                                                                  gboolean                  *is_regular_command,
+                                                                  GError                   **error);
 
-GdkPixbuf           *xfce_appfinder_model_load_pixbuf          (const gchar               *icon_name,
-                                                                XfceAppfinderIconSize      icon_size) G_GNUC_MALLOC;
+GdkPixbuf           *xfce_appfinder_model_load_pixbuf            (const gchar               *icon_name,
+                                                                  XfceAppfinderIconSize      icon_size) G_GNUC_MALLOC;
 
-gboolean             xfce_appfinder_model_save_command         (XfceAppfinderModel        *model,
-                                                                const gchar               *command,
-                                                                GError                   **error);
+gboolean             xfce_appfinder_model_save_command           (XfceAppfinderModel        *model,
+                                                                  const gchar               *command,
+                                                                  GError                   **error);
 
-GdkPixbuf           *xfce_appfinder_model_get_icon_for_command (XfceAppfinderModel        *model,
-                                                                const gchar               *command);
+GdkPixbuf           *xfce_appfinder_model_get_icon_for_command   (XfceAppfinderModel        *model,
+                                                                  const gchar               *command);
 
-void                 xfce_appfinder_model_icon_theme_changed   (XfceAppfinderModel        *model);
+void                 xfce_appfinder_model_icon_theme_changed     (XfceAppfinderModel        *model);
 
-GarconMenuDirectory *xfce_appfinder_model_get_command_category (void);
+void                 xfce_appfinder_model_history_clear          (XfceAppfinderModel        *model);
 
-void                 xfce_appfinder_model_history_clear        (XfceAppfinderModel        *model);
+gboolean             xfce_appfinder_model_bookmark_toggle        (XfceAppfinderModel        *model,
+                                                                  const gchar               *desktop_id,
+                                                                  GError                   **error);
+
+GarconMenuDirectory *xfce_appfinder_model_get_command_category   (void);
+
+GarconMenuDirectory *xfce_appfinder_model_get_bookmarks_category (void);
 
 G_END_DECLS
 

@@ -529,6 +529,10 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
   model->categories = g_slist_prepend (model->categories, item);
 
   item = g_slice_new0 (CategoryItem);
+  item->directory = xfce_appfinder_model_get_bookmarks_category ();
+  model->categories = g_slist_prepend (model->categories, item);
+
+  item = g_slice_new0 (CategoryItem);
   item->directory = g_object_ref (G_OBJECT (model->all_applications));
   model->categories = g_slist_prepend (model->categories, item);
 
