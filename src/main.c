@@ -279,14 +279,8 @@ main (gint argc, gchar **argv)
         }
     }
 
-  /* if the value is unset, fallback to XFCE, if the
-   * value is empty, allow all applications in the menu */
-  desktop = g_getenv ("XDG_CURRENT_DESKTOP");
-  if (G_LIKELY (desktop == NULL))
-    desktop = "XFCE";
-  else if (*desktop == '\0')
-    desktop = NULL;
-  garcon_set_environment (desktop);
+  /* init garcon environment */
+  garcon_set_environment_xdg (GARCON_ENVIRONMENT_XFCE);
 
   if (!xfconf_init (&error))
     {
