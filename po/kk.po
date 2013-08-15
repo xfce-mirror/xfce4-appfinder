@@ -1,312 +1,306 @@
-# xfce4-appfinder to kazakh.
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2009.
 # 
+# Translators:
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2009,2013
 msgid ""
 msgstr ""
-"Project-Id-Version: trunk\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-09 05:39+0000\n"
-"PO-Revision-Date: 2011-12-17 22:46+0600\n"
+"POT-Creation-Date: 2013-07-29 00:30+0200\n"
+"PO-Revision-Date: 2013-08-15 05:32+0000\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: kk\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "Барлық қолданбалар"
 
-#: ../src/appfinder-model.c:545
+#: ../src/appfinder-model.c:575
 msgid "Name"
 msgstr "Аты"
 
-#: ../src/appfinder-model.c:546
+#: ../src/appfinder-model.c:576
 msgid "Comment"
 msgstr "Комментарий"
 
-#: ../src/appfinder-model.c:547
+#: ../src/appfinder-model.c:577
 msgid "Command"
 msgstr "Команда"
 
-#: ../src/appfinder-model.c:548
+#: ../src/appfinder-model.c:578
 msgid "Categories"
 msgstr "Санаттар"
 
-#: ../src/appfinder-model.c:549
+#: ../src/appfinder-model.c:579
 msgid "Filename"
 msgstr "Файл аты"
 
-#: ../src/appfinder-model.c:1825
+#: ../src/appfinder-model.c:2100
 msgid "Application has no command"
 msgstr "Қолданбада команда жоқ"
 
-#: ../src/appfinder-model.c:2149
+#: ../src/appfinder-model.c:2519
 msgid "Commands History"
 msgstr "Командалар тарихы"
 
-#: ../src/appfinder-preferences.c:221
+#: ../src/appfinder-model.c:2543
+msgid "Bookmarks"
+msgstr "Бетбелгілер"
+
+#: ../src/appfinder-preferences.c:219
 msgid "C_lear"
 msgstr "Та_зарту"
 
-#: ../src/appfinder-preferences.c:222
+#: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
 msgstr "Бұл пайдаланушы командалар тарихын өшіреді."
 
-#: ../src/appfinder-preferences.c:223
+#: ../src/appfinder-preferences.c:221
 msgid "Are you sure you want to clear the command history?"
 msgstr "Командалар тарихын өшіруді шынымен қалайсыз ба?"
 
-#: ../src/appfinder-preferences.c:333
+#: ../src/appfinder-preferences.c:331
 msgid "The custom action will be deleted permanently."
 msgstr "Пайдаланушы әрекеті өшіріледі."
 
-#: ../src/appfinder-preferences.c:334
+#: ../src/appfinder-preferences.c:332
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "\"%s\" шаблонын өшіруді шынымен қалайсыз ба?"
 
-#: ../src/appfinder-window.c:219 ../src/main.c:446
-#: ../src/appfinder-preferences.glade.h:4
+#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Қолданбаларды табушы"
 
-#: ../src/appfinder-window.c:271
+#: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
 msgstr "Қарау түрін ауыстыру"
 
-#: ../src/appfinder-window.c:363
+#: ../src/appfinder-window.c:394
 msgid "La_unch"
 msgstr "Жө_нелту"
 
-#: ../src/appfinder-window.c:798
+#: ../src/appfinder-window.c:880
 msgid "Failed to launch desktop item editor"
 msgstr "desktop элементтер түзетушісін жөнелту сәтсіз"
 
-#: ../src/appfinder-window.c:824
+#: ../src/appfinder-window.c:906
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr ""
-"Бұл әрекет нәтижесінде үй бумаңыздан өзіңіз жасаған desktop файлы өшіріледі."
+msgstr "Бұл әрекет нәтижесінде үй бумаңыздан өзіңіз жасаған desktop файлы өшіріледі."
 
-#: ../src/appfinder-window.c:825
+#: ../src/appfinder-window.c:907
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "\"%s\" болдырмауды қалайсыз ба?"
 
-#: ../src/appfinder-window.c:835
+#: ../src/appfinder-window.c:917
 msgid "Failed to remove desktop file"
 msgstr "desktop файлын өшіру сәтсіз"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:868
+#: ../src/appfinder-window.c:950
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
-"Жасыруды болдырмау үшін сізге \"%s\" ішінен desktop файлын өшіру немесе "
-"файлды дәл сол бумада ашып, \"%s\" жолын өшіру керек."
+msgstr "Жасыруды болдырмау үшін сізге \"%s\" ішінен desktop файлын өшіру немесе файлды дәл сол бумада ашып, \"%s\" жолын өшіру керек."
 
-#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
+#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
 msgstr "Жа_сыру"
 
-#: ../src/appfinder-window.c:874
+#: ../src/appfinder-window.c:956
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "\"%s\" жасыруды шынымен қалайсыз ба?"
 
-#: ../src/main.c:75
+#: ../src/appfinder-window.c:1037
+msgid "Remove From Bookmarks"
+msgstr "Бетбелгілерден өшіру"
+
+#: ../src/appfinder-window.c:1037
+msgid "Add to Bookmarks"
+msgstr "Бетбелгілерге қосу"
+
+#: ../src/main.c:64
 msgid "Start in collapsed mode"
 msgstr "Қайырылған түрде іске қосылу"
 
-#: ../src/main.c:76
+#: ../src/main.c:65
 msgid "Print version information and exit"
 msgstr "Нұсқа ақпаратын шығару мен шығу"
 
-#: ../src/main.c:77
+#: ../src/main.c:66
 msgid "Replace the existing service"
 msgstr "Бар қызметті ауыстыру"
 
-#: ../src/main.c:78
+#: ../src/main.c:67
 msgid "Quit all instances"
 msgstr "Барлық нұсқалардың жұмысын аяқтау"
 
-#: ../src/main.c:79
+#: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
 msgstr "D-Bus қызметін көру не болуды болдырмау"
 
-#. close all windows and quit
-#: ../src/main.c:244
-msgid "Forced to quit"
-msgstr "Шығуға мәжбүрленген"
-
-#: ../src/main.c:448
-msgid "Unable to daemonize the process"
-msgstr "Үрдісті фонға жіберу сәтсіз"
-
-#: ../src/main.c:522
+#: ../src/main.c:224
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Қолдану ақпараты үшін \"%s --help\" енгізіңіз."
 
-#: ../src/main.c:533
+#: ../src/main.c:235
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce өндіру тобы. Барлық құқықтары қорғалған."
 
-#: ../src/main.c:534
+#: ../src/main.c:236
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Ақаулықтар жөнінде хабарласыңыз: <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
-msgstr "Жаңа таңдауыңызша әрекетті қосу."
+msgid "Prefix"
+msgstr "Префикс"
 
 #: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr "Тұрақты өрнек"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "Өте кіші"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "Кішірек"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "Кіші"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "Қалыпты"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "Үлкен"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "Үлкенірек"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "Өте үлкен"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "Соңғы таңдалған са_натты есте сақтау"
+
+#: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
 msgstr "Тере_зені әрқашан ортаға туралау"
 
-#: ../src/appfinder-preferences.glade.h:3
-msgid "Appearance"
-msgstr "Сыртқы түрі"
-
-#: ../src/appfinder-preferences.glade.h:5
-msgid "Behaviour"
-msgstr "Мінез-құлығы"
-
-#: ../src/appfinder-preferences.glade.h:6
-msgid "C_lear Custom Command History"
-msgstr "Пайдаланушы командалар тар_ихын өшіру"
-
-#: ../src/appfinder-preferences.glade.h:7
-msgid "Categ_ory icon size:"
-msgstr "Санат таң_башасы өлшемі:"
-
-#: ../src/appfinder-preferences.glade.h:8
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
 msgstr "Іске қосылғанда, терезені ортаға қарай туралау."
 
-#: ../src/appfinder-preferences.glade.h:9
-msgid "Co_mmand:"
-msgstr "Ко_манда:"
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
+msgstr "Фонда орындалып тұрған қолданбаны ұ_стау"
 
-#: ../src/appfinder-preferences.glade.h:10
-msgid "Custom _Actions"
-msgstr "Пайдалану_шы әрекеттері"
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "Соңғы терезе жабылғаннан кейін қолданбаны жабу орнына жаңа терезелерді ашу жылдамдығын арттыру үшін фонда жұмысты жасау. Жады қолдануды төмендету үшін осыны өшірсеңіз де болады."
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Behaviour"
+msgstr "Мінез-құлығы"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr "Нәрс_елерді таңбашалар ретінде қарау"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr "Таң_башалар қасындағы мәтін"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "Нәр_се таңбашасы өлшемі:"
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr "Санат таң_башасы өлшемі:"
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "Сыртқы түрі"
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr "Пайдаланушы командалар тар_ихын өшіру"
+
+#: ../src/appfinder-preferences.glade.h:23
 msgid "History"
 msgstr "Тарих"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "Жал_пы"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "Шаблон"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "Жаңа таңдауыңызша әрекетті қосу."
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "Ағымдағы таңдалған әрекетті өшіру."
+
+#: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
-"Егер түрі префикске орнатылса, %s орнына шаблоннан кейінгі мәтін қойылады, "
-"ал %S жазбаның толық мәтіні болады. Тұрақты өрнектер үшін сіз \\0 пен "
-"\\<сан> қолдана аласын."
+msgstr "Егер түрі префикске орнатылса, %s орнына шаблоннан кейінгі мәтін қойылады, ал %S жазбаның толық мәтіні болады. Тұрақты өрнектер үшін сіз \\0 пен \\<сан> қолдана аласын."
 
-#: ../src/appfinder-preferences.glade.h:14
-msgid ""
-"Instead of quitting the application when the last window is closed, keep a "
-"running instance to speed up opening new windows. You might want to disable "
-"this to reduce memory usage."
-msgstr ""
-"Соңғы терезе жабылғаннан кейін қолданбаны жабу орнына жаңа терезелерді ашу "
-"жылдамдығын арттыру үшін фонда жұмысты жасау. Жады қолдануды төмендету үшін "
-"осыны өшірсеңіз де болады."
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "Ко_манда:"
 
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Ite_m icon size:"
-msgstr "Нәр_се таңбашасы өлшемі:"
-
-#: ../src/appfinder-preferences.glade.h:16
-msgid "Keep running _instance in the background"
-msgstr "Фонда орындалып тұрған қолданбаны ұ_стау"
-
-#: ../src/appfinder-preferences.glade.h:17
-msgid "Large"
-msgstr "Үлкен"
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "Larger"
-msgstr "Үлкенірек"
-
-#: ../src/appfinder-preferences.glade.h:19
-msgid "Normal"
-msgstr "Қалыпты"
-
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
 msgstr "Шаб_лон:"
 
-#: ../src/appfinder-preferences.glade.h:21
-msgid "Pattern"
-msgstr "Шаблон"
-
-#: ../src/appfinder-preferences.glade.h:22
-msgid "Prefix"
-msgstr "Префикс"
-
-#: ../src/appfinder-preferences.glade.h:23
-msgid "Regular Expression"
-msgstr "Тұрақты өрнек"
-
-#: ../src/appfinder-preferences.glade.h:24
-msgid "Remember last _selected category"
-msgstr "Соңғы таңдалған са_натты есте сақтау"
-
-#: ../src/appfinder-preferences.glade.h:25
-msgid "Remove the currently selected action."
-msgstr "Ағымдағы таңдалған әрекетті өшіру."
-
-#: ../src/appfinder-preferences.glade.h:26
-msgid "Small"
-msgstr "Кіші"
-
-#: ../src/appfinder-preferences.glade.h:27
-msgid "Smaller"
-msgstr "Кішірек"
-
-#: ../src/appfinder-preferences.glade.h:28
-msgid "Text besi_de icons"
-msgstr "Таң_башалар қасындағы мәтін"
-
-#: ../src/appfinder-preferences.glade.h:29
-msgid "Very Large"
-msgstr "Өте үлкен"
-
-#: ../src/appfinder-preferences.glade.h:30
-msgid "Very Small"
-msgstr "Өте кіші"
-
-#: ../src/appfinder-preferences.glade.h:31
-msgid "_General"
-msgstr "Жал_пы"
-
 #: ../src/appfinder-preferences.glade.h:32
-msgid "_Save match in command history"
-msgstr "Сә_йкестікті командалар тарихында сақтау"
-
-#: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
 msgstr "_Түрі:"
 
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr "Сә_йкестікті командалар тарихында сақтау"
+
 #: ../src/appfinder-preferences.glade.h:34
-msgid "_View items as icons"
-msgstr "Нәрс_елерді таңбашалар ретінде қарау"
+msgid "Custom _Actions"
+msgstr "Пайдалану_шы әрекеттері"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -319,45 +313,3 @@ msgstr "Бағдарламаны жөнелту..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Бағдарламаны жөнелту"
-
-#~ msgid "[MENUFILE]"
-#~ msgstr "[МӘЗІРФАЙЛЫ]"
-
-#~ msgid "Unable to initialize GTK+."
-#~ msgstr "GTK+ іске қосу мүмкін емес."
-
-#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
-#~ msgstr "Xfconf қызметіне байланыс орнату сәтсіз аяқталды. Себебі: %s"
-
-#~ msgid "Failed to connect to xfconf daemon."
-#~ msgstr "Xfconf қызметіне байланыс орнату сәтсіз аяқталды."
-
-#~ msgid "Search"
-#~ msgstr "Іздеу"
-
-#~ msgid "C_lose after launch"
-#~ msgstr "Жө_нелткеннен кейін жабу"
-
-#~ msgid "Could not load menu from %s"
-#~ msgstr "Келесі жерден мәзірді жүктеу мүмкін емес: %s"
-
-#~ msgid "All"
-#~ msgstr "Барлығы"
-
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "\"%s\" командасын жөнелту сәтсіз."
-
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>Санаттар:</b> %s"
-
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>Команда:</b> %s"
-
-#~ msgid "Could not load system menu"
-#~ msgstr "Жүйелік мәзірді жүктеу мүмкін емес"
-
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "%s қолданбасын орындау мүмкін емес. Себебі: %s"
-
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "Келесі жерден мәзірді жүктеу мүмкін емес: %s. Себебі: %s"
