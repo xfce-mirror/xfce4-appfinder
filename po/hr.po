@@ -1,53 +1,60 @@
-# Croatian translations for  xfce4-appfinder package.
-# Copyright (C) 2010 The Xfce development team.
-# This file is distributed under the same license as the  xfce4-appfinder package.
-#  Ivica Kolić<ikoli@yahoo.com>, 2010.
-#  Ivica Kolić<ikoli@yahoo.com> <>, 2010.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Ivica  Kolić <ikoli@yahoo.com>, 2010
+# Ivica  Kolić <ikoli@yahoo.com>, 2010
+# Ivica  Kolić <ikoli@yahoo.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-06 22:00+0000\n"
-"PO-Revision-Date: 2012-05-05 09:26+0100\n"
-"Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
-"Language-Team: Croatian <>\n"
+"POT-Creation-Date: 2013-07-29 00:30+0200\n"
+"PO-Revision-Date: 2013-09-09 20:26+0000\n"
+"Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
+"Language-Team: Croatian (http://www.transifex.com/projects/p/xfce/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hr\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "Svi programi"
 
-#: ../src/appfinder-model.c:545
+#: ../src/appfinder-model.c:575
 msgid "Name"
 msgstr "Ime"
 
-#: ../src/appfinder-model.c:546
+#: ../src/appfinder-model.c:576
 msgid "Comment"
 msgstr "Komentar"
 
-#: ../src/appfinder-model.c:547
+#: ../src/appfinder-model.c:577
 msgid "Command"
 msgstr "Naredba"
 
-#: ../src/appfinder-model.c:548
+#: ../src/appfinder-model.c:578
 msgid "Categories"
 msgstr "Kategorije"
 
-#: ../src/appfinder-model.c:549
+#: ../src/appfinder-model.c:579
 msgid "Filename"
 msgstr "Ime datoteke"
 
-#: ../src/appfinder-model.c:1829
+#: ../src/appfinder-model.c:2100
 msgid "Application has no command"
 msgstr "Program nema naredbe"
 
-#: ../src/appfinder-model.c:2153
+#: ../src/appfinder-model.c:2519
 msgid "Commands History"
 msgstr "Povijest naredbi"
+
+#: ../src/appfinder-model.c:2543
+msgid "Bookmarks"
+msgstr "Zabilješke"
 
 #: ../src/appfinder-preferences.c:219
 msgid "C_lear"
@@ -70,143 +77,206 @@ msgstr "Prilagođena akcija biti će trajno izbrisana."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Jeste li sigurni da želite izbrisati uzorak \"%s\"?"
 
-#: ../src/appfinder-window.c:219 ../src/main.c:446
-#: ../src/appfinder-preferences.glade.h:4
+#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Nalaznik programa"
 
-#: ../src/appfinder-window.c:286
+#: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
 msgstr "Promjeni način pregleda"
 
-#: ../src/appfinder-window.c:391
+#: ../src/appfinder-window.c:394
 msgid "La_unch"
 msgstr "Po_kreni"
 
-#: ../src/appfinder-window.c:826
+#: ../src/appfinder-window.c:880
 msgid "Failed to launch desktop item editor"
 msgstr "Neuspjelo pokretanje uređivača stavki radne površine"
 
-#: ../src/appfinder-window.c:852
+#: ../src/appfinder-window.c:906
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr ""
-"Ovo će trajno ukloniti prilagođenu datoteku radne površine iz vaše osobne "
-"mape."
+msgstr "Ovo će trajno ukloniti prilagođenu datoteku radne površine iz vaše osobne mape."
 
-#: ../src/appfinder-window.c:853
+#: ../src/appfinder-window.c:907
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Jeste li sigurni da želite vratiti  \"%s\"?"
 
-#: ../src/appfinder-window.c:863
+#: ../src/appfinder-window.c:917
 msgid "Failed to remove desktop file"
 msgstr "Neuspjelo uklanjanje datoteke radne površine"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:896
+#: ../src/appfinder-window.c:950
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
+msgstr "Za otkrivanje stavke morate ručno ukloniti datoteku radne površine iz \"%s\" ili otvoriti datoteku u istom direktoriju i ukloniti redak \"%s\"."
 
-#: ../src/appfinder-window.c:901 ../src/appfinder-window.c:993
+#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
 msgstr "_Sakrij"
 
-#: ../src/appfinder-window.c:902
+#: ../src/appfinder-window.c:956
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Jeste li sigurni da želite sakriti \"%s\"?"
 
-#: ../src/main.c:75
+#: ../src/appfinder-window.c:1037
+msgid "Remove From Bookmarks"
+msgstr "Ukloni iz zabilješki"
+
+#: ../src/appfinder-window.c:1037
+msgid "Add to Bookmarks"
+msgstr "Dodaj u zabilješke"
+
+#: ../src/main.c:64
 msgid "Start in collapsed mode"
 msgstr ""
 
-#: ../src/main.c:76
+#: ../src/main.c:65
 msgid "Print version information and exit"
 msgstr "Ispiši informaciju o verziji i izađi"
 
-#: ../src/main.c:77
+#: ../src/main.c:66
 msgid "Replace the existing service"
 msgstr "Zamijenite postojeći servis"
 
-#: ../src/main.c:78
+#: ../src/main.c:67
 msgid "Quit all instances"
 msgstr "Isključi sve instance"
 
-#: ../src/main.c:79
+#: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
 msgstr ""
 
-#. close all windows and quit
-#: ../src/main.c:244
-msgid "Forced to quit"
-msgstr "Prisilno isključivanje"
-
-#: ../src/main.c:448
-msgid "Unable to daemonize the process"
-msgstr ""
-
-#: ../src/main.c:522
+#: ../src/main.c:224
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Upiši  \"%s --help\" za uporabu. "
 
-#: ../src/main.c:533
+#: ../src/main.c:235
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce razvojni tim.Sva prava pridržana."
 
-#: ../src/main.c:534
+#: ../src/main.c:236
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Prijavite probleme u <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
-msgstr "Dodaj novu prilagođenu akciju."
+msgid "Prefix"
+msgstr "Prefiks"
 
 #: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "Vrlo mala"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "Manja"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "Mala"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "Normalna"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "Velika"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "Veća"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "Vrlo velika"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "Zapamti posljednju _izabranu kategoriju"
+
+#: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
 msgstr "Uvijek c_entriraj prozor"
 
-#: ../src/appfinder-preferences.glade.h:3
-msgid "Appearance"
-msgstr "Izgled"
+#: ../src/appfinder-preferences.glade.h:13
+msgid "Center the window on startup."
+msgstr "Centriraj prozor pri pokretanju."
 
-#: ../src/appfinder-preferences.glade.h:5
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
 msgstr "Ponašanje"
 
-#: ../src/appfinder-preferences.glade.h:6
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr "_Pogledaj stavke kao ikone"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr "Tekst po_red ikona"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "Ve_ličina ikone stavke:"
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr "Veli_čina ikone kategorije:"
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "Izgled"
+
+#: ../src/appfinder-preferences.glade.h:22
 msgid "C_lear Custom Command History"
 msgstr "O_čisti povijest prilagođenih naredbi"
 
-#: ../src/appfinder-preferences.glade.h:7
-msgid "Categ_ory icon size:"
-msgstr "Veli_čina ikone kategorije"
-
-#: ../src/appfinder-preferences.glade.h:8
-msgid "Center the window on startup."
-msgstr "Centriraj prozor pri pokretanju"
-
-#: ../src/appfinder-preferences.glade.h:9
-msgid "Co_mmand:"
-msgstr "Na_redba:"
-
-#: ../src/appfinder-preferences.glade.h:10
-msgid "Custom _Actions"
-msgstr "Prilagođene _Akcije"
-
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:23
 msgid "History"
 msgstr "Povijest "
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "_Općenito"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "Uzorak"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "Dodaj novu prilagođenu akciju."
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "Uklonite trenutno odabranu akciju."
+
+#: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -214,96 +284,29 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:14
-msgid ""
-"Instead of quitting the application when the last window is closed, keep a "
-"running instance to speed up opening new windows. You might want to disable "
-"this to reduce memory usage."
-msgstr ""
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "Na_redba:"
 
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Ite_m icon size:"
-msgstr "Ve_ličina ikone stavke:"
-
-#: ../src/appfinder-preferences.glade.h:16
-msgid "Keep running _instance in the background"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:17
-msgid "Large"
-msgstr "Velika"
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "Larger"
-msgstr "Veća"
-
-#: ../src/appfinder-preferences.glade.h:19
-msgid "Normal"
-msgstr "Normalna"
-
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
 msgstr "Uzor_ak:"
 
-#: ../src/appfinder-preferences.glade.h:21
-msgid "Pattern"
-msgstr "Uzorak"
-
-#: ../src/appfinder-preferences.glade.h:22
-msgid "Prefix"
-msgstr "Prefiks"
-
-#: ../src/appfinder-preferences.glade.h:23
-msgid "Regular Expression"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:24
-msgid "Remember last _selected category"
-msgstr "Zapamti posljednju _izabranu kategoriju"
-
-#: ../src/appfinder-preferences.glade.h:25
-msgid "Remove the currently selected action."
-msgstr "Uklonite trenutno odabranu akciju."
-
-#: ../src/appfinder-preferences.glade.h:26
-msgid "Small"
-msgstr "Mala"
-
-#: ../src/appfinder-preferences.glade.h:27
-msgid "Smaller"
-msgstr "Manja"
-
-#: ../src/appfinder-preferences.glade.h:28
-msgid "Text besi_de icons"
-msgstr "Tekst po_red ikona"
-
-#: ../src/appfinder-preferences.glade.h:29
-msgid "Very Large"
-msgstr "Vrlo velika"
-
-#: ../src/appfinder-preferences.glade.h:30
-msgid "Very Small"
-msgstr "Vrlo mala"
-
-#: ../src/appfinder-preferences.glade.h:31
-msgid "_General"
-msgstr "_Općenito"
-
 #: ../src/appfinder-preferences.glade.h:32
-msgid "_Save match in command history"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
 msgstr "_Vrsta:"
 
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr ""
+
 #: ../src/appfinder-preferences.glade.h:34
-msgid "_View items as icons"
-msgstr "_Pogledaj stavke kao ikone"
+msgid "Custom _Actions"
+msgstr "Prilagođene _radnje"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Nađi i pokreni programe instalirane u vašem sustavu."
+msgstr "Nađi i pokreni programe instalirane u vašem sustavu"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
@@ -312,33 +315,3 @@ msgstr "Pokreni program..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Pokreni program"
-
-#~ msgid "[MENUFILE]"
-#~ msgstr "[DATOTEKA IZBORNIKA]"
-
-#~ msgid "Unable to initialize GTK+."
-#~ msgstr "NIje moguće inicirati GTK+."
-
-#~ msgid "Search"
-#~ msgstr "Traži"
-
-#~ msgid "C_lose after launch"
-#~ msgstr "Z_atvori nakon poretanja"
-
-#~ msgid "Could not load menu from %s"
-#~ msgstr "Ne mogu učitati izbornik iz %s"
-
-#~ msgid "All"
-#~ msgstr "Sve"
-
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "Ne mogu izvršiti program \"%s\"."
-
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>Kategorije:</b> %s"
-
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>Naredba:</b> %s"
-
-#~ msgid "Could not load system menu"
-#~ msgstr "Ne mogu učitati izbornik sustava"
