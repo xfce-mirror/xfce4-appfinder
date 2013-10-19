@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-09-09 20:26+0000\n"
+"PO-Revision-Date: 2013-10-19 20:48+0000\n"
 "Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/xfce/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -153,7 +153,7 @@ msgstr "Isključi sve instance"
 
 #: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "Ne pokušavajte koristiti ili postati D-Bus usluga"
 
 #: ../src/main.c:224
 #, c-format
@@ -175,7 +175,7 @@ msgstr "Prefiks"
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Regular Expression"
-msgstr ""
+msgstr "Regularni izraz"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Very Small"
@@ -226,7 +226,7 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr ""
+msgstr "Umjesto isključivanja programa kada je zadnji prozor zatvoren, zadrži pokrenute za ubrzanje otvaranja novih prozora.Možda želite onemogućiti ovo da biste smanjili upotrebu memorije."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
