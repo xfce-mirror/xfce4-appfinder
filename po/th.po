@@ -1,0 +1,313 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-02 23:08+0200\n"
+"PO-Revision-Date: 2013-11-07 02:54+0000\n"
+"Last-Translator: theppitak <theppitak@gmail.com>\n"
+"Language-Team: Thai (http://www.transifex.com/projects/p/xfce/language/th/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: th\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../src/appfinder-category-model.c:146
+msgid "All Applications"
+msgstr "โปรแกรมทั้งหมด"
+
+#: ../src/appfinder-model.c:549
+msgid "Name"
+msgstr "ชื่อ"
+
+#: ../src/appfinder-model.c:550
+msgid "Comment"
+msgstr "หมายเหตุ"
+
+#: ../src/appfinder-model.c:551
+msgid "Command"
+msgstr "คำสั่ง"
+
+#: ../src/appfinder-model.c:552
+msgid "Categories"
+msgstr "หมวด"
+
+#: ../src/appfinder-model.c:553
+msgid "Filename"
+msgstr "ชื่อแฟ้ม"
+
+#: ../src/appfinder-model.c:1833
+msgid "Application has no command"
+msgstr "โปรแกรมไม่มีคำสั่ง"
+
+#: ../src/appfinder-model.c:2157
+msgid "Commands History"
+msgstr "ประวัติคำสั่ง"
+
+#: ../src/appfinder-preferences.c:221
+msgid "C_lear"
+msgstr "_ล้าง"
+
+#: ../src/appfinder-preferences.c:222
+msgid "This will permanently clear the custom command history."
+msgstr "นี่จะเป็นการล้างประวัติของคำสั่งที่กำหนดเองทิ้งอย่างถาวร"
+
+#: ../src/appfinder-preferences.c:223
+msgid "Are you sure you want to clear the command history?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการล้างประวัติคำสั่ง?"
+
+#: ../src/appfinder-preferences.c:333
+msgid "The custom action will be deleted permanently."
+msgstr "การกระทำที่กำหนดเองจะถูกลบทิ้งอย่างถาวร"
+
+#: ../src/appfinder-preferences.c:334
+#, c-format
+msgid "Are you sure you want to delete pattern \"%s\"?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบแพตเทิร์น \"%s\"?"
+
+#: ../src/appfinder-window.c:220 ../src/main.c:446
+#: ../src/appfinder-preferences.glade.h:10
+#: ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr "เครื่องมือค้นหาโปรแกรม"
+
+#: ../src/appfinder-window.c:272
+msgid "Toggle view mode"
+msgstr "สลับโหมดการแสดงผล"
+
+#: ../src/appfinder-window.c:364
+msgid "La_unch"
+msgstr "เ_รียกทำงาน"
+
+#: ../src/appfinder-window.c:805
+msgid "Failed to launch desktop item editor"
+msgstr "เรียกทำงานเครื่องมือแก้ไขรายการเดสก์ท็อปไม่สำเร็จ"
+
+#: ../src/appfinder-window.c:831
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr "นี่จะเป็นการลบแฟ้มเดสก์ท็อปที่กำหนดเองออกจากไดเรกทอรีบ้านของคุณอย่างถาวร"
+
+#: ../src/appfinder-window.c:832
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการย้อนคืน \"%s\""
+
+#: ../src/appfinder-window.c:842
+msgid "Failed to remove desktop file"
+msgstr "ลบแฟ้มเดสก์ท็อปไม่สำเร็จ"
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: ../src/appfinder-window.c:875
+#, c-format
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr "หากต้องการยกเลิกการซ่อนรายการนี้ คุณต้องลบแฟ้มเดสก์ท็อปออกจาก \"%s\" เอง หรือเปิดแฟ้มดังกล่าวในไดเรกทอรีเดียวกันแล้วลบบรรทัด \"%s\" ออก"
+
+#: ../src/appfinder-window.c:880 ../src/appfinder-window.c:972
+msgid "_Hide"
+msgstr "ซ่อ_น"
+
+#: ../src/appfinder-window.c:881
+#, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการซ่อน \"%s\"?"
+
+#: ../src/main.c:75
+msgid "Start in collapsed mode"
+msgstr "เปิดในโหมดหุบ"
+
+#: ../src/main.c:76
+msgid "Print version information and exit"
+msgstr "แสดงข้อมูลรุ่นแล้วจบการทำงาน"
+
+#: ../src/main.c:77
+msgid "Replace the existing service"
+msgstr "แทนที่บริการเดิมที่มีอยู่"
+
+#: ../src/main.c:78
+msgid "Quit all instances"
+msgstr "ปิดทุกอินสแตนซ์"
+
+#: ../src/main.c:79
+msgid "Do not try to use or become a D-Bus service"
+msgstr "ไม่ต้องพยายามใช้หรือเปิดบริการ D-Bus"
+
+#. close all windows and quit
+#: ../src/main.c:244
+msgid "Forced to quit"
+msgstr "ถูกบังคับจบการทำงาน"
+
+#: ../src/main.c:448
+msgid "Unable to daemonize the process"
+msgstr "ไม่สามารถทำโพรเซสให้เป็นดีมอนได้"
+
+#: ../src/main.c:524
+#, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr "ลองสั่ง '%s --help' เพื่อดูวิธีใช้"
+
+#: ../src/main.c:535
+msgid "The Xfce development team. All rights reserved."
+msgstr "The Xfce development team. All rights reserved."
+
+#: ../src/main.c:536
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr "หากพบปัญหา กรุณารายงานไปที่ <%s>"
+
+#: ../src/appfinder-preferences.glade.h:1
+msgid "Prefix"
+msgstr "ข้อความส่วนหน้า"
+
+#: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr "นิพจน์เรกิวลาร์"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "เล็กมาก"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "เล็ก"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "ค่อนข้างเล็ก"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "ปกติ"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "ค่อนข้างใหญ่"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "ใหญ่"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "ใหญ่มาก"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "จำ_หมวดที่เลือกล่าสุด"
+
+#: ../src/appfinder-preferences.glade.h:12
+msgid "Always c_enter the window"
+msgstr "วางหน้าต่างกลา_งหน้าจอเสมอ"
+
+#: ../src/appfinder-preferences.glade.h:13
+msgid "Center the window on startup."
+msgstr "วางหน้าต่างตรงกลางหน้าจอขณะเรียกเปิด"
+
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
+msgstr "รักษาอิน_สแตนซ์ที่ทำงานอยู่ไว้ในเบื้องหลัง"
+
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "แทนที่จะปิดโปรแกรมเมื่อปิดหน้าต่างสุดท้าย ก็ให้รักษาอินสแตนซ์ที่ทำงานอยู่ไว้ เพื่อเพิ่มความเร็วในการเปิดหน้าต่างใหม่ คุณอาจต้องการปิดตัวเลือกนี้เพื่อลดการใช้หน่วยความจำ"
+
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Behaviour"
+msgstr "พฤติกรรม"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr "แสดงรายการต่างๆ เป็นไ_อคอน"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr "ข้อความ_ข้างไอคอน"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "ขนาดไอคอน_รายการ:"
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr "ขนาดไอคอนห_มวด:"
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "รูปปรากฏ"
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr "_ล้างประวัติคำสั่งที่กำหนดเอง"
+
+#: ../src/appfinder-preferences.glade.h:23
+msgid "History"
+msgstr "ประวัติ"
+
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "_ทั่วไป"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "แพตเทิร์น"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "เพิ่มการกระทำใหม่ที่กำหนดเอง"
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "ลบการกระทำที่เลือกอยู่"
+
+#: ../src/appfinder-preferences.glade.h:29
+#, no-c-format
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr "ถ้ากำหนดชนิดเป็นข้อความส่วนหน้า %s จะแทนข้อความหลังแพตเทิร์น %S จะแทนข้อความเต็ม สำหรับนิพจน์เรกิวลาร์ คุณสามารถใช้ \\0 และ \\<ตัวเลข> ได้"
+
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "_คำสั่ง:"
+
+#: ../src/appfinder-preferences.glade.h:31
+msgid "Patte_rn:"
+msgstr "แ_พตเทิร์น:"
+
+#: ../src/appfinder-preferences.glade.h:32
+msgid "_Type:"
+msgstr "_ชนิด:"
+
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr "_บันทึกรายการที่ตรงลงในประวัติคำสั่ง"
+
+#: ../src/appfinder-preferences.glade.h:34
+msgid "Custom _Actions"
+msgstr "การ_กระทำกำหนดเอง"
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find and launch applications installed on your system"
+msgstr "ค้นหาและเรียกทำงานโปรแกรมที่ติดตั้งอยู่ในระบบของคุณ"
+
+#: ../data/xfce4-run.desktop.in.h:1
+msgid "Run Program..."
+msgstr "เรียกโปรแกรม..."
+
+#: ../data/xfce4-run.desktop.in.h:2
+msgid "Run a program"
+msgstr "เรียกโปรแกรม"
