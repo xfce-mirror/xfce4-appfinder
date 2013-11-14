@@ -1,0 +1,315 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Puretech <terjemah.puretech@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-29 00:30+0200\n"
+"PO-Revision-Date: 2013-11-14 03:31+0000\n"
+"Last-Translator: Puretech <terjemah.puretech@gmail.com>\n"
+"Language-Team: Malay (http://www.transifex.com/projects/p/xfce/language/ms/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ms\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../src/appfinder-category-model.c:146
+msgid "All Applications"
+msgstr "Semua Aplikasi"
+
+#: ../src/appfinder-model.c:575
+msgid "Name"
+msgstr "Nama"
+
+#: ../src/appfinder-model.c:576
+msgid "Comment"
+msgstr "Komen"
+
+#: ../src/appfinder-model.c:577
+msgid "Command"
+msgstr "Arahan"
+
+#: ../src/appfinder-model.c:578
+msgid "Categories"
+msgstr "Kategori"
+
+#: ../src/appfinder-model.c:579
+msgid "Filename"
+msgstr "Namafail"
+
+#: ../src/appfinder-model.c:2100
+msgid "Application has no command"
+msgstr "Aplikasi tidak mempunyai arahan"
+
+#: ../src/appfinder-model.c:2519
+msgid "Commands History"
+msgstr "Sejarah Arahan"
+
+#: ../src/appfinder-model.c:2543
+msgid "Bookmarks"
+msgstr "Tanda buku"
+
+#: ../src/appfinder-preferences.c:219
+msgid "C_lear"
+msgstr "Kosongkan"
+
+#: ../src/appfinder-preferences.c:220
+msgid "This will permanently clear the custom command history."
+msgstr "Ini akan mengosongkan sejarah arahan tersuai selamanya."
+
+#: ../src/appfinder-preferences.c:221
+msgid "Are you sure you want to clear the command history?"
+msgstr "Anda pasti mahu mengosongkan sejarah arahan tersuai?"
+
+#: ../src/appfinder-preferences.c:331
+msgid "The custom action will be deleted permanently."
+msgstr "Tindakan tersuai akan dipadam selamanya."
+
+#: ../src/appfinder-preferences.c:332
+#, c-format
+msgid "Are you sure you want to delete pattern \"%s\"?"
+msgstr "Adakah anda pasti mahu memadam corak \"%s\"?"
+
+#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
+#: ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr "Pencari Aplikasi"
+
+#: ../src/appfinder-window.c:289
+msgid "Toggle view mode"
+msgstr "Toggle mod paparan"
+
+#: ../src/appfinder-window.c:394
+msgid "La_unch"
+msgstr "Lancar"
+
+#: ../src/appfinder-window.c:880
+msgid "Failed to launch desktop item editor"
+msgstr "Gagal melancarkan penyunting item desktop"
+
+#: ../src/appfinder-window.c:906
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr "Ini akan membuang fail desktop tersuai dari direktori home anda selamanya."
+
+#: ../src/appfinder-window.c:907
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr "Anda pasti untuk kembalikan \"%s\"?"
+
+#: ../src/appfinder-window.c:917
+msgid "Failed to remove desktop file"
+msgstr "Gagal membuang fail desktop"
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: ../src/appfinder-window.c:950
+#, c-format
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr "Untuk memaparkan item yang anda buang secara manual fail desktop dari \"%s\" atau membuka fail dari direktori yang sama dan membuang baris \"%s\"."
+
+#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
+msgid "_Hide"
+msgstr "_Sembunyikan"
+
+#: ../src/appfinder-window.c:956
+#, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr "Anda pasti untuk sembunyi \"%s\"?"
+
+#: ../src/appfinder-window.c:1037
+msgid "Remove From Bookmarks"
+msgstr "Buang Dari Tanda Buku"
+
+#: ../src/appfinder-window.c:1037
+msgid "Add to Bookmarks"
+msgstr "Tambah kepada Tandabuku"
+
+#: ../src/main.c:64
+msgid "Start in collapsed mode"
+msgstr "Mulakan dalam mod lipatan"
+
+#: ../src/main.c:65
+msgid "Print version information and exit"
+msgstr "Papar maklumat versi dan keluar"
+
+#: ../src/main.c:66
+msgid "Replace the existing service"
+msgstr "Gantikan servis sedia ada"
+
+#: ../src/main.c:67
+msgid "Quit all instances"
+msgstr "Henti semua tika"
+
+#: ../src/main.c:68
+msgid "Do not try to use or become a D-Bus service"
+msgstr "Jangan cuba mengguna atau menjadi servis D-Bus"
+
+#: ../src/main.c:224
+#, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr "Taip \"%s --help\" untuk penggunaan."
+
+#: ../src/main.c:235
+msgid "The Xfce development team. All rights reserved."
+msgstr "Pasukan pembangunan Xfce. Semua hak cipta terpelihara."
+
+#: ../src/main.c:236
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr "Sila laporkan pepijat ke <%s>."
+
+#: ../src/appfinder-preferences.glade.h:1
+msgid "Prefix"
+msgstr "Awalan"
+
+#: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr "Regular Expression"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "Sangat Kecil"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "Lebih kecil"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "Kecil"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "Biasa"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "Besar"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "Lebih besar"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "Sangat Besar"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "Ingat pilihan kategori terakhir"
+
+#: ../src/appfinder-preferences.glade.h:12
+msgid "Always c_enter the window"
+msgstr "Sentiasa tengah pada tetingkap"
+
+#: ../src/appfinder-preferences.glade.h:13
+msgid "Center the window on startup."
+msgstr "Tengah pada tetingkap pada permulaan."
+
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
+msgstr "Terus jalankan tika dalam latar belakang"
+
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "Daripada tutup aplikasi apabila ttingkap terakhir ditutup, terus jalankan tika untuk mencepatkan pembukaan tetingkap baharu. Anda mungkin mahu lumpuhkannya untuk mengurangkan penggunaan memori."
+
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Behaviour"
+msgstr "Peri laku"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr "Papar item sebagai ikon"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr "Teks _disisi ikon"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "Saiz ikon ite_m:"
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr "Saiz ikon kateg_ori:"
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "Penampilan"
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr "Kosongkan Sejarah Arahan Tersuai"
+
+#: ../src/appfinder-preferences.glade.h:23
+msgid "History"
+msgstr "Sejarah"
+
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "_Am"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "Corak"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "Tambah tindakan tersuai baharu."
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "Buang tindakan dipilih pada masa ini."
+
+#: ../src/appfinder-preferences.glade.h:29
+#, no-c-format
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr "Jika jenis ditetapkan ke awalan, %s akan ditukar dengan rentetan selepas corak, %S dengan kemasukan teks lengkap. Untuk regular expression anda boelh menggunakan \\0 dan \\<num>."
+
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "Arahan:"
+
+#: ../src/appfinder-preferences.glade.h:31
+msgid "Patte_rn:"
+msgstr "Corak:"
+
+#: ../src/appfinder-preferences.glade.h:32
+msgid "_Type:"
+msgstr "_Jenis:"
+
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr "_Simpan yang sepadan dalam sejarah arahan"
+
+#: ../src/appfinder-preferences.glade.h:34
+msgid "Custom _Actions"
+msgstr "Tind_akan Tersuai"
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find and launch applications installed on your system"
+msgstr "Cari dan lancar aplikasi dipasang pada sistem anda"
+
+#: ../data/xfce4-run.desktop.in.h:1
+msgid "Run Program..."
+msgstr "Jalan Program..."
+
+#: ../data/xfce4-run.desktop.in.h:2
+msgid "Run a program"
+msgstr "Jalankan program"
