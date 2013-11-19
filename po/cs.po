@@ -1,54 +1,52 @@
-# Czech translations for xfce4-appfinder package.
-# Copyright (C) 2004-2005 Eduard Roccatello.
-# This file is distributed under the same license as the xfce4-appfinder package.
-# Alois Nespor <Alois.Nespor@seznam.cz>, 2004.
-# Michal Várady <miko.vaji@gmail.com>, 2006-2012.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Alois Nespor <Alois.Nespor@seznam.cz>, 2004
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-15 11:09+0000\n"
-"PO-Revision-Date: 2012-03-02 17:56+0100\n"
-"Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
-"Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2013-07-02 23:08+0200\n"
+"PO-Revision-Date: 2013-11-19 14:53+0000\n"
+"Last-Translator: Nick <nick@xfce.org>\n"
+"Language-Team: Czech (http://www.transifex.com/projects/p/xfce/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
-"X-Poedit-Language: Czech\n"
-"X-Poedit-Country: CZECH REPUBLIC\n"
-"X-Generator: KBabel 1.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "Všechny aplikace"
 
-#: ../src/appfinder-model.c:545
+#: ../src/appfinder-model.c:549
 msgid "Name"
 msgstr "Název"
 
-#: ../src/appfinder-model.c:546
+#: ../src/appfinder-model.c:550
 msgid "Comment"
 msgstr "Komentář"
 
-#: ../src/appfinder-model.c:547
+#: ../src/appfinder-model.c:551
 msgid "Command"
 msgstr "Příkaz"
 
-#: ../src/appfinder-model.c:548
+#: ../src/appfinder-model.c:552
 msgid "Categories"
 msgstr "Kategorie"
 
-#: ../src/appfinder-model.c:549
+#: ../src/appfinder-model.c:553
 msgid "Filename"
 msgstr "Název souboru"
 
-#: ../src/appfinder-model.c:1825
+#: ../src/appfinder-model.c:1833
 msgid "Application has no command"
 msgstr "Aplikace nemá žádný příkaz"
 
-#: ../src/appfinder-model.c:2149
+#: ../src/appfinder-model.c:2157
 msgid "Commands History"
 msgstr "Historie příkazů"
 
@@ -73,56 +71,53 @@ msgstr "Vlastní akce bude trvale smazána."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Opravdu chcete vymazat vzorek \"%s\"?"
 
-#: ../src/appfinder-window.c:219 ../src/main.c:446
-#: ../src/appfinder-preferences.glade.h:4
+#: ../src/appfinder-window.c:220 ../src/main.c:446
+#: ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Vyhledávač aplikací"
 
-#: ../src/appfinder-window.c:271
+#: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
 msgstr "Přepnout režim pohledu"
 
-#: ../src/appfinder-window.c:363
+#: ../src/appfinder-window.c:364
 msgid "La_unch"
 msgstr "_Spustit"
 
-#: ../src/appfinder-window.c:798
+#: ../src/appfinder-window.c:805
 msgid "Failed to launch desktop item editor"
 msgstr "Spuštění editoru položek plochy se nezdařilo."
 
-#: ../src/appfinder-window.c:824
+#: ../src/appfinder-window.c:831
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr ""
-"Tato akce trvale odebere upravený soubor plochy z vašeho domovského adresáře."
+msgstr "Tato akce trvale odebere upravený soubor plochy z vašeho domovského adresáře."
 
-#: ../src/appfinder-window.c:825
+#: ../src/appfinder-window.c:832
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Opravdu chcete obnovit \"%s\"?"
 
-#: ../src/appfinder-window.c:835
+#: ../src/appfinder-window.c:842
 msgid "Failed to remove desktop file"
 msgstr "Odebrání souboru plochy se nezdařilo"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:868
+#: ../src/appfinder-window.c:875
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
-"Skrytou položku odkryjte ručním odebráním souboru plochy z adresáře \"%s\" "
-"nebo otevřete soubor ve stejném adresáři a odeberte řádek \"%s\"."
+msgstr "Skrytou položku odkryjte ručním odebráním souboru plochy z adresáře \"%s\" nebo otevřete soubor ve stejném adresáři a odeberte řádek \"%s\"."
 
-#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
+#: ../src/appfinder-window.c:880 ../src/appfinder-window.c:972
 msgid "_Hide"
 msgstr "_Skrýt"
 
-#: ../src/appfinder-window.c:874
+#: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Opravdu chcete skrýt \"%s\"?"
@@ -156,159 +151,154 @@ msgstr "Vynucené ukončení"
 msgid "Unable to daemonize the process"
 msgstr "Tento proces nelze přepnout do režimu démon"
 
-#: ../src/main.c:522
+#: ../src/main.c:524
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Informace o použití získáte příkazem \"%s --help\"."
 
-#: ../src/main.c:533
+#: ../src/main.c:535
 msgid "The Xfce development team. All rights reserved."
 msgstr "Vývojářský tým prostředí Xfce. Všechna práva vyhrazena."
 
-#: ../src/main.c:534
+#: ../src/main.c:536
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Prosíme, abyste chyby nahlásili na adresu <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
-msgstr "Přidat novou vlastní akci."
+msgid "Prefix"
+msgstr "Předpona"
 
 #: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr "Regulární výraz"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "Velmi malý"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "Menší"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "Malý"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "Běžný"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "Velký"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "Větší"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "Velmi velký"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "Zapamatovat _si poslední vybranou kategorii"
+
+#: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
 msgstr "Vždy vy_středit okno"
 
-#: ../src/appfinder-preferences.glade.h:3
-msgid "Appearance"
-msgstr "Vzhled"
-
-#: ../src/appfinder-preferences.glade.h:5
-msgid "Behaviour"
-msgstr "Chování"
-
-#: ../src/appfinder-preferences.glade.h:6
-msgid "C_lear Custom Command History"
-msgstr "_Smazat historii vlastních příkazů"
-
-#: ../src/appfinder-preferences.glade.h:7
-msgid "Categ_ory icon size:"
-msgstr "Velik_ost ikony kategorie"
-
-#: ../src/appfinder-preferences.glade.h:8
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
 msgstr "Při startu vystředit okno."
 
-#: ../src/appfinder-preferences.glade.h:9
-msgid "Co_mmand:"
-msgstr "_Příkaz:"
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
+msgstr "Ponechat spuštěnou _instanci na pozadí"
 
-#: ../src/appfinder-preferences.glade.h:10
-msgid "Custom _Actions"
-msgstr "Vlastní _akce"
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "Ponechat spuštěnou instanci na pozadí namísto ukončení aplikace po uzavření jejího posledního okna z důvodu zrychlení otevírání nových oken. Tuto možnost zakažte, pokud chcete snížit spotřebu paměti."
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Behaviour"
+msgstr "Chování"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr "_Zobrazit položky jako ikony"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr "Text _vedle ikon"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "Veli_kost ikony položky:"
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr "Velik_ost ikony kategorie"
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "Vzhled"
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr "_Smazat historii vlastních příkazů"
+
+#: ../src/appfinder-preferences.glade.h:23
 msgid "History"
 msgstr "Historie"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "_Obecné"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "Vzorek"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "Přidat novou vlastní akci."
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "Smazat aktuálně vybranou akci."
+
+#: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
-"Pokud je typ nastaven na předponu, %s se nahradí řetězcem po vzorku a %S "
-"kompletním vstupním textem. Regulární výrazy použijte pomocí \\0 a \\<num>."
+msgstr "Pokud je typ nastaven na předponu, %s se nahradí řetězcem po vzorku a %S kompletním vstupním textem. Regulární výrazy použijte pomocí \\0 a \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:14
-msgid ""
-"Instead of quitting the application when the last window is closed, keep a "
-"running instance to speed up opening new windows. You might want to disable "
-"this to reduce memory usage."
-msgstr ""
-"Ponechat spuštěnou instanci na pozadí namísto ukončení aplikace po uzavření "
-"jejího posledního okna z důvodu zrychlení otevírání nových oken. Tuto "
-"možnost zakažte, pokud chcete snížit spotřebu paměti."
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "_Příkaz:"
 
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Ite_m icon size:"
-msgstr "Veli_kost ikony položky:"
-
-#: ../src/appfinder-preferences.glade.h:16
-msgid "Keep running _instance in the background"
-msgstr "Ponechat spuštěnou _instanci na pozadí"
-
-#: ../src/appfinder-preferences.glade.h:17
-msgid "Large"
-msgstr "Velký"
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "Larger"
-msgstr "Větší"
-
-#: ../src/appfinder-preferences.glade.h:19
-msgid "Normal"
-msgstr "Běžný"
-
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
 msgstr "V_zorek:"
 
-#: ../src/appfinder-preferences.glade.h:21
-msgid "Pattern"
-msgstr "Vzorek"
-
-#: ../src/appfinder-preferences.glade.h:22
-msgid "Prefix"
-msgstr "Předpona"
-
-#: ../src/appfinder-preferences.glade.h:23
-msgid "Regular Expression"
-msgstr "Regulární výraz"
-
-#: ../src/appfinder-preferences.glade.h:24
-msgid "Remember last _selected category"
-msgstr "Zapamatovat _si poslední vybranou kategorii"
-
-#: ../src/appfinder-preferences.glade.h:25
-msgid "Remove the currently selected action."
-msgstr "Smazat aktuálně vybranou akci."
-
-#: ../src/appfinder-preferences.glade.h:26
-msgid "Small"
-msgstr "Malý"
-
-#: ../src/appfinder-preferences.glade.h:27
-msgid "Smaller"
-msgstr "Menší"
-
-#: ../src/appfinder-preferences.glade.h:28
-msgid "Text besi_de icons"
-msgstr "Text _vedle ikon"
-
-#: ../src/appfinder-preferences.glade.h:29
-msgid "Very Large"
-msgstr "Velmi velký"
-
-#: ../src/appfinder-preferences.glade.h:30
-msgid "Very Small"
-msgstr "Velmi malý"
-
-#: ../src/appfinder-preferences.glade.h:31
-msgid "_General"
-msgstr "_Obecné"
-
 #: ../src/appfinder-preferences.glade.h:32
-msgid "_Save match in command history"
-msgstr "_Uložit shodu v historii příkazů"
-
-#: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
 msgstr "_Typ:"
 
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr "_Uložit shodu v historii příkazů"
+
 #: ../src/appfinder-preferences.glade.h:34
-msgid "_View items as icons"
-msgstr "_Zobrazit položky jako ikony"
+msgid "Custom _Actions"
+msgstr "Vlastní _akce"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -321,111 +311,3 @@ msgstr "Spustit program..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Spustit program"
-
-#~ msgid "[MENUFILE]"
-#~ msgstr "[SOUBORNABÍDKY]"
-
-#~ msgid "Unable to initialize GTK+."
-#~ msgstr "Nelze inicializovat GTK+."
-
-#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
-#~ msgstr "Nepodařilo se připojit ke službě xfconf. Důvod: %s"
-
-#~ msgid "Failed to connect to xfconf daemon."
-#~ msgstr "Nepodařilo se připojit ke službě xfconf."
-
-#~ msgid "Search"
-#~ msgstr "Hledat"
-
-#~ msgid "C_lose after launch"
-#~ msgstr "Za_vřít po spuštění"
-
-#~ msgid "Could not load menu from %s"
-#~ msgstr "Nelze načíst nabídku ze souboru %s"
-
-#~ msgid "All"
-#~ msgstr "Vše"
-
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "Nelze spustit příkaz \"%s\"."
-
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>Kategorie:</b> %s"
-
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>Příkaz:</b> %s"
-
-#~ msgid "Could not load system menu"
-#~ msgstr "Nelze načíst systémovou nabídku"
-
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "Nelze spustit aplikaci %s. Důvod: %s"
-
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "Nelze načíst nabídku ze souboru %s. Důvod: %s"
-
-#~ msgid "Filter"
-#~ msgstr "Filtr"
-
-#~ msgid "Find and launch applications installed on the system"
-#~ msgstr "Najít aplikace nainstalované v tomto systému."
-
-#~ msgid "Find applications installed on the system."
-#~ msgstr "Najít aplikace nainstalované v tomto systému."
-
-#~ msgid "Copyright (c) 2008"
-#~ msgstr "Copyright (c) 2008"
-
-#~ msgid "Xfce 4 Appfinder"
-#~ msgstr "Vyhledávač aplikací pro Xfce 4"
-
-#~ msgid "<b>Name</b>"
-#~ msgstr "<b>Název</b>"
-
-#~ msgid "N/A"
-#~ msgstr "nedostupný"
-
-#~ msgid "<b>Comment</b>"
-#~ msgstr "<b>Komentář</b>"
-
-#~ msgid "Show Categories"
-#~ msgstr "Zobrazit kategorie"
-
-#~ msgid "Core"
-#~ msgstr "Hlavní"
-
-#~ msgid "Development"
-#~ msgstr "Vývojové nástroje"
-
-#~ msgid "Office"
-#~ msgstr "Kancelář"
-
-#~ msgid "Graphics"
-#~ msgstr "Grafika"
-
-#~ msgid "Network"
-#~ msgstr "Síť"
-
-#~ msgid "AudioVideo"
-#~ msgstr "Hudba a Film"
-
-#~ msgid "Game"
-#~ msgstr "Hry"
-
-#~ msgid "Education"
-#~ msgstr "Vzdělání"
-
-#~ msgid "System"
-#~ msgstr "Systém"
-
-#~ msgid "Utility"
-#~ msgstr "Nástroje"
-
-#~ msgid "No items available"
-#~ msgstr "Žádné položky nejsou k dispozici"
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "Shoda s hledaným textem nebyla nalezena "
-
-#~ msgid "Appfinder"
-#~ msgstr "Appfinder"
