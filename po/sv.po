@@ -1,217 +1,283 @@
-# Swedish translations for xfce4-appfinder package.
-# Copyright (C) 2004-2009 Eduard Roccatello.
-# This file is distributed under the same license as the xfce4-appfinder package.
-# Aron Stansvik <elvstone@gmail.com>, 2005.
-# Alexander Toresson <alexander.toresson@gmail.com>, 2005.
-# Jens Hagerman <godhet@gmail.com>, 2006.
-# Daniel Nylander <po@danielnylander.se>, 2008, 2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Alexander Toresson <alexander.toresson@gmail.com>, 2005
+# Aron Stansvik <elvstone@gmail.com>, 2005
+# Daniel Nylander <po@danielnylander.se>, 2008-2009
+# Jens Hagerman <godhet@gmail.com>, 2006
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-24 19:15+0000\n"
-"PO-Revision-Date: 2010-10-17 17:10+0100\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
-"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"POT-Creation-Date: 2013-07-29 00:30+0200\n"
+"PO-Revision-Date: 2013-11-19 11:15+0000\n"
+"Last-Translator: Xfce <transifex@xfce.org>\n"
+"Language-Team: Swedish (http://www.transifex.com/projects/p/xfce/language/sv/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/appfinder-category-model.c:146
-#, fuzzy
 msgid "All Applications"
-msgstr "Programlista"
+msgstr ""
 
-#: ../src/appfinder-model.c:545
+#: ../src/appfinder-model.c:575
 msgid "Name"
 msgstr "Namn"
 
-#: ../src/appfinder-model.c:546
+#: ../src/appfinder-model.c:576
 msgid "Comment"
 msgstr "Kommentar"
 
-#: ../src/appfinder-model.c:547
+#: ../src/appfinder-model.c:577
 msgid "Command"
 msgstr "Kommando"
 
-#: ../src/appfinder-model.c:548
+#: ../src/appfinder-model.c:578
 msgid "Categories"
 msgstr "Kategorier"
 
-#: ../src/appfinder-model.c:549
-#, fuzzy
+#: ../src/appfinder-model.c:579
 msgid "Filename"
-msgstr "Filhanterare"
+msgstr ""
 
-#: ../src/appfinder-model.c:1825
-#, fuzzy
+#: ../src/appfinder-model.c:2100
 msgid "Application has no command"
-msgstr "Programlista"
+msgstr ""
 
-#: ../src/appfinder-model.c:2149
+#: ../src/appfinder-model.c:2519
 msgid "Commands History"
 msgstr "Kommando historia"
 
-#: ../src/appfinder-preferences.c:221
+#: ../src/appfinder-model.c:2543
+msgid "Bookmarks"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:219
 msgid "C_lear"
 msgstr "Rensa"
 
-#: ../src/appfinder-preferences.c:222
+#: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
 msgstr "Detta kommer att permanent rensa din kommando historia"
 
-#: ../src/appfinder-preferences.c:223
+#: ../src/appfinder-preferences.c:221
 msgid "Are you sure you want to clear the command history?"
 msgstr "Är du säker att du vill rensa din kommando historia?"
 
-#: ../src/appfinder-preferences.c:333
+#: ../src/appfinder-preferences.c:331
 msgid "The custom action will be deleted permanently."
 msgstr ""
 
-#: ../src/appfinder-preferences.c:334
+#: ../src/appfinder-preferences.c:332
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Är du säker att du vill radera mönster \"%s\"?"
 
-#: ../src/appfinder-window.c:216 ../src/main.c:446
-#: ../src/appfinder-preferences.glade.h:4
+#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Programlista"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
 msgstr "Växla vy"
 
-#: ../src/appfinder-window.c:763
+#: ../src/appfinder-window.c:394
+msgid "La_unch"
+msgstr ""
+
+#: ../src/appfinder-window.c:880
 msgid "Failed to launch desktop item editor"
 msgstr "Misslyckades med att starta skrivbords objekt redigerare"
 
-#: ../src/appfinder-window.c:789
+#: ../src/appfinder-window.c:906
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Detta kommer att permanent radera din skrivbords fil från din hem mapp."
 
-#: ../src/appfinder-window.c:790
+#: ../src/appfinder-window.c:907
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Är du säker att du vill återställa \"%s\"?"
 
-#: ../src/appfinder-window.c:800
+#: ../src/appfinder-window.c:917
 msgid "Failed to remove desktop file"
 msgstr "Misslyckades med att radera skrivbords fil"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:833
+#: ../src/appfinder-window.c:950
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "För att åter visa objektet måste du manuellt radera skrivbords filen från \"%s\" eller öppna filen i samma mapp och radera linjen \"%s\"."
 
-#: ../src/appfinder-window.c:838 ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
 msgstr "dölj"
 
-#: ../src/appfinder-window.c:839
+#: ../src/appfinder-window.c:956
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Är du säker på att du vill dölja \"%s\"?"
 
-#: ../src/main.c:75
+#: ../src/appfinder-window.c:1037
+msgid "Remove From Bookmarks"
+msgstr ""
+
+#: ../src/appfinder-window.c:1037
+msgid "Add to Bookmarks"
+msgstr ""
+
+#: ../src/main.c:64
 msgid "Start in collapsed mode"
 msgstr "Starta i kollapsat läge"
 
-#: ../src/main.c:76
-#, fuzzy
+#: ../src/main.c:65
 msgid "Print version information and exit"
-msgstr "Versionsinformation"
+msgstr ""
 
-#: ../src/main.c:77
+#: ../src/main.c:66
 msgid "Replace the existing service"
 msgstr "Ersätt alla existerande tjänster"
 
-#: ../src/main.c:78
+#: ../src/main.c:67
 msgid "Quit all instances"
 msgstr "Avsluta alla förekomster"
 
-#: ../src/main.c:79
+#: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Försök inte att använda eller bli en D-Bus tjänst"
 
-#. close all windows and quit
-#: ../src/main.c:244
-msgid "Forced to quit"
-msgstr "Tvingad att avsluta"
-
-#: ../src/main.c:448
-msgid "Unable to daemonize the process"
+#: ../src/main.c:224
+#, c-format
+msgid "Type \"%s --help\" for usage."
 msgstr ""
 
-#: ../src/main.c:522
-#, fuzzy, c-format
-msgid "Type \"%s --help\" for usage."
-msgstr "Ange \"%s --help\" för användningsinformation."
-
-#: ../src/main.c:533
+#: ../src/main.c:235
 msgid "The Xfce development team. All rights reserved."
 msgstr "The Xfce development team. Alla rättigheter är reserverade."
 
-#: ../src/main.c:534
+#: ../src/main.c:236
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr ""
-"Rapportera fel till <%s>.\n"
-"Skicka synpunkter på översättningen till\n"
-"<tp-sv@listor.tp-sv.se>."
+msgstr "Rapportera fel till <%s>.\nSkicka synpunkter på översättningen till\n<tp-sv@listor.tp-sv.se>."
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
-msgstr ""
+msgid "Prefix"
+msgstr "Prefix"
 
 #: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr "Reguljärt uttryck"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "Mycket Liten"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "Mindre"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "Liten"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "Normal"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "Stor"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "Större"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "Mycket Stor"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "Kom ihåg _senaste valda kategori"
+
+#: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
 msgstr "C_entrera alltid fönstret"
 
-#: ../src/appfinder-preferences.glade.h:3
-msgid "Appearance"
-msgstr "Utseende"
-
-#: ../src/appfinder-preferences.glade.h:5
-msgid "Behaviour"
-msgstr "Beteende"
-
-#: ../src/appfinder-preferences.glade.h:6
-msgid "C_lear Custom Command History"
-msgstr "Rensa kommando historia"
-
-#: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
-msgid "Categ_ory icon size:"
-msgstr "Kategorier"
-
-#: ../src/appfinder-preferences.glade.h:8
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
 msgstr "C_entrera fönstret vid uppstart"
 
-#: ../src/appfinder-preferences.glade.h:9
-msgid "Co_mmand:"
-msgstr "Ko_mmando"
-
-#: ../src/appfinder-preferences.glade.h:10
-msgid "Custom _Actions"
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Behaviour"
+msgstr "Beteende"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr "_Visa objekt som ikoner"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr "Text bredvid ikoner"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "Objekt ikon storlek"
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "Utseende"
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr "Rensa kommando historia"
+
+#: ../src/appfinder-preferences.glade.h:23
 msgid "History"
 msgstr "Historia"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "_Generellt"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "Mönster"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -219,203 +285,34 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:14
-msgid ""
-"Instead of quitting the application when the last window is closed, keep a "
-"running instance to speed up opening new windows. You might want to disable "
-"this to reduce memory usage."
-msgstr ""
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "Ko_mmando"
 
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Ite_m icon size:"
-msgstr "Objekt ikon storlek"
-
-#: ../src/appfinder-preferences.glade.h:16
-msgid "Keep running _instance in the background"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:17
-msgid "Large"
-msgstr "Stor"
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "Larger"
-msgstr "Större"
-
-#: ../src/appfinder-preferences.glade.h:19
-msgid "Normal"
-msgstr "Normal"
-
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
 msgstr "Mönste_r:"
 
-#: ../src/appfinder-preferences.glade.h:21
-msgid "Pattern"
-msgstr "Mönster"
-
-#: ../src/appfinder-preferences.glade.h:22
-msgid "Prefix"
-msgstr "Prefix"
-
-#: ../src/appfinder-preferences.glade.h:23
-msgid "Regular Expression"
-msgstr "Reguljärt uttryck"
-
-#: ../src/appfinder-preferences.glade.h:24
-msgid "Remember last _selected category"
-msgstr "Kom ihåg _senaste valda kategori"
-
-#: ../src/appfinder-preferences.glade.h:25
-msgid "Remove the currently selected action."
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:26
-msgid "Small"
-msgstr "Liten"
-
-#: ../src/appfinder-preferences.glade.h:27
-msgid "Smaller"
-msgstr "Mindre"
-
-#: ../src/appfinder-preferences.glade.h:28
-msgid "Text besi_de icons"
-msgstr "Text bredvid ikoner"
-
-#: ../src/appfinder-preferences.glade.h:29
-msgid "Very Large"
-msgstr "Mycket Stor"
-
-#: ../src/appfinder-preferences.glade.h:30
-msgid "Very Small"
-msgstr "Mycket Liten"
-
-#: ../src/appfinder-preferences.glade.h:31
-msgid "_General"
-msgstr "_Generellt"
-
 #: ../src/appfinder-preferences.glade.h:32
-#, fuzzy
-msgid "_Save match in command history"
-msgstr "_Spara matchning i kommando historien"
-
-#: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
 msgstr "_Typ"
 
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr ""
+
 #: ../src/appfinder-preferences.glade.h:34
-msgid "_View items as icons"
-msgstr "_Visa objekt som ikoner"
+msgid "Custom _Actions"
+msgstr ""
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Sök och starta program som är installerade på din dator"
 
 #: ../data/xfce4-run.desktop.in.h:1
-#, fuzzy
 msgid "Run Program..."
-msgstr "Kör programmet"
+msgstr ""
 
 #: ../data/xfce4-run.desktop.in.h:2
-#, fuzzy
 msgid "Run a program"
-msgstr "Kör programmet"
-
-#~ msgid "[MENUFILE]"
-#~ msgstr "[MENYFIL]"
-
-#~ msgid "Unable to initialize GTK+."
-#~ msgstr "Kunde inte initiera GTK+."
-
-#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
-#~ msgstr "Misslyckades med att ansluta till xfconf-demonen. Anledning: %s"
-
-#~ msgid "Failed to connect to xfconf daemon."
-#~ msgstr "Misslyckades med att ansluta till xfconf-demonen."
-
-#~ msgid "Search"
-#~ msgstr "Sök"
-
-#~ msgid "C_lose after launch"
-#~ msgstr "S_täng efter start"
-
-#~ msgid "Launch"
-#~ msgstr "Starta"
-
-#~ msgid "Could not load menu from %s"
-#~ msgstr "Kunde inte läsa in meny från %s"
-
-#~ msgid "All"
-#~ msgstr "Alla"
-
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "Misslyckades med att köra kommandot \"%s\"."
-
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>Kategorier:</b> %s"
-
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>Kommando:</b> %s"
-
-#~ msgid "Could not load system menu"
-#~ msgstr "Kunde inte läsa in systemmenyn"
-
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "Kunde inte starta programmet %s. Anledning: %s"
-
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "Kunde inte läsa in meny från %s. Anledning: %s"
-
-#~ msgid "Filter"
-#~ msgstr "Filter"
-
-#~ msgid "Xfce 4 Appfinder"
-#~ msgstr "Programlista"
-
-#~ msgid "<b>Name</b>"
-#~ msgstr "<b>Namn</b>"
-
-#~ msgid "N/A"
-#~ msgstr "Ej tillämplig"
-
-#~ msgid "Show Categories"
-#~ msgstr "Visa kategorier"
-
-#~ msgid "Core"
-#~ msgstr "Standard"
-
-#~ msgid "Development"
-#~ msgstr "Utveckling"
-
-#~ msgid "Office"
-#~ msgstr "Kontor"
-
-#~ msgid "Graphics"
-#~ msgstr "Grafik"
-
-#~ msgid "Network"
-#~ msgstr "Nätverk"
-
-#~ msgid "AudioVideo"
-#~ msgstr "Ljud och Bild"
-
-#~ msgid "Game"
-#~ msgstr "Spel"
-
-#~ msgid "Education"
-#~ msgstr "Utbildning"
-
-#~ msgid "System"
-#~ msgstr "System"
-
-#~ msgid "Utility"
-#~ msgstr "Verktyg"
-
-#~ msgid "No items available"
-#~ msgstr "Inga program i denna kategori"
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "Tyvärr, inga sökträffar."
-
-#~ msgid "Appfinder"
-#~ msgstr "Programlista"
+msgstr ""
