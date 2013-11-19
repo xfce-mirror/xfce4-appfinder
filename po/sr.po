@@ -1,50 +1,52 @@
-# This file is distributed under the same license as the xfce4-appfinder package.
-# salepetronije <salepetronije@gmail.com>, 2012.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# salepetronije <salepetronije@gmail.com>, 2012
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.6.0\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-19 01:24+0000\n"
-"PO-Revision-Date: 2012-06-06 18:49+0200\n"
-"Last-Translator: salepetronije <salepetronije@gmail.com>\n"
-"Language-Team: српски <xfce-i18n@xfce.org>\n"
-"Language: sr\n"
+"POT-Creation-Date: 2013-07-02 23:08+0200\n"
+"PO-Revision-Date: 2013-11-19 14:53+0000\n"
+"Last-Translator: Nick <nick@xfce.org>\n"
+"Language-Team: Serbian (http://www.transifex.com/projects/p/xfce/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "Сви програми"
 
-#: ../src/appfinder-model.c:545
+#: ../src/appfinder-model.c:549
 msgid "Name"
 msgstr "Назив"
 
-#: ../src/appfinder-model.c:546
+#: ../src/appfinder-model.c:550
 msgid "Comment"
 msgstr "Напомена"
 
-#: ../src/appfinder-model.c:547
+#: ../src/appfinder-model.c:551
 msgid "Command"
 msgstr "Наредба"
 
-#: ../src/appfinder-model.c:548
+#: ../src/appfinder-model.c:552
 msgid "Categories"
 msgstr "Категорије"
 
-#: ../src/appfinder-model.c:549
+#: ../src/appfinder-model.c:553
 msgid "Filename"
 msgstr "Назив датотеке"
 
-#: ../src/appfinder-model.c:1825
+#: ../src/appfinder-model.c:1833
 msgid "Application has no command"
 msgstr "Програм нема наредбу"
 
-#: ../src/appfinder-model.c:2149
+#: ../src/appfinder-model.c:2157
 msgid "Commands History"
 msgstr "Историјат наредби"
 
@@ -69,58 +71,53 @@ msgstr "Произвољна радња ће бити трајно избрис�
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Да ли сте сигурни да желите избрисати образац „%s“?"
 
-#: ../src/appfinder-window.c:219 ../src/main.c:446
-#: ../src/appfinder-preferences.glade.h:4
+#: ../src/appfinder-window.c:220 ../src/main.c:446
+#: ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Проналазач програма"
 
-#: ../src/appfinder-window.c:271
+#: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
 msgstr "Промени начин прегледа"
 
-#: ../src/appfinder-window.c:363
+#: ../src/appfinder-window.c:364
 msgid "La_unch"
 msgstr "По_крени"
 
-#: ../src/appfinder-window.c:798
+#: ../src/appfinder-window.c:805
 msgid "Failed to launch desktop item editor"
 msgstr "Нисам успео да покренем уређивача ставки радне површи"
 
-#: ../src/appfinder-window.c:824
+#: ../src/appfinder-window.c:831
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr ""
-"Ово ће трајно уклонити прилагођену датотеку покретача програма из ваше личне "
-"фасцикле."
+msgstr "Ово ће трајно уклонити прилагођену датотеку покретача програма из ваше личне фасцикле."
 
-#: ../src/appfinder-window.c:825
+#: ../src/appfinder-window.c:832
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Да ли сте сигурни да желите да повратите „%s“?"
 
-#: ../src/appfinder-window.c:835
+#: ../src/appfinder-window.c:842
 msgid "Failed to remove desktop file"
 msgstr "Нисам успео да уклоним датотеку покретача програма"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:868
+#: ../src/appfinder-window.c:875
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
-"Да опет прикажете ставку, морате ручно да уклоните датотеку покретача "
-"програма из „%s“ или да отворите датотеку у истом директоријуму и да "
-"уклоните ред „%s“."
+msgstr "Да опет прикажете ставку, морате ручно да уклоните датотеку покретача програма из „%s“ или да отворите датотеку у истом директоријуму и да уклоните ред „%s“."
 
-#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
+#: ../src/appfinder-window.c:880 ../src/appfinder-window.c:972
 msgid "_Hide"
 msgstr "_Сакриј"
 
-#: ../src/appfinder-window.c:874
+#: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Да ли сте сигурни да желите да сакријете „%s“?"
@@ -154,160 +151,154 @@ msgstr "Присиљен на затварање"
 msgid "Unable to daemonize the process"
 msgstr "Не може да демонизује процес"
 
-#: ../src/main.c:522
+#: ../src/main.c:524
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Упишите „%s --help“ за коришћење."
 
-#: ../src/main.c:533
+#: ../src/main.c:535
 msgid "The Xfce development team. All rights reserved."
 msgstr "ИксФЦЕ развојна дружина. Сва права су задржана."
 
-#: ../src/main.c:534
+#: ../src/main.c:536
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Молим, пријавите грешке на <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
-msgstr "Додајте нову произвољну радњу."
+msgid "Prefix"
+msgstr "Префикс"
 
 #: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr "Регуларан израз"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "Врло мале"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "Малецне"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "Мале"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "Нормалне"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "Велике"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "Највеће"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "Врло велике"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "Запамти последњу _обележену врсту"
+
+#: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
 msgstr "Увек _постави прозор на средину"
 
-#: ../src/appfinder-preferences.glade.h:3
-msgid "Appearance"
-msgstr "Изглед"
-
-#: ../src/appfinder-preferences.glade.h:5
-msgid "Behaviour"
-msgstr "Понашање"
-
-#: ../src/appfinder-preferences.glade.h:6
-msgid "C_lear Custom Command History"
-msgstr "О_бриши историјат прилагођених наредби"
-
-#: ../src/appfinder-preferences.glade.h:7
-msgid "Categ_ory icon size:"
-msgstr "Величина врс_те иконица:"
-
-#: ../src/appfinder-preferences.glade.h:8
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
 msgstr "При покретању постави прозор на средину."
 
-#: ../src/appfinder-preferences.glade.h:9
-msgid "Co_mmand:"
-msgstr "На_редба:"
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
+msgstr "Држи тренутно покренути _примерак у позадини"
 
-#: ../src/appfinder-preferences.glade.h:10
-msgid "Custom _Actions"
-msgstr "Прилагођене _радње"
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "Уместо заустављања програма по затварању свих прозора, држи покренут примерак да би убрзао отварање нових прозора. Можда бисте желели да искључите ово да бисте смањили заузеће меморије."
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Behaviour"
+msgstr "Понашање"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr "_Прегледај ставке као иконице"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr "Текст пор_ед иконица"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "Величина иконице став_ке:"
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr "Величина врс_те иконица:"
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "Изглед"
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr "О_бриши историјат прилагођених наредби"
+
+#: ../src/appfinder-preferences.glade.h:23
 msgid "History"
 msgstr "Историјат"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "_Опште"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "Образац"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "Додајте нову произвољну радњу."
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "Уклони тренутно обележену радњу."
+
+#: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
-"Ако је врста подешена на префикс, %s ће бити замењено ниском након обрасца, "
-"%S са читавим текстом уноса. За регуларне изразе можете да користите \\0 и "
-"\\<num>."
+msgstr "Ако је врста подешена на префикс, %s ће бити замењено ниском након обрасца, %S са читавим текстом уноса. За регуларне изразе можете да користите \\0 и \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:14
-msgid ""
-"Instead of quitting the application when the last window is closed, keep a "
-"running instance to speed up opening new windows. You might want to disable "
-"this to reduce memory usage."
-msgstr ""
-"Уместо заустављања програма по затварању свих прозора, држи покренут "
-"примерак да би убрзао отварање нових прозора. Можда бисте желели да "
-"искључите ово да бисте смањили заузеће меморије."
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "На_редба:"
 
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Ite_m icon size:"
-msgstr "Величина иконице став_ке:"
-
-#: ../src/appfinder-preferences.glade.h:16
-msgid "Keep running _instance in the background"
-msgstr "Држи тренутно покренути _примерак у позадини"
-
-#: ../src/appfinder-preferences.glade.h:17
-msgid "Large"
-msgstr "Велике"
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "Larger"
-msgstr "Највеће"
-
-#: ../src/appfinder-preferences.glade.h:19
-msgid "Normal"
-msgstr "Нормалне"
-
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
 msgstr "Образ_ац:"
 
-#: ../src/appfinder-preferences.glade.h:21
-msgid "Pattern"
-msgstr "Образац"
-
-#: ../src/appfinder-preferences.glade.h:22
-msgid "Prefix"
-msgstr "Префикс"
-
-#: ../src/appfinder-preferences.glade.h:23
-msgid "Regular Expression"
-msgstr "Регуларан израз"
-
-#: ../src/appfinder-preferences.glade.h:24
-msgid "Remember last _selected category"
-msgstr "Запамти последњу _обележену врсту"
-
-#: ../src/appfinder-preferences.glade.h:25
-msgid "Remove the currently selected action."
-msgstr "Уклони тренутно обележену радњу."
-
-#: ../src/appfinder-preferences.glade.h:26
-msgid "Small"
-msgstr "Мале"
-
-#: ../src/appfinder-preferences.glade.h:27
-msgid "Smaller"
-msgstr "Малецне"
-
-#: ../src/appfinder-preferences.glade.h:28
-msgid "Text besi_de icons"
-msgstr "Текст пор_ед иконица"
-
-#: ../src/appfinder-preferences.glade.h:29
-msgid "Very Large"
-msgstr "Врло велике"
-
-#: ../src/appfinder-preferences.glade.h:30
-msgid "Very Small"
-msgstr "Врло мале"
-
-#: ../src/appfinder-preferences.glade.h:31
-msgid "_General"
-msgstr "_Опште"
-
 #: ../src/appfinder-preferences.glade.h:32
-msgid "_Save match in command history"
-msgstr "_Сачувај поклапање у историјату наредби"
-
-#: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
 msgstr "_Врста:"
 
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr "_Сачувај поклапање у историјату наредби"
+
 #: ../src/appfinder-preferences.glade.h:34
-msgid "_View items as icons"
-msgstr "_Прегледај ставке као иконице"
+msgid "Custom _Actions"
+msgstr "Прилагођене _радње"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -320,108 +311,3 @@ msgstr "Покрени програм..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Покрени програм"
-
-#~ msgid "[MENUFILE]"
-#~ msgstr "[MENUFILE]"
-
-#~ msgid "Unable to initialize GTK+."
-#~ msgstr "Unable to initialise GTK+."
-
-#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
-#~ msgstr "Failed to connect to xfconf daemon. Reason: %s"
-
-#~ msgid "Failed to connect to xfconf daemon."
-#~ msgstr "Failed to connect to xfconf daemon."
-
-#~ msgid "Search"
-#~ msgstr "Search"
-
-#~ msgid "C_lose after launch"
-#~ msgstr "C_lose after launch"
-
-#~ msgid "Could not load menu from %s"
-#~ msgstr "Could not load menu from %s"
-
-#~ msgid "All"
-#~ msgstr "All"
-
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "Failed to execute command \"%s\"."
-
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>Categories:</b> %s"
-
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>Command:</b> %s"
-
-#~ msgid "Could not load system menu"
-#~ msgstr "Could not load system menu"
-
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "Could not execute application %s. Reason: %s"
-
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "Could not load menu from %s. Reason: %s"
-
-#~ msgid "Filter"
-#~ msgstr "Filter"
-
-#~ msgid "Find and launch applications installed on the system"
-#~ msgstr "Find applications installed on the system."
-
-#~ msgid "Find applications installed on the system."
-#~ msgstr "Find applications installed on the system."
-
-#~ msgid "Copyright (c) 2008"
-#~ msgstr "Copyright (c) 2008"
-
-#~ msgid "Xfce 4 Appfinder"
-#~ msgstr "Xfce 4 Appfinder"
-
-#~ msgid "<b>Name</b>"
-#~ msgstr "<b>Name</b>"
-
-#~ msgid "N/A"
-#~ msgstr "N/A"
-
-#~ msgid "Show Categories"
-#~ msgstr "Show Categories"
-
-#~ msgid "Core"
-#~ msgstr "Core"
-
-#~ msgid "Development"
-#~ msgstr "Development"
-
-#~ msgid "Office"
-#~ msgstr "Office"
-
-#~ msgid "Graphics"
-#~ msgstr "Graphics"
-
-#~ msgid "Network"
-#~ msgstr "Network"
-
-#~ msgid "AudioVideo"
-#~ msgstr "AudioVideo"
-
-#~ msgid "Game"
-#~ msgstr "Game"
-
-#~ msgid "Education"
-#~ msgstr "Education"
-
-#~ msgid "System"
-#~ msgstr "System"
-
-#~ msgid "Utility"
-#~ msgstr "Utility"
-
-#~ msgid "No items available"
-#~ msgstr "No items available"
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "Sorry, no match for searched text."
-
-#~ msgid "Appfinder"
-#~ msgstr "Appfinder"
