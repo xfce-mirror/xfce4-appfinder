@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-02 22:40+0200\n"
-"PO-Revision-Date: 2013-07-11 06:30+0000\n"
-"Last-Translator: kawichi\n"
+"POT-Creation-Date: 2013-07-29 00:30+0200\n"
+"PO-Revision-Date: 2013-11-19 11:15+0000\n"
+"Last-Translator: Xfce <transifex@xfce.org>\n"
 "Language-Team: Uighur (http://www.transifex.com/projects/p/xfce/language/ug/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,33 +21,37 @@ msgstr ""
 msgid "All Applications"
 msgstr "بارلىق پروگراممىلار"
 
-#: ../src/appfinder-model.c:549
+#: ../src/appfinder-model.c:575
 msgid "Name"
 msgstr "ئاتى"
 
-#: ../src/appfinder-model.c:550
+#: ../src/appfinder-model.c:576
 msgid "Comment"
 msgstr "ئىزاھات"
 
-#: ../src/appfinder-model.c:551
+#: ../src/appfinder-model.c:577
 msgid "Command"
 msgstr "بۇيرۇق"
 
-#: ../src/appfinder-model.c:552
+#: ../src/appfinder-model.c:578
 msgid "Categories"
 msgstr "كاتېگورىيە"
 
-#: ../src/appfinder-model.c:553
+#: ../src/appfinder-model.c:579
 msgid "Filename"
 msgstr "ھۆججەت ئاتى"
 
-#: ../src/appfinder-model.c:1833
+#: ../src/appfinder-model.c:2100
 msgid "Application has no command"
 msgstr "پروگراممىنىڭ بۇيرۇقى يوق"
 
-#: ../src/appfinder-model.c:2157
+#: ../src/appfinder-model.c:2519
 msgid "Commands History"
 msgstr "بۇيرۇق ئىزلىرى"
+
+#: ../src/appfinder-model.c:2543
+msgid "Bookmarks"
+msgstr ""
 
 #: ../src/appfinder-preferences.c:219
 msgid "C_lear"
@@ -83,42 +87,50 @@ msgstr "كۆرۈنۈش ھالىتىنى ئۆزگەرتىش"
 msgid "La_unch"
 msgstr "ئىجرا قىل(_U)"
 
-#: ../src/appfinder-window.c:844
+#: ../src/appfinder-window.c:880
 msgid "Failed to launch desktop item editor"
 msgstr "ئۈستەلئۈستى تۇرى تەھرىرلىگۈچىنى ئىجرا قىلىش مەغلۇپ بولدى"
 
-#: ../src/appfinder-window.c:870
+#: ../src/appfinder-window.c:906
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "ئىختىيارىي ئۈستەلئۈستى ھۆججىتى ماكان مۇندەرىجىڭىزدىن مەڭگۈلۈككە يوقىلىدۇ."
 
-#: ../src/appfinder-window.c:871
+#: ../src/appfinder-window.c:907
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "راستلا «%s» نى ئەسلىگە قايتۇرامسىز؟"
 
-#: ../src/appfinder-window.c:881
+#: ../src/appfinder-window.c:917
 msgid "Failed to remove desktop file"
 msgstr "ئۈستەلئۈستى ھۆججىتىنى ئۆچۈرۈش مەغلۇپ بولدى"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:914
+#: ../src/appfinder-window.c:950
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "بىرەر تۇرنى كۆرۈنىدىغان قىلىش ئۈچۈن ئۈستەلئۈستى ھۆججىتىنى «%s» دىن ئۆچۈرسىڭىز ياكى مۇشۇ مۇندەرىجىدىكى  ھۆججەتنى ئېچىپ «%s» دېگەن قۇرنى ئۆچۈرۈۋەتسىڭىز بولىدۇ."
 
-#: ../src/appfinder-window.c:919 ../src/appfinder-window.c:1017
+#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
 msgstr "يوشۇر(_H)"
 
-#: ../src/appfinder-window.c:920
+#: ../src/appfinder-window.c:956
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "راستلا «%s» نى يوشۇرامسىز؟"
+
+#: ../src/appfinder-window.c:1037
+msgid "Remove From Bookmarks"
+msgstr ""
+
+#: ../src/appfinder-window.c:1037
+msgid "Add to Bookmarks"
+msgstr ""
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
