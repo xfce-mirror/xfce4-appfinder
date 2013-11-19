@@ -1,159 +1,282 @@
-# Estonian translations for xfce4-appfinder package.
-# Copyright (C) 2004-2005 Eduard Roccatello.
-# This file is distributed under the same license as the xfce4-appfinder package.
-# Mart Tõnso <mart.tonso@ttu.ee>, 2004.
-# Peeter Vois <peeter.vois@proekspert.ee>, 2006.
-# Allar Kiristaja <aquastus@gmail.com>, 2011.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Allar Kiristaja <aquastus@gmail.com>, 2011
+# Mart Tõnso <mart.tonso@ttu.ee>, 2004
+# Peeter Vois <peeter.vois@proekspert.ee>, 2006
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.4.0\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-26 16:07+0000\n"
-"PO-Revision-Date: 2011-10-27 00:03+0300\n"
-"Last-Translator: Allar Kiristaja <aquastus@gmail.com>\n"
-"Language-Team: Eesti <>\n"
+"POT-Creation-Date: 2013-07-29 00:30+0200\n"
+"PO-Revision-Date: 2013-11-19 11:15+0000\n"
+"Last-Translator: Xfce <transifex@xfce.org>\n"
+"Language-Team: Estonian (http://www.transifex.com/projects/p/xfce/language/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bits\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Language: et\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/appfinder-category-model.c:108
+#: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "Kõik rakendused"
 
-#: ../src/appfinder-model.c:422
+#: ../src/appfinder-model.c:575
 msgid "Name"
 msgstr "Nimi"
 
-#: ../src/appfinder-model.c:423
+#: ../src/appfinder-model.c:576
+msgid "Comment"
+msgstr ""
+
+#: ../src/appfinder-model.c:577
 msgid "Command"
 msgstr "Käsk"
 
-#: ../src/appfinder-model.c:424
+#: ../src/appfinder-model.c:578
 msgid "Categories"
 msgstr "Kategooriad"
 
-#: ../src/appfinder-model.c:425
+#: ../src/appfinder-model.c:579
 msgid "Filename"
 msgstr "Failinimi"
 
-#: ../src/appfinder-model.c:1317
+#: ../src/appfinder-model.c:2100
 msgid "Application has no command"
 msgstr "Rakendusel ei ole käsku"
 
-#: ../src/appfinder-model.c:1634
+#: ../src/appfinder-model.c:2519
 msgid "Commands History"
 msgstr "Käskude ajalugu"
 
-#: ../src/appfinder-preferences.c:175
+#: ../src/appfinder-model.c:2543
+msgid "Bookmarks"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:219
 msgid "C_lear"
 msgstr "_Tühjenda"
 
-#: ../src/appfinder-preferences.c:176
+#: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
 msgstr "See tühjendab jäädavalt kohandatud käskude ajaloo."
 
-#: ../src/appfinder-preferences.c:177
+#: ../src/appfinder-preferences.c:221
 msgid "Are you sure you want to clear the command history?"
 msgstr "Kas soovite kindlalt tühjendada käskude ajaloo?"
 
-#: ../src/appfinder-preferences.c:287
+#: ../src/appfinder-preferences.c:331
 msgid "The custom action will be deleted permanently."
 msgstr "Kohandatud tegevus kustutatakse jäädavalt."
 
-#: ../src/appfinder-preferences.c:288
+#: ../src/appfinder-preferences.c:332
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Kas soovid kindlalt kustutada mustri „%s”?"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
-#: ../src/appfinder-preferences.glade.h:3
+#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Rakenduste leidja"
 
-#: ../src/appfinder-window.c:224
+#: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
 msgstr "Vaheta vaadet"
 
-#: ../src/main.c:70
+#: ../src/appfinder-window.c:394
+msgid "La_unch"
+msgstr ""
+
+#: ../src/appfinder-window.c:880
+msgid "Failed to launch desktop item editor"
+msgstr ""
+
+#: ../src/appfinder-window.c:906
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr ""
+
+#: ../src/appfinder-window.c:907
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr ""
+
+#: ../src/appfinder-window.c:917
+msgid "Failed to remove desktop file"
+msgstr ""
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: ../src/appfinder-window.c:950
+#, c-format
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr ""
+
+#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
+msgid "_Hide"
+msgstr ""
+
+#: ../src/appfinder-window.c:956
+#, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr ""
+
+#: ../src/appfinder-window.c:1037
+msgid "Remove From Bookmarks"
+msgstr ""
+
+#: ../src/appfinder-window.c:1037
+msgid "Add to Bookmarks"
+msgstr ""
+
+#: ../src/main.c:64
 msgid "Start in collapsed mode"
 msgstr "Käivita kokkupandult"
 
-#: ../src/main.c:71
+#: ../src/main.c:65
 msgid "Print version information and exit"
 msgstr "Trüki versioon ja välju"
 
-#: ../src/main.c:72
+#: ../src/main.c:66
 msgid "Replace the existing service"
 msgstr "Asenda olemasolev teenus"
 
-#: ../src/main.c:73
+#: ../src/main.c:67
 msgid "Quit all instances"
 msgstr "Lõpeta kõik instantsid"
 
-#: ../src/main.c:74
+#: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Ära ürita kasutada D-Bus teenust või saada D-Bus teenuseks"
 
-#. close all windows and quit
-#: ../src/main.c:159
-msgid "Forced to quit"
-msgstr "Sunnitud lõpetama"
-
-#: ../src/main.c:346
-msgid "Unable to daemonize the process"
-msgstr "Ei saa muuta protsessi taustprotsessiks"
-
-#: ../src/main.c:418
+#: ../src/main.c:224
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Trüki „%s --help” kasutusjuhisteks."
 
-#: ../src/main.c:429
+#: ../src/main.c:235
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce arendusmeeskond. Kõik õigused kaitstud."
 
-#: ../src/main.c:430
+#: ../src/main.c:236
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Andke vigadest teada <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
-msgstr "Lisa uus kohandatud tegevus."
+msgid "Prefix"
+msgstr "Eesliide"
 
 #: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr "Tavaline väljend"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "Jäta viimati _valitud kategooria"
+
+#: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
 msgstr "Paiguta alati aken k_eskele"
 
-#: ../src/appfinder-preferences.glade.h:4
-msgid "Behaviour"
-msgstr "Käitumine"
-
-#: ../src/appfinder-preferences.glade.h:5
-msgid "C_lear Custom Command History"
-msgstr "T_ühjenda kohandatud käskluste ajalugu"
-
-#: ../src/appfinder-preferences.glade.h:6
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
 msgstr "Käivitamisel paiguta aken keskele."
 
-#: ../src/appfinder-preferences.glade.h:7
-msgid "Co_mmand:"
-msgstr "_Käsk"
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
+msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:8
-msgid "Custom _Actions"
-msgstr "Kohandatus t_egevused"
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:9
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Behaviour"
+msgstr "Käitumine"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr "T_ühjenda kohandatud käskluste ajalugu"
+
+#: ../src/appfinder-preferences.glade.h:23
 msgid "History"
 msgstr "Ajalugu"
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "Ü_ldine"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "Muster"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "Lisa uus kohandatud tegevus."
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "Eemalda valitud tegevus..."
+
+#: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -161,37 +284,25 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:12
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "_Käsk"
+
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
 msgstr "Muste_r:"
 
-#: ../src/appfinder-preferences.glade.h:13
-msgid "Pattern"
-msgstr "Muster"
-
-#: ../src/appfinder-preferences.glade.h:14
-msgid "Prefix"
-msgstr "Eesliide"
-
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Regular Expression"
-msgstr "Tavaline väljend"
-
-#: ../src/appfinder-preferences.glade.h:16
-msgid "Remember last _selected category"
-msgstr "Jäta viimati _valitud kategooria"
-
-#: ../src/appfinder-preferences.glade.h:17
-msgid "Remove the currently selected action."
-msgstr "Eemalda valitud tegevus..."
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "_General"
-msgstr "Ü_ldine"
-
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:32
 msgid "_Type:"
 msgstr "_Liik:"
+
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:34
+msgid "Custom _Actions"
+msgstr "Kohandatus t_egevused"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -204,72 +315,3 @@ msgstr "Käivita rakendus..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Käivita rakendus"
-
-#~ msgid "Search"
-#~ msgstr "<b>Otsi:</b>"
-
-#~ msgid "All"
-#~ msgstr "Kõik"
-
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "Ei suuda käivitada valitud rakendust"
-
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>Kategooriad</b>"
-
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>Käsklus</b>"
-
-#~ msgid "Xfce 4 Appfinder"
-#~ msgstr "Xfce 4 Rakendaja"
-
-#~ msgid "<b>Name</b>"
-#~ msgstr "<b>Nimi</b>"
-
-#~ msgid "N/A"
-#~ msgstr "Pole sadaval"
-
-#~ msgid "<b>Comment</b>"
-#~ msgstr "<b>Kommentaar</b>"
-
-#~ msgid "Show Categories"
-#~ msgstr "Näita kategooriad"
-
-#~ msgid "Core"
-#~ msgstr "Tuum"
-
-#~ msgid "Development"
-#~ msgstr "Arendus"
-
-#~ msgid "Office"
-#~ msgstr "Kontor"
-
-#~ msgid "Graphics"
-#~ msgstr "Graafika"
-
-#~ msgid "Network"
-#~ msgstr "Võrgundus"
-
-#~ msgid "AudioVideo"
-#~ msgstr "AudioVideo"
-
-#~ msgid "Game"
-#~ msgstr "Mäng"
-
-#~ msgid "Education"
-#~ msgstr "Haridus"
-
-#~ msgid "System"
-#~ msgstr "Süsteem"
-
-#~ msgid "Utility"
-#~ msgstr "Tarvik"
-
-#~ msgid "No items available"
-#~ msgstr "Pole midagi"
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "Kahju, aga ei leidnud tuhkagi."
-
-#~ msgid "Appfinder"
-#~ msgstr "Appfinder"
