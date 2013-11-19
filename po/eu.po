@@ -1,315 +1,306 @@
-# translation of eu.po to Euskara
-# Euskara translations for xfce4-appfinder package.
-# Copyright (C) 2004-2005 Eduard Roccatello.
-# This file is distributed under the same license as the xfce4-appfinder package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
-# Piarres Beobide Egaña <pi@beobide.net>, 2004, 2005, 2008, 2009.
+# Translators:
+# Piarres Beobide <pi@beobide.net>, 2004-2005,2008-2009
 msgid ""
 msgstr ""
-"Project-Id-Version: eu\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-12 08:24+0000\n"
-"PO-Revision-Date: 2009-10-21 13:53+0200\n"
-"Last-Translator: Piarres Beobide <pi@beobide.net>\n"
-"Language-Team: Basque <debian-l10n-eu@debian.lists.org>\n"
+"POT-Creation-Date: 2013-07-29 00:30+0200\n"
+"PO-Revision-Date: 2013-11-19 11:15+0000\n"
+"Last-Translator: Xfce <transifex@xfce.org>\n"
+"Language-Team: Basque (http://www.transifex.com/projects/p/xfce/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: eu\n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "Aplikazio guztiak"
 
-#: ../src/appfinder-model.c:545
+#: ../src/appfinder-model.c:575
 msgid "Name"
 msgstr "Izena"
 
-#: ../src/appfinder-model.c:546
+#: ../src/appfinder-model.c:576
 msgid "Comment"
 msgstr "Iruzkina"
 
-#: ../src/appfinder-model.c:547
+#: ../src/appfinder-model.c:577
 msgid "Command"
 msgstr "Komandoa"
 
-#: ../src/appfinder-model.c:548
+#: ../src/appfinder-model.c:578
 msgid "Categories"
 msgstr "Kategoriak"
 
-#: ../src/appfinder-model.c:549
+#: ../src/appfinder-model.c:579
 msgid "Filename"
 msgstr "Fitxategi-izena"
 
-#: ../src/appfinder-model.c:1825
+#: ../src/appfinder-model.c:2100
 msgid "Application has no command"
 msgstr "Aplikazioak ez du komandorik"
 
-#: ../src/appfinder-model.c:2149
+#: ../src/appfinder-model.c:2519
 msgid "Commands History"
 msgstr "Komando historia"
 
-#: ../src/appfinder-preferences.c:221
+#: ../src/appfinder-model.c:2543
+msgid "Bookmarks"
+msgstr ""
+
+#: ../src/appfinder-preferences.c:219
 msgid "C_lear"
 msgstr "Ga_rbitu"
 
-#: ../src/appfinder-preferences.c:222
+#: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
 msgstr "Honek pertsonalizatutako komando historia betirako ezabatuko du."
 
-#: ../src/appfinder-preferences.c:223
+#: ../src/appfinder-preferences.c:221
 msgid "Are you sure you want to clear the command history?"
 msgstr "Ziur zaude komando historia ezabatu nahi duzula?"
 
-#: ../src/appfinder-preferences.c:333
+#: ../src/appfinder-preferences.c:331
 msgid "The custom action will be deleted permanently."
 msgstr "Ekintza pertsonalizatua betirako ezabatuko da."
 
-#: ../src/appfinder-preferences.c:334
+#: ../src/appfinder-preferences.c:332
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Ziur zaude \"%s\" patroia ezabatu nahi duzula?"
 
-#: ../src/appfinder-window.c:219 ../src/main.c:446
-#: ../src/appfinder-preferences.glade.h:4
+#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Aplikazio bilatzailea"
 
-#: ../src/appfinder-window.c:271
+#: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
 msgstr "Txandakatu ikuste modua"
 
-#: ../src/appfinder-window.c:363
+#: ../src/appfinder-window.c:394
 msgid "La_unch"
 msgstr "Ab_iarazi"
 
-#: ../src/appfinder-window.c:798
+#: ../src/appfinder-window.c:880
 msgid "Failed to launch desktop item editor"
 msgstr "Huts mahaigain elementu editorea abiaraztean"
 
-#: ../src/appfinder-window.c:824
+#: ../src/appfinder-window.c:906
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr ""
-"Honek pertsonalizatutako magain fitxategia zure etxetik betirako ezabatuko "
-"du."
+msgstr "Honek pertsonalizatutako magain fitxategia zure etxetik betirako ezabatuko du."
 
-#: ../src/appfinder-window.c:825
+#: ../src/appfinder-window.c:907
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Ziur zaude \"%s\" alderantzikatu nahi duzula?"
 
-#: ../src/appfinder-window.c:835
+#: ../src/appfinder-window.c:917
 msgid "Failed to remove desktop file"
 msgstr "Huts mahaigain fitxategia ezabatzean"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:868
+#: ../src/appfinder-window.c:950
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
-"Elementua erakusteko magaina fitxategia \"%s\" -tik eskuz ezabatu beharko "
-"duzu edo direktorio berdinean fitxategia ireki eta \"%s\" lerroa ezabatu."
+msgstr "Elementua erakusteko magaina fitxategia \"%s\" -tik eskuz ezabatu beharko duzu edo direktorio berdinean fitxategia ireki eta \"%s\" lerroa ezabatu."
 
-#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
+#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
 msgstr "_Ezkutatu"
 
-#: ../src/appfinder-window.c:874
+#: ../src/appfinder-window.c:956
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Ziur zaude \"%s\" ezkutatu nahi duzula?"
 
-#: ../src/main.c:75
+#: ../src/appfinder-window.c:1037
+msgid "Remove From Bookmarks"
+msgstr ""
+
+#: ../src/appfinder-window.c:1037
+msgid "Add to Bookmarks"
+msgstr ""
+
+#: ../src/main.c:64
 msgid "Start in collapsed mode"
 msgstr "Abiatu bildutako moduan"
 
-#: ../src/main.c:76
+#: ../src/main.c:65
 msgid "Print version information and exit"
 msgstr "Inprimatu bertsio argibideak eta irten"
 
-#: ../src/main.c:77
+#: ../src/main.c:66
 msgid "Replace the existing service"
 msgstr "Ordeztu dagoen zerbitzua"
 
-#: ../src/main.c:78
+#: ../src/main.c:67
 msgid "Quit all instances"
 msgstr "Itxi instantzia guztiak"
 
-#: ../src/main.c:79
+#: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Ez saiatu erabiltzen edo bihurtu D-Bus zerbitzua"
 
-#. close all windows and quit
-#: ../src/main.c:244
-msgid "Forced to quit"
-msgstr "Irtetera beharturik"
-
-#: ../src/main.c:448
-msgid "Unable to daemonize the process"
-msgstr "Ezin da prozesua deabru bihurtu"
-
-#: ../src/main.c:522
+#: ../src/main.c:224
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Idatzi '%s --help' erabilera argibideentzat."
 
-#: ../src/main.c:533
+#: ../src/main.c:235
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce garapen taldea. Eskubide guztiak erreserbaturik."
 
-#: ../src/main.c:534
+#: ../src/main.c:236
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Erroreen berri eman <%s>-ra."
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
-msgstr "Gehitu ekintza pertsonalizatua."
+msgid "Prefix"
+msgstr "Aurrizkia"
 
 #: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr "Espresio erregularra"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "Oso txikia"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "Txikiagoa"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "Txikia"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "Arrunta"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "Handia"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "Handiagoa"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "Osa handia"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "Gogoratu azken _hautatutako kategoria"
+
+#: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
 msgstr "Beti _erdiratu leihoa"
 
-#: ../src/appfinder-preferences.glade.h:3
-msgid "Appearance"
-msgstr "Itxura"
-
-#: ../src/appfinder-preferences.glade.h:5
-msgid "Behaviour"
-msgstr "Poramoldea"
-
-#: ../src/appfinder-preferences.glade.h:6
-msgid "C_lear Custom Command History"
-msgstr "Ga_rbitu pertsonalizatutako komando historia"
-
-#: ../src/appfinder-preferences.glade.h:7
-msgid "Categ_ory icon size:"
-msgstr "Kategoria ikono tamaina:"
-
-#: ../src/appfinder-preferences.glade.h:8
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
 msgstr "Erdiratu leihoa abioan."
 
-#: ../src/appfinder-preferences.glade.h:9
-msgid "Co_mmand:"
-msgstr "Ko_mandoa:"
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
+msgstr "Mantendu :instantzia atzealdean abiarazia"
 
-#: ../src/appfinder-preferences.glade.h:10
-msgid "Custom _Actions"
-msgstr "Ekintz_a pertsonalizatuak"
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "Azken leiho ixterakoan aplikazioa itxi beharrean atzealdean martxan mantendu leiho berrien irekitzea azkartzeko. Agian hau desgaitu nahiko duzu memoria erabilpena murrizteko."
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Behaviour"
+msgstr "Poramoldea"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr "I_kusi elementuak ikono gisa"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr "Testua ikono al_boan"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "Ele_mentu ikono tamaina:"
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr "Kategoria ikono tamaina:"
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "Itxura"
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr "Ga_rbitu pertsonalizatutako komando historia"
+
+#: ../src/appfinder-preferences.glade.h:23
 msgid "History"
 msgstr "Historia"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "_Orokorra"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "Patroia"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "Gehitu ekintza pertsonalizatua."
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "Ezabatu hautatuko ekintza."
+
+#: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
-"Mota aurrizkira ezartzen bada, %s patroiaren ondoko kateaz ordeztuko da, %S "
-"testu sarrera osoarekin. Espresio erregularrentzat \\0 eta \\<zenb> erabili "
-"ditzakezu."
+msgstr "Mota aurrizkira ezartzen bada, %s patroiaren ondoko kateaz ordeztuko da, %S testu sarrera osoarekin. Espresio erregularrentzat \\0 eta \\<zenb> erabili ditzakezu."
 
-#: ../src/appfinder-preferences.glade.h:14
-msgid ""
-"Instead of quitting the application when the last window is closed, keep a "
-"running instance to speed up opening new windows. You might want to disable "
-"this to reduce memory usage."
-msgstr ""
-"Azken leiho ixterakoan aplikazioa itxi beharrean atzealdean martxan mantendu "
-"leiho berrien irekitzea azkartzeko. Agian hau desgaitu nahiko duzu memoria "
-"erabilpena murrizteko."
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "Ko_mandoa:"
 
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Ite_m icon size:"
-msgstr "Ele_mentu ikono tamaina:"
-
-#: ../src/appfinder-preferences.glade.h:16
-msgid "Keep running _instance in the background"
-msgstr "Mantendu :instantzia atzealdean abiarazia"
-
-#: ../src/appfinder-preferences.glade.h:17
-msgid "Large"
-msgstr "Handia"
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "Larger"
-msgstr "Handiagoa"
-
-#: ../src/appfinder-preferences.glade.h:19
-msgid "Normal"
-msgstr "Arrunta"
-
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
 msgstr "Pat_roia:"
 
-#: ../src/appfinder-preferences.glade.h:21
-msgid "Pattern"
-msgstr "Patroia"
-
-#: ../src/appfinder-preferences.glade.h:22
-msgid "Prefix"
-msgstr "Aurrizkia"
-
-#: ../src/appfinder-preferences.glade.h:23
-msgid "Regular Expression"
-msgstr "Espresio erregularra"
-
-#: ../src/appfinder-preferences.glade.h:24
-msgid "Remember last _selected category"
-msgstr "Gogoratu azken _hautatutako kategoria"
-
-#: ../src/appfinder-preferences.glade.h:25
-msgid "Remove the currently selected action."
-msgstr "Ezabatu hautatuko ekintza."
-
-#: ../src/appfinder-preferences.glade.h:26
-msgid "Small"
-msgstr "Txikia"
-
-#: ../src/appfinder-preferences.glade.h:27
-msgid "Smaller"
-msgstr "Txikiagoa"
-
-#: ../src/appfinder-preferences.glade.h:28
-msgid "Text besi_de icons"
-msgstr "Testua ikono al_boan"
-
-#: ../src/appfinder-preferences.glade.h:29
-msgid "Very Large"
-msgstr "Osa handia"
-
-#: ../src/appfinder-preferences.glade.h:30
-msgid "Very Small"
-msgstr "Oso txikia"
-
-#: ../src/appfinder-preferences.glade.h:31
-msgid "_General"
-msgstr "_Orokorra"
-
 #: ../src/appfinder-preferences.glade.h:32
-msgid "_Save match in command history"
-msgstr "_Gorde parekatzeak komando historian"
-
-#: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
 msgstr "Mo_ta:"
 
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr "_Gorde parekatzeak komando historian"
+
 #: ../src/appfinder-preferences.glade.h:34
-msgid "_View items as icons"
-msgstr "I_kusi elementuak ikono gisa"
+msgid "Custom _Actions"
+msgstr "Ekintz_a pertsonalizatuak"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -322,48 +313,3 @@ msgstr "Exekutatu programa..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Exekutatu programa"
-
-#~ msgid "[MENUFILE]"
-#~ msgstr "[MENU-FITXATEGIA]"
-
-#~ msgid "Unable to initialize GTK+."
-#~ msgstr "Ezin da GTK+ abiarazi"
-
-#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
-#~ msgstr "Huts egin du Xfconf deabrua konektatzean. Arrazoia: %s"
-
-#~ msgid "Failed to connect to xfconf daemon."
-#~ msgstr "Huts egin du Xfconf deabrua konektatzean."
-
-#~ msgid "Search"
-#~ msgstr "Bilatu"
-
-#~ msgid "C_lose after launch"
-#~ msgstr "I_txi abiarazi ondoren"
-
-#~ msgid "Could not load menu from %s"
-#~ msgstr "Ezin da %s-tik menua kargatu"
-
-#~ msgid "All"
-#~ msgstr "Denak"
-
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "Huts \"%s\" aplikazioa exekutatzean."
-
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>Kategoriak:</b> %s"
-
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>Komandoa:</b> %s"
-
-#~ msgid "Could not load system menu"
-#~ msgstr "Ezin da sistema menua kargatu"
-
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "Ezin da %s aplikazioa exekutatu. Arrazoia; %s"
-
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "Ezin da %s-tik menua kargatu. Arrazoia: %s"
-
-#~ msgid "Filter"
-#~ msgstr "Iragazkia"
