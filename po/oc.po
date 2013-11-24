@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Cedric31 <cvalmary@yahoo.fr>, 2013
+# Cedric31 <cvalmary@yahoo.fr>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-11-20 10:42+0000\n"
+"PO-Revision-Date: 2013-11-24 10:23+0000\n"
 "Last-Translator: Cedric31 <cvalmary@yahoo.fr>\n"
 "Language-Team: Occitan (post 1500) (http://www.transifex.com/projects/p/xfce/language/oc/)\n"
 "MIME-Version: 1.0\n"
@@ -52,7 +53,7 @@ msgstr "Istoric de las comandas"
 
 #: ../src/appfinder-model.c:2543
 msgid "Bookmarks"
-msgstr ""
+msgstr "Marcapaginas"
 
 #: ../src/appfinder-preferences.c:219
 msgid "C_lear"
@@ -127,11 +128,11 @@ msgstr "Sètz segur que volètz amagar « %s » ?"
 
 #: ../src/appfinder-window.c:1037
 msgid "Remove From Bookmarks"
-msgstr ""
+msgstr "Suprimir dels marcapaginas"
 
 #: ../src/appfinder-window.c:1037
 msgid "Add to Bookmarks"
-msgstr ""
+msgstr "Apondre als marcapaginas"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
