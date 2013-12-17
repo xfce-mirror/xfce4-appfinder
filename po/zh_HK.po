@@ -1,0 +1,317 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2010
+# Hydonsingore Cia <hydonsingore@educities.edu.tw>, 2005
+# Walter Cheuk <wwycheuk@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-29 00:30+0200\n"
+"PO-Revision-Date: 2013-12-17 14:11+0000\n"
+"Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
+"Language-Team: Chinese (Hong Kong) (http://www.transifex.com/projects/p/xfce/language/zh_HK/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_HK\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../src/appfinder-category-model.c:146
+msgid "All Applications"
+msgstr "所有應用程式"
+
+#: ../src/appfinder-model.c:575
+msgid "Name"
+msgstr "名稱"
+
+#: ../src/appfinder-model.c:576
+msgid "Comment"
+msgstr "備註"
+
+#: ../src/appfinder-model.c:577
+msgid "Command"
+msgstr "指令"
+
+#: ../src/appfinder-model.c:578
+msgid "Categories"
+msgstr "分類"
+
+#: ../src/appfinder-model.c:579
+msgid "Filename"
+msgstr "檔案名稱"
+
+#: ../src/appfinder-model.c:2100
+msgid "Application has no command"
+msgstr "應用程式沒有指令"
+
+#: ../src/appfinder-model.c:2519
+msgid "Commands History"
+msgstr "指令歷史"
+
+#: ../src/appfinder-model.c:2543
+msgid "Bookmarks"
+msgstr "書籤"
+
+#: ../src/appfinder-preferences.c:219
+msgid "C_lear"
+msgstr "清除(_L)"
+
+#: ../src/appfinder-preferences.c:220
+msgid "This will permanently clear the custom command history."
+msgstr "這會永久清除自訂指令歷史。"
+
+#: ../src/appfinder-preferences.c:221
+msgid "Are you sure you want to clear the command history?"
+msgstr "確定要清除指令歷史嗎？"
+
+#: ../src/appfinder-preferences.c:331
+msgid "The custom action will be deleted permanently."
+msgstr "自訂動作會永久刪除。"
+
+#: ../src/appfinder-preferences.c:332
+#, c-format
+msgid "Are you sure you want to delete pattern \"%s\"?"
+msgstr "確定要刪除「%s」樣式嗎？"
+
+#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
+#: ../data/xfce4-appfinder.desktop.in.h:1
+msgid "Application Finder"
+msgstr "應用程式協尋器"
+
+#: ../src/appfinder-window.c:289
+msgid "Toggle view mode"
+msgstr "切換檢視模式"
+
+#: ../src/appfinder-window.c:394
+msgid "La_unch"
+msgstr "啟動(_U)"
+
+#: ../src/appfinder-window.c:880
+msgid "Failed to launch desktop item editor"
+msgstr "未能啟動桌面項目編輯器"
+
+#: ../src/appfinder-window.c:906
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr "這會從家目錄永久移除自訂桌面檔。"
+
+#: ../src/appfinder-window.c:907
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr "確定要還原「%s」嗎？"
+
+#: ../src/appfinder-window.c:917
+msgid "Failed to remove desktop file"
+msgstr "未能移除桌面檔"
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: ../src/appfinder-window.c:950
+#, c-format
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr "若要取消隱藏該項目，必須從「%s」手動移除桌面檔，或是在同個目錄開啟檔案並移除「%s」這一列。"
+
+#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
+msgid "_Hide"
+msgstr "隱藏(_H)"
+
+#: ../src/appfinder-window.c:956
+#, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr "確定要隱藏「%s」嗎？"
+
+#: ../src/appfinder-window.c:1037
+msgid "Remove From Bookmarks"
+msgstr "自書籤移除"
+
+#: ../src/appfinder-window.c:1037
+msgid "Add to Bookmarks"
+msgstr "加入至書籤"
+
+#: ../src/main.c:64
+msgid "Start in collapsed mode"
+msgstr "以展開模式啟動"
+
+#: ../src/main.c:65
+msgid "Print version information and exit"
+msgstr "顯示版本資訊並結束"
+
+#: ../src/main.c:66
+msgid "Replace the existing service"
+msgstr "取代現有的服務"
+
+#: ../src/main.c:67
+msgid "Quit all instances"
+msgstr "結束所有實體"
+
+#: ../src/main.c:68
+msgid "Do not try to use or become a D-Bus service"
+msgstr "不要嘗試使用或成為 D-Bus 服務"
+
+#: ../src/main.c:224
+#, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr "輸入 \"%s --help\" 以取得用法資訊。"
+
+#: ../src/main.c:235
+msgid "The Xfce development team. All rights reserved."
+msgstr "Xfce 開發團隊。保留所有權利。"
+
+#: ../src/main.c:236
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr "請回報錯誤至 <%s>。"
+
+#: ../src/appfinder-preferences.glade.h:1
+msgid "Prefix"
+msgstr "前綴"
+
+#: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr "常規表示式"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "非常小"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "較小"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "小"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "一般"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "大"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "較大"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "非常大"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "記住最後一次選取的分類(_S)"
+
+#: ../src/appfinder-preferences.glade.h:12
+msgid "Always c_enter the window"
+msgstr "總是將視窗置中(_E)"
+
+#: ../src/appfinder-preferences.glade.h:13
+msgid "Center the window on startup."
+msgstr "視窗啟動時置中。"
+
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
+msgstr "讓實體在背景保持執行狀態(_I)"
+
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "當關閉最後一個視窗時，讓實體繼續執行而非結束應用程式，好讓新的視窗可以快速開啟。若想降低記憶體使用量，你可能會想停用此功能。"
+
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Behaviour"
+msgstr "行為"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr "以圖示檢視項目(_V)"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr "圖示旁伴文字(_D)"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "項目圖示大小(_M)："
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr "分類圖示大小(_O)："
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "外觀"
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr "清除自訂指令歷史(_L)"
+
+#: ../src/appfinder-preferences.glade.h:23
+msgid "History"
+msgstr "歷史"
+
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "一般(_G)"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "樣式"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "加入新的自訂動作。"
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "移除目前所選的動作。"
+
+#: ../src/appfinder-preferences.glade.h:29
+#, no-c-format
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr "如果類型設為前綴，%s 會被 %S 樣式之後的字串，以完整的輸入文字取代。若採用常規表示式，可以用 \\0 與 \\<num>。"
+
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "指令(_M)："
+
+#: ../src/appfinder-preferences.glade.h:31
+msgid "Patte_rn:"
+msgstr "樣式(_R)："
+
+#: ../src/appfinder-preferences.glade.h:32
+msgid "_Type:"
+msgstr "類型(_T)："
+
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr "儲存指令歷史中符合的項目(_S)"
+
+#: ../src/appfinder-preferences.glade.h:34
+msgid "Custom _Actions"
+msgstr "自訂動作(_A)"
+
+#: ../data/xfce4-appfinder.desktop.in.h:2
+msgid "Find and launch applications installed on your system"
+msgstr "尋找並啟動系統安裝的應用程式"
+
+#: ../data/xfce4-run.desktop.in.h:1
+msgid "Run Program..."
+msgstr "執行程式..."
+
+#: ../data/xfce4-run.desktop.in.h:2
+msgid "Run a program"
+msgstr "執行程式"
