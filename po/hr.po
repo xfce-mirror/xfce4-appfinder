@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-02 23:08+0200\n"
-"PO-Revision-Date: 2014-02-17 23:48+0000\n"
+"PO-Revision-Date: 2014-02-21 13:44+0000\n"
 "Last-Translator: schizo <eveskovic@gmail.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/xfce/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -82,7 +82,7 @@ msgstr "Nalaznik programa"
 
 #: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
-msgstr ""
+msgstr "Promjeni način pregleda"
 
 #: ../src/appfinder-window.c:364
 msgid "La_unch"
@@ -127,7 +127,7 @@ msgstr "Jeste li sigurni da želite sakriti \"%s\"?"
 
 #: ../src/main.c:75
 msgid "Start in collapsed mode"
-msgstr ""
+msgstr "Pokreni u kompaktnom načinu"
 
 #: ../src/main.c:76
 msgid "Print version information and exit"
@@ -152,7 +152,7 @@ msgstr "Prisilno isključivanje"
 
 #: ../src/main.c:448
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "Ne mogu pokrenuti proces u pozadini"
 
 #: ../src/main.c:524
 #, c-format
@@ -218,7 +218,7 @@ msgstr "Centriraj prozor pri pokretanju"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr ""
+msgstr "Nastavi izvoditi pokrenutu _instancu u pozadini"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
@@ -281,7 +281,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Ako je vrsta postavljena na prefiks, %s će biti zamijenjen nizom nakon uzorka, %S s potpunim tekstom unosa. Za regularne izraze možete koristiti \\0 i \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
