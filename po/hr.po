@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2014-02-16 23:07+0000\n"
+"PO-Revision-Date: 2014-02-21 13:13+0000\n"
 "Last-Translator: schizo <eveskovic@gmail.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/xfce/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -138,7 +138,7 @@ msgstr "Dodaj u zabilješke"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
-msgstr ""
+msgstr "Pokreni u kompaktnom načinu"
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
@@ -220,7 +220,7 @@ msgstr "Centriraj prozor pri pokretanju."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr ""
+msgstr "Nastavi izvoditi pokrenutu _instancu u pozadini"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
@@ -283,7 +283,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Ako je vrsta postavljena na prefiks, %s će biti zamijenjen nizom nakon uzorka, %S s potpunim tekstom unosa. Za regularne izraze možete koristiti \\0 i \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
