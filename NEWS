@@ -1,3 +1,24 @@
+4.11.0
+======
+- Make compilation to GTK3 optional.
+- Use GDbus for communication.
+- Add execute menu item to launch without closing the window.
+- Add default action to open absolute paths.
+- Add bookmarks in the model.
+- Do nothing with the Tab event during competion (bug #10187).
+- Use new xdg function to set environment.
+- Translation updates: Amharic, Arabic, Belarusian, Bulgarian,
+  Bengali (India), Catalan (Valencian), Czech, Danish, German,
+  Dzongkha, Greek, English (Australia), English (United Kingdom),
+  Spanish (Castilian), Estonian, Basque, Persian, Finnish, French,
+  Galician, Gujarati, Croatian, Hungarian, Armenian, Indonesian,
+  Icelandic, Italian, Japanese, Georgian, Kazakh, Korean, Kurdish,
+  Lithuanian, Macedonian, Marathi, Malay, Dutch (Flemish), Norwegian
+  Nynorsk, Occitan (post 1500), Polish, Portuguese, Portuguese
+  (Brazilian), Romanian, Russian, Slovak, Slovenian, Serbian, Swedish,
+  Thai, Turkish, Uyghur, Ukrainian, Chinese (China), Chinese (Hong
+  Kong), Chinese (Taiwan).
+
 4.10.0
 ======
 - Add a valid category to xfce4-run.desktop.
@@ -6,9 +27,9 @@
 - Avoid segfault when right-clicking a custom command.
 - Only focus view if an item is selected on entry active.
 - Try to spwan a custom command in expanded view as well.
-- Translation updates: Czech, German, English (United Kingdom), 
-  Spanish (Castilian), Galician, Hungarian, Japanese, Korean, Dutch 
-  (Flemish), Portuguese (Brazilian), Romanian, Turkish, Chinese 
+- Translation updates: Czech, German, English (United Kingdom),
+  Spanish (Castilian), Galician, Hungarian, Japanese, Korean, Dutch
+  (Flemish), Portuguese (Brazilian), Romanian, Turkish, Chinese
   (China), Chinese (Taiwan).
 
 4.9.5
@@ -16,10 +37,10 @@
 - Don't use deprecated g_mapped_file_free (bug #8649).
 - Bump gtk, glib and xfce dependencies.
 - Make launch button translatable.
-- Translation updates: Catalan (Valencian), Danish, German, Greek, 
-  Basque, Finnish, French, Galician, Croatian, Italian, Japanese, 
-  Kazakh, Korean, Lithuanian, Dutch (Flemish), Norwegian Nynorsk, 
-  Polish, Portuguese, Portuguese (Brazilian), Russian, Slovak, Turkish, 
+- Translation updates: Catalan (Valencian), Danish, German, Greek,
+  Basque, Finnish, French, Galician, Croatian, Italian, Japanese,
+  Kazakh, Korean, Lithuanian, Dutch (Flemish), Norwegian Nynorsk,
+  Polish, Portuguese, Portuguese (Brazilian), Russian, Slovak, Turkish,
   Ukrainian, Chinese (China).
 
 4.9.4

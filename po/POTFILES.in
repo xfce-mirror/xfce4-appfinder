@@ -1,4 +1,5 @@
 
+src/appfinder-gdbus.c
 src/appfinder-actions.c
 src/appfinder-category-model.c
 src/appfinder-model.c
