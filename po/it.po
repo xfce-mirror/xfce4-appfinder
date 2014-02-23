@@ -3,21 +3,27 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# cri <cri.penta@gmail.com>, 2013-2014
 # Eduard Roccatello <eduard@xfce.org>, 2004
 # Milozzy <marco.sting@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-08-10 00:10+0000\n"
-"Last-Translator: Milozzy <marco.sting@gmail.com>\n"
+"POT-Creation-Date: 2014-02-23 00:30+0100\n"
+"PO-Revision-Date: 2014-02-23 15:16+0000\n"
+"Last-Translator: cri <cri.penta@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/xfce/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr "Chiusura forzata"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -97,7 +103,7 @@ msgstr "Impossibile avviare l'editor degli elementi della scrivania"
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "La cronologia dei comandi personalizzati verrà rimossa in modo permanente."
+msgstr "Il file desktop personalizzato nella cartella Casa verrà rimosso in modo permanente."
 
 #: ../src/appfinder-window.c:907
 #, c-format
@@ -115,7 +121,7 @@ msgstr "Impossibile rimuovere il file desktop"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Per far ricomparire l'elemento è necessario rimuovere manualmente il file desktop da \"%s\" o aprire il file nella stessa cartella e rimuovere lariga \"%s\"."
+msgstr "Per far ricomparire l'elemento è necessario rimuovere manualmente il file desktop da \"%s\" o aprire il file nella stessa cartella e rimuovere la riga \"%s\"."
 
 #: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
@@ -218,7 +224,7 @@ msgstr "Centra la finestra all'avvio"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr "Mantieni un'istan_za in esecuzione in background"
+msgstr "Mantieni l'istan_za in esecuzione in background"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
@@ -305,7 +311,7 @@ msgstr "_Azioni personalizzate"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Trova e lancia le applicazioni installate nel sistema"
+msgstr "Trova e avvia le applicazioni installate nel sistema"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
