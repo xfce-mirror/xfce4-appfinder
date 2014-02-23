@@ -7,12 +7,13 @@
 # Aron Stansvik <elvstone@gmail.com>, 2005
 # Daniel Nylander <po@danielnylander.se>, 2008-2009
 # Jens Hagerman <godhet@gmail.com>, 2006
+# PavelNicklasson <pavelnicklasson@bahnhof.se>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-02-23 09:24+0000\n"
+"PO-Revision-Date: 2014-02-23 22:15+0000\n"
 "Last-Translator: PavelNicklasson <pavelnicklasson@bahnhof.se>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/xfce/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +25,7 @@ msgstr ""
 #. close all windows and quit
 #: ../src/appfinder-gdbus.c:84
 msgid "Forced to quit"
-msgstr ""
+msgstr "Tvingad att avsluta"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -147,7 +148,7 @@ msgstr "Starta i kollapsat läge"
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
-msgstr "Skriv versionsinformation och avsluta"
+msgstr "Visa versionsinformation och avsluta"
 
 #: ../src/main.c:66
 msgid "Replace the existing service"
