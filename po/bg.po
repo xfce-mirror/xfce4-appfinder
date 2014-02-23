@@ -5,12 +5,13 @@
 # Translators:
 # cybercop <cybercop_montana@abv.bg>, 2012
 # cybercop <cybercop_montana@abv.bg>, 2012
+# cybercop <cybercop_montana@abv.bg>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-07-29 07:46+0000\n"
+"POT-Creation-Date: 2014-02-23 00:30+0100\n"
+"PO-Revision-Date: 2014-02-23 07:44+0000\n"
 "Last-Translator: cybercop <cybercop_montana@abv.bg>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/projects/p/xfce/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +19,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: bg\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr "Принудително спиране"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
