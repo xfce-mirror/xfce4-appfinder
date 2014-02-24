@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Jasper Huijsmans <jasper@xfce.org>, 2008
-# Pjotr123 <pjotrvertaalt@gmail.com>, 2013
+# Pjotr123 <pjotrvertaalt@gmail.com>, 2013-2014
 # Pjotr pjotrvertaalt@gmail.com , 2011,2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-07-31 11:01+0000\n"
+"POT-Creation-Date: 2014-02-23 00:30+0100\n"
+"PO-Revision-Date: 2014-02-24 16:22+0000\n"
 "Last-Translator: Pjotr123 <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/xfce/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -19,6 +19,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr "Gedwongen om af te sluiten"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -116,7 +121,7 @@ msgstr "Kon bureaubladbestand niet verwijderen"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Om het element zichtbaar te maken moet u het bureaubladbestand verwijderen uit \"%s\" of (wanneer u het daar wil laten staan) het bureaubladbestand openen en de regel \"%s\" verwijderen."
+msgstr "Om het element zichtbaar te maken moet u het bureaubladbestand verwijderen uit '%s' of (wanneer u het daar wil laten staan) het bureaubladbestand openen en de regel '%s' verwijderen."
 
 #: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
@@ -282,7 +287,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Indien het type is ingesteld op voorvoegsel, dan zal %s worden vervangen door de tekenreeks na het patroon, %S door de volledige tekst van de invoer. Voor reguliere uitdrukkingen kunt u \\0 en \\<num> gebruiken."
+msgstr "Indien het type is ingesteld op voorvoegsel, dan zal %s worden vervangen door de tekenreeks na het patroon, %S door de volledige tekst van het invoerveld. Voor reguliere uitdrukkingen kunt u \\0 en \\<num> gebruiken."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
