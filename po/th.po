@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Theppitak Karoonboonyanan <thep@linux.thai.net>, 2013
+# theppitak <theppitak@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-10-11 16:25+0000\n"
+"POT-Creation-Date: 2014-02-23 00:30+0100\n"
+"PO-Revision-Date: 2014-02-28 16:14+0000\n"
 "Last-Translator: theppitak <theppitak@gmail.com>\n"
 "Language-Team: Thai (http://www.transifex.com/projects/p/xfce/language/th/)\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: th\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr "ถูกบังคับออก"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -260,7 +266,7 @@ msgstr "ประวัติ"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "_General"
-msgstr "_ทั้วไป"
+msgstr "_ทั่วไป"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Pattern"
