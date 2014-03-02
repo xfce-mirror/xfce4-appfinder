@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-02 23:08+0200\n"
-"PO-Revision-Date: 2013-11-19 14:53+0000\n"
-"Last-Translator: Nick <nick@xfce.org>\n"
+"PO-Revision-Date: 2014-03-02 21:30+0000\n"
+"Last-Translator: PavelNicklasson <pavelnicklasson@bahnhof.se>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/xfce/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,7 +51,7 @@ msgstr "Programet har inget kommando"
 
 #: ../src/appfinder-model.c:2157
 msgid "Commands History"
-msgstr "Kommando historia"
+msgstr "Kommandohistoria"
 
 #: ../src/appfinder-preferences.c:221
 msgid "C_lear"
@@ -59,20 +59,20 @@ msgstr "Rensa"
 
 #: ../src/appfinder-preferences.c:222
 msgid "This will permanently clear the custom command history."
-msgstr "Detta kommer att permanent rensa din kommando historia"
+msgstr "Detta kommer att rensa din kommando historia permanent."
 
 #: ../src/appfinder-preferences.c:223
 msgid "Are you sure you want to clear the command history?"
-msgstr "Är du säker att du vill rensa din kommando historia?"
+msgstr "Är du säker att du vill rensa kommandohistorien?"
 
 #: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
-msgstr "Den anpassade åtgärden kommer raderas permanent."
+msgstr "Den anpassade åtgärden kommer att tas bort permanent."
 
 #: ../src/appfinder-preferences.c:334
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "Är du säker att du vill radera mönster \"%s\"?"
+msgstr "Är du säker på att du vill radera mönster \"%s\"?"
 
 #: ../src/appfinder-window.c:220 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:10
@@ -86,26 +86,26 @@ msgstr "Växla vy"
 
 #: ../src/appfinder-window.c:364
 msgid "La_unch"
-msgstr "Starta"
+msgstr "St_arta"
 
 #: ../src/appfinder-window.c:805
 msgid "Failed to launch desktop item editor"
-msgstr "Misslyckades med att starta skrivbords objekt redigerare"
+msgstr "Misslyckades att starta skrivbordsobjektredigerare"
 
 #: ../src/appfinder-window.c:831
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Detta kommer att permanent radera din skrivbords fil från din hem mapp."
+msgstr "Detta kommer att radera din skrivbordsfil från din hemmapp permanent."
 
 #: ../src/appfinder-window.c:832
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Är du säker att du vill återställa \"%s\"?"
+msgstr "Är du säker på att du vill återställa \"%s\"?"
 
 #: ../src/appfinder-window.c:842
 msgid "Failed to remove desktop file"
-msgstr "Misslyckades med att radera skrivbords fil"
+msgstr "Misslyckades att radera skrivbordsfil"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -114,11 +114,11 @@ msgstr "Misslyckades med att radera skrivbords fil"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "För att åter visa objektet måste du manuellt radera skrivbords filen från \"%s\" eller öppna filen i samma mapp och radera linjen \"%s\"."
+msgstr "För att åter visa objektet måste du manuellt radera skrivbords filen från \"%s\" eller öppna filen i samma mapp och radera raden \"%s\"."
 
 #: ../src/appfinder-window.c:880 ../src/appfinder-window.c:972
 msgid "_Hide"
-msgstr "dölj"
+msgstr "D_ölj"
 
 #: ../src/appfinder-window.c:881
 #, c-format
@@ -135,11 +135,11 @@ msgstr "Visa versionsinformation och avsluta"
 
 #: ../src/main.c:77
 msgid "Replace the existing service"
-msgstr "Ersätt alla existerande tjänster"
+msgstr "Ersätt existerande tjänster"
 
 #: ../src/main.c:78
 msgid "Quit all instances"
-msgstr "Avsluta alla förekomster"
+msgstr "Avsluta alla instanser"
 
 #: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
@@ -152,16 +152,16 @@ msgstr "Tvingad att avsluta"
 
 #: ../src/main.c:448
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "Kunde inte daemonisera processen"
 
 #: ../src/main.c:524
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr ""
+msgstr "Skriv \"%s --help\" för användning."
 
 #: ../src/main.c:535
 msgid "The Xfce development team. All rights reserved."
-msgstr "The Xfce development team. Alla rättigheter är reserverade."
+msgstr "The Xfce development team. Alla rättigheter reserverade."
 
 #: ../src/main.c:536
 #, c-format
@@ -206,7 +206,7 @@ msgstr "Mycket Stor"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "Remember last _selected category"
-msgstr "Kom ihåg _senaste valda kategori"
+msgstr "Kom ihåg _senast valda kategori"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
@@ -214,18 +214,18 @@ msgstr "C_entrera alltid fönstret"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
-msgstr "C_entrera fönstret vid uppstart"
+msgstr "Centrera fönstret vid start."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr ""
+msgstr "Fortsätt kör _instansen i bakgrunden"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr ""
+msgstr "Istället för att avsluta programmet då det sista fönstret stängs, behåll en instans körande för att snabba upp nya fönster. Du kanske vill avaktivera detta för att minska minnesanvändning."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
@@ -237,11 +237,11 @@ msgstr "_Visa objekt som ikoner"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Text besi_de icons"
-msgstr "Text bredvid ikoner"
+msgstr "Text bre_dvid ikoner"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Ite_m icon size:"
-msgstr "Objekt ikon storlek"
+msgstr "Iko_nstorlek för objekt:"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Categ_ory icon size:"
@@ -253,7 +253,7 @@ msgstr "Utseende"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "C_lear Custom Command History"
-msgstr "Rensa kommando historia"
+msgstr "Rensa din kommando _historia"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "History"
@@ -261,7 +261,7 @@ msgstr "Historia"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "_General"
-msgstr "_Generellt"
+msgstr "_Allmänt"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Pattern"
@@ -273,7 +273,7 @@ msgstr "Lägg till en ny anpassad åtgärd."
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Ta bort den markerade åtgärden."
 
 #: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
@@ -281,7 +281,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Om den här typen anges som prefix, kommer %s att ersättas av strängen efter mönstret, %S med den kompletta posttexten. För reguljära uttryck kan du använda \\0 och \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
@@ -297,7 +297,7 @@ msgstr "_Typ"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Save match in command history"
-msgstr ""
+msgstr "_Spara matchning i kommandohistorik"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Custom _Actions"
