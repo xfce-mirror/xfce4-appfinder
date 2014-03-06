@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-03-05 15:45+0000\n"
+"PO-Revision-Date: 2014-03-06 09:50+0000\n"
 "Last-Translator: Tornes Llume <l.lumex03.tornes@gmail.com>\n"
 "Language-Team: Asturian (http://www.transifex.com/projects/p/xfce/language/ast/)\n"
 "MIME-Version: 1.0\n"
@@ -289,7 +289,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
-msgstr ""
+msgstr "Co_mandu:"
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
