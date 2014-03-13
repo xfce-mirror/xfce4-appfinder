@@ -12,6 +12,7 @@
 # Dmitrij Smirnov <other@igus.lv>, 2010
 # Maxim Zenin <webmechanics@gmail.com>, 2006
 # NIkitaBelobrov <qvzqvz@gmail.com>, 2008
+# asvl <alyoshin.s@gmail.com>, 2014
 # Sergey Fedoseev <fedoseev.sergey@gmail.com>, 2006
 # shlyapugin <shlyapugin@gmail.com>, 2013
 msgid ""
@@ -19,8 +20,8 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-03-11 15:05+0000\n"
-"Last-Translator: adem4ik\n"
+"PO-Revision-Date: 2014-03-13 19:50+0000\n"
+"Last-Translator: asvl <alyoshin.s@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/xfce/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,7 +89,7 @@ msgstr "Пользовательское действие будет удале�
 #: ../src/appfinder-preferences.c:332
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "Удалить шаблон \"%s\"?"
+msgstr "Удалить шаблон «%s»?"
 
 #: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
@@ -111,16 +112,16 @@ msgstr "Не удалось запустить редактор элементо
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Ваш desktop файл будет навсегда удалён из вашей домашней директории."
+msgstr "Ваш desktop-файл будет навсегда удалён из вашего домашнего каталога."
 
 #: ../src/appfinder-window.c:907
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Обратить шаблон \"%s\"?"
+msgstr "Возвратить шаблон «%s»?"
 
 #: ../src/appfinder-window.c:917
 msgid "Failed to remove desktop file"
-msgstr "Не удалось удалить desktop файл"
+msgstr "Не удалось удалить desktop-файл"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -129,16 +130,16 @@ msgstr "Не удалось удалить desktop файл"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Чтобы не отображать этот элемент, вам придётся вручную удалить desktop файл из \"%s\"\\ или открыть этот файл в той же директории и удалить строку \"%s\"\\"
+msgstr "Чтобы снова отображать этот элемент, вам придётся вручную удалить desktop-файл из «%s» или открыть этот файл в том же каталоге и удалить строку «%s»."
 
 #: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
-msgstr "Не отображать"
+msgstr "С_крыть"
 
 #: ../src/appfinder-window.c:956
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Не отображать \"%s\"?"
+msgstr "Скрыть «%s»?"
 
 #: ../src/appfinder-window.c:1037
 msgid "Remove From Bookmarks"
@@ -188,39 +189,39 @@ msgstr "префикс"
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Regular Expression"
-msgstr "Регулярное выражение"
+msgstr "регулярное выражение"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Very Small"
-msgstr "Крошечный"
+msgstr "крошечный"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Smaller"
-msgstr "Очень маленький"
+msgstr "очень маленький"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "Small"
-msgstr "Маленький"
+msgstr "маленький"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "Normal"
-msgstr "Нормальный"
+msgstr "нормальный"
 
 #: ../src/appfinder-preferences.glade.h:7
 msgid "Large"
-msgstr "Крупный"
+msgstr "крупный"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Larger"
-msgstr "Большой"
+msgstr "большой"
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Very Large"
-msgstr "Очень большой"
+msgstr "очень большой"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "Remember last _selected category"
-msgstr "Запоминать _использованные категории"
+msgstr "Запо_минать использованные категории"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
@@ -255,7 +256,7 @@ msgstr "_Текст возле значков"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Ite_m icon size:"
-msgstr "Размер значка _элемента:"
+msgstr "Размер значка э_лемента:"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Categ_ory icon size:"
