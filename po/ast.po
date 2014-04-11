@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-03-06 09:50+0000\n"
+"PO-Revision-Date: 2014-04-11 11:35+0000\n"
 "Last-Translator: Tornes Llume <l.lumex03.tornes@gmail.com>\n"
 "Language-Team: Asturian (http://www.transifex.com/projects/p/xfce/language/ast/)\n"
 "MIME-Version: 1.0\n"
@@ -148,7 +148,7 @@ msgstr "Emprentar información de versión y colar"
 
 #: ../src/main.c:66
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Reemplazar el serviciu esistente"
 
 #: ../src/main.c:67
 msgid "Quit all instances"
@@ -210,7 +210,7 @@ msgstr "Perllargu"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Recordar la cabera e_staya esbillada"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
