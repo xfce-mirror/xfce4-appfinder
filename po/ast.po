@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-04-11 11:35+0000\n"
+"PO-Revision-Date: 2014-04-12 14:04+0000\n"
 "Last-Translator: Tornes Llume <l.lumex03.tornes@gmail.com>\n"
 "Language-Team: Asturian (http://www.transifex.com/projects/p/xfce/language/ast/)\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. close all windows and quit
 #: ../src/appfinder-gdbus.c:84
 msgid "Forced to quit"
-msgstr ""
+msgstr "Fociar colar"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -41,7 +41,7 @@ msgstr "Comandu"
 
 #: ../src/appfinder-model.c:578
 msgid "Categories"
-msgstr "Categoríes"
+msgstr "Estayes"
 
 #: ../src/appfinder-model.c:579
 msgid "Filename"
@@ -87,7 +87,7 @@ msgstr "Guetador d'aplicaciones"
 
 #: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
-msgstr ""
+msgstr "Cambear mou de vista"
 
 #: ../src/appfinder-window.c:394
 msgid "La_unch"
@@ -110,7 +110,7 @@ msgstr "¿De xuru quies desfacer \"%s\"?"
 
 #: ../src/appfinder-window.c:917
 msgid "Failed to remove desktop file"
-msgstr "Fqllu al desaniciar el ficheru d'escritoriu"
+msgstr "Fallu al desaniciar el ficheru d'escritoriu"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -119,7 +119,7 @@ msgstr "Fqllu al desaniciar el ficheru d'escritoriu"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
+msgstr "P'amosar l'oxetu tienes que desaniciar a mano'l ficheru d'escritoriu de \"%s\" o abrir el ficheru nel mesmu direutoriu y desaniciar la llinia \"%s\"."
 
 #: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
@@ -144,7 +144,7 @@ msgstr ""
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
-msgstr "Emprentar información de versión y colar"
+msgstr "Amosar información de versión y colar"
 
 #: ../src/main.c:66
 msgid "Replace the existing service"
@@ -170,7 +170,7 @@ msgstr "L'equipu de desendolcu de Xfce. Tolos drechos reservaos."
 #: ../src/main.c:236
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Por favor, informe d'errores a <%s>."
+msgstr "Por favor, informa d'errores a <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Prefix"
@@ -182,7 +182,7 @@ msgstr "Espresión regular"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Very Small"
-msgstr "Perpequeñu"
+msgstr "Mui pequeñu"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Smaller"
@@ -206,7 +206,7 @@ msgstr "Más llargu"
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Very Large"
-msgstr "Perllargu"
+msgstr "Mui llargu"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "Remember last _selected category"
@@ -214,11 +214,11 @@ msgstr "Recordar la cabera e_staya esbillada"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
-msgstr "C_entrar siempres la ventanu"
+msgstr "C_entrar siempres la ventana"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
-msgstr "Centrar el ventanu nel aniciu."
+msgstr "Centrar la ventana nel aniciu."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
@@ -229,11 +229,11 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "En cuantes de colar de l'aplicación cuando'l caberu ventanu se zarre, siguir executando una instancia pa entainar l'abertura de ventanos nuevos. Pues querer deshabilitar esto p'amenorgar l'usu de memoria."
+msgstr "En cuantes de colar de l'aplicación cuando la cabera ventana se zarre, caltener n'execución una instancia pa entainar l'abertura de ventanes nueves. Pues querer deshabilitar esto p'amenorgar l'usu de memoria."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
-msgstr ""
+msgstr "Comportamientu"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "_View items as icons"
@@ -241,23 +241,23 @@ msgstr "_ Ver oxetos como iconos"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Text besi_de icons"
-msgstr ""
+msgstr "Testu al _llau los iconos"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Ite_m icon size:"
-msgstr ""
+msgstr "Ta_mañu d'iconu d'oxetu:"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Categ_ory icon size:"
-msgstr ""
+msgstr "Tamañu d'ic_onu d'estaya:"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Appearance"
-msgstr ""
+msgstr "Aspeutu"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "C_lear Custom Command History"
-msgstr ""
+msgstr "Llimpiar historia del comandu personalizáu"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "History"
@@ -273,7 +273,7 @@ msgstr "Patrón"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Add a new custom action."
-msgstr "Amestar aición personalizada"
+msgstr "Amestar una aición personalizada nueva."
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Remove the currently selected action."
@@ -285,7 +285,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Si la triba ta afitada al prefixu, %s reemplazaráse cola cadena dempués del patrón, %S cola entrada completa del testu. Pa espresiones regulares pues usar \\0 y \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
@@ -301,7 +301,7 @@ msgstr "_Triba:"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Save match in command history"
-msgstr ""
+msgstr "_Atroxar coincidencia na historia de comandos"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Custom _Actions"
@@ -309,7 +309,7 @@ msgstr "_Aiciones personalizaes"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Alcuentre y execute aplicaciones instalaes nel sistema"
+msgstr "Alcuentra y llanza aplicaciones instalaes nel to sistema"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
