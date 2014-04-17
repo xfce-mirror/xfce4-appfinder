@@ -8,14 +8,14 @@
 # Huang Huan <unicon221@gmail.com>, 2006
 # Hunt Xu <huntxu@live.cn>, 2008,2010
 # Jick Nan <jick.nan@gmail.com>, 2006
-# 玉堂白鹤 <yjwork@qq.com>, 2013
+# 玉堂白鹤 <yjwork@qq.com>, 2013-2014
 # Yongtao Yang <yongtao.yang@telia.com>, 2004
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-09-10 03:21+0000\n"
+"POT-Creation-Date: 2014-02-23 00:30+0100\n"
+"PO-Revision-Date: 2014-04-17 05:16+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/xfce/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -23,6 +23,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr "强制退出"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
