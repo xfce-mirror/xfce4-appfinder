@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Tornes Llume <l.lumex03.tornes@gmail.com>, 2014
+# Tornes Llume <l.lumex03.tornes@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-02 23:08+0200\n"
-"PO-Revision-Date: 2014-04-11 11:44+0000\n"
+"PO-Revision-Date: 2014-04-21 09:08+0000\n"
 "Last-Translator: Tornes Llume <l.lumex03.tornes@gmail.com>\n"
 "Language-Team: Asturian (http://www.transifex.com/projects/p/xfce/language/ast/)\n"
 "MIME-Version: 1.0\n"
@@ -20,27 +21,27 @@ msgstr ""
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
-msgstr ""
+msgstr "Toles aplicaciones"
 
 #: ../src/appfinder-model.c:549
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: ../src/appfinder-model.c:550
 msgid "Comment"
-msgstr ""
+msgstr "Comentariu"
 
 #: ../src/appfinder-model.c:551
 msgid "Command"
-msgstr ""
+msgstr "Comandu"
 
 #: ../src/appfinder-model.c:552
 msgid "Categories"
-msgstr "Categoríes"
+msgstr "Estayes"
 
 #: ../src/appfinder-model.c:553
 msgid "Filename"
-msgstr ""
+msgstr "Nome de ficheru"
 
 #: ../src/appfinder-model.c:1833
 msgid "Application has no command"
@@ -48,11 +49,11 @@ msgstr "L'aplicación nun tien un comandu"
 
 #: ../src/appfinder-model.c:2157
 msgid "Commands History"
-msgstr ""
+msgstr "Historia de comandos"
 
 #: ../src/appfinder-preferences.c:221
 msgid "C_lear"
-msgstr ""
+msgstr "L_limpiar"
 
 #: ../src/appfinder-preferences.c:222
 msgid "This will permanently clear the custom command history."
@@ -69,7 +70,7 @@ msgstr "La aición personalizada desaniciaráse dafechu."
 #: ../src/appfinder-preferences.c:334
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgstr "¿De xuru quies desaniciar dafechu'l patrón \"%s\"?"
 
 #: ../src/appfinder-window.c:220 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:10
@@ -79,15 +80,15 @@ msgstr "Guetador d'aplicaciones"
 
 #: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
-msgstr ""
+msgstr "Cambear mou de vista"
 
 #: ../src/appfinder-window.c:364
 msgid "La_unch"
-msgstr ""
+msgstr "Executa_r"
 
 #: ../src/appfinder-window.c:805
 msgid "Failed to launch desktop item editor"
-msgstr ""
+msgstr "Fallu al executar l'editor d'oxetos"
 
 #: ../src/appfinder-window.c:831
 msgid ""
@@ -111,7 +112,7 @@ msgstr "Fallu al desaniciar el ficheru d'escritoriu"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "P'anubrir un oxetu tienes de desaniciar manualmente'l ficheru d'escritoriu de \"%s\" o abrir el ficheru nel mesmu direutoriu y desaniciar la llinia \"%s\"."
+msgstr "P'amosar l'oxetu tienes que desaniciar a mano'l ficheru d'escritoriu de \"%s\" o abrir el ficheru nel mesmu direutoriu y desaniciar la llinia \"%s\"."
 
 #: ../src/appfinder-window.c:880 ../src/appfinder-window.c:972
 msgid "_Hide"
@@ -128,11 +129,11 @@ msgstr ""
 
 #: ../src/main.c:76
 msgid "Print version information and exit"
-msgstr ""
+msgstr "Amosar información de versión y colar"
 
 #: ../src/main.c:77
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Reemplazar el serviciu esistente"
 
 #: ../src/main.c:78
 msgid "Quit all instances"
@@ -145,16 +146,16 @@ msgstr "Nun intentes usar o llegar a ser un serviciu D-Bus"
 #. close all windows and quit
 #: ../src/main.c:244
 msgid "Forced to quit"
-msgstr ""
+msgstr "Fociar colar"
 
 #: ../src/main.c:448
 msgid "Unable to daemonize the process"
-msgstr ""
+msgstr "Nun pue volvese un degorriu'l procesu"
 
 #: ../src/main.c:524
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr ""
+msgstr "Escribi \"%s --help\" pal usu."
 
 #: ../src/main.c:535
 msgid "The Xfce development team. All rights reserved."
@@ -163,7 +164,7 @@ msgstr "L'equipu de desendolcu de Xfce. Tolos drechos reservaos."
 #: ../src/main.c:536
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Por favor, informe d'errores a <%s>."
+msgstr "Por favor, informa d'errores a <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Prefix"
@@ -195,11 +196,11 @@ msgstr "Grande"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Larger"
-msgstr "Más grande"
+msgstr "Más llargu"
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Very Large"
-msgstr "Mui grande"
+msgstr "Mui llargu"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "Remember last _selected category"
@@ -211,46 +212,46 @@ msgstr "C_entrar siempres la ventana"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Centrar la ventana nel aniciu."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr ""
+msgstr "Executar de fondu la _instancia"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr ""
+msgstr "En cuantes de colar de l'aplicación cuando la cabera ventana se zarre, caltener n'execución una instancia pa entainar l'abertura de ventanes nueves. Pues querer deshabilitar esto p'amenorgar l'usu de memoria."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
-msgstr ""
+msgstr "Comportamientu"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "_View items as icons"
-msgstr ""
+msgstr "_ Ver oxetos como iconos"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Text besi_de icons"
-msgstr ""
+msgstr "Testu al _llau los iconos"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Ite_m icon size:"
-msgstr ""
+msgstr "Ta_mañu d'iconu d'oxetu:"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Categ_ory icon size:"
-msgstr ""
+msgstr "Tamañu d'ic_onu d'estaya:"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Appearance"
-msgstr ""
+msgstr "Aspeutu"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "C_lear Custom Command History"
-msgstr ""
+msgstr "Llimpiar historia del comandu personalizáu"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "History"
@@ -258,7 +259,7 @@ msgstr "Historia"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "_General"
-msgstr ""
+msgstr "_Xeneral"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Pattern"
@@ -266,11 +267,11 @@ msgstr "Patrón"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Add a new custom action."
-msgstr "Amestar una aición personalizada nueva"
+msgstr "Amestar una aición personalizada nueva."
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Desaniciar l'aición esbillada anguaño."
 
 #: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
@@ -278,7 +279,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Si la triba ta afitada al prefixu, %s reemplazaráse cola cadena dempués del patrón, %S cola entrada completa del testu. Pa espresiones regulares pues usar \\0 y \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
@@ -294,7 +295,7 @@ msgstr "_Triba:"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Save match in command history"
-msgstr ""
+msgstr "_Atroxar coincidencia na historia de comandos"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Custom _Actions"
@@ -302,7 +303,7 @@ msgstr "_Aiciones personalizaes"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Alcuentre y execute aplicaciones instalaes nel sistema"
+msgstr "Alcuentra y llanza aplicaciones instalaes nel to sistema"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
