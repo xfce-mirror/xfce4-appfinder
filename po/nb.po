@@ -1,161 +1,287 @@
-# Norwegian Bokmal translations for xfce package.
-# Copyright (C) 2008 THE xfce'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the xfce package.
-# Terje Uriansrud <ter@operamail.com>, 2008.
-# Terje Uriansrud <terje@uriansrud.net>, 2009.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# haarek <haarektrans@gmail.com>, 2014
+# Terje Uriansrud <terje@uriansrud.net>, 2009
+# Terje Uriansrud <ter@operamail.com>, 2008
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce 4-appfinder\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-21 20:43+0200\n"
-"PO-Revision-Date: 2008-10-15 23:10+0200\n"
-"Last-Translator: Terje Uriansrud <terje@uriansrud.net>\n"
-"Language-Team: Norwegian Bokmal\n"
-"Language: \n"
+"POT-Creation-Date: 2014-02-23 00:30+0100\n"
+"PO-Revision-Date: 2014-04-26 21:42+0000\n"
+"Last-Translator: haarek <haarektrans@gmail.com>\n"
+"Language-Team: Norwegian Bokmål (http://www.transifex.com/projects/p/xfce4-appfinder/language/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nb\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/appfinder-category-model.c:108
-#, fuzzy
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr "Tvunget til å avslutte"
+
+#: ../src/appfinder-category-model.c:146
 msgid "All Applications"
-msgstr "Programkatalog"
+msgstr "Alle programmer"
 
-#: ../src/appfinder-model.c:422
+#: ../src/appfinder-model.c:575
 msgid "Name"
+msgstr "Navn"
+
+#: ../src/appfinder-model.c:576
+msgid "Comment"
 msgstr ""
 
-#: ../src/appfinder-model.c:423
+#: ../src/appfinder-model.c:577
 msgid "Command"
-msgstr ""
+msgstr "Kommando"
 
-#: ../src/appfinder-model.c:424
+#: ../src/appfinder-model.c:578
 msgid "Categories"
 msgstr "Kategorier"
 
-#: ../src/appfinder-model.c:425
+#: ../src/appfinder-model.c:579
 msgid "Filename"
-msgstr ""
+msgstr "Filnavn"
 
-#: ../src/appfinder-model.c:1317
-#, fuzzy
+#: ../src/appfinder-model.c:2100
 msgid "Application has no command"
-msgstr "Programkatalog"
-
-#: ../src/appfinder-model.c:1634
-msgid "Commands History"
 msgstr ""
 
-#: ../src/appfinder-preferences.c:175
+#: ../src/appfinder-model.c:2519
+msgid "Commands History"
+msgstr "Kommandohistorikk"
+
+#: ../src/appfinder-model.c:2543
+msgid "Bookmarks"
+msgstr "Bokmerker"
+
+#: ../src/appfinder-preferences.c:219
 msgid "C_lear"
 msgstr ""
 
-#: ../src/appfinder-preferences.c:176
+#: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
-msgstr ""
+msgstr "Dette vil tømme den egendefinerte kommandohistorikken og kan ikke angres."
 
-#: ../src/appfinder-preferences.c:177
+#: ../src/appfinder-preferences.c:221
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "Er du sikker på at du ønsker å tømme kommandohistorikken?"
 
-#: ../src/appfinder-preferences.c:287
+#: ../src/appfinder-preferences.c:331
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "Den egendefinerte handlingen vil bli slettet permanent."
 
-#: ../src/appfinder-preferences.c:288
+#: ../src/appfinder-preferences.c:332
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr ""
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
-#: ../src/appfinder-preferences.glade.h:3
+#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Programkatalog"
 
-#: ../src/appfinder-window.c:224
+#: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
 msgstr ""
 
-#: ../src/main.c:70
+#: ../src/appfinder-window.c:394
+msgid "La_unch"
+msgstr ""
+
+#: ../src/appfinder-window.c:880
+msgid "Failed to launch desktop item editor"
+msgstr ""
+
+#: ../src/appfinder-window.c:906
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr ""
+
+#: ../src/appfinder-window.c:907
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr "Er du sikker på at du vil tilbakestille «%s»?"
+
+#: ../src/appfinder-window.c:917
+msgid "Failed to remove desktop file"
+msgstr "Klarte ikke å fjerne skrivebordsfil"
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: ../src/appfinder-window.c:950
+#, c-format
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr ""
+
+#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
+msgid "_Hide"
+msgstr ""
+
+#: ../src/appfinder-window.c:956
+#, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr "Er du sikker på at du ønsker å skjule «%s»?"
+
+#: ../src/appfinder-window.c:1037
+msgid "Remove From Bookmarks"
+msgstr "Fjern fra bokmerker"
+
+#: ../src/appfinder-window.c:1037
+msgid "Add to Bookmarks"
+msgstr "Legg til bokmerker"
+
+#: ../src/main.c:64
 msgid "Start in collapsed mode"
 msgstr ""
 
-#: ../src/main.c:71
-#, fuzzy
+#: ../src/main.c:65
 msgid "Print version information and exit"
-msgstr "Versjonsinformasjon"
+msgstr ""
 
-#: ../src/main.c:72
+#: ../src/main.c:66
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Erstatt den eksisterende tjenesten"
 
-#: ../src/main.c:73
+#: ../src/main.c:67
 msgid "Quit all instances"
-msgstr ""
+msgstr "Avslutt alle instanser"
 
-#: ../src/main.c:74
+#: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
 msgstr ""
 
-#. close all windows and quit
-#: ../src/main.c:159
-msgid "Forced to quit"
-msgstr ""
-
-#: ../src/main.c:346
-msgid "Unable to daemonize the process"
-msgstr ""
-
-#: ../src/main.c:418
-#, fuzzy, c-format
+#: ../src/main.c:224
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Skriv '%s --help' for hjelp om bruk."
+msgstr ""
 
-#: ../src/main.c:429
+#: ../src/main.c:235
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce utviklingsteam. Alle rettigheter reservert."
 
-#: ../src/main.c:430
+#: ../src/main.c:236
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Rapporter feil til <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
+msgid "Prefix"
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "Veldig liten"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "Mindre"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "Liten"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "Normal"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "Stor"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "Større"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "Veldig stor"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:4
-msgid "Behaviour"
+#: ../src/appfinder-preferences.glade.h:13
+msgid "Center the window on startup."
+msgstr "Midtstill vinduet ved oppstart."
+
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:5
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Behaviour"
+msgstr "Oppførsel"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr "_Vis elementer som ikoner"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "Utseende"
+
+#: ../src/appfinder-preferences.glade.h:22
 msgid "C_lear Custom Command History"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:6
-msgid "Center the window on startup."
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:7
-msgid "Co_mmand:"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:8
-msgid "Custom _Actions"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:9
+#: ../src/appfinder-preferences.glade.h:23
 msgid "History"
+msgstr "Historikk"
+
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "_Generelt"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "Legg til en ny egendefinert handling."
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -163,36 +289,24 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:12
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:13
-msgid "Pattern"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:14
-msgid "Prefix"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Regular Expression"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:16
-msgid "Remember last _selected category"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:17
-msgid "Remove the currently selected action."
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "_General"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:32
 msgid "_Type:"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:34
+msgid "Custom _Actions"
 msgstr ""
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
@@ -201,56 +315,8 @@ msgstr "Finn og kjør programmer installert på datamaskinen din"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr ""
+msgstr "Kjør program ..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr ""
-
-#~ msgid "[MENUFILE]"
-#~ msgstr "[MENYFIL]"
-
-#~ msgid "Unable to initialize GTK+."
-#~ msgstr "Klarte ikke initialisere GTK+."
-
-#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
-#~ msgstr "Klarte ikke koble til xfconf prosessen. Årsak: %s"
-
-#~ msgid "Failed to connect to xfconf daemon."
-#~ msgstr "Klarte ikke koble til xfconf prosessen"
-
-#~ msgid "Search"
-#~ msgstr "Søk"
-
-#~ msgid "C_lose after launch"
-#~ msgstr "_Lukk etter start"
-
-#~ msgid "Launch"
-#~ msgstr "Start"
-
-#~ msgid "Could not load menu from %s"
-#~ msgstr "Klarte ikke laste meny fra %s"
-
-#~ msgid "All"
-#~ msgstr "Alle"
-
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "Klarte ikke starte kommandoen \"%s\"."
-
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>Kategorier:</b> %s"
-
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>Kommando:</b> %s"
-
-#~ msgid "Could not load system menu"
-#~ msgstr "Klarte ikke laste inn systemmeny"
-
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "Klarte ikke starte programmet %s. Årsak: %s"
-
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "Klarte ikke laste inn meny fra %s. Årsak: %s"
-
-#~ msgid "Filter"
-#~ msgstr "Filter"
+msgstr "Kjør et program"
