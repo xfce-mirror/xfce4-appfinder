@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-04-26 21:42+0000\n"
+"PO-Revision-Date: 2014-05-10 10:23+0000\n"
 "Last-Translator: haarek <haarektrans@gmail.com>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/projects/p/xfce4-appfinder/language/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "Filnavn"
 
 #: ../src/appfinder-model.c:2100
 msgid "Application has no command"
-msgstr ""
+msgstr "Programmet har ingen kommando"
 
 #: ../src/appfinder-model.c:2519
 msgid "Commands History"
@@ -63,7 +63,7 @@ msgstr "Bokmerker"
 
 #: ../src/appfinder-preferences.c:219
 msgid "C_lear"
-msgstr ""
+msgstr "Tøm"
 
 #: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
@@ -80,7 +80,7 @@ msgstr "Den egendefinerte handlingen vil bli slettet permanent."
 #: ../src/appfinder-preferences.c:332
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgstr "Er du sikker på at du vil slette mønsteret «%s»?"
 
 #: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
@@ -89,21 +89,21 @@ msgstr "Programkatalog"
 
 #: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
-msgstr ""
+msgstr "Bytt visningsmodus"
 
 #: ../src/appfinder-window.c:394
 msgid "La_unch"
-msgstr ""
+msgstr "Start"
 
 #: ../src/appfinder-window.c:880
 msgid "Failed to launch desktop item editor"
-msgstr ""
+msgstr "Klarte ikke åpne redigering av skrivebordselement"
 
 #: ../src/appfinder-window.c:906
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr ""
+msgstr "Dette vil permanent fjerne den egendefinerte skrivebordsfilen fra din hjem-mappe."
 
 #: ../src/appfinder-window.c:907
 #, c-format
@@ -121,11 +121,11 @@ msgstr "Klarte ikke å fjerne skrivebordsfil"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
+msgstr "For å vise det skjulte elementet må du manuelt fjerne skrivebordsfilen fra «%s» eller åpne filen i samme mappe og fjerne linjen «%s»."
 
 #: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
-msgstr ""
+msgstr "Skjul"
 
 #: ../src/appfinder-window.c:956
 #, c-format
@@ -163,7 +163,7 @@ msgstr ""
 #: ../src/main.c:224
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr ""
+msgstr "Skriv «%s --help» for bruksinstruksjoner."
 
 #: ../src/main.c:235
 msgid "The Xfce development team. All rights reserved."
@@ -176,7 +176,7 @@ msgstr "Rapporter feil til <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Prefix"
-msgstr ""
+msgstr "Prefiks"
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Regular Expression"
@@ -279,7 +279,7 @@ msgstr "Legg til en ny egendefinert handling."
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Fjern den valgte handlingen."
 
 #: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
@@ -307,7 +307,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Custom _Actions"
-msgstr ""
+msgstr "Egendefinerte handlinger"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
