@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Marek Piechut <mco@o2.pl>, 2005
+# OSWorld <michal.olber@osworld.pl>, 2014
 # Piotr Maliński <riklaunim@gmail.com>, 2006
 # Piotr Sokół <psokol@jabster.pl>, 2009-2013
 # Piotr Strębski <strebski@o2.pl>, 2014
@@ -12,9 +13,9 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-02-23 09:35+0000\n"
-"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
-"Language-Team: Polish (http://www.transifex.com/projects/p/xfce/language/pl/)\n"
+"PO-Revision-Date: 2014-06-01 18:12+0000\n"
+"Last-Translator: OSWorld <michal.olber@osworld.pl>\n"
+"Language-Team: Polish (http://www.transifex.com/projects/p/xfce4-appfinder/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -173,7 +174,7 @@ msgstr "Zespół twórców Xfce. Wszystkie prawa zastrzeżone."
 #: ../src/main.c:236
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Proszę zgłaszać błędy na adres <%s>."
+msgstr "Proszę zgłaszać błędy na adres <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Prefix"
