@@ -6,14 +6,15 @@
 # Collet Etienne <xanaxlnx@gmail.com>, 2005
 # jc1 <jc1.quebecos@gmail.com>, 2013
 # jc1 <jc1.quebecos@gmail.com>, 2013-2014
+# Yannick Le Guen <leguen.yannick@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-02-23 23:48+0000\n"
-"Last-Translator: jc1 <jc1.quebecos@gmail.com>\n"
-"Language-Team: French (http://www.transifex.com/projects/p/xfce/language/fr/)\n"
+"PO-Revision-Date: 2014-07-09 09:30+0000\n"
+"Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/xfce4-appfinder/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,7 +24,7 @@ msgstr ""
 #. close all windows and quit
 #: ../src/appfinder-gdbus.c:84
 msgid "Forced to quit"
-msgstr "Forcé à quitter"
+msgstr "Forcé de quitter"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -89,7 +90,7 @@ msgstr "Liste des applications"
 
 #: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
-msgstr "Basculer vers le mode vue"
+msgstr "Basculer le mode d'affichage"
 
 #: ../src/appfinder-window.c:394
 msgid "La_unch"
@@ -163,7 +164,7 @@ msgstr "Ne pas essayer d'utiliser ou de devenir un service D-Bus."
 #: ../src/main.c:224
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Saisissez '%s ---help' pour obtenir des informations sur l'utilisation."
+msgstr "Taper « %s --help » pour plus d'aide."
 
 #: ../src/main.c:235
 msgid "The Xfce development team. All rights reserved."
@@ -172,7 +173,7 @@ msgstr "L'équipe de développement Xfce. Tous droits réservés."
 #: ../src/main.c:236
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "S'il vous plait rapporter les bogues à <%s>."
+msgstr "Veuillez signaler les bogues à <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Prefix"
@@ -279,7 +280,7 @@ msgstr "Ajouter une nouvelle action personnalisée."
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Remove the currently selected action."
-msgstr "Retirez l'action actuellement sélectionnée."
+msgstr "Supprimer l'action actuellement sélectionnée."
 
 #: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
@@ -303,7 +304,7 @@ msgstr "_Type :"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Save match in command history"
-msgstr "Enregist_rer correspondre dans l'historique des commandes"
+msgstr "Enregi_strer les saisies dans l'historique des commandes"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Custom _Actions"
