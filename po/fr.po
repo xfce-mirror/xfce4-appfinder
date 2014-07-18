@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-07-09 09:30+0000\n"
+"PO-Revision-Date: 2014-07-18 13:45+0000\n"
 "Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/xfce4-appfinder/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -98,13 +98,13 @@ msgstr "_Lancer"
 
 #: ../src/appfinder-window.c:880
 msgid "Failed to launch desktop item editor"
-msgstr "Impossible de lancer l'éditeur d'élément de bureau"
+msgstr "Impossible de lancer l'éditeur de fichier desktop"
 
 #: ../src/appfinder-window.c:906
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Ceci effacera définitivement le fichier du bureau personnalisé de votre dossier personnel."
+msgstr "Ceci effacera définitivement le fichier desktop personnalisé de votre dossier personnel."
 
 #: ../src/appfinder-window.c:907
 #, c-format
@@ -113,7 +113,7 @@ msgstr "Voulez-vous vraiment annuler les modifications dans « %s » ?"
 
 #: ../src/appfinder-window.c:917
 msgid "Failed to remove desktop file"
-msgstr "Impossible de supprimer un fichier du bureau"
+msgstr "Impossible de supprimer le fichier desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -122,7 +122,7 @@ msgstr "Impossible de supprimer un fichier du bureau"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Pour afficher l'élément vous devez supprimer manuellement le fichier de bureau à partir de « %s » ou ouvrir le fichier dans le même répertoire et supprimer la ligne « %s »."
+msgstr "Pour afficher l'élément vous devez supprimer manuellement le fichier desktop à partir de « %s » ou ouvrir le fichier dans le même répertoire et supprimer la ligne « %s »."
 
 #: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
