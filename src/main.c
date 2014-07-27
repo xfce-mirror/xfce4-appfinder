@@ -197,7 +197,6 @@ gint
 main (gint argc, gchar **argv)
 {
   GError      *error = NULL;
-  const gchar *desktop;
   const gchar *startup_id;
   GSList      *windows_destroy;
 
