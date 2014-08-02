@@ -3,19 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2014
+# Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2014
 # Edscott Wilson Garcia <edscott@xfce.org>, 2004
-# MC <correomc2000-ing@yahoo.es>, 2013
-# Pablo Lezaeta <prflr88@gmail.com>, 2014
+# mc <correomc2000-ing@yahoo.es>, 2013
+# Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>, 2014
 # Rudy Godoy <rudy@stone-head.org>, 2005
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-03-21 04:40+0000\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitoschido@ubuntu.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/xfce/language/es/)\n"
+"PO-Revision-Date: 2014-08-02 01:51+0000\n"
+"Last-Translator: Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/xfce4-appfinder/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -57,7 +57,7 @@ msgstr "La aplicación no tiene una orden"
 
 #: ../src/appfinder-model.c:2519
 msgid "Commands History"
-msgstr "Histórico de órdenes"
+msgstr "Historial de órdenes"
 
 #: ../src/appfinder-model.c:2543
 msgid "Bookmarks"
@@ -69,11 +69,11 @@ msgstr "_Limpiar"
 
 #: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
-msgstr "Esto vaciará el histórico de órdenes personalizadas."
+msgstr "Esto vaciará el historial de órdenes personalizadas."
 
 #: ../src/appfinder-preferences.c:221
 msgid "Are you sure you want to clear the command history?"
-msgstr "¿Está seguro que quiere limpiar el histórico de órdenes?"
+msgstr "¿Está seguro que quiere limpiar el historial de órdenes?"
 
 #: ../src/appfinder-preferences.c:331
 msgid "The custom action will be deleted permanently."
@@ -261,11 +261,11 @@ msgstr "Apariencia"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "C_lear Custom Command History"
-msgstr "_Vaciar histórico de órdenes personalizadas"
+msgstr "_Vaciar historial de órdenes personalizadas"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "History"
-msgstr "Histórico"
+msgstr "Historial"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "_General"
@@ -305,7 +305,7 @@ msgstr "_Tipo:"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Save match in command history"
-msgstr "_Guardar coincidencia en el histórico de órdenes"
+msgstr "_Guardar coincidencia en el historial de órdenes"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Custom _Actions"
