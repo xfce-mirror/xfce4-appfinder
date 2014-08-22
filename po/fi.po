@@ -5,19 +5,25 @@
 # Translators:
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2013
 # Juha Kautto <juha@xfce.org>, 2004
+# Pasi Lallinaho <pasi@shimmerproject.org>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-11-11 18:30+0000\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish (http://www.transifex.com/projects/p/xfce/language/fi/)\n"
+"POT-Creation-Date: 2014-02-23 00:30+0100\n"
+"PO-Revision-Date: 2014-08-22 16:59+0000\n"
+"Last-Translator: Pasi Lallinaho <pasi@shimmerproject.org>\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/xfce4-appfinder/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr "Pakotettu lopettamaan"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
