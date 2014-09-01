@@ -5,21 +5,21 @@
 # Translators:
 # Enrico Tröger <enrico.troeger@uvena.de>, 2006,2008
 # Fabian Nowak <timystery@arcor.de>, 2008,2011
-# gem <eckert.georg@gmx.de>, 2013
+# Georg Eckert <eckert.georg@gmx.de>, 2013
 # Jannis Pohlmann <jannis@xfce.org>, 2008
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2012
 # Moritz Heiber <moe@xfce.org>, 2004
 # Nico Schümann <nico@prog.nico22.de>, 2008
 # Thomas Schütz <xfce@thschuetz.de>, 2012
-# to_ba, 2014
+# Tobias Bannert, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-03-08 20:24+0000\n"
-"Last-Translator: to_ba\n"
-"Language-Team: German (http://www.transifex.com/projects/p/xfce/language/de/)\n"
+"PO-Revision-Date: 2014-09-01 13:58+0000\n"
+"Last-Translator: Tobias Bannert\n"
+"Language-Team: German (http://www.transifex.com/projects/p/xfce4-appfinder/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -99,17 +99,17 @@ msgstr "Ansichtsmodus umstellen"
 
 #: ../src/appfinder-window.c:394
 msgid "La_unch"
-msgstr "A_usführen"
+msgstr "_Starten"
 
 #: ../src/appfinder-window.c:880
 msgid "Failed to launch desktop item editor"
-msgstr "Der Editor für die Arbeitsflächensymbole konnte nicht aufgerufen werden"
+msgstr "Die Bearbeitung für die Schreibtischeinträge konnte nicht aufgerufen werden"
 
 #: ../src/appfinder-window.c:906
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Dies wird den Verlauf der benutzerdefinierten Befehle dauerhaft löschen."
+msgstr "Dieses wird die benutzerdefinierten Schreibtischdateien, aus dem persönlichen Ordner, dauerhaft löschen."
 
 #: ../src/appfinder-window.c:907
 #, c-format
@@ -164,21 +164,21 @@ msgstr "Alle Instanzen beenden"
 
 #: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
-msgstr "Nicht versuchen, einen Dienst für D-Bus zu verwenden oder ein solcher zu werden"
+msgstr "Nicht versuchen, einen Dienst für D-Bus zu verwenden oder einen solchen zu werden"
 
 #: ../src/main.c:224
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Geben Sie »%s --help« ein, um Hinweise zur Verwendung zu erhalten."
+msgstr "»%s --help« eingeben, um Hinweise zur Verwendung zu erhalten."
 
 #: ../src/main.c:235
 msgid "The Xfce development team. All rights reserved."
-msgstr "Das Xfce-Entwicklungsteam. Alle Rechte vorbehalten."
+msgstr "Die Xfce-Entwicklungmannschaft. Alle Rechte vorbehalten."
 
 #: ../src/main.c:236
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Bitte melden Sie Probleme an <%s>."
+msgstr "Probleme bitte an <%s> melden."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Prefix"
@@ -222,7 +222,7 @@ msgstr "Zuletzt gewählte Kategorie _speichern"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
-msgstr "Fenster immer z_entrieren"
+msgstr "Fenster immer _zentrieren"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
@@ -230,14 +230,14 @@ msgstr "Fenster beim Starten zentrieren."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr "Eine laufende _Instanz im Hintergrund behalten"
+msgstr "Eine laufende Instanz im _Hintergrund behalten"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Behält beim Beenden der Anwendung eine laufende Instanz im Speicher, damit neue Fenster schneller geöffnet werden. Deaktivieren Sie diese Einstellung um Speicher zu sparen."
+msgstr "Beim Beenden der Anwendung, verbleibt eine laufende Instanz im Speicher, damit neue Fenster schneller geöffnet werden. Diese Einstellung deaktivieren, um Speicher zu sparen."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
@@ -257,7 +257,7 @@ msgstr "Größe der _Anwendungssymbole:"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Categ_ory icon size:"
-msgstr "_Größe der Kategoriesymbole:"
+msgstr "Größe der _Kategoriesymbole:"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Appearance"
@@ -293,7 +293,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Wenn der Typ »Präfix« gewählt ist, wird »%s« mit der Zeichenkette nach dem Muster ersetzt, »%S« mit dem kompletten Text des Eintrags. Für reguläre Ausdrücke kann \\0 and \\<num> verwendet werden."
+msgstr "Wenn als Typ »Präfix« gewählt ist, wird »%s« mit der Zeichenkette nach dem Muster ersetzt, »%S« mit dem kompletten Text des Eintrags. Für reguläre Ausdrücke kann \\0 and \\<num> verwendet werden."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
@@ -301,7 +301,7 @@ msgstr "_Befehl:"
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
-msgstr "Muste_r:"
+msgstr "_Muster:"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_Type:"
@@ -313,7 +313,7 @@ msgstr "Übereinstimmungen im Befehlsverlauf _speichern"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Custom _Actions"
-msgstr "Benutzerdefinierte _Aktionen"
+msgstr "_Benutzerdefinierte Aktionen"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -321,8 +321,8 @@ msgstr "Im System installierte Anwendungen finden und starten"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr "Programm ausführen …"
+msgstr "Programm starten …"
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr "Ein Programm ausführen"
+msgstr "Ein Programm starten"
