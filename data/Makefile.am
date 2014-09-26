@@ -6,8 +6,19 @@ apps_in_files = \
 apps_DATA = $(apps_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
+#
+# .appdata
+#
+@INTLTOOL_XML_RULE@
+appdatadir = $(datadir)/appdata
+appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+appdata_in_files = xfce4-appfinder.appdata.xml.in
+
 EXTRA_DIST = \
-	$(apps_in_files)
+	$(apps_in_files)	\
+	$(appdata_in_files)
+
+CLEANFILES = $(appdata_DATA)
 
 DISTCLEANFILES = \
 	$(apps_DATA)
