@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-11-21 23:30+0000\n"
+"PO-Revision-Date: 2014-11-21 23:34+0000\n"
 "Last-Translator: Ḷḷumex03 <tornes@opmbx.org>\n"
 "Language-Team: Asturian (http://www.transifex.com/projects/p/xfce4-appfinder/language/ast/)\n"
 "MIME-Version: 1.0\n"
@@ -145,11 +145,11 @@ msgstr "Aniciar en mou contrayíu"
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
-msgstr "Amosar información de versión y colar"
+msgstr "Amuesa la información de versión y cola"
 
 #: ../src/main.c:66
 msgid "Replace the existing service"
-msgstr "Reemplazar el serviciu esistente"
+msgstr "Trocar el serviciu esistente"
 
 #: ../src/main.c:67
 msgid "Quit all instances"
@@ -171,7 +171,7 @@ msgstr "L'equipu de desendolcu de Xfce. Tolos drechos reservaos."
 #: ../src/main.c:236
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Por favor, informa d'errores a <%s>."
+msgstr "Por favor, informa de fallos a <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Prefix"
@@ -219,18 +219,18 @@ msgstr "C_entrar siempres la ventana"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
-msgstr "Centrar la ventana nel aniciu."
+msgstr "Centra la ventana nel aniciu."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr "Executar de fondu la _instancia"
+msgstr "Caltener de fondu y n'execución la instancia"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "En cuantes de colar de l'aplicación cuando la cabera ventana se zarre, caltener n'execución una instancia pa entainar l'abertura de ventanes nueves. Pues querer deshabilitar esto p'amenorgar l'usu de memoria."
+msgstr "En cuantes de colar de l'aplicación cuando la cabera ventana se zarre, caltien n'execución una instancia pa entainar l'abertura de ventanes nueves. Pues querer deshabilitar esto p'amenorgar l'usu de memoria."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
@@ -238,7 +238,7 @@ msgstr "Comportamientu"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "_View items as icons"
-msgstr "_ Ver oxetos como iconos"
+msgstr "_Ver elementos como iconos"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Text besi_de icons"
@@ -246,7 +246,7 @@ msgstr "Testu al _llau los iconos"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Ite_m icon size:"
-msgstr "Ta_mañu d'iconu d'oxetu:"
+msgstr "Ta_mañu d'iconu d'elementu:"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Categ_ory icon size:"
@@ -286,7 +286,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Si la triba ta afitada al prefixu, %s reemplazaráse cola cadena dempués del patrón, %S cola entrada completa del testu. Pa espresiones regulares pues usar \\0 y \\<num>."
+msgstr "Si la triba ta afitada al prefixu, %s trocaráse cola cadena dempués del patrón, %S cola entrada completa del testu. Pa espresiones regulares pues usar \\0 y \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
