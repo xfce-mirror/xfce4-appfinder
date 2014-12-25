@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2014
+# Adolfo Jayme Barrientos <fito@libreoffice.org>, 2014
 # Edscott Wilson Garcia <edscott@xfce.org>, 2004
 # mc <correomc2000-ing@yahoo.es>, 2013
 # Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>, 2014
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-08-02 01:51+0000\n"
+"PO-Revision-Date: 2014-12-25 19:40+0000\n"
 "Last-Translator: Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/xfce4-appfinder/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -99,7 +99,7 @@ msgstr "E_jecutar"
 
 #: ../src/appfinder-window.c:880
 msgid "Failed to launch desktop item editor"
-msgstr "Fallo al ejecutar editor de elemento de escritorio"
+msgstr "No se pudo ejecutar el editor de elemento de escritorio"
 
 #: ../src/appfinder-window.c:906
 msgid ""
@@ -114,7 +114,7 @@ msgstr "¿Está seguro de que quiere revertir «%s»?"
 
 #: ../src/appfinder-window.c:917
 msgid "Failed to remove desktop file"
-msgstr "Fallo al quitar el archivo de escritorio"
+msgstr "No se pudo quitar el archivo de escritorio"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -152,7 +152,7 @@ msgstr "Mostrar información de la versión y salir"
 
 #: ../src/main.c:66
 msgid "Replace the existing service"
-msgstr "Reemplazar el servicio existente"
+msgstr "Remplazar el servicio existente"
 
 #: ../src/main.c:67
 msgid "Quit all instances"
@@ -289,7 +289,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Si el tipo está establecido al prefijo, %s será reemplazado con la cadena despues del patrón. %S con la entrada completa de texto. Para expresiones regulares puede usar\\0 y \\<num>."
+msgstr "Si el tipo está establecido al prefijo, %s será remplazado con la cadena despues del patrón. %S con la entrada completa de texto. Para expresiones regulares puede usar \\0 y \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
