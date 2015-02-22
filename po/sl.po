@@ -3,20 +3,26 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Klemen Košir <klemen913@gmail.com>, 2013
+# kernc, 2013,2015
+# Klemen Košir <klemen.kosir@kream.io>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-09-06 12:04+0000\n"
-"Last-Translator: Klemen Košir <klemen913@gmail.com>\n"
-"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"POT-Creation-Date: 2014-02-23 00:30+0100\n"
+"PO-Revision-Date: 2015-02-22 14:42+0000\n"
+"Last-Translator: kernc\n"
+"Language-Team: Slovenian (http://www.transifex.com/projects/p/xfce4-appfinder/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sl\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr "Prisilni izhod"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -60,7 +66,7 @@ msgstr "_Počisti"
 
 #: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
-msgstr "To bo stalno izbrisalo prilagojeno zgodovino ukazov."
+msgstr "To bo trajno izbrisalo prilagojeno zgodovino ukazov."
 
 #: ../src/appfinder-preferences.c:221
 msgid "Are you sure you want to clear the command history?"
@@ -68,7 +74,7 @@ msgstr "Ali ste prepričani, da želite počistiti zgodovino ukazov?"
 
 #: ../src/appfinder-preferences.c:331
 msgid "The custom action will be deleted permanently."
-msgstr "Prilagojeno dejanje bo stalno izbrisano."
+msgstr "Prilagojeno dejanje bo trajno izbrisano."
 
 #: ../src/appfinder-preferences.c:332
 #, c-format
@@ -82,7 +88,7 @@ msgstr "Iskalec aplikacije"
 
 #: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
-msgstr "Preklapljaj način pogleda"
+msgstr "Preklopi način pogleda"
 
 #: ../src/appfinder-window.c:394
 msgid "La_unch"
@@ -96,12 +102,12 @@ msgstr "Neuspešno zaganjanje urejevalnika predmetov na namizju"
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "To bo za vedno izbrisalo prilagojen predmet namizja iz vašega domačega imenika."
+msgstr "To bo trajno izbrisalo prilagojen predmet namizja iz vaše domače mape."
 
 #: ../src/appfinder-window.c:907
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Ste prepričani, da želite vrniti \"%s\"?"
+msgstr "Ste prepričani, da želite povrniti \"%s\"?"
 
 #: ../src/appfinder-window.c:917
 msgid "Failed to remove desktop file"
@@ -114,7 +120,7 @@ msgstr "Napaka pri odstranjevanju namizne datoteke"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Da bi odkrili predmet morate ročno odstraniti namizno datoteko iz \"%s\" ali odpreti datoteko v enakem imeniku in odstraniti vrstico \"%s\"."
+msgstr "Da bi prikazali predmet, morate ročno odstraniti namizno datoteko iz \"%s\" ali odpreti to datoteko in odstraniti vrstico \"%s\"."
 
 #: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
@@ -135,7 +141,7 @@ msgstr "Dodaj med zaznamke"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
-msgstr "Zaženi v stisnjeni obliki"
+msgstr "Zaženi v zloženem načinu"
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
@@ -160,7 +166,7 @@ msgstr "Za navodila o uporabi zaženite ukaz \"%s --help\"."
 
 #: ../src/main.c:235
 msgid "The Xfce development team. All rights reserved."
-msgstr "Razvojna skupina Xfce. Vse pravice pridržane."
+msgstr "Razvojna skupina za Xfce. Vse pravice pridržane."
 
 #: ../src/main.c:236
 #, c-format
@@ -224,7 +230,7 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Namesto, da bi prekinili aplikacijo ko je zadnje okno zaprto, obdrži primerek teči v ozdaju,  s čimer se bo pospešilo odpiranje novih oken. Morda boste želeli to funkcijo prekiniti, da bi s tem zmanjšali porabo spomina."
+msgstr "Namesto da bi prekinili aplikacijo, ko je zadnje okno zaprto, obdrži primerek teči v ozdaju, s čimer se bo pospešilo odpiranje novih oken. Morda boste želeli to funkcijo prekiniti, da bi s tem zmanjšali porabo spomina."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
