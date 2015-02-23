@@ -3,17 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# cybercop <cybercop_montana@abv.bg>, 2012
-# cybercop <cybercop_montana@abv.bg>, 2012
-# cybercop <cybercop_montana@abv.bg>, 2014
+# Kiril Kirilov <cybercop_montana@abv.bg>, 2012
+# Kiril Kirilov <cybercop_montana@abv.bg>, 2012
+# Kiril Kirilov <cybercop_montana@abv.bg>, 2014
+# Lyubomir Vasilev, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-02-23 07:44+0000\n"
-"Last-Translator: cybercop <cybercop_montana@abv.bg>\n"
-"Language-Team: Bulgarian (http://www.transifex.com/projects/p/xfce/language/bg/)\n"
+"PO-Revision-Date: 2015-02-23 08:13+0000\n"
+"Last-Translator: Lyubomir Vasilev\n"
+"Language-Team: Bulgarian (http://www.transifex.com/projects/p/xfce4-appfinder/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -80,7 +81,7 @@ msgstr "Потребителското действие ще бъде према
 #: ../src/appfinder-preferences.c:332
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "Премахване на шаблон \"%s\"?"
+msgstr "Премахване на шаблона „%s“?"
 
 #: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
@@ -108,7 +109,7 @@ msgstr "Това ще премахне завинаги този потреби�
 #: ../src/appfinder-window.c:907
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Сигурен ли сте, че искате да върнете \"%s\"?"
+msgstr "Сигурни ли сте, че искате да отмените „%s“?"
 
 #: ../src/appfinder-window.c:917
 msgid "Failed to remove desktop file"
@@ -121,7 +122,7 @@ msgstr "Не може да бъде премахнат десктоп файл"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "За да не се покаже тази позиция, ще трябва ръчно да премахнете десктоп файл \"%s\" или да да отворите файла в същата директория и да премахнете ред \"%s\"."
+msgstr "За да се покаже тази позиция, ще трябва ръчно да премахнете файла за работен плот „%s“ или да да отворите файла в същата директория и да премахнете ред „%s“."
 
 #: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
@@ -130,7 +131,7 @@ msgstr "Скриване"
 #: ../src/appfinder-window.c:956
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Сигурен ли сте, че искате да скриете \"%s\"?"
+msgstr "Сигурни ли сте, че искате да скриете „%s“?"
 
 #: ../src/appfinder-window.c:1037
 msgid "Remove From Bookmarks"
@@ -163,7 +164,7 @@ msgstr "Не се опитвайте да използвате или да пр�
 #: ../src/main.c:224
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Напишете  \"%s --help\" за потребителска информация."
+msgstr "Напишете „%s --help“ за информация за употребата."
 
 #: ../src/main.c:235
 msgid "The Xfce development team. All rights reserved."
