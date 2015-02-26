@@ -5,20 +5,26 @@
 # Translators:
 # Robert Hartl <hartl.robert@gmail.com>, 2009
 # Roman Moravčík <roman.moravcik@gmail.com>, 2006
-# Tomáš Vadina <tomasvadina+transifex@myopera.com>, 2011-2012
+# Slavko <linux@slavino.sk>, 2015
+# Tomáš Vadina <tomasvadina+transifex@cryptolab.net>, 2011-2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-11-19 11:15+0000\n"
-"Last-Translator: Xfce <transifex@xfce.org>\n"
-"Language-Team: Slovak (http://www.transifex.com/projects/p/xfce/language/sk/)\n"
+"POT-Creation-Date: 2014-02-23 00:30+0100\n"
+"PO-Revision-Date: 2015-02-26 09:45+0000\n"
+"Last-Translator: Slavko <linux@slavino.sk>\n"
+"Language-Team: Slovak (http://www.transifex.com/projects/p/xfce4-appfinder/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sk\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr "Vynútiť ukončenie"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -54,7 +60,7 @@ msgstr "História príkazov"
 
 #: ../src/appfinder-model.c:2543
 msgid "Bookmarks"
-msgstr ""
+msgstr "Záložky"
 
 #: ../src/appfinder-preferences.c:219
 msgid "C_lear"
@@ -129,11 +135,11 @@ msgstr "Ste si istí, že chcete skryť \"%s\"?"
 
 #: ../src/appfinder-window.c:1037
 msgid "Remove From Bookmarks"
-msgstr ""
+msgstr "Odstrániť zo záložiek"
 
 #: ../src/appfinder-window.c:1037
 msgid "Add to Bookmarks"
-msgstr ""
+msgstr "Pridať do záložiek"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
