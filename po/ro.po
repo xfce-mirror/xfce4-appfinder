@@ -3,19 +3,25 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Mișu Moldovan <dumol@xfce.org>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-11-19 11:15+0000\n"
-"Last-Translator: Xfce <transifex@xfce.org>\n"
-"Language-Team: Romanian (http://www.transifex.com/projects/p/xfce/language/ro/)\n"
+"POT-Creation-Date: 2014-02-23 00:30+0100\n"
+"PO-Revision-Date: 2015-02-27 12:45+0000\n"
+"Last-Translator: Mișu Moldovan <dumol@l10n.ro>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/xfce4-appfinder/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr "Ieșire forțată"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -51,7 +57,7 @@ msgstr "Istoricul comenzilor"
 
 #: ../src/appfinder-model.c:2543
 msgid "Bookmarks"
-msgstr ""
+msgstr "Programe favorite"
 
 #: ../src/appfinder-preferences.c:219
 msgid "C_lear"
@@ -67,7 +73,7 @@ msgstr "Sigur doriți să curățați istoricul comenzilor?"
 
 #: ../src/appfinder-preferences.c:331
 msgid "The custom action will be deleted permanently."
-msgstr "Acțiunea personalizată va fi ștearsă definitiv."
+msgstr "Acțiunea personalizată va fi ștearsă pentru totdeauna."
 
 #: ../src/appfinder-preferences.c:332
 #, c-format
@@ -95,7 +101,7 @@ msgstr "Nu s-a putut deschide editorul elementului de pe desktop"
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Această comandă vă va șterge definitiv fișierul desktop personalizat din directorul „Acasă”."
+msgstr "Această comandă va șterge pentru totdeauna fișierul desktop personalizat din directorul „Acasă”."
 
 #: ../src/appfinder-window.c:907
 #, c-format
@@ -126,11 +132,11 @@ msgstr "Sigur doriți să ascundeți elementul „%s”?"
 
 #: ../src/appfinder-window.c:1037
 msgid "Remove From Bookmarks"
-msgstr ""
+msgstr "Elimină dintre favorite"
 
 #: ../src/appfinder-window.c:1037
 msgid "Add to Bookmarks"
-msgstr ""
+msgstr "Adaugă la favorite"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
@@ -172,7 +178,7 @@ msgstr "Prefix"
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Regular Expression"
-msgstr "Expresie RegExp"
+msgstr "Expresie regulată"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Very Small"
@@ -212,7 +218,7 @@ msgstr "Centrea_ză întotdeauna fereastra"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
-msgstr "Centrează fereastra la pornire."
+msgstr "Centrează pe ecran fereastra la pornire."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
@@ -279,7 +285,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Dacă tipul este precizat ca fiind prefix, %s va fi înlocuit cu un șir după modelul ales, iar %S cu intrarea completă de text. Pentru expresii de tip regexp puteți utiliza \\0 și \\<num>."
+msgstr "Dacă tipul este precizat ca fiind prefix, %s va fi înlocuit cu un șir după modelul ales, iar %S cu intrarea completă de text. Pentru expresii regulate puteți utiliza \\0 și \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
@@ -307,7 +313,7 @@ msgstr "Căutați și porniți programe instalate în sistem"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr "Pornire de programe..."
+msgstr "Pornire de programe…"
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
