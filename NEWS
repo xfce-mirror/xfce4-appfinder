@@ -1,3 +1,14 @@
+4.12.0
+======
+- Fix build problems.
+- Add support for AppData.
+- Translation updates: Arabic, Asturian, Bulgarian, Chinese (China),
+  Croatian, Czech, Danish, Dutch (Flemish), English (Australia), Finnish,
+  French, German, Hebrew, Hungarian, Icelandic, Indonesian, Italian,
+  Korean, Malay, Norwegian Bokmål, Polish, Portuguese,
+  Portuguese (Brazilian), Romanian, Russian, Serbian, Slovak, Slovenian,
+  Spanish, Swedish, Telugu, Thai, Turkish, Ukrainian, Vietnamese
+
 4.11.0
 ======
 - Make compilation to GTK3 optional.
