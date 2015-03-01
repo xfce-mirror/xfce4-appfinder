@@ -7,15 +7,15 @@
 # Adolfo Jayme Barrientos, 2014
 # Edscott Wilson Garcia <edscott@xfce.org>, 2004
 # mc <correomc2000-ing@yahoo.es>, 2013
-# Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>, 2014
+# Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>, 2014-2015
 # Rudy Godoy <rudy@stone-head.org>, 2005
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2015-02-21 20:15+0000\n"
-"Last-Translator: Manolo Díaz <diaz.manolo@gmail.com>\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-03-01 03:50+0000\n"
+"Last-Translator: Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/xfce4-appfinder/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -163,16 +163,16 @@ msgstr "Cerrar todas las instancias"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "No tratar de usar o convertirse en un servicio de D-Bus"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Escriba «%s --help» para obtener información de uso."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "El equipo de desarrollo de Xfce. Todos los derechos reservados."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Informe de errores a <%s>."
@@ -323,3 +323,11 @@ msgstr "Ejecutar programa…"
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Ejecutar un programa"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "El buscador de aplicaciones es una herramienta para encontrar y poner en marcha las aplicaciones instaladas en el sistema y ejecutar rápidamente órdenes. También se puede utilizar para agregar rápidamente lanzadores al panel de Xfce arrastrando un elemento de la vista y soltarlo en el panel."
