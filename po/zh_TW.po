@@ -3,21 +3,28 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Cheng-Chia Tseng <pswo10680@gmail.com>, 2010
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2010,2014
 # Hydonsingore Cia <hydonsingore@educities.edu.tw>, 2005
+# Jeff Huang <s8321414@gmail.com>, 2015
+# Walter Cheuk <wwycheuk@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-10-08 14:58+0000\n"
-"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/xfce/language/zh_TW/)\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-03-01 07:34+0000\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/xfce4-appfinder/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr "強迫退出"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -154,16 +161,16 @@ msgstr "退出所有實體"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "不要嘗試使用或成為 D-Bus 服務"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "輸入 \"%s --help\" 以取得用法資訊。"
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce 開發團隊。保留所有權利。"
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "請回報錯誤至 <%s>。"
@@ -206,7 +213,7 @@ msgstr "非常大"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "Remember last _selected category"
-msgstr "記住上次選取的類別(_S)"
+msgstr "記住最後一次選取的類別(_S)"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
@@ -225,7 +232,7 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "當上個視窗關閉時讓實體繼續執行以加速新視窗的開啟，而不是直接退出應用程式。若您想降低記憶體使用量，您可能會想停用此功能。"
+msgstr "當關閉最後一個視窗時，讓實體繼續執行而不是退出應用程式，好讓新的視窗可以快速開啟。若您想降低記憶體使用量，您可能會想停用此功能。"
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
@@ -297,7 +304,7 @@ msgstr "類型(_T)："
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Save match in command history"
-msgstr "儲存指令歷史中符合的項目(_L)"
+msgstr "儲存指令歷史中符合的項目(_S)"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Custom _Actions"
@@ -314,3 +321,11 @@ msgstr "執行程式..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "執行程式"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "應用程式協尋器為一個搜尋並開啟在您的系統上已安裝的應用程式，以及用以快速執行指令的工具。它也可以用來在 Xfce 面板上快速加入啟動器，只要將您看到的應用程式的項目拖放到面板上就行了。"
