@@ -3,8 +3,8 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# adem4ik, 2014
-# AK <ak099@mail.ru>, 2013
+# Andrei Stepanov, 2014
+# Aleksey Kabanov <ak099@mail.ru>, 2013
 # Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006,2008
 # Anthony Ivanoff <a-i@bk.ru>, 2005
 # Artem Zolochevskiy <artem.zolochevskiy@gmail.com>, 2011
@@ -12,17 +12,17 @@
 # Dmitrij Smirnov <other@igus.lv>, 2010
 # Maxim Zenin <webmechanics@gmail.com>, 2006
 # NIkitaBelobrov <qvzqvz@gmail.com>, 2008
-# asvl <alyoshin.s@gmail.com>, 2014
+# Sergey Alyoshin <alyoshin.s@gmail.com>, 2014-2015
 # Sergey Fedoseev <fedoseev.sergey@gmail.com>, 2006
-# shlyapugin <shlyapugin@gmail.com>, 2013
+# Sergey Shlyapugin <shlyapugin@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-03-13 19:50+0000\n"
-"Last-Translator: asvl <alyoshin.s@gmail.com>\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/xfce/language/ru/)\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-02-28 23:55+0000\n"
+"Last-Translator: Sergey Alyoshin <alyoshin.s@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/xfce4-appfinder/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -169,16 +169,16 @@ msgstr "Закрыть все экземпляры"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Не пытаться использовать или быть службой D-Bus"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Выполните «%s --help» для получения информации об использовании."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "Команда разработчиков Xfce. Все права защищены."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Об ошибках сообщайте на <%s>."
@@ -329,3 +329,11 @@ msgstr "Запустить приложение..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Запуск приложения"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "Поиск приложений — инструмент для поиска и запуска установленных в вашей системе приложений и быстрого выполнения команд. Также он может быть использован для быстрого добавления значков запуска на панель Xfce перетаскиванием."
