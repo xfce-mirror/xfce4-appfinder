@@ -11,14 +11,14 @@
 # Moritz Heiber <moe@xfce.org>, 2004
 # Nico Schümann <nico@prog.nico22.de>, 2008
 # Thomas Schütz <xfce@thschuetz.de>, 2012
-# Tobias Bannert, 2014
+# Tobias Bannert <tobannert@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-09-01 13:58+0000\n"
-"Last-Translator: Tobias Bannert\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-03-01 15:33+0000\n"
+"Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/xfce4-appfinder/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +29,7 @@ msgstr ""
 #. close all windows and quit
 #: ../src/appfinder-gdbus.c:84
 msgid "Forced to quit"
-msgstr "Zum beenden gezwungen"
+msgstr "Zum Beenden gezwungen"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -166,16 +166,16 @@ msgstr "Alle Instanzen beenden"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Nicht versuchen, einen Dienst für D-Bus zu verwenden oder einen solchen zu werden"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "»%s --help« eingeben, um Hinweise zur Verwendung zu erhalten."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "Die Xfce-Entwicklungmannschaft. Alle Rechte vorbehalten."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Probleme bitte an <%s> melden."
@@ -218,11 +218,11 @@ msgstr "Sehr groß"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "Remember last _selected category"
-msgstr "Zuletzt gewählte Kategorie _speichern"
+msgstr "_Zuletzt gewählte Kategorie speichern"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
-msgstr "Fenster immer _zentrieren"
+msgstr "_Fenster immer zentrieren"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
@@ -230,7 +230,7 @@ msgstr "Fenster beim Starten zentrieren."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr "Eine laufende Instanz im _Hintergrund behalten"
+msgstr "_Eine laufende Instanz im Hintergrund behalten"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
@@ -326,3 +326,11 @@ msgstr "Programm starten …"
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Ein Programm starten"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "Der Anwendungsfinder ist ein Werkzeug, um im System installierte Anwendungen zu finden und zu starten und schnell Befehle auszuführen. Er kann ebenfalls verwendet werden, um schnell Starter zur Xfce-Leiste hinzuzufügen, durch ziehen aus der Ansicht und ablegen in der Leiste."
