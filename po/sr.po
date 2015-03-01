@@ -3,16 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# salepetronije <salepetronije@gmail.com>, 2012-2013
-# salepetronije <salepetronije@gmail.com>, 2013-2014
+# Саша Петровић <salepetronije@gmail.com>, 2012-2013
+# Саша Петровић <salepetronije@gmail.com>, 2013-2014
+# Саша Петровић <salepetronije@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-02-25 18:46+0000\n"
-"Last-Translator: salepetronije <salepetronije@gmail.com>\n"
-"Language-Team: Serbian (http://www.transifex.com/projects/p/xfce/language/sr/)\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-03-01 11:08+0000\n"
+"Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
+"Language-Team: Serbian (http://www.transifex.com/projects/p/xfce4-appfinder/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -159,35 +160,35 @@ msgstr "Затвори све примерке"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Неће покушати да користи или да постане услуга Д-сабирнице"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Упишите „%s --help“ за коришћење."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
-msgstr "ИксФЦЕ развојна дружина. Сва права су задржана."
+msgstr "Развојна дружина Иксфце-а. Сва права су задржана."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Молим, пријавите грешке на <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Prefix"
-msgstr "Префикс"
+msgstr "Предметак"
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Regular Expression"
-msgstr "Регуларан израз"
+msgstr "Прописани израз"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Very Small"
-msgstr "врло мале"
+msgstr "најмање"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Smaller"
-msgstr "малецне"
+msgstr "мање"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "Small"
@@ -203,11 +204,11 @@ msgstr "велике"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Larger"
-msgstr "највеће"
+msgstr "веће"
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Very Large"
-msgstr "врло велике"
+msgstr "највеће"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "Remember last _selected category"
@@ -230,7 +231,7 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Уместо заустављања програма по затварању свих прозора, држи покренут примерак да би убрзао отварање нових прозора. Ово можете  да искључите ради смањивања заузећа меморије."
+msgstr "Уместо заустављања програма по затварању свих прозора, држи покренутим примерак да би се убрзало отварање нових прозора. Ово можете  да искључите ради смањивања заузећа меморије."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
@@ -250,7 +251,7 @@ msgstr "Величина иконице став_ке:"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Categ_ory icon size:"
-msgstr "Величина врс_те иконица:"
+msgstr "Величина иконица _врсте:"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Appearance"
@@ -274,7 +275,7 @@ msgstr "Образац"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Add a new custom action."
-msgstr "Додајте нову произвољну радњу."
+msgstr "Додај нову произвољну радњу."
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Remove the currently selected action."
@@ -286,7 +287,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Ако је врста подешена на префикс, %s ће бити замењено ниском након обрасца, %S са читавим текстом уноса. За регуларне изразе можете да користите \\0 и \\<num>."
+msgstr "Ако је врста подешена на предметак, %s ће бити замењено ниском након обрасца, %S са читавим текстом уноса. За прописане изразе можете да користите \\0 и \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
@@ -319,3 +320,11 @@ msgstr "Покрени програм..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Покрени програм"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "Проналазач програма је прибор за брзо проналажење и покретање уграђених програма у систему и брзо извршавање наредби. Може бити коришћен и за брзо додавање покретача на полицу Иксфце-а превлачењем ставки са поља прегледа и њиховим спуштањем на полицу."
