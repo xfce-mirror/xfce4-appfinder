@@ -4,16 +4,16 @@
 # 
 # Translators:
 # ByungHyun Choi <byunghyun.choi@gmail.com>, 2005
-# Darkcircle <darkcircle.0426@gmail.com>, 2011-2014
-# ujuc Gang <potopro@gmail.com>, 2013
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2011-2015
+# Sungjin Kang <potopro@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-02-23 08:54+0000\n"
-"Last-Translator: Darkcircle <darkcircle.0426@gmail.com>\n"
-"Language-Team: Korean (http://www.transifex.com/projects/p/xfce/language/ko/)\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-03-02 08:36+0000\n"
+"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/xfce4-appfinder/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -160,16 +160,16 @@ msgstr "모든 인스턴스 끝내기"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "D-Bus 서비스를 사용하거나 D-Bus와 동작하도록 시도하지 않음"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "사용 정보를 보려면 \"%s --help\"를 입력하십시오."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce 개발 팀. All rights reserved."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "<%s>에게 버그를 알려주십시오."
@@ -320,3 +320,11 @@ msgstr "프로그램 실행..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "프로그램을 실행합니다"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "프로그램 검색기는 시스템에 설치한 프로그램을 찾아 실행시키며, 명령을 빠르게 실행 처리하는 도구입니다. 또한 바로 가기 아이콘을 보기 창에서 Xfce 패널로 끌어다 놓는 방식으로 간편하게 추가할 수 있습니다."
