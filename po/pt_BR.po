@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Adriano Winter Bess <awbess@gmail.com>, 2005
+# André Miranda <andreldm1989@gmail.com>, 2015
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008
 # Rafael Ferreira <rafael.f.f1@gmail.com>, 2013-2014
 # Rodrigo Coacci <rcoacci@gmail.com>, 2004
@@ -11,10 +12,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-03-24 13:22+0000\n"
-"Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/xfce/language/pt_BR/)\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-03-02 03:17+0000\n"
+"Last-Translator: André Miranda <andreldm1989@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/xfce4-appfinder/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -161,16 +162,16 @@ msgstr "Fechar todas as instâncias"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Não tentar usar ou se tornar um serviço D-Bus"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Digite \"%s --help\" para opções de uso."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "O time de desenvolvedores do Xfce. Todos os direitos reservados."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Por favor, envie relatórios sobre erros para <%s>."
@@ -321,3 +322,11 @@ msgstr "Executar programa..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Executa um programa"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "O localizador de aplicativos é uma ferramenta que encontra e lança aplicativos instalados no seu sistema e rapidamente executa comandos. Também pode ser usado para rapidamente adicionar lançadores no painel do Xfce ao arrastar um item da lista e soltá-lo no painel."
