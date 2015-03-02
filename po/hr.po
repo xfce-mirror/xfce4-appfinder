@@ -3,7 +3,8 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# schizo <eveskovic@gmail.com>, 2014
+# Edin Veskovic <edin.veskovic@openmailbox.org>, 2015
+# Edin Veskovic <edin.veskovic@openmailbox.org>, 2014
 # Ivica  Kolić <ikoli@yahoo.com>, 2010
 # Ivica  Kolić <ikoli@yahoo.com>, 2010
 # Ivica  Kolić <ikoli@yahoo.com>, 2013
@@ -11,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-04-23 16:13+0000\n"
-"Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-03-02 12:10+0000\n"
+"Last-Translator: Edin Veskovic <edin.veskovic@openmailbox.org>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/xfce4-appfinder/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -161,16 +162,16 @@ msgstr "Isključi sve instance"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Ne pokušavajte koristiti ili postati D-Bus usluga"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Upiši  \"%s --help\" za uporabu. "
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce razvojni tim.Sva prava pridržana."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Prijavite probleme u <%s>."
@@ -321,3 +322,11 @@ msgstr "Pokreni program..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Pokreni program"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "Nalaznik programa je alat za pronalazak instaliranih programa na sustavu te brzo izvođenje naredbi. Također se može koristiti za dodavanje brzih pokretača na Xfce ploču povlačenjem s liste te ispuštanjem na ploču."
