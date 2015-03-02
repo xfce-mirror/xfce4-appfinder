@@ -10,14 +10,15 @@
 # Jick Nan <jick.nan@gmail.com>, 2006
 # 玉堂白鹤 <yjwork@qq.com>, 2013-2014
 # Yongtao Yang <yongtao.yang@telia.com>, 2004
+# 玉堂白鹤 <yjwork@qq.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-04-17 05:16+0000\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-03-02 08:57+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/xfce/language/zh_CN/)\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/xfce4-appfinder/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -164,16 +165,16 @@ msgstr "退出所有实例"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "不试图使用或成为 D-Bus 服务"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "输入 “%s --help” 获取用法。"
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce 开发团队。保留所有权利。"
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "请向 <%s> 报告缺陷。"
@@ -324,3 +325,11 @@ msgstr "运行程序..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "运行程序"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "应用程序查找器是用来查找和启动安装在您的系统里的应用程序的一个工具,它能快速执行命令。它也能使用拖拽项目的方式快速的添加启动器至 Xfce 面板,您只需将它拖放至面板上即可。"
