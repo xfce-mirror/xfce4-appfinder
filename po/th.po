@@ -4,15 +4,15 @@
 # 
 # Translators:
 # Theppitak Karoonboonyanan <thep@linux.thai.net>, 2013
-# theppitak <theppitak@gmail.com>, 2013
+# Theppitak Karoonboonyanan <theppitak@gmail.com>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-02-28 16:14+0000\n"
-"Last-Translator: theppitak <theppitak@gmail.com>\n"
-"Language-Team: Thai (http://www.transifex.com/projects/p/xfce/language/th/)\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-03-05 09:21+0000\n"
+"Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>\n"
+"Language-Team: Thai (http://www.transifex.com/projects/p/xfce4-appfinder/language/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -159,16 +159,16 @@ msgstr "ปิดทุกอินสแตนซ์"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "ไม่ต้องพยายามใช้หรือเปิดบริการ D-Bus"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "ลองสั่ง '%s --help' เพื่อดูวิธีใช้"
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "The Xfce development team. All rights reserved."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "หากพบปัญหา กรุณารายงานไปที่ <%s>"
@@ -319,3 +319,11 @@ msgstr "เรียกโปรแกรม..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "เรียกโปรแกรม"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "เครื่องมือค้นหาโปรแกรม เป็นเครื่องมือสำหรับหาและเรียกทำงานโปรแกรมที่ติดตั้งไว้ในระบบของคุณ และสำหรับเรียกคำสั่งอย่างเร็ว และยังสามารถใช้ในการเพิ่มปุ่มเรียกโปรแกรมอย่างเร็วลงในพาเนลของ Xfce ด้วยการลากรายการจากหน้าต่างโปรแกรมไปวางบนพาเนล"
