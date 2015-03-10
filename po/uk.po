@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Dmitry Nikitin <luckas_fb@mail.ru>, 2008
-# Yarema aka Knedlyk <yupadmin@gmail.com>, 2013-2014
+# Yarema aka Knedlyk <yupadmin@gmail.com>, 2013-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-05-08 19:48+0000\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-03-10 22:20+0000\n"
 "Last-Translator: Yarema aka Knedlyk <yupadmin@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/xfce4-appfinder/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -159,16 +159,16 @@ msgstr "Закрити всі запущені"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Не намагатися використовувати сервіс D-Bus"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Наберіть \"%s --help\" для інформації про використання."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "Команда розробників Xfce. Всі права застережено."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Повідомляйте про помилки на <%s>."
@@ -319,3 +319,11 @@ msgstr "Запускаю програму..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Запуск програми"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "Шукач програм є знаряддям для пошуку і запуску встановлених програм у Вашій системі і для швидкого запуску команд. Програму можна також використовувати для швидкого додавання запускачів до панелі Xfce, захоплюючи програми зі списку і переносячи їх на панель."
