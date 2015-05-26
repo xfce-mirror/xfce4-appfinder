@@ -5,6 +5,7 @@
 # Translators:
 # Erçin EKER <ercin.eker@linux.org.tr>, 2004
 # erenturkay <turkay.eren@gmail.com>, 2008
+# erenturkay <turkay.eren@gmail.com>, 2008
 # Gökmen Görgen <gkmngrgn@gmail.com>, 2008
 # Volkan Gezer <volkangezer@gmail.com>, 2013
 # Zafer Eren <zaferern@gmail.com>, 2014
@@ -12,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-10-28 21:05+0000\n"
-"Last-Translator: Zafer Eren <zaferern@gmail.com>\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-05-26 09:35+0000\n"
+"Last-Translator: Necdet Yücel <necdetyucel@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/xfce4-appfinder/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -162,16 +163,16 @@ msgstr "Bütün örnekleri kapat"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "D-Bus servisi olmaya ya da kullanmaya çalışma"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Kullanım bilgisi için \"%s --help\"\\ yazın."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce geliştirici takımı. Tüm hakları saklıdır."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Lütfen hataları <%s> adresine bildirin."
@@ -322,3 +323,11 @@ msgstr "Çalıştır..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Bir program çalıştır"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "Uygulama bulma aracı sisteminizde kurulu uygulamaları kolayca bulup çalıştırmak ve komutları işletmek için bir araçtır. Aynı zamanda bir başlatıcıyı panele sürükleyerek Xfce Paneline hızlıca eklemek için de kullanılabilir."
