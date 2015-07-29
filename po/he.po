@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-05-27 10:22+0000\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-07-29 16:46+0000\n"
+"Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
 "Language-Team: Hebrew (http://www.transifex.com/projects/p/xfce4-appfinder/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,15 +48,15 @@ msgstr "קטגוריות"
 
 #: ../src/appfinder-model.c:579
 msgid "Filename"
-msgstr "שם הקובץ"
+msgstr "שם קובץ"
 
 #: ../src/appfinder-model.c:2100
 msgid "Application has no command"
-msgstr "ליישום אין פקודה"
+msgstr "יישום נטול פקודה"
 
 #: ../src/appfinder-model.c:2519
 msgid "Commands History"
-msgstr "היסטוריית הפקודות"
+msgstr "היסטוריית פקודות"
 
 #: ../src/appfinder-model.c:2543
 msgid "Bookmarks"
@@ -64,7 +64,7 @@ msgstr "סימניות"
 
 #: ../src/appfinder-preferences.c:219
 msgid "C_lear"
-msgstr "מ_חיקה"
+msgstr "_טהר"
 
 #: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
@@ -72,29 +72,29 @@ msgstr "פעולה זו תמחק לחלוטין את היסטוריית הפקו
 
 #: ../src/appfinder-preferences.c:221
 msgid "Are you sure you want to clear the command history?"
-msgstr "האם למחוק את היסטוריית הפקודות?"
+msgstr "האם אתה בטוח כי ברצונך למחוק היסטוריית פקודות?"
 
 #: ../src/appfinder-preferences.c:331
 msgid "The custom action will be deleted permanently."
-msgstr "הפעולה שהוגדרה תימחק לצמיתות."
+msgstr "הפעולה המותאמת תימחק לצמיתות."
 
 #: ../src/appfinder-preferences.c:332
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "האם למחוק את התבנית „%s“?"
+msgstr "האם אתה בטוח כי ברצונך למחוק את התבנית \"%s\"?"
 
 #: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "כלי לחיפוש יישומים"
+msgstr "מאתר יישומים"
 
 #: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
-msgstr "החלפת מצב תצוגה"
+msgstr "החלף מצב תצוגה"
 
 #: ../src/appfinder-window.c:394
 msgid "La_unch"
-msgstr "ה_פעלה"
+msgstr "_שגר"
 
 #: ../src/appfinder-window.c:880
 msgid "Failed to launch desktop item editor"
@@ -126,58 +126,58 @@ msgstr ""
 
 #: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
-msgstr ""
+msgstr "הס_תר"
 
 #: ../src/appfinder-window.c:956
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr ""
+msgstr "האם אתה בטוח כי ברצונך להסתיר את \"%s\"?"
 
 #: ../src/appfinder-window.c:1037
 msgid "Remove From Bookmarks"
-msgstr "הסרה מהסימניות"
+msgstr "הסר מתוך הסימניות"
 
 #: ../src/appfinder-window.c:1037
 msgid "Add to Bookmarks"
-msgstr "הוספה לסימניות"
+msgstr "הוסף אל סימניות"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
-msgstr ""
+msgstr "Start in collapsed mode"
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
-msgstr ""
+msgstr "Print version information and exit"
 
 #: ../src/main.c:66
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Replace the existing service"
 
 #: ../src/main.c:67
 msgid "Quit all instances"
-msgstr ""
+msgstr "Quit all instances"
 
 #: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "Do not try to use or become a D-Bus service"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr ""
+msgstr "Type \"%s --help\" for usage."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "The Xfce development team. All rights reserved."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Please report bugs to <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Prefix"
-msgstr ""
+msgstr "תחילית"
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Regular Expression"
@@ -213,26 +213,26 @@ msgstr "גדול מאוד"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "זכור קטגוריה _נבחרת אחרונה"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "תמיד מ_רכז חלון"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
-msgstr ""
+msgstr "מרכז חלון בעת הפעלה."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr ""
+msgstr "השאר _תהליך רץ ברקע"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr ""
+msgstr "במקום לצאת מתוך היישום כאשר החלון האחרון הינו סגור, השאר תהליך רץ כדי להאיץ פתיחתו של חלון חדש. אפשרי כי תרצה לנטרל את אפשרות זו כדי להפחית שימוש בזיכרון."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
@@ -240,19 +240,19 @@ msgstr "התנהגות"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "_View items as icons"
-msgstr ""
+msgstr "_הצג פריטים בתור סמלים"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Text besi_de icons"
-msgstr ""
+msgstr "טקסט ל_צד סמלים"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Ite_m icon size:"
-msgstr ""
+msgstr "גודל סמל _פריט:"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Categ_ory icon size:"
-msgstr ""
+msgstr "גודל סמל _קטגוריה:"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Appearance"
@@ -260,7 +260,7 @@ msgstr "מראה"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "C_lear Custom Command History"
-msgstr ""
+msgstr "ט_הר היסטוריית פקודה מותאמת"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "History"
@@ -276,11 +276,11 @@ msgstr "תבנית"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Add a new custom action."
-msgstr ""
+msgstr "הוסף פעולה מותאמת חדשה."
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "הסר את הפעולה הנבחרת."
 
 #: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
@@ -300,7 +300,7 @@ msgstr "_תבנית:"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_Type:"
-msgstr "_סוג:"
+msgstr "_טיפוס:"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Save match in command history"
@@ -308,7 +308,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Custom _Actions"
-msgstr "פעולות שהו_גדרו"
+msgstr "פעולות _מותאמות"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -316,8 +316,16 @@ msgstr "חיפוש וטעינת יישומים המותקנים במחשבך"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr "הרצת תכנית…"
+msgstr "הרץ תוכנית..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr "הרצת תכנית…"
+msgstr "הרץ תוכנית"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr ""
