@@ -52,6 +52,21 @@ void    appfinder_refcount_debug_add (GObject     *object,
 #define appfinder_return_val_if_fail(expr,val) G_STMT_START{ (void)0; }G_STMT_END
 #endif
 
+#define XFCE_APPFINDER_STOCK_CLEAR "edit-clear"
+#define XFCE_APPFINDER_STOCK_CLOSE "window-close"
+#define XFCE_APPFINDER_STOCK_DELETE "edit-delete"
+#define XFCE_APPFINDER_STOCK_DIALOG_ERROR "dialog-error"
+#define XFCE_APPFINDER_STOCK_EDIT "gtk-edit"
+#define XFCE_APPFINDER_STOCK_EXECUTE "system-run"
+#define XFCE_APPFINDER_STOCK_FIND "edit-find"
+#define XFCE_APPFINDER_STOCK_GO_DOWN "go-down"
+#define XFCE_APPFINDER_STOCK_GO_UP "go-up"
+#define XFCE_APPFINDER_STOCK_PREFERENCES "preferences-system"
+#define XFCE_APPFINDER_STOCK_REVERT_TO_SAVED "document-revert"
+#define XFCE_APPFINDER_STOCK_REMOVE "list-remove"
+
+
+
 void appfinder_window_new (const gchar *startup_id,
                            gboolean     expanded);
 
