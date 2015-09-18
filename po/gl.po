@@ -4,19 +4,25 @@
 # 
 # Translators:
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2006,2008-2009
+# Xosé <xosecalvo@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-11-19 11:15+0000\n"
-"Last-Translator: Xfce <transifex@xfce.org>\n"
-"Language-Team: Galician (http://www.transifex.com/projects/p/xfce/language/gl/)\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-09-18 20:42+0000\n"
+"Last-Translator: Xosé <xosecalvo@gmail.com>\n"
+"Language-Team: Galician (http://www.transifex.com/xfce/xfce4-appfinder/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr "Forzouse a saída"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -52,7 +58,7 @@ msgstr "Historial de ordes"
 
 #: ../src/appfinder-model.c:2543
 msgid "Bookmarks"
-msgstr ""
+msgstr "Marcadores"
 
 #: ../src/appfinder-preferences.c:219
 msgid "C_lear"
@@ -64,7 +70,7 @@ msgstr "Isto limpará permanentemente o historial de ordes personalizado."
 
 #: ../src/appfinder-preferences.c:221
 msgid "Are you sure you want to clear the command history?"
-msgstr "Está seguro de que desexa limpar o historial de ordes?"
+msgstr "Confirma que desexa limpar o historial de ordes?"
 
 #: ../src/appfinder-preferences.c:331
 msgid "The custom action will be deleted permanently."
@@ -73,7 +79,7 @@ msgstr "A acción personalizada eliminarase permanentemente."
 #: ../src/appfinder-preferences.c:332
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgstr "Confirma que desexa eliminar o patrón «%s»?"
 
 #: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
@@ -96,16 +102,16 @@ msgstr "Produciuse un erro ao iniciar o editor de elemento de escritorio"
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr ""
+msgstr "Así vai retirar permanentemente o ficheiro de escritorio personalizado do seu directorio persoal."
 
 #: ../src/appfinder-window.c:907
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Está seguro de que desexa reverter \"%s\"?"
+msgstr "Confirma que desexa reverter «%s»?"
 
 #: ../src/appfinder-window.c:917
 msgid "Failed to remove desktop file"
-msgstr ""
+msgstr "Produciuse un erro ao retirar o ficheiro de escritorio"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -114,7 +120,7 @@ msgstr ""
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
+msgstr "Para mostrar de novo o elemento ten que retirar manualmente o ficheiro do escritorio de «%s» ou abrir o ficheiro no mesmo directorio e retirar a liña «%s»."
 
 #: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
@@ -123,19 +129,19 @@ msgstr "_Ocultar"
 #: ../src/appfinder-window.c:956
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Está seguro de que desexa ocultar «%s»?"
+msgstr "Confirma que desexa ocultar «%s»?"
 
 #: ../src/appfinder-window.c:1037
 msgid "Remove From Bookmarks"
-msgstr ""
+msgstr "Retirar dos marcadores"
 
 #: ../src/appfinder-window.c:1037
 msgid "Add to Bookmarks"
-msgstr ""
+msgstr "Engadir aos marcadores"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
-msgstr ""
+msgstr "Iniciar no modo contraído"
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
@@ -151,18 +157,18 @@ msgstr "Saír de todas as instancias"
 
 #: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "Non tentar usar ou converterse un servizo de D-Bus"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Introduza '%s --help' para ver a información de uso."
+msgstr "Introduza «%s --help» para ver a información de uso."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "O equipo de desenvolvemento de Xfce. Todos os dereitos reservados."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Por favor, comunique os fallos a <%s>."
@@ -217,14 +223,14 @@ msgstr "Centrar a xanela ao iniciar."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr ""
+msgstr "Manter a _instancia en execución en segundo plano"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr ""
+msgstr "No canto de saír do aplicativo ao pechar a derradeira xanela, manter unha instancia en execución para acelerar as xanelas novas que se abran. Se desexa reducir o uso de memoria desactive isto."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
@@ -280,7 +286,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Se o tipo se configura como prefixo, %s substitúese pola cadea que segue o patrón, %S polo texto completo da entrada. Para as expresións regulares pode empregar \\0 e \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
@@ -296,7 +302,7 @@ msgstr "_Tipo:"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Save match in command history"
-msgstr ""
+msgstr "_Gardar a coincidencia no historial de ordes"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Custom _Actions"
@@ -313,3 +319,11 @@ msgstr "Executar programa..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Executar un programa"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "O buscador de aplicativos é unha ferramenta para atopar e iniciar os aplicativos instalados no sistema e as ordes de execución rápida. Tamén pode empregarse para engadir iniciadores rapidamente á panel de Xfce arrastrando un elemento da vista e soltándoo sobre o panel."
