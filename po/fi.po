@@ -5,15 +5,15 @@
 # Translators:
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2013
 # Juha Kautto <juha@xfce.org>, 2004
-# Pasi Lallinaho <pasi@shimmerproject.org>, 2014
+# Pasi Lallinaho <pasi@shimmerproject.org>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-08-22 16:59+0000\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-09-27 21:31+0000\n"
 "Last-Translator: Pasi Lallinaho <pasi@shimmerproject.org>\n"
-"Language-Team: Finnish (http://www.transifex.com/projects/p/xfce4-appfinder/language/fi/)\n"
+"Language-Team: Finnish (http://www.transifex.com/xfce/xfce4-appfinder/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -160,16 +160,16 @@ msgstr "Lopeta kaikki istunnot"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Älä yritä käyttää tai käynnistää D-Bus-palvelua."
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Saat käyttöohjeita kirjoittamalla \"%s --help\"."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce:n kehitystiimi. Kaikki oikeudet pidätetään."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Vikailmoitukset osoitteeseen <%s>."
@@ -320,3 +320,11 @@ msgstr "Suorita sovellus..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Suorita sovellus"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "Sovellusten hakutyökalu on työkalu asennettavien sovellusten hakemiseen ja käynnistämistä sekä komentojen nopeaa ajamista varten. Sitä voidaan myös käyttää sovellusten nopeaan lisäämiseen Xfce:n paneeliin vetämällä kohde näkymästä ja pudottamalle se paneeliin."
