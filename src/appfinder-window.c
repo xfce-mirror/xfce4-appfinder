@@ -222,7 +222,8 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_window_set_default_size (GTK_WINDOW (window), integer, -1);
   gtk_window_set_icon_name (GTK_WINDOW (window), XFCE_APPFINDER_STOCK_EXECUTE);
 
-  if (xfconf_channel_get_bool (window->channel, "/always-center", FALSE)) {
+  if (xfconf_channel_get_bool (window->channel, "/always-center", FALSE))
+  {
     gtk_window_set_position (GTK_WINDOW (window), GTK_WIN_POS_CENTER);
   }
 
@@ -340,10 +341,14 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   window->bbox = hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
   gtk_widget_show (hbox);
 
-  window->button_preferences = button = gtk_button_new_with_label (XFCE_APPFINDER_STOCK_PREFERENCES);
+  window->button_preferences = button = gtk_button_new_with_mnemonic (_("_Preferences"));
   gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
   g_signal_connect (G_OBJECT (button), "clicked",
       G_CALLBACK (xfce_appfinder_window_preferences), window);
+  gtk_button_set_always_show_image(GTK_BUTTON(button), TRUE);
+
+  image = gtk_image_new_from_icon_name (XFCE_APPFINDER_STOCK_PREFERENCES, GTK_ICON_SIZE_BUTTON);
+  gtk_button_set_image (GTK_BUTTON (button), image);
 
   bbox = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
   gtk_box_set_spacing (GTK_BOX (bbox), 6);
@@ -352,11 +357,15 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_box_pack_start (GTK_BOX (hbox), bbox, TRUE, TRUE, 0);
   gtk_widget_show (bbox);
 
-  button = gtk_button_new_with_label (XFCE_APPFINDER_STOCK_CLOSE);
+  button = gtk_button_new_with_mnemonic (_("Close"));
   gtk_container_add (GTK_CONTAINER (bbox), button);
   g_signal_connect_swapped (G_OBJECT (button), "clicked",
       G_CALLBACK (gtk_widget_destroy), window);
+  gtk_button_set_always_show_image(GTK_BUTTON(button), TRUE);
   gtk_widget_show (button);
+
+  image = gtk_image_new_from_icon_name (XFCE_APPFINDER_STOCK_CLOSE, GTK_ICON_SIZE_BUTTON);
+  gtk_button_set_image (GTK_BUTTON (button), image);
 
   window->button_launch = button = gtk_button_new_with_mnemonic (_("La_unch"));
   gtk_container_add (GTK_CONTAINER (bbox), button);
