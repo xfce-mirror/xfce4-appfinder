@@ -276,7 +276,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_entry_completion_set_popup_single_match (completion, TRUE);
   gtk_entry_completion_set_inline_completion (completion, TRUE);
 
-  window->bin_collapsed = gtk_alignment_new (0.0, 0.0, 1.0, 1.0);
+  window->bin_collapsed = gtk_paned_new(GTK_ORIENTATION_HORIZONTAL);
   gtk_box_pack_start (GTK_BOX (vbox2), window->bin_collapsed, FALSE, TRUE, 0);
   gtk_widget_show (window->bin_collapsed);
 
@@ -334,7 +334,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   /* set the icon or tree view */
   xfce_appfinder_window_view (window);
 
-  window->bin_expanded = gtk_alignment_new (0.0, 0.0, 1.0, 1.0);
+  window->bin_expanded = gtk_paned_new(GTK_ORIENTATION_HORIZONTAL);
   gtk_box_pack_start (GTK_BOX (vbox), window->bin_expanded, FALSE, TRUE, 0);
   gtk_widget_show (window->bin_expanded);
 
