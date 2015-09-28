@@ -52,6 +52,7 @@ void    appfinder_refcount_debug_add (GObject     *object,
 #define appfinder_return_val_if_fail(expr,val) G_STMT_START{ (void)0; }G_STMT_END
 #endif
 
+#define XFCE_APPFINDER_STOCK_BOOKMARK_NEW "bookmark-new"
 #define XFCE_APPFINDER_STOCK_CLEAR "edit-clear"
 #define XFCE_APPFINDER_STOCK_CLOSE "window-close"
 #define XFCE_APPFINDER_STOCK_DELETE "edit-delete"
