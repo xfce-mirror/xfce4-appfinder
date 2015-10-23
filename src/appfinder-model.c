@@ -738,8 +738,6 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
 
   APPFINDER_DEBUG ("insert idle start");
 
-  GDK_THREADS_ENTER ();
-
   /* move the collected items "online" */
   model->items = model->collect_items;
   model->collect_items = NULL;
@@ -793,8 +791,6 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
       g_slist_foreach (tmp, (GFunc) g_object_unref, NULL);
       g_slist_free (tmp);
     }
-
-  GDK_THREADS_LEAVE ();
 
   APPFINDER_DEBUG ("insert idle end");
 
@@ -1898,7 +1894,7 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
       model->collect_items = g_slist_sort (model->collect_items, xfce_appfinder_model_item_compare);
       model->collect_categories = g_slist_sort (model->collect_categories, xfce_appfinder_model_category_compare);
 
-      model->collect_idle_id = g_idle_add_full (G_PRIORITY_LOW, xfce_appfinder_model_collect_idle,
+      model->collect_idle_id = gdk_threads_add_idle_full (G_PRIORITY_LOW, xfce_appfinder_model_collect_idle,
                                                 model, xfce_appfinder_model_collect_idle_destroy);
     }
 
