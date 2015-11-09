@@ -5,16 +5,17 @@
 # Translators:
 # Aputsiaĸ Niels Janussen <aj@isit.gl>, 2013
 # Erik Schmidt <erischmi@gmail.com>, 2012
+# Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>, 2015
 # Ole Guldberg <olegb@omgwtf.dk>, 2008
-# pkon <p_kongstad@op.pl>, 2009,2014
+# Per Kongstad <p_kongstad@op.pl>, 2009,2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-03-17 20:25+0000\n"
-"Last-Translator: pkon <p_kongstad@op.pl>\n"
-"Language-Team: Danish (http://www.transifex.com/projects/p/xfce/language/da/)\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-11-09 20:48+0000\n"
+"Last-Translator: Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>\n"
+"Language-Team: Danish (http://www.transifex.com/xfce/xfce4-appfinder/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -161,16 +162,16 @@ msgstr "Afslut alle instanser"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Undlad at bruge eller blive en D-bus-tjeneste"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Tast \"%s --help\\ for information om brug."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce-udviklingsholdet. Alle rettigheder forbeholdt."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Rapportér venligst fejl til <%s>."
@@ -321,3 +322,11 @@ msgstr "Kør program..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Kør et program"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "Programfinderen er et redskab til hurtigt at finde of starte installerede programmer på systemet og nemt afvikle kommandoer. Den kan også bruges til hurtigt at tilføje programstartere til Xfce-panelet ved at trække et element fra oversigten og sætte det på panelet."
