@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2015-08-10 18:54+0000\n"
+"PO-Revision-Date: 2015-11-15 00:15+0000\n"
 "Last-Translator: enolp <enolp@softastur.org>\n"
 "Language-Team: Asturian (http://www.transifex.com/xfce/xfce4-appfinder/language/ast/)\n"
 "MIME-Version: 1.0\n"
@@ -80,7 +80,7 @@ msgstr "La aición personalizada desaniciaráse dafechu."
 #: ../src/appfinder-preferences.c:332
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "¿De xuru que quies desaniciar el patrón \"%s\"?"
+msgstr "¿De xuru que quies desaniciar el patrón «%s»?"
 
 #: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
@@ -108,7 +108,7 @@ msgstr "Esto desaniciará dafechu'l ficheru d'escritoriu personalizáu del to di
 #: ../src/appfinder-window.c:907
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "¿De xuru que quies desfacer \"%s\"?"
+msgstr "¿De xuru que quies desfacer «%s»?"
 
 #: ../src/appfinder-window.c:917
 msgid "Failed to remove desktop file"
@@ -121,7 +121,7 @@ msgstr "Fallu al desaniciar el ficheru d'escritoriu"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "P'amosar l'elementu tienes que desaniciar a mano'l ficheru d'escritoriu de \"%s\" o abrir el ficheru nel mesmu direutoriu y desaniciar la llinia \"%s\"."
+msgstr "P'amosar l'elementu tienes que desaniciar a mano'l ficheru d'escritoriu de «%s» o abrir el ficheru nel mesmu direutoriu y desaniciar la llinia «%s»."
 
 #: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
@@ -130,7 +130,7 @@ msgstr "_Anubrir"
 #: ../src/appfinder-window.c:956
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "¿De xuru que quies anubrir \"%s\"?"
+msgstr "¿De xuru que quies anubrir «%s»?"
 
 #: ../src/appfinder-window.c:1037
 msgid "Remove From Bookmarks"
@@ -163,7 +163,7 @@ msgstr "Nun intentes usar o llegar a ser un serviciu D-Bus"
 #: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Escribi \"%s --help\" pal usu."
+msgstr "Escribi «%s --help» pal usu."
 
 #: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
