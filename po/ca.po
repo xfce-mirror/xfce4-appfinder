@@ -3,20 +3,26 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Davidmp <medipas@gmail.com>, 2015
 # Pau Rul·lan Ferragut <paurullan@bulma.net>, 2005-2006
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-11-19 11:15+0000\n"
-"Last-Translator: Xfce <transifex@xfce.org>\n"
-"Language-Team: Catalan (http://www.transifex.com/projects/p/xfce/language/ca/)\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2015-11-23 17:54+0000\n"
+"Last-Translator: Davidmp <medipas@gmail.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/xfce/xfce4-appfinder/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr "S'ha forçat la sortida"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -52,7 +58,7 @@ msgstr "Historial d'ordres"
 
 #: ../src/appfinder-model.c:2543
 msgid "Bookmarks"
-msgstr ""
+msgstr "Marcadors"
 
 #: ../src/appfinder-preferences.c:219
 msgid "C_lear"
@@ -127,11 +133,11 @@ msgstr "Voleu amagar «%s»?"
 
 #: ../src/appfinder-window.c:1037
 msgid "Remove From Bookmarks"
-msgstr ""
+msgstr "Elimina dels marcadors"
 
 #: ../src/appfinder-window.c:1037
 msgid "Add to Bookmarks"
-msgstr ""
+msgstr "Afegeix als marcadors"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
@@ -153,16 +159,16 @@ msgstr "Surt de totes les instàncies"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "No intentis emprar o transformar-se en un servei D-Bus"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Feu «%s --help» per veure l'ús."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "L'equip de desenvolupament de Xfce. Tots els drets reservats."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Envieu els errors a <%s>."
@@ -313,3 +319,11 @@ msgstr "Executar el programa…"
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Executa un programa"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "El cercador d'aplicacions és una eina per trobar i posar en marxa aplicacions instal·lades al sistema i executar ordres ràpidament. També es pot utilitzar per afegir ràpidament llançadors al plafó de l'Xfce arrossegant un element de la vista i deixar-lo anar al plafó."
