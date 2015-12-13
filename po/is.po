@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Sveinn í Felli <sv1@fellsnet.is>, 2014
+# Sveinn í Felli <sv1@fellsnet.is>, 2014-2015
 # Sveinn í Felli <sv1@fellsnet.is>, 2011-2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2015-12-11 14:20+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2015-12-13 10:03+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic (http://www.transifex.com/xfce/xfce4-appfinder/language/is/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -326,4 +326,4 @@ msgid ""
 "on your system and the quickly execute commands. It can also be used to "
 "quickly add launchers to the Xfce Panel by dragging an item from the view "
 "and drop it on the panel."
-msgstr ""
+msgstr "Forritaleit er tól sem notað er til að finna og ræsa forrit sem uppsett eru á kerfinu, auk þess að keyra skipanir á fljótlegan máta. Einnig má nota það til að bæta ræsum á XFCE-skjástikuna, með því að draga atriði úr sýninni og sleppa þeim á skjástikuna."
