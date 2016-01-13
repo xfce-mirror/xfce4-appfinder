@@ -1,54 +1,54 @@
-# Lithuanian translation of xfce4-appfinder.
-# Copyright (C) 2004-2005 Eduard Roccatello.
-# This file is distributed under the same license as the xfce4-appfinder package.
-# Mantas Zapolskas <mantaz@users.sf.net>, 2004.
-# Ričardas Vasiulis <ricardas.v@inbox.lt>, 2010.
-# Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012
+# Mantas Zapolskas <mantaz@users.sf.net>, 2004
+# Ričardas Vasiulis <ricardas.v@inbox.lt>, 2010
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-08 06:39+0000\n"
-"PO-Revision-Date: 2012-01-28 08:42+0200\n"
-"Last-Translator: Algimantas Margevičius <margevicius.algimantas@gmail.com>\n"
-"Language-Team: Lietuvių <>\n"
-"Language: \n"
+"POT-Creation-Date: 2013-07-02 23:08+0200\n"
+"PO-Revision-Date: 2016-01-13 01:09+0000\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce4-appfinder/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2)\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "Visos programos"
 
-#: ../src/appfinder-model.c:545
+#: ../src/appfinder-model.c:549
 msgid "Name"
 msgstr "Pavadinimas"
 
-#: ../src/appfinder-model.c:546
+#: ../src/appfinder-model.c:550
 msgid "Comment"
 msgstr "Komentaras"
 
-#: ../src/appfinder-model.c:547
+#: ../src/appfinder-model.c:551
 msgid "Command"
 msgstr "Komanda"
 
-#: ../src/appfinder-model.c:548
+#: ../src/appfinder-model.c:552
 msgid "Categories"
 msgstr "Kategorijos"
 
-#: ../src/appfinder-model.c:549
+#: ../src/appfinder-model.c:553
 msgid "Filename"
 msgstr "Failo vardas"
 
-#: ../src/appfinder-model.c:1825
+#: ../src/appfinder-model.c:1833
 msgid "Application has no command"
 msgstr "Programa neturi komandos"
 
-#: ../src/appfinder-model.c:2149
+#: ../src/appfinder-model.c:2157
 msgid "Commands History"
 msgstr "Komandų istorija"
 
@@ -73,57 +73,53 @@ msgstr "Pasirinktinis veiksmas bus ištrintas visam laikui."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Ar tikrai norite ištrinti formą „%s“?"
 
-#: ../src/appfinder-window.c:219 ../src/main.c:446
-#: ../src/appfinder-preferences.glade.h:4
+#: ../src/appfinder-window.c:220 ../src/main.c:446
+#: ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Programų paieška"
 
-#: ../src/appfinder-window.c:271
+#: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
 msgstr "Perjungti peržiūros režimą"
 
-#: ../src/appfinder-window.c:363
+#: ../src/appfinder-window.c:364
 msgid "La_unch"
 msgstr "_Paleisti"
 
-#: ../src/appfinder-window.c:798
+#: ../src/appfinder-window.c:805
 msgid "Failed to launch desktop item editor"
 msgstr "Nepavyko paleisti desktop failų redaktoriaus"
 
-#: ../src/appfinder-window.c:824
+#: ../src/appfinder-window.c:831
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr ""
-"Iš jūsų namų aplanko, bus visam laikui pašalintas pasirinktinis desktop "
-"failas."
+msgstr "Iš jūsų namų aplanko, bus visam laikui pašalintas pasirinktinis desktop failas."
 
-#: ../src/appfinder-window.c:825
+#: ../src/appfinder-window.c:832
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Ar tikrai norite atstatyti „%s“?"
 
-#: ../src/appfinder-window.c:835
+#: ../src/appfinder-window.c:842
 msgid "Failed to remove desktop file"
 msgstr "Nepavyko pašalinti desktop failo"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:868
+#: ../src/appfinder-window.c:875
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
-"Norėdami vėl rodyti turite pašalinti desktop failą iš „%s“ arba atverti "
-"failą tame aplanke ir pašalinti eilutę „%s“."
+msgstr "Norėdami vėl rodyti turite pašalinti desktop failą iš „%s“ arba atverti failą tame aplanke ir pašalinti eilutę „%s“."
 
-#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
+#: ../src/appfinder-window.c:880 ../src/appfinder-window.c:972
 msgid "_Hide"
 msgstr "_Slėpti"
 
-#: ../src/appfinder-window.c:874
+#: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Ar tikrai norite paslėpti „%s“?"
@@ -157,159 +153,154 @@ msgstr "Priverstinai užverti"
 msgid "Unable to daemonize the process"
 msgstr "Nepavyko proceso padaryti demonu"
 
-#: ../src/main.c:522
+#: ../src/main.c:524
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Rašykite „%s --help” norėdami gauti informaciją apie naudojimą."
 
-#: ../src/main.c:533
+#: ../src/main.c:535
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce kūrėjų komanda. Visos teisės saugomos."
 
-#: ../src/main.c:534
+#: ../src/main.c:536
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Apie klaidas pranešti <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
-msgstr "Pridėti naują pasirinktinį veiksmą."
+msgid "Prefix"
+msgstr "Priešdėlis"
 
 #: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr "Reguliariosios išraiškos"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "Labai mažas"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "Mažesnis"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "Mažas"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "Įprastas"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "Didelis"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "Didesnis"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "Labai didelis"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "Prisiminti paskutinę _pasirinktą kategoriją"
+
+#: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
 msgstr "Visada _centruoti langą"
 
-#: ../src/appfinder-preferences.glade.h:3
-msgid "Appearance"
-msgstr "Išvaizda"
-
-#: ../src/appfinder-preferences.glade.h:5
-msgid "Behaviour"
-msgstr "Elgsena"
-
-#: ../src/appfinder-preferences.glade.h:6
-msgid "C_lear Custom Command History"
-msgstr "_Išvalyti pasirinktinių komandų istoriją"
-
-#: ../src/appfinder-preferences.glade.h:7
-msgid "Categ_ory icon size:"
-msgstr "Kategorijų _piktogramų dydis:"
-
-#: ../src/appfinder-preferences.glade.h:8
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
 msgstr "Paleidžiant centruoti langą."
 
-#: ../src/appfinder-preferences.glade.h:9
-msgid "Co_mmand:"
-msgstr "K_omanda:"
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
+msgstr "Toliau fone _vykdyti kopiją"
 
-#: ../src/appfinder-preferences.glade.h:10
-msgid "Custom _Actions"
-msgstr "Pasirinktiniai _veiksmai"
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "Vietoj užvėrimo, kai paskutinis langas užveriamas, palikti vykdomą kopiją, naujų langų atvėrimo pagreitinimui. Jūs turbūt norėsite išjungti tai, naudojamos atminties sumažinimui."
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Behaviour"
+msgstr "Elgsena"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr "_Rodyti elementus kaip piktogramas"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr "Tekstas ša_lia piktogramų"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "_Elemento piktogramos dydis:"
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr "Kategorijų _piktogramų dydis:"
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "Išvaizda"
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr "_Išvalyti pasirinktinių komandų istoriją"
+
+#: ../src/appfinder-preferences.glade.h:23
 msgid "History"
 msgstr "Istorija"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "_Bendra"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "Forma"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "Pridėti naują pasirinktinį veiksmą."
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "Pašalinti pasirinktą veiksmą."
+
+#: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
-"Jei tipas nustatytas į priešdėlį, %s bus pakeista eilute po formos, %S visu "
-"įrašo tekstu. Reguliariosioms išraiškoms galite naudoti \\0 ir \\<num>."
+msgstr "Jei tipas nustatytas į priešdėlį, %s bus pakeista eilute po formos, %S visu įrašo tekstu. Reguliariosioms išraiškoms galite naudoti \\0 ir \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:14
-msgid ""
-"Instead of quitting the application when the last window is closed, keep a "
-"running instance to speed up opening new windows. You might want to disable "
-"this to reduce memory usage."
-msgstr ""
-"Vietoj užvėrimo, kai paskutinis langas užveriamas, palikti vykdomą kopiją, "
-"naujų langų atvėrimo pagreitinimui. Jūs turbūt norėsite išjungti tai, "
-"naudojamos atminties sumažinimui."
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "K_omanda:"
 
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Ite_m icon size:"
-msgstr "_Elemento piktogramos dydis:"
-
-#: ../src/appfinder-preferences.glade.h:16
-msgid "Keep running _instance in the background"
-msgstr "Toliau fone _vykdyti kopiją"
-
-#: ../src/appfinder-preferences.glade.h:17
-msgid "Large"
-msgstr "Didelis"
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "Larger"
-msgstr "Didesnis"
-
-#: ../src/appfinder-preferences.glade.h:19
-msgid "Normal"
-msgstr "Įprastas"
-
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
 msgstr "For_ma:"
 
-#: ../src/appfinder-preferences.glade.h:21
-msgid "Pattern"
-msgstr "Forma"
-
-#: ../src/appfinder-preferences.glade.h:22
-msgid "Prefix"
-msgstr "Priešdėlis"
-
-#: ../src/appfinder-preferences.glade.h:23
-msgid "Regular Expression"
-msgstr "Reguliariosios išraiškos"
-
-#: ../src/appfinder-preferences.glade.h:24
-msgid "Remember last _selected category"
-msgstr "Prisiminti paskutinę _pasirinktą kategoriją"
-
-#: ../src/appfinder-preferences.glade.h:25
-msgid "Remove the currently selected action."
-msgstr "Pašalinti pasirinktą veiksmą."
-
-#: ../src/appfinder-preferences.glade.h:26
-msgid "Small"
-msgstr "Mažas"
-
-#: ../src/appfinder-preferences.glade.h:27
-msgid "Smaller"
-msgstr "Mažesnis"
-
-#: ../src/appfinder-preferences.glade.h:28
-msgid "Text besi_de icons"
-msgstr "Tekstas ša_lia piktogramų"
-
-#: ../src/appfinder-preferences.glade.h:29
-msgid "Very Large"
-msgstr "Labai didelis"
-
-#: ../src/appfinder-preferences.glade.h:30
-msgid "Very Small"
-msgstr "Labai mažas"
-
-#: ../src/appfinder-preferences.glade.h:31
-msgid "_General"
-msgstr "_Bendra"
-
 #: ../src/appfinder-preferences.glade.h:32
-msgid "_Save match in command history"
-msgstr "_Išsaugoti atitikmenį komandų istorijoje"
-
-#: ../src/appfinder-preferences.glade.h:33
 msgid "_Type:"
 msgstr "_Tipas:"
 
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr "_Išsaugoti atitikmenį komandų istorijoje"
+
 #: ../src/appfinder-preferences.glade.h:34
-msgid "_View items as icons"
-msgstr "_Rodyti elementus kaip piktogramas"
+msgid "Custom _Actions"
+msgstr "Pasirinktiniai _veiksmai"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
