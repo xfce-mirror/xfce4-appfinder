@@ -1,161 +1,279 @@
-# Amharic translation to xfce4-appfinder.
-# Copyright (C) 2002-2007 The Xfce development team.
-# This file is distributed under the same license as the xfce4-appfinder package.
-# Tegegne Tefera <tefera@mekuria.com>, 2007.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# samson <sambelet@yahoo.com>, 2016
+# Tegegne Tefera <tefera@mekuria.com>, 2007
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.4.1\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-21 20:43+0200\n"
-"PO-Revision-Date: 2007-07-01 11:31+0100\n"
-"Last-Translator: tegegne tefera <tefera@mekuria.com>\n"
-"Language-Team: Amharic <l10n-am@googlegroups.com>\n"
-"Language: am\n"
+"POT-Creation-Date: 2013-07-02 23:08+0200\n"
+"PO-Revision-Date: 2016-02-26 17:03+0000\n"
+"Last-Translator: samson <sambelet@yahoo.com>\n"
+"Language-Team: Amharic (http://www.transifex.com/xfce/xfce4-appfinder/language/am/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: am\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../src/appfinder-category-model.c:108
-#, fuzzy
+#: ../src/appfinder-category-model.c:146
 msgid "All Applications"
-msgstr "ለሸፍሲ4 ፕሮግራም ፈላጊ"
+msgstr "ሁሉንም መተግበሪያዎች"
 
-#: ../src/appfinder-model.c:422
+#: ../src/appfinder-model.c:549
 msgid "Name"
-msgstr ""
+msgstr "ስም"
 
-#: ../src/appfinder-model.c:423
+#: ../src/appfinder-model.c:550
+msgid "Comment"
+msgstr "አስተያየት"
+
+#: ../src/appfinder-model.c:551
 msgid "Command"
-msgstr ""
+msgstr "ትእዛዝ:"
 
-#: ../src/appfinder-model.c:424
+#: ../src/appfinder-model.c:552
 msgid "Categories"
 msgstr "ክፍሎች"
 
-#: ../src/appfinder-model.c:425
-#, fuzzy
+#: ../src/appfinder-model.c:553
 msgid "Filename"
-msgstr "ፋይል አስተናባሪ"
+msgstr "የ ፋይል ስም"
 
-#: ../src/appfinder-model.c:1317
-#, fuzzy
+#: ../src/appfinder-model.c:1833
 msgid "Application has no command"
-msgstr "ለሸፍሲ4 ፕሮግራም ፈላጊ"
+msgstr ""
 
-#: ../src/appfinder-model.c:1634
+#: ../src/appfinder-model.c:2157
 msgid "Commands History"
-msgstr ""
+msgstr "የ ትእዛዞች ታሪክ"
 
-#: ../src/appfinder-preferences.c:175
+#: ../src/appfinder-preferences.c:221
 msgid "C_lear"
-msgstr ""
+msgstr "ማ_ጽጃ"
 
-#: ../src/appfinder-preferences.c:176
+#: ../src/appfinder-preferences.c:222
 msgid "This will permanently clear the custom command history."
 msgstr ""
 
-#: ../src/appfinder-preferences.c:177
+#: ../src/appfinder-preferences.c:223
 msgid "Are you sure you want to clear the command history?"
 msgstr ""
 
-#: ../src/appfinder-preferences.c:287
+#: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
 msgstr ""
 
-#: ../src/appfinder-preferences.c:288
+#: ../src/appfinder-preferences.c:334
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr ""
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
-#: ../src/appfinder-preferences.glade.h:3
+#: ../src/appfinder-window.c:220 ../src/main.c:446
+#: ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
-#, fuzzy
 msgid "Application Finder"
-msgstr "ለሸፍሲ4 ፕሮግራም ፈላጊ"
+msgstr "መተግበሪያ ፈላጊ"
 
-#: ../src/appfinder-window.c:224
+#: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
+msgstr "የ መመልከቻ ዘዴ መቀያየሪያ"
+
+#: ../src/appfinder-window.c:364
+msgid "La_unch"
+msgstr "ማስ_ጀመሪያ"
+
+#: ../src/appfinder-window.c:805
+msgid "Failed to launch desktop item editor"
+msgstr "የ ዴስክቶፕ እቃ አራሚ ማስጀመር አልተቻለም"
+
+#: ../src/appfinder-window.c:831
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
 msgstr ""
 
-#: ../src/main.c:70
+#: ../src/appfinder-window.c:832
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr "በ እርግጥ እንደ ነበር መመለስ ይፈልጋሉ \"%s\"?"
+
+#: ../src/appfinder-window.c:842
+msgid "Failed to remove desktop file"
+msgstr "የ ዴስክቶፕ ፋይል ማስወገድ አልተቻለም"
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: ../src/appfinder-window.c:875
+#, c-format
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr ""
+
+#: ../src/appfinder-window.c:880 ../src/appfinder-window.c:972
+msgid "_Hide"
+msgstr "_መደበቂያ"
+
+#: ../src/appfinder-window.c:881
+#, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr "በ እርግጥ መደበቅ ይፈልጋሉ \"%s\"?"
+
+#: ../src/main.c:75
 msgid "Start in collapsed mode"
 msgstr ""
 
-#: ../src/main.c:71
-#, fuzzy
+#: ../src/main.c:76
 msgid "Print version information and exit"
-msgstr "ተጨማሪ መረጃ..."
+msgstr ""
 
-#: ../src/main.c:72
+#: ../src/main.c:77
 msgid "Replace the existing service"
 msgstr ""
 
-#: ../src/main.c:73
+#: ../src/main.c:78
 msgid "Quit all instances"
 msgstr ""
 
-#: ../src/main.c:74
+#: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
 msgstr ""
 
 #. close all windows and quit
-#: ../src/main.c:159
+#: ../src/main.c:244
 msgid "Forced to quit"
-msgstr ""
+msgstr "አስገድዶ ማጥፊያ"
 
-#: ../src/main.c:346
+#: ../src/main.c:448
 msgid "Unable to daemonize the process"
 msgstr ""
 
-#: ../src/main.c:418
+#: ../src/main.c:524
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr ""
+msgstr "አይነት \"%s --እርዳታ\" ለ መጠቀም"
 
-#: ../src/main.c:429
+#: ../src/main.c:535
 msgid "The Xfce development team. All rights reserved."
 msgstr ""
 
-#: ../src/main.c:430
+#: ../src/main.c:536
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr ""
+msgstr "እባክዎን ችግሩን ያሳውቁን ለ <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
-msgstr ""
+msgid "Prefix"
+msgstr "መነሻዎች "
 
 #: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr "መደበኛ አገላለጽ"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "በጣም ትንሽ"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "በጣም ትንሽ"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "ትንሽ"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "መደበኛ "
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "ትልቅ"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "በጣም ትልቅ"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "እጅግ በጣም ትልቅ"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:4
-msgid "Behaviour"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:5
-msgid "C_lear Custom Command History"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:6
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:7
-msgid "Co_mmand:"
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:8
-msgid "Custom _Actions"
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:9
+#: ../src/appfinder-preferences.glade.h:16
+msgid "Behaviour"
+msgstr "ባህሪ"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr "እቃዎችን እንደ ምልክት _መመልከቻ"
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr "ጽሁፍ ከ ምልክቶች አጠ_ገብ"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "የ እቃ_ዎች ምልክት መጠን:"
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr "የ ምድ_ብ ምልክት መጠን:"
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "አቀራረብ"
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:23
 msgid "History"
+msgstr "ታሪክ"
+
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "_ባጠቃላይ"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "ድግግሞሽ"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "አዲስ የ ተግባር ማስተካከያ መጨመሪያ"
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -163,121 +281,34 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:12
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "ትእ_ዛዝ:"
+
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
-msgstr ""
+msgstr "ድግግ_ሞሽ:"
 
-#: ../src/appfinder-preferences.glade.h:13
-msgid "Pattern"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:14
-msgid "Prefix"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Regular Expression"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:16
-msgid "Remember last _selected category"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:17
-msgid "Remove the currently selected action."
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "_General"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:32
 msgid "_Type:"
+msgstr "_አይነት:"
+
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
 msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:34
+msgid "Custom _Actions"
+msgstr "_ተግባሮች ማስተካከያ"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr ""
 
 #: ../data/xfce4-run.desktop.in.h:1
-#, fuzzy
 msgid "Run Program..."
-msgstr "ፕሮግራሙን አስኪድ"
+msgstr "ፕሮግራም ማስኬጃ..."
 
 #: ../data/xfce4-run.desktop.in.h:2
-#, fuzzy
 msgid "Run a program"
-msgstr "ፕሮግራሙን አስኪድ"
-
-#, fuzzy
-#~ msgid "Search"
-#~ msgstr "<b>ፈልግ:</b>"
-
-#~ msgid "All"
-#~ msgstr "ሁሉም"
-
-#, fuzzy
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "የተመረጠውን ፕሮግራም ማስኬድ አልተቻለም"
-
-#, fuzzy
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>መደቦች</b>"
-
-#, fuzzy
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>ትዕዛዝ</b>"
-
-#~ msgid "Xfce 4 Appfinder"
-#~ msgstr "የሸፍሲ 4 ፕሮግራማግኚ"
-
-#~ msgid "<b>Name</b>"
-#~ msgstr "<b>ስም</b>"
-
-#~ msgid "N/A"
-#~ msgstr "የለም"
-
-#~ msgid "<b>Comment</b>"
-#~ msgstr "<b>አስተያየት</b>"
-
-#~ msgid "Show Categories"
-#~ msgstr "መደቦችን አሳይ"
-
-#~ msgid "Core"
-#~ msgstr "መሰረታዊ"
-
-#~ msgid "Development"
-#~ msgstr "ፕሮግራም ድርሰት"
-
-#~ msgid "Office"
-#~ msgstr "ቢሮ"
-
-#~ msgid "Graphics"
-#~ msgstr "ንድፍ"
-
-#~ msgid "Network"
-#~ msgstr "አውታር"
-
-#~ msgid "AudioVideo"
-#~ msgstr "ድምጽናምስል"
-
-#~ msgid "Game"
-#~ msgstr "ጨዋታ"
-
-#~ msgid "Education"
-#~ msgstr "ትምህርት"
-
-#~ msgid "System"
-#~ msgstr "ስርዓት"
-
-#~ msgid "Utility"
-#~ msgstr "መጠቀሚያዎች"
-
-#~ msgid "No items available"
-#~ msgstr "ምንም እቃ አልተገኘም"
-
-#~ msgid "Sorry, no match for searched text."
-#~ msgstr "ይቅርታ፣ ለተፈለገው ጽሁፍ ተመሳሳይ አልተገኘለትም"
-
-#~ msgid "Appfinder"
-#~ msgstr "ፕሮግራም ፈላጊ"
+msgstr "ፕሮግራም ማስኬጃ"
