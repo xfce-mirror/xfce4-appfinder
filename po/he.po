@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2016-03-04 12:44+0000\n"
+"PO-Revision-Date: 2016-03-06 16:54+0000\n"
 "Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce4-appfinder/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr ""
 #. close all windows and quit
 #: ../src/appfinder-gdbus.c:84
 msgid "Forced to quit"
-msgstr "היציאה נכפתה"
+msgstr "נאלץ להפסיק"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -65,29 +65,29 @@ msgstr "סימניות"
 
 #: ../src/appfinder-preferences.c:219
 msgid "C_lear"
-msgstr "_טהר"
+msgstr "_נקה"
 
 #: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
-msgstr "פעולה זו תמחק לחלוטין את היסטוריית הפקודות שהוגדרו."
+msgstr "זה ינקה באופן קבוע את היסטוריית הפקודות המותאמות אישית."
 
 #: ../src/appfinder-preferences.c:221
 msgid "Are you sure you want to clear the command history?"
-msgstr "האם אתה בטוח כי ברצונך למחוק היסטוריית פקודות?"
+msgstr "האם אתה בטוח כי ברצונך לנקות את היסטוריית הפקודות?"
 
 #: ../src/appfinder-preferences.c:331
 msgid "The custom action will be deleted permanently."
-msgstr "הפעולה המותאמת תימחק לצמיתות."
+msgstr "הפעולה המותאמת אישית תימחק באופן קבוע."
 
 #: ../src/appfinder-preferences.c:332
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "האם אתה בטוח כי ברצונך למחוק את התבנית \"%s\"?"
+msgstr "האם אתה בטוח כי ברצונך למחוק את דפוס \"%s\"?"
 
 #: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "מאתר יישומים"
+msgstr "מוצא יישומים"
 
 #: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
@@ -95,11 +95,11 @@ msgstr "החלף מצב תצוגה"
 
 #: ../src/appfinder-window.c:394
 msgid "La_unch"
-msgstr "_שגר"
+msgstr "_הפעל"
 
 #: ../src/appfinder-window.c:880
 msgid "Failed to launch desktop item editor"
-msgstr "טעינת עורך פריטי שולחן העבודה נכשלה"
+msgstr "נכשל להפעיל עורך פריט שולחן עבודה"
 
 #: ../src/appfinder-window.c:906
 msgid ""
