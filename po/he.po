@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2016-03-06 16:54+0000\n"
+"PO-Revision-Date: 2016-03-08 18:32+0000\n"
 "Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce4-appfinder/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -182,7 +182,7 @@ msgstr "תחילית"
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Regular Expression"
-msgstr "ביטוי רגולרי"
+msgstr "ביטוי סדיר"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Very Small"
@@ -226,14 +226,14 @@ msgstr "מרכז חלון בעת הפעלה."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr "השאר _תהליך רץ ברקע"
+msgstr "השאר _מופע פועל ברקע"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "במקום לצאת מתוך היישום כאשר החלון האחרון הינו סגור, השאר תהליך רץ כדי להאיץ פתיחתו של חלון חדש. אפשרי כי תרצה לנטרל את אפשרות זו כדי להפחית שימוש בזיכרון."
+msgstr "במקום להפסיק את היישום כאשר החלון האחרון נסגר, השאר מופע פועל כדי להאיץ פתיחת חלונות חדשים. יתכן ותרצה לנטרל זאת כדי להפחית שימוש בזיכרון."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
@@ -241,19 +241,19 @@ msgstr "התנהגות"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "_View items as icons"
-msgstr "_הצג פריטים בתור סמלים"
+msgstr "_הצג פריטים כאיקונים"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Text besi_de icons"
-msgstr "טקסט ל_צד סמלים"
+msgstr "טקסט ל_צד איקונים"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Ite_m icon size:"
-msgstr "גודל סמל _פריט:"
+msgstr "גודל איקון _פריט:"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Categ_ory icon size:"
-msgstr "גודל סמל _קטגוריה:"
+msgstr "גודל איקון _קטגוריה:"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Appearance"
@@ -261,7 +261,7 @@ msgstr "מראה"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "C_lear Custom Command History"
-msgstr "ט_הר היסטוריית פקודה מותאמת"
+msgstr "נ_קה היסטוריית פקודה מותאמת אישית"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "History"
@@ -273,15 +273,15 @@ msgstr "_כללי"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Pattern"
-msgstr "תבנית"
+msgstr "דפוס"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Add a new custom action."
-msgstr "הוסף פעולה מותאמת חדשה."
+msgstr "הוסף פעולה מותאמת אישית חדשה."
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Remove the currently selected action."
-msgstr "הסר את הפעולה הנבחרת."
+msgstr "הסר פעולה נבחרת נוכחית."
 
 #: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
@@ -297,7 +297,7 @@ msgstr "_פקודה:"
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
-msgstr "_תבנית:"
+msgstr "_דפוס:"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "_Type:"
@@ -309,19 +309,19 @@ msgstr "שמור התאמה בהיסטוריית פקודות"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Custom _Actions"
-msgstr "פעולות _מותאמות"
+msgstr "פעולות _מותאמות אישית"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "חיפוש וטעינת יישומים המותקנים במחשבך"
+msgstr "מציאה והפעלת יישומים המותקנים במחשבך"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr "הרץ תוכנית..."
+msgstr "הפעל תוכנית..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr "הרץ תוכנית"
+msgstr "הפעל תוכנית"
 
 #: ../data/xfce4-appfinder.appdata.xml.in.h:1
 msgid ""
