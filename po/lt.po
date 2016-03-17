@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2016-01-13 01:18+0000\n"
+"PO-Revision-Date: 2016-03-17 18:14+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce4-appfinder/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -304,7 +304,7 @@ msgstr "_Tipas:"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Save match in command history"
-msgstr "_Išsaugoti atitikmenį komandų istorijoje"
+msgstr "Į_rašyti atitikmenį komandų istorijoje"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Custom _Actions"
