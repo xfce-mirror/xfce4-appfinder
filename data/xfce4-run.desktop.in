@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 Exec=xfce4-appfinder --collapsed
-Icon=gtk-execute
+Icon=system-run
 StartupNotify=true
 Terminal=false
 Categories=Utility;X-XFCE;X-Xfce-Toplevel;
