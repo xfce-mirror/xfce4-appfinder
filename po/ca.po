@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2016-05-03 11:19+0000\n"
+"PO-Revision-Date: 2016-05-05 11:03+0000\n"
 "Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce4-appfinder/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr "L'aplicació no té cap ordre"
 
 #: ../src/appfinder-model.c:2519
 msgid "Commands History"
-msgstr "Històric d'ordres"
+msgstr "Historial d'ordres"
 
 #: ../src/appfinder-model.c:2543
 msgid "Bookmarks"
@@ -67,7 +67,7 @@ msgstr "_Neteja"
 
 #: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
-msgstr "Això netejarà permanent l'històric d'ordres personalitzades."
+msgstr "Això netejarà permanent l'historial d'ordres personalitzades."
 
 #: ../src/appfinder-preferences.c:221
 msgid "Are you sure you want to clear the command history?"
@@ -259,11 +259,11 @@ msgstr "Aparença"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "C_lear Custom Command History"
-msgstr "_Neteja l'històric d'ordres personalitzades"
+msgstr "_Neteja l'historial d'ordres personalitzades"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "History"
-msgstr "Històric"
+msgstr "Historial"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "_General"
@@ -303,7 +303,7 @@ msgstr "_Tipus:"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "_Save match in command history"
-msgstr "De_sa la coincidència a l'històric d'ordres"
+msgstr "De_sa la coincidència a l'historial d'ordres"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Custom _Actions"
