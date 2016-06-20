@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2016-05-05 11:03+0000\n"
+"PO-Revision-Date: 2016-06-20 15:27+0000\n"
 "Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce4-appfinder/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -85,7 +85,7 @@ msgstr "Voleu suprimir el patró «%s»?"
 #: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "Cercador d'aplicacions"
+msgstr "Descobridor d'aplicacions"
 
 #: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
@@ -93,7 +93,7 @@ msgstr "Canvia el mode de visualització"
 
 #: ../src/appfinder-window.c:394
 msgid "La_unch"
-msgstr "Exec_uta"
+msgstr "Ll_ança"
 
 #: ../src/appfinder-window.c:880
 msgid "Failed to launch desktop item editor"
@@ -125,12 +125,12 @@ msgstr "Per mostrar l'element heu de suprimir manualment el fitxer d'escriptori 
 
 #: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
-msgstr "_Amaga"
+msgstr "_Oculta"
 
 #: ../src/appfinder-window.c:956
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Esteu segur que voleu amagar «%s»?"
+msgstr "Esteu segur que voleu ocultar «%s»?"
 
 #: ../src/appfinder-window.c:1037
 msgid "Remove From Bookmarks"
@@ -184,15 +184,15 @@ msgstr "Expressió regular"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Very Small"
-msgstr "Molt petit"
+msgstr "Molt petita"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Smaller"
-msgstr "Més petit"
+msgstr "Més petita"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "Small"
-msgstr "Petit"
+msgstr "Petita"
 
 #: ../src/appfinder-preferences.glade.h:6
 msgid "Normal"
@@ -251,7 +251,7 @@ msgstr "Mida de les icones dels _elements:"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Categ_ory icon size:"
-msgstr "Mida de la icona de les categ_ories:"
+msgstr "Mida de les icones de les categ_ories:"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Appearance"
@@ -311,7 +311,7 @@ msgstr "_Accions personalitzades"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Cerqueu i executeu les aplicacions instal·lades al vostre sistema"
+msgstr "Cerqueu i llanceu les aplicacions instal·lades al vostre sistema"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
@@ -327,4 +327,4 @@ msgid ""
 "on your system and the quickly execute commands. It can also be used to "
 "quickly add launchers to the Xfce Panel by dragging an item from the view "
 "and drop it on the panel."
-msgstr "El cercador d'aplicacions és una eina per trobar i llançar les aplicacions instal·lades al vostre sistema i per a l'execució ràpida d'ordres. També es pot utilitzar per afegir ràpidament llançadors al plafó de Xfce arrossegant un element des de la visualització i en deixar caure'l al plafó."
+msgstr "El descobridor d'aplicacions és una eina per trobar i llançar les aplicacions instal·lades al vostre sistema i per a l'execució ràpida d'ordres. També es pot utilitzar per afegir ràpidament llançadors al plafó de Xfce arrossegant un element des de la visualització i en deixar caure'l al plafó."
