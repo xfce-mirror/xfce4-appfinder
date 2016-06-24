@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2016-03-17 18:14+0000\n"
+"PO-Revision-Date: 2016-06-24 12:52+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce4-appfinder/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -181,7 +181,7 @@ msgstr "Priešdėlis"
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Regular Expression"
-msgstr "Reguliariosios išraiškos"
+msgstr "Reguliarieji reiškiniai"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Very Small"
@@ -288,7 +288,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Jei tipas nustatytas į priešdėlį, %s bus pakeista eilute po formos, %S visu įrašo tekstu. Reguliariosioms išraiškoms galite naudoti \\0 ir \\<num>."
+msgstr "Jei tipas nustatytas į priešdėlį, %s bus pakeista eilute po formos, %S visu įrašo tekstu. Reguliariesiems reiškiniams galite naudoti \\0 ir \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
