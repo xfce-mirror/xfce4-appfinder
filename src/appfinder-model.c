@@ -101,6 +101,8 @@ static void               xfce_appfinder_model_bookmarks_monitor_stop (XfceAppfi
 static void               xfce_appfinder_model_bookmarks_monitor      (XfceAppfinderModel       *model,
                                                                        const gchar              *path);
 
+static gboolean           xfce_appfinder_model_fuzzy_match            (const gchar              *source,
+                                                                       const gchar              *token);
 
 
 struct _XfceAppfinderModelClass
@@ -2020,7 +2022,7 @@ xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
 
       if (string != NULL
           && item->key != NULL)
-        return strstr (item->key, string) != NULL;
+        return xfce_appfinder_model_fuzzy_match (item->key, string);
     }
   else /* command item */
     {
@@ -2030,7 +2032,7 @@ xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
         return FALSE;
 
       if (string != NULL)
-        return strstr (item->command, string) != NULL;
+        return xfce_appfinder_model_fuzzy_match (item->command, string);
     }
 
   return TRUE;
@@ -2059,7 +2061,7 @@ xfce_appfinder_model_get_visible_command (XfceAppfinderModel *model,
     }
 
   if (item->command != NULL && string != NULL)
-    return strncmp (item->command, string, strlen (string)) == 0;
+    return xfce_appfinder_model_fuzzy_match (item->command, string);
 
   return FALSE;
 }
@@ -2548,4 +2550,54 @@ xfce_appfinder_model_get_bookmarks_category (void)
     }
 
   return category;
+}
+
+
+
+gboolean
+xfce_appfinder_model_fuzzy_match (const gchar *source,
+                                  const gchar *token)
+{
+    const guint token_size = strlen (token);
+    const guint cmd_part_size = token_size + 1;
+    guint index;
+    gboolean match = FALSE;
+    gboolean contain_uppercase = FALSE;
+
+    // length is chosen because of ".*<part1> *.*(?i)<part2>.*" pattern format
+    // "(?i)" is optional part
+    gchar pattern [token_size + 14];
+    gchar cmd_part [cmd_part_size];
+    gchar *param_part;
+
+    if (strcmp (token,"") == 0)
+        return TRUE;
+
+    for (index=1; !match && (index <= token_size); index++)
+      {
+        memset (cmd_part, 0, cmd_part_size);
+        strncpy (cmd_part, token, index);
+        cmd_part [index + 1] = '\0';
+
+        contain_uppercase = FALSE;
+        param_part = (gchar*) token + index;
+
+        while (!contain_uppercase && (*param_part != '\0'))
+          {
+            contain_uppercase = g_ascii_isupper (*param_part);
+            param_part++;
+          }
+
+        memset (pattern, 0, sizeof (pattern));
+        g_sprintf (pattern, ".*%s *.*%s%s.*", cmd_part,
+                   (contain_uppercase) ? "(?-i)" : "(?i)",
+                   token + index);
+        match = g_regex_match_simple (pattern, source, 0, 0);
+        if (match)
+          {
+            APPFINDER_DEBUG ("Fuzzy match: regexp=%s ; source=%s", pattern, source);
+          }
+      }
+
+    return match;
 }
