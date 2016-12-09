@@ -3,18 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Aputsiaĸ Niels Janussen <aj@isit.gl>, 2013
+# Aputsiak Niels Janussen <aj@isit.gl>, 2013
 # Erik Schmidt <erischmi@gmail.com>, 2012
 # Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>, 2015
 # Ole Guldberg <olegb@omgwtf.dk>, 2008
 # Per Kongstad <p_kongstad@op.pl>, 2009,2014
+# scootergrisen, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2015-11-09 20:48+0000\n"
-"Last-Translator: Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>\n"
+"PO-Revision-Date: 2016-12-09 05:03+0000\n"
+"Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce4-appfinder/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -69,7 +70,7 @@ msgstr "_Ryd"
 
 #: ../src/appfinder-preferences.c:220
 msgid "This will permanently clear the custom command history."
-msgstr "Det vil rydde din historik over tilpassede kommandoer permanent"
+msgstr "Det vil rydde din historik over tilpassede kommandoer permanent."
 
 #: ../src/appfinder-preferences.c:221
 msgid "Are you sure you want to clear the command history?"
@@ -222,7 +223,7 @@ msgstr "C_entrér altid vinduet"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
-msgstr "Centrér vinduet ved opstart"
+msgstr "Centrér vinduet ved opstart."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
@@ -281,7 +282,7 @@ msgstr "Føj en ny tilpasset aktion."
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Remove the currently selected action."
-msgstr "Fjern den nuværende valgte handling"
+msgstr "Fjern den nuværende valgte handling."
 
 #: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
