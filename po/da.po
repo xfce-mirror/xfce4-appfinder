@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-02 23:08+0200\n"
-"PO-Revision-Date: 2017-01-14 10:15+0000\n"
+"PO-Revision-Date: 2017-01-14 16:01+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce4-appfinder/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -67,7 +67,7 @@ msgstr "Er du sikker på at du vil rydde kommandohistorik?"
 
 #: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
-msgstr "Den tilpassede aktion vil blive slettet permanent."
+msgstr "Den tilpassede handling vil blive slettet permanent."
 
 #: ../src/appfinder-preferences.c:334
 #, c-format
@@ -269,7 +269,7 @@ msgstr "Mønster"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Add a new custom action."
-msgstr "Føj en ny tilpasset aktion."
+msgstr "Tilføj en ny tilpasset handling."
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Remove the currently selected action."
