@@ -6,13 +6,13 @@
 # Erik Schmidt <erischmi@gmail.com>, 2012
 # Ole Guldberg <olegb@omgwtf.dk>, 2008
 # Per Kongstad <p_kongstad@op.pl>, 2009
-# scootergrisen, 2016
+# scootergrisen, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-02 23:08+0200\n"
-"PO-Revision-Date: 2016-12-17 23:44+0000\n"
+"PO-Revision-Date: 2017-01-14 10:15+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce4-appfinder/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -157,7 +157,7 @@ msgstr "Kunne ikke gøre processen til en dæmon"
 #: ../src/main.c:524
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Tast \"%s --help\\ for information om brug."
+msgstr "Tast \"%s --help\" for information om brug."
 
 #: ../src/main.c:535
 msgid "The Xfce development team. All rights reserved."
