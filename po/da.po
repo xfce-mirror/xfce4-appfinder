@@ -8,13 +8,13 @@
 # Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>, 2015
 # Ole Guldberg <olegb@omgwtf.dk>, 2008
 # Per Kongstad <p_kongstad@op.pl>, 2009,2014
-# scootergrisen, 2016
+# scootergrisen, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2016-12-17 23:43+0000\n"
+"PO-Revision-Date: 2017-01-14 10:15+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce4-appfinder/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -166,7 +166,7 @@ msgstr "Undlad at bruge eller blive en D-bus-tjeneste"
 #: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Tast \"%s --help\\ for information om brug."
+msgstr "Tast \"%s --help\" for information om brug."
 
 #: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
