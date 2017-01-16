@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-02 23:08+0200\n"
-"PO-Revision-Date: 2017-01-16 09:50+0000\n"
+"PO-Revision-Date: 2017-01-16 11:45+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce4-appfinder/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -157,7 +157,7 @@ msgstr "Kunne ikke gøre processen til en dæmon"
 #: ../src/main.c:524
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Tast \"%s --help\" for information om brug."
+msgstr "Skriv \"%s --help\" for brugsvejledning."
 
 #: ../src/main.c:535
 msgid "The Xfce development team. All rights reserved."
