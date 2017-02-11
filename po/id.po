@@ -4,16 +4,17 @@
 # 
 # Translators:
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2008
-# Mohamad Hasan Al Banna, 2014
-# Mohamad Hasan Al Banna, 2013
+# Mohamad Hasan Al Banna <se7entime@protonmail.com>, 2014
+# Mohamad Hasan Al Banna <se7entime@protonmail.com>, 2013
+# Mohamad Hasan Al Banna <se7entime@protonmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 00:30+0100\n"
-"PO-Revision-Date: 2014-05-23 17:37+0000\n"
-"Last-Translator: Mohamad Hasan Al Banna\n"
-"Language-Team: Indonesian (http://www.transifex.com/projects/p/xfce4-appfinder/language/id/)\n"
+"POT-Creation-Date: 2015-02-28 18:30+0100\n"
+"PO-Revision-Date: 2017-02-11 11:55+0000\n"
+"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
+"Language-Team: Indonesian (http://www.transifex.com/xfce/xfce4-appfinder/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -160,16 +161,16 @@ msgstr "Hentikan semua instansi"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Jangan menggunakan atau memanipulasi servis D-Bus"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Ketik \"%s --help\" untuk penggunaan."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "Tim pengembang Xfce. Hak cipta dilindungi undang-undang."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Silakan laporkan kutu ke <%s>."
@@ -320,3 +321,11 @@ msgstr "Jalankan Program..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "Jalankan program"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr "Aplikasi finder merupakan alat untuk menemukan dan menjalankan aplikasi yang dipasang pada sistem Anda dan secara cepat menjalankan perintah. Aplikasi Finder juga dapat digunakan untuk menambahkan peluncur dengan cepat ke Xfce Panel dengan menyeret item dari pandangan dan drop pada panel."
