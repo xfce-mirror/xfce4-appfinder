@@ -5,14 +5,14 @@
 # Translators:
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012
 # Mantas Zapolskas <mantaz@users.sf.net>, 2004
-# Moo, 2015-2016
+# Moo, 2015-2017
 # Ričardas Vasiulis <ricardas.v@inbox.lt>, 2010
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2016-06-24 12:52+0000\n"
+"PO-Revision-Date: 2017-05-15 18:50+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce4-appfinder/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -155,7 +155,7 @@ msgstr "Pakeisti egzistuojančią tarnybą"
 
 #: ../src/main.c:67
 msgid "Quit all instances"
-msgstr "Išjungti visas kopijas"
+msgstr "Išjungti visus egzempliorius"
 
 #: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
