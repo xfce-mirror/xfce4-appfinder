@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2017-05-15 18:50+0000\n"
+"PO-Revision-Date: 2017-06-17 23:36+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce4-appfinder/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -104,7 +104,7 @@ msgstr "Nepavyko paleisti desktop failų redaktoriaus"
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Iš jūsų namų aplanko, bus visam laikui pašalintas pasirinktinis desktop failas."
+msgstr "Tai visam laikui pašalins pasirinktinį desktop failą iš jūsų namų katalogo."
 
 #: ../src/appfinder-window.c:907
 #, c-format
@@ -122,7 +122,7 @@ msgstr "Nepavyko pašalinti desktop failo"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Norėdami vėl rodyti turite pašalinti desktop failą iš „%s“ arba atverti failą tame aplanke ir pašalinti eilutę „%s“."
+msgstr "Norėdami nebeslėpti elementą, turite pašalinti desktop failą iš „%s“ arba atverti failą tame pačiame kataloge ir pašalinti eilutę „%s“."
 
 #: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
 msgid "_Hide"
