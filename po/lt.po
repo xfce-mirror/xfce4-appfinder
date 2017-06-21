@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2017-06-17 23:36+0000\n"
+"PO-Revision-Date: 2017-06-20 23:07+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce4-appfinder/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -48,7 +48,7 @@ msgstr "Kategorijos"
 
 #: ../src/appfinder-model.c:579
 msgid "Filename"
-msgstr "Failo vardas"
+msgstr "Failo pavadinimas"
 
 #: ../src/appfinder-model.c:2100
 msgid "Application has no command"
