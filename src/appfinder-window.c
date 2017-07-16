@@ -596,11 +596,7 @@ xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
       width *= 2;
     }
 
-#if GTK_CHECK_VERSION (2, 22, 0)
   gtk_icon_view_set_item_orientation (GTK_ICON_VIEW (window->view), item_orientation);
-#else
-  gtk_icon_view_set_orientation (GTK_ICON_VIEW (window->view), item_orientation);
-#endif
   gtk_icon_view_set_item_width (GTK_ICON_VIEW (window->view), width);
 
   if (item_orientation == GTK_ORIENTATION_HORIZONTAL)
