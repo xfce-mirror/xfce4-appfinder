@@ -1,9 +1,11 @@
 /autom4te.cache
 /aclocal.m4
 /compile
+/config.*
 /configure
 /depcomp
 /install-sh
+/libtool
 /missing
 /stamp-h1
 
@@ -14,6 +16,9 @@ config.status
 config.sub
 configure
 configure.ac
+data/xfce4-appfinder.appdata.xml
+data/xfce4-appfinder.desktop
+data/xfce4-run.desktop
 depcomp
 INSTALL
 install-sh
@@ -22,7 +27,10 @@ Makefile
 Makefile.in
 missing
 po/.deps/
+po/.intltool-merge-cache
 po/Makefile.in.in
+po/POTFILES
+po/stamp-it
 src/.deps/
 
 intltool-extract.in
