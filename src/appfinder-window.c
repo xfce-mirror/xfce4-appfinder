@@ -502,6 +502,7 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
             {
               icon_size--;
             }
+          return TRUE;
 
         case GDK_KEY_0:
         case GDK_KEY_KP_0:
