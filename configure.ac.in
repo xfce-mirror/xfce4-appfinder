@@ -1,5 +1,5 @@
 dnl
-dnl Copyright (c) 2008-2015 - The Xfce Development Team.
+dnl Copyright (c) 2008-2017 - The Xfce Development Team.
 dnl
 
 dnl ***************************
@@ -73,17 +73,12 @@ dnl *** Check for required packages ***
 dnl ***********************************
 XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.30.0])
 XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.30.0])
+XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.20.0])
 XDT_CHECK_PACKAGE([GIO], [gio-2.0], [2.30.0])
+XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-2], [4.10.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.10.0])
 XDT_CHECK_PACKAGE([GARCON], [garcon-1], [0.3.0])
 XDT_CHECK_PACKAGE([XFCONF], [libxfconf-0], [4.10.0])
-
-dnl ****************************
-dnl *** Compile against GTK3 ***
-dnl ****************************
-XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-2], [4.10.0])
-XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.14.0])
-AM_CONDITIONAL([ENABLE_GTK3], 1)
 
 dnl ***********************************
 dnl *** Check for debugging support ***
