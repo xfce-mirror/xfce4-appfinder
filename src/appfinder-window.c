@@ -1258,32 +1258,14 @@ xfce_appfinder_window_entry_activate (GtkEditable         *entry,
 static gboolean
 xfce_appfinder_window_pointer_is_grabbed (GtkWidget *widget)
 {
-#if GTK_CHECK_VERSION (3, 0, 0)
-  GdkDeviceManager *device_manager;
-  GList            *devices, *li;
+  GdkSeat          *seat;
+  GdkDevice        *pointer;
   GdkDisplay       *display;
-  gboolean          is_grabbed = FALSE;
 
   display = gtk_widget_get_display (widget);
-  device_manager = gdk_display_get_device_manager (display);
-  devices = gdk_device_manager_list_devices (device_manager, GDK_DEVICE_TYPE_MASTER);
-
-  for (li = devices; li != NULL; li = li->next)
-    {
-      if (gdk_device_get_source (li->data) == GDK_SOURCE_MOUSE
-          && gdk_display_device_is_grabbed (display, li->data))
-        {
-          is_grabbed = TRUE;
-          break;
-        }
-    }
-
-  g_list_free (devices);
-
-  return is_grabbed;
-#else
-  return gdk_pointer_is_grabbed ();
-#endif
+  seat = gdk_display_get_default_seat (display);
+  pointer = gdk_seat_get_pointer (seat);
+  return gdk_display_device_is_grabbed (display, pointer);
 }
 
 
