@@ -10,6 +10,7 @@
 # Artem Zolochevskiy <artem.zolochevskiy@gmail.com>, 2011
 # Denis Koryavov <dkoryavov@yandex.ru>, 2009-2010
 # Dmitrij Smirnov <other@igus.lv>, 2010
+# Igor <f2404@yandex.ru>, 2017
 # Maxim Zenin <webmechanics@gmail.com>, 2006
 # NIkitaBelobrov <qvzqvz@gmail.com>, 2008
 # Sergey Alyoshin <alyoshin.s@gmail.com>, 2014-2015
@@ -19,15 +20,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2015-02-28 23:55+0000\n"
-"Last-Translator: Sergey Alyoshin <alyoshin.s@gmail.com>\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/xfce4-appfinder/language/ru/)\n"
+"POT-Creation-Date: 2017-07-17 06:30+0200\n"
+"PO-Revision-Date: 2017-07-17 12:53+0000\n"
+"Last-Translator: Igor <f2404@yandex.ru>\n"
+"Language-Team: Russian (http://www.transifex.com/xfce/xfce4-appfinder/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. close all windows and quit
 #: ../src/appfinder-gdbus.c:84
@@ -38,35 +39,35 @@ msgstr "Принудительное завершение"
 msgid "All Applications"
 msgstr "Все приложения"
 
-#: ../src/appfinder-model.c:575
+#: ../src/appfinder-model.c:576
 msgid "Name"
 msgstr "Название"
 
-#: ../src/appfinder-model.c:576
+#: ../src/appfinder-model.c:577
 msgid "Comment"
 msgstr "Комментарий"
 
-#: ../src/appfinder-model.c:577
+#: ../src/appfinder-model.c:578
 msgid "Command"
 msgstr "Команда"
 
-#: ../src/appfinder-model.c:578
+#: ../src/appfinder-model.c:579
 msgid "Categories"
 msgstr "Категории"
 
-#: ../src/appfinder-model.c:579
+#: ../src/appfinder-model.c:580
 msgid "Filename"
 msgstr "Имя файла"
 
-#: ../src/appfinder-model.c:2100
+#: ../src/appfinder-model.c:2097
 msgid "Application has no command"
 msgstr "Приложению не присвоена команда"
 
-#: ../src/appfinder-model.c:2519
+#: ../src/appfinder-model.c:2516
 msgid "Commands History"
 msgstr "Журнал команд"
 
-#: ../src/appfinder-model.c:2543
+#: ../src/appfinder-model.c:2540
 msgid "Bookmarks"
 msgstr "Закладки"
 
@@ -91,63 +92,79 @@ msgstr "Пользовательское действие будет удале�
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Удалить шаблон «%s»?"
 
-#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:220 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Поиск приложений"
 
-#: ../src/appfinder-window.c:289
+#: ../src/appfinder-window.c:268
 msgid "Toggle view mode"
 msgstr "Переключить режим отображения"
 
-#: ../src/appfinder-window.c:394
+#: ../src/appfinder-window.c:344
+msgid "_Preferences"
+msgstr "_Настройки"
+
+#: ../src/appfinder-window.c:360
+msgid "Close"
+msgstr "Закрыть"
+
+#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1040
 msgid "La_unch"
 msgstr "За_пустить"
 
-#: ../src/appfinder-window.c:880
+#: ../src/appfinder-window.c:854
 msgid "Failed to launch desktop item editor"
 msgstr "Не удалось запустить редактор элементов рабочего стола"
 
-#: ../src/appfinder-window.c:906
+#: ../src/appfinder-window.c:880
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Ваш desktop-файл будет навсегда удалён из вашего домашнего каталога."
 
-#: ../src/appfinder-window.c:907
+#: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Возвратить шаблон «%s»?"
 
-#: ../src/appfinder-window.c:917
+#: ../src/appfinder-window.c:891
 msgid "Failed to remove desktop file"
 msgstr "Не удалось удалить desktop-файл"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:950
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Чтобы снова отображать этот элемент, вам придётся вручную удалить desktop-файл из «%s» или открыть этот файл в том же каталоге и удалить строку «%s»."
 
-#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
+#: ../src/appfinder-window.c:929 ../src/appfinder-window.c:1077
 msgid "_Hide"
 msgstr "С_крыть"
 
-#: ../src/appfinder-window.c:956
+#: ../src/appfinder-window.c:930
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Скрыть «%s»?"
 
-#: ../src/appfinder-window.c:1037
+#: ../src/appfinder-window.c:1024
 msgid "Remove From Bookmarks"
 msgstr "Удалить из закладок"
 
-#: ../src/appfinder-window.c:1037
+#: ../src/appfinder-window.c:1024
 msgid "Add to Bookmarks"
 msgstr "Добавить в закладки"
+
+#: ../src/appfinder-window.c:1053
+msgid "_Edit"
+msgstr "_Правка"
+
+#: ../src/appfinder-window.c:1070
+msgid "_Revert"
+msgstr "_Отменить"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
@@ -336,4 +353,4 @@ msgid ""
 "on your system and the quickly execute commands. It can also be used to "
 "quickly add launchers to the Xfce Panel by dragging an item from the view "
 "and drop it on the panel."
-msgstr "Поиск приложений — инструмент для поиска и запуска установленных в вашей системе приложений и быстрого выполнения команд. Также он может быть использован для быстрого добавления значков запуска на панель Xfce перетаскиванием."
+msgstr "Поиск приложений — инструмент для поиска и запуска установленных в вашей системе приложений и быстрого выполнения команд. Он также может быть использован для быстрого добавления значков запуска на панель Xfce с помощью перетаскивания."
