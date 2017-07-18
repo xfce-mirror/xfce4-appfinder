@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Dotan Kamber <kamberd@yahoo.com>, 2004,2006
-# Elishai Eliyahu <e1907@mm.st>, 2016
+# Elishai Eliyahu <e1907@mm.st>, 2016-2017
 # Jonatan Perry <Jonatan443@walla.co.il>, 2004
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2014
 # Yuval Tanny <tanai@int.gov.il>, 2004
@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2016-03-21 13:06+0000\n"
+"POT-Creation-Date: 2017-07-17 06:30+0200\n"
+"PO-Revision-Date: 2017-07-18 13:51+0000\n"
 "Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce4-appfinder/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -31,35 +31,35 @@ msgstr "נאלץ להפסיק"
 msgid "All Applications"
 msgstr "כל היישומים"
 
-#: ../src/appfinder-model.c:575
+#: ../src/appfinder-model.c:576
 msgid "Name"
 msgstr "שם"
 
-#: ../src/appfinder-model.c:576
+#: ../src/appfinder-model.c:577
 msgid "Comment"
 msgstr "הערה"
 
-#: ../src/appfinder-model.c:577
+#: ../src/appfinder-model.c:578
 msgid "Command"
 msgstr "פקודה"
 
-#: ../src/appfinder-model.c:578
+#: ../src/appfinder-model.c:579
 msgid "Categories"
 msgstr "קטגוריות"
 
-#: ../src/appfinder-model.c:579
+#: ../src/appfinder-model.c:580
 msgid "Filename"
 msgstr "שם קובץ"
 
-#: ../src/appfinder-model.c:2100
+#: ../src/appfinder-model.c:2097
 msgid "Application has no command"
 msgstr "יישום נטול פקודה"
 
-#: ../src/appfinder-model.c:2519
+#: ../src/appfinder-model.c:2516
 msgid "Commands History"
 msgstr "היסטוריית פקודות"
 
-#: ../src/appfinder-model.c:2543
+#: ../src/appfinder-model.c:2540
 msgid "Bookmarks"
 msgstr "סימניות"
 
@@ -84,63 +84,79 @@ msgstr "הפעולה המותאמת אישית תימחק באופן קבוע."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "האם אתה בטוח כי ברצונך למחוק את דפוס \"%s\"?"
 
-#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:220 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "מוצא יישומים"
 
-#: ../src/appfinder-window.c:289
+#: ../src/appfinder-window.c:268
 msgid "Toggle view mode"
 msgstr "החלף מצב תצוגה"
 
-#: ../src/appfinder-window.c:394
+#: ../src/appfinder-window.c:344
+msgid "_Preferences"
+msgstr "_העדפות"
+
+#: ../src/appfinder-window.c:360
+msgid "Close"
+msgstr "סגור"
+
+#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1040
 msgid "La_unch"
 msgstr "_הפעל"
 
-#: ../src/appfinder-window.c:880
+#: ../src/appfinder-window.c:854
 msgid "Failed to launch desktop item editor"
 msgstr "נכשל להפעיל עורך פריט שולחן עבודה"
 
-#: ../src/appfinder-window.c:906
+#: ../src/appfinder-window.c:880
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "זה יסיר לתמיד את קובץ שולחן העבודה המותאם אישית מתיקיית הבית שלך."
 
-#: ../src/appfinder-window.c:907
+#: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "האם אתה בטוח שאתה רוצה להחזיר \"%s\"?"
 
-#: ../src/appfinder-window.c:917
+#: ../src/appfinder-window.c:891
 msgid "Failed to remove desktop file"
 msgstr "נכשל להסיר קובץ שולחן עבודה"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:950
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "כדי לגלות את הפריט עליך להסיר ידנית את קובץ שולחן העבודה מ \"%s\" או לפתוח את הקובץ באותה תיקייה ולהסיר את השורה \"%s\"."
 
-#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
+#: ../src/appfinder-window.c:929 ../src/appfinder-window.c:1077
 msgid "_Hide"
 msgstr "הס_תר"
 
-#: ../src/appfinder-window.c:956
+#: ../src/appfinder-window.c:930
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "האם אתה בטוח כי ברצונך להסתיר את \"%s\"?"
 
-#: ../src/appfinder-window.c:1037
+#: ../src/appfinder-window.c:1024
 msgid "Remove From Bookmarks"
 msgstr "הסר מתוך הסימניות"
 
-#: ../src/appfinder-window.c:1037
+#: ../src/appfinder-window.c:1024
 msgid "Add to Bookmarks"
 msgstr "הוסף אל סימניות"
+
+#: ../src/appfinder-window.c:1053
+msgid "_Edit"
+msgstr "_ערוך"
+
+#: ../src/appfinder-window.c:1070
+msgid "_Revert"
+msgstr "_חזור"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
