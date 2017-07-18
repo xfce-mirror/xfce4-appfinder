@@ -4,19 +4,20 @@
 # 
 # Translators:
 # Adolfo Jayme Barrientos, 2014
-# Adolfo Jayme Barrientos, 2014
+# Adolfo Jayme-Barrientos, 2014
 # Edscott Wilson Garcia <edscott@xfce.org>, 2004
 # mc <correomc2000-ing@yahoo.es>, 2013
-# Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>, 2014-2015
+# Pablo Roberto “Jristz” Lezaeta Reyes <prflr88@gmail.com>, 2014-2015
+# Pablo Roberto “Jristz” Lezaeta Reyes <prflr88@gmail.com>, 2017
 # Rudy Godoy <rudy@stone-head.org>, 2005
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2015-03-01 03:50+0000\n"
-"Last-Translator: Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/xfce4-appfinder/language/es/)\n"
+"POT-Creation-Date: 2017-07-17 06:30+0200\n"
+"PO-Revision-Date: 2017-07-18 07:26+0000\n"
+"Last-Translator: Pablo Roberto “Jristz” Lezaeta Reyes <prflr88@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/xfce/xfce4-appfinder/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,35 +33,35 @@ msgstr "Forzado a cerrar"
 msgid "All Applications"
 msgstr "Todas las aplicaciones"
 
-#: ../src/appfinder-model.c:575
+#: ../src/appfinder-model.c:576
 msgid "Name"
 msgstr "Nombre"
 
-#: ../src/appfinder-model.c:576
+#: ../src/appfinder-model.c:577
 msgid "Comment"
 msgstr "Comentario"
 
-#: ../src/appfinder-model.c:577
+#: ../src/appfinder-model.c:578
 msgid "Command"
 msgstr "Orden"
 
-#: ../src/appfinder-model.c:578
+#: ../src/appfinder-model.c:579
 msgid "Categories"
 msgstr "Categorías"
 
-#: ../src/appfinder-model.c:579
+#: ../src/appfinder-model.c:580
 msgid "Filename"
 msgstr "Nombre del archivo"
 
-#: ../src/appfinder-model.c:2100
+#: ../src/appfinder-model.c:2097
 msgid "Application has no command"
 msgstr "La aplicación no tiene una orden"
 
-#: ../src/appfinder-model.c:2519
+#: ../src/appfinder-model.c:2516
 msgid "Commands History"
 msgstr "Historial de órdenes"
 
-#: ../src/appfinder-model.c:2543
+#: ../src/appfinder-model.c:2540
 msgid "Bookmarks"
 msgstr "Marcadores"
 
@@ -85,63 +86,79 @@ msgstr "La acción personalizada se eliminará permanentemente."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "¿Está seguro de que quiere eliminar el patrón «%s»?"
 
-#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:220 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Buscador de aplicaciones"
 
-#: ../src/appfinder-window.c:289
+#: ../src/appfinder-window.c:268
 msgid "Toggle view mode"
 msgstr "Cambiar el modo de vista"
 
-#: ../src/appfinder-window.c:394
+#: ../src/appfinder-window.c:344
+msgid "_Preferences"
+msgstr "_Preferencias"
+
+#: ../src/appfinder-window.c:360
+msgid "Close"
+msgstr "Cerrar"
+
+#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1040
 msgid "La_unch"
 msgstr "E_jecutar"
 
-#: ../src/appfinder-window.c:880
+#: ../src/appfinder-window.c:854
 msgid "Failed to launch desktop item editor"
 msgstr "No se pudo ejecutar el editor de elemento de escritorio"
 
-#: ../src/appfinder-window.c:906
+#: ../src/appfinder-window.c:880
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Esto eliminará permanentemente el archivo de escritorio personalizado de la carpeta personal."
 
-#: ../src/appfinder-window.c:907
+#: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "¿Está seguro de que quiere revertir «%s»?"
 
-#: ../src/appfinder-window.c:917
+#: ../src/appfinder-window.c:891
 msgid "Failed to remove desktop file"
 msgstr "No se pudo quitar el archivo de escritorio"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:950
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Para revelar el elemento tiene que eliminar manualmente el archivo de escritorio de «%s» o abrirlo en la misma carpeta y quitar la línea «%s»."
 
-#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
+#: ../src/appfinder-window.c:929 ../src/appfinder-window.c:1077
 msgid "_Hide"
 msgstr "_Ocultar"
 
-#: ../src/appfinder-window.c:956
+#: ../src/appfinder-window.c:930
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "¿Está seguro de que quiere ocultar «%s»?"
 
-#: ../src/appfinder-window.c:1037
+#: ../src/appfinder-window.c:1024
 msgid "Remove From Bookmarks"
 msgstr "Quitar de los marcadores"
 
-#: ../src/appfinder-window.c:1037
+#: ../src/appfinder-window.c:1024
 msgid "Add to Bookmarks"
 msgstr "Añadir a marcadores"
+
+#: ../src/appfinder-window.c:1053
+msgid "_Edit"
+msgstr "_Editar"
+
+#: ../src/appfinder-window.c:1070
+msgid "_Revert"
+msgstr "Deshace_r"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
