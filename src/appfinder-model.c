@@ -2418,7 +2418,7 @@ xfce_appfinder_model_bookmark_toggle (XfceAppfinderModel  *model,
   static gsize  old_len = 0;
   GString      *contents;
   gchar        *filename;
-  gboolean      succeed;
+  gboolean      succeed = FALSE;
   GtkTreePath  *path;
   gint          idx;
   GtkTreeIter   iter;
