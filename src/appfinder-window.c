@@ -469,7 +469,8 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
       gtk_widget_destroy (widget);
       return TRUE;
     }
-  else if ((event->state & GDK_CONTROL_MASK) != 0)
+
+  if ((event->state & GDK_CONTROL_MASK) != 0)
     {
       switch (event->keyval)
         {
@@ -502,6 +503,8 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
             {
               icon_size--;
             }
+          g_object_set (G_OBJECT (window->model), "icon-size", icon_size, NULL);
+          return TRUE;
 
         case GDK_KEY_0:
         case GDK_KEY_KP_0:
