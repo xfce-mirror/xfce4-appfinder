@@ -1,3 +1,16 @@
+4.13.0
+======
+- Port to GTK+3.
+- Update app icons to new standard names.
+- Fuzzy search matching (Bug #10393).
+- Translation updates: Amharic, Arabic, Asturian, Catalan, Czech,
+  Danish, German, Greek, English (Australia), Spanish, Finnish,
+  French, Galician, Hebrew, Croatian, Hungarian, Indonesian, Icelandic,
+  Italian, Japanese, Kazakh, Korean, Lithuanian, Malay, Norwegian Bokmål,
+  Dutch, Norwegian Nynorsk, Occitan, Polish, Portuguese, Portuguese (Brazil),
+  Russian, Slovak, Serbian, Swedish, Thai, Turkish, Ukrainian, Chinese (China),
+  Chinese (Taiwan)
+
 4.12.0
 ======
 - Fix build problems.
