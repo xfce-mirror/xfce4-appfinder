@@ -57,7 +57,7 @@ void    appfinder_refcount_debug_add (GObject     *object,
 #define XFCE_APPFINDER_STOCK_CLOSE "window-close"
 #define XFCE_APPFINDER_STOCK_DELETE "edit-delete"
 #define XFCE_APPFINDER_STOCK_DIALOG_ERROR "dialog-error"
-#define XFCE_APPFINDER_STOCK_EDIT "gtk-edit"
+#define XFCE_APPFINDER_STOCK_EDIT "document-properties"
 #define XFCE_APPFINDER_STOCK_EXECUTE "system-run"
 #define XFCE_APPFINDER_STOCK_FIND "edit-find"
 #define XFCE_APPFINDER_STOCK_GO_DOWN "go-down"
