@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# abuyop <abuyop@gmail.com>, 2014-2015
+# abuyop <abuyop@gmail.com>, 2014-2015,2017
 # Puretech <terjemah.puretech@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2015-03-02 22:34+0000\n"
+"POT-Creation-Date: 2017-07-17 06:30+0200\n"
+"PO-Revision-Date: 2017-08-22 06:10+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
-"Language-Team: Malay (http://www.transifex.com/projects/p/xfce4-appfinder/language/ms/)\n"
+"Language-Team: Malay (http://www.transifex.com/xfce/xfce4-appfinder/language/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,35 +28,35 @@ msgstr "Dipaksa keluar"
 msgid "All Applications"
 msgstr "Semua Aplikasi"
 
-#: ../src/appfinder-model.c:575
+#: ../src/appfinder-model.c:576
 msgid "Name"
 msgstr "Nama"
 
-#: ../src/appfinder-model.c:576
+#: ../src/appfinder-model.c:577
 msgid "Comment"
 msgstr "Komen"
 
-#: ../src/appfinder-model.c:577
+#: ../src/appfinder-model.c:578
 msgid "Command"
 msgstr "Arahan"
 
-#: ../src/appfinder-model.c:578
+#: ../src/appfinder-model.c:579
 msgid "Categories"
 msgstr "Kategori"
 
-#: ../src/appfinder-model.c:579
+#: ../src/appfinder-model.c:580
 msgid "Filename"
 msgstr "Namafail"
 
-#: ../src/appfinder-model.c:2100
+#: ../src/appfinder-model.c:2097
 msgid "Application has no command"
 msgstr "Aplikasi tidak mempunyai arahan"
 
-#: ../src/appfinder-model.c:2519
+#: ../src/appfinder-model.c:2516
 msgid "Commands History"
 msgstr "Sejarah Arahan"
 
-#: ../src/appfinder-model.c:2543
+#: ../src/appfinder-model.c:2540
 msgid "Bookmarks"
 msgstr "Tanda buku"
 
@@ -81,63 +81,79 @@ msgstr "Tindakan tersuai akan dipadam selamanya."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Adakah anda pasti mahu memadam corak \"%s\"?"
 
-#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:220 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Pencari Aplikasi"
 
-#: ../src/appfinder-window.c:289
+#: ../src/appfinder-window.c:268
 msgid "Toggle view mode"
 msgstr "Toggle mod paparan"
 
-#: ../src/appfinder-window.c:394
+#: ../src/appfinder-window.c:344
+msgid "_Preferences"
+msgstr "_Keutamaan"
+
+#: ../src/appfinder-window.c:360
+msgid "Close"
+msgstr "Tutup"
+
+#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1040
 msgid "La_unch"
 msgstr "Lancar"
 
-#: ../src/appfinder-window.c:880
+#: ../src/appfinder-window.c:854
 msgid "Failed to launch desktop item editor"
 msgstr "Gagal melancarkan penyunting item desktop"
 
-#: ../src/appfinder-window.c:906
+#: ../src/appfinder-window.c:880
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Ini akan membuang fail desktop tersuai dari direktori home anda selamanya."
 
-#: ../src/appfinder-window.c:907
+#: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Anda pasti untuk kembalikan \"%s\"?"
 
-#: ../src/appfinder-window.c:917
+#: ../src/appfinder-window.c:891
 msgid "Failed to remove desktop file"
 msgstr "Gagal membuang fail desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:950
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Untuk memaparkan item yang anda buang secara manual fail desktop dari \"%s\" atau membuka fail dari direktori yang sama dan membuang baris \"%s\"."
 
-#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
+#: ../src/appfinder-window.c:929 ../src/appfinder-window.c:1077
 msgid "_Hide"
 msgstr "_Sembunyikan"
 
-#: ../src/appfinder-window.c:956
+#: ../src/appfinder-window.c:930
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Anda pasti untuk sembunyi \"%s\"?"
 
-#: ../src/appfinder-window.c:1037
+#: ../src/appfinder-window.c:1024
 msgid "Remove From Bookmarks"
 msgstr "Buang Dari Tanda Buku"
 
-#: ../src/appfinder-window.c:1037
+#: ../src/appfinder-window.c:1024
 msgid "Add to Bookmarks"
 msgstr "Tambah kepada Tandabuku"
+
+#: ../src/appfinder-window.c:1053
+msgid "_Edit"
+msgstr "_Sunting"
+
+#: ../src/appfinder-window.c:1070
+msgid "_Revert"
+msgstr "K_embali"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
