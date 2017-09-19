@@ -7,49 +7,54 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 00:30+0200\n"
-"PO-Revision-Date: 2013-11-19 11:15+0000\n"
-"Last-Translator: Xfce <transifex@xfce.org>\n"
-"Language-Team: Uighur (http://www.transifex.com/projects/p/xfce/language/ug/)\n"
+"POT-Creation-Date: 2017-07-17 06:30+0200\n"
+"PO-Revision-Date: 2017-09-19 18:02+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"Language-Team: Uighur (http://www.transifex.com/xfce/xfce4-appfinder/language/ug/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ug\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. close all windows and quit
+#: ../src/appfinder-gdbus.c:84
+msgid "Forced to quit"
+msgstr ""
+
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "بارلىق پروگراممىلار"
 
-#: ../src/appfinder-model.c:575
+#: ../src/appfinder-model.c:576
 msgid "Name"
 msgstr "ئاتى"
 
-#: ../src/appfinder-model.c:576
+#: ../src/appfinder-model.c:577
 msgid "Comment"
 msgstr "ئىزاھات"
 
-#: ../src/appfinder-model.c:577
+#: ../src/appfinder-model.c:578
 msgid "Command"
 msgstr "بۇيرۇق"
 
-#: ../src/appfinder-model.c:578
+#: ../src/appfinder-model.c:579
 msgid "Categories"
 msgstr "كاتېگورىيە"
 
-#: ../src/appfinder-model.c:579
+#: ../src/appfinder-model.c:580
 msgid "Filename"
 msgstr "ھۆججەت ئاتى"
 
-#: ../src/appfinder-model.c:2100
+#: ../src/appfinder-model.c:2097
 msgid "Application has no command"
 msgstr "پروگراممىنىڭ بۇيرۇقى يوق"
 
-#: ../src/appfinder-model.c:2519
+#: ../src/appfinder-model.c:2516
 msgid "Commands History"
 msgstr "بۇيرۇق ئىزلىرى"
 
-#: ../src/appfinder-model.c:2543
+#: ../src/appfinder-model.c:2540
 msgid "Bookmarks"
 msgstr ""
 
@@ -74,62 +79,78 @@ msgstr "ئىختىيارىي مەشغۇلاتلار مەڭگۈلۈككە ئۆچ�
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "ئەندىزە «%s» نى راستىنىلا ئۆچۈرەمسىز؟"
 
-#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:220 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "پروگرامما ئىزدىگۈ"
 
-#: ../src/appfinder-window.c:289
+#: ../src/appfinder-window.c:268
 msgid "Toggle view mode"
 msgstr "كۆرۈنۈش ھالىتىنى ئۆزگەرتىش"
 
-#: ../src/appfinder-window.c:394
+#: ../src/appfinder-window.c:344
+msgid "_Preferences"
+msgstr ""
+
+#: ../src/appfinder-window.c:360
+msgid "Close"
+msgstr ""
+
+#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1040
 msgid "La_unch"
 msgstr "ئىجرا قىل(_U)"
 
-#: ../src/appfinder-window.c:880
+#: ../src/appfinder-window.c:854
 msgid "Failed to launch desktop item editor"
 msgstr "ئۈستەلئۈستى تۇرى تەھرىرلىگۈچىنى ئىجرا قىلىش مەغلۇپ بولدى"
 
-#: ../src/appfinder-window.c:906
+#: ../src/appfinder-window.c:880
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "ئىختىيارىي ئۈستەلئۈستى ھۆججىتى ماكان مۇندەرىجىڭىزدىن مەڭگۈلۈككە يوقىلىدۇ."
 
-#: ../src/appfinder-window.c:907
+#: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "راستلا «%s» نى ئەسلىگە قايتۇرامسىز؟"
 
-#: ../src/appfinder-window.c:917
+#: ../src/appfinder-window.c:891
 msgid "Failed to remove desktop file"
 msgstr "ئۈستەلئۈستى ھۆججىتىنى ئۆچۈرۈش مەغلۇپ بولدى"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:950
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "بىرەر تۇرنى كۆرۈنىدىغان قىلىش ئۈچۈن ئۈستەلئۈستى ھۆججىتىنى «%s» دىن ئۆچۈرسىڭىز ياكى مۇشۇ مۇندەرىجىدىكى  ھۆججەتنى ئېچىپ «%s» دېگەن قۇرنى ئۆچۈرۈۋەتسىڭىز بولىدۇ."
 
-#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
+#: ../src/appfinder-window.c:929 ../src/appfinder-window.c:1077
 msgid "_Hide"
 msgstr "يوشۇر(_H)"
 
-#: ../src/appfinder-window.c:956
+#: ../src/appfinder-window.c:930
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "راستلا «%s» نى يوشۇرامسىز؟"
 
-#: ../src/appfinder-window.c:1037
+#: ../src/appfinder-window.c:1024
 msgid "Remove From Bookmarks"
 msgstr ""
 
-#: ../src/appfinder-window.c:1037
+#: ../src/appfinder-window.c:1024
 msgid "Add to Bookmarks"
+msgstr ""
+
+#: ../src/appfinder-window.c:1053
+msgid "_Edit"
+msgstr ""
+
+#: ../src/appfinder-window.c:1070
+msgid "_Revert"
 msgstr ""
 
 #: ../src/main.c:64
@@ -152,16 +173,16 @@ msgstr "بارلىق ئۈلگىنى ئاخىرلاشتۇرىدۇ"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "ئىشلەتمىسۇن ياكى D-Bus مۇلازىمىتى بولمىسۇن"
 
-#: ../src/main.c:224
+#: ../src/main.c:223
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "ئىشلىتىش ئۇسۇلىنى كۆرۈش ئۈچۈن «%s --help» نى كىرگۈزسە بولىدۇ."
 
-#: ../src/main.c:235
+#: ../src/main.c:234
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce ئىجادىيەت گۇرۇپپىسى. نەشر ھوقۇقى ئۆزىمىزگە تەۋە."
 
-#: ../src/main.c:236
+#: ../src/main.c:235
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "كەمتۈكنى <%s> غا دوكلات قىلىڭ."
@@ -312,3 +333,11 @@ msgstr "پروگرامما ئىجرا قىل..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
 msgstr "پروگراممىنى ئىجرا قىلىدۇ"
+
+#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and the quickly execute commands. It can also be used to "
+"quickly add launchers to the Xfce Panel by dragging an item from the view "
+"and drop it on the panel."
+msgstr ""
