@@ -1,53 +1,51 @@
-# Romanian translation of xfce4-appfinder.
-# Copyright (C) 2004-2012 the xfce4-appfinder authors
-# File distributed under the same license as the xfce4-appfinder package.
-# Mișu Moldovan <dumol@xfce.org>, 2004-2012.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder 4.10\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-27 14:11+0300\n"
-"PO-Revision-Date: 2012-04-27 14:45+0300\n"
-"Last-Translator: Mișu Moldovan <dumol@xfce.org>\n"
-"Language-Team: Romanian <diacritice@googlegroups.com>\n"
-"Language: ro\n"
+"POT-Creation-Date: 2013-07-02 23:08+0200\n"
+"PO-Revision-Date: 2017-09-19 18:02+0000\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"Language-Team: Romanian (http://www.transifex.com/xfce/xfce4-appfinder/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2);;\n"
-"X-Generator: Virtaal 0.7.0\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "Toate programele"
 
-#: ../src/appfinder-model.c:545
+#: ../src/appfinder-model.c:549
 msgid "Name"
 msgstr "Nume"
 
-#: ../src/appfinder-model.c:546
+#: ../src/appfinder-model.c:550
 msgid "Comment"
 msgstr "Comentariu"
 
-#: ../src/appfinder-model.c:547
+#: ../src/appfinder-model.c:551
 msgid "Command"
 msgstr "Comandă"
 
-#: ../src/appfinder-model.c:548
+#: ../src/appfinder-model.c:552
 msgid "Categories"
 msgstr "Categorii"
 
-#: ../src/appfinder-model.c:549
+#: ../src/appfinder-model.c:553
 msgid "Filename"
 msgstr "Nume de fișier"
 
-#: ../src/appfinder-model.c:1829
+#: ../src/appfinder-model.c:1833
 msgid "Application has no command"
 msgstr "Programul nu are o comandă asociată"
 
-#: ../src/appfinder-model.c:2153
+#: ../src/appfinder-model.c:2157
 msgid "Commands History"
 msgstr "Istoricul comenzilor"
 
@@ -72,58 +70,53 @@ msgstr "Acțiunea personalizată va fi ștearsă definitiv."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Sigur doriți să ștergeți modelul „%s”?"
 
-#: ../src/appfinder-window.c:219 ../src/main.c:446
+#: ../src/appfinder-window.c:220 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Pornire de programe"
 
-#: ../src/appfinder-window.c:271
+#: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
 msgstr "Comutați modul de afișare"
 
-#: ../src/appfinder-window.c:363
+#: ../src/appfinder-window.c:364
 msgid "La_unch"
 msgstr "Po_rnește"
 
-#: ../src/appfinder-window.c:798
+#: ../src/appfinder-window.c:805
 msgid "Failed to launch desktop item editor"
 msgstr "Nu s-a putut deschide editorul elementului de pe desktop"
 
-#: ../src/appfinder-window.c:824
+#: ../src/appfinder-window.c:831
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr ""
-"Această comandă vă va șterge definitiv fișierul desktop personalizat din "
-"directorul „Acasă”."
+msgstr "Această comandă vă va șterge definitiv fișierul desktop personalizat din directorul „Acasă”."
 
-#: ../src/appfinder-window.c:825
+#: ../src/appfinder-window.c:832
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Sigur doriți să reveniți în privința „%s”?"
 
-#: ../src/appfinder-window.c:835
+#: ../src/appfinder-window.c:842
 msgid "Failed to remove desktop file"
 msgstr "Nu s-a putut șterge fișierul desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:868
+#: ../src/appfinder-window.c:875
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
-"Pentru a afișa acest element va trebui să ștergeți manual fișierul desktop "
-"din „%s” sau să deschideți fișierul din acest director și să eliminați linia "
-"„%s”."
+msgstr "Pentru a afișa acest element va trebui să ștergeți manual fișierul desktop din „%s” sau să deschideți fișierul din acest director și să eliminați linia „%s”."
 
-#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:965
+#: ../src/appfinder-window.c:880 ../src/appfinder-window.c:972
 msgid "_Hide"
 msgstr "Asc_unde"
 
-#: ../src/appfinder-window.c:874
+#: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Sigur doriți să ascundeți elementul „%s”?"
@@ -157,16 +150,16 @@ msgstr "Ieșire forțată"
 msgid "Unable to daemonize the process"
 msgstr "Nu s-a putut demoniza procesul"
 
-#: ../src/main.c:522
+#: ../src/main.c:524
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Utilizați „%s --help” pentru detalii de utilizare."
 
-#: ../src/main.c:533
+#: ../src/main.c:535
 msgid "The Xfce development team. All rights reserved."
 msgstr "Echipa de dezvoltare Xfce. Toate drepturile sunt rezervate."
 
-#: ../src/main.c:534
+#: ../src/main.c:536
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Raportați problemele la <%s>."
@@ -228,10 +221,7 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr ""
-"În loc ca programul să se termine când ultima fereastră este închisă, se va "
-"păstra o instanță pornită pentru a deschide mai rapid noi ferestre. Puteți "
-"dezactiva acest comportament pentru a reduce consumul de memorie."
+msgstr "În loc ca programul să se termine când ultima fereastră este închisă, se va păstra o instanță pornită pentru a deschide mai rapid noi ferestre. Puteți dezactiva acest comportament pentru a reduce consumul de memorie."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
@@ -287,10 +277,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
-"Dacă tipul este precizat ca fiind prefix, %s va fi înlocuit cu un șir după "
-"modelul ales, iar %S cu intrarea completă de text. Pentru expresii de tip "
-"regexp puteți utiliza \\0 și \\<num>."
+msgstr "Dacă tipul este precizat ca fiind prefix, %s va fi înlocuit cu un șir după modelul ales, iar %S cu intrarea completă de text. Pentru expresii de tip regexp puteți utiliza \\0 și \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
