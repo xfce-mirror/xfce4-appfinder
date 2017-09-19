@@ -1,52 +1,51 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-10 10:24+0000\n"
-"PO-Revision-Date: 2012-01-07 16:39+0100\n"
-"Last-Translator: Eivind Ødegård <gingermi@yahoo.no>\n"
-"Language-Team: nn_NO <i18n-nn@lister.ping.uio.no>\n"
+"POT-Creation-Date: 2013-07-02 23:08+0200\n"
+"PO-Revision-Date: 2017-09-19 18:02+0000\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"Language-Team: Norwegian Nynorsk (http://www.transifex.com/xfce/xfce4-appfinder/language/nn/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
-"X-Poedit-Language: Norwegian Nynorsk\n"
-"X-Poedit-Country: NORWAY\n"
+"Language: nn\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "Alle program"
 
-#: ../src/appfinder-model.c:545
+#: ../src/appfinder-model.c:549
 msgid "Name"
 msgstr "Namn"
 
-#: ../src/appfinder-model.c:546
+#: ../src/appfinder-model.c:550
 msgid "Comment"
 msgstr "Kommentar"
 
-#: ../src/appfinder-model.c:547
+#: ../src/appfinder-model.c:551
 msgid "Command"
 msgstr "Kommando"
 
-#: ../src/appfinder-model.c:548
+#: ../src/appfinder-model.c:552
 msgid "Categories"
 msgstr "Kategoriar"
 
-#: ../src/appfinder-model.c:549
+#: ../src/appfinder-model.c:553
 msgid "Filename"
 msgstr "Filnamn"
 
-#: ../src/appfinder-model.c:1825
+#: ../src/appfinder-model.c:1833
 msgid "Application has no command"
 msgstr "Programmet har ingen kommando"
 
-#: ../src/appfinder-model.c:2149
+#: ../src/appfinder-model.c:2157
 msgid "Commands History"
 msgstr "Kommandologg"
 
@@ -71,55 +70,53 @@ msgstr "Denne handlinga blir sletta for alltid."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Er du sikker på at du vil sletta mønsteret «%s»?"
 
-#: ../src/appfinder-window.c:219 ../src/main.c:446
-#: ../src/appfinder-preferences.glade.h:4
+#: ../src/appfinder-window.c:220 ../src/main.c:446
+#: ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Programfinnar"
 
-#: ../src/appfinder-window.c:271
+#: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
 msgstr "Slå på visingsmodus"
 
-#: ../src/appfinder-window.c:363
+#: ../src/appfinder-window.c:364
 msgid "La_unch"
 msgstr "St_art"
 
-#: ../src/appfinder-window.c:798
+#: ../src/appfinder-window.c:805
 msgid "Failed to launch desktop item editor"
 msgstr "Greidde ikkje starta redigeringa for skrivebordselement"
 
-#: ../src/appfinder-window.c:824
+#: ../src/appfinder-window.c:831
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Dette slettar den eigenlaga skrivebordsfila frå heimemappa di."
 
-#: ../src/appfinder-window.c:825
+#: ../src/appfinder-window.c:832
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Er du sikker på at du vil tilbakestilla «%s»?"
 
-#: ../src/appfinder-window.c:835
+#: ../src/appfinder-window.c:842
 msgid "Failed to remove desktop file"
 msgstr "Klarte ikkje fjerna skrivebordsfila"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:868
+#: ../src/appfinder-window.c:875
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
-"For å syna dette elementet, må du manuelt fjerna skrivebordsfila frå «%s» "
-"eller opna fila i same mappa, og fjerna linja «%s»."
+msgstr "For å syna dette elementet, må du manuelt fjerna skrivebordsfila frå «%s» eller opna fila i same mappa, og fjerna linja «%s»."
 
-#: ../src/appfinder-window.c:873 ../src/appfinder-window.c:958
+#: ../src/appfinder-window.c:880 ../src/appfinder-window.c:972
 msgid "_Hide"
 msgstr "_Gøym"
 
-#: ../src/appfinder-window.c:874
+#: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Er du sikker på at du vil gøma «%s»?"
@@ -153,157 +150,154 @@ msgstr "Tvungen til å avslutta"
 msgid "Unable to daemonize the process"
 msgstr "Klarte ikkje gjera prosessen til nisse"
 
-#: ../src/main.c:522
+#: ../src/main.c:524
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Skriv «%s --help» for bruksinstruksjonar"
 
-#: ../src/main.c:533
+#: ../src/main.c:535
 msgid "The Xfce development team. All rights reserved."
 msgstr "Utviklingslaget for Xfce. Alle rettar er reserverte."
 
-#: ../src/main.c:534
+#: ../src/main.c:536
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Rapporter feil til <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
-msgstr "Legg til ei ny sjølvvald handling."
+msgid "Prefix"
+msgstr "Prefiks"
 
 #: ../src/appfinder-preferences.glade.h:2
+msgid "Regular Expression"
+msgstr "Regulært uttrykk"
+
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "Veldig liten"
+
+#: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "Mindre"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "Liten"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "Normal"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "Stor"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "Større"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "Veldig stor"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "Hugs _siste valde kategori"
+
+#: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
 msgstr "Alltid _midtstill vindaugo"
 
-#: ../src/appfinder-preferences.glade.h:3
-msgid "Appearance"
-msgstr "Utsjånad"
-
-#: ../src/appfinder-preferences.glade.h:5
-msgid "Behaviour"
-msgstr "Åtferd"
-
-#: ../src/appfinder-preferences.glade.h:6
-msgid "C_lear Custom Command History"
-msgstr "_Tøm loggen over eigne kommandoar"
-
-#: ../src/appfinder-preferences.glade.h:7
-msgid "Categ_ory icon size:"
-msgstr "Ikonstorleiken for kateg_oriar:"
-
-#: ../src/appfinder-preferences.glade.h:8
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
 msgstr "Midtstill vinduaga ved oppstart."
 
-#: ../src/appfinder-preferences.glade.h:9
-msgid "Co_mmand:"
-msgstr "Ko_mmando:"
-
-#: ../src/appfinder-preferences.glade.h:10
-msgid "Custom _Actions"
-msgstr "Sjølvvalde h_andlingar"
-
-#: ../src/appfinder-preferences.glade.h:11
-msgid "History"
-msgstr "Logg"
-
-#: ../src/appfinder-preferences.glade.h:13
-#, no-c-format
-msgid ""
-"If the type is set to prefix, %s will be replaced with the string after the "
-"pattern, %S with the complete entry text. For regular expressions you can "
-"use \\0 and \\<num>."
-msgstr ""
-"Viss typen er eit prefiks, vil %s bli bytt ut med strengen etter mønsteret, "
-"og %S vil bli heile oppføringsteksten. For regulære uttrykk kan du bruka \\0 "
-"og \\<num>."
-
 #: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
+msgstr "Lat programmet _køyra i bakgrunnen"
+
+#: ../src/appfinder-preferences.glade.h:15
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "I staden for å avslutta programmet når siste vindauga er lukka, kan du la programmet køyra. Då går det fortare å opna nye vindaugo. Viss du vil spara på minnebruken, kan du slå av denne eigenskapen."
 
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Ite_m icon size:"
-msgstr "Ikonstorleiken for elementet:"
-
 #: ../src/appfinder-preferences.glade.h:16
-msgid "Keep running _instance in the background"
-msgstr "Lat programmet _køyra i bakgrunnen"
+msgid "Behaviour"
+msgstr "Åtferd"
 
 #: ../src/appfinder-preferences.glade.h:17
-msgid "Large"
-msgstr "Stor"
+msgid "_View items as icons"
+msgstr "_Vis element som ikon"
 
 #: ../src/appfinder-preferences.glade.h:18
-msgid "Larger"
-msgstr "Større"
-
-#: ../src/appfinder-preferences.glade.h:19
-msgid "Normal"
-msgstr "Normal"
-
-#: ../src/appfinder-preferences.glade.h:20
-msgid "Patte_rn:"
-msgstr "Mønste_r:"
-
-#: ../src/appfinder-preferences.glade.h:21
-msgid "Pattern"
-msgstr "Mønster"
-
-#: ../src/appfinder-preferences.glade.h:22
-msgid "Prefix"
-msgstr "Prefiks"
-
-#: ../src/appfinder-preferences.glade.h:23
-msgid "Regular Expression"
-msgstr "Regulært uttrykk"
-
-#: ../src/appfinder-preferences.glade.h:24
-msgid "Remember last _selected category"
-msgstr "Hugs _siste valde kategori"
-
-#: ../src/appfinder-preferences.glade.h:25
-msgid "Remove the currently selected action."
-msgstr "Fjern denne handlinga."
-
-#: ../src/appfinder-preferences.glade.h:26
-msgid "Small"
-msgstr "Liten"
-
-#: ../src/appfinder-preferences.glade.h:27
-msgid "Smaller"
-msgstr "Mindre"
-
-#: ../src/appfinder-preferences.glade.h:28
 msgid "Text besi_de icons"
 msgstr "Tekst ved si_dan av ikona"
 
-#: ../src/appfinder-preferences.glade.h:29
-msgid "Very Large"
-msgstr "Veldig stor"
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "Ikonstorleiken for elementet:"
 
-#: ../src/appfinder-preferences.glade.h:30
-msgid "Very Small"
-msgstr "Veldig liten"
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr "Ikonstorleiken for kateg_oriar:"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "Utsjånad"
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "C_lear Custom Command History"
+msgstr "_Tøm loggen over eigne kommandoar"
+
+#: ../src/appfinder-preferences.glade.h:23
+msgid "History"
+msgstr "Logg"
+
+#: ../src/appfinder-preferences.glade.h:24
 msgid "_General"
 msgstr "_Generelt"
 
-#: ../src/appfinder-preferences.glade.h:32
-msgid "_Save match in command history"
-msgstr "_Lagra treffet i kommandologgen"
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "Mønster"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "Legg til ei ny sjølvvald handling."
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "Fjern denne handlinga."
+
+#: ../src/appfinder-preferences.glade.h:29
+#, no-c-format
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr "Viss typen er eit prefiks, vil %s bli bytt ut med strengen etter mønsteret, og %S vil bli heile oppføringsteksten. For regulære uttrykk kan du bruka \\0 og \\<num>."
+
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "Ko_mmando:"
+
+#: ../src/appfinder-preferences.glade.h:31
+msgid "Patte_rn:"
+msgstr "Mønste_r:"
+
+#: ../src/appfinder-preferences.glade.h:32
 msgid "_Type:"
 msgstr "_Type:"
 
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr "_Lagra treffet i kommandologgen"
+
 #: ../src/appfinder-preferences.glade.h:34
-msgid "_View items as icons"
-msgstr "_Vis element som ikon"
+msgid "Custom _Actions"
+msgstr "Sjølvvalde h_andlingar"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
