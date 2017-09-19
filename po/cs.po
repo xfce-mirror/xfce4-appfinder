@@ -6,15 +6,15 @@
 # Alois Nespor <Alois.Nespor@seznam.cz>, 2004
 # Alois Nešpor <info@aloisnespor.info>, 2013
 # Alois Nešpor <info@aloisnespor.info>, 2014
-# Michal Várady <miko.vaji@gmail.com>, 2015
+# Michal Várady <miko.vaji@gmail.com>, 2015,2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-28 18:30+0100\n"
-"PO-Revision-Date: 2015-03-01 10:08+0000\n"
+"POT-Creation-Date: 2017-07-17 06:30+0200\n"
+"PO-Revision-Date: 2017-09-19 18:02+0000\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
-"Language-Team: Czech (http://www.transifex.com/projects/p/xfce4-appfinder/language/cs/)\n"
+"Language-Team: Czech (http://www.transifex.com/xfce/xfce4-appfinder/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,35 +30,35 @@ msgstr "Vynucené ukončení"
 msgid "All Applications"
 msgstr "Všechny aplikace"
 
-#: ../src/appfinder-model.c:575
+#: ../src/appfinder-model.c:576
 msgid "Name"
 msgstr "Název"
 
-#: ../src/appfinder-model.c:576
+#: ../src/appfinder-model.c:577
 msgid "Comment"
 msgstr "Komentář"
 
-#: ../src/appfinder-model.c:577
+#: ../src/appfinder-model.c:578
 msgid "Command"
 msgstr "Příkaz"
 
-#: ../src/appfinder-model.c:578
+#: ../src/appfinder-model.c:579
 msgid "Categories"
 msgstr "Kategorie"
 
-#: ../src/appfinder-model.c:579
+#: ../src/appfinder-model.c:580
 msgid "Filename"
 msgstr "Název souboru"
 
-#: ../src/appfinder-model.c:2100
+#: ../src/appfinder-model.c:2097
 msgid "Application has no command"
 msgstr "Aplikace nemá žádný příkaz"
 
-#: ../src/appfinder-model.c:2519
+#: ../src/appfinder-model.c:2516
 msgid "Commands History"
 msgstr "Historie příkazů"
 
-#: ../src/appfinder-model.c:2543
+#: ../src/appfinder-model.c:2540
 msgid "Bookmarks"
 msgstr "Záložky"
 
@@ -83,63 +83,79 @@ msgstr "Vlastní akce bude trvale smazána."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Opravdu chcete vymazat vzorek \"%s\"?"
 
-#: ../src/appfinder-window.c:222 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:220 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Vyhledávač aplikací"
 
-#: ../src/appfinder-window.c:289
+#: ../src/appfinder-window.c:268
 msgid "Toggle view mode"
 msgstr "Přepnout režim pohledu"
 
-#: ../src/appfinder-window.c:394
+#: ../src/appfinder-window.c:344
+msgid "_Preferences"
+msgstr "_Předvolby"
+
+#: ../src/appfinder-window.c:360
+msgid "Close"
+msgstr "Zavřít"
+
+#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1040
 msgid "La_unch"
 msgstr "_Spustit"
 
-#: ../src/appfinder-window.c:880
+#: ../src/appfinder-window.c:854
 msgid "Failed to launch desktop item editor"
 msgstr "Spuštění editoru položek plochy se nezdařilo."
 
-#: ../src/appfinder-window.c:906
+#: ../src/appfinder-window.c:880
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Tato akce trvale odebere upravený soubor plochy z vašeho domovského adresáře."
 
-#: ../src/appfinder-window.c:907
+#: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Opravdu chcete obnovit \"%s\"?"
 
-#: ../src/appfinder-window.c:917
+#: ../src/appfinder-window.c:891
 msgid "Failed to remove desktop file"
 msgstr "Odebrání souboru plochy se nezdařilo"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:950
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Skrytou položku odkryjte ručním odebráním souboru plochy z adresáře \"%s\" nebo otevřete soubor ve stejném adresáři a odeberte řádek \"%s\"."
 
-#: ../src/appfinder-window.c:955 ../src/appfinder-window.c:1074
+#: ../src/appfinder-window.c:929 ../src/appfinder-window.c:1077
 msgid "_Hide"
 msgstr "_Skrýt"
 
-#: ../src/appfinder-window.c:956
+#: ../src/appfinder-window.c:930
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Opravdu chcete skrýt \"%s\"?"
 
-#: ../src/appfinder-window.c:1037
+#: ../src/appfinder-window.c:1024
 msgid "Remove From Bookmarks"
 msgstr "Odebrat ze záložek"
 
-#: ../src/appfinder-window.c:1037
+#: ../src/appfinder-window.c:1024
 msgid "Add to Bookmarks"
 msgstr "Přidat do záložek"
+
+#: ../src/appfinder-window.c:1053
+msgid "_Edit"
+msgstr "_Upravit"
+
+#: ../src/appfinder-window.c:1070
+msgid "_Revert"
+msgstr "_Vrátit"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
