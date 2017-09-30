@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-02 23:08+0200\n"
-"PO-Revision-Date: 2017-09-19 18:02+0000\n"
+"PO-Revision-Date: 2017-09-30 13:55+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce4-appfinder/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -225,7 +225,7 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Lad programmet vedblive med at køre når det sidste vindue lukkes, for derved hurtigt at kunne åbne nye vinduer. Du kan vælge at slå denne funktion fra med henblik på at reducere hukommelsesforbruget."
+msgstr "Lad programmet vedblive med at køre når det sidste vindue lukkes, for derved hurtigt at kunne åbne nye vinduer. Du kan vælge at deaktivere denne funktion med henblik på at reducere hukommelsesforbruget."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
@@ -241,7 +241,7 @@ msgstr "Tekst ved _siden af ikoner"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Ite_m icon size:"
-msgstr "Ele_mentikonstørrelse:"
+msgstr "Ele_ment ikonstørrelse:"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Categ_ory icon size:"
