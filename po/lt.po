@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-17 06:30+0200\n"
-"PO-Revision-Date: 2017-09-19 18:02+0000\n"
+"PO-Revision-Date: 2017-10-08 22:12+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce4-appfinder/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr ""
 #. close all windows and quit
 #: ../src/appfinder-gdbus.c:84
 msgid "Forced to quit"
-msgstr "Priverstinai užverti"
+msgstr "Priverstinai baigti darbą"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
@@ -60,7 +60,7 @@ msgstr "Komandų istorija"
 
 #: ../src/appfinder-model.c:2540
 msgid "Bookmarks"
-msgstr "Adresynas"
+msgstr "Žymelės"
 
 #: ../src/appfinder-preferences.c:219
 msgid "C_lear"
@@ -143,11 +143,11 @@ msgstr "Ar tikrai norite paslėpti „%s“?"
 
 #: ../src/appfinder-window.c:1024
 msgid "Remove From Bookmarks"
-msgstr "Šalinti iš adresyno"
+msgstr "Šalinti iš žymelių"
 
 #: ../src/appfinder-window.c:1024
 msgid "Add to Bookmarks"
-msgstr "Pridėti į adresyną"
+msgstr "Pridėti į žymeles"
 
 #: ../src/appfinder-window.c:1053
 msgid "_Edit"
@@ -171,7 +171,7 @@ msgstr "Pakeisti egzistuojančią tarnybą"
 
 #: ../src/main.c:67
 msgid "Quit all instances"
-msgstr "Išjungti visus egzempliorius"
+msgstr "Baigti visų egzempliorių darbą"
 
 #: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
@@ -248,7 +248,7 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Vietoj užvėrimo, kai paskutinis langas užveriamas, palikti vykdomą kopiją, naujų langų atvėrimo pagreitinimui. Jūs turbūt norėsite išjungti tai, naudojamos atminties sumažinimui."
+msgstr "Vietoj darbo baigimo, kai paskutinis langas užveriamas, palikti vykdomą egzempliorių, naujų langų atvėrimo pagreitinimui. Norėdami sumažinti atminties naudojimą, jūs galite pageidauti tai išjungti."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
