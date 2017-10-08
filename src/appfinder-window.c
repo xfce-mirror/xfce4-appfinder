@@ -345,6 +345,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
   g_signal_connect (G_OBJECT (button), "clicked",
       G_CALLBACK (xfce_appfinder_window_preferences), window);
+  gtk_widget_set_valign (button, GTK_ALIGN_CENTER);
   gtk_button_set_always_show_image(GTK_BUTTON(button), TRUE);
 
   image = gtk_image_new_from_icon_name (XFCE_APPFINDER_STOCK_PREFERENCES, GTK_ICON_SIZE_BUTTON);
