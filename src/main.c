@@ -178,6 +178,15 @@ appfinder_window_new (const gchar *startup_id,
                       gboolean     expanded)
 {
   GtkWidget *window;
+  XfconfChannel *channel;
+
+  if (g_slist_length (windows) > 0)
+    {
+      channel = xfconf_channel_get ("xfce4-appfinder");
+      if (xfconf_channel_get_bool (channel, "/single-window", FALSE))
+        gtk_window_present (GTK_WINDOW (g_slist_nth_data (windows, 0)));
+      return;
+    }
 
   window = g_object_new (XFCE_TYPE_APPFINDER_WINDOW,
                          "startup-id", IS_STRING (startup_id) ? startup_id : NULL,
@@ -247,7 +256,7 @@ main (gint argc, gchar **argv)
   if (!opt_collapsed && strcmp (*argv, "xfrun4") == 0)
     opt_collapsed = TRUE;
 
-  /* become the serivce owner or ask the current
+  /* become the service owner or ask the current
    * owner to spawn an instance */
   if (G_LIKELY (!opt_disable_server))
     {
