@@ -1850,14 +1850,14 @@ xfce_appfinder_window_sort_items (GtkTreeModel *model,
     result = g_strcmp0 (title_a, title_b);
   else
     {
-      if (found = g_strrstr (title_a, casefold))
+      found = g_strrstr (title_a, casefold);
+      if (found)
         result -= (G_MAXINT - (found - title_a));
 
-      if (found = g_strrstr (title_b, casefold))
+      found = g_strrstr (title_b, casefold);
+      if (found)
         result += (G_MAXINT - (found - title_b));
     }
-
-  g_printf ("\tsorting: %d - %s - %s - %s\n", result, casefold, title_a, title_b);
 
   g_free (casefold);
   g_free (title_a);
