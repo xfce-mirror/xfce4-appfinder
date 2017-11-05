@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 06:30+0200\n"
-"PO-Revision-Date: 2017-09-23 19:02+0000\n"
+"POT-Creation-Date: 2017-11-01 06:30+0100\n"
+"PO-Revision-Date: 2017-11-05 17:06+0000\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh (http://www.transifex.com/xfce/xfce4-appfinder/language/kk/)\n"
 "MIME-Version: 1.0\n"
@@ -59,98 +59,98 @@ msgstr "Командалар тарихы"
 msgid "Bookmarks"
 msgstr "Бетбелгілер"
 
-#: ../src/appfinder-preferences.c:219
+#: ../src/appfinder-preferences.c:238
 msgid "C_lear"
 msgstr "Та_зарту"
 
-#: ../src/appfinder-preferences.c:220
+#: ../src/appfinder-preferences.c:239
 msgid "This will permanently clear the custom command history."
 msgstr "Бұл пайдаланушы командалар тарихын өшіреді."
 
-#: ../src/appfinder-preferences.c:221
+#: ../src/appfinder-preferences.c:240
 msgid "Are you sure you want to clear the command history?"
 msgstr "Командалар тарихын өшіруді шынымен қалайсыз ба?"
 
-#: ../src/appfinder-preferences.c:331
+#: ../src/appfinder-preferences.c:350
 msgid "The custom action will be deleted permanently."
 msgstr "Пайдаланушы әрекеті өшіріледі."
 
-#: ../src/appfinder-preferences.c:332
+#: ../src/appfinder-preferences.c:351
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "\"%s\" шаблонын өшіруді шынымен қалайсыз ба?"
 
-#: ../src/appfinder-window.c:220 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:227 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Қолданбаларды табушы"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:275
 msgid "Toggle view mode"
 msgstr "Қарау түрін ауыстыру"
 
-#: ../src/appfinder-window.c:344
+#: ../src/appfinder-window.c:351
 msgid "_Preferences"
 msgstr "Ба_птаулар"
 
-#: ../src/appfinder-window.c:360
+#: ../src/appfinder-window.c:368
 msgid "Close"
 msgstr "Жабу"
 
-#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1040
+#: ../src/appfinder-window.c:378 ../src/appfinder-window.c:1052
 msgid "La_unch"
 msgstr "Жө_нелту"
 
-#: ../src/appfinder-window.c:854
+#: ../src/appfinder-window.c:866
 msgid "Failed to launch desktop item editor"
 msgstr "desktop элементтер түзетушісін жөнелту сәтсіз"
 
-#: ../src/appfinder-window.c:880
+#: ../src/appfinder-window.c:892
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Бұл әрекет нәтижесінде үй бумаңыздан өзіңіз жасаған desktop файлы өшіріледі."
 
-#: ../src/appfinder-window.c:881
+#: ../src/appfinder-window.c:893
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "\"%s\" болдырмауды қалайсыз ба?"
 
-#: ../src/appfinder-window.c:891
+#: ../src/appfinder-window.c:903
 msgid "Failed to remove desktop file"
 msgstr "desktop файлын өшіру сәтсіз"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:924
+#: ../src/appfinder-window.c:936
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Жасыруды болдырмау үшін сізге \"%s\" ішінен desktop файлын өшіру немесе файлды дәл сол бумада ашып, \"%s\" жолын өшіру керек."
 
-#: ../src/appfinder-window.c:929 ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:941 ../src/appfinder-window.c:1089
 msgid "_Hide"
 msgstr "Жа_сыру"
 
-#: ../src/appfinder-window.c:930
+#: ../src/appfinder-window.c:942
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "\"%s\" жасыруды шынымен қалайсыз ба?"
 
-#: ../src/appfinder-window.c:1024
+#: ../src/appfinder-window.c:1036
 msgid "Remove From Bookmarks"
 msgstr "Бетбелгілерден өшіру"
 
-#: ../src/appfinder-window.c:1024
+#: ../src/appfinder-window.c:1036
 msgid "Add to Bookmarks"
 msgstr "Бетбелгілерге қосу"
 
-#: ../src/appfinder-window.c:1053
+#: ../src/appfinder-window.c:1065
 msgid "_Edit"
 msgstr "Түз_ету"
 
-#: ../src/appfinder-window.c:1070
+#: ../src/appfinder-window.c:1082
 msgid "_Revert"
 msgstr "Қайта_ру"
 
@@ -174,16 +174,16 @@ msgstr "Барлық нұсқалардың жұмысын аяқтау"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "D-Bus қызметін көру не болуды болдырмау"
 
-#: ../src/main.c:223
+#: ../src/main.c:232
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Қолдану ақпараты үшін \"%s --help\" енгізіңіз."
 
-#: ../src/main.c:234
+#: ../src/main.c:243
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce өндіру тобы. Барлық құқықтары қорғалған."
 
-#: ../src/main.c:235
+#: ../src/main.c:244
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Ақаулықтар жөнінде хабарласыңыз: <%s>."
@@ -248,54 +248,64 @@ msgid ""
 msgstr "Соңғы терезе жабылғаннан кейін қолданбаны жабу орнына жаңа терезелерді ашу жылдамдығын арттыру үшін фонда жұмысты жасау. Жады қолдануды төмендету үшін осыны өшірсеңіз де болады."
 
 #: ../src/appfinder-preferences.glade.h:16
+msgid "Single window"
+msgstr "Дара терезе"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid ""
+"When an instance is running in the background, only open one window at a "
+"time."
+msgstr "Қолданба фонда орындалып тұрса, бір уақытта тек бір терезені ашу."
+
+#: ../src/appfinder-preferences.glade.h:18
 msgid "Behaviour"
 msgstr "Мінез-құлығы"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: ../src/appfinder-preferences.glade.h:19
 msgid "_View items as icons"
 msgstr "Нәрс_елерді таңбашалар ретінде қарау"
 
-#: ../src/appfinder-preferences.glade.h:18
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Text besi_de icons"
 msgstr "Таң_башалар қасындағы мәтін"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:21
 msgid "Ite_m icon size:"
 msgstr "Нәр_се таңбашасы өлшемі:"
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Categ_ory icon size:"
 msgstr "Санат таң_башасы өлшемі:"
 
-#: ../src/appfinder-preferences.glade.h:21
+#: ../src/appfinder-preferences.glade.h:23
 msgid "Appearance"
 msgstr "Сыртқы түрі"
 
-#: ../src/appfinder-preferences.glade.h:22
+#: ../src/appfinder-preferences.glade.h:24
 msgid "C_lear Custom Command History"
 msgstr "Пайдаланушы командалар тар_ихын өшіру"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "History"
 msgstr "Тарих"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "_General"
 msgstr "Жал_пы"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Pattern"
 msgstr "Шаблон"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "Add a new custom action."
 msgstr "Жаңа таңдауыңызша әрекетті қосу."
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Remove the currently selected action."
 msgstr "Ағымдағы таңдалған әрекетті өшіру."
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -303,23 +313,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Егер түрі префикске орнатылса, %s орнына шаблоннан кейінгі мәтін қойылады, ал %S жазбаның толық мәтіні болады. Тұрақты өрнектер үшін сіз \\0 пен \\<сан> қолдана аласын."
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "Co_mmand:"
 msgstr "Ко_манда:"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Patte_rn:"
 msgstr "Шаб_лон:"
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "_Type:"
 msgstr "_Түрі:"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "_Save match in command history"
 msgstr "Сә_йкестікті командалар тарихында сақтау"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Custom _Actions"
 msgstr "Пайдалану_шы әрекеттері"
 
@@ -338,7 +348,7 @@ msgstr "Бағдарламаны жөнелту"
 #: ../data/xfce4-appfinder.appdata.xml.in.h:1
 msgid ""
 "The application finder is a tool to find and launch installed applications "
-"on your system and the quickly execute commands. It can also be used to "
-"quickly add launchers to the Xfce Panel by dragging an item from the view "
-"and drop it on the panel."
+"on your system and quickly execute commands. It can also be used to quickly "
+"add launchers to the Xfce Panel by dragging an item from the view and drop "
+"it on the panel."
 msgstr "Қолданбаларды табушы - бұл жүйеңізде орнатылған қолданбаларды табу және жөнелту, және де командаларды жылдам орындау үшін арналған сайман. Сонымен бірге, оның көмегімен қолданбалар көрінісінен тартып апару арқылы Xfce панеліне жөнелткіштерді қосуға болады."
