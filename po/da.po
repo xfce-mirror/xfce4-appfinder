@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-02 23:08+0200\n"
-"PO-Revision-Date: 2017-09-30 13:55+0000\n"
+"PO-Revision-Date: 2017-11-17 14:32+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce4-appfinder/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -241,11 +241,11 @@ msgstr "Tekst ved _siden af ikoner"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Ite_m icon size:"
-msgstr "Ele_ment ikonstørrelse:"
+msgstr "Ikonstørrelse for _element:"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Categ_ory icon size:"
-msgstr "Kategorie_ikonstørrelse:"
+msgstr "Ikonstørrelse for _kategori:"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Appearance"
