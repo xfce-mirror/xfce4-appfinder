@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 06:30+0200\n"
-"PO-Revision-Date: 2017-09-23 19:02+0000\n"
-"Last-Translator: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>\n"
+"POT-Creation-Date: 2017-11-01 06:30+0100\n"
+"PO-Revision-Date: 2017-11-26 05:05+0000\n"
+"Last-Translator: Masato HASHIMOTO <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/xfce/xfce4-appfinder/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,98 +60,98 @@ msgstr "コマンド履歴"
 msgid "Bookmarks"
 msgstr "ブックマーク"
 
-#: ../src/appfinder-preferences.c:219
+#: ../src/appfinder-preferences.c:238
 msgid "C_lear"
 msgstr "クリア(_L)"
 
-#: ../src/appfinder-preferences.c:220
+#: ../src/appfinder-preferences.c:239
 msgid "This will permanently clear the custom command history."
 msgstr "これはカスタムコマンドの履歴を完全にクリアします。"
 
-#: ../src/appfinder-preferences.c:221
+#: ../src/appfinder-preferences.c:240
 msgid "Are you sure you want to clear the command history?"
 msgstr "コマンド履歴をクリアしてもよろしいですか?"
 
-#: ../src/appfinder-preferences.c:331
+#: ../src/appfinder-preferences.c:350
 msgid "The custom action will be deleted permanently."
 msgstr "カスタムアクションは完全に削除されます。"
 
-#: ../src/appfinder-preferences.c:332
+#: ../src/appfinder-preferences.c:351
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "パターン \"%s\" を削除してもよろしいですか?"
 
-#: ../src/appfinder-window.c:220 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:227 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "アプリケーションファインダー"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:275
 msgid "Toggle view mode"
 msgstr "表示モードの切り替え"
 
-#: ../src/appfinder-window.c:344
+#: ../src/appfinder-window.c:351
 msgid "_Preferences"
 msgstr "設定(_P)..."
 
-#: ../src/appfinder-window.c:360
+#: ../src/appfinder-window.c:368
 msgid "Close"
 msgstr "閉じる"
 
-#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1040
+#: ../src/appfinder-window.c:378 ../src/appfinder-window.c:1052
 msgid "La_unch"
 msgstr "起動(_U)"
 
-#: ../src/appfinder-window.c:854
+#: ../src/appfinder-window.c:866
 msgid "Failed to launch desktop item editor"
 msgstr "デスクトップアイテムエディターの起動に失敗しました"
 
-#: ../src/appfinder-window.c:880
+#: ../src/appfinder-window.c:892
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "これはカスタムデスクトップファイルをホームディレクトリから完全に削除します。"
 
-#: ../src/appfinder-window.c:881
+#: ../src/appfinder-window.c:893
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "\"%s\" を元に戻してもよろしいですか?"
 
-#: ../src/appfinder-window.c:891
+#: ../src/appfinder-window.c:903
 msgid "Failed to remove desktop file"
 msgstr "デスクトップファイルの削除に失敗しました"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:924
+#: ../src/appfinder-window.c:936
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "隠したアイテムを再び表示させるには、\"%s\" からデスクトップファイルを手動で削除するか、そのディレクトリにあるデスクトップファイルを開き、\"%s\" の行を削除してください。"
 
-#: ../src/appfinder-window.c:929 ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:941 ../src/appfinder-window.c:1089
 msgid "_Hide"
 msgstr "隠す(_H)"
 
-#: ../src/appfinder-window.c:930
+#: ../src/appfinder-window.c:942
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "\"%s\" を隠してもよろしいですか?"
 
-#: ../src/appfinder-window.c:1024
+#: ../src/appfinder-window.c:1036
 msgid "Remove From Bookmarks"
 msgstr "ブックマークから削除"
 
-#: ../src/appfinder-window.c:1024
+#: ../src/appfinder-window.c:1036
 msgid "Add to Bookmarks"
 msgstr "ブックマークに追加"
 
-#: ../src/appfinder-window.c:1053
+#: ../src/appfinder-window.c:1065
 msgid "_Edit"
 msgstr "編集(_E)"
 
-#: ../src/appfinder-window.c:1070
+#: ../src/appfinder-window.c:1082
 msgid "_Revert"
 msgstr "元に戻す(_R)"
 
@@ -175,16 +175,16 @@ msgstr "すべてのインスタンスを終了する"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "D-Bus サービスの使用を試みないか、サービスにならない"
 
-#: ../src/main.c:223
+#: ../src/main.c:232
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "\"%s --help\" で使用方法を表示します。"
 
-#: ../src/main.c:234
+#: ../src/main.c:243
 msgid "The Xfce development team. All rights reserved."
 msgstr "The Xfce development team. All rights reserved."
 
-#: ../src/main.c:235
+#: ../src/main.c:244
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "バグの報告は <%s> までおねがいします。"
@@ -249,54 +249,64 @@ msgid ""
 msgstr "最後のウィンドウが閉じられたとき、アプリケーションを終了せずにインスタンスをバックグラウンドで常駐させます。これによって新しいウィンドウを開くときのスピードが速くなりますが、常にメモリを消費します。"
 
 #: ../src/appfinder-preferences.glade.h:16
+msgid "Single window"
+msgstr "単一ウィンドウ"
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid ""
+"When an instance is running in the background, only open one window at a "
+"time."
+msgstr "インスタンスがバックグラウンドで動作しているとき、同時には単一のウィンドウのみ開きます。"
+
+#: ../src/appfinder-preferences.glade.h:18
 msgid "Behaviour"
 msgstr "振る舞い"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: ../src/appfinder-preferences.glade.h:19
 msgid "_View items as icons"
 msgstr "アイテムをアイコンで表示する(_V)"
 
-#: ../src/appfinder-preferences.glade.h:18
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Text besi_de icons"
 msgstr "アイコンの横にテキストを表示する(_D)"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:21
 msgid "Ite_m icon size:"
 msgstr "アイテムのアイコンサイズ(_M):"
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Categ_ory icon size:"
 msgstr "カテゴリのアイコンサイズ(_O):"
 
-#: ../src/appfinder-preferences.glade.h:21
+#: ../src/appfinder-preferences.glade.h:23
 msgid "Appearance"
 msgstr "外観"
 
-#: ../src/appfinder-preferences.glade.h:22
+#: ../src/appfinder-preferences.glade.h:24
 msgid "C_lear Custom Command History"
 msgstr "カスタムコマンド履歴のクリア(_L)"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "History"
 msgstr "履歴"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "_General"
 msgstr "全般(_G)"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Pattern"
 msgstr "パターン"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "Add a new custom action."
 msgstr "新しいアクションを追加します。"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Remove the currently selected action."
 msgstr "選択されているアクションを削除します。"
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -304,23 +314,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "タイプがプレフィックスの時、%s はパターンの後の文字列に、%S はテキスト全文に置き換えられます。正規表現の時、\\0 および \\<num> を使って後方参照が行えます。"
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "Co_mmand:"
 msgstr "コマンド(_M):"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Patte_rn:"
 msgstr "パターン(_R):"
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "_Type:"
 msgstr "タイプ(_T):"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "_Save match in command history"
 msgstr "マッチしたコマンドを履歴に保存する(_S)"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Custom _Actions"
 msgstr "カスタムアクション(_A)"
 
@@ -339,7 +349,7 @@ msgstr "プログラムを実行します"
 #: ../data/xfce4-appfinder.appdata.xml.in.h:1
 msgid ""
 "The application finder is a tool to find and launch installed applications "
-"on your system and the quickly execute commands. It can also be used to "
-"quickly add launchers to the Xfce Panel by dragging an item from the view "
-"and drop it on the panel."
-msgstr "アプリケーションファインダーはシステムにインストールされているアプリケーションを探して起動したりすばやくコマンドを実行するツールです。ウィンドウ上のアイテムを Xfce パネルにドラッグアンドドロップすることでパネル上にランチャーを追加することもできます。"
+"on your system and quickly execute commands. It can also be used to quickly "
+"add launchers to the Xfce Panel by dragging an item from the view and drop "
+"it on the panel."
+msgstr "アプリケーションファインダーはシステムにインストールされているアプリケーションを検索し起動したり、コマンドを実行するためのツールです。ウィンドウ内のアイテムを Xfce パネルにドラッグアンドドロップすることでランチャーを追加することもできます。"
