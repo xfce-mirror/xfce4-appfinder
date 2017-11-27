@@ -4,9 +4,10 @@
 # 
 # Translators:
 # Aputsiak Niels Janussen (Skjalden) <aj@isit.gl>, 2013
+# Aputsiak Niels Janussen (Skjalden) <aj@isit.gl>, 2013
 # Erik Schmidt <erischmi@gmail.com>, 2012
 # Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>, 2015
-# Ole Guldberg <olegb@omgwtf.dk>, 2008
+# olegb <olegb@omgwtf.dk>, 2008
 # Per Kongstad <p_kongstad@op.pl>, 2009,2014
 # scootergrisen, 2016-2017
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-01 06:30+0100\n"
-"PO-Revision-Date: 2017-11-17 14:56+0000\n"
+"PO-Revision-Date: 2017-11-27 21:41+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce4-appfinder/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +75,7 @@ msgstr "Det vil rydde din historik over tilpassede kommandoer permanent."
 
 #: ../src/appfinder-preferences.c:240
 msgid "Are you sure you want to clear the command history?"
-msgstr "Er du sikker på at du vil rydde kommandohistorik?"
+msgstr "Er du sikker på, at du vil rydde kommandohistorik?"
 
 #: ../src/appfinder-preferences.c:350
 msgid "The custom action will be deleted permanently."
@@ -83,7 +84,7 @@ msgstr "Den tilpassede handling vil blive slettet permanent."
 #: ../src/appfinder-preferences.c:351
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "Er du sikker på at du vil slette mønstret \"%s\"?"
+msgstr "Er du sikker på, at du vil slette mønstret \"%s\"?"
 
 #: ../src/appfinder-window.c:227 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
@@ -119,7 +120,7 @@ msgstr "Det vil permanent fjerne din tilpassede skrivbordsfil fra din hjemmemapp
 #: ../src/appfinder-window.c:893
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Er du sikker på at du vil vende tilbage til \"%s\"?"
+msgstr "Er du sikker på, at du vil vende tilbage til \"%s\"?"
 
 #: ../src/appfinder-window.c:903
 msgid "Failed to remove desktop file"
@@ -141,7 +142,7 @@ msgstr "_Skjul"
 #: ../src/appfinder-window.c:942
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Er du sikker på at du vil skjule \"%s\"?"
+msgstr "Er du sikker på, at du vil skjule \"%s\"?"
 
 #: ../src/appfinder-window.c:1036
 msgid "Remove From Bookmarks"
@@ -280,7 +281,7 @@ msgstr "Ikonstørrelse for _element:"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Categ_ory icon size:"
-msgstr "Kategorie_ikonstørrelse:"
+msgstr "Kategori_ikonstørrelse:"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Appearance"
