@@ -694,7 +694,10 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
 
   if (icon_view)
     {
-      window->view = view = gtk_icon_view_new_with_model (window->sort_model);
+      /* Disable sort model for icon view, since it does not work as expected */
+      /* Example: the user searches for some app and then deletes the text entry. */
+      /* Repeat this operation a couple of times, you will notice that sorting is incorrect. */
+      window->view = view = gtk_icon_view_new_with_model (window->filter_model/*sort_model*/);
       gtk_icon_view_set_selection_mode (GTK_ICON_VIEW (view), GTK_SELECTION_BROWSE);
       gtk_icon_view_set_pixbuf_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_ICON);
       gtk_icon_view_set_text_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_TITLE);
@@ -1688,8 +1691,8 @@ static void
 xfce_appfinder_window_execute (XfceAppfinderWindow *window,
                                gboolean             close_on_succeed)
 {
-  GtkTreeModel *model;
-  GtkTreeIter   iter, iter_sort, iter_filter;
+  GtkTreeModel *model, *child_model;
+  GtkTreeIter   iter, child_iter;
   GError       *error = NULL;
   gboolean      result = FALSE;
   GdkScreen    *screen;
@@ -1710,14 +1713,21 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
 
       if (xfce_appfinder_window_view_get_selected (window, &model, &iter))
         {
-          gtk_tree_model_sort_convert_iter_to_child_iter (GTK_TREE_MODEL_SORT (model), &iter_sort, &iter);
-          gtk_tree_model_filter_convert_iter_to_child_iter (GTK_TREE_MODEL_FILTER (gtk_tree_model_sort_get_model (GTK_TREE_MODEL_SORT (model))),
-                                                            &iter_filter, &iter_sort);
-          result = xfce_appfinder_model_execute (window->model, &iter_filter, screen, &regular_command, &error);
+          child_model = model;
+
+          if (GTK_IS_TREE_MODEL_SORT (model))
+            {
+              gtk_tree_model_sort_convert_iter_to_child_iter (GTK_TREE_MODEL_SORT (model), &child_iter, &iter);
+              iter = child_iter;
+              child_model = gtk_tree_model_sort_get_model (GTK_TREE_MODEL_SORT (model));
+            }
+
+          gtk_tree_model_filter_convert_iter_to_child_iter (GTK_TREE_MODEL_FILTER (child_model), &child_iter, &iter);
+          result = xfce_appfinder_model_execute (window->model, &child_iter, screen, &regular_command, &error);
 
           if (!result && regular_command)
             {
-              gtk_tree_model_get (model, &iter_filter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
+              gtk_tree_model_get (model, &child_iter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
               result = xfce_appfinder_window_execute_command (cmd, screen, window, FALSE, NULL, &error);
               g_free (cmd);
             }
