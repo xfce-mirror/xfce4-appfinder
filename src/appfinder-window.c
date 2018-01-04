@@ -809,7 +809,6 @@ xfce_appfinder_window_popup_menu_toggle_bookmark (GtkWidget           *mi,
   GFile        *gfile;
   gchar        *desktop_id;
   GtkWidget    *menu = gtk_widget_get_parent (mi);
-  GtkTreeModel *filter;
   GtkTreeModel *model;
   GError       *error = NULL;
 
@@ -821,8 +820,7 @@ xfce_appfinder_window_popup_menu_toggle_bookmark (GtkWidget           *mi,
       g_object_unref (G_OBJECT (gfile));
 
       /* toggle bookmarks */
-      filter = g_object_get_data (G_OBJECT (menu), "model");
-      model = gtk_tree_model_filter_get_model (GTK_TREE_MODEL_FILTER (filter));
+      model = gtk_tree_model_filter_get_model (GTK_TREE_MODEL_FILTER (window->filter_model));
       xfce_appfinder_model_bookmark_toggle (XFCE_APPFINDER_MODEL (model), desktop_id, &error);
 
       g_free (desktop_id);
