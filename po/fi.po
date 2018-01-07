@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ammuu5, 2017
+# Ammuu5, 2017-2018
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2013
 # Juha Kautto <juha@xfce.org>, 2004
 # Pasi Lallinaho <pasi@shimmerproject.org>, 2014-2015
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-01 06:30+0100\n"
-"PO-Revision-Date: 2017-12-19 06:45+0000\n"
+"PO-Revision-Date: 2018-01-07 00:53+0000\n"
 "Last-Translator: Ammuu5\n"
 "Language-Team: Finnish (http://www.transifex.com/xfce/xfce4-appfinder/language/fi/)\n"
 "MIME-Version: 1.0\n"
@@ -354,4 +354,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr ""
+msgstr "Sovellusten hakutyökalu on työkalu asennettujen sovellusten hakemiseen ja käynnistämistä sekä komentojen nopeaa ajamista varten. Sitä voidaan myös käyttää sovellusten nopeaan lisäämiseen Xfce:n paneeliin vetämällä kohde näkymästä ja pudottamalle se paneeliin."
