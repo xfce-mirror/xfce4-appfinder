@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-01 06:30+0100\n"
-"PO-Revision-Date: 2018-02-11 20:33+0000\n"
+"PO-Revision-Date: 2018-02-17 01:20+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic (http://www.transifex.com/xfce/xfce4-appfinder/language/am/)\n"
 "MIME-Version: 1.0\n"
@@ -70,7 +70,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.c:240
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "እርስው በ እርግጥ የ ትእዛዝ ታሪክ ማጽዳት ይፈልጋሉ?"
 
 #: ../src/appfinder-preferences.c:350
 msgid "The custom action will be deleted permanently."
@@ -157,7 +157,7 @@ msgstr "_እንደ ነበር መመለሻ"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
-msgstr ""
+msgstr "በ አነሰ ዘዴ ማስጀመሪያ"
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
@@ -165,7 +165,7 @@ msgstr "ተጨማሪ መረጃ..."
 
 #: ../src/main.c:66
 msgid "Replace the existing service"
-msgstr ""
+msgstr "የ ነበረውን ግልጋሎት መቀየሪያ"
 
 #: ../src/main.c:67
 msgid "Quit all instances"
@@ -231,11 +231,11 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "ሁል ጊዜ መስኮት መ_ሀከል ማድረጊያ"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
-msgstr ""
+msgstr "በሚጀምር ጊዜ የ መስኮት መሀከል ማድረጊያ"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
@@ -304,7 +304,7 @@ msgstr "አዲስ የ ተግባር ማስተካከያ መጨመሪያ"
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "አሁን የ ተመረጠውን ተግባር ማስወገጃ"
 
 #: ../src/appfinder-preferences.glade.h:31
 #, no-c-format
