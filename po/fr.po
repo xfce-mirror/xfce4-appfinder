@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Charles Monzat <superboa@hotmail.fr>, 2018
 # Collet Etienne <xanaxlnx@gmail.com>, 2005
 # jc1 <jc1.quebecos@gmail.com>, 2013
 # jc1 <jc1.quebecos@gmail.com>, 2013-2014,2017
@@ -12,8 +13,8 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-01 06:30+0100\n"
-"PO-Revision-Date: 2017-11-01 13:10+0000\n"
-"Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
+"PO-Revision-Date: 2018-03-15 12:30+0000\n"
+"Last-Translator: Charles Monzat <superboa@hotmail.fr>\n"
 "Language-Team: French (http://www.transifex.com/xfce/xfce4-appfinder/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,7 +53,7 @@ msgstr "Nom du fichier"
 
 #: ../src/appfinder-model.c:2097
 msgid "Application has no command"
-msgstr "L'application n'a pas de commande"
+msgstr "L’application n’a pas de commande"
 
 #: ../src/appfinder-model.c:2516
 msgid "Commands History"
@@ -68,15 +69,15 @@ msgstr "_Effacer"
 
 #: ../src/appfinder-preferences.c:239
 msgid "This will permanently clear the custom command history."
-msgstr "Ceci effacera l'historique des commandes de manière permanente."
+msgstr "Ceci effacera l’historique des commandes de manière permanente."
 
 #: ../src/appfinder-preferences.c:240
 msgid "Are you sure you want to clear the command history?"
-msgstr "Voulez-vous vraiment effacer l'historique des commandes ?"
+msgstr "Voulez-vous vraiment effacer l’historique des commandes ?"
 
 #: ../src/appfinder-preferences.c:350
 msgid "The custom action will be deleted permanently."
-msgstr "Ceci supprimera l'action personnalisée de manière permanente."
+msgstr "Ceci supprimera l’action personnalisée de manière permanente."
 
 #: ../src/appfinder-preferences.c:351
 #, c-format
@@ -90,7 +91,7 @@ msgstr "Liste des applications"
 
 #: ../src/appfinder-window.c:275
 msgid "Toggle view mode"
-msgstr "Basculer le mode d'affichage"
+msgstr "Basculer le mode d’affichage"
 
 #: ../src/appfinder-window.c:351
 msgid "_Preferences"
@@ -106,7 +107,7 @@ msgstr "_Lancer"
 
 #: ../src/appfinder-window.c:866
 msgid "Failed to launch desktop item editor"
-msgstr "Impossible de lancer l'éditeur de fichier desktop"
+msgstr "Impossible de lancer l’éditeur de fichier desktop"
 
 #: ../src/appfinder-window.c:892
 msgid ""
@@ -117,7 +118,7 @@ msgstr "Ceci effacera définitivement le fichier desktop personnalisé de votre 
 #: ../src/appfinder-window.c:893
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Voulez-vous vraiment annuler les modifications dans « %s » ?"
+msgstr "Voulez-vous vraiment annuler les modifications dans « %s » ?"
 
 #: ../src/appfinder-window.c:903
 msgid "Failed to remove desktop file"
@@ -130,7 +131,7 @@ msgstr "Impossible de supprimer le fichier desktop"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Pour afficher l'élément vous devez supprimer manuellement le fichier desktop à partir de « %s » ou ouvrir le fichier dans le même répertoire et supprimer la ligne « %s »."
+msgstr "Pour afficher l’élément, vous devez supprimer manuellement le fichier desktop à partir de « %s » ou ouvrir le fichier dans le même répertoire et supprimer la ligne « %s »."
 
 #: ../src/appfinder-window.c:941 ../src/appfinder-window.c:1089
 msgid "_Hide"
@@ -139,7 +140,7 @@ msgstr "_Masquer"
 #: ../src/appfinder-window.c:942
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Voulez-vous vraiment masquer « %s » ?"
+msgstr "Voulez-vous vraiment masquer « %s » ?"
 
 #: ../src/appfinder-window.c:1036
 msgid "Remove From Bookmarks"
@@ -175,7 +176,7 @@ msgstr "Fermer toutes les instances"
 
 #: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
-msgstr "Ne pas essayer d'utiliser ou de devenir un service D-Bus."
+msgstr "Ne pas essayer d’utiliser ou de devenir un service D-Bus."
 
 #: ../src/main.c:232
 #, c-format
@@ -184,7 +185,7 @@ msgstr "Taper « %s --help » pour plus d'aide."
 
 #: ../src/main.c:243
 msgid "The Xfce development team. All rights reserved."
-msgstr "L'équipe de développement Xfce. Tous droits réservés."
+msgstr "L’équipe de développement Xfce. Tous droits réservés."
 
 #: ../src/main.c:244
 #, c-format
@@ -241,14 +242,14 @@ msgstr "Centrer la fenêtre au démarrage."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr "Conserver l'_instance en tâche de fond"
+msgstr "Conserver l’_instance en tâche de fond"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Au lieu de quitter l'application lorsque la dernière fenêtre est fermée, garder une instance en cours d'exécution afin d'accélérer l'ouverture de nouvelles fenêtres. Vous pouvez désactiver cette option pour réduire la consommation de mémoire."
+msgstr "Au lieu de quitter l’application lorsque la dernière fenêtre est fermée, garder une instance en cours d’exécution afin d’accélérer l’ouverture de nouvelles fenêtres. Vous pouvez désactiver cette option pour réduire la consommation de mémoire."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Single window"
@@ -266,7 +267,7 @@ msgstr "Comportement"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_View items as icons"
-msgstr "_Vue en grille d'icônes"
+msgstr "_Vue en grille d’icônes"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Text besi_de icons"
@@ -274,11 +275,11 @@ msgstr "_Texte à côté des icônes"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Ite_m icon size:"
-msgstr "Taille des icônes des a_pplications :"
+msgstr "Taille des icônes des a_pplications :"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Categ_ory icon size:"
-msgstr "Taille des icônes des catég_ories :"
+msgstr "Taille des icônes des catég_ories :"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Appearance"
@@ -286,7 +287,7 @@ msgstr "Apparence"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "C_lear Custom Command History"
-msgstr "Effacer l'_historique des commandes personnalisées"
+msgstr "Effacer l’_historique des commandes personnalisées"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "History"
@@ -306,7 +307,7 @@ msgstr "Ajouter une nouvelle action personnalisée."
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "Remove the currently selected action."
-msgstr "Supprimer l'action actuellement sélectionnée."
+msgstr "Supprimer l’action actuellement sélectionnée."
 
 #: ../src/appfinder-preferences.glade.h:31
 #, no-c-format
@@ -314,7 +315,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Si le type est réglé sur « Préfixe », %s sera remplacé par la chaine qui suit le motif, %S par le texte complet. Pour les expressions régulières, vous pouvez utiliser \\0 et \\<num>."
+msgstr "Si le type est réglé sur « Préfixe », %s sera remplacé par la chaîne qui suit le motif, %S par le texte complet. Pour les expressions régulières, vous pouvez utiliser \\0 et \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "Co_mmand:"
@@ -330,7 +331,7 @@ msgstr "_Type :"
 
 #: ../src/appfinder-preferences.glade.h:35
 msgid "_Save match in command history"
-msgstr "Enregi_strer les saisies dans l'historique des commandes"
+msgstr "Enregi_strer les saisies dans l’historique des commandes"
 
 #: ../src/appfinder-preferences.glade.h:36
 msgid "Custom _Actions"
@@ -342,11 +343,11 @@ msgstr "Rechercher et lancer des applications installées sur votre système"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr "Lancer le programme..."
+msgstr "Exécuter le programme…"
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr "Lancer un programme"
+msgstr "Exécuter un programme"
 
 #: ../data/xfce4-appfinder.appdata.xml.in.h:1
 msgid ""
