@@ -4,13 +4,14 @@
 # 
 # Translators:
 # nab <nab@mail.by>, 2004
+# nab <nab@mail.by>, 2004
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 06:30+0200\n"
-"PO-Revision-Date: 2017-09-19 18:02+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"POT-Creation-Date: 2017-11-01 06:30+0100\n"
+"PO-Revision-Date: 2018-03-21 14:58+0000\n"
+"Last-Translator: Сяргей Снапкоўскі <sirozass@outlook.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/xfce/xfce4-appfinder/language/be/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,19 +22,19 @@ msgstr ""
 #. close all windows and quit
 #: ../src/appfinder-gdbus.c:84
 msgid "Forced to quit"
-msgstr ""
+msgstr "Вымушаны выйсьці"
 
 #: ../src/appfinder-category-model.c:146
 msgid "All Applications"
-msgstr "Усе дастасаванні"
+msgstr "Усе дастасаваньні"
 
 #: ../src/appfinder-model.c:576
 msgid "Name"
-msgstr "Назва"
+msgstr "Імя"
 
 #: ../src/appfinder-model.c:577
 msgid "Comment"
-msgstr "Камэнтар"
+msgstr "Камэнтаваць"
 
 #: ../src/appfinder-model.c:578
 msgid "Command"
@@ -41,7 +42,7 @@ msgstr "Загад"
 
 #: ../src/appfinder-model.c:579
 msgid "Categories"
-msgstr "Катэгорыі"
+msgstr "Разьдзелы"
 
 #: ../src/appfinder-model.c:580
 msgid "Filename"
@@ -49,141 +50,141 @@ msgstr "Імя файла"
 
 #: ../src/appfinder-model.c:2097
 msgid "Application has no command"
-msgstr "Дастасаванне"
+msgstr "Дастасаваньне не мае загаду"
 
 #: ../src/appfinder-model.c:2516
 msgid "Commands History"
-msgstr "Гісторыя загадаў"
+msgstr "Загады Гісторыі"
 
 #: ../src/appfinder-model.c:2540
 msgid "Bookmarks"
 msgstr ""
 
-#: ../src/appfinder-preferences.c:219
+#: ../src/appfinder-preferences.c:238
 msgid "C_lear"
-msgstr "_Ачысціць"
+msgstr "Пры_браць"
 
-#: ../src/appfinder-preferences.c:220
+#: ../src/appfinder-preferences.c:239
 msgid "This will permanently clear the custom command history."
-msgstr "Гісторыя карыстальніцкіх загадаў будзе ачышчана без магчымасці аднаўлення."
+msgstr "Гэта цалкам прыбярэ Вашу гісторыю загадаў"
 
-#: ../src/appfinder-preferences.c:221
+#: ../src/appfinder-preferences.c:240
 msgid "Are you sure you want to clear the command history?"
-msgstr "Упэўненыя што жадаеце ачысціць гісторыю загадаў?"
+msgstr "Прыбраць гісторыю загадаў?"
 
-#: ../src/appfinder-preferences.c:331
+#: ../src/appfinder-preferences.c:350
 msgid "The custom action will be deleted permanently."
-msgstr "Карыстальніцкае дзеянне будзе выдалена без магчымасці аднаўлення."
+msgstr "Ваша дзеяньне будзе цалкам выдалена"
 
-#: ../src/appfinder-preferences.c:332
+#: ../src/appfinder-preferences.c:351
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "Упэўненыя што жадаеце выдаліць шаблон \"%s\"?"
+msgstr "Выдаліць шаблён \"%s\"?"
 
-#: ../src/appfinder-window.c:220 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:227 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
-msgstr "Шукач дастасаванняў"
+msgstr "Шукач дастасаваньняў"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:275
 msgid "Toggle view mode"
-msgstr "Пераключыць рэжым прагляду"
+msgstr "Выгляд"
 
-#: ../src/appfinder-window.c:344
+#: ../src/appfinder-window.c:351
 msgid "_Preferences"
 msgstr ""
 
-#: ../src/appfinder-window.c:360
+#: ../src/appfinder-window.c:368
 msgid "Close"
 msgstr ""
 
-#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1040
+#: ../src/appfinder-window.c:378 ../src/appfinder-window.c:1052
 msgid "La_unch"
-msgstr "За_пусціць"
+msgstr "За_пуск"
 
-#: ../src/appfinder-window.c:854
+#: ../src/appfinder-window.c:866
 msgid "Failed to launch desktop item editor"
-msgstr "Немагчыма запусціць рэдактар элемента працоўнага стала"
+msgstr "Няўдалося запусьціць рэдагавальнік элэмэнтаў стала"
 
-#: ../src/appfinder-window.c:880
+#: ../src/appfinder-window.c:892
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Гэта выдаліць карыстальніцкі файл працоўнага стала з вашага хатняга каталогу без магчымасці аднаўлення."
+msgstr "Гэта цалкам выдаліць карыстацкі файл са стала з Вашай хатняй тэчкі."
 
-#: ../src/appfinder-window.c:881
+#: ../src/appfinder-window.c:893
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Упэўненыя што жадаеце адмяніць змены ў \"%s\"?"
+msgstr "Вярнуць \"%s\"?"
 
-#: ../src/appfinder-window.c:891
+#: ../src/appfinder-window.c:903
 msgid "Failed to remove desktop file"
-msgstr "Немагчыма выдаліць файл працоўнага стала"
+msgstr "Ня атрымалася выдаліць файл са стала"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:924
+#: ../src/appfinder-window.c:936
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Каб зноў адлюстраваць гэты элемент, трэба будзе самастойна выдаліць файл працоўнага стала з \"%s\" або адчыніць файл у тым жа каталоге і выдаліць радок \"%s\"."
 
-#: ../src/appfinder-window.c:929 ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:941 ../src/appfinder-window.c:1089
 msgid "_Hide"
-msgstr "Сх_аваць"
+msgstr "_Схаваць"
 
-#: ../src/appfinder-window.c:930
+#: ../src/appfinder-window.c:942
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Упэўненыя што жадаеце схаваць \"%s\"?"
+msgstr "Схаваць \"%s\"?"
 
-#: ../src/appfinder-window.c:1024
+#: ../src/appfinder-window.c:1036
 msgid "Remove From Bookmarks"
 msgstr ""
 
-#: ../src/appfinder-window.c:1024
+#: ../src/appfinder-window.c:1036
 msgid "Add to Bookmarks"
 msgstr ""
 
-#: ../src/appfinder-window.c:1053
+#: ../src/appfinder-window.c:1065
 msgid "_Edit"
 msgstr ""
 
-#: ../src/appfinder-window.c:1070
+#: ../src/appfinder-window.c:1082
 msgid "_Revert"
 msgstr ""
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
-msgstr "Запусціць у згорнутым выглядзе"
+msgstr "Запуск у згорнутым выглядзе"
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
-msgstr "Вывесці звесткі пра версію і выйсці"
+msgstr "Друкаваць зьвесткі аб вэрсіі й выйсьці"
 
 #: ../src/main.c:66
 msgid "Replace the existing service"
-msgstr "Замяніць існуючы сэрвіс"
+msgstr "Замяніць йсны сэрвіс"
 
 #: ../src/main.c:67
 msgid "Quit all instances"
-msgstr "Спыніць усе экзэмпляры"
+msgstr "Выйсьці з усіх аб'ектаў"
 
 #: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
-msgstr "Не імкнуцца выкарыстаць ці стаць D-Bus сэрвісам"
+msgstr "Ня спрабуйце скарыстаць ці стаць D-Bus сэрвісам"
 
-#: ../src/main.c:223
+#: ../src/main.c:232
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Увядзіце \"%s --help\" для звестак пра выкарыстанне."
+msgstr "Увядзіце \"%s --help\" для карыстаньня."
 
-#: ../src/main.c:234
+#: ../src/main.c:243
 msgid "The Xfce development team. All rights reserved."
 msgstr "Каманда распрацоўкі Xfce. Усе правы абароненыя."
 
-#: ../src/main.c:235
+#: ../src/main.c:244
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Калі ласка, паведамляйце пра памылкі на <%s>."
@@ -194,7 +195,7 @@ msgstr "Прэфікс"
 
 #: ../src/appfinder-preferences.glade.h:2
 msgid "Regular Expression"
-msgstr "Рэгулярны выраз"
+msgstr "Звычайны выраз"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Very Small"
@@ -202,7 +203,7 @@ msgstr "Вельмі малы"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Smaller"
-msgstr "Яшчэ меньш"
+msgstr "Найменьшы"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "Small"
@@ -214,19 +215,19 @@ msgstr "Звычайны"
 
 #: ../src/appfinder-preferences.glade.h:7
 msgid "Large"
-msgstr "Вялікі"
+msgstr "Буйны"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Larger"
-msgstr "Яшчэ больш"
+msgstr "Найбуйнейшы"
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Very Large"
-msgstr "Вельмі вялікі"
+msgstr "Вельмі буйны"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "Remember last _selected category"
-msgstr "_Памятаваць апошнюю абраную катэгорыю"
+msgstr "Запомніць апошнюю _выбраную тэчку"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
@@ -234,111 +235,121 @@ msgstr "Заўсёды _цэнтраваць вакно"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
-msgstr "Цэнтраваць вакно пры запуску."
+msgstr "Цэнтраваць вакно пры запуску"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr "Трымаць працуючы экзэмпляр у _фоне"
+msgstr "Трымаць бягучы _ аб'ект у фоне"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Замест выхаду з дастасавання пасля закрыцця апошняга вакна, пакінуць працуючы экзэмпляр дзеля паскарэння адкрыцця новых вокнаў. Вы можаце адключыць гэтую опцыю каб паменшыць выкарыстанне памяці."
+msgstr "Замест выхаду з дастасаваньня, калі апошняе вакно зачынена, захавайце бягучы сэанс каб хутчэй адкрыць новыя вокны. Можна выключыць гэта для захаваньня памяці."
 
 #: ../src/appfinder-preferences.glade.h:16
+msgid "Single window"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid ""
+"When an instance is running in the background, only open one window at a "
+"time."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:18
 msgid "Behaviour"
 msgstr "Паводзіны"
 
-#: ../src/appfinder-preferences.glade.h:17
-msgid "_View items as icons"
-msgstr "Паказваць элементы _як значкі"
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "Text besi_de icons"
-msgstr "Тэкст за зна_чкай"
-
 #: ../src/appfinder-preferences.glade.h:19
-msgid "Ite_m icon size:"
-msgstr "Памер значкі _элемента:"
+msgid "_View items as icons"
+msgstr "_Паказаць элэмэнты як выявы"
 
 #: ../src/appfinder-preferences.glade.h:20
-msgid "Categ_ory icon size:"
-msgstr "Памер значкі _катэгорыі:"
+msgid "Text besi_de icons"
+msgstr "Тэкст за _выявамі"
 
 #: ../src/appfinder-preferences.glade.h:21
-msgid "Appearance"
-msgstr "Знешні выгляд"
+msgid "Ite_m icon size:"
+msgstr "Памер _выявы элэмэнта"
 
 #: ../src/appfinder-preferences.glade.h:22
-msgid "C_lear Custom Command History"
-msgstr "_Ачысціць гісторыю карыстальніцкіх дзеянняў"
+msgid "Categ_ory icon size:"
+msgstr "Памер _выявы разьдзела"
 
 #: ../src/appfinder-preferences.glade.h:23
+msgid "Appearance"
+msgstr "Выгляд"
+
+#: ../src/appfinder-preferences.glade.h:24
+msgid "C_lear Custom Command History"
+msgstr "Па_чысьціць "
+
+#: ../src/appfinder-preferences.glade.h:25
 msgid "History"
 msgstr "Гісторыя"
 
-#: ../src/appfinder-preferences.glade.h:24
-msgid "_General"
-msgstr "А_сноўныя"
-
-#: ../src/appfinder-preferences.glade.h:25
-msgid "Pattern"
-msgstr "Шаблон"
-
 #: ../src/appfinder-preferences.glade.h:26
-msgid "Add a new custom action."
-msgstr "Дадаць новае дзеянне."
+msgid "_General"
+msgstr "_Асноўныя"
 
 #: ../src/appfinder-preferences.glade.h:27
-msgid "Remove the currently selected action."
-msgstr "Выдаліць вылучанае дзеянне."
+msgid "Pattern"
+msgstr "Прыклад"
+
+#: ../src/appfinder-preferences.glade.h:28
+msgid "Add a new custom action."
+msgstr "Дадаць дзеяньне"
 
 #: ../src/appfinder-preferences.glade.h:29
+msgid "Remove the currently selected action."
+msgstr "Выдаліць выбранае дзеяньне"
+
+#: ../src/appfinder-preferences.glade.h:31
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Калі абраны тып прэфіксу, %s будзе заменены на частку тэксту пасля шаблону, %S - на поўны тэкст. Для рэгулярных выразаў вы можаце карыстацца \\0 і \\<нумар>."
-
-#: ../src/appfinder-preferences.glade.h:30
-msgid "Co_mmand:"
-msgstr "За_гад:"
-
-#: ../src/appfinder-preferences.glade.h:31
-msgid "Patte_rn:"
-msgstr "_Шаблон:"
+msgstr "Калі тып заданы да прэфікса, %s будзе заменены радком пасьля прыкладу, %S з поўным уводам тэкста. Для звычайных выразаў можна скарыстаць \\0 and \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:32
-msgid "_Type:"
-msgstr "_Тып:"
+msgid "Co_mmand:"
+msgstr "За_гад"
 
 #: ../src/appfinder-preferences.glade.h:33
-msgid "_Save match in command history"
-msgstr "Захоўваць _супадзенне ў гісторыі загадаў"
+msgid "Patte_rn:"
+msgstr "Прык_лад."
 
 #: ../src/appfinder-preferences.glade.h:34
+msgid "_Type:"
+msgstr "_Тып"
+
+#: ../src/appfinder-preferences.glade.h:35
+msgid "_Save match in command history"
+msgstr "_Захаваць супадзеньне ў сьпісе загадаў"
+
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Custom _Actions"
-msgstr "Карыстальніцкія _дзеянні"
+msgstr "Пэўныя _дзеяньні"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Шукае і запускае ўсталяваныя дастасаванні"
+msgstr "Шукае й запускае ўсталяваныя дастасаваньні"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr "Выканаць праграму..."
+msgstr "Запусьціць дастасаваньне..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
-msgstr "Выканаць праграму"
+msgstr "Запусьціць дастасаваньне"
 
 #: ../data/xfce4-appfinder.appdata.xml.in.h:1
 msgid ""
 "The application finder is a tool to find and launch installed applications "
-"on your system and the quickly execute commands. It can also be used to "
-"quickly add launchers to the Xfce Panel by dragging an item from the view "
-"and drop it on the panel."
+"on your system and quickly execute commands. It can also be used to quickly "
+"add launchers to the Xfce Panel by dragging an item from the view and drop "
+"it on the panel."
 msgstr ""
