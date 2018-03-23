@@ -5,12 +5,13 @@
 # Translators:
 # nab <nab@mail.by>, 2004
 # nab <nab@mail.by>, 2004
+# Zmicer Turok <zmicerturok@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-01 06:30+0100\n"
-"PO-Revision-Date: 2018-03-21 20:41+0000\n"
+"PO-Revision-Date: 2018-03-23 16:08+0000\n"
 "Last-Translator: Zmicer Turok <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/xfce/xfce4-appfinder/language/be/)\n"
 "MIME-Version: 1.0\n"
@@ -203,7 +204,7 @@ msgstr "Вельмі малы"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Smaller"
-msgstr "Яшчэ меньш"
+msgstr "Яшчэ менш"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "Small"
