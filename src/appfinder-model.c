@@ -355,9 +355,9 @@ xfce_appfinder_model_finalize (GObject *object)
   g_slist_foreach (model->items, (GFunc) xfce_appfinder_model_item_free, model);
   g_slist_free (model->items);
 
-  g_slist_foreach (model->collect_categories, (GFunc) g_object_unref, NULL);
+  g_slist_foreach (model->collect_categories, (GFunc) (void (*)(void)) g_object_unref, NULL);
   g_slist_free (model->collect_categories);
-  g_slist_foreach (model->categories, (GFunc) g_object_unref, NULL);
+  g_slist_foreach (model->categories, (GFunc) (void (*)(void)) g_object_unref, NULL);
   g_slist_free (model->categories);
 
   g_hash_table_destroy (model->items_hash);
@@ -788,7 +788,7 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
 
       xfce_appfinder_model_categories_changed (model);
 
-      g_slist_foreach (tmp, (GFunc) g_object_unref, NULL);
+      g_slist_foreach (tmp, (GFunc) (void (*)(void)) g_object_unref, NULL);
       g_slist_free (tmp);
     }
 
@@ -881,7 +881,7 @@ xfce_appfinder_model_item_new (GarconMenuItem *menu_item)
   appfinder_return_val_if_fail (GARCON_IS_MENU_ITEM (menu_item), NULL);
 
   item = g_slice_new0 (ModelItem);
-  item->item = g_object_ref (G_OBJECT (menu_item));
+  item->item = GARCON_MENU_ITEM (g_object_ref (G_OBJECT (menu_item)));
 
   appfinder_refcount_debug_add (G_OBJECT (menu_item),
      garcon_menu_item_get_desktop_id (menu_item));
@@ -1072,8 +1072,8 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
   /* add new command */
   item = g_slice_new0 (ModelItem);
   item->command = g_strdup (command);
-  item->icon = g_object_ref (G_OBJECT (model->command_icon));
-  item->icon_large = g_object_ref (G_OBJECT (model->command_icon_large));
+  item->icon = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon)));
+  item->icon_large = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon_large)));
   model->items = g_slist_insert_sorted (model->items, item, xfce_appfinder_model_item_compare);
 
   /* find the item and the position */
@@ -1214,7 +1214,7 @@ xfce_appfinder_model_history_monitor (XfceAppfinderModel *model,
         {
           APPFINDER_DEBUG ("monitor history file %s", path);
 
-          model->history_file = g_object_ref (G_OBJECT (file));
+          model->history_file = G_FILE (g_object_ref (G_OBJECT (file)));
           g_signal_connect (G_OBJECT (model->history_monitor), "changed",
               G_CALLBACK (xfce_appfinder_model_history_changed), model);
         }
@@ -1392,7 +1392,7 @@ xfce_appfinder_model_bookmarks_monitor (XfceAppfinderModel *model,
         {
           APPFINDER_DEBUG ("monitor bookmarks file %s", path);
 
-          model->bookmarks_file = g_object_ref (G_OBJECT (file));
+          model->bookmarks_file = G_FILE (g_object_ref (G_OBJECT (file)));
           g_signal_connect (G_OBJECT (model->bookmarks_monitor), "changed",
               G_CALLBACK (xfce_appfinder_model_bookmarks_changed), model);
         }
@@ -1461,8 +1461,8 @@ xfce_appfinder_model_collect_history (XfceAppfinderModel *model,
         {
           item = g_slice_new0 (ModelItem);
           item->command = g_strndup (contents, end - contents);
-          item->icon = g_object_ref (G_OBJECT (model->command_icon));
-          item->icon_large = g_object_ref (G_OBJECT (model->command_icon_large));
+          item->icon = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon)));
+          item->icon_large = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon_large)));
           model->collect_items = g_slist_prepend (model->collect_items, item);
         }
 
@@ -1787,7 +1787,7 @@ xfce_appfinder_model_menu_changed_idle (gpointer data)
   /* always update the categories, because the pointers changed */
   xfce_appfinder_model_categories_changed (model);
 
-  g_slist_foreach (tmp, (GFunc) g_object_unref, NULL);
+  g_slist_foreach (tmp, (GFunc) (void (*)(void)) g_object_unref, NULL);
   g_slist_free (tmp);
 
   return FALSE;
@@ -2312,7 +2312,7 @@ xfce_appfinder_model_get_icon_for_command (XfceAppfinderModel *model,
               item->icon_large = xfce_appfinder_model_load_pixbuf (icon_name, XFCE_APPFINDER_ICON_SIZE_48);
             }
 
-          return g_object_ref (G_OBJECT (item->icon_large));
+          return GDK_PIXBUF (g_object_ref (G_OBJECT (item->icon_large)));
         }
     }
 
@@ -2372,8 +2372,8 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
 
       if (item->item == NULL)
         {
-          item->icon = g_object_ref (G_OBJECT (model->command_icon));
-          item->icon_large = g_object_ref (G_OBJECT (model->command_icon_large));
+          item->icon = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon)));
+          item->icon_large = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon_large)));
         }
 
       if (item_changed)

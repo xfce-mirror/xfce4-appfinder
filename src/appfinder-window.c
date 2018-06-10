@@ -1441,7 +1441,7 @@ xfce_appfinder_window_category_changed (GtkTreeSelection    *selection,
           if (category == NULL)
             window->filter_category = NULL;
           else
-            window->filter_category = g_object_ref (G_OBJECT (category));
+            window->filter_category = GARCON_MENU_DIRECTORY (g_object_ref (G_OBJECT (category)));
 
           APPFINDER_DEBUG ("refilter category");
 

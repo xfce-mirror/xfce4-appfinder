@@ -34,7 +34,8 @@
 
 
 static void xfce_appfinder_actions_finalize (GObject              *object);
-static void xfce_appfinder_actions_free     (XfceAppfinderAction  *action);
+static void xfce_appfinder_actions_free     (XfceAppfinderAction  *action,
+                                             gpointer              user_data);
 static void xfce_appfinder_actions_load     (XfceAppfinderActions *actions,
                                              gboolean              steal);
 static void xfce_appfinder_actions_save     (XfceAppfinderActions *actions,
@@ -132,7 +133,8 @@ xfce_appfinder_actions_finalize (GObject *object)
 
 
 static void
-xfce_appfinder_actions_free (XfceAppfinderAction *action)
+xfce_appfinder_actions_free (XfceAppfinderAction *action,
+                             gpointer             user_data)
 {
   g_free (action->pattern);
   g_free (action->command);

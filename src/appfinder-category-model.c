@@ -75,7 +75,8 @@ static gboolean           xfce_appfinder_category_model_iter_nth_child        (G
 static gboolean           xfce_appfinder_category_model_iter_parent           (GtkTreeModel             *tree_model,
                                                                                GtkTreeIter              *iter,
                                                                                GtkTreeIter              *child);
-static void               xfce_appfinder_category_category_free               (CategoryItem             *item);
+static void               xfce_appfinder_category_category_free               (CategoryItem             *item,
+                                                                               gpointer                  user_data);
 
 
 
@@ -457,7 +458,8 @@ xfce_appfinder_category_model_iter_parent (GtkTreeModel *tree_model,
 
 
 static void
-xfce_appfinder_category_category_free (CategoryItem *item)
+xfce_appfinder_category_category_free (CategoryItem *item,
+                                       gpointer      user_data)
 {
   if (item->directory != NULL)
     g_object_unref (G_OBJECT (item->directory));
@@ -533,7 +535,7 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
   model->categories = g_slist_prepend (model->categories, item);
 
   item = g_slice_new0 (CategoryItem);
-  item->directory = g_object_ref (G_OBJECT (model->all_applications));
+  item->directory = GARCON_MENU_DIRECTORY (g_object_ref (G_OBJECT (model->all_applications)));
   model->categories = g_slist_prepend (model->categories, item);
 
   path = gtk_tree_path_new_first ();

@@ -320,7 +320,7 @@ main (gint argc, gchar **argv)
       windows = NULL;
 
       /* destroy all windows */
-      g_slist_foreach (windows_destroy, (GFunc) gtk_widget_destroy, NULL);
+      g_slist_foreach (windows_destroy, (GFunc) (void (*)(void)) gtk_widget_destroy, NULL);
       g_slist_free (windows_destroy);
     }
 
