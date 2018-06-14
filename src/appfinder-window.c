@@ -116,6 +116,7 @@ static gint       xfce_appfinder_window_sort_items                    (GtkTreeMo
                                                                        GtkTreeIter                 *a,
                                                                        GtkTreeIter                 *b,
                                                                        gpointer                     data);
+static gboolean   xfce_appfunder_should_sort_icon_view                (void);
 
 struct _XfceAppfinderWindowClass
 {
@@ -694,10 +695,11 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
 
   if (icon_view)
     {
-      /* Disable sort model for icon view, since it does not work as expected */
-      /* Example: the user searches for some app and then deletes the text entry. */
-      /* Repeat this operation a couple of times, you will notice that sorting is incorrect. */
-      window->view = view = gtk_icon_view_new_with_model (window->filter_model/*sort_model*/);
+      window->view = view = gtk_icon_view_new_with_model (
+        xfce_appfunder_should_sort_icon_view () ?
+          window->sort_model :
+          window->filter_model);
+
       gtk_icon_view_set_selection_mode (GTK_ICON_VIEW (view), GTK_SELECTION_BROWSE);
       gtk_icon_view_set_pixbuf_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_ICON);
       gtk_icon_view_set_text_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_TITLE);
@@ -1712,7 +1714,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
         {
           child_model = model;
 
-          if (GTK_IS_TREE_MODEL_SORT (model))
+          if (GTK_IS_TREE_MODEL_SORT (model) || xfce_appfunder_should_sort_icon_view ())
             {
               gtk_tree_model_sort_convert_iter_to_child_iter (GTK_TREE_MODEL_SORT (model), &child_iter, &iter);
               iter = child_iter;
@@ -1877,4 +1879,18 @@ xfce_appfinder_window_sort_items (GtkTreeModel *model,
   g_free (title_a);
   g_free (title_b);
   return result;
+}
+
+
+
+/*
+ * Checks for gtk => 3.22.27 during runtime.
+ * This is necessary because sort model for icon view did not work as expected.
+ */
+static gboolean
+xfce_appfunder_should_sort_icon_view (void)
+{
+  return gtk_get_major_version () >= 3  &&
+         gtk_get_micro_version () >= 22 &&
+         gtk_get_micro_version () >= 27;
 }
