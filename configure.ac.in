@@ -16,7 +16,7 @@ m4_define([xfce4_appfinder_version], [xfce4_appfinder_version_major().xfce4_appf
 dnl *******************************************
 dnl *** Debugging support for GIT  snapshots ***
 dnl *******************************************
-m4_define([appfinder_debug_default], [ifelse(xfce4_appfinder_version_tag(), [git], [full], [minimum])])
+m4_define([appfinder_debug_default], [ifelse(xfce4_appfinder_version_tag(), [git], [yes], [minimum])])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
