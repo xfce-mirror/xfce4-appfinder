@@ -803,6 +803,23 @@ xfce_appfinder_window_view_get_selected (XfceAppfinderWindow  *window,
 
 
 
+static gboolean
+xfce_appfinder_window_view_get_selected_path (XfceAppfinderWindow  *window,
+                                              GtkTreePath         **path)
+{
+  GtkTreeModel *model;
+  GtkTreeIter   iter;
+
+  if (!xfce_appfinder_window_view_get_selected (window, &model, &iter))
+    return FALSE;
+
+  *path = gtk_tree_model_get_path (model, &iter);
+
+  return (*path != NULL);
+}
+
+
+
 static void
 xfce_appfinder_window_popup_menu_toggle_bookmark (GtkWidget           *mi,
                                                   XfceAppfinderWindow *window)
@@ -1322,17 +1339,26 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
 {
   gboolean          expand;
   gboolean          is_expanded;
+  GtkTreePath      *path;
 
-  if (event->keyval == GDK_KEY_Up
-      || event->keyval == GDK_KEY_Down)
+  if (event->keyval == GDK_KEY_Tab &&
+      !gtk_widget_get_visible (window->paned) &&
+      xfce_appfinder_window_pointer_is_grabbed (entry))
+    {
+      /* don't tab to the close button */
+      return TRUE;
+    }
+
+  if (event->keyval == GDK_KEY_Up ||
+      event->keyval == GDK_KEY_Down)
     {
       expand = (event->keyval == GDK_KEY_Down);
       is_expanded = gtk_widget_get_visible (window->paned);
+
       if (is_expanded != expand)
         {
           /* don't break entry completion navigation in collapsed mode */
-          if (!is_expanded
-              && xfce_appfinder_window_pointer_is_grabbed (entry))
+          if (!is_expanded && xfce_appfinder_window_pointer_is_grabbed (entry))
             {
               /* window is still collapsed and the pointer is grabbed
                * by the popup menu, do nothing with the event */
@@ -1342,13 +1368,17 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
           xfce_appfinder_window_set_expanded (window, expand);
           return TRUE;
         }
-    }
-  else if (event->keyval == GDK_KEY_Tab
-           && !gtk_widget_get_visible (window->paned)
-           && xfce_appfinder_window_pointer_is_grabbed (entry))
-    {
-      /* don't tab to the close button */
-      return TRUE;
+
+      /* The first item is usually selected, so we should jump to 2nd one
+       * when down key is pressed */
+      if (is_expanded && expand &&
+          GTK_IS_TREE_VIEW (window->view) && /* does not make sense for icon view */
+          xfce_appfinder_window_view_get_selected_path (window, &path))
+        {
+          gtk_tree_path_next (path);
+          gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->view), path, NULL, FALSE);
+          gtk_tree_path_free (path);
+        }
     }
 
   return FALSE;
