@@ -1223,6 +1223,11 @@ xfce_appfinder_window_entry_changed_idle (gpointer data)
               /* if filter is empty, clear selection */
               selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (window->view));
               gtk_tree_selection_unselect_all (selection);
+
+              /* reset cursor */
+              path = gtk_tree_path_new_first ();
+              gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->view), path, NULL, FALSE);
+              gtk_tree_path_free (path);
             }
           else if (gtk_tree_view_get_visible_range (GTK_TREE_VIEW (window->view), &path, NULL))
             {
