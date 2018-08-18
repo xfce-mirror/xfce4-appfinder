@@ -183,9 +183,12 @@ appfinder_window_new (const gchar *startup_id,
   if (g_slist_length (windows) > 0)
     {
       channel = xfconf_channel_get ("xfce4-appfinder");
-      if (xfconf_channel_get_bool (channel, "/single-window", FALSE))
-        gtk_window_present (GTK_WINDOW (g_slist_nth_data (windows, 0)));
-      return;
+      if (xfconf_channel_get_bool (channel, "/enable-service", TRUE) &&
+          xfconf_channel_get_bool (channel, "/single-window", TRUE))
+        {
+          gtk_window_present (GTK_WINDOW (g_slist_nth_data (windows, 0)));
+          return;
+        }
     }
 
   window = g_object_new (XFCE_TYPE_APPFINDER_WINDOW,
