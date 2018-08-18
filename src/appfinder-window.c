@@ -1955,7 +1955,7 @@ xfce_appfinder_window_sort_items (GtkTreeModel *model,
   title_b = g_utf8_casefold (normalized, -1);
   g_free (normalized);
 
-  if (strcmp (casefold, "") == 0)
+  if (g_strcmp0 (casefold, "") == 0)
     result = g_strcmp0 (title_a, title_b);
   else
     {
