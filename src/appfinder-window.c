@@ -1441,6 +1441,7 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
                                                 XfceAppfinderWindow *window)
 {
   GdkEvent     ev;
+  GtkTreePath *path;
 
   if (widget == window->view)
     {
@@ -1451,8 +1452,19 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
           return TRUE;
         }
 
+      if (event->keyval == GDK_KEY_Up)
+        {
+          if (xfce_appfinder_window_view_get_selected_path (window, &path))
+            {
+              if (!gtk_tree_path_prev (path))
+                gtk_widget_grab_focus (window->entry);
+              gtk_tree_path_free (path);
+            }
+
+          return FALSE;
+        }
+
       if (event->keyval == GDK_KEY_Right ||
-          event->keyval == GDK_KEY_Up ||
           event->keyval == GDK_KEY_Down)
         {
           return FALSE;
