@@ -1414,7 +1414,8 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
     {
       if (event->keyval == GDK_KEY_Left)
         {
-          gtk_widget_grab_focus (window->sidepane);
+          if (gtk_widget_get_realized (window->sidepane))
+            gtk_widget_grab_focus (window->sidepane);
           return TRUE;
         }
     }
