@@ -2175,7 +2175,8 @@ xfce_appfinder_model_load_pixbuf (const gchar           *icon_name,
       else
         {
           icon_theme = gtk_icon_theme_get_default ();
-          pixbuf = gtk_icon_theme_load_icon (icon_theme, icon_name, size, 0, NULL);
+          pixbuf = gtk_icon_theme_load_icon (icon_theme, icon_name, size,
+                                             GTK_ICON_LOOKUP_FORCE_SIZE, NULL);
 
           if (pixbuf == NULL)
             {
@@ -2211,7 +2212,7 @@ xfce_appfinder_model_load_pixbuf (const gchar           *icon_name,
     {
       pixbuf = gtk_icon_theme_load_icon (gtk_icon_theme_get_default (),
                                          "applications-other",
-                                         size, 0, NULL);
+                                         size, GTK_ICON_LOOKUP_FORCE_SIZE, NULL);
     }
 
   if (pixbuf != NULL
