@@ -1445,6 +1445,16 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
 
   if (widget == window->view)
     {
+      if (event->keyval == GDK_KEY_Control_L ||
+          event->keyval == GDK_KEY_Control_R ||
+          event->keyval == GDK_KEY_Shift_L ||
+          event->keyval == GDK_KEY_Shift_R ||
+          event->keyval == GDK_KEY_Alt_L ||
+          event->keyval == GDK_KEY_Alt_R ||
+          event->keyval == GDK_KEY_Right ||
+          event->keyval == GDK_KEY_Down)
+          return FALSE;
+
       if (event->keyval == GDK_KEY_Left)
         {
           if (gtk_widget_get_realized (window->sidepane))
@@ -1461,12 +1471,6 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
               gtk_tree_path_free (path);
             }
 
-          return FALSE;
-        }
-
-      if (event->keyval == GDK_KEY_Right ||
-          event->keyval == GDK_KEY_Down)
-        {
           return FALSE;
         }
 
