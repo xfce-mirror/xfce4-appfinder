@@ -1,3 +1,20 @@
+4.13.1
+======
+- Improved keyboard navigation in List View
+- When expanded, launch apps with single enter press (Bug #14469)
+- Improved app sorting
+- Add single window option
+- Fix segfault when toggling bookmarks (Bug #14134)
+- Fix preferences button height
+- Translation updates: Amharic, Arabic, Asturian, Basque, Belarusian, Bulgarian,
+  Catalan, Chinese (China), Chinese (Hong Kong SAR China), Chinese (Taiwan),
+  Croatian, Czech, Danish, Dutch, English (Australia), English (United Kingdom),
+  Estonian, Finnish, French, Galician, German, Greek, Hebrew, Hungarian,
+  Icelandic, Indonesian, Italian, Japanese, Kazakh, Korean, Lithuanian, Malay,
+  Norwegian Bokmål, Norwegian Nynorsk, Occitan, Polish, Portuguese,
+  Portuguese (Brazil), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish,
+  Swedish, Telugu, Thai, Turkish, Ukrainian, Uyghur, Vietnamese
+
 4.13.0
 ======
 - Port to GTK+3.
