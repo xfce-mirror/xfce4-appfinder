@@ -20,6 +20,7 @@ data/xfce4-appfinder.appdata.xml
 data/xfce4-appfinder.desktop
 data/xfce4-run.desktop
 depcomp
+ChangeLog
 INSTALL
 install-sh
 ltmain.sh
@@ -41,3 +42,5 @@ src/xfce4-appfinder
 
 *.gmo
 *.o
+*.tar.bz2
+*.tar.gz
