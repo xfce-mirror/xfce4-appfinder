@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Pau Rul·lan Ferragut <paurullan@bulma.net>, 2005-2006
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-02 23:08+0200\n"
-"PO-Revision-Date: 2017-09-19 18:02+0000\n"
-"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"PO-Revision-Date: 2018-08-24 07:44+0000\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce4-appfinder/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,20 +57,20 @@ msgstr "_Neteja"
 
 #: ../src/appfinder-preferences.c:222
 msgid "This will permanently clear the custom command history."
-msgstr "Això netejarà l'historia d'ordres personal de forma permanent."
+msgstr "Això netejarà permanent l'historial d'ordres personalitzades."
 
 #: ../src/appfinder-preferences.c:223
 msgid "Are you sure you want to clear the command history?"
-msgstr "Voleu netejar l'historial d'ordres?"
+msgstr "Esteu segur que voleu netejar l'historial d'ordres?"
 
 #: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
-msgstr "L'acció personalitzada s'esborrarà de forma permanent."
+msgstr "L'acció personalitzada se suprimirà permanent."
 
 #: ../src/appfinder-preferences.c:334
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "Voleu esborrar el patró «%s»?"
+msgstr "Esteu segur que voleu suprimir el patró «%s»?"
 
 #: ../src/appfinder-window.c:220 ../src/main.c:446
 #: ../src/appfinder-preferences.glade.h:10
@@ -79,7 +80,7 @@ msgstr "Cercador d'aplicacions"
 
 #: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
-msgstr "Canvia el mode de vista"
+msgstr "Canvia el mode de visualització"
 
 #: ../src/appfinder-window.c:364
 msgid "La_unch"
@@ -87,18 +88,18 @@ msgstr "Exec_uta"
 
 #: ../src/appfinder-window.c:805
 msgid "Failed to launch desktop item editor"
-msgstr "No s'ha pogut executar l'editor d'elements de l'escriptori"
+msgstr "No s'ha pogut llançar l'editor d'ítems de l'escriptori"
 
 #: ../src/appfinder-window.c:831
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Això esborrarà permanentment el fitxer d'escriptori personalitzar del vostre directori personal."
+msgstr "Això suprimirà permanentment el fitxer d'escriptori personalitzat del vostre directori d'usuari."
 
 #: ../src/appfinder-window.c:832
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Voleu revertir «%s»?"
+msgstr "Esteu segur que voleu revertir «%s»?"
 
 #: ../src/appfinder-window.c:842
 msgid "Failed to remove desktop file"
@@ -111,7 +112,7 @@ msgstr "No s'ha pogut treure el fitxer d'escriptori"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Per amagar l'element heu d'esborrar manualment el fitxer d'escriptori de «%s» o obrir el fitxer en el mateix directori i esborrar la línia «%s»."
+msgstr "Per mostrar l'ítem heu de suprimir manualment el fitxer d'escriptori de «%s» o obrir el fitxer al mateix directori i suprimir la línia «%s»."
 
 #: ../src/appfinder-window.c:880 ../src/appfinder-window.c:972
 msgid "_Hide"
@@ -120,7 +121,7 @@ msgstr "_Amaga"
 #: ../src/appfinder-window.c:881
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Voleu amagar «%s»?"
+msgstr "Esteu segur que voleu ocultar «%s»?"
 
 #: ../src/main.c:75
 msgid "Start in collapsed mode"
@@ -154,7 +155,7 @@ msgstr "No s'ha pogut transformar el procés en un dimoni"
 #: ../src/main.c:524
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Feu «%s --help» per veure l'ús."
+msgstr "Teclegeu «%s --help» per veure l'ús."
 
 #: ../src/main.c:535
 msgid "The Xfce development team. All rights reserved."
@@ -207,15 +208,15 @@ msgstr "Recorda la darrera categoria _seleccionada"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
-msgstr "Sempre _centra la finestra"
+msgstr "_Centra sempre la finestra"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
-msgstr "Centra la finestra al iniciar."
+msgstr "Centra la finestra amb la inicialització."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr "Mantingues _instance executant-se en segon pla"
+msgstr "Mantén una _instància en execució al rerefons"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
@@ -230,19 +231,19 @@ msgstr "Comportament"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid "_View items as icons"
-msgstr "_Mostra els elements com icones"
+msgstr "_Mostra els ítem com icones"
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Text besi_de icons"
-msgstr "Text _sota les icones"
+msgstr "Text a _sota de les icones"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "Ite_m icon size:"
-msgstr "Mida dels _elements d'icones:"
+msgstr "Mida de les icones dels íte_ms:"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Categ_ory icon size:"
-msgstr "Mida de la icona de categ_ories:"
+msgstr "Mida de les icones de les categ_ories:"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Appearance"
@@ -270,7 +271,7 @@ msgstr "Afegeix una nova acció personalitzada."
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Remove the currently selected action."
-msgstr "Treu l'acció seleccionada."
+msgstr "Suprimeix l'acció seleccionada actualment."
 
 #: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
@@ -278,7 +279,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Si el tipus és prefix, %s serà substituït amb el text del patró, %S amb el text sencer. Per expressions regulars podeu emprar \\0 and \\<num>."
+msgstr "Si el tipus està establert a prefix, %s se substituirà amb el text després del patró, %S amb el text sencer. Per a les expressions regulars podeu utilitzar \\0 i \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Co_mmand:"
