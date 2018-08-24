@@ -11,4 +11,4 @@ src/appfinder-preferences.glade
 
 data/xfce4-appfinder.desktop.in
 data/xfce4-run.desktop.in
-data/xfce4-appfinder.appdata.xml.in
+data/org.xfce.xfce4-appfinder.appdata.xml.in
