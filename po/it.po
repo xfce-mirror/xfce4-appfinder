@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-01 06:30+0100\n"
-"PO-Revision-Date: 2018-08-12 17:18+0000\n"
+"POT-Creation-Date: 2018-08-24 06:30+0200\n"
+"PO-Revision-Date: 2018-08-24 14:17+0000\n"
 "Last-Translator: Emanuele Petriglia <inbox@emanuelepetriglia.me>\n"
 "Language-Team: Italian (http://www.transifex.com/xfce/xfce4-appfinder/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Forced to quit"
 msgstr "Chiusura forzata"
 
-#: ../src/appfinder-category-model.c:146
+#: ../src/appfinder-category-model.c:147
 msgid "All Applications"
 msgstr "Tutte le applicazioni"
 
@@ -54,11 +54,11 @@ msgstr "Nome del file"
 msgid "Application has no command"
 msgstr "L'applicazione non ha un comando"
 
-#: ../src/appfinder-model.c:2516
+#: ../src/appfinder-model.c:2517
 msgid "Commands History"
 msgstr "Cronologia dei comandi"
 
-#: ../src/appfinder-model.c:2540
+#: ../src/appfinder-model.c:2541
 msgid "Bookmarks"
 msgstr "Segnalibri"
 
@@ -83,77 +83,78 @@ msgstr "L'azione personalizzata verrà rimossa definitivamente."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Eliminare davvero lo schema \"%s\"?"
 
-#: ../src/appfinder-window.c:227 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:228 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Trova applicazioni"
 
-#: ../src/appfinder-window.c:275
+#: ../src/appfinder-window.c:276
 msgid "Toggle view mode"
 msgstr "Cambia stile di visualizzazione"
 
-#: ../src/appfinder-window.c:351
+#: ../src/appfinder-window.c:352
 msgid "_Preferences"
 msgstr "_Preferenze"
 
-#: ../src/appfinder-window.c:368
+#: ../src/appfinder-window.c:369
 msgid "Close"
 msgstr "Chiudi"
 
-#: ../src/appfinder-window.c:378 ../src/appfinder-window.c:1052
+#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1072
 msgid "La_unch"
 msgstr "A_vvia"
 
-#: ../src/appfinder-window.c:866
+#: ../src/appfinder-window.c:886
 msgid "Failed to launch desktop item editor"
 msgstr "Impossibile avviare l'editor degli elementi della scrivania"
 
-#: ../src/appfinder-window.c:892
+#: ../src/appfinder-window.c:912
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Il file desktop personalizzato nella cartella Casa verrà rimosso in modo permanente."
 
-#: ../src/appfinder-window.c:893
+#: ../src/appfinder-window.c:913
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Ripristinare veramente \"%s\"?"
 
-#: ../src/appfinder-window.c:903
+#: ../src/appfinder-window.c:923
 msgid "Failed to remove desktop file"
 msgstr "Impossibile rimuovere il file desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:936
+#: ../src/appfinder-window.c:956
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Per far ricomparire l'elemento è necessario rimuovere manualmente il file desktop da \"%s\" o aprire il file nella stessa cartella e rimuovere la riga \"%s\"."
 
-#: ../src/appfinder-window.c:941 ../src/appfinder-window.c:1089
+#: ../src/appfinder-window.c:961 ../src/appfinder-window.c:1109
 msgid "_Hide"
 msgstr "_Nascondi"
 
-#: ../src/appfinder-window.c:942
+#: ../src/appfinder-window.c:962
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Nascondere davvero \"%s\"?"
 
-#: ../src/appfinder-window.c:1036
+#: ../src/appfinder-window.c:1056
 msgid "Remove From Bookmarks"
 msgstr "Rimuovi dai segnalibri"
 
-#: ../src/appfinder-window.c:1036
+#: ../src/appfinder-window.c:1056
 msgid "Add to Bookmarks"
 msgstr "Aggiungi ai segnalibri"
 
-#: ../src/appfinder-window.c:1065
+#: ../src/appfinder-window.c:1085
 msgid "_Edit"
 msgstr "_Modifica"
 
-#: ../src/appfinder-window.c:1082
+#: ../src/appfinder-window.c:1102
 msgid "_Revert"
 msgstr "_Ripristina"
 
@@ -177,16 +178,16 @@ msgstr "Esce da tutte le istanze"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Non usa o diventa un servizio D-Bus"
 
-#: ../src/main.c:232
+#: ../src/main.c:235
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Digitare \"%s --help\" per informazioni sull'uso."
 
-#: ../src/main.c:243
+#: ../src/main.c:246
 msgid "The Xfce development team. All rights reserved."
 msgstr "Il team di sviluppo di Xfce. Tutti i diritti riservati."
 
-#: ../src/main.c:244
+#: ../src/main.c:247
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Segnalare i problemi a <%s>."
@@ -348,7 +349,11 @@ msgstr "Esegui programma…"
 msgid "Run a program"
 msgstr "Esegue un programma"
 
-#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
+msgid "Application to quickly run applications and commands"
+msgstr "Applicazione per eseguire velocemente applicazioni e comandi"
+
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
 "The application finder is a tool to find and launch installed applications "
 "on your system and quickly execute commands. It can also be used to quickly "
