@@ -5,14 +5,14 @@
 # Translators:
 # Davidmp <medipas@gmail.com>, 2015
 # Pau Rul·lan Ferragut <paurullan@bulma.net>, 2005-2006
-# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2017
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2017-2018
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-01 06:30+0100\n"
-"PO-Revision-Date: 2017-12-28 14:54+0000\n"
+"POT-Creation-Date: 2018-08-24 06:30+0200\n"
+"PO-Revision-Date: 2018-08-25 15:36+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce4-appfinder/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Forced to quit"
 msgstr "S'ha forçat la sortida"
 
-#: ../src/appfinder-category-model.c:146
+#: ../src/appfinder-category-model.c:147
 msgid "All Applications"
 msgstr "Totes les aplicacions"
 
@@ -54,11 +54,11 @@ msgstr "Nom de fitxer"
 msgid "Application has no command"
 msgstr "L'aplicació no té cap ordre"
 
-#: ../src/appfinder-model.c:2516
+#: ../src/appfinder-model.c:2517
 msgid "Commands History"
 msgstr "Historial d'ordres"
 
-#: ../src/appfinder-model.c:2540
+#: ../src/appfinder-model.c:2541
 msgid "Bookmarks"
 msgstr "Marcadors"
 
@@ -72,7 +72,7 @@ msgstr "Això netejarà permanent l'historial d'ordres personalitzades."
 
 #: ../src/appfinder-preferences.c:240
 msgid "Are you sure you want to clear the command history?"
-msgstr "Esteu segur que voleu netejar l'històric d'ordres?"
+msgstr "Esteu segur que voleu netejar l'historial d'ordres?"
 
 #: ../src/appfinder-preferences.c:350
 msgid "The custom action will be deleted permanently."
@@ -81,79 +81,80 @@ msgstr "L'acció personalitzada se suprimirà permanent."
 #: ../src/appfinder-preferences.c:351
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "Voleu suprimir el patró «%s»?"
+msgstr "Esteu segur que voleu suprimir el patró «%s»?"
 
-#: ../src/appfinder-window.c:227 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:228 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
-msgstr "Descobridor d'aplicacions"
+msgstr "Cercador d'aplicacions"
 
-#: ../src/appfinder-window.c:275
+#: ../src/appfinder-window.c:276
 msgid "Toggle view mode"
 msgstr "Canvia el mode de visualització"
 
-#: ../src/appfinder-window.c:351
+#: ../src/appfinder-window.c:352
 msgid "_Preferences"
 msgstr "_Preferències"
 
-#: ../src/appfinder-window.c:368
+#: ../src/appfinder-window.c:369
 msgid "Close"
 msgstr "Tanca"
 
-#: ../src/appfinder-window.c:378 ../src/appfinder-window.c:1052
+#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1072
 msgid "La_unch"
 msgstr "Ll_ança"
 
-#: ../src/appfinder-window.c:866
+#: ../src/appfinder-window.c:886
 msgid "Failed to launch desktop item editor"
 msgstr "No s'ha pogut llançar l'editor d'ítems de l'escriptori"
 
-#: ../src/appfinder-window.c:892
+#: ../src/appfinder-window.c:912
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Això suprimirà permanentment el fitxer d'escriptori personalitzat del vostre directori d'usuari."
 
-#: ../src/appfinder-window.c:893
+#: ../src/appfinder-window.c:913
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Esteu segur que voleu revertir «%s»?"
 
-#: ../src/appfinder-window.c:903
+#: ../src/appfinder-window.c:923
 msgid "Failed to remove desktop file"
 msgstr "No s'ha pogut suprimir el fitxer d'escriptori"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:936
+#: ../src/appfinder-window.c:956
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Per mostrar l'ítem heu de suprimir manualment el fitxer d'escriptori de «%s» o obrir el fitxer al mateix directori i suprimir la línia «%s»."
 
-#: ../src/appfinder-window.c:941 ../src/appfinder-window.c:1089
+#: ../src/appfinder-window.c:961 ../src/appfinder-window.c:1109
 msgid "_Hide"
 msgstr "_Oculta"
 
-#: ../src/appfinder-window.c:942
+#: ../src/appfinder-window.c:962
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Esteu segur que voleu ocultar «%s»?"
 
-#: ../src/appfinder-window.c:1036
+#: ../src/appfinder-window.c:1056
 msgid "Remove From Bookmarks"
-msgstr "Suprimeix de les adreces d'interès"
+msgstr "Suprimeix dels marcadors"
 
-#: ../src/appfinder-window.c:1036
+#: ../src/appfinder-window.c:1056
 msgid "Add to Bookmarks"
-msgstr "Afegeix a les adreces d'interès"
+msgstr "Afegeix als marcadors"
 
-#: ../src/appfinder-window.c:1065
+#: ../src/appfinder-window.c:1085
 msgid "_Edit"
 msgstr "_Edita"
 
-#: ../src/appfinder-window.c:1082
+#: ../src/appfinder-window.c:1102
 msgid "_Revert"
 msgstr "_Reverteix"
 
@@ -163,7 +164,7 @@ msgstr "Inicia en mode reduït"
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
-msgstr "Mostra informació sobre la versió i surt"
+msgstr "Imprimeix la informació de la versió i surt"
 
 #: ../src/main.c:66
 msgid "Replace the existing service"
@@ -177,16 +178,16 @@ msgstr "Surt de totes les instàncies"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "No intentis utilitzar o transformar-te en un servei D-Bus"
 
-#: ../src/main.c:232
+#: ../src/main.c:235
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Teclegeu «%s --help» per veure l'ús."
 
-#: ../src/main.c:243
+#: ../src/main.c:246
 msgid "The Xfce development team. All rights reserved."
 msgstr "L'equip de desenvolupament de Xfce. Tots els drets reservats."
 
-#: ../src/main.c:244
+#: ../src/main.c:247
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Envieu els errors a <%s>."
@@ -266,15 +267,15 @@ msgstr "Comportament"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_View items as icons"
-msgstr "_Mostra els ítem com icones"
+msgstr "_Mostra els ítems com icones"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Text besi_de icons"
-msgstr "Text _sota les icones"
+msgstr "Text a _sota de les icones"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Ite_m icon size:"
-msgstr "Mida de les icones dels _elements:"
+msgstr "Mida de les icones dels íte_ms:"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Categ_ory icon size:"
@@ -348,10 +349,14 @@ msgstr "Executa el programa..."
 msgid "Run a program"
 msgstr "Executeu un programa"
 
-#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
+msgid "Application to quickly run applications and commands"
+msgstr "Aplicació per executar ràpidament aplicacions i ordres"
+
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
 "The application finder is a tool to find and launch installed applications "
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr "El descobridor d'aplicacions és una eina per trobar i llançar les aplicacions instal·lades al vostre sistema i per a l'execució ràpida d'ordres. També es pot utilitzar per afegir ràpidament llançadors al plafó de Xfce arrossegant un ítem des de la visualització i en deixar caure'l al plafó."
+msgstr "El cercador d'aplicacions és una eina per trobar i llançar les aplicacions instal·lades al vostre sistema i per a l'execució ràpida d'ordres. També es pot utilitzar per afegir ràpidament llançadors al plafó de Xfce en arrossegar i deixar anar un ítem des de la vista fins al plafó."
