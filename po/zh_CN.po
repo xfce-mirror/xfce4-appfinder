@@ -10,13 +10,13 @@
 # Jick Nan <jick.nan@gmail.com>, 2006
 # 玉堂白鹤 <yjwork@qq.com>, 2013-2014
 # Yongtao Yang <yongtao.yang@telia.com>, 2004
-# 玉堂白鹤 <yjwork@qq.com>, 2015,2017
+# 玉堂白鹤 <yjwork@qq.com>, 2015,2017-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-01 06:30+0100\n"
-"PO-Revision-Date: 2017-12-18 06:07+0000\n"
+"POT-Creation-Date: 2018-08-24 06:30+0200\n"
+"PO-Revision-Date: 2018-08-28 01:14+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/xfce/xfce4-appfinder/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr ""
 msgid "Forced to quit"
 msgstr "强制退出"
 
-#: ../src/appfinder-category-model.c:146
+#: ../src/appfinder-category-model.c:147
 msgid "All Applications"
 msgstr "所有应用程序"
 
@@ -58,11 +58,11 @@ msgstr "文件名"
 msgid "Application has no command"
 msgstr "应用程序没有命令"
 
-#: ../src/appfinder-model.c:2516
+#: ../src/appfinder-model.c:2517
 msgid "Commands History"
 msgstr "命令历史"
 
-#: ../src/appfinder-model.c:2540
+#: ../src/appfinder-model.c:2541
 msgid "Bookmarks"
 msgstr "书签"
 
@@ -87,77 +87,78 @@ msgstr "将永远删除自定义的动作。"
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "您确定要删除类型 “%s” 吗？"
 
-#: ../src/appfinder-window.c:227 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:228 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "应用程序查找器"
 
-#: ../src/appfinder-window.c:275
+#: ../src/appfinder-window.c:276
 msgid "Toggle view mode"
 msgstr "切换视图模式"
 
-#: ../src/appfinder-window.c:351
+#: ../src/appfinder-window.c:352
 msgid "_Preferences"
 msgstr "首选项(_P)"
 
-#: ../src/appfinder-window.c:368
+#: ../src/appfinder-window.c:369
 msgid "Close"
 msgstr "关闭"
 
-#: ../src/appfinder-window.c:378 ../src/appfinder-window.c:1052
+#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1072
 msgid "La_unch"
 msgstr "启动(_U)"
 
-#: ../src/appfinder-window.c:866
+#: ../src/appfinder-window.c:886
 msgid "Failed to launch desktop item editor"
 msgstr "无法启动桌面项目编辑器"
 
-#: ../src/appfinder-window.c:892
+#: ../src/appfinder-window.c:912
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "这会从您的主文件夹中永远移除自定义的桌面文件。"
 
-#: ../src/appfinder-window.c:893
+#: ../src/appfinder-window.c:913
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "您确定要恢复 “%s” 吗？"
 
-#: ../src/appfinder-window.c:903
+#: ../src/appfinder-window.c:923
 msgid "Failed to remove desktop file"
 msgstr "无法移除桌面文件"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:936
+#: ../src/appfinder-window.c:956
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "要隐藏此项目，您只得从 “%s” 手动移除桌面文件、或在相同的目录中打开此文件并移除行 “%s”。"
 
-#: ../src/appfinder-window.c:941 ../src/appfinder-window.c:1089
+#: ../src/appfinder-window.c:961 ../src/appfinder-window.c:1109
 msgid "_Hide"
 msgstr "隐藏(_H)"
 
-#: ../src/appfinder-window.c:942
+#: ../src/appfinder-window.c:962
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "您确定要隐藏 “%s” 吗？"
 
-#: ../src/appfinder-window.c:1036
+#: ../src/appfinder-window.c:1056
 msgid "Remove From Bookmarks"
 msgstr "从书签中移除"
 
-#: ../src/appfinder-window.c:1036
+#: ../src/appfinder-window.c:1056
 msgid "Add to Bookmarks"
 msgstr "添加至书签"
 
-#: ../src/appfinder-window.c:1065
+#: ../src/appfinder-window.c:1085
 msgid "_Edit"
 msgstr "编辑(_E)"
 
-#: ../src/appfinder-window.c:1082
+#: ../src/appfinder-window.c:1102
 msgid "_Revert"
 msgstr "重置(_R)"
 
@@ -181,16 +182,16 @@ msgstr "退出所有实例"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "不试图使用或成为 D-Bus 服务"
 
-#: ../src/main.c:232
+#: ../src/main.c:235
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "输入 “%s --help” 获取用法。"
 
-#: ../src/main.c:243
+#: ../src/main.c:246
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce 开发团队。保留所有权利。"
 
-#: ../src/main.c:244
+#: ../src/main.c:247
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "请向 <%s> 报告缺陷。"
@@ -352,7 +353,11 @@ msgstr "运行程序..."
 msgid "Run a program"
 msgstr "运行程序"
 
-#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
+msgid "Application to quickly run applications and commands"
+msgstr "快速运行应用程序和命令的应用程序"
+
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
 "The application finder is a tool to find and launch installed applications "
 "on your system and quickly execute commands. It can also be used to quickly "
