@@ -1486,6 +1486,10 @@ xfce_appfinder_model_collect_item (const gchar    *desktop_id,
   item = g_hash_table_lookup (context->desktop_ids, desktop_id);
   if (G_LIKELY (item == NULL))
     {
+      /* ignore menu items without name */
+      if (garcon_menu_item_get_name (menu_item) == NULL)
+        return;
+
       item = xfce_appfinder_model_item_new (menu_item);
 
       item->categories = g_ptr_array_new_with_free_func (g_object_unref);
