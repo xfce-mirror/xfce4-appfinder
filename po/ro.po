@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 06:30+0200\n"
-"PO-Revision-Date: 2017-09-19 18:02+0000\n"
+"POT-Creation-Date: 2018-08-24 06:30+0200\n"
+"PO-Revision-Date: 2018-09-14 00:17+0000\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Romanian (http://www.transifex.com/xfce/xfce4-appfinder/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Forced to quit"
 msgstr "Ieșire forțată"
 
-#: ../src/appfinder-category-model.c:146
+#: ../src/appfinder-category-model.c:147
 msgid "All Applications"
 msgstr "Toate programele"
 
@@ -51,106 +51,107 @@ msgstr "Nume de fișier"
 msgid "Application has no command"
 msgstr "Programul nu are o comandă asociată"
 
-#: ../src/appfinder-model.c:2516
+#: ../src/appfinder-model.c:2517
 msgid "Commands History"
 msgstr "Istoricul comenzilor"
 
-#: ../src/appfinder-model.c:2540
+#: ../src/appfinder-model.c:2541
 msgid "Bookmarks"
 msgstr "Programe favorite"
 
-#: ../src/appfinder-preferences.c:219
+#: ../src/appfinder-preferences.c:238
 msgid "C_lear"
 msgstr "C_urăță"
 
-#: ../src/appfinder-preferences.c:220
+#: ../src/appfinder-preferences.c:239
 msgid "This will permanently clear the custom command history."
 msgstr "Această comandă va curăța istoricul comenzilor personalizate."
 
-#: ../src/appfinder-preferences.c:221
+#: ../src/appfinder-preferences.c:240
 msgid "Are you sure you want to clear the command history?"
 msgstr "Sigur doriți să curățați istoricul comenzilor?"
 
-#: ../src/appfinder-preferences.c:331
+#: ../src/appfinder-preferences.c:350
 msgid "The custom action will be deleted permanently."
 msgstr "Acțiunea personalizată va fi ștearsă pentru totdeauna."
 
-#: ../src/appfinder-preferences.c:332
+#: ../src/appfinder-preferences.c:351
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Sigur doriți să ștergeți modelul „%s”?"
 
-#: ../src/appfinder-window.c:220 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:228 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Pornire de programe"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:276
 msgid "Toggle view mode"
 msgstr "Comutați modul de afișare"
 
-#: ../src/appfinder-window.c:344
+#: ../src/appfinder-window.c:352
 msgid "_Preferences"
 msgstr ""
 
-#: ../src/appfinder-window.c:360
+#: ../src/appfinder-window.c:369
 msgid "Close"
-msgstr ""
+msgstr "Închide"
 
-#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1040
+#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1072
 msgid "La_unch"
 msgstr "Po_rnește"
 
-#: ../src/appfinder-window.c:854
+#: ../src/appfinder-window.c:886
 msgid "Failed to launch desktop item editor"
 msgstr "Nu s-a putut deschide editorul elementului de pe desktop"
 
-#: ../src/appfinder-window.c:880
+#: ../src/appfinder-window.c:912
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Această comandă va șterge pentru totdeauna fișierul desktop personalizat din directorul „Acasă”."
 
-#: ../src/appfinder-window.c:881
+#: ../src/appfinder-window.c:913
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Sigur doriți să reveniți în privința „%s”?"
 
-#: ../src/appfinder-window.c:891
+#: ../src/appfinder-window.c:923
 msgid "Failed to remove desktop file"
 msgstr "Nu s-a putut șterge fișierul desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:924
+#: ../src/appfinder-window.c:956
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Pentru a afișa acest element va trebui să ștergeți manual fișierul desktop din „%s” sau să deschideți fișierul din acest director și să eliminați linia „%s”."
 
-#: ../src/appfinder-window.c:929 ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:961 ../src/appfinder-window.c:1109
 msgid "_Hide"
 msgstr "Asc_unde"
 
-#: ../src/appfinder-window.c:930
+#: ../src/appfinder-window.c:962
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Sigur doriți să ascundeți elementul „%s”?"
 
-#: ../src/appfinder-window.c:1024
+#: ../src/appfinder-window.c:1056
 msgid "Remove From Bookmarks"
 msgstr "Elimină dintre favorite"
 
-#: ../src/appfinder-window.c:1024
+#: ../src/appfinder-window.c:1056
 msgid "Add to Bookmarks"
 msgstr "Adaugă la favorite"
 
-#: ../src/appfinder-window.c:1053
+#: ../src/appfinder-window.c:1085
 msgid "_Edit"
-msgstr ""
+msgstr "_Editare"
 
-#: ../src/appfinder-window.c:1070
+#: ../src/appfinder-window.c:1102
 msgid "_Revert"
 msgstr ""
 
@@ -174,16 +175,16 @@ msgstr "Închide toate instanțele"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Nu încerca să utilizezi ori să devii un serviciu D-Bus"
 
-#: ../src/main.c:223
+#: ../src/main.c:235
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Utilizați „%s --help” pentru detalii de utilizare."
 
-#: ../src/main.c:234
+#: ../src/main.c:246
 msgid "The Xfce development team. All rights reserved."
 msgstr "Echipa de dezvoltare Xfce. Toate drepturile sunt rezervate."
 
-#: ../src/main.c:235
+#: ../src/main.c:247
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Raportați problemele la <%s>."
@@ -248,54 +249,64 @@ msgid ""
 msgstr "În loc ca programul să se termine când ultima fereastră este închisă, se va păstra o instanță pornită pentru a deschide mai rapid noi ferestre. Puteți dezactiva acest comportament pentru a reduce consumul de memorie."
 
 #: ../src/appfinder-preferences.glade.h:16
+msgid "Single window"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid ""
+"When an instance is running in the background, only open one window at a "
+"time."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:18
 msgid "Behaviour"
 msgstr "Comportament"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: ../src/appfinder-preferences.glade.h:19
 msgid "_View items as icons"
 msgstr "Arată elementele ca _iconițe"
 
-#: ../src/appfinder-preferences.glade.h:18
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Text besi_de icons"
 msgstr "Te_xt lângă iconițe"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:21
 msgid "Ite_m icon size:"
 msgstr "_Mărimea iconițelor elementelor:"
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Categ_ory icon size:"
 msgstr "Mă_rimea iconițelor categoriilor:"
 
-#: ../src/appfinder-preferences.glade.h:21
+#: ../src/appfinder-preferences.glade.h:23
 msgid "Appearance"
 msgstr "Aspect"
 
-#: ../src/appfinder-preferences.glade.h:22
+#: ../src/appfinder-preferences.glade.h:24
 msgid "C_lear Custom Command History"
 msgstr "C_urăță istoricul comenzilor personalizate"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "History"
 msgstr "Istoric"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "_General"
 msgstr "_Generale"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Pattern"
 msgstr "Model"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "Add a new custom action."
 msgstr "Adăugați o nouă acțiune personalizată."
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Remove the currently selected action."
 msgstr "Eliminați acțiunea selectată curent."
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -303,23 +314,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Dacă tipul este precizat ca fiind prefix, %s va fi înlocuit cu un șir după modelul ales, iar %S cu intrarea completă de text. Pentru expresii regulate puteți utiliza \\0 și \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "Co_mmand:"
 msgstr "C_omandă:"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Patte_rn:"
 msgstr "Mo_del:"
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "_Type:"
 msgstr "_Tip:"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "_Save match in command history"
 msgstr "Sal_vează potrivirea în istoricul comenzilor"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Custom _Actions"
 msgstr "Acțiuni p_ersonalizate"
 
@@ -335,10 +346,14 @@ msgstr "Pornire de programe…"
 msgid "Run a program"
 msgstr "Pornește un program"
 
-#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
+msgid "Application to quickly run applications and commands"
+msgstr ""
+
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
 "The application finder is a tool to find and launch installed applications "
-"on your system and the quickly execute commands. It can also be used to "
-"quickly add launchers to the Xfce Panel by dragging an item from the view "
-"and drop it on the panel."
+"on your system and quickly execute commands. It can also be used to quickly "
+"add launchers to the Xfce Panel by dragging an item from the view and drop "
+"it on the panel."
 msgstr ""
