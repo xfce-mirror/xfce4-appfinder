@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-24 06:30+0200\n"
-"PO-Revision-Date: 2018-08-25 14:15+0000\n"
+"PO-Revision-Date: 2018-09-14 00:17+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic (http://www.transifex.com/xfce/xfce4-appfinder/language/am/)\n"
 "MIME-Version: 1.0\n"
@@ -183,7 +183,7 @@ msgstr "አይነት \"%s --እርዳታ\" ለ መጠቀም."
 
 #: ../src/main.c:246
 msgid "The Xfce development team. All rights reserved."
-msgstr ""
+msgstr "The Xfce development team. All rights reserved."
 
 #: ../src/main.c:247
 #, c-format
