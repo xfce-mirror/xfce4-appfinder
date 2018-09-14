@@ -1,161 +1,279 @@
-# Translation of Vietnamese.
-# Copyright (C) 2011 Vietnamese team
-# This file is distributed under the same license as the xfce4-appfinder package.
-# Vinh Nguyen <kureikain@gmail.com>, 2011.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Duy Truong Nguyen <truongap.ars@gmail.com>, 2014
+# Vinh Nguyen <kureikain@gmail.com>, 2011
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-appfinder\n"
+"Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-21 20:43+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Vinh Nguyen <kureikain@gmail.com>\n"
-"Language-Team: Vietnamese <kureikain@gmail.com>\n"
-"Language: vi\n"
+"POT-Creation-Date: 2013-07-02 23:08+0200\n"
+"PO-Revision-Date: 2018-09-14 00:16+0000\n"
+"Last-Translator: Duy Truong Nguyen <truongap.ars@gmail.com>\n"
+"Language-Team: Vietnamese (http://www.transifex.com/xfce/xfce4-appfinder/language/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../src/appfinder-category-model.c:108
+#: ../src/appfinder-category-model.c:146
 msgid "All Applications"
 msgstr "Tất cả ứng dụng"
 
-#: ../src/appfinder-model.c:422
+#: ../src/appfinder-model.c:549
 msgid "Name"
 msgstr "Tên"
 
-#: ../src/appfinder-model.c:423
+#: ../src/appfinder-model.c:550
+msgid "Comment"
+msgstr "Bình luận"
+
+#: ../src/appfinder-model.c:551
 msgid "Command"
 msgstr "Lệnh"
 
-#: ../src/appfinder-model.c:424
+#: ../src/appfinder-model.c:552
 msgid "Categories"
 msgstr "Danh mục"
 
-#: ../src/appfinder-model.c:425
+#: ../src/appfinder-model.c:553
 msgid "Filename"
 msgstr "Tên tâpj tin"
 
-#: ../src/appfinder-model.c:1317
+#: ../src/appfinder-model.c:1833
 msgid "Application has no command"
 msgstr "Không có lệnh"
 
-#: ../src/appfinder-model.c:1634
+#: ../src/appfinder-model.c:2157
 msgid "Commands History"
 msgstr "Lịch sử lệnh"
 
-#: ../src/appfinder-preferences.c:175
+#: ../src/appfinder-preferences.c:221
 msgid "C_lear"
-msgstr ""
+msgstr "_Xóa"
 
-#: ../src/appfinder-preferences.c:176
+#: ../src/appfinder-preferences.c:222
 msgid "This will permanently clear the custom command history."
-msgstr ""
+msgstr "Điều này sẽ xóa bỏ vĩnh viễn lịch sử tùy chọn lệnh."
 
-#: ../src/appfinder-preferences.c:177
+#: ../src/appfinder-preferences.c:223
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "Bạn có chắc là muốn xóa lịch sử lệnh tùy chọn?"
 
-#: ../src/appfinder-preferences.c:287
+#: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "Tùy chọn hành động sẽ bị xóa vĩnh viễn."
 
-#: ../src/appfinder-preferences.c:288
+#: ../src/appfinder-preferences.c:334
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgstr "Bạn có chắc là muốn xóa mẫu \"%s\"?"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
-#: ../src/appfinder-preferences.glade.h:3
+#: ../src/appfinder-window.c:220 ../src/main.c:446
+#: ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 msgid "Application Finder"
 msgstr "Application Finder"
 
-#: ../src/appfinder-window.c:224
+#: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
 msgstr "Bật chế độ xem"
 
-#: ../src/main.c:70
-#, fuzzy
+#: ../src/appfinder-window.c:364
+msgid "La_unch"
+msgstr "_Chạy"
+
+#: ../src/appfinder-window.c:805
+msgid "Failed to launch desktop item editor"
+msgstr "Thất bại khi chạy trình chỉnh sửa mục trên màn hình nền"
+
+#: ../src/appfinder-window.c:831
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr "Điều này sẽ gỡ bỏ vĩnh viễn tệp tin tùy chọn màn hình nền từ thư mục cá nhân của bạn"
+
+#: ../src/appfinder-window.c:832
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr ""
+
+#: ../src/appfinder-window.c:842
+msgid "Failed to remove desktop file"
+msgstr "Thất bại khi gỡ bỏ tệp tin màn hình nền"
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: ../src/appfinder-window.c:875
+#, c-format
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr ""
+
+#: ../src/appfinder-window.c:880 ../src/appfinder-window.c:972
+msgid "_Hide"
+msgstr "Ẩ_n"
+
+#: ../src/appfinder-window.c:881
+#, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr "Bạn có chắc là muốn ẩn \"%s\"?"
+
+#: ../src/main.c:75
 msgid "Start in collapsed mode"
 msgstr "Khởi động ở chế độ mở rộng"
 
-#: ../src/main.c:71
+#: ../src/main.c:76
 msgid "Print version information and exit"
 msgstr "In thông tin phiên bản rồi thoát"
 
-#: ../src/main.c:72
+#: ../src/main.c:77
 msgid "Replace the existing service"
 msgstr "Thay thế dịch vụ hiện hành"
 
-#: ../src/main.c:73
+#: ../src/main.c:78
 msgid "Quit all instances"
 msgstr "Thoát tất cả các thể hiện"
 
-#: ../src/main.c:74
+#: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Đừng thử để sử dụng hay chuyển thành một dịch vụ D-Bus"
 
 #. close all windows and quit
-#: ../src/main.c:159
+#: ../src/main.c:244
 msgid "Forced to quit"
 msgstr "Bắt buộc thoát"
 
-#: ../src/main.c:346
+#: ../src/main.c:448
 msgid "Unable to daemonize the process"
 msgstr "Không thể damon hóa tiến trình"
 
-#: ../src/main.c:418
+#: ../src/main.c:524
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Gõ \"%s --help\" để xem cách dùng"
 
-#: ../src/main.c:429
-#, fuzzy
+#: ../src/main.c:535
 msgid "The Xfce development team. All rights reserved."
-msgstr "Nhóm phát triển Xfce. Tất cả quyền được bảo lưu."
+msgstr "Nhóm phát triển Xfce. Tất cả các quyền được bảo lưu"
 
-#: ../src/main.c:430
+#: ../src/main.c:536
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Hãy gởi báo lỗi đến <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
+msgid "Prefix"
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:2
-msgid "Always c_enter the window"
+msgid "Regular Expression"
 msgstr ""
 
+#: ../src/appfinder-preferences.glade.h:3
+msgid "Very Small"
+msgstr "Nhỏ nhất"
+
 #: ../src/appfinder-preferences.glade.h:4
+msgid "Smaller"
+msgstr "Nhỏ hơn"
+
+#: ../src/appfinder-preferences.glade.h:5
+msgid "Small"
+msgstr "Nhỏ"
+
+#: ../src/appfinder-preferences.glade.h:6
+msgid "Normal"
+msgstr "Bình thường"
+
+#: ../src/appfinder-preferences.glade.h:7
+msgid "Large"
+msgstr "Lớn"
+
+#: ../src/appfinder-preferences.glade.h:8
+msgid "Larger"
+msgstr "Lớn hơn"
+
+#: ../src/appfinder-preferences.glade.h:9
+msgid "Very Large"
+msgstr "Lớn nhất"
+
+#: ../src/appfinder-preferences.glade.h:11
+msgid "Remember last _selected category"
+msgstr "Ghi nhớ mục cuối cùng được _chọn"
+
+#: ../src/appfinder-preferences.glade.h:12
+msgid "Always c_enter the window"
+msgstr "Luôn căn _giữa cửa sổ"
+
+#: ../src/appfinder-preferences.glade.h:13
+msgid "Center the window on startup."
+msgstr "Căn giữa cửa sổ khi khởi động"
+
+#: ../src/appfinder-preferences.glade.h:14
+msgid "Keep running _instance in the background"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:15
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:16
 msgid "Behaviour"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:5
-#, fuzzy
+#: ../src/appfinder-preferences.glade.h:17
+msgid "_View items as icons"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:18
+msgid "Text besi_de icons"
+msgstr "Chữ bên cạnh biểu tượng"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid "Ite_m icon size:"
+msgstr "Kích cỡ biểu tượng _mục:"
+
+#: ../src/appfinder-preferences.glade.h:20
+msgid "Categ_ory icon size:"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:21
+msgid "Appearance"
+msgstr "Diện mạo"
+
+#: ../src/appfinder-preferences.glade.h:22
 msgid "C_lear Custom Command History"
-msgstr "Lịch sử lệnh"
+msgstr "_Xóa lịch sử lệnh tùy chọn"
 
-#: ../src/appfinder-preferences.glade.h:6
-msgid "Center the window on startup."
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:7
-#, fuzzy
-msgid "Co_mmand:"
-msgstr "Lệnh"
-
-#: ../src/appfinder-preferences.glade.h:8
-msgid "Custom _Actions"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:9
-#, fuzzy
+#: ../src/appfinder-preferences.glade.h:23
 msgid "History"
-msgstr "Lịch sử lệnh"
+msgstr "Lịch sử"
 
-#: ../src/appfinder-preferences.glade.h:11
+#: ../src/appfinder-preferences.glade.h:24
+msgid "_General"
+msgstr "_Tổng quát"
+
+#: ../src/appfinder-preferences.glade.h:25
+msgid "Pattern"
+msgstr "Mẫu"
+
+#: ../src/appfinder-preferences.glade.h:26
+msgid "Add a new custom action."
+msgstr "Thêm tác vụ tùy chọn."
+
+#: ../src/appfinder-preferences.glade.h:27
+msgid "Remove the currently selected action."
+msgstr "Gỡ bỏ hành động được chọn hiện thời."
+
+#: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -163,37 +281,25 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:12
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Co_mmand:"
+msgstr "_Lệnh"
+
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Patte_rn:"
-msgstr ""
+msgstr "_Mẫu:"
 
-#: ../src/appfinder-preferences.glade.h:13
-msgid "Pattern"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:14
-msgid "Prefix"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Regular Expression"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:16
-msgid "Remember last _selected category"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:17
-msgid "Remove the currently selected action."
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "_General"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:32
 msgid "_Type:"
-msgstr ""
+msgstr "_Thể loại:"
+
+#: ../src/appfinder-preferences.glade.h:33
+msgid "_Save match in command history"
+msgstr "_Lưu chính xác vào lịch sử lệnh"
+
+#: ../src/appfinder-preferences.glade.h:34
+msgid "Custom _Actions"
+msgstr "_Hành động tùy chọn"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
