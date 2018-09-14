@@ -9,22 +9,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-01 06:30+0100\n"
-"PO-Revision-Date: 2017-11-01 15:47+0000\n"
-"Last-Translator: Yarema aka Knedlyk <yupadmin@gmail.com>\n"
+"POT-Creation-Date: 2018-08-24 06:30+0200\n"
+"PO-Revision-Date: 2018-09-14 00:17+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/xfce/xfce4-appfinder/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #. close all windows and quit
 #: ../src/appfinder-gdbus.c:84
 msgid "Forced to quit"
 msgstr "Закрити всі вікна і вийти"
 
-#: ../src/appfinder-category-model.c:146
+#: ../src/appfinder-category-model.c:147
 msgid "All Applications"
 msgstr "Всі програми"
 
@@ -52,11 +52,11 @@ msgstr "Назва файлу"
 msgid "Application has no command"
 msgstr "Програми без команди"
 
-#: ../src/appfinder-model.c:2516
+#: ../src/appfinder-model.c:2517
 msgid "Commands History"
 msgstr "Історія команд"
 
-#: ../src/appfinder-model.c:2540
+#: ../src/appfinder-model.c:2541
 msgid "Bookmarks"
 msgstr "Закладки"
 
@@ -81,77 +81,78 @@ msgstr "Дію користувача буде вилучено безповор
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Ви дійсно бажаєте вилучити шаблон \"%s\"?"
 
-#: ../src/appfinder-window.c:227 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:228 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Пошук встановлених програм"
 
-#: ../src/appfinder-window.c:275
+#: ../src/appfinder-window.c:276
 msgid "Toggle view mode"
 msgstr "Перемкнути режим перегляду"
 
-#: ../src/appfinder-window.c:351
+#: ../src/appfinder-window.c:352
 msgid "_Preferences"
 msgstr "_Уподобання"
 
-#: ../src/appfinder-window.c:368
+#: ../src/appfinder-window.c:369
 msgid "Close"
 msgstr "Закрити"
 
-#: ../src/appfinder-window.c:378 ../src/appfinder-window.c:1052
+#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1072
 msgid "La_unch"
 msgstr "За_пустити"
 
-#: ../src/appfinder-window.c:866
+#: ../src/appfinder-window.c:886
 msgid "Failed to launch desktop item editor"
 msgstr "Не вдалось запустити редактор desktop-елементів"
 
-#: ../src/appfinder-window.c:892
+#: ../src/appfinder-window.c:912
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Це безповоротно вилучить desktop-файл з домашньої теки."
 
-#: ../src/appfinder-window.c:893
+#: ../src/appfinder-window.c:913
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Ви дійсно бажаєте повернути \"%s\"?"
 
-#: ../src/appfinder-window.c:903
+#: ../src/appfinder-window.c:923
 msgid "Failed to remove desktop file"
 msgstr "Не вдалося вилучити desktop-файл"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:936
+#: ../src/appfinder-window.c:956
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Щоб зробити елемент видимим, вручну вилучіть desktop файл з \"%s\", або відкрийте файл із вказаної теки і вилучіть рядок \"%s\"."
 
-#: ../src/appfinder-window.c:941 ../src/appfinder-window.c:1089
+#: ../src/appfinder-window.c:961 ../src/appfinder-window.c:1109
 msgid "_Hide"
 msgstr "При_ховати"
 
-#: ../src/appfinder-window.c:942
+#: ../src/appfinder-window.c:962
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Ви дійсно бажаєте приховати \"%s\"?"
 
-#: ../src/appfinder-window.c:1036
+#: ../src/appfinder-window.c:1056
 msgid "Remove From Bookmarks"
 msgstr "Вилучити з закладок"
 
-#: ../src/appfinder-window.c:1036
+#: ../src/appfinder-window.c:1056
 msgid "Add to Bookmarks"
 msgstr "Додати до закладок"
 
-#: ../src/appfinder-window.c:1065
+#: ../src/appfinder-window.c:1085
 msgid "_Edit"
 msgstr "З_мінити"
 
-#: ../src/appfinder-window.c:1082
+#: ../src/appfinder-window.c:1102
 msgid "_Revert"
 msgstr "_Вернути"
 
@@ -175,16 +176,16 @@ msgstr "Закрити всі запущені"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Не намагатися використовувати сервіс D-Bus"
 
-#: ../src/main.c:232
+#: ../src/main.c:235
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Наберіть \"%s --help\" для інформації про використання."
 
-#: ../src/main.c:243
+#: ../src/main.c:246
 msgid "The Xfce development team. All rights reserved."
 msgstr "Команда розробників Xfce. Всі права застережено."
 
-#: ../src/main.c:244
+#: ../src/main.c:247
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Повідомляйте про помилки на <%s>."
@@ -346,7 +347,11 @@ msgstr "Запускаю програму..."
 msgid "Run a program"
 msgstr "Запуск програми"
 
-#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
+msgid "Application to quickly run applications and commands"
+msgstr ""
+
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
 "The application finder is a tool to find and launch installed applications "
 "on your system and quickly execute commands. It can also be used to quickly "
