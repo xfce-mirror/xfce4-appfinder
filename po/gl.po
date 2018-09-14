@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2006,2008-2009
-# Xosé <xosecalvo@gmail.com>, 2015
+# Xosé, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-02 23:08+0200\n"
-"PO-Revision-Date: 2017-09-19 18:02+0000\n"
-"Last-Translator: Xosé <xosecalvo@gmail.com>\n"
+"PO-Revision-Date: 2018-09-14 00:16+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce4-appfinder/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
