@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-02 23:08+0200\n"
-"PO-Revision-Date: 2018-02-11 20:34+0000\n"
+"PO-Revision-Date: 2018-09-14 00:16+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic (http://www.transifex.com/xfce/xfce4-appfinder/language/am/)\n"
 "MIME-Version: 1.0\n"
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.c:223
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "እርስው በ እርግጥ የ ትእዛዝ ታሪክ ማጽዳት ይፈልጋሉ?"
 
 #: ../src/appfinder-preferences.c:333
 msgid "The custom action will be deleted permanently."
@@ -125,19 +125,19 @@ msgstr "በ እርግጥ መደበቅ ይፈልጋሉ \"%s\"?"
 
 #: ../src/main.c:75
 msgid "Start in collapsed mode"
-msgstr ""
+msgstr "በ አነሰ ዘዴ ማስጀመሪያ"
 
 #: ../src/main.c:76
 msgid "Print version information and exit"
-msgstr ""
+msgstr "የ እትም መረጃ ማተሚያ እና መውጫ"
 
 #: ../src/main.c:77
 msgid "Replace the existing service"
-msgstr ""
+msgstr "የ ነበረውን ግልጋሎት መቀየሪያ"
 
 #: ../src/main.c:78
 msgid "Quit all instances"
-msgstr ""
+msgstr "ከ ሁሉም ሁኔታዎች መውጫ"
 
 #: ../src/main.c:79
 msgid "Do not try to use or become a D-Bus service"
@@ -159,7 +159,7 @@ msgstr "አይነት \"%s --እርዳታ\" ለ መጠቀም"
 
 #: ../src/main.c:535
 msgid "The Xfce development team. All rights reserved."
-msgstr ""
+msgstr "The Xfce development team. All rights reserved."
 
 #: ../src/main.c:536
 #, c-format
@@ -208,11 +208,11 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "ሁል ጊዜ መስኮት መ_ሀከል ማድረጊያ"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
-msgstr ""
+msgstr "በሚጀምር ጊዜ የ መስኮት መሀከል ማድረጊያ"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
@@ -271,7 +271,7 @@ msgstr "አዲስ የ ተግባር ማስተካከያ መጨመሪያ"
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "አሁን የ ተመረጠውን ተግባር ማስወገጃ"
 
 #: ../src/appfinder-preferences.glade.h:29
 #, no-c-format
