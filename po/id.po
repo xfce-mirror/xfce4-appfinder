@@ -4,17 +4,17 @@
 # 
 # Translators:
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2008
-# Mohamad Hasan Al Banna <se7entime@openmailbox.org>, 2014
-# Mohamad Hasan Al Banna <se7entime@openmailbox.org>, 2013
-# Mohamad Hasan Al Banna <se7entime@openmailbox.org>, 2013-2014
-# Mohamad Hasan Al Banna <se7entime@openmailbox.org>, 2013-2014
+# se7entime <se7entime@openmailbox.org>, 2014
+# se7entime <se7entime@openmailbox.org>, 2013
+# se7entime <se7entime@openmailbox.org>, 2013-2014
+# se7entime <se7entime@openmailbox.org>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 06:30+0200\n"
-"PO-Revision-Date: 2017-09-19 18:02+0000\n"
-"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
+"POT-Creation-Date: 2018-08-24 06:30+0200\n"
+"PO-Revision-Date: 2018-09-14 00:17+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Indonesian (http://www.transifex.com/xfce/xfce4-appfinder/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "Forced to quit"
 msgstr "Paksa berhenti"
 
-#: ../src/appfinder-category-model.c:146
+#: ../src/appfinder-category-model.c:147
 msgid "All Applications"
 msgstr "Semua Aplikasi"
 
@@ -55,106 +55,107 @@ msgstr "Nama Berkas"
 msgid "Application has no command"
 msgstr "Tidak ada perntah yang tersedia"
 
-#: ../src/appfinder-model.c:2516
+#: ../src/appfinder-model.c:2517
 msgid "Commands History"
 msgstr "Historis Perintah"
 
-#: ../src/appfinder-model.c:2540
+#: ../src/appfinder-model.c:2541
 msgid "Bookmarks"
 msgstr "Bookmark"
 
-#: ../src/appfinder-preferences.c:219
+#: ../src/appfinder-preferences.c:238
 msgid "C_lear"
 msgstr "Ber_sihkan"
 
-#: ../src/appfinder-preferences.c:220
+#: ../src/appfinder-preferences.c:239
 msgid "This will permanently clear the custom command history."
 msgstr "Perintah ini akan membersihkan daftar historis perintah."
 
-#: ../src/appfinder-preferences.c:221
+#: ../src/appfinder-preferences.c:240
 msgid "Are you sure you want to clear the command history?"
 msgstr "Apakah anda ingin menghapus daftar historis perintah?"
 
-#: ../src/appfinder-preferences.c:331
+#: ../src/appfinder-preferences.c:350
 msgid "The custom action will be deleted permanently."
 msgstr "Deretan aksi akan dihapus."
 
-#: ../src/appfinder-preferences.c:332
+#: ../src/appfinder-preferences.c:351
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Apakah anda ingin menghapus pola \"%s\"?"
 
-#: ../src/appfinder-window.c:220 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:228 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Pencari Aplikasi"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:276
 msgid "Toggle view mode"
 msgstr "Beralih model tampilan"
 
-#: ../src/appfinder-window.c:344
+#: ../src/appfinder-window.c:352
 msgid "_Preferences"
 msgstr "_Preferensi"
 
-#: ../src/appfinder-window.c:360
+#: ../src/appfinder-window.c:369
 msgid "Close"
 msgstr "Tutup"
 
-#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1040
+#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1072
 msgid "La_unch"
 msgstr "Jal_ankan"
 
-#: ../src/appfinder-window.c:854
+#: ../src/appfinder-window.c:886
 msgid "Failed to launch desktop item editor"
 msgstr "Gagal menjalankan penyunting item desktop"
 
-#: ../src/appfinder-window.c:880
+#: ../src/appfinder-window.c:912
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Perintah ini akan menghapus berkas desktop dari folder rumah anda."
 
-#: ../src/appfinder-window.c:881
+#: ../src/appfinder-window.c:913
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Apakah anda ingin mengembalikan kondisi \"%s\"?"
 
-#: ../src/appfinder-window.c:891
+#: ../src/appfinder-window.c:923
 msgid "Failed to remove desktop file"
 msgstr "Gagal menghapus berkas desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:924
+#: ../src/appfinder-window.c:956
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Untuk menampilkan kembali item ini, anda harus menghapus berkas desktop dari \"%s\" atau membuka berkas tersebut di folder yang sama dan menghapus baris \"%s\"."
 
-#: ../src/appfinder-window.c:929 ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:961 ../src/appfinder-window.c:1109
 msgid "_Hide"
 msgstr "_Sembunyi"
 
-#: ../src/appfinder-window.c:930
+#: ../src/appfinder-window.c:962
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Apakah anda ingin menyembunyikan \"%s\"?"
 
-#: ../src/appfinder-window.c:1024
+#: ../src/appfinder-window.c:1056
 msgid "Remove From Bookmarks"
 msgstr "Hapus dari Bookmark"
 
-#: ../src/appfinder-window.c:1024
+#: ../src/appfinder-window.c:1056
 msgid "Add to Bookmarks"
 msgstr "Tambahkan ke Bookmark"
 
-#: ../src/appfinder-window.c:1053
+#: ../src/appfinder-window.c:1085
 msgid "_Edit"
 msgstr "Sunt_ing"
 
-#: ../src/appfinder-window.c:1070
+#: ../src/appfinder-window.c:1102
 msgid "_Revert"
 msgstr "_Kembalikan"
 
@@ -178,16 +179,16 @@ msgstr "Hentikan semua instansi"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Jangan menggunakan atau memanipulasi servis D-Bus"
 
-#: ../src/main.c:223
+#: ../src/main.c:235
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Ketik \"%s --help\" untuk penggunaan."
 
-#: ../src/main.c:234
+#: ../src/main.c:246
 msgid "The Xfce development team. All rights reserved."
 msgstr "Tim pengembang Xfce. Hak cipta dilindungi undang-undang."
 
-#: ../src/main.c:235
+#: ../src/main.c:247
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Silakan laporkan kutu ke <%s>."
@@ -252,54 +253,64 @@ msgid ""
 msgstr "Ketimbang menutup aplikasi ketika jendela terakhir ditutup, simpan instansi berjalan untuk mempercepat ketika membuka jendela baru. Anda mungkin ingin menonaktifkan ini untuk mengurangi penggunaan memori."
 
 #: ../src/appfinder-preferences.glade.h:16
+msgid "Single window"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:17
+msgid ""
+"When an instance is running in the background, only open one window at a "
+"time."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:18
 msgid "Behaviour"
 msgstr "Perilaku"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: ../src/appfinder-preferences.glade.h:19
 msgid "_View items as icons"
 msgstr "Tampilkan _item sebagai ikon"
 
-#: ../src/appfinder-preferences.glade.h:18
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Text besi_de icons"
 msgstr "T_eks di samping ikon"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:21
 msgid "Ite_m icon size:"
 msgstr "Ite_m ukuran ikon:"
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Categ_ory icon size:"
 msgstr "Kategori ukuran ikon:"
 
-#: ../src/appfinder-preferences.glade.h:21
+#: ../src/appfinder-preferences.glade.h:23
 msgid "Appearance"
 msgstr "Tampilan"
 
-#: ../src/appfinder-preferences.glade.h:22
+#: ../src/appfinder-preferences.glade.h:24
 msgid "C_lear Custom Command History"
 msgstr "H_apus Riwayat Perintah Suai"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "History"
 msgstr "Riwayat"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "_General"
 msgstr "_Umum"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Pattern"
 msgstr "Pola"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "Add a new custom action."
 msgstr "Tambah aksi suai baru."
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Remove the currently selected action."
 msgstr "Hapus aksi terpilih saat ini."
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -307,23 +318,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Jika tipe diatur ke awalan, %s akan digantikan dengan tali setelah pola, %S dengan teks entri lengkap. Untuk ekspresi reguler anda dapat menggunakan \\0 dan \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "Co_mmand:"
 msgstr "P_erintah:"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Patte_rn:"
 msgstr "Po_la:"
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "_Type:"
 msgstr "_Tipe:"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "_Save match in command history"
 msgstr "_Simpan kecocokan di riwayat perintah"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Custom _Actions"
 msgstr "_Aksi Suai"
 
@@ -339,10 +350,14 @@ msgstr "Jalankan Program..."
 msgid "Run a program"
 msgstr "Jalankan program"
 
-#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
+msgid "Application to quickly run applications and commands"
+msgstr ""
+
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
 "The application finder is a tool to find and launch installed applications "
-"on your system and the quickly execute commands. It can also be used to "
-"quickly add launchers to the Xfce Panel by dragging an item from the view "
-"and drop it on the panel."
-msgstr "Aplikasi finder merupakan alat untuk menemukan dan menjalankan aplikasi yang dipasang pada sistem Anda dan secara cepat menjalankan perintah. Aplikasi Finder juga dapat digunakan untuk menambahkan peluncur dengan cepat ke Xfce Panel dengan menyeret item dari pandangan dan drop pada panel."
+"on your system and quickly execute commands. It can also be used to quickly "
+"add launchers to the Xfce Panel by dragging an item from the view and drop "
+"it on the panel."
+msgstr ""
