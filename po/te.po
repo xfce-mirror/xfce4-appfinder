@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 06:30+0200\n"
-"PO-Revision-Date: 2017-09-23 19:02+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"POT-Creation-Date: 2018-08-24 06:30+0200\n"
+"PO-Revision-Date: 2018-09-14 00:17+0000\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>\n"
 "Language-Team: Telugu (http://www.transifex.com/xfce/xfce4-appfinder/language/te/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,9 +22,9 @@ msgstr ""
 #. close all windows and quit
 #: ../src/appfinder-gdbus.c:84
 msgid "Forced to quit"
-msgstr ""
+msgstr "బలవంతముగా నిష్క్రమించు"
 
-#: ../src/appfinder-category-model.c:146
+#: ../src/appfinder-category-model.c:147
 msgid "All Applications"
 msgstr "అన్ని అనువర్తనాలు"
 
@@ -52,106 +52,107 @@ msgstr "దస్త్రంపేరు"
 msgid "Application has no command"
 msgstr "అనువర్తనముకి ఏ ఆదేశము లేదు"
 
-#: ../src/appfinder-model.c:2516
+#: ../src/appfinder-model.c:2517
 msgid "Commands History"
 msgstr "ఆదేశాల చరిత్ర"
 
-#: ../src/appfinder-model.c:2540
+#: ../src/appfinder-model.c:2541
 msgid "Bookmarks"
 msgstr "ఇష్టాంశాలు"
 
-#: ../src/appfinder-preferences.c:219
+#: ../src/appfinder-preferences.c:238
 msgid "C_lear"
 msgstr "శుభ్రపరుచు (_l)"
 
-#: ../src/appfinder-preferences.c:220
+#: ../src/appfinder-preferences.c:239
 msgid "This will permanently clear the custom command history."
 msgstr ""
 
-#: ../src/appfinder-preferences.c:221
+#: ../src/appfinder-preferences.c:240
 msgid "Are you sure you want to clear the command history?"
 msgstr ""
 
-#: ../src/appfinder-preferences.c:331
+#: ../src/appfinder-preferences.c:350
 msgid "The custom action will be deleted permanently."
 msgstr ""
 
-#: ../src/appfinder-preferences.c:332
+#: ../src/appfinder-preferences.c:351
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr ""
 
-#: ../src/appfinder-window.c:220 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:228 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "అనువర్తన శోధకం"
 
-#: ../src/appfinder-window.c:268
+#: ../src/appfinder-window.c:276
 msgid "Toggle view mode"
 msgstr ""
 
-#: ../src/appfinder-window.c:344
+#: ../src/appfinder-window.c:352
 msgid "_Preferences"
 msgstr ""
 
-#: ../src/appfinder-window.c:360
+#: ../src/appfinder-window.c:369
 msgid "Close"
-msgstr ""
+msgstr "మూసివేయి"
 
-#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1040
+#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1072
 msgid "La_unch"
 msgstr "ప్రారంభించు (_u)"
 
-#: ../src/appfinder-window.c:854
+#: ../src/appfinder-window.c:886
 msgid "Failed to launch desktop item editor"
 msgstr ""
 
-#: ../src/appfinder-window.c:880
+#: ../src/appfinder-window.c:912
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr ""
 
-#: ../src/appfinder-window.c:881
+#: ../src/appfinder-window.c:913
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr ""
 
-#: ../src/appfinder-window.c:891
+#: ../src/appfinder-window.c:923
 msgid "Failed to remove desktop file"
 msgstr ""
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:924
+#: ../src/appfinder-window.c:956
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr ""
 
-#: ../src/appfinder-window.c:929 ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:961 ../src/appfinder-window.c:1109
 msgid "_Hide"
 msgstr "దాయి (_H)"
 
-#: ../src/appfinder-window.c:930
+#: ../src/appfinder-window.c:962
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr ""
 
-#: ../src/appfinder-window.c:1024
+#: ../src/appfinder-window.c:1056
 msgid "Remove From Bookmarks"
 msgstr ""
 
-#: ../src/appfinder-window.c:1024
+#: ../src/appfinder-window.c:1056
 msgid "Add to Bookmarks"
 msgstr ""
 
-#: ../src/appfinder-window.c:1053
+#: ../src/appfinder-window.c:1085
 msgid "_Edit"
-msgstr ""
+msgstr "సవరణ (_E)"
 
-#: ../src/appfinder-window.c:1070
+#: ../src/appfinder-window.c:1102
 msgid "_Revert"
 msgstr ""
 
@@ -175,16 +176,16 @@ msgstr "అన్ని ప్రక్రియలను త్యజించ�
 msgid "Do not try to use or become a D-Bus service"
 msgstr ""
 
-#: ../src/main.c:223
+#: ../src/main.c:235
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "వాడుటకు '%s --help' టైపుచేయండి."
 
-#: ../src/main.c:234
+#: ../src/main.c:246
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce అభివృద్ధి బృందం. అన్ని హక్కులు పొందివున్నారు."
 
-#: ../src/main.c:235
+#: ../src/main.c:247
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "దయచేసి బగ్‌లను <%s>కు నివేదించండి."
@@ -203,7 +204,7 @@ msgstr "అతి చిన్న"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Smaller"
-msgstr ""
+msgstr "చిన్నది"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "Small"
@@ -219,7 +220,7 @@ msgstr "పెద్ద"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Larger"
-msgstr ""
+msgstr "పెద్దది"
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Very Large"
@@ -249,54 +250,64 @@ msgid ""
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:16
-msgid "Behaviour"
-msgstr "ప్రవర్తన"
+msgid "Single window"
+msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:17
-msgid "_View items as icons"
+msgid ""
+"When an instance is running in the background, only open one window at a "
+"time."
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:18
-msgid "Text besi_de icons"
-msgstr ""
+msgid "Behaviour"
+msgstr "ప్రవర్తన"
 
 #: ../src/appfinder-preferences.glade.h:19
-msgid "Ite_m icon size:"
+msgid "_View items as icons"
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:20
-msgid "Categ_ory icon size:"
+msgid "Text besi_de icons"
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:21
+msgid "Ite_m icon size:"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:22
+msgid "Categ_ory icon size:"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:23
 msgid "Appearance"
 msgstr "రూపురేఖలు"
 
-#: ../src/appfinder-preferences.glade.h:22
+#: ../src/appfinder-preferences.glade.h:24
 msgid "C_lear Custom Command History"
 msgstr "అనురూపిత ఆదేశాల చరిత్ర (_l)"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "History"
 msgstr "చరిత్ర"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "_General"
 msgstr "సాధారణం (_G)"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Pattern"
 msgstr "సరళి"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "Add a new custom action."
 msgstr "ఒక కొత్త అనురూపిత చర్యను జతచేయి."
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Remove the currently selected action."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -304,23 +315,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "Co_mmand:"
 msgstr "ఆదేశం (_m):"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Patte_rn:"
 msgstr "సరళి (_r):"
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "_Type:"
 msgstr "రకం (_T):"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "_Save match in command history"
 msgstr "ఆదేశ చరిత్ర పోలికను భద్రపరుచు (_S)"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Custom _Actions"
 msgstr "అనురూపిత చర్యలు (_A)"
 
@@ -336,10 +347,14 @@ msgstr "ప్రోగ్రాముని నడుపు..."
 msgid "Run a program"
 msgstr "ఒక ప్రోగ్రాముని నడుపు"
 
-#: ../data/xfce4-appfinder.appdata.xml.in.h:1
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
+msgid "Application to quickly run applications and commands"
+msgstr ""
+
+#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
 "The application finder is a tool to find and launch installed applications "
-"on your system and the quickly execute commands. It can also be used to "
-"quickly add launchers to the Xfce Panel by dragging an item from the view "
-"and drop it on the panel."
+"on your system and quickly execute commands. It can also be used to quickly "
+"add launchers to the Xfce Panel by dragging an item from the view and drop "
+"it on the panel."
 msgstr ""
