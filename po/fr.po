@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-24 06:30+0200\n"
-"PO-Revision-Date: 2018-09-20 13:13+0000\n"
-"Last-Translator: David D\n"
+"PO-Revision-Date: 2018-09-29 09:45+0000\n"
+"Last-Translator: Charles Monzat <c.monzat@laposte.net>\n"
 "Language-Team: French (http://www.transifex.com/xfce/xfce4-appfinder/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,7 +63,7 @@ msgstr "Historique des commandes"
 
 #: ../src/appfinder-model.c:2541
 msgid "Bookmarks"
-msgstr "Signets"
+msgstr "Favoris"
 
 #: ../src/appfinder-preferences.c:238
 msgid "C_lear"
@@ -71,7 +71,7 @@ msgstr "_Effacer"
 
 #: ../src/appfinder-preferences.c:239
 msgid "This will permanently clear the custom command history."
-msgstr "Ceci effacera l’historique des commandes de manière permanente."
+msgstr "Cette action effacera l’historique des commandes de manière permanente."
 
 #: ../src/appfinder-preferences.c:240
 msgid "Are you sure you want to clear the command history?"
@@ -116,7 +116,7 @@ msgstr "Impossible de lancer l’éditeur de fichier desktop"
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Ceci effacera définitivement le fichier desktop personnalisé de votre dossier personnel."
+msgstr "Cette action effacera définitivement le fichier desktop personnalisé de votre dossier personnel."
 
 #: ../src/appfinder-window.c:913
 #, c-format
@@ -134,7 +134,7 @@ msgstr "Impossible de supprimer le fichier desktop"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Pour afficher l’élément, vous devez supprimer manuellement le fichier desktop à partir de « %s » ou ouvrir le fichier dans le même répertoire et supprimer la ligne « %s »."
+msgstr "Pour afficher l’élément, vous devez supprimer manuellement le fichier desktop de « %s » ou ouvrir le fichier dans le même répertoire et supprimer la ligne « %s »."
 
 #: ../src/appfinder-window.c:961 ../src/appfinder-window.c:1109
 msgid "_Hide"
@@ -147,23 +147,23 @@ msgstr "Voulez-vous vraiment masquer « %s » ?"
 
 #: ../src/appfinder-window.c:1056
 msgid "Remove From Bookmarks"
-msgstr "Supprimer des signets"
+msgstr "Supprimer des favoris"
 
 #: ../src/appfinder-window.c:1056
 msgid "Add to Bookmarks"
-msgstr "Ajouter aux signets"
+msgstr "Ajouter aux favoris"
 
 #: ../src/appfinder-window.c:1085
 msgid "_Edit"
-msgstr "É_dition"
+msgstr "M_odifier"
 
 #: ../src/appfinder-window.c:1102
 msgid "_Revert"
-msgstr "_Revenir"
+msgstr "_Rétablir"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
-msgstr "Démarrer en mode compact"
+msgstr "Démarrer en mode réduit"
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
@@ -184,7 +184,7 @@ msgstr "Ne pas essayer d’utiliser ou de devenir un service D-Bus."
 #: ../src/main.c:235
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Taper « %s --help » pour plus d'aide."
+msgstr "Taper « %s --help » pour obtenir plus d’aide."
 
 #: ../src/main.c:246
 msgid "The Xfce development team. All rights reserved."
@@ -278,11 +278,11 @@ msgstr "_Texte à côté des icônes"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Ite_m icon size:"
-msgstr "Taille des icônes des a_pplications :"
+msgstr "Taille d’icônes des a_pplications :"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Categ_ory icon size:"
-msgstr "Taille des icônes des catég_ories :"
+msgstr "Taille d’icônes des catég_ories :"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Appearance"
@@ -322,15 +322,15 @@ msgstr "Si le type est réglé sur « Préfixe », %s sera remplacé par la ch
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "Co_mmand:"
-msgstr "_Commande :"
+msgstr "_Commande :"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "Patte_rn:"
-msgstr "_Motif :"
+msgstr "_Motif :"
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "_Type:"
-msgstr "_Type :"
+msgstr "_Type :"
 
 #: ../src/appfinder-preferences.glade.h:35
 msgid "_Save match in command history"
@@ -362,4 +362,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr "La liste des applications est un outil pour trouver et lancer des applications installées sur votre système et pour exécuter rapidement des commandes. Elle peut aussi être utilisée pour ajouter rapidement des lanceurs au tableau de bord Xfce par un glisser-déposer."
+msgstr "La liste des applications est un outil permettant de rechercher et lancer des applications installées sur votre système, et pour exécuter rapidement des commandes. Elle peut aussi être utilisée pour ajouter rapidement des lanceurs au tableau de bord Xfce par un glisser-déposer."
