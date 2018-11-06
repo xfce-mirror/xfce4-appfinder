@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-24 06:30+0200\n"
-"PO-Revision-Date: 2018-11-05 18:25+0000\n"
+"PO-Revision-Date: 2018-11-06 12:10+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic (http://www.transifex.com/xfce/xfce4-appfinder/language/is/)\n"
 "MIME-Version: 1.0\n"
@@ -258,7 +258,7 @@ msgstr "Einn gluggi"
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
-msgstr ""
+msgstr "Ef tilvik forritsins keyrir í bakgrunni, opna þ aðeins einn glugga einu."
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Behaviour"
@@ -350,7 +350,7 @@ msgstr "Keyra forrit"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
-msgstr ""
+msgstr "Forrit til að flyta fyrir ræsingu annarra forrita og skipana"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
@@ -358,4 +358,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr ""
+msgstr "Forritaleit er verkfæri til að finna og ræsa forrit og skipanir sem uppsett eru á kerfinu. Það má einnig nota til að bæta forritaræsum í skyndingu á XFCE-skjástikur, með því að draga atriði úr sýn og sleppa þeim á skjástikuna."
