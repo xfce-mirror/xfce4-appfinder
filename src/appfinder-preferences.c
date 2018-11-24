@@ -43,6 +43,8 @@ static void xfce_appfinder_preferences_beside_sensitive        (GtkWidget       
                                                                 GtkWidget                *text_beside_icon);
 static void xfce_appfinder_preferences_single_window_sensitive (GtkWidget                *keep_running,
                                                                 GtkWidget                *single_window);
+static void xfce_appfinder_preferences_hide_category_sensitive (GtkWidget                *hide_category,
+                                                                GtkWidget                *category_icon_size);
 static void xfce_appfinder_preferences_clear_history           (XfceAppfinderPreferences *preferences);
 static void xfce_appfinder_preferences_action_add              (XfceAppfinderPreferences *preferences);
 static void xfce_appfinder_preferences_action_remove           (GtkWidget                *button,
@@ -120,10 +122,10 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
   xfconf_g_property_bind (preferences->channel, "/always-center", G_TYPE_BOOLEAN,
                           G_OBJECT (object), "active");
 
-                          previous = gtk_builder_get_object (GTK_BUILDER (preferences), "enable-service");
+  previous = gtk_builder_get_object (GTK_BUILDER (preferences), "enable-service");
   xfconf_g_property_bind (preferences->channel, "/enable-service", G_TYPE_BOOLEAN,
                           G_OBJECT (previous), "active");
-                          
+
   object = gtk_builder_get_object (GTK_BUILDER (preferences), "single-window");
   xfconf_g_property_bind (preferences->channel, "/single-window", G_TYPE_BOOLEAN,
                           G_OBJECT (object), "active");
@@ -149,10 +151,18 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
   xfconf_g_property_bind (preferences->channel, "/item-icon-size", G_TYPE_UINT,
                           G_OBJECT (object), "active");
 
-  object = gtk_builder_get_object (GTK_BUILDER (preferences), "category-icon-size");
-  gtk_combo_box_set_active (GTK_COMBO_BOX (object), XFCE_APPFINDER_ICON_SIZE_DEFAULT_CATEGORY);
+  previous = gtk_builder_get_object (GTK_BUILDER (preferences), "category-icon-size");
+  gtk_combo_box_set_active (GTK_COMBO_BOX (previous), XFCE_APPFINDER_ICON_SIZE_DEFAULT_CATEGORY);
   xfconf_g_property_bind (preferences->channel, "/category-icon-size", G_TYPE_UINT,
+                          G_OBJECT (previous), "active");
+
+  object = gtk_builder_get_object (GTK_BUILDER (preferences), "hide-category-pane");
+  xfconf_g_property_bind (preferences->channel, "/hide-category-pane", G_TYPE_BOOLEAN,
                           G_OBJECT (object), "active");
+
+  g_signal_connect (G_OBJECT (object), "toggled",
+      G_CALLBACK (xfce_appfinder_preferences_hide_category_sensitive), previous);
+  xfce_appfinder_preferences_hide_category_sensitive (GTK_WIDGET (object), GTK_WIDGET (previous));
 
   object = gtk_builder_get_object (GTK_BUILDER (preferences), "button-clear");
   g_signal_connect_swapped (G_OBJECT (object), "clicked",
@@ -224,6 +234,16 @@ xfce_appfinder_preferences_single_window_sensitive (GtkWidget *keep_running,
 {
   gtk_widget_set_sensitive (single_window,
       gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (keep_running)));
+}
+
+
+
+static void
+xfce_appfinder_preferences_hide_category_sensitive (GtkWidget *hide_category,
+                                                    GtkWidget *category_icon_size)
+{
+  gboolean hide = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (hide_category));
+  gtk_widget_set_sensitive (category_icon_size, !hide);
 }
 
 

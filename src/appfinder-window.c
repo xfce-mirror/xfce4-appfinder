@@ -301,6 +301,9 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
   gtk_widget_show (scroll);
 
+  if (xfconf_channel_get_bool (window->channel, "/hide-category-pane", FALSE))
+    gtk_widget_set_visible (scroll, FALSE);
+
   sidepane = window->sidepane = gtk_tree_view_new_with_model (GTK_TREE_MODEL (window->category_model));
   gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (sidepane), FALSE);
   gtk_tree_view_set_enable_search (GTK_TREE_VIEW (sidepane), FALSE);
@@ -1639,6 +1642,17 @@ xfce_appfinder_window_property_changed (XfconfChannel       *channel,
     {
       if (GTK_IS_ICON_VIEW (window->view))
         xfce_appfinder_window_set_item_width (window);
+    }
+  else if (g_strcmp0 (prop, "/hide-category-pane") == 0)
+    {
+      gboolean hide = g_value_get_boolean (value);
+      gtk_widget_set_visible (gtk_widget_get_parent (window->sidepane), !hide);
+
+      if (hide) {
+        GtkTreePath *path = gtk_tree_path_new_from_string ("0");
+        gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->sidepane), path, NULL, FALSE);
+        gtk_tree_path_free (path);
+      }
     }
 }
 
