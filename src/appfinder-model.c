@@ -2250,8 +2250,7 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
   appfinder_return_val_if_fail (error == NULL || *error == NULL, FALSE);
 
-  if (!IS_STRING (command)
-      || g_hash_table_lookup (model->items_hash, command) != NULL)
+  if (!IS_STRING (command))
     return TRUE;
 
   /* add command to the model */
