@@ -366,7 +366,7 @@ xfce_appfinder_preferences_action_remove (GtkWidget                *button,
                       -1);
 
   if (xfce_dialog_confirm (GTK_WINDOW (gtk_widget_get_toplevel (button)),
-                           XFCE_APPFINDER_STOCK_DELETE, NULL,
+                           XFCE_APPFINDER_STOCK_DELETE, _("_Delete"),
                            _("The custom action will be deleted permanently."),
                            _("Are you sure you want to delete pattern \"%s\"?"),
                            pattern))
