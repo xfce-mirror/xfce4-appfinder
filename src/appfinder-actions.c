@@ -161,7 +161,7 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
       FALSE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
-      "!",
+      "$",
       "exo-open --launch TerminalEmulator %s",
       TRUE,
       NULL },
