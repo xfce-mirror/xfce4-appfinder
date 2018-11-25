@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-24 06:30+0200\n"
-"PO-Revision-Date: 2018-10-27 23:51+0000\n"
-"Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
+"POT-Creation-Date: 2018-11-25 00:30+0100\n"
+"PO-Revision-Date: 2018-11-25 18:05+0000\n"
+"Last-Translator: Edin Veskovic <edin.lockedin@gmail.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/xfce/xfce4-appfinder/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,35 +52,39 @@ msgstr "Kategorije"
 msgid "Filename"
 msgstr "Ime datoteke"
 
-#: ../src/appfinder-model.c:2097
+#: ../src/appfinder-model.c:2101
 msgid "Application has no command"
 msgstr "Program nema naredbe"
 
-#: ../src/appfinder-model.c:2517
+#: ../src/appfinder-model.c:2520
 msgid "Commands History"
 msgstr "Povijest naredbi"
 
-#: ../src/appfinder-model.c:2541
+#: ../src/appfinder-model.c:2544
 msgid "Bookmarks"
 msgstr "Zabilješke"
 
-#: ../src/appfinder-preferences.c:238
+#: ../src/appfinder-preferences.c:258
 msgid "C_lear"
 msgstr "O_čisti"
 
-#: ../src/appfinder-preferences.c:239
+#: ../src/appfinder-preferences.c:259
 msgid "This will permanently clear the custom command history."
 msgstr "Ovo će trajno očistiti povijest prilagođenih naredbi."
 
-#: ../src/appfinder-preferences.c:240
+#: ../src/appfinder-preferences.c:260
 msgid "Are you sure you want to clear the command history?"
 msgstr "Jeste li sigurni da želite očistiti povijest naredbi?"
 
-#: ../src/appfinder-preferences.c:350
+#: ../src/appfinder-preferences.c:369
+msgid "_Delete"
+msgstr "_Obriši"
+
+#: ../src/appfinder-preferences.c:370
 msgid "The custom action will be deleted permanently."
 msgstr "Prilagođena akcija biti će trajno izbrisana."
 
-#: ../src/appfinder-preferences.c:351
+#: ../src/appfinder-preferences.c:371
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Jeste li sigurni da želite izbrisati uzorak \"%s\"?"
@@ -95,68 +99,68 @@ msgstr "Nalaznik programa"
 msgid "Toggle view mode"
 msgstr "Promjeni način pregleda"
 
-#: ../src/appfinder-window.c:352
+#: ../src/appfinder-window.c:355
 msgid "_Preferences"
 msgstr "_Postavke"
 
-#: ../src/appfinder-window.c:369
+#: ../src/appfinder-window.c:372
 msgid "Close"
 msgstr "Zatvori"
 
-#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1072
+#: ../src/appfinder-window.c:382 ../src/appfinder-window.c:1075
 msgid "La_unch"
 msgstr "Po_kreni"
 
-#: ../src/appfinder-window.c:886
+#: ../src/appfinder-window.c:889
 msgid "Failed to launch desktop item editor"
 msgstr "Neuspjelo pokretanje uređivača stavki radne površine"
 
-#: ../src/appfinder-window.c:912
+#: ../src/appfinder-window.c:915
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Ovo će trajno ukloniti prilagođenu datoteku radne površine iz vaše osobne mape."
 
-#: ../src/appfinder-window.c:913
+#: ../src/appfinder-window.c:916
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Jeste li sigurni da želite vratiti  \"%s\"?"
 
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:926
 msgid "Failed to remove desktop file"
 msgstr "Neuspjelo uklanjanje datoteke radne površine"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:956
+#: ../src/appfinder-window.c:959
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Za otkrivanje stavke morate ručno ukloniti datoteku radne površine iz \"%s\" ili otvoriti datoteku u istom direktoriju i ukloniti redak \"%s\"."
 
-#: ../src/appfinder-window.c:961 ../src/appfinder-window.c:1109
+#: ../src/appfinder-window.c:964 ../src/appfinder-window.c:1112
 msgid "_Hide"
 msgstr "_Sakrij"
 
-#: ../src/appfinder-window.c:962
+#: ../src/appfinder-window.c:965
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Jeste li sigurni da želite sakriti \"%s\"?"
 
-#: ../src/appfinder-window.c:1056
+#: ../src/appfinder-window.c:1059
 msgid "Remove From Bookmarks"
 msgstr "Ukloni iz zabilješki"
 
-#: ../src/appfinder-window.c:1056
+#: ../src/appfinder-window.c:1059
 msgid "Add to Bookmarks"
 msgstr "Dodaj u zabilješke"
 
-#: ../src/appfinder-window.c:1085
+#: ../src/appfinder-window.c:1088
 msgid "_Edit"
 msgstr "_Uredi"
 
-#: ../src/appfinder-window.c:1102
+#: ../src/appfinder-window.c:1105
 msgid "_Revert"
 msgstr "_Vrati"
 
@@ -280,38 +284,46 @@ msgid "Ite_m icon size:"
 msgstr "Ve_ličina ikone stavke:"
 
 #: ../src/appfinder-preferences.glade.h:22
+msgid "Hide category pane"
+msgstr "Sakrij ploču kategorija"
+
+#: ../src/appfinder-preferences.glade.h:23
+msgid "Hide category panel and show all applications."
+msgstr "Sakrij ploču kategorija i prikaži sve aplikacije"
+
+#: ../src/appfinder-preferences.glade.h:24
 msgid "Categ_ory icon size:"
 msgstr "Veli_čina ikone kategorije:"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "Appearance"
 msgstr "Izgled"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "C_lear Custom Command History"
 msgstr "O_čisti povijest prilagođenih naredbi"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "History"
 msgstr "Povijest "
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "_General"
 msgstr "_Općenito"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Pattern"
 msgstr "Uzorak"
 
-#: ../src/appfinder-preferences.glade.h:28
+#: ../src/appfinder-preferences.glade.h:30
 msgid "Add a new custom action."
 msgstr "Dodaj novu prilagođenu akciju."
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Remove the currently selected action."
 msgstr "Uklonite trenutno odabranu akciju."
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -319,23 +331,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Ako je vrsta postavljena na prefiks, %s će biti zamijenjen nizom nakon uzorka, %S s potpunim tekstom unosa. Za regularne izraze možete koristiti \\0 i \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Co_mmand:"
 msgstr "Na_redba:"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "Patte_rn:"
 msgstr "Uzor_ak:"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "_Type:"
 msgstr "_Vrsta:"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:37
 msgid "_Save match in command history"
 msgstr "_Spremi podudarnu naredbu u povijest naredbi"
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:38
 msgid "Custom _Actions"
 msgstr "Prilagođene _radnje"
 
