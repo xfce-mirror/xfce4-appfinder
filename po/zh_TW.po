@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-24 06:30+0200\n"
-"PO-Revision-Date: 2018-09-14 00:17+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"POT-Creation-Date: 2018-11-25 00:30+0100\n"
+"PO-Revision-Date: 2018-11-26 01:07+0000\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/xfce/xfce4-appfinder/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,35 +50,39 @@ msgstr "類別"
 msgid "Filename"
 msgstr "檔案名稱"
 
-#: ../src/appfinder-model.c:2097
+#: ../src/appfinder-model.c:2101
 msgid "Application has no command"
 msgstr "應用程式沒有指令"
 
-#: ../src/appfinder-model.c:2517
+#: ../src/appfinder-model.c:2520
 msgid "Commands History"
 msgstr "指令歷史"
 
-#: ../src/appfinder-model.c:2541
+#: ../src/appfinder-model.c:2544
 msgid "Bookmarks"
 msgstr "書籤"
 
-#: ../src/appfinder-preferences.c:238
+#: ../src/appfinder-preferences.c:258
 msgid "C_lear"
 msgstr "清除(_L)"
 
-#: ../src/appfinder-preferences.c:239
+#: ../src/appfinder-preferences.c:259
 msgid "This will permanently clear the custom command history."
 msgstr "這會永遠清除自訂指令歷史。"
 
-#: ../src/appfinder-preferences.c:240
+#: ../src/appfinder-preferences.c:260
 msgid "Are you sure you want to clear the command history?"
 msgstr "您確定要清除指令歷史嗎？"
 
-#: ../src/appfinder-preferences.c:350
+#: ../src/appfinder-preferences.c:369
+msgid "_Delete"
+msgstr "刪除(_D)"
+
+#: ../src/appfinder-preferences.c:370
 msgid "The custom action will be deleted permanently."
 msgstr "自訂動作會永遠刪除。"
 
-#: ../src/appfinder-preferences.c:351
+#: ../src/appfinder-preferences.c:371
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "您確定要刪除「%s」樣式？"
@@ -93,68 +97,68 @@ msgstr "應用程式協尋器"
 msgid "Toggle view mode"
 msgstr "切換檢視模式"
 
-#: ../src/appfinder-window.c:352
+#: ../src/appfinder-window.c:355
 msgid "_Preferences"
 msgstr "偏好設定(_P)"
 
-#: ../src/appfinder-window.c:369
+#: ../src/appfinder-window.c:372
 msgid "Close"
 msgstr "關閉"
 
-#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1072
+#: ../src/appfinder-window.c:382 ../src/appfinder-window.c:1075
 msgid "La_unch"
 msgstr "啟動(_U)"
 
-#: ../src/appfinder-window.c:886
+#: ../src/appfinder-window.c:889
 msgid "Failed to launch desktop item editor"
 msgstr "無法啟動桌面項目編輯器"
 
-#: ../src/appfinder-window.c:912
+#: ../src/appfinder-window.c:915
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "這會從您的家目錄永遠移除自訂桌面檔。"
 
-#: ../src/appfinder-window.c:913
+#: ../src/appfinder-window.c:916
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "您確定要還原「%s」？"
 
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:926
 msgid "Failed to remove desktop file"
 msgstr "無法移除桌面檔"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:956
+#: ../src/appfinder-window.c:959
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "若要取消隱藏該項目，您必須從「%s」手動移除桌面檔，或是在同個目錄內開啟檔案並移除「%s」這一列。"
 
-#: ../src/appfinder-window.c:961 ../src/appfinder-window.c:1109
+#: ../src/appfinder-window.c:964 ../src/appfinder-window.c:1112
 msgid "_Hide"
 msgstr "隱藏(_H)"
 
-#: ../src/appfinder-window.c:962
+#: ../src/appfinder-window.c:965
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "您確定要隱藏「%s」？"
 
-#: ../src/appfinder-window.c:1056
+#: ../src/appfinder-window.c:1059
 msgid "Remove From Bookmarks"
 msgstr "移除書籤"
 
-#: ../src/appfinder-window.c:1056
+#: ../src/appfinder-window.c:1059
 msgid "Add to Bookmarks"
 msgstr "加入書籤"
 
-#: ../src/appfinder-window.c:1085
+#: ../src/appfinder-window.c:1088
 msgid "_Edit"
 msgstr "編輯(_E)"
 
-#: ../src/appfinder-window.c:1102
+#: ../src/appfinder-window.c:1105
 msgid "_Revert"
 msgstr "還原(_R)"
 
@@ -278,38 +282,46 @@ msgid "Ite_m icon size:"
 msgstr "項目圖示大小(_M)："
 
 #: ../src/appfinder-preferences.glade.h:22
+msgid "Hide category pane"
+msgstr "隱藏分類面板"
+
+#: ../src/appfinder-preferences.glade.h:23
+msgid "Hide category panel and show all applications."
+msgstr "隱藏分類面板並顯示所有應用程式。"
+
+#: ../src/appfinder-preferences.glade.h:24
 msgid "Categ_ory icon size:"
 msgstr "類別圖示大小(_O)："
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "Appearance"
 msgstr "外觀"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "C_lear Custom Command History"
 msgstr "清除自訂指令歷史(_L)"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "History"
 msgstr "歷史"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "_General"
 msgstr "一般(_G)"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Pattern"
 msgstr "樣式"
 
-#: ../src/appfinder-preferences.glade.h:28
+#: ../src/appfinder-preferences.glade.h:30
 msgid "Add a new custom action."
 msgstr "加入新的自訂動作。"
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Remove the currently selected action."
 msgstr "移除目前所選的動作。"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -317,23 +329,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "如果類型設為前綴，%s 會被 %S 樣式之後的字串，以完整的輸入文字替換。若採用常規表示式，您可以使用 \\0 與 \\<num>。"
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Co_mmand:"
 msgstr "指令(_M)："
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "Patte_rn:"
 msgstr "樣式(_R)："
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "_Type:"
 msgstr "類型(_T)："
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:37
 msgid "_Save match in command history"
 msgstr "儲存指令歷史中符合的項目(_S)"
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:38
 msgid "Custom _Actions"
 msgstr "自訂動作(_A)"
 
