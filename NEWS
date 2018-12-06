@@ -1,3 +1,20 @@
+4.13.2
+======
+- Convert AppData file to AppStream (Bug #14624)
+- Improved spacing and resizing (Bug #14651)
+- Ignore menu items without name (Bug #14655)
+- Add hide category preference (Bug #14893)
+- Save command in history even if it matches Exec (Bug #9023)
+- Change default action conflicting pattern (Bug #12103)
+- Translation updates: Amharic, Arabic, Asturian, Basque, Belarusian, Bulgarian,
+  Catalan, Chinese (China), Chinese (Hong Kong SAR China), Chinese (Taiwan),
+  Croatian, Czech, Danish, Dutch, English (Australia), Estonian, Finnish,
+  French, Galician, German, Greek, Hebrew, Hungarian, Icelandic, Indonesian,
+  Italian, Japanese, Kazakh, Korean,Lithuanian, Malay, Norwegian Bokmål,
+  Norwegian Nynorsk, Occitan, Polish, Portuguese, Portuguese (Brazil), Romanian,
+  Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Telugu, Thai, Turkish,
+  Ukrainian, Uyghur, Vietnamese
+
 4.13.1
 ======
 - Improved keyboard navigation in List View
