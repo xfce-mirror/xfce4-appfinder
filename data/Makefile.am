@@ -12,7 +12,7 @@ apps_DATA = $(apps_in_files:.desktop.in=.desktop)
 @INTLTOOL_XML_RULE@
 appdatadir = $(datadir)/metainfo
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
-appdata_in_files = org.xfce.xfce4-appfinder.appdata.xml
+appdata_in_files = org.xfce.xfce4-appfinder.appdata.xml.in
 
 EXTRA_DIST = \
 	$(apps_in_files)	\
