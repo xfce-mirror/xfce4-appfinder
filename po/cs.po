@@ -6,14 +6,14 @@
 # Alois Nespor <Alois.Nespor@seznam.cz>, 2004
 # Alois Nešpor <info@aloisnespor.info>, 2013
 # Alois Nešpor <info@aloisnespor.info>, 2014
-# Michal Várady <miko.vaji@gmail.com>, 2015,2017-2018
+# Michal Várady <miko.vaji@gmail.com>, 2015,2017-2019
 # Pavel Borecki <pavel.borecki@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-25 00:30+0100\n"
-"PO-Revision-Date: 2019-01-01 23:06+0000\n"
+"PO-Revision-Date: 2019-01-06 13:53+0000\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/xfce/xfce4-appfinder/language/cs/)\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +69,7 @@ msgstr "_Vyčistit"
 
 #: ../src/appfinder-preferences.c:259
 msgid "This will permanently clear the custom command history."
-msgstr "Tato akce nevratně vymaže historii příkazů daného uživatele."
+msgstr "Tato akce trvale vymaže historii vlastních příkazů."
 
 #: ../src/appfinder-preferences.c:260
 msgid "Are you sure you want to clear the command history?"
@@ -112,13 +112,13 @@ msgstr "Sp_ustit"
 
 #: ../src/appfinder-window.c:889
 msgid "Failed to launch desktop item editor"
-msgstr "Spuštění editoru spouštěče se nezdařilo."
+msgstr "Spuštění editoru položek plochy se nezdařilo."
 
 #: ../src/appfinder-window.c:915
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Tato akce trvale odebere upravený soubor spouštěče z vaší domovské složky."
+msgstr "Tato akce trvale odebere upravený soubor plochy z vašeho domovského adresáře."
 
 #: ../src/appfinder-window.c:916
 #, c-format
@@ -127,7 +127,7 @@ msgstr "Opravdu chcete vrátit zpět „%s“?"
 
 #: ../src/appfinder-window.c:926
 msgid "Failed to remove desktop file"
-msgstr "Odebrání souboru spouštěče se nezdařilo"
+msgstr "Odebrání souboru plochy se nezdařilo"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -136,7 +136,7 @@ msgstr "Odebrání souboru spouštěče se nezdařilo"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Skrytou položku odkryjte ručním odebráním souboru spouštěče z „%s“ nebo tento soubor otevřete a odeberte z něj řádek „%s“."
+msgstr "Skrytou položku odkryjte ručním odebráním souboru plochy z adresáře \"%s\" nebo otevřete soubor ve stejném adresáři a odeberte řádek \"%s\"."
 
 #: ../src/appfinder-window.c:964 ../src/appfinder-window.c:1112
 msgid "_Hide"
@@ -195,7 +195,7 @@ msgstr "Vývojářský tým prostředí Xfce. Všechna práva vyhrazena."
 #: ../src/main.c:247
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Chyby prosíme hlaste na <%s>."
+msgstr "Prosíme, abyste chyby nahlásili na adresu <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Prefix"
@@ -235,7 +235,7 @@ msgstr "Velmi velký"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "Remember last _selected category"
-msgstr "Zapamatovat _si posledně vybranou kategorii"
+msgstr "Zapamatovat _si poslední vybranou kategorii"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
