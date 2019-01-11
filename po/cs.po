@@ -7,14 +7,14 @@
 # Alois Nešpor <info@aloisnespor.info>, 2013
 # Alois Nešpor <info@aloisnespor.info>, 2014
 # Michal Várady <miko.vaji@gmail.com>, 2015,2017-2019
-# Pavel Borecki <pavel.borecki@gmail.com>, 2018
+# Pavel Borecki <pavel.borecki@gmail.com>, 2018-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-25 00:30+0100\n"
-"PO-Revision-Date: 2019-01-06 13:53+0000\n"
-"Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
+"PO-Revision-Date: 2019-01-11 08:13+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/xfce/xfce4-appfinder/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +25,7 @@ msgstr ""
 #. close all windows and quit
 #: ../src/appfinder-gdbus.c:84
 msgid "Forced to quit"
-msgstr "Vynucené ukončení"
+msgstr "Vynuceně ukončeno"
 
 #: ../src/appfinder-category-model.c:147
 msgid "All Applications"
@@ -118,7 +118,7 @@ msgstr "Spuštění editoru položek plochy se nezdařilo."
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Tato akce trvale odebere upravený soubor plochy z vašeho domovského adresáře."
+msgstr "Tato akce trvale odebere upravený soubor spouštěče z vaší domovské složky."
 
 #: ../src/appfinder-window.c:916
 #, c-format
@@ -127,7 +127,7 @@ msgstr "Opravdu chcete vrátit zpět „%s“?"
 
 #: ../src/appfinder-window.c:926
 msgid "Failed to remove desktop file"
-msgstr "Odebrání souboru plochy se nezdařilo"
+msgstr "Odebrání souboru spouštěče se nezdařilo"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -136,7 +136,7 @@ msgstr "Odebrání souboru plochy se nezdařilo"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Skrytou položku odkryjte ručním odebráním souboru plochy z adresáře \"%s\" nebo otevřete soubor ve stejném adresáři a odeberte řádek \"%s\"."
+msgstr "Skrytou položku odkryjte ručním odebráním souboru spouštěče z „%s“ nebo tento soubor otevřete a odeberte z něj řádek „%s“."
 
 #: ../src/appfinder-window.c:964 ../src/appfinder-window.c:1112
 msgid "_Hide"
@@ -145,7 +145,7 @@ msgstr "_Skrýt"
 #: ../src/appfinder-window.c:965
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Opravdu chcete skrýt „%s“?"
+msgstr "Opravdu chcete „%s“ skrýt?"
 
 #: ../src/appfinder-window.c:1059
 msgid "Remove From Bookmarks"
@@ -195,7 +195,7 @@ msgstr "Vývojářský tým prostředí Xfce. Všechna práva vyhrazena."
 #: ../src/main.c:247
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Prosíme, abyste chyby nahlásili na adresu <%s>."
+msgstr "Chyby prosíme hlaste na <%s>."
 
 #: ../src/appfinder-preferences.glade.h:1
 msgid "Prefix"
@@ -239,7 +239,7 @@ msgstr "Zapamatovat _si poslední vybranou kategorii"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
-msgstr "Okno vždy vy_středit"
+msgstr "Okno vždy vystř_edit"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Center the window on startup."
@@ -254,7 +254,7 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Ponechat spuštěnou instanci na pozadí namísto ukončení aplikace po uzavření jejího posledního okna z důvodu zrychlení otevírání nových oken. Tuto možnost zakažte, pokud chcete snížit spotřebu paměti."
+msgstr "Ponechat spuštěnou instanci na pozadí namísto ukončení aplikace po uzavření jejího posledního okna z důvodu zrychlení otevírání nových oken. Pokud chcete snížit spotřebu paměti, tuto možnost vypněte."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Single window"
