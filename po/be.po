@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-25 00:30+0100\n"
-"PO-Revision-Date: 2019-01-16 10:04+0000\n"
+"PO-Revision-Date: 2019-01-22 10:51+0000\n"
 "Last-Translator: Zmicer Turok <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/xfce/xfce4-appfinder/language/be/)\n"
 "MIME-Version: 1.0\n"
@@ -175,7 +175,7 @@ msgstr "Замяніць існы сэрвіс"
 
 #: ../src/main.c:67
 msgid "Quit all instances"
-msgstr "Закрыць усе экземпляры"
+msgstr "Закрыць усе асобнікі"
 
 #: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
