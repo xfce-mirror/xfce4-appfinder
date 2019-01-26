@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# abuyop <abuyop@gmail.com>, 2014-2015,2017-2018
+# abuyop <abuyop@gmail.com>, 2014-2015,2017-2019
 # Puretech <terjemah.puretech@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-24 06:30+0200\n"
-"PO-Revision-Date: 2018-10-26 13:41+0000\n"
+"POT-Creation-Date: 2018-11-25 00:30+0100\n"
+"PO-Revision-Date: 2019-01-26 16:15+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
 "Language-Team: Malay (http://www.transifex.com/xfce/xfce4-appfinder/language/ms/)\n"
 "MIME-Version: 1.0\n"
@@ -48,35 +48,39 @@ msgstr "Kategori"
 msgid "Filename"
 msgstr "Namafail"
 
-#: ../src/appfinder-model.c:2097
+#: ../src/appfinder-model.c:2101
 msgid "Application has no command"
 msgstr "Aplikasi tidak mempunyai arahan"
 
-#: ../src/appfinder-model.c:2517
+#: ../src/appfinder-model.c:2520
 msgid "Commands History"
 msgstr "Sejarah Arahan"
 
-#: ../src/appfinder-model.c:2541
+#: ../src/appfinder-model.c:2544
 msgid "Bookmarks"
 msgstr "Tanda buku"
 
-#: ../src/appfinder-preferences.c:238
+#: ../src/appfinder-preferences.c:258
 msgid "C_lear"
 msgstr "Kosongkan"
 
-#: ../src/appfinder-preferences.c:239
+#: ../src/appfinder-preferences.c:259
 msgid "This will permanently clear the custom command history."
 msgstr "Ini akan mengosongkan sejarah arahan tersuai selamanya."
 
-#: ../src/appfinder-preferences.c:240
+#: ../src/appfinder-preferences.c:260
 msgid "Are you sure you want to clear the command history?"
 msgstr "Anda pasti mahu mengosongkan sejarah arahan tersuai?"
 
-#: ../src/appfinder-preferences.c:350
+#: ../src/appfinder-preferences.c:369
+msgid "_Delete"
+msgstr "Pa_dam"
+
+#: ../src/appfinder-preferences.c:370
 msgid "The custom action will be deleted permanently."
 msgstr "Tindakan tersuai akan dipadam selamanya."
 
-#: ../src/appfinder-preferences.c:351
+#: ../src/appfinder-preferences.c:371
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Adakah anda pasti mahu memadam corak \"%s\"?"
@@ -91,68 +95,68 @@ msgstr "Pencari Aplikasi"
 msgid "Toggle view mode"
 msgstr "Toggle mod paparan"
 
-#: ../src/appfinder-window.c:352
+#: ../src/appfinder-window.c:355
 msgid "_Preferences"
 msgstr "_Keutamaan"
 
-#: ../src/appfinder-window.c:369
+#: ../src/appfinder-window.c:372
 msgid "Close"
 msgstr "Tutup"
 
-#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1072
+#: ../src/appfinder-window.c:382 ../src/appfinder-window.c:1075
 msgid "La_unch"
 msgstr "Lancar"
 
-#: ../src/appfinder-window.c:886
+#: ../src/appfinder-window.c:889
 msgid "Failed to launch desktop item editor"
 msgstr "Gagal melancarkan penyunting item desktop"
 
-#: ../src/appfinder-window.c:912
+#: ../src/appfinder-window.c:915
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Ini akan membuang fail desktop tersuai dari direktori home anda selamanya."
 
-#: ../src/appfinder-window.c:913
+#: ../src/appfinder-window.c:916
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Anda pasti untuk kembalikan \"%s\"?"
 
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:926
 msgid "Failed to remove desktop file"
 msgstr "Gagal membuang fail desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:956
+#: ../src/appfinder-window.c:959
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Untuk memaparkan item yang anda buang secara manual fail desktop dari \"%s\" atau membuka fail dari direktori yang sama dan membuang baris \"%s\"."
 
-#: ../src/appfinder-window.c:961 ../src/appfinder-window.c:1109
+#: ../src/appfinder-window.c:964 ../src/appfinder-window.c:1112
 msgid "_Hide"
 msgstr "_Sembunyikan"
 
-#: ../src/appfinder-window.c:962
+#: ../src/appfinder-window.c:965
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Anda pasti untuk sembunyi \"%s\"?"
 
-#: ../src/appfinder-window.c:1056
+#: ../src/appfinder-window.c:1059
 msgid "Remove From Bookmarks"
 msgstr "Buang Dari Tanda Buku"
 
-#: ../src/appfinder-window.c:1056
+#: ../src/appfinder-window.c:1059
 msgid "Add to Bookmarks"
 msgstr "Tambah kepada Tandabuku"
 
-#: ../src/appfinder-window.c:1085
+#: ../src/appfinder-window.c:1088
 msgid "_Edit"
 msgstr "_Sunting"
 
-#: ../src/appfinder-window.c:1102
+#: ../src/appfinder-window.c:1105
 msgid "_Revert"
 msgstr "K_embali"
 
@@ -276,38 +280,46 @@ msgid "Ite_m icon size:"
 msgstr "Saiz ikon ite_m:"
 
 #: ../src/appfinder-preferences.glade.h:22
+msgid "Hide category pane"
+msgstr "Sembunyi anak tetingkap kategori"
+
+#: ../src/appfinder-preferences.glade.h:23
+msgid "Hide category panel and show all applications."
+msgstr "Sembunyi panel kategori dan tunjuk semua aplikasi."
+
+#: ../src/appfinder-preferences.glade.h:24
 msgid "Categ_ory icon size:"
 msgstr "Saiz ikon kateg_ori:"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "Appearance"
 msgstr "Penampilan"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "C_lear Custom Command History"
 msgstr "Kosongkan Sejarah Arahan Tersuai"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "History"
 msgstr "Sejarah"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "_General"
 msgstr "_Am"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Pattern"
 msgstr "Corak"
 
-#: ../src/appfinder-preferences.glade.h:28
+#: ../src/appfinder-preferences.glade.h:30
 msgid "Add a new custom action."
 msgstr "Tambah tindakan tersuai baharu."
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Remove the currently selected action."
 msgstr "Buang tindakan dipilih pada masa ini."
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -315,23 +327,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Jika jenis ditetapkan ke awalan, %s akan ditukar dengan rentetan selepas corak, %S dengan kemasukan teks lengkap. Untuk regular expression anda boelh menggunakan \\0 dan \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Co_mmand:"
 msgstr "Arahan:"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "Patte_rn:"
 msgstr "Corak:"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "_Type:"
 msgstr "_Jenis:"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:37
 msgid "_Save match in command history"
 msgstr "_Simpan yang sepadan dalam sejarah arahan"
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:38
 msgid "Custom _Actions"
 msgstr "Tind_akan Tersuai"
 
