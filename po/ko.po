@@ -6,8 +6,8 @@
 # Allen Choi <byunghyun.choi@gmail.com>, 2005
 # 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2017-2018
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2011-2015,2018
-# Sungjin Kang <potopro@gmail.com>, 2013
-# Sungjin Kang <potopro@gmail.com>, 2013
+# Thomas Sungjin Kang <potopro@gmail.com>, 2013
+# Thomas Sungjin Kang <potopro@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
