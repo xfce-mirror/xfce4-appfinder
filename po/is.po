@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Sveinn í Felli <sv1@fellsnet.is>, 2014-2015,2017-2018
+# Sveinn í Felli <sv1@fellsnet.is>, 2011,2013-2015,2017-2019
 # Sveinn í Felli <sv1@fellsnet.is>, 2018
 # Sveinn í Felli <sv1@fellsnet.is>, 2011-2013
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-25 00:30+0100\n"
-"PO-Revision-Date: 2018-11-29 06:31+0000\n"
+"PO-Revision-Date: 2019-05-10 11:28+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic (http://www.transifex.com/xfce/xfce4-appfinder/language/is/)\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 #. close all windows and quit
 #: ../src/appfinder-gdbus.c:84
 msgid "Forced to quit"
-msgstr "Þvinga til að slökkva"
+msgstr "Þvingað til að slökkva"
 
 #: ../src/appfinder-category-model.c:147
 msgid "All Applications"
