@@ -154,8 +154,6 @@ struct _XfceAppfinderWindow
   GtkWidget                  *bbox;
   GtkWidget                  *button_launch;
   GtkWidget                  *button_preferences;
-  GtkWidget                  *bin_collapsed;
-  GtkWidget                  *bin_expanded;
 
   GarconMenuDirectory        *filter_category;
   gchar                      *filter_text;
@@ -199,7 +197,7 @@ xfce_appfinder_window_class_init (XfceAppfinderWindowClass *klass)
 static void
 xfce_appfinder_window_init (XfceAppfinderWindow *window)
 {
-  GtkWidget          *vbox, *vbox2;
+  GtkWidget          *vbox;
   GtkWidget          *entry;
   GtkWidget          *pane;
   GtkWidget          *scroll;
@@ -250,14 +248,12 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_widget_set_halign(image, GTK_ALIGN_CENTER);
   gtk_container_add (GTK_CONTAINER (hbox), image);
   gtk_widget_show (image);
-
-  vbox2 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-  gtk_box_pack_start (GTK_BOX (hbox), vbox2, TRUE, TRUE, 0);
-  gtk_widget_show (vbox2);
   
   window->entry = entry = gtk_entry_new ();
   gtk_widget_set_halign(entry, GTK_ALIGN_FILL);
-  gtk_container_add (GTK_CONTAINER (vbox2), entry);
+  gtk_widget_set_valign (entry, GTK_ALIGN_CENTER);
+  gtk_widget_set_hexpand (entry, TRUE);
+  gtk_container_add (GTK_CONTAINER (hbox), entry);
   g_signal_connect (G_OBJECT (entry), "icon-release",
       G_CALLBACK (xfce_appfinder_window_entry_icon_released), window);
   g_signal_connect (G_OBJECT (entry), "realize",
@@ -283,11 +279,6 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_entry_completion_set_popup_completion (completion, TRUE);
   gtk_entry_completion_set_popup_single_match (completion, TRUE);
   gtk_entry_completion_set_inline_completion (completion, TRUE);
-
-  window->bin_collapsed = gtk_paned_new(GTK_ORIENTATION_HORIZONTAL);
-  gtk_box_pack_start (GTK_BOX (vbox2), window->bin_collapsed, FALSE, TRUE, 0);
-  gtk_widget_show (window->bin_collapsed);
-
 
   window->paned = pane = gtk_paned_new (GTK_ORIENTATION_HORIZONTAL);
   gtk_box_pack_start (GTK_BOX (vbox), pane, TRUE, TRUE, 0);
@@ -345,11 +336,8 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   /* set the icon or tree view */
   xfce_appfinder_window_view (window);
 
-  window->bin_expanded = gtk_paned_new(GTK_ORIENTATION_HORIZONTAL);
-  gtk_box_pack_start (GTK_BOX (vbox), window->bin_expanded, FALSE, TRUE, 0);
-  gtk_widget_show (window->bin_expanded);
-
   window->bbox = hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+  gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, TRUE, 0);
   gtk_widget_show (hbox);
 
   window->button_preferences = button = gtk_button_new_with_mnemonic (_("_Preferences"));
@@ -1908,7 +1896,6 @@ xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
 {
   GdkGeometry         hints;
   gint                width;
-  GtkWidget          *parent;
   GtkEntryCompletion *completion;
 
   APPFINDER_DEBUG ("set expand = %s", expanded ? "true" : "false");
@@ -1930,19 +1917,8 @@ xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
       gtk_window_set_geometry_hints (GTK_WINDOW (window), NULL, &hints, GDK_HINT_MAX_SIZE);
     }
 
-  /* repack the button box */
-  g_object_ref (G_OBJECT (window->bbox));
-  parent = gtk_widget_get_parent (window->bbox);
-  if (parent != NULL)
-    gtk_container_remove (GTK_CONTAINER (parent), window->bbox);
-  if (expanded)
-    gtk_container_add (GTK_CONTAINER (window->bin_expanded), window->bbox);
-  else
-    gtk_container_add (GTK_CONTAINER (window->bin_collapsed), window->bbox);
-  gtk_widget_set_visible (window->bin_expanded, expanded);
-  gtk_widget_set_visible (window->bin_collapsed, !expanded);
+  /* show/hide preferences button */
   gtk_widget_set_visible (window->button_preferences, expanded);
-  g_object_unref (G_OBJECT (window->bbox));
 
   /* show/hide pane with treeviews */
   gtk_widget_set_visible (window->paned, expanded);
