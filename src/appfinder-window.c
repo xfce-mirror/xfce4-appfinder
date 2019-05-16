@@ -566,6 +566,7 @@ static void
 xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
 {
   gint                   width = 0;
+  gint                   text_column_idx, column_idx = 0;
   XfceAppfinderIconSize  icon_size;
   GtkOrientation         item_orientation = GTK_ORIENTATION_VERTICAL;
   GList                 *renderers;
@@ -616,14 +617,23 @@ xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
   gtk_icon_view_set_item_orientation (GTK_ICON_VIEW (window->view), item_orientation);
   gtk_icon_view_set_item_width (GTK_ICON_VIEW (window->view), width);
 
-  if (item_orientation == GTK_ORIENTATION_HORIZONTAL)
-    {
-      /* work around the yalign = 0.0 gtk uses */
-      renderers = gtk_cell_layout_get_cells (GTK_CELL_LAYOUT (window->view));
-      for (li = renderers; li != NULL; li = li->next)
-        g_object_set (li->data, "yalign", 0.5, NULL);
-      g_list_free (renderers);
+  renderers = gtk_cell_layout_get_cells (GTK_CELL_LAYOUT (window->view));
+  text_column_idx = gtk_icon_view_get_text_column (GTK_ICON_VIEW (window->view));
+
+  for (li = renderers; li != NULL; li = li->next, column_idx++) {
+    /* work around the yalign = 0.0 gtk uses */
+    if (item_orientation == GTK_ORIENTATION_HORIZONTAL) {
+      g_object_set (li->data, "yalign", 0.5, NULL);
     }
+
+    /* do not wrap when text beside icons is enabled */
+    if (column_idx == text_column_idx) {
+      g_object_set (li->data, "ellipsize",
+                    item_orientation == GTK_ORIENTATION_HORIZONTAL ?
+                    PANGO_ELLIPSIZE_END : PANGO_ELLIPSIZE_NONE, NULL);
+    }
+  }
+  g_list_free (renderers);
 }
 
 
