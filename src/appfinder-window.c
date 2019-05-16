@@ -565,7 +565,7 @@ xfce_appfinder_window_window_state_event (GtkWidget           *widget,
 static void
 xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
 {
-  gint                   width = 0;
+  gint                   width = 0, padding = 0;
   gint                   text_column_idx, column_idx = 0;
   XfceAppfinderIconSize  icon_size;
   GtkOrientation         item_orientation = GTK_ORIENTATION_VERTICAL;
@@ -580,30 +580,37 @@ xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
   switch (icon_size)
     {
     case XFCE_APPFINDER_ICON_SIZE_SMALLEST:
+      padding = 2;
       width = 16 * 3.75;
       break;
 
     case XFCE_APPFINDER_ICON_SIZE_SMALLER:
+      padding = 2;
       width = 24 * 3;
       break;
 
     case XFCE_APPFINDER_ICON_SIZE_SMALL:
+      padding = 4;
       width = 36 * 2.5;
       break;
 
     case XFCE_APPFINDER_ICON_SIZE_NORMAL:
+      padding = 4;
       width = 48 * 2;
       break;
 
     case XFCE_APPFINDER_ICON_SIZE_LARGE:
+      padding = 6;
       width = 64 * 1.5;
       break;
 
     case XFCE_APPFINDER_ICON_SIZE_LARGER:
+      padding = 6;
       width = 96 * 1.75;
       break;
 
     case XFCE_APPFINDER_ICON_SIZE_LARGEST:
+      padding = 6;
       width = 128 * 1.25;
       break;
     }
@@ -615,6 +622,7 @@ xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
     }
 
   gtk_icon_view_set_item_orientation (GTK_ICON_VIEW (window->view), item_orientation);
+  gtk_icon_view_set_item_padding (GTK_ICON_VIEW (window->view), padding);
   gtk_icon_view_set_item_width (GTK_ICON_VIEW (window->view), width);
 
   renderers = gtk_cell_layout_get_cells (GTK_CELL_LAYOUT (window->view));
@@ -717,6 +725,7 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
       gtk_icon_view_set_pixbuf_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_ICON);
       gtk_icon_view_set_text_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_TITLE);
       gtk_icon_view_set_tooltip_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP);
+      gtk_icon_view_set_row_spacing (GTK_ICON_VIEW (view), 0);
       xfce_appfinder_window_set_item_width (window);
 
       g_signal_connect_swapped (G_OBJECT (view), "selection-changed",
