@@ -1,3 +1,17 @@
+4.13.3
+======
+- Update minimal required glib to 2.42
+- Allow case-insensitive search
+- Do not wrap when Text beside icons is enabled (Bug #8490)
+- Icon view: reduce padding/spacing with small icons
+- Translation updates: Albanian, Arabic, Asturian, Basque, Belarusian,
+  Bulgarian, Catalan, Chinese, (China), Chinese (Hong Kong), Czech, Danish,
+  English (Great Britain), Estonian, Finnish, French, Galician, German, Greek,
+  Icelandic, Indonesian, Italian, Japanese, Kazakh, Korean, Malay, Norwegian
+  Bokmål, Norwegian Nynorsk, Occitan, Portuguese, Romanian, Russian, Serbian,
+  Slovak, Slovenian, Spanish, Swedish, Telugu, Thai, Ukrainian, Uyghur,
+  Vietnamese
+
 4.13.2
 ======
 - Convert AppData file to AppStream (Bug #14624)
