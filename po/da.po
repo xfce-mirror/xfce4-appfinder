@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-25 00:30+0100\n"
-"PO-Revision-Date: 2019-05-10 20:30+0000\n"
+"PO-Revision-Date: 2019-05-17 15:12+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce4-appfinder/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -358,7 +358,7 @@ msgstr "Find og start programmer, som er installeret på systemet"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr "Kør program..."
+msgstr "Kør program ..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Run a program"
