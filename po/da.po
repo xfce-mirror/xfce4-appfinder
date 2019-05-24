@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-25 00:30+0100\n"
-"PO-Revision-Date: 2019-05-17 15:12+0000\n"
+"PO-Revision-Date: 2019-05-24 12:31+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce4-appfinder/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr ""
 #. close all windows and quit
 #: ../src/appfinder-gdbus.c:84
 msgid "Forced to quit"
-msgstr "Tvunget til afslut"
+msgstr "Tvunget til at afslutte"
 
 #: ../src/appfinder-category-model.c:147
 msgid "All Applications"
@@ -55,7 +55,7 @@ msgstr "Filnavn"
 
 #: ../src/appfinder-model.c:2101
 msgid "Application has no command"
-msgstr "Program har ingen kommando"
+msgstr "Programmet har ingen kommando"
 
 #: ../src/appfinder-model.c:2520
 msgid "Commands History"
@@ -75,7 +75,7 @@ msgstr "Det vil rydde din historik over tilpassede kommandoer permanent."
 
 #: ../src/appfinder-preferences.c:260
 msgid "Are you sure you want to clear the command history?"
-msgstr "Er du sikker på, at du vil rydde kommandohistorik?"
+msgstr "Er du sikker på, at du vil rydde kommandohistorikken?"
 
 #: ../src/appfinder-preferences.c:369
 msgid "_Delete"
@@ -120,12 +120,12 @@ msgstr "Kunne ikke starte redigering af skrivebordselement"
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Det vil permanent fjerne din tilpassede skrivbordsfil fra din hjemmemappe."
+msgstr "Det vil fjerne den tilpassede skrivebordsfil fra din hjemmemappe permanent."
 
 #: ../src/appfinder-window.c:916
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Er du sikker på, at du vil vende tilbage til \"%s\"?"
+msgstr "Er du sikker på, at du vil tilbageføre \"%s\"?"
 
 #: ../src/appfinder-window.c:926
 msgid "Failed to remove desktop file"
@@ -138,7 +138,7 @@ msgstr "Kunne ikke fjerne skrivebordsfil"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "For at vise skjulte elementer er du tvunget til manuelt at fjerne skrivebordsfilen fra \"%s\" eller åbne filen i den samme mappe og fjerne linjen \"%s\"."
+msgstr "For at vise det skjulte element skal du fjerne skrivebordsfilen manuelt fra \"%s\" eller åbne filen i den samme mappe og fjerne linjen \"%s\"."
 
 #: ../src/appfinder-window.c:964 ../src/appfinder-window.c:1112
 msgid "_Hide"
@@ -167,7 +167,7 @@ msgstr "_Tilbagefør"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
-msgstr "Start i sammenklappet tilstand"
+msgstr "Start i sammenfoldet tilstand"
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
@@ -249,14 +249,14 @@ msgstr "Centrér vinduet ved opstart."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr "Hold kørende _instans i baggrunden"
+msgstr "Hold _instans kørende i baggrunden"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Lad programmet vedblive med at køre når det sidste vindue lukkes, for derved hurtigt at kunne åbne nye vinduer. Du kan vælge at deaktivere denne funktion med henblik på at reducere hukommelsesforbruget."
+msgstr "Lad programmet køre når det sidste vindue lukkes, for derved at kunne åbne nye vinduer hurtigere. Du kan deaktivere det hvis du vil reducere hukommelsesforbruget."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Single window"
@@ -266,7 +266,7 @@ msgstr "Ét vindue"
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
-msgstr "Åbn kun ét vindue af gangen, når en instans kører i baggrunden."
+msgstr "Åbn kun ét vindue af gangen, når der kører en instans i baggrunden."
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Behaviour"
@@ -274,7 +274,7 @@ msgstr "Opførsel"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_View items as icons"
-msgstr "_Fremvis elementer som ikoner"
+msgstr "_Vis elementer som ikoner"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Text besi_de icons"
@@ -330,7 +330,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Hvis typen er sat til præfiks, %s vil blive erstattet med strengen efter mønstret, %S med den fulde tekst. For regulære udtryk kan du bruge \\0 og \\<num>."
+msgstr "Hvis typen er indstillet til præfiks, så vil %s blive erstattet med strengen efter mønstret, %S med den fulde tekst. Du kan bruge \\0 og \\<num> for regulære udtryk."
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Co_mmand:"
@@ -346,7 +346,7 @@ msgstr "_Type:"
 
 #: ../src/appfinder-preferences.glade.h:37
 msgid "_Save match in command history"
-msgstr "_Gem overensstemmelse i kommandohistorikken"
+msgstr "_Gem match i kommandohistorikken"
 
 #: ../src/appfinder-preferences.glade.h:38
 msgid "Custom _Actions"
@@ -354,7 +354,7 @@ msgstr "Tilpassede _handlinger"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Find og start programmer, som er installeret på systemet"
+msgstr "Find og start programmer, som er installeret på dit system."
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
