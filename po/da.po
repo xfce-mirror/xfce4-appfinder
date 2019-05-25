@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-25 00:30+0100\n"
-"PO-Revision-Date: 2019-05-24 12:31+0000\n"
+"PO-Revision-Date: 2019-05-25 01:05+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce4-appfinder/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -98,7 +98,7 @@ msgstr "Programfinder"
 
 #: ../src/appfinder-window.c:276
 msgid "Toggle view mode"
-msgstr "Skift mellem visningstilstande"
+msgstr "Skift visningstilstand"
 
 #: ../src/appfinder-window.c:355
 msgid "_Preferences"
