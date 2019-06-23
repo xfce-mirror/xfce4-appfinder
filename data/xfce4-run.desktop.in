@@ -8,4 +8,4 @@ Terminal=false
 Categories=Utility;X-XFCE;X-Xfce-Toplevel;
 OnlyShowIn=XFCE;
 _Name=Run Program...
-_Comment=Run a program
+_Comment=Enter a command you want to launch
