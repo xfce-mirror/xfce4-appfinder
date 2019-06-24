@@ -8,10 +8,10 @@
 # Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006,2008
 # Anthony Ivanoff <a-i@bk.ru>, 2005
 # Artem Zolochevskiy <artem.zolochevskiy@gmail.com>, 2011
-# Al, 2018
+# AlexanderFilev, 2018
 # Denis Koryavov <dkoryavov@yandex.ru>, 2009-2010
 # Dmitrij Smirnov <other@igus.lv>, 2010
-# Igor <f2404@yandex.ru>, 2017-2018
+# Igor <f2404@yandex.ru>, 2017-2019
 # Maxim Zenin <webmechanics@gmail.com>, 2006
 # NIkitaBelobrov <qvzqvz@gmail.com>, 2008
 # Sergey Alyoshin <alyoshin.s@gmail.com>, 2014-2015
@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-25 00:30+0100\n"
-"PO-Revision-Date: 2018-11-26 01:28+0000\n"
+"POT-Creation-Date: 2019-06-24 00:30+0200\n"
+"PO-Revision-Date: 2019-06-24 13:57+0000\n"
 "Last-Translator: Igor <f2404@yandex.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/xfce/xfce4-appfinder/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -97,78 +97,78 @@ msgstr "Пользовательское действие будет удале�
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Удалить шаблон «%s»?"
 
-#: ../src/appfinder-window.c:228 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:226 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Поиск приложений"
 
-#: ../src/appfinder-window.c:276
+#: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
 msgstr "Переключить режим отображения"
 
-#: ../src/appfinder-window.c:355
+#: ../src/appfinder-window.c:343
 msgid "_Preferences"
 msgstr "_Настройки"
 
-#: ../src/appfinder-window.c:372
+#: ../src/appfinder-window.c:360
 msgid "Close"
 msgstr "Закрыть"
 
-#: ../src/appfinder-window.c:382 ../src/appfinder-window.c:1075
+#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1082
 msgid "La_unch"
 msgstr "За_пустить"
 
-#: ../src/appfinder-window.c:889
+#: ../src/appfinder-window.c:896
 msgid "Failed to launch desktop item editor"
 msgstr "Не удалось запустить редактор элементов рабочего стола"
 
-#: ../src/appfinder-window.c:915
+#: ../src/appfinder-window.c:922
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Ваш desktop-файл будет навсегда удалён из вашего домашнего каталога."
 
-#: ../src/appfinder-window.c:916
+#: ../src/appfinder-window.c:923
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Возвратить шаблон «%s»?"
 
-#: ../src/appfinder-window.c:926
+#: ../src/appfinder-window.c:933
 msgid "Failed to remove desktop file"
 msgstr "Не удалось удалить desktop-файл"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:959
+#: ../src/appfinder-window.c:966
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Чтобы снова отображать этот элемент, вам придётся вручную удалить desktop-файл из «%s» или открыть этот файл в том же каталоге и удалить строку «%s»."
 
-#: ../src/appfinder-window.c:964 ../src/appfinder-window.c:1112
+#: ../src/appfinder-window.c:971 ../src/appfinder-window.c:1119
 msgid "_Hide"
 msgstr "С_крыть"
 
-#: ../src/appfinder-window.c:965
+#: ../src/appfinder-window.c:972
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Скрыть «%s»?"
 
-#: ../src/appfinder-window.c:1059
+#: ../src/appfinder-window.c:1066
 msgid "Remove From Bookmarks"
 msgstr "Удалить из закладок"
 
-#: ../src/appfinder-window.c:1059
+#: ../src/appfinder-window.c:1066
 msgid "Add to Bookmarks"
 msgstr "Добавить в закладки"
 
-#: ../src/appfinder-window.c:1088
+#: ../src/appfinder-window.c:1095
 msgid "_Edit"
 msgstr "_Правка"
 
-#: ../src/appfinder-window.c:1105
+#: ../src/appfinder-window.c:1112
 msgid "_Revert"
 msgstr "_Отменить"
 
@@ -368,8 +368,8 @@ msgid "Run Program..."
 msgstr "Запустить приложение..."
 
 #: ../data/xfce4-run.desktop.in.h:2
-msgid "Run a program"
-msgstr "Запуск приложения"
+msgid "Enter a command you want to launch"
+msgstr "Введите команду, которую вы хотите запустить"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
