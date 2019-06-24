@@ -5,7 +5,7 @@
 # Translators:
 # Marek Piechut <mco@o2.pl>, 2005
 # Michał Olber <michal@olber.pl>, 2014
-# No Ne, 2017-2018
+# No Ne, 2017-2019
 # Piotr Maliński <riklaunim@gmail.com>, 2006
 # Piotr Sokół <psokol.l10n@gmail.com>, 2009-2013
 # Piotr Strębski <strebski@gmail.com>, 2014-2015
@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-25 00:30+0100\n"
-"PO-Revision-Date: 2018-11-25 10:28+0000\n"
+"POT-Creation-Date: 2019-06-24 00:30+0200\n"
+"PO-Revision-Date: 2019-06-24 09:29+0000\n"
 "Last-Translator: No Ne\n"
 "Language-Team: Polish (http://www.transifex.com/xfce/xfce4-appfinder/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -89,78 +89,78 @@ msgstr "Czynność zostanie trwale usunięta."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Usunąć wzór „%s”?"
 
-#: ../src/appfinder-window.c:228 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:226 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Wyszukiwarka programów"
 
-#: ../src/appfinder-window.c:276
+#: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
 msgstr "Przełącza tryb wyświetlania"
 
-#: ../src/appfinder-window.c:355
+#: ../src/appfinder-window.c:343
 msgid "_Preferences"
 msgstr "P_referencje"
 
-#: ../src/appfinder-window.c:372
+#: ../src/appfinder-window.c:360
 msgid "Close"
 msgstr "Zamknij"
 
-#: ../src/appfinder-window.c:382 ../src/appfinder-window.c:1075
+#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1082
 msgid "La_unch"
 msgstr "_Uruchom"
 
-#: ../src/appfinder-window.c:889
+#: ../src/appfinder-window.c:896
 msgid "Failed to launch desktop item editor"
 msgstr "Nie udało się uruchomić edytora aktywatorów"
 
-#: ../src/appfinder-window.c:915
+#: ../src/appfinder-window.c:922
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Plik aktywatora zostanie trwale usunięty z katalogu użytkownika."
 
-#: ../src/appfinder-window.c:916
+#: ../src/appfinder-window.c:923
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Przywrócić „%s”?"
 
-#: ../src/appfinder-window.c:926
+#: ../src/appfinder-window.c:933
 msgid "Failed to remove desktop file"
 msgstr "Nie udało się usunąć pliku aktywatora"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:959
+#: ../src/appfinder-window.c:966
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Aby ponownie wyświetlić element, należy usunąć plik odpowiedni aktywatora z położenia „%s” lub usunąć z niego wiersz „%s”."
 
-#: ../src/appfinder-window.c:964 ../src/appfinder-window.c:1112
+#: ../src/appfinder-window.c:971 ../src/appfinder-window.c:1119
 msgid "_Hide"
 msgstr "_Ukryj"
 
-#: ../src/appfinder-window.c:965
+#: ../src/appfinder-window.c:972
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Ukryć „%s”?"
 
-#: ../src/appfinder-window.c:1059
+#: ../src/appfinder-window.c:1066
 msgid "Remove From Bookmarks"
 msgstr "Usuń zakładkę"
 
-#: ../src/appfinder-window.c:1059
+#: ../src/appfinder-window.c:1066
 msgid "Add to Bookmarks"
 msgstr "Dodaj zakładkę"
 
-#: ../src/appfinder-window.c:1088
+#: ../src/appfinder-window.c:1095
 msgid "_Edit"
 msgstr "_Edycja"
 
-#: ../src/appfinder-window.c:1105
+#: ../src/appfinder-window.c:1112
 msgid "_Revert"
 msgstr "_Cofnij"
 
@@ -360,8 +360,8 @@ msgid "Run Program..."
 msgstr "Uruchom program..."
 
 #: ../data/xfce4-run.desktop.in.h:2
-msgid "Run a program"
-msgstr "Uruchom program"
+msgid "Enter a command you want to launch"
+msgstr "Proszę wprowadzić polecenie do uruchomienia"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
