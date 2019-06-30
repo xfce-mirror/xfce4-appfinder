@@ -1,3 +1,11 @@
+4.13.4
+======
+- Improve xfce4-run comment (Bug #15473)
+- Translation updates: Armenian, Belarusian, Bulgarian, Catalan,
+  Chinese (Taiwan), Croatian, Czech, Danish, Dutch (Flemish), French, Galician,
+  German, Hungarian, Interlingue, Italian, Lithuanian, Malay, Polish,
+  Portuguese, Russian, Spanish
+
 4.13.3
 ======
 - Update minimal required glib to 2.42
