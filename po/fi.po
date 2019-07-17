@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-24 00:30+0200\n"
-"PO-Revision-Date: 2019-07-16 21:19+0000\n"
+"PO-Revision-Date: 2019-07-17 08:55+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish (http://www.transifex.com/xfce/xfce4-appfinder/language/fi/)\n"
 "MIME-Version: 1.0\n"
@@ -267,7 +267,7 @@ msgstr "Kun istunto on käynnissä taustalla, avaa vain yksi ikkuna kerrallaan."
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Behaviour"
-msgstr "Käytös"
+msgstr "Toiminta"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_View items as icons"
@@ -283,11 +283,11 @@ msgstr "Kohtee_n kuvakekoko:"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Hide category pane"
-msgstr "Piilota kategoriapaneeli"
+msgstr "Piilota luokkapaneeli"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Hide category panel and show all applications."
-msgstr "Piilota kategoriapaneeli ja näytä kaikki sovellukset."
+msgstr "Piilota luokkapaneeli ja näytä kaikki sovellukset."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Categ_ory icon size:"
@@ -295,7 +295,7 @@ msgstr "L_uokkakuvakkeen koko:"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Appearance"
-msgstr "Ulkonäkö"
+msgstr "Ulkoasu"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "C_lear Custom Command History"
