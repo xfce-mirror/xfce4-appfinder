@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-24 00:30+0200\n"
-"PO-Revision-Date: 2019-06-26 04:50+0000\n"
+"PO-Revision-Date: 2019-08-02 05:06+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce4-appfinder/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -350,7 +350,7 @@ msgstr "_Accións personalizadas"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Busque e execute aplicativos instalados no sistema"
+msgstr "Busque e inicie aplicativos instalados no sistema"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
@@ -370,4 +370,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr "O buscador de aplicativos é unha ferramenta para atopar e iniciar os aplicativos instalados no sistema e executar ordes rapidamente. Tamén se pode empregar para engadir iniciadores rapidamente ao panel de Xfce arrastrando un elemento da vista e deixándoo no panel."
+msgstr "O buscador de aplicativos é unha ferramenta para atopar e iniciar os aplicativos instalados no sistema e executar ordes rapidamente. Tamén se pode empregar para engadir iniciadores rapidamente ao panel de Xfce arrastrando un elemento da vista e soltándoo no panel."
