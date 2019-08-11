@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-24 00:30+0200\n"
-"PO-Revision-Date: 2019-07-24 12:41+0000\n"
+"PO-Revision-Date: 2019-08-11 05:39+0000\n"
 "Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/xfce/xfce4-appfinder/language/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -182,7 +182,7 @@ msgstr "Avslutt alle instanser"
 
 #: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
-msgstr "Ikke prøv å bruk eller bli en D-Bus tjeneste"
+msgstr "Ikke prøv å bruk eller bli en D-Bus-tjeneste"
 
 #: ../src/main.c:235
 #, c-format
