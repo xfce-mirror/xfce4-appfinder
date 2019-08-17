@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-24 00:30+0200\n"
-"PO-Revision-Date: 2019-08-02 05:06+0000\n"
+"PO-Revision-Date: 2019-08-17 11:05+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce4-appfinder/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -71,7 +71,7 @@ msgstr "Isto limpará permanentemente o historial de ordes personalizado."
 
 #: ../src/appfinder-preferences.c:260
 msgid "Are you sure you want to clear the command history?"
-msgstr "Confirma que desexa limpar o historial de ordes?"
+msgstr "Desexa realmente limpar o historial de ordes?"
 
 #: ../src/appfinder-preferences.c:369
 msgid "_Delete"
@@ -84,7 +84,7 @@ msgstr "A acción personalizada eliminarase permanentemente."
 #: ../src/appfinder-preferences.c:371
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "Confirma que desexa eliminar o patrón «%s»?"
+msgstr "Desexa realmente eliminar o patrón «%s»?"
 
 #: ../src/appfinder-window.c:226 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
@@ -121,7 +121,7 @@ msgstr "Así vai retirar permanentemente o ficheiro de escritorio personalizado 
 #: ../src/appfinder-window.c:923
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Confirma que desexa reverter «%s»?"
+msgstr "Desexa realmente reverter «%s»?"
 
 #: ../src/appfinder-window.c:933
 msgid "Failed to remove desktop file"
@@ -134,16 +134,16 @@ msgstr "Produciuse un erro ao retirar o ficheiro de escritorio"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Para mostrar de novo o elemento ten que retirar manualmente o ficheiro do escritorio de «%s» ou abrir o ficheiro no mesmo directorio e retirar a liña «%s»."
+msgstr "Para amosar de novo o elemento ten que retirar manualmente o ficheiro do escritorio de «%s» ou abrir o ficheiro no mesmo directorio e retirar a liña «%s»."
 
 #: ../src/appfinder-window.c:971 ../src/appfinder-window.c:1119
 msgid "_Hide"
-msgstr "_Ocultar"
+msgstr "_Agochar"
 
 #: ../src/appfinder-window.c:972
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Confirma que desexa ocultar «%s»?"
+msgstr "Desexa realmente agochar «%s»?"
 
 #: ../src/appfinder-window.c:1066
 msgid "Remove From Bookmarks"
@@ -167,7 +167,7 @@ msgstr "Iniciar no modo contraído"
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
-msgstr "Mostrar información da versión e saír"
+msgstr "Amosar información da versión e saír"
 
 #: ../src/main.c:66
 msgid "Replace the existing service"
