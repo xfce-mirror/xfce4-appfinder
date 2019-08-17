@@ -4,6 +4,7 @@
 # 
 # Translators:
 # كريم أولاد الشلحة <herr.linux88@gmail.com>, 2013
+# clmmbs <msreywel@hotmail.com>, 2019
 # Oukiki Saleh <salehoukiki@gmail.com>, 2016
 # كريم أولاد الشلحة <herr.linux88@gmail.com>, 2013
 # محمد الحرقان <malham1@gmail.com>, 2012
@@ -11,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-25 00:30+0100\n"
-"PO-Revision-Date: 2018-11-24 23:30+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"POT-Creation-Date: 2019-06-24 00:30+0200\n"
+"PO-Revision-Date: 2019-08-17 13:06+0000\n"
+"Last-Translator: clmmbs <msreywel@hotmail.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/xfce/xfce4-appfinder/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +33,7 @@ msgstr "كل التطبيقات"
 
 #: ../src/appfinder-model.c:576
 msgid "Name"
-msgstr "إسم"
+msgstr "اسم"
 
 #: ../src/appfinder-model.c:577
 msgid "Comment"
@@ -48,15 +49,15 @@ msgstr "أصناف"
 
 #: ../src/appfinder-model.c:580
 msgid "Filename"
-msgstr "إسم الملف"
+msgstr "اسم الملف"
 
 #: ../src/appfinder-model.c:2101
 msgid "Application has no command"
-msgstr "التطبيق لا يتوفر على أمر"
+msgstr "التطبيق ليس له أمر"
 
 #: ../src/appfinder-model.c:2520
 msgid "Commands History"
-msgstr "تاريخ الاوامر"
+msgstr "تاريخ الأوامر"
 
 #: ../src/appfinder-model.c:2544
 msgid "Bookmarks"
@@ -72,7 +73,7 @@ msgstr "هذا سيمحو نهائيا تاريخ الأوامر المخصصة.
 
 #: ../src/appfinder-preferences.c:260
 msgid "Are you sure you want to clear the command history?"
-msgstr "متأكد أنك تريد محو تاريخ الاوامر؟"
+msgstr "متأكد أنك تريد محو تاريخ الأوامر؟"
 
 #: ../src/appfinder-preferences.c:369
 msgid "_Delete"
@@ -87,84 +88,84 @@ msgstr "سيتم حذف الإجراء المخصص نهائيا."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "متأكد أنك تريد حذف القالب \"%s\"؟"
 
-#: ../src/appfinder-window.c:228 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:226 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "مكتشف التطبيقات"
 
-#: ../src/appfinder-window.c:276
+#: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
-msgstr "تبديل لوضع العرض"
+msgstr "تبديل نمط العرض"
 
-#: ../src/appfinder-window.c:355
+#: ../src/appfinder-window.c:343
 msgid "_Preferences"
-msgstr ""
+msgstr "_التفضيلات"
 
-#: ../src/appfinder-window.c:372
+#: ../src/appfinder-window.c:360
 msgid "Close"
 msgstr "إغلاق"
 
-#: ../src/appfinder-window.c:382 ../src/appfinder-window.c:1075
+#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1082
 msgid "La_unch"
-msgstr "إطلاق"
+msgstr "بـ_ـدء"
 
-#: ../src/appfinder-window.c:889
+#: ../src/appfinder-window.c:896
 msgid "Failed to launch desktop item editor"
-msgstr "فشل إطلاق محرر عنصر سطح المكتب"
+msgstr "فشل بدء محرر عنصر سطح المكتب"
 
-#: ../src/appfinder-window.c:915
+#: ../src/appfinder-window.c:922
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "هذا سيحذف ملف سطح المكتب المخصص من مجلد المنزل نهائيا."
 
-#: ../src/appfinder-window.c:916
+#: ../src/appfinder-window.c:923
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "متاكد أنك تريد إرجاع \"%s\"؟"
 
-#: ../src/appfinder-window.c:926
+#: ../src/appfinder-window.c:933
 msgid "Failed to remove desktop file"
 msgstr "فشل حذف ملف سطح المكتب"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:959
+#: ../src/appfinder-window.c:966
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "لإلغاء إخفاء العنصر يجب حذف ملف سطح المكتب يدويا من \"%s\" أو فتح الملف في مجلد ما و حذف السطر \"%s\"."
 
-#: ../src/appfinder-window.c:964 ../src/appfinder-window.c:1112
+#: ../src/appfinder-window.c:971 ../src/appfinder-window.c:1119
 msgid "_Hide"
 msgstr "_إخفاء"
 
-#: ../src/appfinder-window.c:965
+#: ../src/appfinder-window.c:972
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "متاكد أنك تريد إخفاء \"%s\"؟"
 
-#: ../src/appfinder-window.c:1059
+#: ../src/appfinder-window.c:1066
 msgid "Remove From Bookmarks"
 msgstr "الحذف من العلامات"
 
-#: ../src/appfinder-window.c:1059
+#: ../src/appfinder-window.c:1066
 msgid "Add to Bookmarks"
 msgstr "أضف إلى العلامات"
 
-#: ../src/appfinder-window.c:1088
+#: ../src/appfinder-window.c:1095
 msgid "_Edit"
 msgstr "_تحرير"
 
-#: ../src/appfinder-window.c:1105
+#: ../src/appfinder-window.c:1112
 msgid "_Revert"
 msgstr ""
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
-msgstr "بدء في الوضع الموسع"
+msgstr "بدء في الوضع المطويّ"
 
 #: ../src/main.c:65
 msgid "Print version information and exit"
@@ -206,11 +207,11 @@ msgstr "التعبير العادي"
 
 #: ../src/appfinder-preferences.glade.h:3
 msgid "Very Small"
-msgstr "صغير جدا"
+msgstr "صغير جداً"
 
 #: ../src/appfinder-preferences.glade.h:4
 msgid "Smaller"
-msgstr "الاصغر"
+msgstr "أصغر"
 
 #: ../src/appfinder-preferences.glade.h:5
 msgid "Small"
@@ -226,7 +227,7 @@ msgstr "كبير"
 
 #: ../src/appfinder-preferences.glade.h:8
 msgid "Larger"
-msgstr "الأكبر"
+msgstr "أكبر"
 
 #: ../src/appfinder-preferences.glade.h:9
 msgid "Very Large"
@@ -257,7 +258,7 @@ msgstr "بدلاً من إنهاء التطبيق عند إغلاق آخر نا�
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Single window"
-msgstr ""
+msgstr "نافذة وحيدة"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid ""
@@ -283,11 +284,11 @@ msgstr "ح_جم أيقونة العنصر:"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Hide category pane"
-msgstr ""
+msgstr "إخفاء لوحة التصنيف"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Hide category panel and show all applications."
-msgstr ""
+msgstr "إخفاء شريط التصنيف وإظهار كلّ التطبيقات."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Categ_ory icon size:"
@@ -358,12 +359,12 @@ msgid "Run Program..."
 msgstr "نفذ البرنامج..."
 
 #: ../data/xfce4-run.desktop.in.h:2
-msgid "Run a program"
-msgstr "نفذ برنامج"
+msgid "Enter a command you want to launch"
+msgstr "أدخل اﻷمر الذي تريد تشغيله"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
-msgstr ""
+msgstr "برنامج لتشغيل التطبيقات واﻷوامر بسرعة"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
@@ -371,4 +372,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr ""
+msgstr "مكتشف التطبيقات أداة لإيجاد وتشغيل التطبيقات المثبتة على نظامك وتنفيذ اﻷوامر بسرعة. يمكن استخدامه أيضاً ﻹضافة مشغلات إلى شريط إكسفس بسرعة عن طريق سحب عنصر من العرض وإفلاته على الشريط."
