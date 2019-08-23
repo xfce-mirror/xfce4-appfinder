@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-24 00:30+0200\n"
-"PO-Revision-Date: 2019-08-17 11:05+0000\n"
+"PO-Revision-Date: 2019-08-23 12:53+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce4-appfinder/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Forzouse a saída"
 
 #: ../src/appfinder-category-model.c:147
 msgid "All Applications"
-msgstr "Todos os aplicativos"
+msgstr "Todas as aplicacións"
 
 #: ../src/appfinder-model.c:576
 msgid "Name"
@@ -51,7 +51,7 @@ msgstr "Nome de ficheiro"
 
 #: ../src/appfinder-model.c:2101
 msgid "Application has no command"
-msgstr "O aplicativo non ten orde"
+msgstr "A aplicación non ten orde"
 
 #: ../src/appfinder-model.c:2520
 msgid "Commands History"
@@ -90,7 +90,7 @@ msgstr "Desexa realmente eliminar o patrón «%s»?"
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
-msgstr "Buscador de aplicativos"
+msgstr "Buscador de aplicacións"
 
 #: ../src/appfinder-window.c:272
 msgid "Toggle view mode"
@@ -110,7 +110,7 @@ msgstr "_Iniciar"
 
 #: ../src/appfinder-window.c:896
 msgid "Failed to launch desktop item editor"
-msgstr "Produciuse un erro ao iniciar o editor de elemento de escritorio"
+msgstr "Produciuse un fallo ao iniciar o editor de elemento de escritorio"
 
 #: ../src/appfinder-window.c:922
 msgid ""
@@ -125,7 +125,7 @@ msgstr "Desexa realmente reverter «%s»?"
 
 #: ../src/appfinder-window.c:933
 msgid "Failed to remove desktop file"
-msgstr "Produciuse un erro ao retirar o ficheiro de escritorio"
+msgstr "Produciuse un fallo ao retirar o ficheiro de escritorio"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -252,7 +252,7 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "No canto de saír do aplicativo ao pechar a derradeira xanela, manter unha instancia en execución para acelerar as xanelas novas que se abran. Se desexa reducir o uso de memoria desactive isto."
+msgstr "No canto de saír da aplicación ao pechar a derradeira xanela, manter unha instancia en execución para acelerar as xanelas novas que se abran. Se desexa reducir o uso de memoria desactive isto."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Single window"
@@ -286,7 +286,7 @@ msgstr "Agochar o panel de categorías"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Hide category panel and show all applications."
-msgstr "Agochar o panel de categorías e amosar todos os aplicativos."
+msgstr "Agochar o panel de categorías e amosar todas as aplicacións."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Categ_ory icon size:"
@@ -350,7 +350,7 @@ msgstr "_Accións personalizadas"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Busque e inicie aplicativos instalados no sistema"
+msgstr "Busque e inicie aplicacións instaladas no sistema"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
@@ -362,7 +362,7 @@ msgstr "Introduza unha orde para iniciar"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
-msgstr "Aplicativo para executar rapidamente aplicativos e ordes"
+msgstr "Aplicación para executar rapidamente aplicacións e ordes"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
@@ -370,4 +370,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr "O buscador de aplicativos é unha ferramenta para atopar e iniciar os aplicativos instalados no sistema e executar ordes rapidamente. Tamén se pode empregar para engadir iniciadores rapidamente ao panel de Xfce arrastrando un elemento da vista e soltándoo no panel."
+msgstr "O buscador de aplicacións é unha ferramenta para atopar e iniciar as aplicacións instaladas no sistema e executar ordes rapidamente. Tamén se pode empregar para engadir iniciadores rapidamente ao panel do Xfce arrastrando un elemento da vista e soltándoo no panel."
