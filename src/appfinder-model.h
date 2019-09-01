@@ -74,7 +74,8 @@ GSList              *xfce_appfinder_model_get_categories         (XfceAppfinderM
 gboolean             xfce_appfinder_model_get_visible            (XfceAppfinderModel        *model,
                                                                   const GtkTreeIter         *iter,
                                                                   const GarconMenuDirectory *category,
-                                                                  const gchar               *string);
+                                                                  const gchar               *string,
+                                                                  const gchar               *string_casefold);
 
 gboolean             xfce_appfinder_model_get_visible_command    (XfceAppfinderModel        *model,
                                                                   const GtkTreeIter         *iter,

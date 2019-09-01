@@ -1982,7 +1982,8 @@ gboolean
 xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
                                   const GtkTreeIter         *iter,
                                   const GarconMenuDirectory *category,
-                                  const gchar               *string)
+                                  const gchar               *string,
+                                  const gchar               *string_casefold)
 {
   ModelItem *item;
   GarconMenuDirectory *bookmarks;
@@ -2019,9 +2020,8 @@ xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
             }
         }
 
-      if (string != NULL
-          && item->key != NULL)
-        return xfce_appfinder_model_fuzzy_match (item->key, string);
+      if (string_casefold != NULL && item->key != NULL)
+        return xfce_appfinder_model_fuzzy_match (item->key, string_casefold);
     }
   else /* command item */
     {
