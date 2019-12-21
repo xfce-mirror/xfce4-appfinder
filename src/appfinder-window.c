@@ -276,9 +276,11 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_entry_completion_set_model (completion, GTK_TREE_MODEL (window->model));
   gtk_entry_completion_set_match_func (completion, xfce_appfinder_window_completion_match_func, window, NULL);
   gtk_entry_completion_set_text_column (completion, XFCE_APPFINDER_MODEL_COLUMN_COMMAND);
-  gtk_entry_completion_set_popup_completion (completion, TRUE);
   gtk_entry_completion_set_popup_single_match (completion, TRUE);
   gtk_entry_completion_set_inline_completion (completion, TRUE);
+
+  if (xfconf_channel_get_bool (window->channel, "/disable-completion", FALSE))
+    gtk_entry_completion_set_popup_completion (completion, FALSE);
 
   window->paned = pane = gtk_paned_new (GTK_ORIENTATION_HORIZONTAL);
   gtk_box_pack_start (GTK_BOX (vbox), pane, TRUE, TRUE, 0);
