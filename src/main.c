@@ -145,7 +145,8 @@ appfinder_window_destroyed (GtkWidget *window)
   if (model_cache == NULL)
     {
       APPFINDER_DEBUG ("main took reference on the main model");
-      model_cache = xfce_appfinder_model_get ();
+      channel = xfconf_channel_get ("xfce4-appfinder");
+      model_cache = xfce_appfinder_model_get (xfconf_channel_get_bool (channel, "/sort-by-frecency", FALSE));
     }
 
   /* remove from internal list */

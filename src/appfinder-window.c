@@ -117,6 +117,13 @@ static gint       xfce_appfinder_window_sort_items                    (GtkTreeMo
                                                                        GtkTreeIter                 *b,
                                                                        gpointer                     data);
 static gboolean   xfce_appfinder_should_sort_icon_view                (void);
+static void       xfce_appfinder_window_update_frecency               (XfceAppfinderWindow         *window,
+                                                                       GtkTreeModel                *model,
+                                                                       const gchar                 *uri);
+static gint       xfce_appfinder_window_sort_items_frecency           (GtkTreeModel                *model,
+                                                                       GtkTreeIter                 *a,
+                                                                       GtkTreeIter                 *b,
+                                                                       gpointer                     data);
 
 struct _XfceAppfinderWindowClass
 {
@@ -218,7 +225,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   xfconf_g_property_bind (window->channel, "/category-icon-size", G_TYPE_UINT,
                           G_OBJECT (window->category_model), "icon-size");
 
-  window->model = xfce_appfinder_model_get ();
+  window->model = xfce_appfinder_model_get (xfconf_channel_get_bool (window->channel, "/sort-by-frecency", FALSE));
   xfconf_g_property_bind (window->channel, "/item-icon-size", G_TYPE_UINT,
                           G_OBJECT (window->model), "icon-size");
 
@@ -702,7 +709,10 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
   gtk_tree_model_filter_set_visible_func (GTK_TREE_MODEL_FILTER (window->filter_model), xfce_appfinder_window_item_visible, window, NULL);
 
   window->sort_model = gtk_tree_model_sort_new_with_model (GTK_TREE_MODEL (window->filter_model));
-  gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items, window->entry, NULL);
+  if (xfconf_channel_get_bool (window->channel, "/sort-by-frecency", FALSE))
+    gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items_frecency, window->entry, NULL);
+  else
+    gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items, window->entry, NULL);
 
   if (icon_view)
     {
@@ -1817,6 +1827,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
   gboolean      regular_command = FALSE;
   gboolean      save_cmd;
   gboolean      only_custom_cmd = FALSE;
+  const gchar  *uri;
 
   screen = gtk_window_get_screen (GTK_WINDOW (window));
   if (gtk_widget_get_visible (window->paned))
@@ -1830,6 +1841,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
       if (xfce_appfinder_window_view_get_selected (window, &model, &iter))
         {
           child_model = model;
+          gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_URI, &uri, -1);
 
           if (GTK_IS_TREE_MODEL_SORT (model) || xfce_appfinder_should_sort_icon_view ())
             {
@@ -1841,6 +1853,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
           gtk_tree_model_filter_convert_iter_to_child_iter (GTK_TREE_MODEL_FILTER (child_model), &child_iter, &iter);
           result = xfce_appfinder_model_execute (window->model, &child_iter, screen, &regular_command, &error);
 
+          xfce_appfinder_window_update_frecency (window, model, uri);
           if (!result && regular_command)
             {
               gtk_tree_model_get (model, &child_iter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
@@ -1884,6 +1897,32 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
 
   if (result && close_on_succeed)
     gtk_widget_destroy (GTK_WIDGET (window));
+}
+
+
+
+static void
+xfce_appfinder_window_update_frecency (XfceAppfinderWindow *window,
+                                        GtkTreeModel        *model,
+                                        const gchar         *uri)
+{
+  GFile      *gfile;
+  gchar      *desktop_id;
+  GError     *error = NULL;
+
+  if (uri != NULL)
+    {
+      gfile = g_file_new_for_uri (uri);
+      desktop_id = g_file_get_basename (gfile);
+      g_object_unref (G_OBJECT (gfile));
+      APPFINDER_DEBUG ("desktop : %s", desktop_id);
+
+      model = gtk_tree_model_filter_get_model (GTK_TREE_MODEL_FILTER (window->filter_model));
+      xfce_appfinder_model_update_frecency (XFCE_APPFINDER_MODEL (model), desktop_id, &error);
+
+      g_free (desktop_id);
+      g_free (error);
+    }
 }
 
 
@@ -1981,6 +2020,35 @@ xfce_appfinder_window_sort_items (GtkTreeModel *model,
   g_free (title_a);
   g_free (title_b);
   return result;
+}
+
+
+
+static gint
+xfce_appfinder_window_sort_items_frecency  (GtkTreeModel *model,
+                                            GtkTreeIter  *a,
+                                            GtkTreeIter  *b,
+                                            gpointer      data)
+{
+  guint        a_freq, b_freq;
+  guint64      a_rec, b_rec;
+  guint        a_res, b_res;
+
+  gtk_tree_model_get (model, a, XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY, &a_freq, -1);
+  gtk_tree_model_get (model, b, XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY, &b_freq, -1);
+
+  gtk_tree_model_get (model, a, XFCE_APPFINDER_MODEL_COLUMN_RECENCY, &a_rec, -1);
+  gtk_tree_model_get (model, b, XFCE_APPFINDER_MODEL_COLUMN_RECENCY, &b_rec, -1);
+
+  a_res = xfce_appfinder_model_calculate_frecency (a_freq, a_rec);
+  b_res = xfce_appfinder_model_calculate_frecency (b_freq, b_rec);
+
+  /* Sort according the frecency */
+  if (b_res - a_res != 0)
+    return b_res - a_res;
+
+  /* If they have the same frecency, fallback to the alphabetical order */
+  return xfce_appfinder_window_sort_items (model, a, b, data);
 }
 
 

@@ -134,6 +134,10 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
       G_CALLBACK (xfce_appfinder_preferences_single_window_sensitive), object);
   xfce_appfinder_preferences_single_window_sensitive (GTK_WIDGET (previous), GTK_WIDGET (object));
 
+  object = gtk_builder_get_object (GTK_BUILDER (preferences), "sort-by-frecency");
+  xfconf_g_property_bind (preferences->channel, "/sort-by-frecency", G_TYPE_BOOLEAN,
+                          G_OBJECT (object), "active");
+
   previous = gtk_builder_get_object (GTK_BUILDER (preferences), "icon-view");
   xfconf_g_property_bind (preferences->channel, "/icon-view", G_TYPE_BOOLEAN,
                           G_OBJECT (previous), "active");
@@ -259,7 +263,7 @@ xfce_appfinder_preferences_clear_history (XfceAppfinderPreferences *preferences)
                            _("This will permanently clear the custom command history."),
                            _("Are you sure you want to clear the command history?")))
     {
-      model = xfce_appfinder_model_get ();
+      model = xfce_appfinder_model_get (xfconf_channel_get_bool (preferences->channel, "/sort-by-frecency", FALSE));
       xfce_appfinder_model_history_clear (model);
       g_object_unref (G_OBJECT (model));
     }
