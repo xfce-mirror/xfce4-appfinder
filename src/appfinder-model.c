@@ -2016,11 +2016,9 @@ xfce_appfinder_model_frequency_collect (XfceAppfinderModel  *model,
               /* look for new commands */
               item = li->data;
               line = g_strndup (contents, end - contents);
-              if (item->item != NULL)
-                {
-                  item->frequency = g_ascii_strtoull (line, NULL, 0);
-                  APPFINDER_DEBUG ("Frequency of the item : %d", item->frequency);
-                }
+              APPFINDER_DEBUG ("%s", line);
+              item->frequency = g_ascii_strtoull (line, NULL, 0);
+              APPFINDER_DEBUG ("Frequency of the item : %d", item->frequency);
             }
           contents = end + 1;
         }
