@@ -35,6 +35,7 @@
 
 #define HISTORY_PATH   "xfce4/xfce4-appfinder/history"
 #define BOOKMARKS_PATH "xfce4/appfinder/bookmarks"
+#define FREQUENCY_PATH "xfce4/appfinder/frequency"
 
 
 static void               xfce_appfinder_model_tree_model_init        (GtkTreeModelIface        *iface);
@@ -103,6 +104,9 @@ static void               xfce_appfinder_model_bookmarks_monitor      (XfceAppfi
 static gboolean           xfce_appfinder_model_fuzzy_match            (const gchar              *source,
                                                                        const gchar              *token);
 
+static void               xfce_appfinder_model_load_frequency         (XfceAppfinderModel       *model);
+static void               xfce_appfinder_model_frequency_collect      (XfceAppfinderModel       *model,
+                                                                       GMappedFile              *mmap);
 
 struct _XfceAppfinderModelClass
 {
@@ -157,6 +161,8 @@ typedef struct
   gchar          *tooltip;
   guint           not_visible : 1;
   guint           is_bookmark : 1;
+
+  guint           frequency;
 
   GdkPixbuf      *icon;
   GdkPixbuf      *icon_large;
@@ -410,6 +416,9 @@ xfce_appfinder_model_get_column_type (GtkTreeModel *tree_model,
     case XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK:
       return G_TYPE_BOOLEAN;
 
+    case XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY:
+      return G_TYPE_UINT;
+
     default:
       g_assert_not_reached ();
       return G_TYPE_INVALID;
@@ -596,6 +605,11 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
     case XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK:
       g_value_init (value, G_TYPE_BOOLEAN);
       g_value_set_boolean (value, item->is_bookmark);
+      break;
+
+    case XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY:
+      g_value_init (value, G_TYPE_UINT);
+      g_value_set_uint (value, item->frequency);
       break;
 
     default:
@@ -1897,7 +1911,7 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
     {
       model->collect_items = g_slist_sort (model->collect_items, xfce_appfinder_model_item_compare);
       model->collect_categories = g_slist_sort (model->collect_categories, xfce_appfinder_model_category_compare);
-
+      xfce_appfinder_model_load_frequency (model);
       model->collect_idle_id = gdk_threads_add_idle_full (G_PRIORITY_LOW, xfce_appfinder_model_collect_idle,
                                                 model, xfce_appfinder_model_collect_idle_destroy);
     }
@@ -1911,6 +1925,181 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
   APPFINDER_DEBUG ("collect thread end");
 
   return NULL;
+}
+
+
+
+static void
+xfce_appfinder_model_load_frequency (XfceAppfinderModel *model)
+{
+  GError             *error = NULL;
+  gchar              *filename;
+  GMappedFile        *mmap;
+  ModelItem          *item;
+  GSList             *li;
+
+  filename = xfce_resource_lookup (XFCE_RESOURCE_CONFIG, FREQUENCY_PATH);
+  if (G_LIKELY (filename != NULL))
+    {
+      APPFINDER_DEBUG ("load frequency from %s", filename);
+
+      mmap = g_mapped_file_new (filename, FALSE, &error);
+      if (G_LIKELY (mmap != NULL))
+        {
+          xfce_appfinder_model_frequency_collect (model, mmap);
+          g_mapped_file_unref (mmap);
+        }
+      else
+        {
+          g_warning ("Failed to open frequency file: %s", error->message);
+          g_clear_error (&error);
+        }
+
+      g_free (filename);
+    }
+  else
+    {
+      APPFINDER_DEBUG ("File not found case");
+      APPFINDER_DEBUG ("===================");
+      for (li = model->collect_items; li; li = li->next)
+        {
+          item = li->data;
+          if (item->item != NULL)
+            {
+              item->frequency = 0;
+              APPFINDER_DEBUG ("Frequency of the item : %d", item->frequency);
+            }
+        }
+    }
+}
+
+
+
+static void
+xfce_appfinder_model_frequency_collect (XfceAppfinderModel  *model,
+                                        GMappedFile         *mmap)
+{
+  gchar       *line;
+  gchar       *end;
+  gchar       *contents;
+  ModelItem   *item;
+  GSList      *li;
+
+  contents = g_mapped_file_get_contents (mmap);
+  if (contents == NULL)
+    {
+      APPFINDER_DEBUG ("Content not found case");
+      APPFINDER_DEBUG ("======================");
+      for (li = model->collect_items; li; li = li->next)
+          {
+            item = li->data;
+            if (item->item != NULL)
+              {
+                item->frequency = 0;
+                APPFINDER_DEBUG ("Frequency of the item : %d", item->frequency);
+              }
+          }
+    }
+  else
+    {
+      APPFINDER_DEBUG ("File found extracting from file case");
+      APPFINDER_DEBUG ("====================================");
+      /* walk the file */
+      for (li = model->collect_items; !g_cancellable_is_cancelled (model->collect_cancelled) && li; li = li->next)
+        {
+          end = strchr (contents, '\n');
+          if (G_UNLIKELY (end == NULL))
+            break;
+
+          if (end != contents)
+            {
+              /* look for new commands */
+              item = li->data;
+              line = g_strndup (contents, end - contents);
+              if (item->item != NULL)
+                {
+                  item->frequency = g_ascii_strtoull (line, NULL, 0);
+                  APPFINDER_DEBUG ("Frequency of the item : %d", item->frequency);
+                }
+            }
+          contents = end + 1;
+        }
+    }
+}
+
+
+
+void
+xfce_appfinder_model_update_frequency (XfceAppfinderModel *model,
+                                       const gchar        *desktop_id)
+{
+  ModelItem    *item;
+  GSList       *li;
+  const gchar  *desktop_id2;
+  static gsize  old_len = 0;
+  GString      *contents;
+  gchar        *filename;
+  GtkTreePath  *path;
+  gint          idx;
+  GtkTreeIter   iter;
+
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
+  appfinder_return_if_fail (desktop_id != NULL);
+
+  contents = g_string_sized_new (old_len);
+
+  /* update the model items */
+  for (idx = 0, li = model->items; li != NULL; li = li->next, idx++)
+    {
+      item = li->data;
+      if (item->item == NULL)
+        continue;
+
+      /* find the item we're trying to add/remove */
+      if (desktop_id != NULL)
+        {
+          desktop_id2 = garcon_menu_item_get_desktop_id (item->item);
+          if (desktop_id2 != NULL
+              && strcmp (desktop_id2, desktop_id) == 0)
+            {
+              /* update frequency */
+              APPFINDER_DEBUG ("Old frequency : %d", item->frequency);
+              item->frequency = item->frequency + 1;
+
+              /* stop searching, continue collecting */
+              desktop_id = NULL;
+
+              /* update model */
+              path = gtk_tree_path_new_from_indices (idx, -1);
+              ITER_INIT (iter, model->stamp, li);
+              gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
+              gtk_tree_path_free (path);
+            }
+        }
+
+      /* collect items' frequency */
+      g_string_append (contents, g_strdup_printf ("%" G_GUINT32_FORMAT, item->frequency));
+      g_string_append_c (contents, '\n');
+    }
+
+  APPFINDER_DEBUG ("saving frequencies");
+
+  /* write new frequencies */
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CONFIG, FREQUENCY_PATH, TRUE);
+  if (G_LIKELY (filename != NULL))
+    {
+      g_file_set_contents (filename, contents->str, contents->len, NULL);
+    }
+  else
+    {
+      APPFINDER_DEBUG ("Unable to create frequency file");
+    }
+
+  /* optimization for next run */
+  old_len = contents->allocated_len;
+
+  g_free (filename);
+  g_string_free (contents, TRUE);
 }
 
 
