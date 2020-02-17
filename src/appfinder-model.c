@@ -2015,12 +2015,15 @@ xfce_appfinder_model_frequency_collect (XfceAppfinderModel  *model,
             {
               /* look for new commands */
               item = li->data;
-              line = g_strndup (contents, end - contents);
-              APPFINDER_DEBUG ("%s", line);
-              item->frequency = g_ascii_strtoull (line, NULL, 0);
-              APPFINDER_DEBUG ("Frequency of the item : %d", item->frequency);
+              if (item->item != NULL)
+                {
+                  line = g_strndup (contents, end - contents);
+                  APPFINDER_DEBUG ("%s", line);
+                  item->frequency = g_ascii_strtoull (line, NULL, 0);
+                  APPFINDER_DEBUG ("Frequency of the item: %d", item->frequency);
+                  contents = end + 1;
+                }
             }
-          contents = end + 1;
         }
     }
 }
@@ -2053,6 +2056,7 @@ xfce_appfinder_model_update_frequency (XfceAppfinderModel *model,
       if (item->item == NULL)
         continue;
 
+      APPFINDER_DEBUG ("item frequency : %d", item->frequency);
       /* find the item we're trying to add/remove */
       if (desktop_id != NULL)
         {
