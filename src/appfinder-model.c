@@ -2032,12 +2032,13 @@ xfce_appfinder_model_frequency_collect (XfceAppfinderModel  *model,
 
 void
 xfce_appfinder_model_update_frequency (XfceAppfinderModel *model,
-                                       const gchar        *desktop_id)
+                                       const gchar        *desktop_id,
+                                       GError            **error)
 {
   ModelItem    *item;
   GSList       *li;
   const gchar  *desktop_id2;
-  static gsize  old_len = 0;
+  // static gsize  old_len = 0;
   GString      *contents;
   gchar        *filename;
   GtkTreePath  *path;
@@ -2045,9 +2046,11 @@ xfce_appfinder_model_update_frequency (XfceAppfinderModel *model,
   GtkTreeIter   iter;
 
   appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
+  appfinder_return_if_fail (error == NULL || *error == NULL);
   appfinder_return_if_fail (desktop_id != NULL);
 
-  contents = g_string_sized_new (old_len);
+  // contents = g_string_sized_new (old_len);
+  contents = g_string_sized_new (0);
 
   /* update the model items */
   for (idx = 0, li = model->items; li != NULL; li = li->next, idx++)
@@ -2094,11 +2097,11 @@ xfce_appfinder_model_update_frequency (XfceAppfinderModel *model,
     }
   else
     {
-      APPFINDER_DEBUG ("Unable to create frequency file");
+      g_set_error_literal (error, 0, 0, "Unable to create bookmarks file");
     }
 
   /* optimization for next run */
-  old_len = contents->allocated_len;
+  // old_len = contents->allocated_len;
 
   g_free (filename);
   g_string_free (contents, TRUE);

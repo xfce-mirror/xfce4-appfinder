@@ -109,8 +109,9 @@ gboolean             xfce_appfinder_model_bookmark_toggle        (XfceAppfinderM
 GarconMenuDirectory *xfce_appfinder_model_get_command_category   (void);
 
 GarconMenuDirectory *xfce_appfinder_model_get_bookmarks_category (void);
-void                      xfce_appfinder_model_update_frequency  (XfceAppfinderModel       *model,
-                                                                  const gchar              *desktop_id);
+void                 xfce_appfinder_model_update_frequency       (XfceAppfinderModel       *model,
+                                                                  const gchar               *desktop_id,
+                                                                  GError                   **error);
 
 G_END_DECLS
 
