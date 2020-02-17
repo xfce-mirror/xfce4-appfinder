@@ -709,7 +709,7 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
   gtk_tree_model_filter_set_visible_func (GTK_TREE_MODEL_FILTER (window->filter_model), xfce_appfinder_window_item_visible, window, NULL);
 
   window->sort_model = gtk_tree_model_sort_new_with_model (GTK_TREE_MODEL (window->filter_model));
-  gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items_frequency, window->entry, NULL);
+  gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items, window->entry, NULL);
 
   if (icon_view)
     {
@@ -1219,12 +1219,14 @@ xfce_appfinder_window_entry_changed_idle (gpointer data)
 
       if (IS_STRING (text))
         {
+          gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (window->sort_model), XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY, GTK_SORT_DESCENDING);
           normalized = g_utf8_normalize (text, -1, G_NORMALIZE_ALL);
           window->filter_text = g_utf8_casefold (normalized, -1);
           g_free (normalized);
         }
       else
         {
+          gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (window->sort_model), GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID, GTK_SORT_ASCENDING);
           window->filter_text = NULL;
         }
 
