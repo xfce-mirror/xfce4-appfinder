@@ -103,8 +103,6 @@ static void               xfce_appfinder_model_bookmarks_monitor      (XfceAppfi
 
 static gboolean           xfce_appfinder_model_fuzzy_match            (const gchar              *source,
                                                                        const gchar              *token);
-
-// static void               xfce_appfinder_model_load_frequency         (XfceAppfinderModel       *model);
 static void               xfce_appfinder_model_frequency_collect      (XfceAppfinderModel       *model,
                                                                        GMappedFile              *mmap);
 
@@ -1966,52 +1964,6 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
   APPFINDER_DEBUG ("collect thread end");
 
   return NULL;
-}
-
-
-
-static void
-xfce_appfinder_model_load_frequency (XfceAppfinderModel *model)
-{
-  GError             *error = NULL;
-  gchar              *filename;
-  GMappedFile        *mmap;
-  ModelItem          *item;
-  GSList             *li;
-
-  filename = xfce_resource_lookup (XFCE_RESOURCE_CONFIG, FREQUENCY_PATH);
-  if (G_LIKELY (filename != NULL))
-    {
-      APPFINDER_DEBUG ("load frequency from %s", filename);
-
-      mmap = g_mapped_file_new (filename, FALSE, &error);
-      if (G_LIKELY (mmap != NULL))
-        {
-          xfce_appfinder_model_frequency_collect (model, mmap);
-          g_mapped_file_unref (mmap);
-        }
-      else
-        {
-          g_warning ("Failed to open frequency file: %s", error->message);
-          g_clear_error (&error);
-        }
-
-      g_free (filename);
-    }
-  else
-    {
-      APPFINDER_DEBUG ("File not found case");
-      APPFINDER_DEBUG ("===================");
-      for (li = model->collect_items; li; li = li->next)
-        {
-          item = li->data;
-          if (item->item != NULL)
-            {
-              item->frequency = 0;
-              APPFINDER_DEBUG ("Frequency of the item : %d", item->frequency);
-            }
-        }
-    }
 }
 
 
