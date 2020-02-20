@@ -710,10 +710,9 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
 
   window->sort_model = gtk_tree_model_sort_new_with_model (GTK_TREE_MODEL (window->filter_model));
   if (xfconf_channel_get_bool (window->channel, "/recent-order", FALSE))
-    {
-      gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items_frecency, window->entry, NULL);
-      APPFINDER_DEBUG ("===== HERE ====");
-    }
+
+    gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items_frecency, window->entry, NULL);
+
   else
     gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items, window->entry, NULL);
 
@@ -1926,6 +1925,7 @@ xfce_appfinder_window_update_frecency (XfceAppfinderWindow *window,
       xfce_appfinder_model_update_frecency (XFCE_APPFINDER_MODEL (model), desktop_id, &error);
 
       g_free (desktop_id);
+      g_free (error);
     }
 }
 
@@ -2047,7 +2047,6 @@ xfce_appfinder_window_sort_items_frecency  (GtkTreeModel *model,
   date_time_now = g_date_time_new_now_local ();
   unix_time_now = g_date_time_to_unix (date_time_now);
   g_date_time_unref (date_time_now);
-  APPFINDER_DEBUG ("Time now: %ld", unix_time_now);
 
   gtk_tree_model_get (model, a,
                       XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY, &a_freq,
@@ -2062,12 +2061,9 @@ xfce_appfinder_window_sort_items_frecency  (GtkTreeModel *model,
   gtk_tree_model_get (model, b,
                       XFCE_APPFINDER_MODEL_COLUMN_RECENCY, &b_rec,
                       -1);
-  APPFINDER_DEBUG ("A freq: %d", a_freq);
-  APPFINDER_DEBUG ("B freq: %d", b_freq);
-  APPFINDER_DEBUG ("A rec: %ld", a_rec);
-  APPFINDER_DEBUG ("B rec: %ld", b_rec);
+
   diff = unix_time_now - a_rec;
-  APPFINDER_DEBUG ("diff a: %ld", diff);
+
   if (diff < 3600)
     a_res = a_freq * 4;
   else if (diff < 86400)
@@ -2078,7 +2074,7 @@ xfce_appfinder_window_sort_items_frecency  (GtkTreeModel *model,
     a_res = a_freq / 4;
   
   diff = unix_time_now - b_rec;
-  APPFINDER_DEBUG ("diff b: %ld", diff);
+
   if (diff < 3600)
     b_res = b_freq * 4;
   else if (diff < 86400)
@@ -2087,9 +2083,6 @@ xfce_appfinder_window_sort_items_frecency  (GtkTreeModel *model,
     b_res = b_freq / 2;
   else
     b_res = b_freq / 4;
-  
-  APPFINDER_DEBUG ("diff between now and a: %d", a_res);
-  APPFINDER_DEBUG ("diff between now and b: %d", b_res);
 
   return b_res - a_res;
 }

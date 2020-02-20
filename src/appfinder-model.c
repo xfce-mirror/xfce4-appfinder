@@ -961,7 +961,7 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
   gboolean     old_not_visible;
   const gchar *desktop_id;
   guint        item_frequency;
-  guint64     *item_recency;
+  gpointer    *item_recency;
 
   /* lookup the item in the list */
   for (li = model->items, idx = 0; li != NULL; li = li->next, idx++)
@@ -988,14 +988,14 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
             {
               item->is_bookmark = g_hash_table_lookup (model->bookmarks_hash, desktop_id) != NULL;
               item_frequency = GPOINTER_TO_UINT(g_hash_table_lookup (model->frequencies_hash, desktop_id));
-              item_recency = ((guint64 *) g_hash_table_lookup (model->recencies_hash, desktop_id));
+              item_recency =  g_hash_table_lookup (model->recencies_hash, desktop_id);
               if (item_frequency)
                 item->frequency = item_frequency;
               else
                 item->frequency = 0;
                 
               if (item_recency)
-                item->recency = *item_recency;
+                item->recency = *((guint64 *)item_recency);
               else
                 item->recency = 0;
             }
@@ -2050,6 +2050,8 @@ xfce_appfinder_model_frequency_collect (XfceAppfinderModel  *model,
               frequency = g_ascii_strtoull (line_contents[1], NULL, 0);
               g_hash_table_insert (model->frequencies_hash, line_contents[0], GUINT_TO_POINTER (frequency));
             }
+          
+          g_free (line);
         }
         
       contents = end + 1;
@@ -2091,6 +2093,8 @@ xfce_appfinder_model_recency_collect   (XfceAppfinderModel  *model,
               *recency_ptr = recency;
               g_hash_table_insert (model->recencies_hash, line_contents[0], recency_ptr);
             }
+          
+          g_free (line);
         }
         
       contents = end + 1;
