@@ -44,6 +44,7 @@ enum
   XFCE_APPFINDER_MODEL_COLUMN_URI,
   XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK,
   XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY,
+  XFCE_APPFINDER_MODEL_COLUMN_RECENCY,
   XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP,
   XFCE_APPFINDER_MODEL_N_COLUMNS,
 };
@@ -109,9 +110,9 @@ gboolean             xfce_appfinder_model_bookmark_toggle        (XfceAppfinderM
 GarconMenuDirectory *xfce_appfinder_model_get_command_category   (void);
 
 GarconMenuDirectory *xfce_appfinder_model_get_bookmarks_category (void);
-void                 xfce_appfinder_model_update_frequency       (XfceAppfinderModel       *model,
-                                                                  const gchar               *desktop_id,
-                                                                  GError                   **error);
+void                 xfce_appfinder_model_update_frecency        (XfceAppfinderModel       *model,
+                                                                  const gchar              *desktop_id,
+                                                                  GError                  **error);
 
 G_END_DECLS
 

@@ -36,6 +36,7 @@
 #define HISTORY_PATH   "xfce4/xfce4-appfinder/history"
 #define BOOKMARKS_PATH "xfce4/appfinder/bookmarks"
 #define FREQUENCY_PATH "xfce4/appfinder/frequency"
+#define RECENCY_PATH   "xfce4/appfinder/recency"
 
 
 static void               xfce_appfinder_model_tree_model_init        (GtkTreeModelIface        *iface);
@@ -105,6 +106,8 @@ static gboolean           xfce_appfinder_model_fuzzy_match            (const gch
                                                                        const gchar              *token);
 static void               xfce_appfinder_model_frequency_collect      (XfceAppfinderModel       *model,
                                                                        GMappedFile              *mmap);
+static void               xfce_appfinder_model_recency_collect        (XfceAppfinderModel       *model,
+                                                                       GMappedFile              *mmap);
 
 struct _XfceAppfinderModelClass
 {
@@ -122,6 +125,7 @@ struct _XfceAppfinderModel
 
   GHashTable            *bookmarks_hash;
   GHashTable            *frequencies_hash;
+  GHashTable            *recencies_hash;
 
   GFileMonitor          *bookmarks_monitor;
   GFile                 *bookmarks_file;
@@ -162,6 +166,7 @@ typedef struct
   guint           is_bookmark : 1;
 
   guint           frequency;
+  guint64         recency;
 
   GdkPixbuf      *icon;
   GdkPixbuf      *icon_large;
@@ -236,6 +241,7 @@ xfce_appfinder_model_init (XfceAppfinderModel *model)
   model->items_hash = g_hash_table_new (g_str_hash, g_str_equal);
   model->bookmarks_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
   model->frequencies_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
+  model->recencies_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
   model->icon_size = XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM;
   model->command_icon = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_STOCK_EXECUTE, model->icon_size);
   model->command_icon_large = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_STOCK_EXECUTE, XFCE_APPFINDER_ICON_SIZE_48);
@@ -369,6 +375,7 @@ xfce_appfinder_model_finalize (GObject *object)
   g_hash_table_destroy (model->items_hash);
   g_hash_table_destroy (model->bookmarks_hash);
   g_hash_table_destroy (model->frequencies_hash);
+  g_hash_table_destroy (model->recencies_hash);
 
   g_object_unref (G_OBJECT (model->command_icon_large));
   g_object_unref (G_OBJECT (model->command_icon));
@@ -420,6 +427,9 @@ xfce_appfinder_model_get_column_type (GtkTreeModel *tree_model,
     case XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY:
       return G_TYPE_UINT;
 
+    case XFCE_APPFINDER_MODEL_COLUMN_RECENCY:
+      return G_TYPE_UINT64;
+      
     default:
       g_assert_not_reached ();
       return G_TYPE_INVALID;
@@ -613,6 +623,11 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
       g_value_set_uint (value, item->frequency);
       break;
 
+    case XFCE_APPFINDER_MODEL_COLUMN_RECENCY:
+      g_value_init (value, G_TYPE_UINT64);
+      g_value_set_uint64 (value, item->recency);
+      break;
+      
     default:
       g_assert_not_reached ();
       break;
@@ -748,6 +763,7 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
   ModelItem          *item;
   const gchar        *desktop_id;
   guint               item_frequency;
+  gpointer           *item_recency_ptr;
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
   appfinder_return_val_if_fail (model->items == NULL, FALSE);
@@ -788,10 +804,19 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
           desktop_id = garcon_menu_item_get_desktop_id (item->item);
           item->is_bookmark = g_hash_table_lookup (model->bookmarks_hash, desktop_id) != NULL;
           item_frequency = GPOINTER_TO_UINT(g_hash_table_lookup (model->frequencies_hash, desktop_id));
+          item_recency_ptr = g_hash_table_lookup (model->recencies_hash, desktop_id);
+          
           if (item_frequency)
             item->frequency = item_frequency;
           else
             item->frequency = 0;
+          
+          if (item_recency_ptr)
+            item->recency = *((guint64 *)item_recency_ptr);
+          else
+            item->recency = 0;
+          
+          APPFINDER_DEBUG ("item_recency_ptr %" G_GUINT64_FORMAT, item->recency);
         }
 
       /* insert in hash table */
@@ -938,6 +963,7 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
   gboolean     old_not_visible;
   const gchar *desktop_id;
   guint        item_frequency;
+  guint64     *item_recency;
 
   /* lookup the item in the list */
   for (li = model->items, idx = 0; li != NULL; li = li->next, idx++)
@@ -964,15 +990,22 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
             {
               item->is_bookmark = g_hash_table_lookup (model->bookmarks_hash, desktop_id) != NULL;
               item_frequency = GPOINTER_TO_UINT(g_hash_table_lookup (model->frequencies_hash, desktop_id));
+              item_recency = ((guint64 *) g_hash_table_lookup (model->recencies_hash, desktop_id));
               if (item_frequency)
                 item->frequency = item_frequency;
               else
                 item->frequency = 0;
+                
+              if (item_recency)
+                item->recency = *item_recency;
+              else
+                item->recency = 0;
             }
           else
             {
               item->is_bookmark = FALSE;
               item->frequency = 0;
+              item->recency = 0;
             }
 
           if (G_LIKELY (item->command != NULL))
@@ -1944,6 +1977,27 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
 
       g_free (filename);
     }
+    
+    /* load recencies */
+  filename = xfce_resource_lookup (XFCE_RESOURCE_CONFIG, RECENCY_PATH);
+  if (G_LIKELY (filename != NULL))
+    {
+      APPFINDER_DEBUG ("load recency from %s", filename);
+
+      mmap = g_mapped_file_new (filename, FALSE, &error);
+      if (G_LIKELY (mmap != NULL))
+        {
+          xfce_appfinder_model_recency_collect (model, mmap);
+          g_mapped_file_unref (mmap);
+        }
+      else
+        {
+          g_warning ("Failed to open recency file: %s", error->message);
+          g_clear_error (&error);
+        }
+
+      g_free (filename);
+    }
 
   if (model->collect_items != NULL
       && !g_cancellable_is_cancelled (model->collect_cancelled))
@@ -1981,9 +2035,7 @@ xfce_appfinder_model_frequency_collect (XfceAppfinderModel  *model,
   contents = g_mapped_file_get_contents (mmap);
   if (contents == NULL)
     return;
-  
-  APPFINDER_DEBUG ("File found extracting from file case");
-  APPFINDER_DEBUG ("====================================");
+    
   /* walk the file */
   for (; !g_cancellable_is_cancelled (model->collect_cancelled);)
     {
@@ -1994,9 +2046,7 @@ xfce_appfinder_model_frequency_collect (XfceAppfinderModel  *model,
       if (end != contents)
         {
           line = g_strndup (contents, end - contents);
-          APPFINDER_DEBUG ("line is: %s", line);
           line_contents = g_strsplit (line, ":", 2);
-          APPFINDER_DEBUG ("Desktop id: %s, has frequency of: %s", line_contents[0], line_contents[1]);
           if (line_contents[0] != NULL && line_contents[1] != NULL)
             {
               frequency = g_ascii_strtoull (line_contents[1], NULL, 0);
@@ -2010,26 +2060,70 @@ xfce_appfinder_model_frequency_collect (XfceAppfinderModel  *model,
 }
 
 
+static void
+xfce_appfinder_model_recency_collect   (XfceAppfinderModel  *model,
+                                        GMappedFile         *mmap)
+{
+  gchar       *line;
+  gchar      **line_contents;
+  gchar       *end;
+  gchar       *contents;
+  guint64      recency;
+  guint64     *recency_ptr;
+  
+  contents = g_mapped_file_get_contents (mmap);
+  if (contents == NULL)
+    return;
+    
+  /* walk the file */
+  for (; !g_cancellable_is_cancelled (model->collect_cancelled);)
+    {
+      end = strchr (contents, '\n');
+      if (G_UNLIKELY (end == NULL))
+        break;
+
+      if (end != contents)
+        {
+          line = g_strndup (contents, end - contents);
+          line_contents = g_strsplit (line, ":", 2);
+          APPFINDER_DEBUG ("Desktop id: %s, has recency of: %s", line_contents[0], line_contents[1]);
+          if (line_contents[0] != NULL && line_contents[1] != NULL)
+            {
+              recency_ptr = g_new0 (guint64 , 1);
+              recency = g_ascii_strtoull (line_contents[1], NULL, 0);
+              *recency_ptr = recency;
+              g_hash_table_insert (model->recencies_hash, line_contents[0], recency_ptr);
+            }
+        }
+        
+      contents = end + 1;
+    }
+}
+
+
 
 void
-xfce_appfinder_model_update_frequency (XfceAppfinderModel *model,
+xfce_appfinder_model_update_frecency (XfceAppfinderModel *model,
                                        const gchar        *desktop_id,
                                        GError            **error)
 {
   ModelItem    *item;
   GSList       *li;
   const gchar  *desktop_id2;
-  GString      *contents;
+  GString      *frequency_contents;
+  GString      *recency_contents;
   gchar        *filename;
   GtkTreePath  *path;
   gint          idx;
   GtkTreeIter   iter;
+  GDateTime    *now;
 
   appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
   appfinder_return_if_fail (error == NULL || *error == NULL);
   appfinder_return_if_fail (desktop_id != NULL);
 
-  contents = g_string_sized_new (0);
+  frequency_contents = g_string_sized_new (0);
+  recency_contents = g_string_sized_new (0);
 
   /* update the model items */
   for (idx = 0, li = model->items; li != NULL; li = li->next, idx++)
@@ -2039,6 +2133,7 @@ xfce_appfinder_model_update_frequency (XfceAppfinderModel *model,
         continue;
 
       APPFINDER_DEBUG ("item frequency : %d", item->frequency);
+      APPFINDER_DEBUG ("item recency: %ld", item->recency);
       desktop_id2 = garcon_menu_item_get_desktop_id (item->item);
       /* find the item we're trying to add/remove */
       if (desktop_id != NULL)
@@ -2047,8 +2142,12 @@ xfce_appfinder_model_update_frequency (XfceAppfinderModel *model,
               && strcmp (desktop_id2, desktop_id) == 0)
             {
               /* update frequency */
-              APPFINDER_DEBUG ("Old frequency : %d", item->frequency);
               item->frequency = item->frequency + 1;
+              
+              /*update recency */
+              now = g_date_time_new_now_local ();
+              item->recency = g_date_time_to_unix (now);
+              g_date_time_unref (now);
 
               /* stop searching, continue collecting */
               desktop_id = NULL;
@@ -2061,32 +2160,43 @@ xfce_appfinder_model_update_frequency (XfceAppfinderModel *model,
             }
         }
 
-      /* collect items' frequency */
+      /* collect items' frecency */
       if (desktop_id2 != NULL)
         {
-          g_string_append (contents, g_strdup_printf ("%s:%" G_GUINT32_FORMAT, desktop_id2, item->frequency));
-          g_string_append_c (contents, '\n');
+          g_string_append (frequency_contents, g_strdup_printf ("%s:%" G_GUINT32_FORMAT, desktop_id2, item->frequency));
+          g_string_append_c (frequency_contents, '\n');
+          
+          g_string_append (recency_contents, g_strdup_printf ("%s:%" G_GUINT64_FORMAT, desktop_id2, item->recency));
+          g_string_append_c (recency_contents, '\n');
         }
     }
 
-  APPFINDER_DEBUG ("saving frequencies");
+  APPFINDER_DEBUG ("saving frecencies");
 
-  /* write new frequencies */
+  /* write new frecencies */
   filename = xfce_resource_save_location (XFCE_RESOURCE_CONFIG, FREQUENCY_PATH, TRUE);
   if (G_LIKELY (filename != NULL))
     {
-      g_file_set_contents (filename, contents->str, contents->len, NULL);
+      g_file_set_contents (filename, frequency_contents->str, frequency_contents->len, NULL);
     }
   else
     {
-      g_set_error_literal (error, 0, 0, "Unable to create bookmarks file");
+      g_set_error_literal (error, 0, 0, "Unable to create frequency file");
+    }
+  
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CONFIG, RECENCY_PATH, TRUE);
+  if (G_LIKELY (filename != NULL))
+    {
+      g_file_set_contents (filename, recency_contents->str, recency_contents->len, NULL);
+    }
+  else
+    {
+      g_set_error_literal (error, 0, 0, "Unable to create recency file");
     }
 
-  /* optimization for next run */
-  // old_len = contents->allocated_len;
-
   g_free (filename);
-  g_string_free (contents, TRUE);
+  g_string_free (frequency_contents, TRUE);
+  g_string_free (recency_contents, TRUE);
 }
 
 
