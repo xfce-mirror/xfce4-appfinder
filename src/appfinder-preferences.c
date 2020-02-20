@@ -134,6 +134,10 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
       G_CALLBACK (xfce_appfinder_preferences_single_window_sensitive), object);
   xfce_appfinder_preferences_single_window_sensitive (GTK_WIDGET (previous), GTK_WIDGET (object));
 
+  object = gtk_builder_get_object (GTK_BUILDER (preferences), "recent-order");
+  xfconf_g_property_bind (preferences->channel, "/recent-order", G_TYPE_BOOLEAN,
+                          G_OBJECT (object), "active");
+
   previous = gtk_builder_get_object (GTK_BUILDER (preferences), "icon-view");
   xfconf_g_property_bind (preferences->channel, "/icon-view", G_TYPE_BOOLEAN,
                           G_OBJECT (previous), "active");

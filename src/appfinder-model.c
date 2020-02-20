@@ -815,8 +815,6 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
             item->recency = *((guint64 *)item_recency_ptr);
           else
             item->recency = 0;
-          
-          APPFINDER_DEBUG ("item_recency_ptr %" G_GUINT64_FORMAT, item->recency);
         }
 
       /* insert in hash table */
@@ -2086,7 +2084,6 @@ xfce_appfinder_model_recency_collect   (XfceAppfinderModel  *model,
         {
           line = g_strndup (contents, end - contents);
           line_contents = g_strsplit (line, ":", 2);
-          APPFINDER_DEBUG ("Desktop id: %s, has recency of: %s", line_contents[0], line_contents[1]);
           if (line_contents[0] != NULL && line_contents[1] != NULL)
             {
               recency_ptr = g_new0 (guint64 , 1);
@@ -2132,8 +2129,6 @@ xfce_appfinder_model_update_frecency (XfceAppfinderModel *model,
       if (item->item == NULL)
         continue;
 
-      APPFINDER_DEBUG ("item frequency : %d", item->frequency);
-      APPFINDER_DEBUG ("item recency: %ld", item->recency);
       desktop_id2 = garcon_menu_item_get_desktop_id (item->item);
       /* find the item we're trying to add/remove */
       if (desktop_id != NULL)
