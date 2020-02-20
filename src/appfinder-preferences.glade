@@ -77,15 +77,31 @@
     <property name="icon_name">gtk-preferences</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkBox" id="dialog-vbox1">
+      <object class="GtkVBox" id="dialog-vbox1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkButtonBox" id="dialog-action_area1">
+          <object class="GtkHButtonBox" id="dialog-action_area1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="button-close">
+                <property name="label">_Close</property>
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">image4</property>
+                <property name="use_underline">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
             <child>
               <object class="GtkButton" id="button-help">
                 <property name="label">_Help</property>
@@ -101,22 +117,6 @@
                 <property name="fill">False</property>
                 <property name="position">0</property>
                 <property name="secondary">True</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkButton" id="button-close">
-                <property name="label">_Close</property>
-                <property name="use_action_appearance">False</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="image">image4</property>
-                <property name="use_underline">True</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">False</property>
-                <property name="position">0</property>
               </packing>
             </child>
           </object>
@@ -338,9 +338,11 @@
                                 <property name="receives_default">False</property>
                                 <property name="tooltip_text" translatable="yes">Hide category panel and show all applications.</property>
                                 <property name="use_underline">True</property>
+                                <property name="active">False</property>
                                 <property name="draw_indicator">True</property>
                               </object>
                               <packing>
+                                <property name="left_attach">0</property>
                                 <property name="right_attach">2</property>
                                 <property name="top_attach">3</property>
                                 <property name="bottom_attach">4</property>
@@ -610,9 +612,6 @@
                     <property name="column_spacing">12</property>
                     <property name="row_spacing">6</property>
                     <child>
-                      <placeholder/>
-                    </child>
-                    <child>
                       <object class="GtkEntry" id="command">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
@@ -703,6 +702,9 @@
                       </packing>
                     </child>
                     <child>
+                      <placeholder/>
+                    </child>
+                    <child>
                       <object class="GtkComboBox" id="type">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -754,8 +756,8 @@
       </object>
     </child>
     <action-widgets>
-      <action-widget response="-11">button-help</action-widget>
       <action-widget response="0">button-close</action-widget>
+      <action-widget response="-11">button-help</action-widget>
     </action-widgets>
   </object>
 </interface>
