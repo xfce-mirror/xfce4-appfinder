@@ -2002,7 +2002,7 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
     {
       model->collect_items = g_slist_sort (model->collect_items, xfce_appfinder_model_item_compare);
       model->collect_categories = g_slist_sort (model->collect_categories, xfce_appfinder_model_category_compare);
-      
+
       model->collect_idle_id = gdk_threads_add_idle_full (G_PRIORITY_LOW, xfce_appfinder_model_collect_idle,
                                                 model, xfce_appfinder_model_collect_idle_destroy);
     }
