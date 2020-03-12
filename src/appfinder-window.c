@@ -1996,6 +1996,6 @@ static gboolean
 xfce_appfinder_should_sort_icon_view (void)
 {
   return gtk_get_major_version () >= 3  &&
-         gtk_get_micro_version () >= 22 &&
+         gtk_get_minor_version () >= 22 &&
          gtk_get_micro_version () >= 27;
 }
