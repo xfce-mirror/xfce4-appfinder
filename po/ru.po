@@ -8,7 +8,7 @@
 # Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006,2008
 # Anthony Ivanoff <a-i@bk.ru>, 2005
 # Artem Zolochevskiy <artem.zolochevskiy@gmail.com>, 2011
-# AlexanderFilev, 2018
+# Alexander Filev, 2018
 # Denis Koryavov <dkoryavov@yandex.ru>, 2009-2010
 # Dmitrij Smirnov <other@igus.lv>, 2010
 # Igor <f2404@yandex.ru>, 2017-2019
