@@ -153,7 +153,6 @@ struct _XfceAppfinderWindow
 
   GtkWidget                  *bbox;
   GtkWidget                  *button_launch;
-  GtkWidget                  *button_preferences;
 
   GarconMenuDirectory        *filter_category;
   gchar                      *filter_text;
@@ -342,12 +341,13 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, TRUE, 0);
   gtk_widget_show (hbox);
 
-  window->button_preferences = button = gtk_button_new_with_mnemonic (_("_Preferences"));
+  button = gtk_button_new_with_mnemonic (_("_Preferences"));
   gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
   g_signal_connect (G_OBJECT (button), "clicked",
       G_CALLBACK (xfce_appfinder_window_preferences), window);
   gtk_widget_set_valign (button, GTK_ALIGN_CENTER);
   gtk_button_set_always_show_image(GTK_BUTTON(button), TRUE);
+  gtk_widget_show (button);
 
   image = gtk_image_new_from_icon_name (XFCE_APPFINDER_STOCK_PREFERENCES, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (button), image);
@@ -1914,9 +1914,6 @@ xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
       hints.max_width = G_MAXINT;
       gtk_window_set_geometry_hints (GTK_WINDOW (window), NULL, &hints, GDK_HINT_MAX_SIZE);
     }
-
-  /* show/hide preferences button */
-  gtk_widget_set_visible (window->button_preferences, expanded);
 
   /* show/hide pane with treeviews */
   gtk_widget_set_visible (window->paned, expanded);
