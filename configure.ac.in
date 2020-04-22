@@ -21,10 +21,10 @@ m4_define([appfinder_debug_default], [ifelse(xfce4_appfinder_version_tag(), [git
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
-AC_COPYRIGHT([Copyright (c) 2008-2015 The Xfce development team. All rights reserved.])
-AC_INIT([xfce4-appfinder], [xfce4_appfinder_version], [http://bugzilla.xfce.org/], [xfce4-appfinder])
-AC_REVISION([$Id$])
+AC_COPYRIGHT([Copyright (c) 2008-2020 The Xfce development team. All rights reserved.])
+AC_INIT([xfce4-appfinder], [xfce4_appfinder_version], [https://bugzilla.xfce.org/], [xfce4-appfinder])
 AC_PREREQ([2.60])
+AC_CONFIG_MACRO_DIRS([m4])
 
 dnl ***************************
 dnl *** Initialize automake ***

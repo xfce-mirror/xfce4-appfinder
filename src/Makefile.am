@@ -61,7 +61,7 @@ install-exec-hook:
 if MAINTAINER_MODE
 
 appfinder-preferences-ui.h: $(srcdir)/appfinder-preferences.glade Makefile
-	$(AM_V_GEN) exo-csource --static --strip-comments --strip-content --name=appfinder_preferences_ui $< >$@
+	$(AM_V_GEN) xdt-csource --static --strip-comments --strip-content --name=appfinder_preferences_ui $< >$@
 
 DISTCLEANFILES = \
 	$(xfce4_appfinder_built_sources)
