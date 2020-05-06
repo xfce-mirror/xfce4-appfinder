@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-24 00:30+0200\n"
-"PO-Revision-Date: 2020-05-05 22:05+0000\n"
+"PO-Revision-Date: 2020-05-06 19:04+0000\n"
 "Last-Translator: Priit Jõerüüt <transifex@joeruut.com>\n"
 "Language-Team: Estonian (http://www.transifex.com/xfce/xfce4-appfinder/language/et/)\n"
 "MIME-Version: 1.0\n"
@@ -111,13 +111,13 @@ msgstr "K_äivita"
 
 #: ../src/appfinder-window.c:896
 msgid "Failed to launch desktop item editor"
-msgstr ""
+msgstr "Töölaua-failide haldusvahendi käivitamine ebaõnnestus"
 
 #: ../src/appfinder-window.c:922
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr ""
+msgstr "See kustutab jäädavalt kohandatud töölauafaili sinu kodukaustast."
 
 #: ../src/appfinder-window.c:923
 #, c-format
@@ -135,7 +135,7 @@ msgstr "Töölauafaili eemaldamine ebaõnnestus"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
+msgstr "Kirje nähtavaks tegemiseks sa peaksid kustutama töölauafaili siit \"%s\" või samast kaustast avama faili ning eemaldama rea \"%s\"."
 
 #: ../src/appfinder-window.c:971 ../src/appfinder-window.c:1119
 msgid "_Hide"
@@ -234,7 +234,7 @@ msgstr "Väga suur"
 
 #: ../src/appfinder-preferences.glade.h:11
 msgid "Remember last _selected category"
-msgstr "Jäta viimati _valitud kategooria"
+msgstr "Jäta meelde viimati _valitud kategooria"
 
 #: ../src/appfinder-preferences.glade.h:12
 msgid "Always c_enter the window"
@@ -246,24 +246,24 @@ msgstr "Käivitamisel paiguta aken keskele."
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Keep running _instance in the background"
-msgstr ""
+msgstr "Jäta rakendused _taustal tööle"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr ""
+msgstr "Selle asemel et sulgeda rakendus peale viimase akna sulgemist jata ta taustal tööle ja kiirenda uute akende avamist. Kui see funktsionaalsus suurendab mälukasutust liiga palju, siis pead ta võib-olla välja lülitama."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Single window"
-msgstr ""
+msgstr "Kasuta üht akent"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
-msgstr ""
+msgstr "Kui rakendus töötab taustal siis ava korraga vaid üks aken."
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Behaviour"
@@ -271,7 +271,7 @@ msgstr "Käitumine"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid "_View items as icons"
-msgstr ""
+msgstr "Ku_va kirjeid ikoonidena"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Text besi_de icons"
@@ -279,19 +279,19 @@ msgstr "Tekst ikooni_de kõrval"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "Ite_m icon size:"
-msgstr ""
+msgstr "Kirjete ikoonide _suurus:"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Hide category pane"
-msgstr ""
+msgstr "Peida kategooriate _paan"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Hide category panel and show all applications."
-msgstr ""
+msgstr "Peida rakenduste kategooriate paan ja näita kõiki rakendusi."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Categ_ory icon size:"
-msgstr ""
+msgstr "Kateg_ooriate ikoonide suurus:"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Appearance"
@@ -327,7 +327,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Kui liigiks on määratud eesliide, siis %s asendatakse sõnega mustri järel ning %S asendatakse terve siestatud tekstiga. Regulaaravaldise jaoks kasuta \\0 ja \\<num>."
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Co_mmand:"
@@ -343,11 +343,11 @@ msgstr "_Liik:"
 
 #: ../src/appfinder-preferences.glade.h:37
 msgid "_Save match in command history"
-msgstr ""
+msgstr "_Salvesta vaste käskude ajalukku"
 
 #: ../src/appfinder-preferences.glade.h:38
 msgid "Custom _Actions"
-msgstr "Kohandatus t_egevused"
+msgstr "Kohandatud t_egevused"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -363,7 +363,7 @@ msgstr "Sisesta käsk, mida soovida käivitada"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
-msgstr ""
+msgstr "Rakendus, mille abil saad kiiretsi käivitada teisi rakendusi ja käske"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
@@ -371,4 +371,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr ""
+msgstr "Rakenduste leidja on töövahend, mis võimaldab leida ja käivitada sinu süsteemi paigaldatud rakendusi ning samas ka kiiresti käivitada käske. Lohistades kirjeid rakenduste leidja loendist XFCE paneeli saad sa kiiresti lisada paneelidesse uusi käivitajaid."
