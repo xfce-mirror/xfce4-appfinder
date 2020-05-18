@@ -8,7 +8,8 @@ SUBDIRS = \
 EXTRA_DIST = \
 	intltool-extract.in \
 	intltool-merge.in \
-	intltool-update.in
+	intltool-update.in \
+	README.md
 
 DISTCLEANFILES = \
 	intltool-extract \
