@@ -1080,6 +1080,11 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
   item->command = g_strdup (command);
   item->icon = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon)));
   item->icon_large = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon_large)));
+  if (g_slist_find_custom(model->items, item, xfce_appfinder_model_item_compare) != NULL)
+    {
+       APPFINDER_DEBUG ("%s is already in the model. no insert", command);
+       return;
+    }
   model->items = g_slist_insert_sorted (model->items, item, xfce_appfinder_model_item_compare);
 
   /* find the item and the position */
