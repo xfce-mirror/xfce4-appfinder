@@ -1071,7 +1071,7 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
 
   if (g_hash_table_lookup (model->items_hash, command) != NULL)
     {
-       APPFINDER_DEBUG ("%s is already in the model. no insert", command);
+       APPFINDER_DEBUG ("Skip adding %s to the model as it's already contained.", command);
        return;
     }
 
