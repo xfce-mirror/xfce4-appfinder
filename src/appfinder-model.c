@@ -1069,17 +1069,17 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
   appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
   appfinder_return_if_fail (IS_STRING (command));
 
-  if (g_hash_table_lookup (model->items_hash, command) != NULL)
-    {
-       APPFINDER_DEBUG ("Skip adding %s to the model as it's already contained.", command);
-       return;
-    }
-
   /* add new command */
   item = g_slice_new0 (ModelItem);
   item->command = g_strdup (command);
   item->icon = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon)));
   item->icon_large = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon_large)));
+  if (g_slist_find_custom (model->items, item, xfce_appfinder_model_item_compare) != NULL)
+    {
+       APPFINDER_DEBUG ("Skip adding %s to the model as it's already contained.", command);
+       g_slice_free(ModelItem, item);
+       return;
+    }
   model->items = g_slist_insert_sorted (model->items, item, xfce_appfinder_model_item_compare);
 
   /* find the item and the position */
