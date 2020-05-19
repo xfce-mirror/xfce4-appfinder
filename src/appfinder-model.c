@@ -1069,6 +1069,12 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
   appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
   appfinder_return_if_fail (IS_STRING (command));
 
+  if (g_hash_table_lookup (model->items_hash, command) != NULL)
+    {
+       APPFINDER_DEBUG ("%s is already in the model. no insert", command);
+       return;
+    }
+
   /* add new command */
   item = g_slice_new0 (ModelItem);
   item->command = g_strdup (command);
