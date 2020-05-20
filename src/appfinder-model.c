@@ -1056,7 +1056,7 @@ xfce_appfinder_model_file_get_mtime (GFile *file)
 
 
 
-static void
+static gboolean
 xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
                                      const gchar        *command)
 {
@@ -1066,8 +1066,8 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
   GSList       *lp;
   guint         idx;
 
-  appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
-  appfinder_return_if_fail (IS_STRING (command));
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
+  appfinder_return_val_if_fail (IS_STRING (command), FALSE);
 
   /* add new command */
   item = g_slice_new0 (ModelItem);
@@ -1078,7 +1078,7 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
     {
        APPFINDER_DEBUG ("Skip adding %s to the model as it's already contained.", command);
        g_slice_free(ModelItem, item);
-       return;
+       return FALSE;
     }
   model->items = g_slist_insert_sorted (model->items, item, xfce_appfinder_model_item_compare);
 
@@ -1097,6 +1097,7 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
   gtk_tree_path_free (path);
 
   g_hash_table_insert (model->items_hash, item->command, item);
+  return TRUE;
 }
 
 
@@ -1150,8 +1151,7 @@ xfce_appfinder_model_history_changed (GFileMonitor       *monitor,
                         {
                           /* look for new commands */
                           command = g_strndup (contents, end - contents);
-                          if (g_hash_table_lookup (model->items_hash, command) == NULL)
-                            xfce_appfinder_model_history_insert (model, command);
+                          (void) xfce_appfinder_model_history_insert (model, command);
                           g_free (command);
                         }
                       contents = end + 1;
@@ -2249,6 +2249,7 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
   GSList       *li;
   GString      *contents;
   gboolean      succeed = FALSE;
+  gboolean      inserted = FALSE;
   gchar        *filename;
   ModelItem    *item;
   static gsize  old_len = 0;
@@ -2260,7 +2261,9 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
     return TRUE;
 
   /* add command to the model */
-  xfce_appfinder_model_history_insert (model, command);
+  inserted = xfce_appfinder_model_history_insert (model, command);
+  if (!inserted)
+    return TRUE;
 
   /* add to the hashtable */
   APPFINDER_DEBUG ("saving history");
