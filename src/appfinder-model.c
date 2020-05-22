@@ -1151,7 +1151,7 @@ xfce_appfinder_model_history_changed (GFileMonitor       *monitor,
                         {
                           /* look for new commands */
                           command = g_strndup (contents, end - contents);
-                          (void) xfce_appfinder_model_history_insert (model, command);
+                          xfce_appfinder_model_history_insert (model, command);
                           g_free (command);
                         }
                       contents = end + 1;
