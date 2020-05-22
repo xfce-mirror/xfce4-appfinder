@@ -43,6 +43,8 @@ enum
   XFCE_APPFINDER_MODEL_COLUMN_COMMAND,
   XFCE_APPFINDER_MODEL_COLUMN_URI,
   XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK,
+  XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY,
+  XFCE_APPFINDER_MODEL_COLUMN_RECENCY,
   XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP,
   XFCE_APPFINDER_MODEL_N_COLUMNS,
 };
@@ -67,7 +69,7 @@ XfceAppfinderIconSize;
 
 GType                xfce_appfinder_model_get_type               (void) G_GNUC_CONST;
 
-XfceAppfinderModel  *xfce_appfinder_model_get                    (void) G_GNUC_MALLOC;
+XfceAppfinderModel  *xfce_appfinder_model_get                    (gboolean                   sort_by_frecency) G_GNUC_MALLOC;
 
 GSList              *xfce_appfinder_model_get_categories         (XfceAppfinderModel        *model);
 
@@ -108,6 +110,11 @@ gboolean             xfce_appfinder_model_bookmark_toggle        (XfceAppfinderM
 GarconMenuDirectory *xfce_appfinder_model_get_command_category   (void);
 
 GarconMenuDirectory *xfce_appfinder_model_get_bookmarks_category (void);
+void                 xfce_appfinder_model_update_frecency        (XfceAppfinderModel       *model,
+                                                                  const gchar              *desktop_id,
+                                                                  GError                  **error);
+guint                xfce_appfinder_model_calculate_frecency     (guint                     frequency,
+                                                                  guint64                   recency);
 
 G_END_DECLS
 
