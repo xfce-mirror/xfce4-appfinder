@@ -1072,14 +1072,14 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
   /* add new command */
   item = g_slice_new0 (ModelItem);
   item->command = g_strdup (command);
-  item->icon = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon)));
-  item->icon_large = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon_large)));
   if (g_slist_find_custom (model->items, item, xfce_appfinder_model_item_compare) != NULL)
     {
        APPFINDER_DEBUG ("Skip adding %s to the model as it's already contained.", command);
        g_slice_free (ModelItem, item);
        return FALSE;
     }
+  item->icon = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon)));
+  item->icon_large = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon_large)));
   model->items = g_slist_insert_sorted (model->items, item, xfce_appfinder_model_item_compare);
 
   /* find the item and the position */
@@ -2249,7 +2249,6 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
   GSList       *li;
   GString      *contents;
   gboolean      succeed = FALSE;
-  gboolean      inserted = FALSE;
   gchar        *filename;
   ModelItem    *item;
   static gsize  old_len = 0;
@@ -2260,9 +2259,8 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
   if (!IS_STRING (command))
     return TRUE;
 
-  /* add command to the model */
-  inserted = xfce_appfinder_model_history_insert (model, command);
-  if (!inserted)
+  /* add command to the model if command does not exist in the history, else just return */
+  if (!xfce_appfinder_model_history_insert (model, command))
     return TRUE;
 
   /* add to the hashtable */
