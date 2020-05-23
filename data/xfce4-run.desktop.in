@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 Exec=xfce4-appfinder --collapsed
-Icon=system-run
+Icon=org.xfce.appfinder
 StartupNotify=true
 Terminal=false
 Categories=Utility;X-XFCE;X-Xfce-Toplevel;
