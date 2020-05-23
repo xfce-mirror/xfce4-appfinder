@@ -1,3 +1,21 @@
+4.15.0
+======
+- Record last commands only once (Bug #15767)
+- Sort by frecency (Bug #9265)
+- Switch to README.md and foreign automake mode
+- Move from exo-csource to xdt-csource (Bug #16717)
+- Make Preferences button always visible (Bug #16489)
+- Fix gtk version checking
+- Hidden option to disable entry completion (Bug #15827)
+- Use casefolded string when searching for apps not commands (Bug #15893)
+- Translation Updates:
+  Albanian, Amharic, Arabic, Basque, Belarusian, Chinese (China), Chinese
+  (Hong Kong), Chinese (Taiwan), Croatian, Danish, English (Australia),
+  English (United Kingdom), Estonian, French, Galician, Greek, Hebrew,
+  Hungarian, Icelandic, Indonesian, Interlingue, Italian, Korean,
+  Norwegian Nynorsk, Occitan (post 1500), Romanian, Russian, Slovak,
+  Slovenian, Spanish, Swedish, Telugu, Uighur, Vietnamese
+
 4.14.0
 ======
 - Replace GtkStock buttons
