@@ -232,7 +232,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_window_set_title (GTK_WINDOW (window), _("Application Finder"));
   integer = xfconf_channel_get_int (window->channel, "/last/window-width", DEFAULT_WINDOW_WIDTH);
   gtk_window_set_default_size (GTK_WINDOW (window), integer, -1);
-  gtk_window_set_icon_name (GTK_WINDOW (window), XFCE_APPFINDER_STOCK_EXECUTE);
+  gtk_window_set_icon_name (GTK_WINDOW (window), "org.xfce.appfinder");
 
   if (xfconf_channel_get_bool (window->channel, "/always-center", FALSE))
     {
@@ -254,7 +254,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_widget_set_halign(image, GTK_ALIGN_CENTER);
   gtk_container_add (GTK_CONTAINER (hbox), image);
   gtk_widget_show (image);
-  
+
   window->entry = entry = gtk_entry_new ();
   gtk_widget_set_halign(entry, GTK_ALIGN_FILL);
   gtk_widget_set_valign (entry, GTK_ALIGN_CENTER);
