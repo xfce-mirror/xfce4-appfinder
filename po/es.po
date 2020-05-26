@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-22 12:46+0200\n"
-"PO-Revision-Date: 2020-05-24 08:37+0000\n"
+"POT-Creation-Date: 2020-05-25 00:45+0200\n"
+"PO-Revision-Date: 2020-05-26 15:34+0000\n"
 "Last-Translator: Casper casper\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce4-appfinder/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -57,15 +57,15 @@ msgstr "Categorías"
 msgid "Filename"
 msgstr "Nombre del archivo"
 
-#: ../src/appfinder-model.c:2390
+#: ../src/appfinder-model.c:2396
 msgid "Application has no command"
 msgstr "La aplicación no tiene una orden"
 
-#: ../src/appfinder-model.c:2809
+#: ../src/appfinder-model.c:2816
 msgid "Commands History"
 msgstr "Historial de órdenes"
 
-#: ../src/appfinder-model.c:2833
+#: ../src/appfinder-model.c:2840
 msgid "Bookmarks"
 msgstr "Marcadores"
 
@@ -370,6 +370,10 @@ msgstr "_Acciones personalizadas"
 msgid "Find and launch applications installed on your system"
 msgstr "Encuentre y ejecute aplicaciones instaladas en el sistema"
 
+#: ../data/xfce4-appfinder.desktop.in.h:3
+msgid "program;applications;bookmarks;"
+msgstr "programa, aplicaciones, marcadores;"
+
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
 msgstr "Ejecutar programa…"
@@ -377,6 +381,13 @@ msgstr "Ejecutar programa…"
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Enter a command you want to launch"
 msgstr "Ingrese un comando que desee lanzar"
+
+#: ../data/xfce4-run.desktop.in.h:3
+msgid ""
+"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
+" dash;krunner;synapse;ulauncher;launchy;gnome "
+"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr ""
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
