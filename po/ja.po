@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-22 12:46+0200\n"
-"PO-Revision-Date: 2020-05-23 23:29+0000\n"
+"POT-Creation-Date: 2020-05-25 00:45+0200\n"
+"PO-Revision-Date: 2020-05-27 17:58+0000\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: Japanese (http://www.transifex.com/xfce/xfce4-appfinder/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -49,15 +49,15 @@ msgstr "カテゴリ"
 msgid "Filename"
 msgstr "ファイル名"
 
-#: ../src/appfinder-model.c:2390
+#: ../src/appfinder-model.c:2396
 msgid "Application has no command"
 msgstr "アプリケーションにはコマンドがありません"
 
-#: ../src/appfinder-model.c:2809
+#: ../src/appfinder-model.c:2816
 msgid "Commands History"
 msgstr "コマンド履歴"
 
-#: ../src/appfinder-model.c:2833
+#: ../src/appfinder-model.c:2840
 msgid "Bookmarks"
 msgstr "ブックマーク"
 
@@ -362,6 +362,10 @@ msgstr "カスタムアクション(_A)"
 msgid "Find and launch applications installed on your system"
 msgstr "システムにインストールされたアプリケーションの検索および起動を行います"
 
+#: ../data/xfce4-appfinder.desktop.in.h:3
+msgid "program;applications;bookmarks;"
+msgstr "プログラム;アプリケーション;ブックマーク;"
+
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
 msgstr "プログラムの実行..."
@@ -369,6 +373,13 @@ msgstr "プログラムの実行..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Enter a command you want to launch"
 msgstr "起動したいコマンドを入力してください"
+
+#: ../data/xfce4-run.desktop.in.h:3
+msgid ""
+"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
+" dash;krunner;synapse;ulauncher;launchy;gnome "
+"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr "実行;コマンド;アプリケーション;プログラム;ファインダー;検索;ランチャー;すべて;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
