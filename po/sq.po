@@ -4,15 +4,16 @@
 # 
 # Translators:
 # Arianit Kukaj <akukaj@msn.com>, 2019
-# Besnik <besnik@programeshqip.org>, 2019
-# Besnik <besnik@programeshqip.org>, 2019
+# Besnik Bleta <besnik@programeshqip.org>, 2019
+# Besnik Bleta <besnik@programeshqip.org>, 2020
+# Besnik Bleta <besnik@programeshqip.org>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 00:30+0200\n"
-"PO-Revision-Date: 2020-01-30 11:08+0000\n"
-"Last-Translator: Besnik <besnik@programeshqip.org>\n"
+"POT-Creation-Date: 2020-05-25 00:45+0200\n"
+"PO-Revision-Date: 2020-06-12 13:44+0000\n"
+"Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian (http://www.transifex.com/xfce/xfce4-appfinder/language/sq/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,135 +30,135 @@ msgstr "U detyrua të mbyllet"
 msgid "All Applications"
 msgstr "Krejt Aplikacionet"
 
-#: ../src/appfinder-model.c:576
+#: ../src/appfinder-model.c:618
 msgid "Name"
 msgstr "Emër"
 
-#: ../src/appfinder-model.c:577
+#: ../src/appfinder-model.c:619
 msgid "Comment"
 msgstr "Koment"
 
-#: ../src/appfinder-model.c:578
+#: ../src/appfinder-model.c:620
 msgid "Command"
 msgstr "Urdhër"
 
-#: ../src/appfinder-model.c:579
+#: ../src/appfinder-model.c:621
 msgid "Categories"
 msgstr "Kategori"
 
-#: ../src/appfinder-model.c:580
+#: ../src/appfinder-model.c:622
 msgid "Filename"
 msgstr "Emër kartele"
 
-#: ../src/appfinder-model.c:2101
+#: ../src/appfinder-model.c:2396
 msgid "Application has no command"
 msgstr "Aplikacioni nuk ka urdhër"
 
-#: ../src/appfinder-model.c:2520
+#: ../src/appfinder-model.c:2816
 msgid "Commands History"
 msgstr "Historik Urdhrash"
 
-#: ../src/appfinder-model.c:2544
+#: ../src/appfinder-model.c:2840
 msgid "Bookmarks"
 msgstr "Faqerojtës"
 
-#: ../src/appfinder-preferences.c:258
+#: ../src/appfinder-preferences.c:262
 msgid "C_lear"
 msgstr "_Spastroje"
 
-#: ../src/appfinder-preferences.c:259
+#: ../src/appfinder-preferences.c:263
 msgid "This will permanently clear the custom command history."
 msgstr "Kjo do të spastrojë historikun e urdhrave vetjake."
 
-#: ../src/appfinder-preferences.c:260
+#: ../src/appfinder-preferences.c:264
 msgid "Are you sure you want to clear the command history?"
 msgstr "Jeni i sigurt se doni të spastrohet historiku i urdhrave?"
 
-#: ../src/appfinder-preferences.c:369
+#: ../src/appfinder-preferences.c:373
 msgid "_Delete"
 msgstr "_Fshije"
 
-#: ../src/appfinder-preferences.c:370
+#: ../src/appfinder-preferences.c:374
 msgid "The custom action will be deleted permanently."
 msgstr "Veprimi i përshtatur do të fshihet përgjithmonë."
 
-#: ../src/appfinder-preferences.c:371
+#: ../src/appfinder-preferences.c:375
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Jeni i sigurt se doni të fshihet rregullsia \"%s\"?"
 
-#: ../src/appfinder-window.c:226 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:232 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
-msgstr "Gjetës Zbatimesh"
+msgstr "Gjetës Aplikacionesh"
 
-#: ../src/appfinder-window.c:272
+#: ../src/appfinder-window.c:278
 msgid "Toggle view mode"
 msgstr "Këmbe mënyrë parjeje"
 
-#: ../src/appfinder-window.c:343
+#: ../src/appfinder-window.c:351
 msgid "_Preferences"
 msgstr "_Parapëlqime"
 
-#: ../src/appfinder-window.c:360
+#: ../src/appfinder-window.c:369
 msgid "Close"
 msgstr "Mbylle"
 
-#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1082
+#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1094
 msgid "La_unch"
 msgstr "_Nise"
 
-#: ../src/appfinder-window.c:896
+#: ../src/appfinder-window.c:908
 msgid "Failed to launch desktop item editor"
 msgstr "S’u arrit të hapej përpunues elementësh desktopi"
 
-#: ../src/appfinder-window.c:922
+#: ../src/appfinder-window.c:934
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Kjo do të heqë përgjithmonë nga drejtoria juaj shtëpi kartelën desktop të përshtatur."
 
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:935
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Jeni i sigurt se doni të kthehet \"1%s\"?"
 
-#: ../src/appfinder-window.c:933
+#: ../src/appfinder-window.c:945
 msgid "Failed to remove desktop file"
 msgstr "S’u arrit të hiqej kartelë desktopi"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:966
+#: ../src/appfinder-window.c:978
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Për ta nxjerrë nga fshehja duhet të hiqni dorazi kartelën desktop prej \"%s\" ose ta hapni kartelën në të njëjtën drejtori dhe të hiqni rreshtin \"%s\"."
 
-#: ../src/appfinder-window.c:971 ../src/appfinder-window.c:1119
+#: ../src/appfinder-window.c:983 ../src/appfinder-window.c:1131
 msgid "_Hide"
 msgstr "_Fshihe"
 
-#: ../src/appfinder-window.c:972
+#: ../src/appfinder-window.c:984
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Jeni i sigurt se doni të fshihet \"1%s\"?"
 
-#: ../src/appfinder-window.c:1066
+#: ../src/appfinder-window.c:1078
 msgid "Remove From Bookmarks"
 msgstr "Hiqe Nga Faqerojtësit"
 
-#: ../src/appfinder-window.c:1066
+#: ../src/appfinder-window.c:1078
 msgid "Add to Bookmarks"
 msgstr "Shtoje te Faqerojtësit"
 
-#: ../src/appfinder-window.c:1095
+#: ../src/appfinder-window.c:1107
 msgid "_Edit"
 msgstr "_Përpunim"
 
-#: ../src/appfinder-window.c:1112
+#: ../src/appfinder-window.c:1124
 msgid "_Revert"
 msgstr "_Riktheje"
 
@@ -181,16 +182,16 @@ msgstr "Dil nga krejt instancat"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Mos provo të përdorësh ose të shndërrohesh në një shërbim D-Bus"
 
-#: ../src/main.c:235
+#: ../src/main.c:236
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Për përdorimin, shtypni '%s --help'."
 
-#: ../src/main.c:246
+#: ../src/main.c:247
 msgid "The Xfce development team. All rights reserved."
 msgstr "Ekipi i zhvillimit të Xfce-së. Tërë të drejtat të rezervuara."
 
-#: ../src/main.c:247
+#: ../src/main.c:248
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Ju lutemi, njoftoni të meta te <%s>."
@@ -265,62 +266,72 @@ msgid ""
 msgstr "Kur një instancë xhiron në prapaskenë, hap vetëm një dritare në herë."
 
 #: ../src/appfinder-preferences.glade.h:18
+msgid "Sort recently used items first"
+msgstr "Renditi me objektet e përdorur së fundit të parë"
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid ""
+"Order items, such that items that are most recently used are always on the "
+"top."
+msgstr "Renditi objektet në mënyrë të tillë që, objektet që janë më të përdorurit tani së fundi, të jenë përherë në krye."
+
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Behaviour"
 msgstr "Sjellje"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:21
 msgid "_View items as icons"
 msgstr "_Shihini objektet si ikona"
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Text besi_de icons"
 msgstr "Tekst në _krah ikonash"
 
-#: ../src/appfinder-preferences.glade.h:21
+#: ../src/appfinder-preferences.glade.h:23
 msgid "Ite_m icon size:"
 msgstr "Madhësi ikone _objekti:"
 
-#: ../src/appfinder-preferences.glade.h:22
+#: ../src/appfinder-preferences.glade.h:24
 msgid "Hide category pane"
 msgstr "Fshihe panelin e kategorive"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "Hide category panel and show all applications."
 msgstr "Fshihe panelin e kategorive dhe shfaq krejt aplikacionet."
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "Categ_ory icon size:"
 msgstr "Madhësi ikonash _kategorie:"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Appearance"
 msgstr "Dukje"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "C_lear Custom Command History"
 msgstr "_Spastroje Historikun e Urdhrave Vetjakë"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "History"
 msgstr "Historik"
 
-#: ../src/appfinder-preferences.glade.h:28
+#: ../src/appfinder-preferences.glade.h:30
 msgid "_General"
 msgstr "_Të përgjithshme"
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Pattern"
 msgstr "Rregullsi"
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "Add a new custom action."
 msgstr "Shtoni një veprim të ri vetjak."
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Remove the currently selected action."
 msgstr "Hiq veprimin e tanishëm të përzgjedhur."
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -328,29 +339,33 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Nëse lloji është caktuar si prefiks, %s do të zëvendësohet me vargun pas rregullsisë, %S me tekstin e plotë të zërit. Për shprehje të rregulta mund të përdorni \\0 dhe \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Co_mmand:"
 msgstr "_Urdhër:"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:37
 msgid "Patte_rn:"
 msgstr "_Rregullsi:"
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:38
 msgid "_Type:"
 msgstr "_Lloj:"
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:39
 msgid "_Save match in command history"
 msgstr "_Ruaje përputhjen te historik urdhrash"
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:40
 msgid "Custom _Actions"
 msgstr "_Veprime Vetjake"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr "Gjeni dhe nisni zbatime të instaluar në sistemin tuaj"
+msgstr "Gjeni dhe nisni aplikacione të instaluar në sistemin tuaj"
+
+#: ../data/xfce4-appfinder.desktop.in.h:3
+msgid "program;applications;bookmarks;"
+msgstr "program;aplikacione;faqerojtës;"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
@@ -358,7 +373,14 @@ msgstr "Xhironi Program…"
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Enter a command you want to launch"
-msgstr ""
+msgstr "Jepni një urdhër që doni të kryhet"
+
+#: ../data/xfce4-run.desktop.in.h:3
+msgid ""
+"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
+" dash;krunner;synapse;ulauncher;launchy;gnome "
+"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr "xhiro;urdhër;aplikacion;program;gjetës;kërkim;nisës;gjithçka;projektor;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;ndjekës;beagle;kupfer;"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
