@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-25 00:45+0200\n"
-"PO-Revision-Date: 2020-06-12 10:56+0000\n"
+"PO-Revision-Date: 2020-06-15 09:44+0000\n"
 "Last-Translator: Omer\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce4-appfinder/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -120,16 +120,16 @@ msgstr "נכשל להפעיל עורך פריט שולחן עבודה"
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "זה יסיר לצמיתות את קובץ שולחן העבודה המותאם אישית מתיקיית הבית שלך."
+msgstr "זה יסיר לצמיתות את קובץ שולחן העבודה המותאם אישית מספריית הבית שלך."
 
 #: ../src/appfinder-window.c:935
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "האם אתה בטוח שאתה רוצה להחזיר \"%s\"?"
+msgstr "האם אתה בטוח שברצונך להחזיר את \"%s\"?"
 
 #: ../src/appfinder-window.c:945
 msgid "Failed to remove desktop file"
-msgstr "נכשל להסיר קובץ שולחן עבודה"
+msgstr "נכשלה הסרת קובץ שולחן עבודה"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -266,11 +266,11 @@ msgstr "חלון בודד"
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
-msgstr "כאשר תהליך פועל ברקע, פתח רק חלון אחד בכל זמן."
+msgstr "כאשר תהליך פועל ברקע, פתח רק חלון אחד בכל פעם."
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Sort recently used items first"
-msgstr "מיין את הפריטים שהיו בשימוש לאחרונה"
+msgstr "מיין פריטים כך שאלה שהיו בשימוש לאחרונה יהיו ראשונים"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid ""
@@ -340,7 +340,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "אם הסוג נקבע לקידומת, %s יוחלף עם המחרוזת לפי הדוגמה, %S עם טקסט ההזנה השלם. עבור ביטויים שיטתיים אתה יכול להשתמש ב \\0 ו \\<num>. "
+msgstr "אם הסוג נקבע לקידומת, %s יוחלף עם המחרוזת אחרי הדוגמה, %S עם טקסט ההזנה השלם. עבור ביטויים שיטתיים אתה יכול להשתמש ב \\0 ו \\<num>. "
 
 #: ../src/appfinder-preferences.glade.h:36
 msgid "Co_mmand:"
@@ -356,7 +356,7 @@ msgstr "_טיפוס:"
 
 #: ../src/appfinder-preferences.glade.h:39
 msgid "_Save match in command history"
-msgstr "שמור התאמה בהיסטוריית פקודות"
+msgstr "_שמור התאמה בהיסטוריית הפקודות"
 
 #: ../src/appfinder-preferences.glade.h:40
 msgid "Custom _Actions"
@@ -395,4 +395,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr "מוצא הישומים הוא כלי למציאת והפעלת ישומים מותקנים במערכת שלך ומבצע במהירות פקודות. הוא גם יכול לשמש להוספה מהירה של מפעילים ללוח Xfce בעזרת גרירת פריט מהתצוגה ושיחרורו על הלוח."
+msgstr "מוצא הישומים הוא כלי למציאה והפעלה של יישומים מותקנים במערכת שלך ומבצע במהירות פקודות. הוא יכול לשמש גם להוספה מהירה של מפעילים ללוח Xfce בעזרת גרירת פריט מהתצוגה ושחרורו על הלוח."
