@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-22 12:46+0200\n"
-"PO-Revision-Date: 2020-05-24 13:18+0000\n"
+"POT-Creation-Date: 2020-05-25 00:45+0200\n"
+"PO-Revision-Date: 2020-06-21 12:30+0000\n"
 "Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/xfce/xfce4-appfinder/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -53,15 +53,15 @@ msgstr "Catégories"
 msgid "Filename"
 msgstr "Nom du fichier"
 
-#: ../src/appfinder-model.c:2390
+#: ../src/appfinder-model.c:2396
 msgid "Application has no command"
 msgstr "L’application n’a pas de commande"
 
-#: ../src/appfinder-model.c:2809
+#: ../src/appfinder-model.c:2816
 msgid "Commands History"
 msgstr "Historique des commandes"
 
-#: ../src/appfinder-model.c:2833
+#: ../src/appfinder-model.c:2840
 msgid "Bookmarks"
 msgstr "Favoris"
 
@@ -366,6 +366,10 @@ msgstr "_Actions personnalisées"
 msgid "Find and launch applications installed on your system"
 msgstr "Rechercher et lancer des applications installées sur votre système"
 
+#: ../data/xfce4-appfinder.desktop.in.h:3
+msgid "program;applications;bookmarks;"
+msgstr "programme;applications;marque-pages;"
+
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
 msgstr "Exécuter le programme…"
@@ -373,6 +377,13 @@ msgstr "Exécuter le programme…"
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Enter a command you want to launch"
 msgstr "Saisir une commande que vous souhaitez lancer"
+
+#: ../data/xfce4-run.desktop.in.h:3
+msgid ""
+"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
+" dash;krunner;synapse;ulauncher;launchy;gnome "
+"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr "exécuter;commande;application;programme;finder;rechercher;lanceur;tout;spotlight;sherlock;applesearch;dash unity;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
