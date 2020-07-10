@@ -216,6 +216,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   GtkWidget          *bbox;
   GtkWidget          *button;
   GtkEntryCompletion *completion;
+  GtkCellRenderer    *cell;
   gint                integer;
 
   window->channel = xfconf_channel_get ("xfce4-appfinder");
@@ -281,9 +282,15 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   window->completion = completion = gtk_entry_completion_new ();
   gtk_entry_completion_set_model (completion, GTK_TREE_MODEL (window->model));
   gtk_entry_completion_set_match_func (completion, xfce_appfinder_window_completion_match_func, window, NULL);
-  gtk_entry_completion_set_text_column (completion, XFCE_APPFINDER_MODEL_COLUMN_COMMAND);
+  g_object_set (G_OBJECT (completion), "text-column", XFCE_APPFINDER_MODEL_COLUMN_COMMAND, NULL);
   gtk_entry_completion_set_popup_single_match (completion, TRUE);
   gtk_entry_completion_set_inline_completion (completion, TRUE);
+
+  cell = gtk_cell_renderer_text_new ();
+  g_object_set (G_OBJECT (cell), "ellipsize", PANGO_ELLIPSIZE_END, NULL);
+  gtk_cell_renderer_set_fixed_size (cell, 1, -1);
+  gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (completion), cell, TRUE);
+  gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (completion), cell, "text", XFCE_APPFINDER_MODEL_COLUMN_COMMAND);
 
   if (xfconf_channel_get_bool (window->channel, "/disable-completion", FALSE))
     gtk_entry_completion_set_popup_completion (completion, FALSE);
