@@ -4,4 +4,4 @@ EXTRA_DIST =				\
 Datadir = $(datadir)/icons/hicolor/scalable/apps
 
 Data_DATA =				\
-	org.xfce.appfinder.png
+	org.xfce.appfinder.svg
