@@ -1,3 +1,5 @@
+SUBDIRS =         \
+	icons
 
 appsdir = $(datadir)/applications
 apps_in_files = \
