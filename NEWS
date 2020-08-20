@@ -1,3 +1,17 @@
+4.15.1
+======
+- Drop close button
+- Add new app icon and switch to rDNS
+- Limit popup completion width to be same as entry
+- Switch to a few symbolic icons
+- Add keywords to .desktop files to xfce4-appfinder
+- Translation Updates:
+  Albanian, Bulgarian, Chinese (China), Chinese (Hong Kong), Danish,
+  Eastern Armenian, English (Canada), Estonian, Finnish, French,
+  Galician, German, Hebrew, Hungarian, Italian, Japanese, Kazakh, Korean,
+  Lithuanian, Norwegian Bokmål, Portuguese, Portuguese (Brazil),
+  Russian, Spanish, Turkish
+
 4.15.0
 ======
 - Record last commands only once (Bug #15767)

@@ -7,7 +7,7 @@ dnl *** Version information ***
 dnl ***************************
 m4_define([xfce4_appfinder_version_major], [4])
 m4_define([xfce4_appfinder_version_minor], [15])
-m4_define([xfce4_appfinder_version_micro], [0])
+m4_define([xfce4_appfinder_version_micro], [1])
 m4_define([xfce4_appfinder_version_nano],  []) dnl leave this empty to have no nano version
 m4_define([xfce4_appfinder_version_build], [@REVISION@])
 m4_define([xfce4_appfinder_version_tag],   [git])
