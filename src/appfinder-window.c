@@ -212,7 +212,6 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   GtkTreeViewColumn  *column;
   GtkCellRenderer    *renderer;
   GtkTreeSelection   *selection;
-  GtkWidget          *bbox;
   GtkWidget          *button;
   GtkEntryCompletion *completion;
   GtkCellRenderer    *cell;
