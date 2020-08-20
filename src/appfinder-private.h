@@ -54,7 +54,6 @@ void    appfinder_refcount_debug_add (GObject     *object,
 
 #define XFCE_APPFINDER_STOCK_BOOKMARK_NEW "bookmark-new"
 #define XFCE_APPFINDER_STOCK_CLEAR "edit-clear-symbolic"
-#define XFCE_APPFINDER_STOCK_CLOSE "window-close-symbolic"
 #define XFCE_APPFINDER_STOCK_DELETE "edit-delete"
 #define XFCE_APPFINDER_STOCK_DIALOG_ERROR "dialog-error"
 #define XFCE_APPFINDER_STOCK_EDIT "document-properties"

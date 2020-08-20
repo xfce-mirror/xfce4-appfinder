@@ -373,16 +373,6 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_box_pack_start (GTK_BOX (hbox), bbox, TRUE, TRUE, 0);
   gtk_widget_show (bbox);
 
-  button = gtk_button_new_with_mnemonic (_("Close"));
-  gtk_container_add (GTK_CONTAINER (bbox), button);
-  g_signal_connect_swapped (G_OBJECT (button), "clicked",
-      G_CALLBACK (gtk_widget_destroy), window);
-  gtk_button_set_always_show_image(GTK_BUTTON(button), TRUE);
-  gtk_widget_show (button);
-
-  image = gtk_image_new_from_icon_name (XFCE_APPFINDER_STOCK_CLOSE, GTK_ICON_SIZE_BUTTON);
-  gtk_button_set_image (GTK_BUTTON (button), image);
-
   window->button_launch = button = gtk_button_new_with_mnemonic (_("La_unch"));
   gtk_container_add (GTK_CONTAINER (bbox), button);
   g_signal_connect_swapped (G_OBJECT (button), "clicked",
