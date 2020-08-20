@@ -158,7 +158,6 @@ struct _XfceAppfinderWindow
 
   GdkPixbuf                  *icon_find;
 
-  GtkWidget                  *bbox;
   GtkWidget                  *button_launch;
 
   GarconMenuDirectory        *filter_category;
@@ -351,7 +350,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   /* set the icon or tree view */
   xfce_appfinder_window_view (window);
 
-  window->bbox = hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
   gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, TRUE, 0);
   gtk_widget_show (hbox);
 
@@ -366,15 +365,8 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   image = gtk_image_new_from_icon_name (XFCE_APPFINDER_STOCK_PREFERENCES, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (button), image);
 
-  bbox = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
-  gtk_box_set_spacing (GTK_BOX (bbox), 6);
-
-  gtk_button_box_set_layout (GTK_BUTTON_BOX (bbox), GTK_BUTTONBOX_END);
-  gtk_box_pack_start (GTK_BOX (hbox), bbox, TRUE, TRUE, 0);
-  gtk_widget_show (bbox);
-
   window->button_launch = button = gtk_button_new_with_mnemonic (_("La_unch"));
-  gtk_container_add (GTK_CONTAINER (bbox), button);
+  gtk_box_pack_end (GTK_BOX (hbox), button, FALSE, FALSE, 0);
   g_signal_connect_swapped (G_OBJECT (button), "clicked",
       G_CALLBACK (xfce_appfinder_window_launch_clicked), window);
   gtk_widget_set_sensitive (button, FALSE);
