@@ -1687,8 +1687,6 @@ xfce_appfinder_model_menu_changed_idle (gpointer data)
 
   APPFINDER_DEBUG ("menu changed");
 
-  model->menu_changed_idle_id = 0;
-
   /* add all the old items in a garcon database */
   old_items = g_hash_table_new (g_str_hash, g_str_equal);
   for (li = model->items; li != NULL; li = li->next)
@@ -1705,6 +1703,10 @@ xfce_appfinder_model_menu_changed_idle (gpointer data)
     {
       g_warning ("Failed to reload the root menu: %s", error->message);
       g_error_free (error);
+
+      model->menu_changed_idle_id = 0;
+
+      return FALSE;
     }
 
   xfce_appfinder_model_collect_menu (menu, NULL, &collect_items, &collect_categories);
@@ -1794,6 +1796,8 @@ xfce_appfinder_model_menu_changed_idle (gpointer data)
   g_slist_foreach (tmp, (GFunc) (void (*)(void)) g_object_unref, NULL);
   g_slist_free (tmp);
 
+  model->menu_changed_idle_id = 0;
+
   return FALSE;
 }
 
@@ -1808,7 +1812,7 @@ xfce_appfinder_model_menu_changed (GarconMenu         *menu,
   appfinder_return_if_fail (model->menu == menu);
 
   if (model->menu_changed_idle_id == 0)
-    model->menu_changed_idle_id = g_idle_add (xfce_appfinder_model_menu_changed_idle, model);
+    model->menu_changed_idle_id = g_timeout_add (1000, xfce_appfinder_model_menu_changed_idle, model);
 }
 
 
