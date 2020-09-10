@@ -1,7 +1,6 @@
 [![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/xfce/xfce4-appfinder/COPYING)
 
-xfce4-appfinder
-====================
+# xfce4-appfinder
 
 xfce4-appfinder(Application Finder) is a program to find and launch installed 
 applications on your system, and quickly execute commands. It does this by 
@@ -27,6 +26,7 @@ See [NEWS](https://gitlab.xfce.org/xfce/xfce4-appfinder/-/blob/master/NEWS) for 
 [xfce4-appfinder archive](https://archive.xfce.org/src/xfce/xfce4-appfinder)
     or
 [xfce4-appfinder tags](https://gitlab.xfce.org/xfce/xfce4-appfinder/-/tags)
+
 ### Installation
 
 From source: 
