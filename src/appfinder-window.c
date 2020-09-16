@@ -1961,11 +1961,13 @@ xfce_appfinder_window_sort_items (GtkTreeModel *model,
 
   gtk_tree_model_get (model, a, XFCE_APPFINDER_MODEL_COLUMN_TITLE, &title_a, -1);
   normalized = g_utf8_normalize (title_a, -1, G_NORMALIZE_ALL);
+  g_free (title_a);
   title_a = g_utf8_casefold (normalized, -1);
   g_free (normalized);
 
   gtk_tree_model_get (model, b, XFCE_APPFINDER_MODEL_COLUMN_TITLE, &title_b, -1);
   normalized = g_utf8_normalize (title_b, -1, G_NORMALIZE_ALL);
+  g_free (title_b);
   title_b = g_utf8_casefold (normalized, -1);
   g_free (normalized);
 
