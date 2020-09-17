@@ -1037,21 +1037,32 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
       uri_is_local = g_str_has_prefix (uri, XFCE_APPFINDER_LOCAL_PREFIX);
 
       menu = gtk_menu_new ();
+      gtk_menu_set_reserve_toggle_size (GTK_MENU (menu), FALSE);
       g_object_set_data_full (G_OBJECT (menu), "uri", uri, g_free);
       g_object_set_data_full (G_OBJECT (menu), "name", title, g_free);
       g_object_set_data (G_OBJECT (menu), "model", model);
       g_signal_connect (G_OBJECT (menu), "selection-done",
           G_CALLBACK (gtk_widget_destroy), NULL);
 
-      mi = gtk_menu_item_new_with_label (title);
+      /* Title */
+      mi = gtk_menu_item_new ();
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
       gtk_widget_set_sensitive (mi, FALSE);
-      gtk_widget_show (mi);
 
+      box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+      label = gtk_label_new (title);
+      image = gtk_image_new_from_icon_name ("", GTK_ICON_SIZE_MENU);
+      gtk_container_add (GTK_CONTAINER (box), image);
+      gtk_container_add (GTK_CONTAINER (box), label);
+      gtk_container_add (GTK_CONTAINER (mi), box);
+      gtk_widget_show_all (mi);
+
+      /* Separator */
       mi = gtk_separator_menu_item_new ();
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
       gtk_widget_show (mi);
 
+      /* Add/Remove from Bookmarks */
       mi = gtk_menu_item_new ();
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
       g_signal_connect (G_OBJECT (mi), "activate",
@@ -1069,10 +1080,12 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
       gtk_container_add (GTK_CONTAINER (mi), box);
       gtk_widget_show_all (mi);
 
+      /* Separator */
       mi = gtk_separator_menu_item_new ();
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
       gtk_widget_show (mi);
 
+      /* Launch */
       mi = gtk_menu_item_new ();
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
       g_signal_connect (G_OBJECT (mi), "activate",
@@ -1086,6 +1099,7 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
       gtk_container_add (GTK_CONTAINER (mi), box);
       gtk_widget_show_all (mi);
 
+      /* Edit */
       mi = gtk_menu_item_new ();
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
       g_signal_connect (G_OBJECT (mi), "activate",
@@ -1099,13 +1113,13 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
       gtk_container_add (GTK_CONTAINER (mi), box);
       gtk_widget_show_all (mi);
 
+      /* Revert */
       mi = gtk_menu_item_new ();
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
       g_signal_connect (G_OBJECT (mi), "activate",
           G_CALLBACK (xfce_appfinder_window_popup_menu_revert), window);
       path = xfce_resource_save_location (XFCE_RESOURCE_DATA, "applications/", FALSE);
       gtk_widget_set_sensitive (mi, uri_is_local && g_str_has_prefix (uri + 7, path));
-      gtk_widget_show (mi);
       g_free (path);
 
       box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
@@ -1116,12 +1130,20 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
       gtk_container_add (GTK_CONTAINER (mi), box);
       gtk_widget_show_all (mi);
 
-      mi = gtk_menu_item_new_with_mnemonic (_("_Hide"));
+      /* Hide */
+      mi = gtk_menu_item_new ();
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
       gtk_widget_set_sensitive (mi, uri_is_local);
       g_signal_connect (G_OBJECT (mi), "activate",
           G_CALLBACK (xfce_appfinder_window_popup_menu_hide), window);
-      gtk_widget_show (mi);
+
+      box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+      label = gtk_label_new_with_mnemonic (_("_Hide"));
+      image = gtk_image_new_from_icon_name ("", GTK_ICON_SIZE_MENU);
+      gtk_container_add (GTK_CONTAINER (box), image);
+      gtk_container_add (GTK_CONTAINER (box), label);
+      gtk_container_add (GTK_CONTAINER (mi), box);
+      gtk_widget_show_all (mi);
 
 #if GTK_CHECK_VERSION (3, 22, 0)
       gtk_menu_popup_at_pointer (GTK_MENU (menu), NULL);
