@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 12:47+0200\n"
-"PO-Revision-Date: 2020-09-20 08:27+0000\n"
+"PO-Revision-Date: 2020-09-20 11:52+0000\n"
 "Last-Translator: Panwar108 <caspian7pena@gmail.com>\n"
 "Language-Team: Hindi (http://www.transifex.com/xfce/xfce4-appfinder/language/hi/)\n"
 "MIME-Version: 1.0\n"
@@ -260,13 +260,13 @@ msgstr "बैकग्राउंड में आवृत्ति कार
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Sort recently used items first"
-msgstr ""
+msgstr "प्रयुक्त वस्तुएँ पहले अनुक्रमित करें"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
-msgstr ""
+msgstr "अधिक बार प्रयुक्त वस्तुएँ शीर्ष पर रखने हेतु अनुक्रमण करें।"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Behaviour"
@@ -274,23 +274,23 @@ msgstr "व्यवहार"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid "_View items as icons"
-msgstr ""
+msgstr "वस्तुएँ आइकन रूप में प्रदर्शित (_V)"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Text besi_de icons"
-msgstr ""
+msgstr "लेख सहित आइकन (_d)"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Ite_m icon size:"
-msgstr ""
+msgstr "वस्तु आइकन आकार (_m) :"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Hide category pane"
-msgstr ""
+msgstr "श्रेणी पैनल छुपाएँ"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Hide category panel and show all applications."
-msgstr ""
+msgstr "श्रेणी पैनल छुपाएँ व सभी अनुप्रयोग दिखाएँ।"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Categ_ory icon size:"
@@ -302,11 +302,11 @@ msgstr "स्वरुप"
 
 #: ../src/appfinder-preferences.glade.h:28
 msgid "C_lear Custom Command History"
-msgstr ""
+msgstr "प्रयुक्त कमांड वृतांत रिक्त करें (_l)"
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "History"
-msgstr "पूर्व गतिविधि"
+msgstr "वृतांत"
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "_General"
@@ -318,11 +318,11 @@ msgstr "प्रतिमान"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "Add a new custom action."
-msgstr ""
+msgstr "नया अनुकूलित कार्य जोड़ें।"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "चयनित कार्य हटाएँ।"
 
 #: ../src/appfinder-preferences.glade.h:35
 #, no-c-format
@@ -330,7 +330,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "प्रकार उपसर्ग सेट होने पर %s को प्रतिमान %S उपरांत वाले संबंधित प्रविष्टि लेख के वाक्यांश से बदल दिया जाएगा। सामान्य वाक्यांश हेतु \\0 व \\<num> उपयोग करें।"
 
 #: ../src/appfinder-preferences.glade.h:36
 msgid "Co_mmand:"
@@ -338,7 +338,7 @@ msgstr "कमांड (_m) :"
 
 #: ../src/appfinder-preferences.glade.h:37
 msgid "Patte_rn:"
-msgstr ""
+msgstr "प्रतिमान (_r) :"
 
 #: ../src/appfinder-preferences.glade.h:38
 msgid "_Type:"
@@ -346,15 +346,15 @@ msgstr "प्रकार (_T) :"
 
 #: ../src/appfinder-preferences.glade.h:39
 msgid "_Save match in command history"
-msgstr ""
+msgstr "कमांड वृतांत में मिलान संचित करें (_S)"
 
 #: ../src/appfinder-preferences.glade.h:40
 msgid "Custom _Actions"
-msgstr ""
+msgstr "अनुकूलित कार्य (_A)"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
-msgstr ""
+msgstr "सिस्टम पर इंस्टॉल हो रखें अनुप्रयोग खोजकर आरंभ करें।"
 
 #: ../data/xfce4-appfinder.desktop.in.h:3
 msgid "program;applications;bookmarks;"
@@ -362,22 +362,22 @@ msgstr "प्रोग्राम;अनुप्रयोग;पृष्ठ 
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr ""
+msgstr "प्रोग्राम निष्पादित करें.."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Enter a command you want to launch"
-msgstr ""
+msgstr "आरंभ करने हेतु कमांड दर्ज करें"
 
 #: ../data/xfce4-run.desktop.in.h:3
 msgid ""
 "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
 " dash;krunner;synapse;ulauncher;launchy;gnome "
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr ""
+msgstr "निष्पादन;कमांड;अनुप्रयोग;प्रोग्राम;खोज साधन;खोज; आरंभ साधन;सभी;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
-msgstr ""
+msgstr "अनुप्रयोग व कमांड शीघ्र निष्पादन हेतु अनुप्रयोग"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
@@ -385,4 +385,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr ""
+msgstr "सिस्टम पर इंस्टॉल हो रखें अनुप्रयोग खोजने व कमांड के शीघ्र निष्पादन हेतु अनुप्रयोग खोज साधन है। दृश्य से माउस द्वारा वस्तु ड्रैग कर एक्सएफसीई पैनल पर लाने से आप संबंधित वस्तु हेतु आरंभ साधन भी जोड़ सकते हैं।"
