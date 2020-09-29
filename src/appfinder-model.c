@@ -265,12 +265,7 @@ xfce_appfinder_model_init (XfceAppfinderModel *model)
 
   model->menu = garcon_menu_new_applications ();
   appfinder_refcount_debug_add (G_OBJECT (model->menu), "main menu");
-
-#if GLIB_CHECK_VERSION (2, 32, 0)
   model->collect_thread = g_thread_new ("Collector", xfce_appfinder_model_collect_thread, model);
-#else
-  model->collect_thread = g_thread_create (xfce_appfinder_model_collect_thread, model, TRUE, NULL);
-#endif
 }
 
 
