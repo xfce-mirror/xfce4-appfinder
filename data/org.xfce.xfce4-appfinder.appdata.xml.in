@@ -22,7 +22,7 @@
   </screenshots>
 
   <url type="homepage">https://www.xfce.org/</url>
-  <url type="bugtracker">https://bugzilla.xfce.org/</url>
+  <url type="bugtracker">https://gitlab.xfce.org/xfce/xfce4-appfinder/</url>
   <url type="help">https://docs.xfce.org/xfce/xfce4-appfinder/start</url>
 
   <project_group>Xfce</project_group>
