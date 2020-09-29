@@ -1266,6 +1266,10 @@ xfce_appfinder_window_entry_changed_idle (gpointer data)
     {
       gtk_widget_set_sensitive (window->button_launch, IS_STRING (text));
 
+      /* Clear entry's error icon and tooltip */
+      gtk_entry_set_icon_from_icon_name (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY, NULL);
+      gtk_entry_set_icon_tooltip_text (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY, NULL);
+
       pixbuf = xfce_appfinder_model_get_icon_for_command (window->model, text);
       xfce_appfinder_window_update_image (window, pixbuf);
       if (pixbuf != NULL)
