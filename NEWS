@@ -1,3 +1,21 @@
+4.15.2
+======
+- Add small delay before reloading menu tree (!6)
+- Clear entry's error icon and tooltip
+- Update copyright year
+- GitLab is the new bugtracker
+- Remove unnecessary code for unsupported glib versions
+- Remove padding from context menu
+- Fix memory leaks when sorting items
+- Update README.md
+- Apply light blue to 16px icon
+- Improved and simplified icons for better scaling
+- Add back git tag
+- Remove extra spaces in configure.ac.in so xfce-do-release works as
+  expected
+- Translation Updates:
+  Belarusian, Czech, Hindi, Indonesian, Slovak, Swedish, Thai
+
 4.15.1
 ======
 - Drop close button
