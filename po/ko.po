@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-25 00:45+0200\n"
-"PO-Revision-Date: 2020-07-13 10:29+0000\n"
-"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
+"POT-Creation-Date: 2020-08-20 12:47+0200\n"
+"PO-Revision-Date: 2020-08-20 10:47+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Korean (http://www.transifex.com/xfce/xfce4-appfinder/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,11 +55,11 @@ msgstr "파일 이름"
 msgid "Application has no command"
 msgstr "프로그램에 명령이 없습니다"
 
-#: ../src/appfinder-model.c:2816
+#: ../src/appfinder-model.c:2800
 msgid "Commands History"
 msgstr "명령 기록"
 
-#: ../src/appfinder-model.c:2840
+#: ../src/appfinder-model.c:2824
 msgid "Bookmarks"
 msgstr "북마크"
 
@@ -98,68 +98,64 @@ msgstr "프로그램 탐색기"
 msgid "Toggle view mode"
 msgstr "보기 상태 전환"
 
-#: ../src/appfinder-window.c:351
+#: ../src/appfinder-window.c:357
 msgid "_Preferences"
 msgstr "환경 설정(_P)"
 
-#: ../src/appfinder-window.c:369
-msgid "Close"
-msgstr "닫기"
-
-#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1094
+#: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1083
 msgid "La_unch"
 msgstr "실행(_U)"
 
-#: ../src/appfinder-window.c:908
+#: ../src/appfinder-window.c:897
 msgid "Failed to launch desktop item editor"
 msgstr "데스크톱 항목 편집기 실행 실패"
 
-#: ../src/appfinder-window.c:934
+#: ../src/appfinder-window.c:923
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "홈 디렉터리에서 사용자 정의 desktop 파일을 완전히 지웁니다."
 
-#: ../src/appfinder-window.c:935
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "\"%s\"을(를) 정말로 복원하시렵니까?"
 
-#: ../src/appfinder-window.c:945
+#: ../src/appfinder-window.c:934
 msgid "Failed to remove desktop file"
 msgstr "데스크톱 파일 제거 실패"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:978
+#: ../src/appfinder-window.c:967
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "항목 숨기기를 해제하려면, \"%s\"에서 데스크톱의 파일을 직접 제거하거나, 같은 디렉터리에서 파일을 열고 \"%s\" 줄을 제거하십시오."
 
-#: ../src/appfinder-window.c:983 ../src/appfinder-window.c:1131
+#: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1120
 msgid "_Hide"
 msgstr "숨기기(_H)"
 
-#: ../src/appfinder-window.c:984
+#: ../src/appfinder-window.c:973
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "\"%s\"을(를) 정말로 숨기시렵니까?"
 
-#: ../src/appfinder-window.c:1078
+#: ../src/appfinder-window.c:1067
 msgid "Remove From Bookmarks"
 msgstr "북마크 삭제"
 
-#: ../src/appfinder-window.c:1078
+#: ../src/appfinder-window.c:1067
 msgid "Add to Bookmarks"
 msgstr "북마크 추가"
 
-#: ../src/appfinder-window.c:1107
+#: ../src/appfinder-window.c:1096
 msgid "_Edit"
 msgstr "수정(_E)"
 
-#: ../src/appfinder-window.c:1124
+#: ../src/appfinder-window.c:1113
 msgid "_Revert"
 msgstr "되돌리기(_R)"
 
