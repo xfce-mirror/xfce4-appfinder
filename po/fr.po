@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-25 00:45+0200\n"
-"PO-Revision-Date: 2020-06-21 12:30+0000\n"
-"Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
+"POT-Creation-Date: 2020-08-20 12:47+0200\n"
+"PO-Revision-Date: 2020-08-20 10:47+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: French (http://www.transifex.com/xfce/xfce4-appfinder/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,11 +57,11 @@ msgstr "Nom du fichier"
 msgid "Application has no command"
 msgstr "L’application n’a pas de commande"
 
-#: ../src/appfinder-model.c:2816
+#: ../src/appfinder-model.c:2800
 msgid "Commands History"
 msgstr "Historique des commandes"
 
-#: ../src/appfinder-model.c:2840
+#: ../src/appfinder-model.c:2824
 msgid "Bookmarks"
 msgstr "Favoris"
 
@@ -100,68 +100,64 @@ msgstr "Liste des applications"
 msgid "Toggle view mode"
 msgstr "Basculer le mode d’affichage"
 
-#: ../src/appfinder-window.c:351
+#: ../src/appfinder-window.c:357
 msgid "_Preferences"
 msgstr "_Préférences"
 
-#: ../src/appfinder-window.c:369
-msgid "Close"
-msgstr "Fermer"
-
-#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1094
+#: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1083
 msgid "La_unch"
 msgstr "_Lancer"
 
-#: ../src/appfinder-window.c:908
+#: ../src/appfinder-window.c:897
 msgid "Failed to launch desktop item editor"
 msgstr "Impossible de lancer l’éditeur de fichier desktop"
 
-#: ../src/appfinder-window.c:934
+#: ../src/appfinder-window.c:923
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Cette action effacera définitivement le fichier desktop personnalisé de votre dossier personnel."
 
-#: ../src/appfinder-window.c:935
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Voulez-vous vraiment annuler les modifications dans « %s » ?"
 
-#: ../src/appfinder-window.c:945
+#: ../src/appfinder-window.c:934
 msgid "Failed to remove desktop file"
 msgstr "Impossible de supprimer le fichier desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:978
+#: ../src/appfinder-window.c:967
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Pour afficher l’élément, vous devez supprimer manuellement le fichier desktop de « %s » ou ouvrir le fichier dans le même répertoire et supprimer la ligne « %s »."
 
-#: ../src/appfinder-window.c:983 ../src/appfinder-window.c:1131
+#: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1120
 msgid "_Hide"
 msgstr "_Masquer"
 
-#: ../src/appfinder-window.c:984
+#: ../src/appfinder-window.c:973
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Voulez-vous vraiment masquer « %s » ?"
 
-#: ../src/appfinder-window.c:1078
+#: ../src/appfinder-window.c:1067
 msgid "Remove From Bookmarks"
 msgstr "Supprimer des favoris"
 
-#: ../src/appfinder-window.c:1078
+#: ../src/appfinder-window.c:1067
 msgid "Add to Bookmarks"
 msgstr "Ajouter aux favoris"
 
-#: ../src/appfinder-window.c:1107
+#: ../src/appfinder-window.c:1096
 msgid "_Edit"
 msgstr "M_odifier"
 
-#: ../src/appfinder-window.c:1124
+#: ../src/appfinder-window.c:1113
 msgid "_Revert"
 msgstr "_Rétablir"
 
