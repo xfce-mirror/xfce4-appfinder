@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 00:30+0200\n"
-"PO-Revision-Date: 2019-10-24 22:48+0000\n"
-"Last-Translator: Πέτρος Σαμαράς <psamaras1@gmail.com>\n"
+"POT-Creation-Date: 2020-08-20 12:47+0200\n"
+"PO-Revision-Date: 2020-08-20 10:47+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Greek (http://www.transifex.com/xfce/xfce4-appfinder/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,135 +34,131 @@ msgstr "Βίαιη έξοδος"
 msgid "All Applications"
 msgstr "Όλες οι Εφαρμογές"
 
-#: ../src/appfinder-model.c:576
+#: ../src/appfinder-model.c:618
 msgid "Name"
 msgstr "Όνομα"
 
-#: ../src/appfinder-model.c:577
+#: ../src/appfinder-model.c:619
 msgid "Comment"
 msgstr "Σχόλιο"
 
-#: ../src/appfinder-model.c:578
+#: ../src/appfinder-model.c:620
 msgid "Command"
 msgstr "Εντολή"
 
-#: ../src/appfinder-model.c:579
+#: ../src/appfinder-model.c:621
 msgid "Categories"
 msgstr "Κατηγορίες"
 
-#: ../src/appfinder-model.c:580
+#: ../src/appfinder-model.c:622
 msgid "Filename"
 msgstr "Όνομα Αρχείου"
 
-#: ../src/appfinder-model.c:2101
+#: ../src/appfinder-model.c:2396
 msgid "Application has no command"
 msgstr "Η εφαρμογή δεν έχει εντολή"
 
-#: ../src/appfinder-model.c:2520
+#: ../src/appfinder-model.c:2800
 msgid "Commands History"
 msgstr "Ιστορικό Εντολών"
 
-#: ../src/appfinder-model.c:2544
+#: ../src/appfinder-model.c:2824
 msgid "Bookmarks"
 msgstr "Σελιδοδείκτες"
 
-#: ../src/appfinder-preferences.c:258
+#: ../src/appfinder-preferences.c:262
 msgid "C_lear"
 msgstr "Ε_κκαθάριση"
 
-#: ../src/appfinder-preferences.c:259
+#: ../src/appfinder-preferences.c:263
 msgid "This will permanently clear the custom command history."
 msgstr "Αυτό θα εκκαθαρίσει μόνιμα το ιστορικό προσαρμοσμένων εντολών."
 
-#: ../src/appfinder-preferences.c:260
+#: ../src/appfinder-preferences.c:264
 msgid "Are you sure you want to clear the command history?"
 msgstr "Είστε σίγουρος ότι θέλετε να εκκαθαρίσει το ιστορικό εντολών;"
 
-#: ../src/appfinder-preferences.c:369
+#: ../src/appfinder-preferences.c:373
 msgid "_Delete"
 msgstr "_Διαγραφή"
 
-#: ../src/appfinder-preferences.c:370
+#: ../src/appfinder-preferences.c:374
 msgid "The custom action will be deleted permanently."
 msgstr "Η προσαρμοσμένη ενέργεια θα διαγραφεί μόνιμα."
 
-#: ../src/appfinder-preferences.c:371
+#: ../src/appfinder-preferences.c:375
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Είστε σίγουροι ότι θέλετε να διαγράψετε το pattern \"%s\";"
 
-#: ../src/appfinder-window.c:226 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:232 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Εύρεση Εφαρμογών"
 
-#: ../src/appfinder-window.c:272
+#: ../src/appfinder-window.c:278
 msgid "Toggle view mode"
 msgstr "Εναλλαγή κατάστασης προβολής"
 
-#: ../src/appfinder-window.c:343
+#: ../src/appfinder-window.c:357
 msgid "_Preferences"
 msgstr "_Προτιμήσεις"
 
-#: ../src/appfinder-window.c:360
-msgid "Close"
-msgstr "Κλείσιμο"
-
-#: ../src/appfinder-window.c:370 ../src/appfinder-window.c:1082
+#: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1083
 msgid "La_unch"
 msgstr "Ε_κτέλεση"
 
-#: ../src/appfinder-window.c:896
+#: ../src/appfinder-window.c:897
 msgid "Failed to launch desktop item editor"
 msgstr "Αποτυχία εκκίνησης επεξεργαστή αντικειμένου επιφάνειας εργασίας"
 
-#: ../src/appfinder-window.c:922
+#: ../src/appfinder-window.c:923
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Αυτό θα αφαιρέσει μόνιμα το προσαρμοσμένο αρχείο επιφάνειας εργασίας από τον προσωπικό σας κατάλογο."
 
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Είστε σίγουροι ότι θέλετε να επαναφέρετε το \"%s\";"
 
-#: ../src/appfinder-window.c:933
+#: ../src/appfinder-window.c:934
 msgid "Failed to remove desktop file"
 msgstr "Αποτυχία αφαίρεσης αρχείου επιφάνειας εργασίας"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:966
+#: ../src/appfinder-window.c:967
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Για εμφάνιση του αντικειμένου πρέπει να αφαιρέσετε χειροκίνητα το αρχείο επιφάνειας εργασίας από το \"%s\" ή ανοίξτε το αρχείο στον ίδιο κατάλογο και αφαιρέστε την γραμμή \"%s\"."
 
-#: ../src/appfinder-window.c:971 ../src/appfinder-window.c:1119
+#: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1120
 msgid "_Hide"
 msgstr "_Απόκρυψη"
 
-#: ../src/appfinder-window.c:972
+#: ../src/appfinder-window.c:973
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Είστε σίγουροι ότι θέλετε να αποκρύψετε το \"%s\";"
 
-#: ../src/appfinder-window.c:1066
+#: ../src/appfinder-window.c:1067
 msgid "Remove From Bookmarks"
 msgstr "Αφαίρεση από τους σελιδοδείκτες"
 
-#: ../src/appfinder-window.c:1066
+#: ../src/appfinder-window.c:1067
 msgid "Add to Bookmarks"
 msgstr "Προσθήκη στους σελιδοδείκτες"
 
-#: ../src/appfinder-window.c:1095
+#: ../src/appfinder-window.c:1096
 msgid "_Edit"
 msgstr "_Επεξεργασία"
 
-#: ../src/appfinder-window.c:1112
+#: ../src/appfinder-window.c:1113
 msgid "_Revert"
 msgstr "Ακύ_ρωση αλλαγών"
 
@@ -186,16 +182,16 @@ msgstr "Έξοδος από όλες τις διεργασίες"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Μην δοκιμάσετε την χρήση ή να γίνετε υπηρεσία D-Bus"
 
-#: ../src/main.c:235
+#: ../src/main.c:236
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Για πληροφορίες χρήσης πληκτρολογήστε \"%s --help\"."
 
-#: ../src/main.c:246
+#: ../src/main.c:247
 msgid "The Xfce development team. All rights reserved."
 msgstr "Η ομάδα ανάπτυξης του Xfce. Όλα τα δικαιώματα είναι δεσμευμένα."
 
-#: ../src/main.c:247
+#: ../src/main.c:248
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Παρακαλώ να αναφέρετε σφάλματα στο <%s>."
@@ -270,62 +266,72 @@ msgid ""
 msgstr "Όταν ένα στιγμιότυπο εκτελείται στο παρασκήνιο, ανοίγει μόνο ένα παράθυρο κάθε φορά."
 
 #: ../src/appfinder-preferences.glade.h:18
+msgid "Sort recently used items first"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:19
+msgid ""
+"Order items, such that items that are most recently used are always on the "
+"top."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Behaviour"
 msgstr "Συμπεριφορά"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:21
 msgid "_View items as icons"
 msgstr "_Προβολή αντικειμένων ως εικονίδια"
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Text besi_de icons"
 msgstr "Κείμενο δί_πλα στα εικονίδια"
 
-#: ../src/appfinder-preferences.glade.h:21
+#: ../src/appfinder-preferences.glade.h:23
 msgid "Ite_m icon size:"
 msgstr "Μέγεθος εικονιδίου αντι_κειμένου:"
 
-#: ../src/appfinder-preferences.glade.h:22
+#: ../src/appfinder-preferences.glade.h:24
 msgid "Hide category pane"
 msgstr "Απόκρυψη πλαισίου κατηγοριών"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "Hide category panel and show all applications."
 msgstr "Απόκρυψη πλαισίου κατηγοριών και εμφάνιση όλων των εφαρμογών."
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "Categ_ory icon size:"
 msgstr "Μέγεθος εικονιδίου Κατη_γορίας:"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Appearance"
 msgstr "Εμφάνιση"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "C_lear Custom Command History"
 msgstr "Ε_κκαθάριση Προσαρμοσμένου Ιστορικού Εντολών"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "History"
 msgstr "Ιστορικό"
 
-#: ../src/appfinder-preferences.glade.h:28
+#: ../src/appfinder-preferences.glade.h:30
 msgid "_General"
 msgstr "_Γενικά"
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Pattern"
 msgstr "Pattern"
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "Add a new custom action."
 msgstr "Προσθήκη νέας προσαρμοσμένης ενέργειας."
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Remove the currently selected action."
 msgstr "Αφαίρεση της τρέχουσας επιλεγμένης ενέργειας."
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -333,29 +339,33 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Εάν ο τύπος είναι ορισμένος στο πρόθεμα, το %s θα αντικατασταθεί με ένα string μετά το pattern, %S με την ολοκληρωμένη καταχώρηση κειμένου. Για τις κανονικές εκφράσεις μπορείτε να χρησιμοποιήσετε \\0 και \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Co_mmand:"
 msgstr "Εν_τολή:"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:37
 msgid "Patte_rn:"
 msgstr "Patte_rn:"
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:38
 msgid "_Type:"
 msgstr "_Τύπος:"
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:39
 msgid "_Save match in command history"
 msgstr "_Αποθήκευση συσχέτισης στο ιστορικό εντολών"
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:40
 msgid "Custom _Actions"
 msgstr "Προσαρμοσμένες _Ενέργειες"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
 msgstr "Εύρεση και εκτέλεση εγκατεστημένων εφαρμογών στο σύστημά σας."
+
+#: ../data/xfce4-appfinder.desktop.in.h:3
+msgid "program;applications;bookmarks;"
+msgstr ""
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
@@ -364,6 +374,13 @@ msgstr "Εκτέλεση Προγράμματος..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Enter a command you want to launch"
 msgstr "Εισάγετε μια εντολή που θέλετε να εκτελεστεί"
+
+#: ../data/xfce4-run.desktop.in.h:3
+msgid ""
+"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
+" dash;krunner;synapse;ulauncher;launchy;gnome "
+"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr ""
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
