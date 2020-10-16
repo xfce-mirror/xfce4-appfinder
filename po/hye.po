@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-25 00:45+0200\n"
-"PO-Revision-Date: 2020-06-04 13:09+0000\n"
-"Last-Translator: Arman Harutyunyan <arman.harut468@gmail.com>\n"
+"POT-Creation-Date: 2020-08-20 12:47+0200\n"
+"PO-Revision-Date: 2020-08-20 10:47+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Eastern Armenian (http://www.transifex.com/xfce/xfce4-appfinder/language/hye/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,11 +53,11 @@ msgstr "Նշանուն"
 msgid "Application has no command"
 msgstr "Յաւելուածը չունի հրամաններ"
 
-#: ../src/appfinder-model.c:2816
+#: ../src/appfinder-model.c:2800
 msgid "Commands History"
 msgstr "Պատմութիւն"
 
-#: ../src/appfinder-model.c:2840
+#: ../src/appfinder-model.c:2824
 msgid "Bookmarks"
 msgstr "Էջանիշներ"
 
@@ -96,68 +96,64 @@ msgstr "Յաւելուածների Որոնում"
 msgid "Toggle view mode"
 msgstr "Փոխել ցուցադրման եղանակը"
 
-#: ../src/appfinder-window.c:351
+#: ../src/appfinder-window.c:357
 msgid "_Preferences"
 msgstr "_Նախընտրանք"
 
-#: ../src/appfinder-window.c:369
-msgid "Close"
-msgstr "Փակել"
-
-#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1094
+#: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1083
 msgid "La_unch"
 msgstr "Գոր_ծարկել"
 
-#: ../src/appfinder-window.c:908
+#: ../src/appfinder-window.c:897
 msgid "Failed to launch desktop item editor"
 msgstr "Չյաջողուեց գործարկել աշխատասեղանի տարրերի խմբագրիչը"
 
-#: ../src/appfinder-window.c:934
+#: ../src/appfinder-window.c:923
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Յարմարեցուած ․desktop նիշը անվերադարձ կը հեռացուի տնային նշարանից։"
 
-#: ../src/appfinder-window.c:935
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Վերադարձնե՞լ «%s»֊ը։"
 
-#: ../src/appfinder-window.c:945
+#: ../src/appfinder-window.c:934
 msgid "Failed to remove desktop file"
 msgstr "Չյաջողուեց հեռացնել .desktop նիշը"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:978
+#: ../src/appfinder-window.c:967
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Տարրը թաքցնելու համար պէտք է ձեռքով հեռացնել ․desktop նիշը «%s»֊ից, կամ բացել նիշը նոյն նշարանում եւ հեռացնել «%s» տողը։"
 
-#: ../src/appfinder-window.c:983 ../src/appfinder-window.c:1131
+#: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1120
 msgid "_Hide"
 msgstr "_Թաքցնել"
 
-#: ../src/appfinder-window.c:984
+#: ../src/appfinder-window.c:973
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Թաքցնե՞լ «%s»֊ը։"
 
-#: ../src/appfinder-window.c:1078
+#: ../src/appfinder-window.c:1067
 msgid "Remove From Bookmarks"
 msgstr "Հեռացնել էջանիշերից"
 
-#: ../src/appfinder-window.c:1078
+#: ../src/appfinder-window.c:1067
 msgid "Add to Bookmarks"
 msgstr "Աւելացնել էջանիշերում"
 
-#: ../src/appfinder-window.c:1107
+#: ../src/appfinder-window.c:1096
 msgid "_Edit"
 msgstr "_Խմբագրում"
 
-#: ../src/appfinder-window.c:1124
+#: ../src/appfinder-window.c:1113
 msgid "_Revert"
 msgstr "_Վերադարձ"
 
