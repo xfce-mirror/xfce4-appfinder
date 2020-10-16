@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-22 12:46+0200\n"
-"PO-Revision-Date: 2020-05-23 00:17+0000\n"
-"Last-Translator: 黃柏諺 <s8321414@gmail.com>\n"
+"POT-Creation-Date: 2020-08-20 12:47+0200\n"
+"PO-Revision-Date: 2020-08-20 10:47+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/xfce/xfce4-appfinder/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,15 +51,15 @@ msgstr "類別"
 msgid "Filename"
 msgstr "檔案名稱"
 
-#: ../src/appfinder-model.c:2390
+#: ../src/appfinder-model.c:2396
 msgid "Application has no command"
 msgstr "應用程式沒有指令"
 
-#: ../src/appfinder-model.c:2809
+#: ../src/appfinder-model.c:2800
 msgid "Commands History"
 msgstr "指令歷史"
 
-#: ../src/appfinder-model.c:2833
+#: ../src/appfinder-model.c:2824
 msgid "Bookmarks"
 msgstr "書籤"
 
@@ -98,68 +98,64 @@ msgstr "應用程式協尋器"
 msgid "Toggle view mode"
 msgstr "切換檢視模式"
 
-#: ../src/appfinder-window.c:351
+#: ../src/appfinder-window.c:357
 msgid "_Preferences"
 msgstr "偏好設定(_P)"
 
-#: ../src/appfinder-window.c:369
-msgid "Close"
-msgstr "關閉"
-
-#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1094
+#: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1083
 msgid "La_unch"
 msgstr "啟動(_U)"
 
-#: ../src/appfinder-window.c:908
+#: ../src/appfinder-window.c:897
 msgid "Failed to launch desktop item editor"
 msgstr "無法啟動桌面項目編輯器"
 
-#: ../src/appfinder-window.c:934
+#: ../src/appfinder-window.c:923
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "這會從您的家目錄永遠移除自訂桌面檔。"
 
-#: ../src/appfinder-window.c:935
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "您確定要還原「%s」？"
 
-#: ../src/appfinder-window.c:945
+#: ../src/appfinder-window.c:934
 msgid "Failed to remove desktop file"
 msgstr "無法移除桌面檔"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:978
+#: ../src/appfinder-window.c:967
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "若要取消隱藏該項目，您必須從「%s」手動移除桌面檔，或是在同個目錄內開啟檔案並移除「%s」這一列。"
 
-#: ../src/appfinder-window.c:983 ../src/appfinder-window.c:1131
+#: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1120
 msgid "_Hide"
 msgstr "隱藏(_H)"
 
-#: ../src/appfinder-window.c:984
+#: ../src/appfinder-window.c:973
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "您確定要隱藏「%s」？"
 
-#: ../src/appfinder-window.c:1078
+#: ../src/appfinder-window.c:1067
 msgid "Remove From Bookmarks"
 msgstr "移除書籤"
 
-#: ../src/appfinder-window.c:1078
+#: ../src/appfinder-window.c:1067
 msgid "Add to Bookmarks"
 msgstr "加入書籤"
 
-#: ../src/appfinder-window.c:1107
+#: ../src/appfinder-window.c:1096
 msgid "_Edit"
 msgstr "編輯(_E)"
 
-#: ../src/appfinder-window.c:1124
+#: ../src/appfinder-window.c:1113
 msgid "_Revert"
 msgstr "還原(_R)"
 
@@ -364,6 +360,10 @@ msgstr "自訂動作(_A)"
 msgid "Find and launch applications installed on your system"
 msgstr "尋找並啟動您系統上安裝的應用程式"
 
+#: ../data/xfce4-appfinder.desktop.in.h:3
+msgid "program;applications;bookmarks;"
+msgstr "program;applications;bookmarks;"
+
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
 msgstr "執行程式..."
@@ -371,6 +371,13 @@ msgstr "執行程式..."
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Enter a command you want to launch"
 msgstr "輸入您想要啟動的指令"
+
+#: ../data/xfce4-run.desktop.in.h:3
+msgid ""
+"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
+" dash;krunner;synapse;ulauncher;launchy;gnome "
+"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
