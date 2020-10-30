@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 12:47+0200\n"
-"PO-Revision-Date: 2020-10-09 10:19+0000\n"
+"PO-Revision-Date: 2020-10-30 09:54+0000\n"
 "Last-Translator: Luna Jernberg <bittin@cafe8bitar.se>\n"
 "Language-Team: Swedish (http://www.transifex.com/xfce/xfce4-appfinder/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -266,13 +266,13 @@ msgstr "När en instans körs i bakgrunden, öppna endast ett fönster åt gång
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Sort recently used items first"
-msgstr ""
+msgstr "Sortera senast använda objekt först"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
-msgstr ""
+msgstr "Sortera objekt, så att objekt som senast har använts alltid är överst."
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Behaviour"
