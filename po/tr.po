@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 12:47+0200\n"
-"PO-Revision-Date: 2020-11-04 22:49+0000\n"
+"PO-Revision-Date: 2020-11-16 01:02+0000\n"
 "Last-Translator: Emin Tufan <etcetin@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/xfce/xfce4-appfinder/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "Komut"
 
 #: ../src/appfinder-model.c:621
 msgid "Categories"
-msgstr "Sınıflandırmalar"
+msgstr "Kategoriler"
 
 #: ../src/appfinder-model.c:622
 msgid "Filename"
