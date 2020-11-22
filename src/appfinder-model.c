@@ -2407,7 +2407,11 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
 
   if (g_shell_parse_argv (command, NULL, &argv, error))
     {
+#if LIBXFCE4UI_CHECK_VERSION (4, 15, 5)
+      succeed = xfce_spawn_no_child  (screen,
+#else
       succeed = xfce_spawn_on_screen (screen,
+#endif
                                       garcon_menu_item_get_path (item),
                                       argv, NULL, G_SPAWN_SEARCH_PATH,
                                       garcon_menu_item_supports_startup_notification (item),
