@@ -2407,12 +2407,21 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
 
   if (g_shell_parse_argv (command, NULL, &argv, error))
     {
+#if LIBXFCE4UI_CHECK_VERSION (4, 15, 6)
+      succeed = xfce_spawn (screen,
+                            garcon_menu_item_get_path (item),
+                            argv, NULL, G_SPAWN_SEARCH_PATH,
+                            garcon_menu_item_supports_startup_notification (item),
+                            gtk_get_current_event_time (),
+                            icon, FALSE, error);
+#else
       succeed = xfce_spawn_on_screen (screen,
                                       garcon_menu_item_get_path (item),
                                       argv, NULL, G_SPAWN_SEARCH_PATH,
                                       garcon_menu_item_supports_startup_notification (item),
                                       gtk_get_current_event_time (),
                                       icon, error);
+#endif
 
       g_strfreev (argv);
     }
