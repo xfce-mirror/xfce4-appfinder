@@ -1145,13 +1145,7 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
       gtk_container_add (GTK_CONTAINER (mi), box);
       gtk_widget_show_all (mi);
 
-#if GTK_CHECK_VERSION (3, 22, 0)
       gtk_menu_popup_at_pointer (GTK_MENU (menu), NULL);
-#else
-      gtk_menu_popup (GTK_MENU (menu),
-                      NULL, NULL, NULL, NULL, 3,
-                      gtk_get_current_event_time ());
-#endif
 
       return TRUE;
     }
