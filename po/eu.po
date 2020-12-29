@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# beriain, 2020
 # Piarres Beobide <pi@beobide.net>, 2004-2005,2008-2009
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 12:47+0200\n"
-"PO-Revision-Date: 2020-08-20 10:47+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2020-12-29 13:11+0000\n"
+"Last-Translator: beriain\n"
 "Language-Team: Basque (http://www.transifex.com/xfce/xfce4-appfinder/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,7 +58,7 @@ msgstr "Komando historia"
 
 #: ../src/appfinder-model.c:2824
 msgid "Bookmarks"
-msgstr ""
+msgstr "Laster-markak"
 
 #: ../src/appfinder-preferences.c:262
 msgid "C_lear"
@@ -96,7 +97,7 @@ msgstr "Txandakatu ikuste modua"
 
 #: ../src/appfinder-window.c:357
 msgid "_Preferences"
-msgstr ""
+msgstr "Hobespenak"
 
 #: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1083
 msgid "La_unch"
@@ -141,11 +142,11 @@ msgstr "Ziur zaude \"%s\" ezkutatu nahi duzula?"
 
 #: ../src/appfinder-window.c:1067
 msgid "Remove From Bookmarks"
-msgstr ""
+msgstr "Laster-marketatik kendu"
 
 #: ../src/appfinder-window.c:1067
 msgid "Add to Bookmarks"
-msgstr ""
+msgstr "Laster-marketara gehitu"
 
 #: ../src/appfinder-window.c:1096
 msgid "_Edit"
@@ -153,7 +154,7 @@ msgstr "_Editatu"
 
 #: ../src/appfinder-window.c:1113
 msgid "_Revert"
-msgstr ""
+msgstr "Leheneratu"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
@@ -250,23 +251,23 @@ msgstr "Azken leiho ixterakoan aplikazioa itxi beharrean atzealdean martxan mant
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Single window"
-msgstr ""
+msgstr "Leiho bakarra"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
-msgstr ""
+msgstr "Instantzia bat atzealdean exekutatzen ari denean, leiho bakarra ireki aldi berean."
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Sort recently used items first"
-msgstr ""
+msgstr "Zerrendatu azkenaldian erabilitako elementuak lehenago"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
-msgstr ""
+msgstr "Elementuak zerrendatu, azkenaldian erabilitako elementuak beti goiko aldean jarriz."
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Behaviour"
@@ -286,11 +287,11 @@ msgstr "Ele_mentu ikono tamaina:"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Hide category pane"
-msgstr ""
+msgstr "Kategorien panela ezkutatu"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Hide category panel and show all applications."
-msgstr ""
+msgstr "Kategorien panela ezkutatu eta aplikazio guztiak erakutsi."
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Categ_ory icon size:"
@@ -358,7 +359,7 @@ msgstr "Bilatu eta abiarazi sisteman instalatutako aplikazioak"
 
 #: ../data/xfce4-appfinder.desktop.in.h:3
 msgid "program;applications;bookmarks;"
-msgstr ""
+msgstr "programak;aplikazioak;laster-markak;"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
@@ -366,7 +367,7 @@ msgstr "Exekutatu programa..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Enter a command you want to launch"
-msgstr ""
+msgstr "Sartu exekutatu nahi duzun komando bat"
 
 #: ../data/xfce4-run.desktop.in.h:3
 msgid ""
@@ -377,7 +378,7 @@ msgstr ""
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
-msgstr ""
+msgstr "Aplikazioak eta komandoak azkar exekutatzeko aplikazioa"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
