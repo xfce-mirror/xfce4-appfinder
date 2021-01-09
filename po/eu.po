@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# beriain, 2020
+# beriain, 2020-2021
 # Piarres Beobide <pi@beobide.net>, 2004-2005,2008-2009
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 12:47+0200\n"
-"PO-Revision-Date: 2020-12-29 13:11+0000\n"
+"PO-Revision-Date: 2021-01-09 13:06+0000\n"
 "Last-Translator: beriain\n"
 "Language-Team: Basque (http://www.transifex.com/xfce/xfce4-appfinder/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -374,7 +374,7 @@ msgid ""
 "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
 " dash;krunner;synapse;ulauncher;launchy;gnome "
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr ""
+msgstr "exekutatu:komandoa;aplikazioa;programa;bilatzailea;bilatu;abiarazlea;dena;fokua;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
@@ -386,4 +386,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr ""
+msgstr "Aplikazio bilatzailea zure sisteman instalatuta dauden aplikazioak aurkitu eta abiarazteko, eta komandoak azkar exekutatzeko tresna bat da. Xfce panelari abiarazleak azkar gehitzeko erabili daiteke ere, elementuak zerrendatik panelera arrastatuz."
