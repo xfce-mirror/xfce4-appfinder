@@ -1803,7 +1803,7 @@ xfce_appfinder_window_execute_command (const gchar          *text,
       /* spawn the command */
       APPFINDER_DEBUG ("spawn \"%s\"", expanded);
 #if LIBXFCE4UI_CHECK_VERSION (4, 15, 6)
-      succeed = xfce_spawn_command_line (screen, expanded, FALSE, FALSE, FALSE, error);
+      succeed = xfce_spawn_command_line (screen, expanded, FALSE, FALSE, TRUE, error);
 #else
       succeed = xfce_spawn_command_line_on_screen (screen, expanded, FALSE, FALSE, error);
 #endif
