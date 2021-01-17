@@ -1,3 +1,7 @@
+4.16.1
+======
+- Launch applications as children again
+
 4.16.0
 ======
 - Launch applications reparenting them to init
