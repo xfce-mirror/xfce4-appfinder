@@ -6,8 +6,8 @@
 # Dotan Kamber <kamberd@yahoo.com>, 2004,2006
 # Elishai Eliyahu <elishai@mailfence.com>, 2016-2020
 # Jonatan Perry <Jonatan443@walla.co.il>, 2004
-# Omer I.S., 2020
-# Omer I.S., 2020
+# Omer I.S. <omeritzicschwartz@gmail.com>, 2020
+# Omer I.S. <omeritzicschwartz@gmail.com>, 2020
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2014
 # Yuval Tanny <tanai@int.gov.il>, 2004
 msgid ""
