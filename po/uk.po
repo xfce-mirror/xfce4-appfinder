@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 12:47+0200\n"
-"PO-Revision-Date: 2021-01-28 17:15+0000\n"
+"PO-Revision-Date: 2021-02-03 16:49+0000\n"
 "Last-Translator: Андрій Мізик <andmizyk@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/xfce/xfce4-appfinder/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -263,13 +263,13 @@ msgstr "Якщо вже програма запущена у фоні, відк�
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Sort recently used items first"
-msgstr ""
+msgstr "Сортувати останні вживані елементи першими"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
-msgstr ""
+msgstr "Впорядковує елементи так, що найвживаніші завжди будуть першими."
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Behaviour"
@@ -376,7 +376,7 @@ msgid ""
 "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
 " dash;krunner;synapse;ulauncher;launchy;gnome "
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr ""
+msgstr "виконати;команда;застосунок;програма;шукач;пошук;запускач;everything;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
