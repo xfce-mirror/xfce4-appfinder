@@ -124,6 +124,7 @@ static gint       xfce_appfinder_window_sort_items_frecency           (GtkTreeMo
                                                                        GtkTreeIter                 *a,
                                                                        GtkTreeIter                 *b,
                                                                        gpointer                     data);
+static gchar    **xfce_appfinder_parse_envp                           (gchar                      **cmd);
 
 struct _XfceAppfinderWindowClass
 {
@@ -1797,16 +1798,35 @@ xfce_appfinder_window_execute_command (const gchar          *text,
 
   if (IS_STRING (text))
     {
+      gchar **argv;
+      gchar **envp;
+
       /* expand variables */
       expanded = xfce_expand_variables (text, NULL);
 
       /* spawn the command */
       APPFINDER_DEBUG ("spawn \"%s\"", expanded);
+
+      envp = xfce_appfinder_parse_envp (&expanded);
+
+      if (G_LIKELY (g_shell_parse_argv (expanded, NULL, &argv, error)))
+        {
 #if LIBXFCE4UI_CHECK_VERSION (4, 15, 6)
-      succeed = xfce_spawn_command_line (screen, expanded, FALSE, FALSE, TRUE, error);
+          succeed = xfce_spawn (screen, NULL, argv, envp,
+                                G_SPAWN_SEARCH_PATH, FALSE,
+                                gtk_get_current_event_time (), NULL,
+                                TRUE, error);
 #else
-      succeed = xfce_spawn_command_line_on_screen (screen, expanded, FALSE, FALSE, error);
+          succeed = xfce_spawn_on_screen (screen, NULL, argv, envp,
+                                          G_SPAWN_SEARCH_PATH, FALSE,
+                                          gtk_get_current_event_time (), NULL,
+                                          error);
 #endif
+        }
+
+      g_strfreev (argv);
+      g_strfreev (envp);
+
       g_free (expanded);
     }
 
@@ -2077,4 +2097,46 @@ xfce_appfinder_should_sort_icon_view (void)
   return gtk_get_major_version () >= 3  &&
          gtk_get_minor_version () >= 22 &&
          gtk_get_micro_version () >= 27;
+}
+
+
+
+static gchar**
+xfce_appfinder_parse_envp (gchar **cmd)
+{
+  gchar **vars;
+  gchar **envp;
+  gint    offset = 0;
+
+  vars = g_strsplit (*cmd, " ", -1);
+  envp = g_get_environ ();
+
+  for (gint n = 0; vars[n] != NULL; ++n)
+    {
+      gchar *var, *val;
+      gchar *index = g_strrstr (vars[n], "=");
+
+      if (index == NULL)
+        break;
+
+      offset += strlen (vars[n]);
+
+      var = g_strndup (vars[n], index - vars[n]);
+      val = g_strdup (index + 1);
+      envp = g_environ_setenv (envp, var, val, TRUE);
+
+      g_free (var);
+      g_free (val);
+    }
+
+  if (offset > 0)
+    {
+      gchar *temp = g_strdup (*cmd + offset + 1);
+      g_free (*cmd);
+      *cmd = temp;
+    }
+
+  g_strfreev (vars);
+
+  return envp;
 }
