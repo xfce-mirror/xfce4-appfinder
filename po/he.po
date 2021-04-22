@@ -5,6 +5,7 @@
 # Translators:
 # Dotan Kamber <kamberd@yahoo.com>, 2004,2006
 # Elishai Eliyahu <elishai@mailfence.com>, 2016-2020
+# Elishai Eliyahu <elishai@mailfence.com>, 2021
 # Jonatan Perry <Jonatan443@walla.co.il>, 2004
 # Omer I.S. <omeritzicschwartz@gmail.com>, 2021
 # Omer I.S. <omeritzicschwartz@gmail.com>, 2020
@@ -15,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 12:47+0200\n"
-"PO-Revision-Date: 2021-03-05 07:54+0000\n"
-"Last-Translator: Omer I.S. <omeritzicschwartz@gmail.com>\n"
+"POT-Creation-Date: 2021-03-21 12:46+0100\n"
+"PO-Revision-Date: 2021-03-21 18:24+0000\n"
+"Last-Translator: Elishai Eliyahu <elishai@mailfence.com>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce4-appfinder/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,35 +35,35 @@ msgstr "נאלץ להפסיק"
 msgid "All Applications"
 msgstr "כל היישומים"
 
-#: ../src/appfinder-model.c:618
+#: ../src/appfinder-model.c:613
 msgid "Name"
 msgstr "שם"
 
-#: ../src/appfinder-model.c:619
+#: ../src/appfinder-model.c:614
 msgid "Comment"
 msgstr "הערה"
 
-#: ../src/appfinder-model.c:620
+#: ../src/appfinder-model.c:615
 msgid "Command"
 msgstr "פקודה"
 
-#: ../src/appfinder-model.c:621
+#: ../src/appfinder-model.c:616
 msgid "Categories"
 msgstr "קטגוריות"
 
-#: ../src/appfinder-model.c:622
+#: ../src/appfinder-model.c:617
 msgid "Filename"
 msgstr "שם קובץ"
 
-#: ../src/appfinder-model.c:2396
+#: ../src/appfinder-model.c:2395
 msgid "Application has no command"
 msgstr "יישום נטול פקודה"
 
-#: ../src/appfinder-model.c:2800
+#: ../src/appfinder-model.c:2808
 msgid "Commands History"
 msgstr "היסטוריית פקודות"
 
-#: ../src/appfinder-model.c:2824
+#: ../src/appfinder-model.c:2832
 msgid "Bookmarks"
 msgstr "סימניות"
 
@@ -91,74 +92,74 @@ msgstr "הפעולה המותאמת אישית תימחק באופן קבוע."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "האם אתה בטוח כי ברצונך למחוק את דפוס \"%s\"?"
 
-#: ../src/appfinder-window.c:232 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:231 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "מוצא יישומים"
 
-#: ../src/appfinder-window.c:278
+#: ../src/appfinder-window.c:277
 msgid "Toggle view mode"
 msgstr "החלף מצב תצוגה"
 
-#: ../src/appfinder-window.c:357
+#: ../src/appfinder-window.c:356
 msgid "_Preferences"
 msgstr "ה_עדפות"
 
-#: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1083
+#: ../src/appfinder-window.c:367 ../src/appfinder-window.c:1095
 msgid "La_unch"
 msgstr "_הפעל"
 
-#: ../src/appfinder-window.c:897
+#: ../src/appfinder-window.c:896
 msgid "Failed to launch desktop item editor"
 msgstr "נכשל להפעיל עורך פריט שולחן עבודה"
 
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:922
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "זה יסיר לצמיתות את קובץ שולחן העבודה המותאם אישית מספריית הבית שלך."
 
-#: ../src/appfinder-window.c:924
+#: ../src/appfinder-window.c:923
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "האם אתה בטוח שברצונך להחזיר את \"%s\"?"
 
-#: ../src/appfinder-window.c:934
+#: ../src/appfinder-window.c:933
 msgid "Failed to remove desktop file"
 msgstr "נכשלה הסרת קובץ שולחן עבודה"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:967
+#: ../src/appfinder-window.c:966
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "כדי לגלות את הפריט עליך להסיר ידנית את קובץ שולחן העבודה מ \"%s\" או לפתוח את הקובץ באותה תיקייה ולהסיר את השורה \"%s\"."
 
-#: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1120
+#: ../src/appfinder-window.c:971 ../src/appfinder-window.c:1141
 msgid "_Hide"
 msgstr "הס_תר"
 
-#: ../src/appfinder-window.c:973
+#: ../src/appfinder-window.c:972
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "האם אתה בטוח כי ברצונך להסתיר את \"%s\"?"
 
-#: ../src/appfinder-window.c:1067
+#: ../src/appfinder-window.c:1077
 msgid "Remove From Bookmarks"
 msgstr "הסר מתוך הסימניות"
 
-#: ../src/appfinder-window.c:1067
+#: ../src/appfinder-window.c:1077
 msgid "Add to Bookmarks"
 msgstr "הוסף אל סימניות"
 
-#: ../src/appfinder-window.c:1096
+#: ../src/appfinder-window.c:1109
 msgid "_Edit"
 msgstr "ע_רוך"
 
-#: ../src/appfinder-window.c:1113
+#: ../src/appfinder-window.c:1126
 msgid "_Revert"
 msgstr "ב_טל"
 
@@ -182,16 +183,16 @@ msgstr "הפסק את כל התהליכים"
 msgid "Do not try to use or become a D-Bus service"
 msgstr "אל תנסה להשתמש או להיות שירות D-Bus "
 
-#: ../src/main.c:236
+#: ../src/main.c:231
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "הקלד \"%s --help\" לשימוש."
 
-#: ../src/main.c:247
+#: ../src/main.c:242
 msgid "The Xfce development team. All rights reserved."
 msgstr "צוות הפיתוח של Xfce. כל הזכויות שמורות."
 
-#: ../src/main.c:248
+#: ../src/main.c:243
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "נא לדווח על באגים ל־<%s>."
@@ -320,18 +321,22 @@ msgid "_General"
 msgstr "_כללי"
 
 #: ../src/appfinder-preferences.glade.h:31
+msgid "Custom actions are only available in collapsed mode."
+msgstr "פעולות מותאמות אישית זמינות רק במצב מקופל."
+
+#: ../src/appfinder-preferences.glade.h:32
 msgid "Pattern"
 msgstr "דפוס"
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Add a new custom action."
 msgstr "הוסף פעולה מותאמת אישית חדשה."
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Remove the currently selected action."
 msgstr "הסר פעולה נבחרת נוכחית."
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:36
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -339,23 +344,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "אם הסוג נקבע לקידומת, %s יוחלף עם המחרוזת אחרי הדוגמה, %S עם טקסט ההזנה השלם. בביטויים שיטתיים אפשר להשתמש ב־\\0 וגם ב־ \\<num>. "
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:37
 msgid "Co_mmand:"
 msgstr "_פקודה:"
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:38
 msgid "Patte_rn:"
 msgstr "_דפוס:"
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:39
 msgid "_Type:"
 msgstr "_טיפוס:"
 
-#: ../src/appfinder-preferences.glade.h:39
+#: ../src/appfinder-preferences.glade.h:40
 msgid "_Save match in command history"
 msgstr "_שמור התאמה בהיסטוריית הפקודות"
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:41
 msgid "Custom _Actions"
 msgstr "פעולות _מותאמות אישית"
 
