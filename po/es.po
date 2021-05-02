@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-21 12:46+0100\n"
-"PO-Revision-Date: 2021-04-22 18:27+0000\n"
+"PO-Revision-Date: 2021-05-02 20:26+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce4-appfinder/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -184,7 +184,7 @@ msgstr "Cerrar todas las instancias"
 
 #: ../src/main.c:68
 msgid "Do not try to use or become a D-Bus service"
-msgstr "No intentar usar o convertirse en un servicio de D-Bus"
+msgstr "No intentar hacer uso o convertirse en un servicio de D-Bus"
 
 #: ../src/main.c:231
 #, c-format
@@ -267,7 +267,7 @@ msgstr "Ventana única"
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
-msgstr "Cuando una instancia se ejecuta en segundo plano, abrir solo una ventana a la vez."
+msgstr "Al ejecutar una instancia en segundo plano, abrir solo una ventana a la vez."
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Sort recently used items first"
@@ -289,11 +289,11 @@ msgstr "_Ver los elementos como iconos"
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Text besi_de icons"
-msgstr "Te_xto al lado de los iconos"
+msgstr "_Texto al lado de los iconos"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Ite_m icon size:"
-msgstr "_Tamaño de icono de los elementos:"
+msgstr "Ta_maño de icono de los elementos:"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Hide category pane"
@@ -388,11 +388,11 @@ msgid ""
 "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
 " dash;krunner;synapse;ulauncher;launchy;gnome "
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr "ejecutar;orden;aplicación;programa;buscador;búsqueda;lanzador;todo;spotlight;sherlock; applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr "ejecutar;orden;aplicación;programa;buscador;búsqueda;lanzador;todo;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
-msgstr "Aplicación para ejecutar rápidamente programas y órdenes"
+msgstr "Aplicación para ejecutar rápidamente aplicaciones y órdenes"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
