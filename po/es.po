@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-04 00:45+0200\n"
-"PO-Revision-Date: 2021-05-04 15:34+0000\n"
+"PO-Revision-Date: 2021-05-23 13:13+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce4-appfinder/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -385,7 +385,7 @@ msgstr "programa;aplicaciones;marcadores;"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
-msgstr "Ejecutar el programa…"
+msgstr "Ejecutar el programa..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Enter a command you want to launch"
