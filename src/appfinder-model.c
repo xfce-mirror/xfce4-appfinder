@@ -2373,8 +2373,10 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
   GarconMenuItem  *item;
   ModelItem       *mitem;
   gboolean         succeed = FALSE;
-  gboolean         discrete_gpu;
   gchar          **argv, **envp = NULL;
+#if GARCON_CHECK_VERSION (4, 17, 0)
+  gboolean         discrete_gpu;
+#endif
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
   appfinder_return_val_if_fail (iter->stamp == model->stamp, FALSE);
@@ -2406,6 +2408,7 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
                                                    garcon_menu_item_requires_terminal (item));
   g_free (uri);
 
+#if GARCON_CHECK_VERSION (4, 17, 0)
   if (garcon_menu_item_get_prefers_non_default_gpu (item))
     {
       envp = g_get_environ ();
@@ -2413,6 +2416,7 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
       envp = g_environ_setenv (envp, "__GLX_VENDOR_LIBRARY_NAME", "nvidia", TRUE);
       envp = g_environ_setenv (envp, "__VK_LAYER_NV_optimus", "NVIDIA_only", TRUE);
     }
+#endif
 
   if (g_shell_parse_argv (command, NULL, &argv, error))
     {
