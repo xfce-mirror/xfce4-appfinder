@@ -109,7 +109,7 @@ static gint               xfce_appfinder_model_item_compare_frecency  (gconstpoi
 static void               xfce_appfinder_model_frecency_collect       (XfceAppfinderModel       *model,
                                                                        GMappedFile              *mmap);
 static void               xfce_appfinder_model_frecency_free          (gpointer                  data);
-
+static gchar*             xfce_appfinder_model_unescape_entry_value   (const gchar              *value);
 
 struct _XfceAppfinderModelClass
 {
@@ -2095,6 +2095,44 @@ xfce_appfinder_model_frecency_free (gpointer data)
 
 
 
+/* Remove this function when libxfce4util minimal required version is bumped to 4.18 */
+static gchar*
+xfce_appfinder_model_unescape_entry_value (const gchar *value)
+{
+  const gchar *p;
+  GString     *string;
+
+  if (G_UNLIKELY (value == NULL))
+    return NULL;
+
+  string = g_string_sized_new (strlen (value));
+
+  for (p = value; *p != '\0'; ++p)
+    {
+      if (G_UNLIKELY (p[0] == '\\' && p[1] != '\0'))
+        {
+          switch (*++p)
+            {
+            case 's':
+              g_string_append_c (string, ' ');
+              break;
+
+            case '\\':
+              g_string_append_c (string, '\\');
+              break;
+            }
+        }
+      else
+        {
+          g_string_append_c (string, *p);
+        }
+    }
+
+  return g_string_free (string, FALSE);
+}
+
+
+
 guint
 xfce_appfinder_model_calculate_frecency (guint   frequency,
                                          guint64 recency)
@@ -2369,7 +2407,7 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
                               GError             **error)
 {
   const gchar     *icon;
-  gchar           *command, *uri;
+  gchar           *command, *escaped_command, *uri;
   GarconMenuItem  *item;
   ModelItem       *mitem;
   gboolean         succeed = FALSE;
@@ -2404,6 +2442,15 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
                                                    uri,
                                                    garcon_menu_item_requires_terminal (item));
   g_free (uri);
+
+#if LIBXFCE4UTIL_CHECK_VERSION (4, 18, 0)
+  escaped_command = xfce_unescape_desktop_entry_value (command);
+#else
+  escaped_command = xfce_appfinder_model_unescape_entry_value (command);
+#endif
+  g_free (command);
+  command = escaped_command;
+  escaped_command = NULL;
 
   if (g_shell_parse_argv (command, NULL, &argv, error))
     {
