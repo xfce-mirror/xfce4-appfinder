@@ -2411,7 +2411,10 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
   GarconMenuItem  *item;
   ModelItem       *mitem;
   gboolean         succeed = FALSE;
-  gchar          **argv;
+  gchar          **argv, **envp = NULL;
+#if GARCON_CHECK_VERSION (4, 17, 0)
+  gboolean         discrete_gpu;
+#endif
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
   appfinder_return_val_if_fail (iter->stamp == model->stamp, FALSE);
@@ -2452,19 +2455,29 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
   command = escaped_command;
   escaped_command = NULL;
 
+#if GARCON_CHECK_VERSION (4, 17, 0)
+  if (garcon_menu_item_get_prefers_non_default_gpu (item))
+    {
+      envp = g_get_environ ();
+      envp = g_environ_setenv (envp, "__NV_PRIME_RENDER_OFFLOAD", "1", TRUE);
+      envp = g_environ_setenv (envp, "__GLX_VENDOR_LIBRARY_NAME", "nvidia", TRUE);
+      envp = g_environ_setenv (envp, "__VK_LAYER_NV_optimus", "NVIDIA_only", TRUE);
+    }
+#endif
+
   if (g_shell_parse_argv (command, NULL, &argv, error))
     {
 #if LIBXFCE4UI_CHECK_VERSION (4, 15, 6)
       succeed = xfce_spawn (screen,
                             garcon_menu_item_get_path (item),
-                            argv, NULL, G_SPAWN_SEARCH_PATH,
+                            argv, envp, G_SPAWN_SEARCH_PATH,
                             garcon_menu_item_supports_startup_notification (item),
                             gtk_get_current_event_time (),
                             icon, TRUE, error);
 #else
       succeed = xfce_spawn_on_screen (screen,
                                       garcon_menu_item_get_path (item),
-                                      argv, NULL, G_SPAWN_SEARCH_PATH,
+                                      argv, envp, G_SPAWN_SEARCH_PATH,
                                       garcon_menu_item_supports_startup_notification (item),
                                       gtk_get_current_event_time (),
                                       icon, error);
@@ -2474,6 +2487,7 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
     }
 
   g_free (command);
+  g_strfreev (envp);
 
   return succeed;
 }
