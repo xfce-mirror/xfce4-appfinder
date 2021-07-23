@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-21 12:46+0100\n"
-"PO-Revision-Date: 2021-03-21 11:46+0000\n"
+"POT-Creation-Date: 2021-05-04 00:45+0200\n"
+"PO-Revision-Date: 2021-05-03 22:46+0000\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Hungarian (http://www.transifex.com/xfce/xfce4-appfinder/language/hu/)\n"
 "MIME-Version: 1.0\n"
@@ -89,74 +89,74 @@ msgstr "Az egyéni művelet véglegesen törlődni fog."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Biztosan törölni akarja a(z) „%s” mintát?"
 
-#: ../src/appfinder-window.c:231 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:232 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Alkalmazáskereső"
 
-#: ../src/appfinder-window.c:277
+#: ../src/appfinder-window.c:278
 msgid "Toggle view mode"
 msgstr "Nézetmód váltása"
 
-#: ../src/appfinder-window.c:356
+#: ../src/appfinder-window.c:357
 msgid "_Preferences"
 msgstr "_Beállítások"
 
-#: ../src/appfinder-window.c:367 ../src/appfinder-window.c:1095
+#: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1096
 msgid "La_unch"
 msgstr "In_dítás"
 
-#: ../src/appfinder-window.c:896
+#: ../src/appfinder-window.c:897
 msgid "Failed to launch desktop item editor"
 msgstr "Az asztali elemek szerkesztőjének indítása sikertelen"
 
-#: ../src/appfinder-window.c:922
+#: ../src/appfinder-window.c:923
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Az egyéni asztali fájl végleges eltávolítása a saját könyvtárából."
 
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Biztosan vissza akarja állítani ezt: „%s”?"
 
-#: ../src/appfinder-window.c:933
+#: ../src/appfinder-window.c:934
 msgid "Failed to remove desktop file"
 msgstr "Az asztali fájl eltávolítása meghiúsult"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:966
+#: ../src/appfinder-window.c:967
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Az elem megjelenítéséhez saját kezűleg kell eltávolítania az asztali fájlt innen: „%s”, vagy meg kell nyitnia a fájlt ugyanabban a könyvtárban, és el kell távolítania a következő sort: „%s”."
 
-#: ../src/appfinder-window.c:971 ../src/appfinder-window.c:1141
+#: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1142
 msgid "_Hide"
 msgstr "_Elrejtés"
 
-#: ../src/appfinder-window.c:972
+#: ../src/appfinder-window.c:973
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Biztosan el akarja rejteni ezt: „%s”?"
 
-#: ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:1078
 msgid "Remove From Bookmarks"
 msgstr "Eltávolítás a könyvjelzőkből"
 
-#: ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:1078
 msgid "Add to Bookmarks"
 msgstr "Hozzáadás a könyvjelzőkhöz"
 
-#: ../src/appfinder-window.c:1109
+#: ../src/appfinder-window.c:1110
 msgid "_Edit"
 msgstr "Sz_erkesztés"
 
-#: ../src/appfinder-window.c:1126
+#: ../src/appfinder-window.c:1127
 msgid "_Revert"
 msgstr "_Visszavonás"
 
@@ -231,109 +231,117 @@ msgid "Very Large"
 msgstr "Nagyon nagy"
 
 #: ../src/appfinder-preferences.glade.h:11
+msgid "_Close"
+msgstr "_Bezárás"
+
+#: ../src/appfinder-preferences.glade.h:12
+msgid "_Help"
+msgstr "_Súgó"
+
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Remember last _selected category"
 msgstr "_Legutóbb kijelölt kategória megjegyzése"
 
-#: ../src/appfinder-preferences.glade.h:12
+#: ../src/appfinder-preferences.glade.h:14
 msgid "Always c_enter the window"
 msgstr "Mindig igazítsa _középre az ablakot"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:15
 msgid "Center the window on startup."
 msgstr "Ablak középre igazítása indításkor."
 
-#: ../src/appfinder-preferences.glade.h:14
+#: ../src/appfinder-preferences.glade.h:16
 msgid "Keep running _instance in the background"
 msgstr "_Futó példány háttérben tartása"
 
-#: ../src/appfinder-preferences.glade.h:15
+#: ../src/appfinder-preferences.glade.h:17
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "Az utolsó ablak bezárásakor az alkalmazás bezárása helyett egy futó példány megtartása az új ablakok nyitásának felgyorsításához. Ennek letiltása csökkenti a memóriahasználatot."
 
-#: ../src/appfinder-preferences.glade.h:16
+#: ../src/appfinder-preferences.glade.h:18
 msgid "Single window"
 msgstr "Egyetlen ablak"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: ../src/appfinder-preferences.glade.h:19
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr "Ha már fut egy példány a háttérben, akkor csak egy ablakot nyit meg."
 
-#: ../src/appfinder-preferences.glade.h:18
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Sort recently used items first"
 msgstr "A legutóbb használ elemek rendezése előre"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:21
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr "Az elemek rendezése úgy, hogy a legutóbb használ elemek mindig felülre kerüljenek."
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Behaviour"
 msgstr "Viselkedés"
 
-#: ../src/appfinder-preferences.glade.h:21
+#: ../src/appfinder-preferences.glade.h:23
 msgid "_View items as icons"
 msgstr "Elemek megjelenítése i_konokként"
 
-#: ../src/appfinder-preferences.glade.h:22
+#: ../src/appfinder-preferences.glade.h:24
 msgid "Text besi_de icons"
 msgstr "Szöveg az ikonok _mellett"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "Ite_m icon size:"
 msgstr "_Elemikon mérete:"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "Hide category pane"
 msgstr "Kategória panel elrejtése"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Hide category panel and show all applications."
 msgstr "Kategória panel elrejtése és az összes alkalmazás megjelenítése."
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "Categ_ory icon size:"
 msgstr "_Kategóriaikon mérete:"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Appearance"
 msgstr "Megjelenés"
 
-#: ../src/appfinder-preferences.glade.h:28
+#: ../src/appfinder-preferences.glade.h:30
 msgid "C_lear Custom Command History"
 msgstr "_Egyéni parancselőzmények törlése"
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 msgid "History"
 msgstr "Előzmények"
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "_General"
 msgstr "Ál_talános"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Custom actions are only available in collapsed mode."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Pattern"
 msgstr "Minta"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "Add a new custom action."
 msgstr "Új egyéni művelet hozzáadása."
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Remove the currently selected action."
 msgstr "A jelenleg kijelölt művelet eltávolítása."
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:38
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -341,23 +349,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Ha a típus előtag, akkor a %s a minta utáni karakterlánccal lesz helyettesítve, a %S pedig a beviteli mező teljes szövegével. Reguláris kifejezés esetén a \\0 és \\<num> használható."
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:39
 msgid "Co_mmand:"
 msgstr "Pa_rancs:"
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:40
 msgid "Patte_rn:"
 msgstr "Min_ta:"
 
-#: ../src/appfinder-preferences.glade.h:39
+#: ../src/appfinder-preferences.glade.h:41
 msgid "_Type:"
 msgstr "Típ_us:"
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:42
 msgid "_Save match in command history"
 msgstr "_Találat mentése a parancselőzmények közé"
 
-#: ../src/appfinder-preferences.glade.h:41
+#: ../src/appfinder-preferences.glade.h:43
 msgid "Custom _Actions"
 msgstr "Egyéni _műveletek"
 
