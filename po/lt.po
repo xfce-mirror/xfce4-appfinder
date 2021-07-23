@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-21 12:46+0100\n"
-"PO-Revision-Date: 2021-03-22 15:45+0000\n"
-"Last-Translator: Moo\n"
+"POT-Creation-Date: 2021-05-04 00:45+0200\n"
+"PO-Revision-Date: 2021-05-03 22:46+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce4-appfinder/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -87,74 +87,74 @@ msgstr "Pasirinktinis veiksmas bus ištrintas visam laikui."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Ar tikrai norite ištrinti formą „%s“?"
 
-#: ../src/appfinder-window.c:231 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:232 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Programų paieška"
 
-#: ../src/appfinder-window.c:277
+#: ../src/appfinder-window.c:278
 msgid "Toggle view mode"
 msgstr "Perjungti peržiūros veikseną"
 
-#: ../src/appfinder-window.c:356
+#: ../src/appfinder-window.c:357
 msgid "_Preferences"
 msgstr "_Nuostatos"
 
-#: ../src/appfinder-window.c:367 ../src/appfinder-window.c:1095
+#: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1096
 msgid "La_unch"
 msgstr "_Paleisti"
 
-#: ../src/appfinder-window.c:896
+#: ../src/appfinder-window.c:897
 msgid "Failed to launch desktop item editor"
 msgstr "Nepavyko paleisti desktop failų redaktoriaus"
 
-#: ../src/appfinder-window.c:922
+#: ../src/appfinder-window.c:923
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Tai visam laikui pašalins pasirinktinį desktop failą iš jūsų namų katalogo."
 
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Ar tikrai norite atstatyti „%s“?"
 
-#: ../src/appfinder-window.c:933
+#: ../src/appfinder-window.c:934
 msgid "Failed to remove desktop file"
 msgstr "Nepavyko pašalinti desktop failo"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:966
+#: ../src/appfinder-window.c:967
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Norėdami nebeslėpti elementą, turite pašalinti desktop failą iš „%s“ arba atverti failą tame pačiame kataloge ir pašalinti eilutę „%s“."
 
-#: ../src/appfinder-window.c:971 ../src/appfinder-window.c:1141
+#: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1142
 msgid "_Hide"
 msgstr "_Slėpti"
 
-#: ../src/appfinder-window.c:972
+#: ../src/appfinder-window.c:973
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Ar tikrai norite paslėpti „%s“?"
 
-#: ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:1078
 msgid "Remove From Bookmarks"
 msgstr "Šalinti iš žymelių"
 
-#: ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:1078
 msgid "Add to Bookmarks"
 msgstr "Pridėti į žymeles"
 
-#: ../src/appfinder-window.c:1109
+#: ../src/appfinder-window.c:1110
 msgid "_Edit"
 msgstr "_Taisyti"
 
-#: ../src/appfinder-window.c:1126
+#: ../src/appfinder-window.c:1127
 msgid "_Revert"
 msgstr "_Sugrąžinti"
 
@@ -229,109 +229,117 @@ msgid "Very Large"
 msgstr "Labai didelis"
 
 #: ../src/appfinder-preferences.glade.h:11
+msgid "_Close"
+msgstr "_Užverti"
+
+#: ../src/appfinder-preferences.glade.h:12
+msgid "_Help"
+msgstr "Ž_inynas"
+
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Remember last _selected category"
 msgstr "Prisiminti paskutinę _pasirinktą kategoriją"
 
-#: ../src/appfinder-preferences.glade.h:12
+#: ../src/appfinder-preferences.glade.h:14
 msgid "Always c_enter the window"
 msgstr "Visada _centruoti langą"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:15
 msgid "Center the window on startup."
 msgstr "Paleidžiant centruoti langą."
 
-#: ../src/appfinder-preferences.glade.h:14
+#: ../src/appfinder-preferences.glade.h:16
 msgid "Keep running _instance in the background"
 msgstr "Toliau fone _vykdyti egzempliorių"
 
-#: ../src/appfinder-preferences.glade.h:15
+#: ../src/appfinder-preferences.glade.h:17
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "Vietoj darbo baigimo, kai paskutinis langas užveriamas, palikti vykdomą egzempliorių, naujų langų atvėrimo pagreitinimui. Norėdami sumažinti atminties naudojimą, jūs galite pageidauti tai išjungti."
 
-#: ../src/appfinder-preferences.glade.h:16
+#: ../src/appfinder-preferences.glade.h:18
 msgid "Single window"
 msgstr "Vienas langas"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: ../src/appfinder-preferences.glade.h:19
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr "Kai fone yra paleistas egzempliorius, vienu metu atverti tik vieną langą."
 
-#: ../src/appfinder-preferences.glade.h:18
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Sort recently used items first"
 msgstr "Pirmiausia, rikiuoti paskiausiai naudotus elementus"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:21
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr "Rikiuoti elementus taip, kad paskiausiai naudoti elementai būtų visada viršuje."
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Behaviour"
 msgstr "Elgsena"
 
-#: ../src/appfinder-preferences.glade.h:21
+#: ../src/appfinder-preferences.glade.h:23
 msgid "_View items as icons"
 msgstr "_Rodyti elementus kaip piktogramas"
 
-#: ../src/appfinder-preferences.glade.h:22
+#: ../src/appfinder-preferences.glade.h:24
 msgid "Text besi_de icons"
 msgstr "Tekstas ša_lia piktogramų"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "Ite_m icon size:"
 msgstr "_Elemento piktogramos dydis:"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "Hide category pane"
 msgstr "Slėpti kategorijų polangį"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Hide category panel and show all applications."
 msgstr "Slėpti kategorijų skydelį ir rodyti visas programas."
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "Categ_ory icon size:"
 msgstr "Kategorijų _piktogramų dydis:"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Appearance"
 msgstr "Išvaizda"
 
-#: ../src/appfinder-preferences.glade.h:28
+#: ../src/appfinder-preferences.glade.h:30
 msgid "C_lear Custom Command History"
 msgstr "_Išvalyti pasirinktinių komandų istoriją"
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 msgid "History"
 msgstr "Istorija"
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "_General"
 msgstr "_Bendra"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Custom actions are only available in collapsed mode."
 msgstr "Tinkinti veiksmai yra prieinami tik suskleistoje veiksenoje."
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Pattern"
 msgstr "Forma"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "Add a new custom action."
 msgstr "Pridėti naują pasirinktinį veiksmą."
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Remove the currently selected action."
 msgstr "Pašalinti pasirinktą veiksmą."
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:38
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -339,23 +347,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Jei tipas nustatytas į priešdėlį, %s bus pakeista eilute po formos, %S visu įrašo tekstu. Reguliariesiems reiškiniams galite naudoti \\0 ir \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:39
 msgid "Co_mmand:"
 msgstr "K_omanda:"
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:40
 msgid "Patte_rn:"
 msgstr "Ša_blonas:"
 
-#: ../src/appfinder-preferences.glade.h:39
+#: ../src/appfinder-preferences.glade.h:41
 msgid "_Type:"
 msgstr "_Tipas:"
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:42
 msgid "_Save match in command history"
 msgstr "Į_rašyti atitikmenį komandų istorijoje"
 
-#: ../src/appfinder-preferences.glade.h:41
+#: ../src/appfinder-preferences.glade.h:43
 msgid "Custom _Actions"
 msgstr "Pasirinktiniai _veiksmai"
 
