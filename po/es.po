@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Adolfo Jayme Barrientos, 2014
-# Adolfo Jayme-Barrientos, 2014
+# Adolfo Jayme Barrientos, 2014
 # Casper casper, 2019-2021
 # Edscott Wilson Garcia <edscott@xfce.org>, 2004
 # Ignacio Poggi <ignaciop.3@gmail.com>, 2020
