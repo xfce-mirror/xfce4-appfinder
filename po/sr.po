@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-21 12:46+0100\n"
-"PO-Revision-Date: 2021-04-13 11:11+0000\n"
-"Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
+"POT-Creation-Date: 2021-05-04 00:45+0200\n"
+"PO-Revision-Date: 2021-05-03 22:46+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Serbian (http://www.transifex.com/xfce/xfce4-appfinder/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -87,74 +87,74 @@ msgstr "Произвољна радња ће бити трајно избрис�
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Да ли сте сигурни да желите избрисати образац „%s“?"
 
-#: ../src/appfinder-window.c:231 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:232 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Проналазач програма"
 
-#: ../src/appfinder-window.c:277
+#: ../src/appfinder-window.c:278
 msgid "Toggle view mode"
 msgstr "Промени начин прегледа"
 
-#: ../src/appfinder-window.c:356
+#: ../src/appfinder-window.c:357
 msgid "_Preferences"
 msgstr "Поставке"
 
-#: ../src/appfinder-window.c:367 ../src/appfinder-window.c:1095
+#: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1096
 msgid "La_unch"
 msgstr "По_крени"
 
-#: ../src/appfinder-window.c:896
+#: ../src/appfinder-window.c:897
 msgid "Failed to launch desktop item editor"
 msgstr "Нисам успео да покренем уређивача ставки радне површи"
 
-#: ../src/appfinder-window.c:922
+#: ../src/appfinder-window.c:923
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Ово ће трајно уклонити произвољну датотеку покретача програма из личне фасцикле."
 
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Да ли сте сигурни да желите повратити „%s“?"
 
-#: ../src/appfinder-window.c:933
+#: ../src/appfinder-window.c:934
 msgid "Failed to remove desktop file"
 msgstr "Нисам успео да уклоним датотеку покретача програма"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:966
+#: ../src/appfinder-window.c:967
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Да опет прикажете ставку, морате ручно да уклоните датотеку покретача програма из „%s“ или да отворите датотеку у истој фасцикли и да уклоните ред „%s“."
 
-#: ../src/appfinder-window.c:971 ../src/appfinder-window.c:1141
+#: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1142
 msgid "_Hide"
 msgstr "_Сакриј"
 
-#: ../src/appfinder-window.c:972
+#: ../src/appfinder-window.c:973
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Да ли сте сигурни да желите да сакријете „%s“?"
 
-#: ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:1078
 msgid "Remove From Bookmarks"
 msgstr "Уклони забелешку"
 
-#: ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:1078
 msgid "Add to Bookmarks"
 msgstr "Додај забелешку"
 
-#: ../src/appfinder-window.c:1109
+#: ../src/appfinder-window.c:1110
 msgid "_Edit"
 msgstr "_Уреди"
 
-#: ../src/appfinder-window.c:1126
+#: ../src/appfinder-window.c:1127
 msgid "_Revert"
 msgstr "_Поврати"
 
@@ -229,109 +229,117 @@ msgid "Very Large"
 msgstr "највеће"
 
 #: ../src/appfinder-preferences.glade.h:11
+msgid "_Close"
+msgstr "_Затвори"
+
+#: ../src/appfinder-preferences.glade.h:12
+msgid "_Help"
+msgstr "_Помоћи"
+
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Remember last _selected category"
 msgstr "Запамти последњу _обележену врсту"
 
-#: ../src/appfinder-preferences.glade.h:12
+#: ../src/appfinder-preferences.glade.h:14
 msgid "Always c_enter the window"
 msgstr "Увек _постави прозор на средину"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:15
 msgid "Center the window on startup."
 msgstr "При покретању постави прозор на средину."
 
-#: ../src/appfinder-preferences.glade.h:14
+#: ../src/appfinder-preferences.glade.h:16
 msgid "Keep running _instance in the background"
 msgstr "Држи тренутно покренути _примерак у позадини"
 
-#: ../src/appfinder-preferences.glade.h:15
+#: ../src/appfinder-preferences.glade.h:17
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "Уместо заустављања програма по затварању свих прозора, држи покренутим примерак да би се убрзало отварање нових прозора. Ово можете  да искључите ради смањивања заузећа меморије."
 
-#: ../src/appfinder-preferences.glade.h:16
+#: ../src/appfinder-preferences.glade.h:18
 msgid "Single window"
 msgstr "Појединачни прозор"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: ../src/appfinder-preferences.glade.h:19
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr "Када примерак ради у позадини, отвори само по један прозор."
 
-#: ../src/appfinder-preferences.glade.h:18
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Sort recently used items first"
 msgstr "Распореди прво скорашње коришћене датотеке"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:21
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr "Распореди ставке, тако да скорашње коришћене ставке буду увек на врху."
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Behaviour"
 msgstr "Понашање"
 
-#: ../src/appfinder-preferences.glade.h:21
+#: ../src/appfinder-preferences.glade.h:23
 msgid "_View items as icons"
 msgstr "_Прикажи ставке као сличице"
 
-#: ../src/appfinder-preferences.glade.h:22
+#: ../src/appfinder-preferences.glade.h:24
 msgid "Text besi_de icons"
 msgstr "Писмо пор_ед сличица"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "Ite_m icon size:"
 msgstr "Величина сличице став_ке:"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "Hide category pane"
 msgstr "Затвори површ врста"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Hide category panel and show all applications."
 msgstr "Затвори површ врста и прикажи све програме."
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "Categ_ory icon size:"
 msgstr "Величина сличица _врсте:"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Appearance"
 msgstr "Изглед"
 
-#: ../src/appfinder-preferences.glade.h:28
+#: ../src/appfinder-preferences.glade.h:30
 msgid "C_lear Custom Command History"
 msgstr "О_бриши историјат произвољних наредби"
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 msgid "History"
 msgstr "Историјат"
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "_General"
 msgstr "_Опште"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Custom actions are only available in collapsed mode."
 msgstr "Произвољне радње су доступне само у збијеном приказу."
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Pattern"
 msgstr "Образац"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "Add a new custom action."
 msgstr "Додај нову произвољну радњу."
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Remove the currently selected action."
 msgstr "Уклони тренутно обележену радњу."
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:38
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -339,23 +347,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Ако је врста подешена на предметак, %s ће бити замењено ниском након обрасца, %S са читавим писмом уноса. За прописане изразе можете да користите \\0 и \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:39
 msgid "Co_mmand:"
 msgstr "На_редба:"
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:40
 msgid "Patte_rn:"
 msgstr "Образ_ац:"
 
-#: ../src/appfinder-preferences.glade.h:39
+#: ../src/appfinder-preferences.glade.h:41
 msgid "_Type:"
 msgstr "_Врста:"
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:42
 msgid "_Save match in command history"
 msgstr "_Сачувај поклапање у историјату наредби"
 
-#: ../src/appfinder-preferences.glade.h:41
+#: ../src/appfinder-preferences.glade.h:43
 msgid "Custom _Actions"
 msgstr "Произвољне _радње"
 
