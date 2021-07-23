@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-21 12:46+0100\n"
-"PO-Revision-Date: 2021-03-21 11:46+0000\n"
+"POT-Creation-Date: 2021-05-04 00:45+0200\n"
+"PO-Revision-Date: 2021-05-03 22:46+0000\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Korean (http://www.transifex.com/xfce/xfce4-appfinder/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -88,74 +88,74 @@ msgstr "사용자 정의 동작을 완전히 지웁니다."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "\"%s\" 패턴을 정말로 삭제하시렵니까?"
 
-#: ../src/appfinder-window.c:231 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:232 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "프로그램 탐색기"
 
-#: ../src/appfinder-window.c:277
+#: ../src/appfinder-window.c:278
 msgid "Toggle view mode"
 msgstr "보기 상태 전환"
 
-#: ../src/appfinder-window.c:356
+#: ../src/appfinder-window.c:357
 msgid "_Preferences"
 msgstr "환경 설정(_P)"
 
-#: ../src/appfinder-window.c:367 ../src/appfinder-window.c:1095
+#: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1096
 msgid "La_unch"
 msgstr "실행(_U)"
 
-#: ../src/appfinder-window.c:896
+#: ../src/appfinder-window.c:897
 msgid "Failed to launch desktop item editor"
 msgstr "데스크톱 항목 편집기 실행 실패"
 
-#: ../src/appfinder-window.c:922
+#: ../src/appfinder-window.c:923
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "홈 디렉터리에서 사용자 정의 desktop 파일을 완전히 지웁니다."
 
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "\"%s\"을(를) 정말로 복원하시렵니까?"
 
-#: ../src/appfinder-window.c:933
+#: ../src/appfinder-window.c:934
 msgid "Failed to remove desktop file"
 msgstr "데스크톱 파일 제거 실패"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:966
+#: ../src/appfinder-window.c:967
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "항목 숨기기를 해제하려면, \"%s\"에서 데스크톱의 파일을 직접 제거하거나, 같은 디렉터리에서 파일을 열고 \"%s\" 줄을 제거하십시오."
 
-#: ../src/appfinder-window.c:971 ../src/appfinder-window.c:1141
+#: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1142
 msgid "_Hide"
 msgstr "숨기기(_H)"
 
-#: ../src/appfinder-window.c:972
+#: ../src/appfinder-window.c:973
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "\"%s\"을(를) 정말로 숨기시렵니까?"
 
-#: ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:1078
 msgid "Remove From Bookmarks"
 msgstr "북마크 삭제"
 
-#: ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:1078
 msgid "Add to Bookmarks"
 msgstr "북마크 추가"
 
-#: ../src/appfinder-window.c:1109
+#: ../src/appfinder-window.c:1110
 msgid "_Edit"
 msgstr "수정(_E)"
 
-#: ../src/appfinder-window.c:1126
+#: ../src/appfinder-window.c:1127
 msgid "_Revert"
 msgstr "되돌리기(_R)"
 
@@ -230,109 +230,117 @@ msgid "Very Large"
 msgstr "가장 크게"
 
 #: ../src/appfinder-preferences.glade.h:11
+msgid "_Close"
+msgstr "닫기(_O)"
+
+#: ../src/appfinder-preferences.glade.h:12
+msgid "_Help"
+msgstr "도움말(_H)"
+
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Remember last _selected category"
 msgstr "최근 선택한 카테고리 기억(_S)"
 
-#: ../src/appfinder-preferences.glade.h:12
+#: ../src/appfinder-preferences.glade.h:14
 msgid "Always c_enter the window"
 msgstr "항상 창을 가운데로 하기(_E)"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:15
 msgid "Center the window on startup."
 msgstr "시작시 창을 가운데로 합니다."
 
-#: ../src/appfinder-preferences.glade.h:14
+#: ../src/appfinder-preferences.glade.h:16
 msgid "Keep running _instance in the background"
 msgstr "백그라운드에서 인스탄스 유지 실행(_I)"
 
-#: ../src/appfinder-preferences.glade.h:15
+#: ../src/appfinder-preferences.glade.h:17
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "프로그램을 빠져나가는 대신 마지막 창이 닫혔을 경우 새 창을 여는 속도를 올리려고 인스턴스 실행을 유지합니다. 메모리 사용을 줄이려면 이것을 비활성화 해보십시오."
 
-#: ../src/appfinder-preferences.glade.h:16
+#: ../src/appfinder-preferences.glade.h:18
 msgid "Single window"
 msgstr "단일 창"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: ../src/appfinder-preferences.glade.h:19
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr "인스턴스가 배경으로 실행 중일 땐, 한 번에 한 개의 창만 엽니다."
 
-#: ../src/appfinder-preferences.glade.h:18
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Sort recently used items first"
 msgstr "최근 사용한 항목을 먼저 정렬"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:21
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr "최근 사용한 항목을 가장 위에 올라오도록 정렬합니다."
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Behaviour"
 msgstr "동작"
 
-#: ../src/appfinder-preferences.glade.h:21
+#: ../src/appfinder-preferences.glade.h:23
 msgid "_View items as icons"
 msgstr "아이콘과 같은 항목 보기(_V)"
 
-#: ../src/appfinder-preferences.glade.h:22
+#: ../src/appfinder-preferences.glade.h:24
 msgid "Text besi_de icons"
 msgstr "아이콘 옆에 텍스트 표시(_D)"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "Ite_m icon size:"
 msgstr "항목 아이콘 크기(_M):"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "Hide category pane"
 msgstr "카테고리 창 숨기기"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Hide category panel and show all applications."
 msgstr "카테고리 패널을 숨기고 모든 애플리케이션을 보입니다."
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "Categ_ory icon size:"
 msgstr "분류 아이콘 크기(_O):"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Appearance"
 msgstr "모양새"
 
-#: ../src/appfinder-preferences.glade.h:28
+#: ../src/appfinder-preferences.glade.h:30
 msgid "C_lear Custom Command History"
 msgstr "사용자 정의 명령 기록 지우기(_L)"
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 msgid "History"
 msgstr "기록"
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "_General"
 msgstr "일반(_G)"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Custom actions are only available in collapsed mode."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Pattern"
 msgstr "패턴"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "Add a new custom action."
 msgstr "새 사용자 정의 동작을 추가합니다."
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Remove the currently selected action."
 msgstr "현재 선택한 동작을 제거합니다."
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:38
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -340,23 +348,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "접두어로 유형을 지정하였다면, %s은(는) 완전한 목록 텍스트로 된 다음 패턴 %S(으)로 바뀝니다. 정규 표현식에 \\0과 \\<숫자>를 사용할 수 있습니다."
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:39
 msgid "Co_mmand:"
 msgstr "명령(_M):"
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:40
 msgid "Patte_rn:"
 msgstr "패턴(_R):"
 
-#: ../src/appfinder-preferences.glade.h:39
+#: ../src/appfinder-preferences.glade.h:41
 msgid "_Type:"
 msgstr "유형(_T):"
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:42
 msgid "_Save match in command history"
 msgstr "명령 기록내 일치 항목 저장(_S)"
 
-#: ../src/appfinder-preferences.glade.h:41
+#: ../src/appfinder-preferences.glade.h:43
 msgid "Custom _Actions"
 msgstr "사용자 정의 동작(_A)"
 
