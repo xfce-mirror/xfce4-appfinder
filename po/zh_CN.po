@@ -16,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-21 12:46+0100\n"
-"PO-Revision-Date: 2021-03-21 14:19+0000\n"
-"Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
+"POT-Creation-Date: 2021-05-04 00:45+0200\n"
+"PO-Revision-Date: 2021-05-03 22:46+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/xfce/xfce4-appfinder/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,74 +92,74 @@ msgstr "将永远删除自定义的动作。"
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "您确定要删除类型 “%s” 吗？"
 
-#: ../src/appfinder-window.c:231 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:232 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "应用程序查找器"
 
-#: ../src/appfinder-window.c:277
+#: ../src/appfinder-window.c:278
 msgid "Toggle view mode"
 msgstr "切换视图模式"
 
-#: ../src/appfinder-window.c:356
+#: ../src/appfinder-window.c:357
 msgid "_Preferences"
 msgstr "首选项(_P)"
 
-#: ../src/appfinder-window.c:367 ../src/appfinder-window.c:1095
+#: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1096
 msgid "La_unch"
 msgstr "启动(_U)"
 
-#: ../src/appfinder-window.c:896
+#: ../src/appfinder-window.c:897
 msgid "Failed to launch desktop item editor"
 msgstr "无法启动桌面项目编辑器"
 
-#: ../src/appfinder-window.c:922
+#: ../src/appfinder-window.c:923
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "这会从您的主文件夹中永远移除自定义的桌面文件。"
 
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:924
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "您确定要恢复 “%s” 吗？"
 
-#: ../src/appfinder-window.c:933
+#: ../src/appfinder-window.c:934
 msgid "Failed to remove desktop file"
 msgstr "无法移除桌面文件"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:966
+#: ../src/appfinder-window.c:967
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "要隐藏此项目，您只得从 “%s” 手动移除桌面文件、或在相同的目录中打开此文件并移除行 “%s”。"
 
-#: ../src/appfinder-window.c:971 ../src/appfinder-window.c:1141
+#: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1142
 msgid "_Hide"
 msgstr "隐藏(_H)"
 
-#: ../src/appfinder-window.c:972
+#: ../src/appfinder-window.c:973
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "您确定要隐藏 “%s” 吗？"
 
-#: ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:1078
 msgid "Remove From Bookmarks"
 msgstr "从书签中移除"
 
-#: ../src/appfinder-window.c:1077
+#: ../src/appfinder-window.c:1078
 msgid "Add to Bookmarks"
 msgstr "添加至书签"
 
-#: ../src/appfinder-window.c:1109
+#: ../src/appfinder-window.c:1110
 msgid "_Edit"
 msgstr "编辑(_E)"
 
-#: ../src/appfinder-window.c:1126
+#: ../src/appfinder-window.c:1127
 msgid "_Revert"
 msgstr "重置(_R)"
 
@@ -234,109 +234,117 @@ msgid "Very Large"
 msgstr "非常大"
 
 #: ../src/appfinder-preferences.glade.h:11
+msgid "_Close"
+msgstr "关闭(_C)"
+
+#: ../src/appfinder-preferences.glade.h:12
+msgid "_Help"
+msgstr "帮助(_H)"
+
+#: ../src/appfinder-preferences.glade.h:13
 msgid "Remember last _selected category"
 msgstr "记住上次选中的类别(_S)"
 
-#: ../src/appfinder-preferences.glade.h:12
+#: ../src/appfinder-preferences.glade.h:14
 msgid "Always c_enter the window"
 msgstr "窗口总是居中(_E)"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: ../src/appfinder-preferences.glade.h:15
 msgid "Center the window on startup."
 msgstr "窗口在启动时居中。"
 
-#: ../src/appfinder-preferences.glade.h:14
+#: ../src/appfinder-preferences.glade.h:16
 msgid "Keep running _instance in the background"
 msgstr "在后台保留正在运行的实例(_I)"
 
-#: ../src/appfinder-preferences.glade.h:15
+#: ../src/appfinder-preferences.glade.h:17
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "上个窗口关闭时不是退出应用程序，而是保留正在运行的实例以加快新窗口的打开。您可能要禁用它以减少内存用量。"
 
-#: ../src/appfinder-preferences.glade.h:16
+#: ../src/appfinder-preferences.glade.h:18
 msgid "Single window"
 msgstr "单窗口"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: ../src/appfinder-preferences.glade.h:19
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr "当一个实例在后台运行时，每次只打开一个窗口。"
 
-#: ../src/appfinder-preferences.glade.h:18
+#: ../src/appfinder-preferences.glade.h:20
 msgid "Sort recently used items first"
 msgstr "排序时优先最近使用项目"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: ../src/appfinder-preferences.glade.h:21
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr "项目排序，使最近使用过的项目始终位于顶部。"
 
-#: ../src/appfinder-preferences.glade.h:20
+#: ../src/appfinder-preferences.glade.h:22
 msgid "Behaviour"
 msgstr "行为"
 
-#: ../src/appfinder-preferences.glade.h:21
+#: ../src/appfinder-preferences.glade.h:23
 msgid "_View items as icons"
 msgstr "以图标查看项目(_V)："
 
-#: ../src/appfinder-preferences.glade.h:22
+#: ../src/appfinder-preferences.glade.h:24
 msgid "Text besi_de icons"
 msgstr "文字在图标旁(_D)："
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "Ite_m icon size:"
 msgstr "项目图标大小(_M)："
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "Hide category pane"
 msgstr "隐藏类别窗格"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Hide category panel and show all applications."
 msgstr "隐藏类别面板并显示所有应用程序。"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "Categ_ory icon size:"
 msgstr "类别图标大小(_O)："
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Appearance"
 msgstr "外观"
 
-#: ../src/appfinder-preferences.glade.h:28
+#: ../src/appfinder-preferences.glade.h:30
 msgid "C_lear Custom Command History"
 msgstr "清除自定义命令的历史(_L)"
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 msgid "History"
 msgstr "历史"
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "_General"
 msgstr "一般(_G)"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Custom actions are only available in collapsed mode."
 msgstr "自定义操作仅在简洁模式下可用。"
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Pattern"
 msgstr "类型"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "Add a new custom action."
 msgstr "添加新的自定义动作。"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Remove the currently selected action."
 msgstr "移除当前选中的动作。"
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:38
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -344,23 +352,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "如果此类型设置为前缀，会用此类型后的字符串替换 %s、用完整的条目文字替换 %S。对于正则表达您可以使用 \\0 和 \\<num>。"
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:39
 msgid "Co_mmand:"
 msgstr "命令(_M)："
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:40
 msgid "Patte_rn:"
 msgstr "类型(_R)："
 
-#: ../src/appfinder-preferences.glade.h:39
+#: ../src/appfinder-preferences.glade.h:41
 msgid "_Type:"
 msgstr "类型(_T)："
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:42
 msgid "_Save match in command history"
 msgstr "在命令历史中保存匹配的(_S)"
 
-#: ../src/appfinder-preferences.glade.h:41
+#: ../src/appfinder-preferences.glade.h:43
 msgid "Custom _Actions"
 msgstr "自定义动作(_A)"
 
