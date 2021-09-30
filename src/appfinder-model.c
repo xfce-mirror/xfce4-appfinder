@@ -883,7 +883,8 @@ xfce_appfinder_model_item_compare (gconstpointer a,
 static gchar *
 xfce_appfinder_model_item_key (GarconMenuItem *item)
 {
-  const gchar *value;
+  const gchar *value, *keyword;
+  GList       *keywords, *li;
   GString     *str;
   gchar       *normalized;
   gchar       *casefold;
@@ -908,6 +909,16 @@ xfce_appfinder_model_item_key (GarconMenuItem *item)
   value = garcon_menu_item_get_comment (item);
   if (value != NULL)
     g_string_append (str, value);
+
+  keywords = garcon_menu_item_get_keywords (item);
+  for (li = keywords; li != NULL; li = li->next)
+    {
+      keyword = li->data;
+      if (keyword != NULL) {
+        g_string_append (str, keyword);
+        g_string_append_c (str, '\n');
+      }
+    }
 
   normalized = g_utf8_normalize (str->str, str->len, G_NORMALIZE_ALL);
   casefold = g_utf8_casefold (normalized, -1);
