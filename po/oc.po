@@ -5,13 +5,14 @@
 # Translators:
 # Cédric Valmary <cvalmary@yahoo.fr>, 2013,2016
 # Cédric Valmary <cvalmary@yahoo.fr>, 2013
+# Quentin PAGÈS, 2021
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-04 00:45+0200\n"
-"PO-Revision-Date: 2021-05-03 22:46+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2021-11-11 07:56+0000\n"
+"Last-Translator: Quentin PAGÈS\n"
 "Language-Team: Occitan (post 1500) (http://www.transifex.com/xfce/xfce4-appfinder/language/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -97,7 +98,7 @@ msgstr "Bascuolar cap al mòde vista"
 
 #: ../src/appfinder-window.c:357
 msgid "_Preferences"
-msgstr ""
+msgstr "_Preferéncias"
 
 #: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1096
 msgid "La_unch"
@@ -154,7 +155,7 @@ msgstr "Edit_ar"
 
 #: ../src/appfinder-window.c:1127
 msgid "_Revert"
-msgstr ""
+msgstr "_Restablir"
 
 #: ../src/main.c:64
 msgid "Start in collapsed mode"
@@ -259,23 +260,23 @@ msgstr "Al luòc de quitar l'aplicacion quand la darrièra fenèstra es tampada,
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Single window"
-msgstr ""
+msgstr "Fenèstra sola"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
-msgstr ""
+msgstr "Quand una instància s’executa en rèireplan, dobrir solament una fenèstra al còp"
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Sort recently used items first"
-msgstr ""
+msgstr "Ordenar los elements utilizats fa res en primièr"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
-msgstr ""
+msgstr "Ordenar los elements per que los elements que son mai utilizat recentament son totjorn ennaut."
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Behaviour"
@@ -295,11 +296,11 @@ msgstr "Talha de las icònas de las a_plicacions :"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Hide category pane"
-msgstr ""
+msgstr "Amagar lo panèl de categoria"
 
 #: ../src/appfinder-preferences.glade.h:27
 msgid "Hide category panel and show all applications."
-msgstr ""
+msgstr "Amagar lo panèl de categoria e afichar totas las aplicacions."
 
 #: ../src/appfinder-preferences.glade.h:28
 msgid "Categ_ory icon size:"
@@ -323,7 +324,7 @@ msgstr "_General"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "Custom actions are only available in collapsed mode."
-msgstr ""
+msgstr "Las accions personalizadas son sonque disponiblas en mòde plegat."
 
 #: ../src/appfinder-preferences.glade.h:34
 msgid "Pattern"
@@ -371,7 +372,7 @@ msgstr "Recercar e aviar d'aplicacions installadas sus vòstre sistèma"
 
 #: ../data/xfce4-appfinder.desktop.in.h:3
 msgid "program;applications;bookmarks;"
-msgstr ""
+msgstr "programa;aplicacions;marcapagina;favorits;preferits;logicials;"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
@@ -379,18 +380,18 @@ msgstr "Aviar lo programa..."
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Enter a command you want to launch"
-msgstr ""
+msgstr "Picatz una comanda que volètz lançar"
 
 #: ../data/xfce4-run.desktop.in.h:3
 msgid ""
 "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
 " dash;krunner;synapse;ulauncher;launchy;gnome "
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr ""
+msgstr "executar;run;comanda;aplicacion;programa;finder;recercar;aviador;tot;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
-msgstr ""
+msgstr "Aplicacion per executar rapidament d’aplicacions o comandas"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
@@ -398,4 +399,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr ""
+msgstr "L’aplicacion finder es un esplech per trobar e lançar d’aplicacions installadas sus vòstre sistèma e executar rapidament de comandas. Pòt tanben servir per apondre rapidament d’aviadors al Panèl Xfce en lisant un element a partir de la vista e en lo depausant pel panèl."
