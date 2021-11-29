@@ -235,9 +235,10 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_window_set_icon_name (GTK_WINDOW (window), "org.xfce.appfinder");
 
   if (xfconf_channel_get_bool (window->channel, "/always-center", FALSE))
-    {
-      gtk_window_set_position (GTK_WINDOW (window), GTK_WIN_POS_CENTER);
-    }
+    gtk_window_set_position (GTK_WINDOW (window), GTK_WIN_POS_CENTER);
+
+  if (xfconf_channel_get_bool (window->channel, "/hide-window-decorations", FALSE))
+    gtk_window_set_decorated (GTK_WINDOW (window), FALSE);
 
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (window), vbox);
@@ -1681,6 +1682,11 @@ xfce_appfinder_window_property_changed (XfconfChannel       *channel,
         gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->sidepane), path, NULL, FALSE);
         gtk_tree_path_free (path);
       }
+    }
+  else if (g_strcmp0 (prop, "/hide-window-decorations") == 0)
+    {
+      gboolean hide = g_value_get_boolean (value);
+      gtk_window_set_decorated (GTK_WINDOW (window), !hide);
     }
 }
 
