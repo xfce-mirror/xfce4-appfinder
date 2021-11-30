@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 00:45+0200\n"
-"PO-Revision-Date: 2021-05-03 22:46+0000\n"
+"POT-Creation-Date: 2021-11-30 00:47+0100\n"
+"PO-Revision-Date: 2021-11-29 23:47+0000\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/xfce/xfce4-appfinder/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -50,39 +50,39 @@ msgstr "Категорії"
 msgid "Filename"
 msgstr "Назва файлу"
 
-#: ../src/appfinder-model.c:2395
+#: ../src/appfinder-model.c:2451
 msgid "Application has no command"
 msgstr "Програми без команди"
 
-#: ../src/appfinder-model.c:2808
+#: ../src/appfinder-model.c:2884
 msgid "Commands History"
 msgstr "Історія команд"
 
-#: ../src/appfinder-model.c:2832
+#: ../src/appfinder-model.c:2908
 msgid "Bookmarks"
 msgstr "Закладки"
 
-#: ../src/appfinder-preferences.c:262
+#: ../src/appfinder-preferences.c:266
 msgid "C_lear"
 msgstr "О_чистити"
 
-#: ../src/appfinder-preferences.c:263
+#: ../src/appfinder-preferences.c:267
 msgid "This will permanently clear the custom command history."
 msgstr "Це безповоротно вичистить записану історію команд."
 
-#: ../src/appfinder-preferences.c:264
+#: ../src/appfinder-preferences.c:268
 msgid "Are you sure you want to clear the command history?"
 msgstr "Ви дійсно бажаєте очистити історію команд?"
 
-#: ../src/appfinder-preferences.c:373
+#: ../src/appfinder-preferences.c:377
 msgid "_Delete"
 msgstr "В_идалити"
 
-#: ../src/appfinder-preferences.c:374
+#: ../src/appfinder-preferences.c:378
 msgid "The custom action will be deleted permanently."
 msgstr "Дію користувача буде вилучено безповоротно."
 
-#: ../src/appfinder-preferences.c:375
+#: ../src/appfinder-preferences.c:379
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Ви дійсно бажаєте вилучити шаблон \"%s\"?"
@@ -93,68 +93,68 @@ msgstr "Ви дійсно бажаєте вилучити шаблон \"%s\"?"
 msgid "Application Finder"
 msgstr "Пошук встановлених програм"
 
-#: ../src/appfinder-window.c:278
+#: ../src/appfinder-window.c:279
 msgid "Toggle view mode"
 msgstr "Перемкнути режим перегляду"
 
-#: ../src/appfinder-window.c:357
+#: ../src/appfinder-window.c:358
 msgid "_Preferences"
 msgstr "_Уподобання"
 
-#: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1096
+#: ../src/appfinder-window.c:369 ../src/appfinder-window.c:1097
 msgid "La_unch"
 msgstr "За_пустити"
 
-#: ../src/appfinder-window.c:897
+#: ../src/appfinder-window.c:898
 msgid "Failed to launch desktop item editor"
 msgstr "Не вдалось запустити редактор desktop-елементів"
 
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:924
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Це безповоротно вилучить desktop-файл з домашньої теки."
 
-#: ../src/appfinder-window.c:924
+#: ../src/appfinder-window.c:925
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Ви дійсно бажаєте повернути \"%s\"?"
 
-#: ../src/appfinder-window.c:934
+#: ../src/appfinder-window.c:935
 msgid "Failed to remove desktop file"
 msgstr "Не вдалося вилучити desktop-файл"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:967
+#: ../src/appfinder-window.c:968
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Щоб зробити елемент видимим, вручну вилучіть desktop файл з \"%s\", або відкрийте файл із вказаної теки і вилучіть рядок \"%s\"."
 
-#: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1142
+#: ../src/appfinder-window.c:973 ../src/appfinder-window.c:1143
 msgid "_Hide"
 msgstr "При_ховати"
 
-#: ../src/appfinder-window.c:973
+#: ../src/appfinder-window.c:974
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Ви дійсно бажаєте приховати \"%s\"?"
 
-#: ../src/appfinder-window.c:1078
+#: ../src/appfinder-window.c:1079
 msgid "Remove From Bookmarks"
 msgstr "Вилучити з закладок"
 
-#: ../src/appfinder-window.c:1078
+#: ../src/appfinder-window.c:1079
 msgid "Add to Bookmarks"
 msgstr "Додати до закладок"
 
-#: ../src/appfinder-window.c:1110
+#: ../src/appfinder-window.c:1111
 msgid "_Edit"
 msgstr "З_мінити"
 
-#: ../src/appfinder-window.c:1127
+#: ../src/appfinder-window.c:1128
 msgid "_Revert"
 msgstr "_Вернути"
 
@@ -308,38 +308,46 @@ msgid "Categ_ory icon size:"
 msgstr "Розмір значків категорій:"
 
 #: ../src/appfinder-preferences.glade.h:29
+msgid "Hide window decorations"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Hide window decorations such as title bar and borders."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Appearance"
 msgstr "Зовнішній вигляд"
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "C_lear Custom Command History"
 msgstr "О_чистити історію команд"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "History"
 msgstr "Історія"
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "_General"
 msgstr "_Загальне"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "Custom actions are only available in collapsed mode."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Pattern"
 msgstr "Шаблон"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:37
 msgid "Add a new custom action."
 msgstr "Додати нову дію користувача"
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:38
 msgid "Remove the currently selected action."
 msgstr "Вилучити останню вибрану дію."
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:40
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -347,23 +355,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Якщо встановлено тип префікса,%s буде замінено на рядок за зразком, %S з повним текстом. Для регулярних виразів можна використовувати \\0 і \\ <num>."
 
-#: ../src/appfinder-preferences.glade.h:39
+#: ../src/appfinder-preferences.glade.h:41
 msgid "Co_mmand:"
 msgstr "Ко_манда:"
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:42
 msgid "Patte_rn:"
 msgstr "Шабл_он:"
 
-#: ../src/appfinder-preferences.glade.h:41
+#: ../src/appfinder-preferences.glade.h:43
 msgid "_Type:"
 msgstr "_Тип:"
 
-#: ../src/appfinder-preferences.glade.h:42
+#: ../src/appfinder-preferences.glade.h:44
 msgid "_Save match in command history"
 msgstr "_Зберегти співпадіння в історії команд"
 
-#: ../src/appfinder-preferences.glade.h:43
+#: ../src/appfinder-preferences.glade.h:45
 msgid "Custom _Actions"
 msgstr "Дія _користувача"
 
