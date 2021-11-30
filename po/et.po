@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 00:45+0200\n"
-"PO-Revision-Date: 2021-05-03 22:46+0000\n"
+"POT-Creation-Date: 2021-11-30 00:47+0100\n"
+"PO-Revision-Date: 2021-11-29 23:47+0000\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Estonian (http://www.transifex.com/xfce/xfce4-appfinder/language/et/)\n"
 "MIME-Version: 1.0\n"
@@ -50,39 +50,39 @@ msgstr "Kategooriad"
 msgid "Filename"
 msgstr "Failinimi"
 
-#: ../src/appfinder-model.c:2395
+#: ../src/appfinder-model.c:2451
 msgid "Application has no command"
 msgstr "Rakendusel ei ole käsku"
 
-#: ../src/appfinder-model.c:2808
+#: ../src/appfinder-model.c:2884
 msgid "Commands History"
 msgstr "Käskude ajalugu"
 
-#: ../src/appfinder-model.c:2832
+#: ../src/appfinder-model.c:2908
 msgid "Bookmarks"
 msgstr "Järjehoidjad"
 
-#: ../src/appfinder-preferences.c:262
+#: ../src/appfinder-preferences.c:266
 msgid "C_lear"
 msgstr "_Tühjenda"
 
-#: ../src/appfinder-preferences.c:263
+#: ../src/appfinder-preferences.c:267
 msgid "This will permanently clear the custom command history."
 msgstr "See tühjendab jäädavalt kohandatud käskude ajaloo."
 
-#: ../src/appfinder-preferences.c:264
+#: ../src/appfinder-preferences.c:268
 msgid "Are you sure you want to clear the command history?"
 msgstr "Kas soovite kindlalt tühjendada käskude ajaloo?"
 
-#: ../src/appfinder-preferences.c:373
+#: ../src/appfinder-preferences.c:377
 msgid "_Delete"
 msgstr "K_ustuta"
 
-#: ../src/appfinder-preferences.c:374
+#: ../src/appfinder-preferences.c:378
 msgid "The custom action will be deleted permanently."
 msgstr "Kohandatud tegevus kustutatakse jäädavalt."
 
-#: ../src/appfinder-preferences.c:375
+#: ../src/appfinder-preferences.c:379
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Kas soovid kindlalt kustutada mustri „%s”?"
@@ -93,68 +93,68 @@ msgstr "Kas soovid kindlalt kustutada mustri „%s”?"
 msgid "Application Finder"
 msgstr "Rakenduste leidja"
 
-#: ../src/appfinder-window.c:278
+#: ../src/appfinder-window.c:279
 msgid "Toggle view mode"
 msgstr "Vaheta vaadet"
 
-#: ../src/appfinder-window.c:357
+#: ../src/appfinder-window.c:358
 msgid "_Preferences"
 msgstr "_Eelistused"
 
-#: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1096
+#: ../src/appfinder-window.c:369 ../src/appfinder-window.c:1097
 msgid "La_unch"
 msgstr "K_äivita"
 
-#: ../src/appfinder-window.c:897
+#: ../src/appfinder-window.c:898
 msgid "Failed to launch desktop item editor"
 msgstr "Töölauafailide haldusvahendi käivitamine ei õnnestunud"
 
-#: ../src/appfinder-window.c:923
+#: ../src/appfinder-window.c:924
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "See kustutab jäädavalt kohandatud töölauafaili sinu kodukaustast."
 
-#: ../src/appfinder-window.c:924
+#: ../src/appfinder-window.c:925
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Kas oled kindel, et soovid tagasi pöörata „%s“?"
 
-#: ../src/appfinder-window.c:934
+#: ../src/appfinder-window.c:935
 msgid "Failed to remove desktop file"
 msgstr "Töölauafaili eemaldamine ebaõnnestus"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:967
+#: ../src/appfinder-window.c:968
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Kirje nähtavaks tegemiseks sa peaksid kustutama töölauafaili siit „%s“ või samast kaustast avama faili ning eemaldama rea „%s“."
 
-#: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1142
+#: ../src/appfinder-window.c:973 ../src/appfinder-window.c:1143
 msgid "_Hide"
 msgstr "_Peida"
 
-#: ../src/appfinder-window.c:973
+#: ../src/appfinder-window.c:974
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Kas oled kindel, et soovid peita „%s“?"
 
-#: ../src/appfinder-window.c:1078
+#: ../src/appfinder-window.c:1079
 msgid "Remove From Bookmarks"
 msgstr "Eemalda järjehoidjate seast"
 
-#: ../src/appfinder-window.c:1078
+#: ../src/appfinder-window.c:1079
 msgid "Add to Bookmarks"
 msgstr "Lisa järjehoidjaks"
 
-#: ../src/appfinder-window.c:1110
+#: ../src/appfinder-window.c:1111
 msgid "_Edit"
 msgstr "_Muuda"
 
-#: ../src/appfinder-window.c:1127
+#: ../src/appfinder-window.c:1128
 msgid "_Revert"
 msgstr "_Pööra tagasi"
 
@@ -308,38 +308,46 @@ msgid "Categ_ory icon size:"
 msgstr "Kateg_ooriate ikoonide suurus:"
 
 #: ../src/appfinder-preferences.glade.h:29
+msgid "Hide window decorations"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:30
+msgid "Hide window decorations such as title bar and borders."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Appearance"
 msgstr "Välimus"
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "C_lear Custom Command History"
 msgstr "T_ühjenda kohandatud käskluste ajalugu"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "History"
 msgstr "Ajalugu"
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "_General"
 msgstr "Ü_ldine"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "Custom actions are only available in collapsed mode."
 msgstr "Kohandatud tegevused on saadaval vaid siis, kui rakenduste leidja on käivitatud kokkupandult."
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "Pattern"
 msgstr "Muster"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:37
 msgid "Add a new custom action."
 msgstr "Lisa uus kohandatud tegevus."
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:38
 msgid "Remove the currently selected action."
 msgstr "Eemalda valitud tegevus..."
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:40
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -347,23 +355,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Kui liigiks on määratud eesliide, siis %s asendatakse sõnega mustri järel ning %S asendatakse terve siestatud tekstiga. Regulaaravaldise jaoks kasuta \\0 ja \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:39
+#: ../src/appfinder-preferences.glade.h:41
 msgid "Co_mmand:"
 msgstr "_Käsk"
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:42
 msgid "Patte_rn:"
 msgstr "Muste_r:"
 
-#: ../src/appfinder-preferences.glade.h:41
+#: ../src/appfinder-preferences.glade.h:43
 msgid "_Type:"
 msgstr "_Liik:"
 
-#: ../src/appfinder-preferences.glade.h:42
+#: ../src/appfinder-preferences.glade.h:44
 msgid "_Save match in command history"
 msgstr "_Salvesta vaste käskude ajalukku"
 
-#: ../src/appfinder-preferences.glade.h:43
+#: ../src/appfinder-preferences.glade.h:45
 msgid "Custom _Actions"
 msgstr "Kohandatud t_egevused"
 
