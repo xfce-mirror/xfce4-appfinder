@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-30 00:47+0100\n"
-"PO-Revision-Date: 2021-11-29 23:47+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2021-12-22 19:20+0000\n"
+"Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
 "Language-Team: Serbian (http://www.transifex.com/xfce/xfce4-appfinder/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -309,11 +309,11 @@ msgstr "Величина сличица _врсте:"
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "Hide window decorations"
-msgstr ""
+msgstr "Сакриј украсе прозора"
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Hide window decorations such as title bar and borders."
-msgstr ""
+msgstr "Сакриј украсе прозора попут насловне траке и оквира."
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "Appearance"
