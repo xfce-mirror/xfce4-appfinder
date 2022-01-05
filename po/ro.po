@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Marius Ghita, 2022
 # Mișu Moldovan <dumol@xfce.org>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-30 00:47+0100\n"
-"PO-Revision-Date: 2021-11-29 23:47+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2022-01-05 18:33+0000\n"
+"Last-Translator: Marius Ghita\n"
 "Language-Team: Romanian (http://www.transifex.com/xfce/xfce4-appfinder/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,7 +97,7 @@ msgstr "Comutați modul de afișare"
 
 #: ../src/appfinder-window.c:358
 msgid "_Preferences"
-msgstr ""
+msgstr "_Preferințe"
 
 #: ../src/appfinder-window.c:369 ../src/appfinder-window.c:1097
 msgid "La_unch"
@@ -258,7 +259,7 @@ msgstr "În loc ca programul să se termine când ultima fereastră este închis
 
 #: ../src/appfinder-preferences.glade.h:18
 msgid "Single window"
-msgstr ""
+msgstr "O singură fereastră"
 
 #: ../src/appfinder-preferences.glade.h:19
 msgid ""
@@ -268,7 +269,7 @@ msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:20
 msgid "Sort recently used items first"
-msgstr ""
+msgstr "Sortează după cele recent folosite"
 
 #: ../src/appfinder-preferences.glade.h:21
 msgid ""
@@ -386,7 +387,7 @@ msgstr "Pornire de programe…"
 
 #: ../data/xfce4-run.desktop.in.h:2
 msgid "Enter a command you want to launch"
-msgstr ""
+msgstr "Introduce-ți comanda pe care doriți să o lansați"
 
 #: ../data/xfce4-run.desktop.in.h:3
 msgid ""
