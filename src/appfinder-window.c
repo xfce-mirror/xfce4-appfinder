@@ -1804,7 +1804,7 @@ xfce_appfinder_window_execute_command (const gchar          *text,
 
   if (IS_STRING (text))
     {
-      gchar **argv;
+      gchar **argv = NULL;
       gchar **envp;
 
       /* expand variables */
