@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Dmitry Nikitin <luckas_fb@mail.ru>, 2008
-# Yarema aka Knedlyk <yupadmin@gmail.com>, 2013-2015,2017-2019
+# Yarema aka Knedlyk <yupadmin@gmail.com>, 2013-2015,2017-2019,2022
 # zubr139, 2019
 # Andrij Mizyk <andmizyk@gmail.com>, 2021
 msgid ""
@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-30 00:47+0100\n"
-"PO-Revision-Date: 2021-11-29 23:47+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2022-02-04 13:36+0000\n"
+"Last-Translator: Yarema aka Knedlyk <yupadmin@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/xfce/xfce4-appfinder/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -309,11 +309,11 @@ msgstr "Розмір значків категорій:"
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "Hide window decorations"
-msgstr ""
+msgstr "Приховати прикраси вікон"
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Hide window decorations such as title bar and borders."
-msgstr ""
+msgstr "Приховати прикраси вікон, такі як заголовок та межі."
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "Appearance"
@@ -333,7 +333,7 @@ msgstr "_Загальне"
 
 #: ../src/appfinder-preferences.glade.h:35
 msgid "Custom actions are only available in collapsed mode."
-msgstr ""
+msgstr "Спеціальні дії доступні лише в згорнутому режимі."
 
 #: ../src/appfinder-preferences.glade.h:36
 msgid "Pattern"
