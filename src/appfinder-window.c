@@ -249,7 +249,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, TRUE, 0);
   gtk_widget_show (hbox);
 
-  window->icon_find = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_STOCK_FIND, XFCE_APPFINDER_ICON_SIZE_48);
+  window->icon_find = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_FIND, XFCE_APPFINDER_ICON_SIZE_48);
   window->image = image = gtk_image_new_from_pixbuf (window->icon_find);
   gtk_widget_set_size_request (image, 48, 48);
   gtk_widget_set_halign(image, GTK_ALIGN_CENTER);
@@ -273,7 +273,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
       G_CALLBACK (xfce_appfinder_window_entry_key_press_event), window);
   gtk_entry_set_icon_from_icon_name (GTK_ENTRY (entry),
                                      GTK_ENTRY_ICON_SECONDARY,
-                                     XFCE_APPFINDER_STOCK_GO_DOWN);
+                                     XFCE_APPFINDER_ICON_NAME_GO_DOWN);
   gtk_entry_set_icon_tooltip_text (GTK_ENTRY (entry),
                                    GTK_ENTRY_ICON_SECONDARY,
                                    _("Toggle view mode"));
@@ -363,7 +363,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_button_set_always_show_image(GTK_BUTTON(button), TRUE);
   gtk_widget_show (button);
 
-  image = gtk_image_new_from_icon_name (XFCE_APPFINDER_STOCK_PREFERENCES, GTK_ICON_SIZE_BUTTON);
+  image = gtk_image_new_from_icon_name (XFCE_APPFINDER_ICON_NAME_PREFERENCES, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (button), image);
 
   window->button_launch = button = gtk_button_new_with_mnemonic (_("La_unch"));
@@ -374,7 +374,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_button_set_always_show_image(GTK_BUTTON(button), TRUE);
   gtk_widget_show (button);
 
-  image = gtk_image_new_from_icon_name (XFCE_APPFINDER_STOCK_EXECUTE, GTK_ICON_SIZE_BUTTON);
+  image = gtk_image_new_from_icon_name (XFCE_APPFINDER_ICON_NAME_EXECUTE, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (button), image);
 
   window->icon_theme = gtk_icon_theme_get_for_screen (gtk_window_get_screen (GTK_WINDOW (window)));
@@ -920,7 +920,7 @@ xfce_appfinder_window_popup_menu_revert (GtkWidget           *mi,
   if (name == NULL)
     return;
 
-  if (xfce_dialog_confirm (GTK_WINDOW (window), XFCE_APPFINDER_STOCK_REVERT_TO_SAVED, NULL,
+  if (xfce_dialog_confirm (GTK_WINDOW (window), XFCE_APPFINDER_ICON_NAME_REVERT, NULL,
           _("This will permanently remove the custom desktop file from your home directory."),
           _("Are you sure you want to revert \"%s\"?"), name))
     {
@@ -1071,9 +1071,9 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
           G_CALLBACK (xfce_appfinder_window_popup_menu_toggle_bookmark), window);
 
       if (is_bookmark)
-        image = gtk_image_new_from_icon_name (XFCE_APPFINDER_STOCK_REMOVE, GTK_ICON_SIZE_MENU);
+        image = gtk_image_new_from_icon_name (XFCE_APPFINDER_ICON_NAME_REMOVE, GTK_ICON_SIZE_MENU);
       else
-        image = gtk_image_new_from_icon_name (XFCE_APPFINDER_STOCK_BOOKMARK_NEW, GTK_ICON_SIZE_MENU);
+        image = gtk_image_new_from_icon_name (XFCE_APPFINDER_ICON_NAME_BOOKMARK_NEW, GTK_ICON_SIZE_MENU);
 
       box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
       label = gtk_label_new (is_bookmark ? _("Remove From Bookmarks") : _("Add to Bookmarks"));
@@ -1095,7 +1095,7 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
 
       box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
       label = gtk_label_new_with_mnemonic (_("La_unch"));
-      image = gtk_image_new_from_icon_name (XFCE_APPFINDER_STOCK_EXECUTE, GTK_ICON_SIZE_MENU);
+      image = gtk_image_new_from_icon_name (XFCE_APPFINDER_ICON_NAME_EXECUTE, GTK_ICON_SIZE_MENU);
       gtk_container_add (GTK_CONTAINER (box), image);
       gtk_container_add (GTK_CONTAINER (box), label);
       gtk_container_add (GTK_CONTAINER (mi), box);
@@ -1109,7 +1109,7 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
 
       box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
       label = gtk_label_new_with_mnemonic (_("_Edit"));
-      image = gtk_image_new_from_icon_name (XFCE_APPFINDER_STOCK_EDIT, GTK_ICON_SIZE_MENU);
+      image = gtk_image_new_from_icon_name (XFCE_APPFINDER_ICON_NAME_EDIT, GTK_ICON_SIZE_MENU);
       gtk_container_add (GTK_CONTAINER (box), image);
       gtk_container_add (GTK_CONTAINER (box), label);
       gtk_container_add (GTK_CONTAINER (mi), box);
@@ -1126,7 +1126,7 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
 
       box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
       label = gtk_label_new_with_mnemonic (_("_Revert"));
-      image = gtk_image_new_from_icon_name (XFCE_APPFINDER_STOCK_REVERT_TO_SAVED, GTK_ICON_SIZE_MENU);
+      image = gtk_image_new_from_icon_name (XFCE_APPFINDER_ICON_NAME_REVERT, GTK_ICON_SIZE_MENU);
       gtk_container_add (GTK_CONTAINER (box), image);
       gtk_container_add (GTK_CONTAINER (box), label);
       gtk_container_add (GTK_CONTAINER (mi), box);
@@ -1443,7 +1443,7 @@ xfce_appfinder_window_drag_begin (GtkWidget           *widget,
     }
   else
     {
-      gtk_drag_set_icon_name (drag_context, XFCE_APPFINDER_STOCK_DIALOG_ERROR, 0, 0);
+      gtk_drag_set_icon_name (drag_context, XFCE_APPFINDER_ICON_NAME_DIALOG_ERROR, 0, 0);
     }
 }
 
@@ -1756,7 +1756,7 @@ xfce_appfinder_window_icon_theme_changed (XfceAppfinderWindow *window)
 
   if (window->icon_find != NULL)
     g_object_unref (G_OBJECT (window->icon_find));
-  window->icon_find = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_STOCK_FIND, XFCE_APPFINDER_ICON_SIZE_48);
+  window->icon_find = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_FIND, XFCE_APPFINDER_ICON_SIZE_48);
 
   /* drop cached pixbufs */
   if (G_LIKELY (window->model != NULL))
@@ -1922,7 +1922,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
   if (!only_custom_cmd)
     {
       gtk_entry_set_icon_from_icon_name (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY,
-                                     result ? NULL : XFCE_APPFINDER_STOCK_DIALOG_ERROR);
+                                     result ? NULL : XFCE_APPFINDER_ICON_NAME_DIALOG_ERROR);
       gtk_entry_set_icon_tooltip_text (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY,
                                        error != NULL ? error->message : NULL);
     }
@@ -1997,7 +1997,7 @@ xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
 
   /* toggle icon */
   gtk_entry_set_icon_from_icon_name (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_SECONDARY,
-                                     expanded ? XFCE_APPFINDER_STOCK_GO_UP : XFCE_APPFINDER_STOCK_GO_DOWN);
+                                     expanded ? XFCE_APPFINDER_ICON_NAME_GO_UP : XFCE_APPFINDER_ICON_NAME_GO_DOWN);
   gtk_entry_set_icon_from_icon_name (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY, NULL);
 
   /* update completion (remove completed text of restart completion) */
