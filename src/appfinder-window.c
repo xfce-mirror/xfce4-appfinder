@@ -249,7 +249,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, TRUE, 0);
   gtk_widget_show (hbox);
 
-  window->icon_find = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_FIND, XFCE_APPFINDER_ICON_SIZE_48);
+  window->icon_find = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_FIND, XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM);
   window->image = image = gtk_image_new_from_pixbuf (window->icon_find);
   gtk_widget_set_size_request (image, 48, 48);
   gtk_widget_set_halign(image, GTK_ALIGN_CENTER);
@@ -1756,7 +1756,7 @@ xfce_appfinder_window_icon_theme_changed (XfceAppfinderWindow *window)
 
   if (window->icon_find != NULL)
     g_object_unref (G_OBJECT (window->icon_find));
-  window->icon_find = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_FIND, XFCE_APPFINDER_ICON_SIZE_48);
+  window->icon_find = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_FIND, XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM);
 
   /* drop cached pixbufs */
   if (G_LIKELY (window->model != NULL))
