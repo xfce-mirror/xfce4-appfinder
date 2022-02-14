@@ -258,8 +258,8 @@ xfce_appfinder_model_init (XfceAppfinderModel *model)
   model->bookmarks_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
   model->frecencies_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, xfce_appfinder_model_frecency_free);
   model->icon_size = XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM;
-  model->command_icon = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_STOCK_EXECUTE, model->icon_size);
-  model->command_icon_large = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_STOCK_EXECUTE, XFCE_APPFINDER_ICON_SIZE_48);
+  model->command_icon = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_EXECUTE, model->icon_size);
+  model->command_icon_large = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_EXECUTE, XFCE_APPFINDER_ICON_SIZE_48);
   model->command_category = xfce_appfinder_model_get_command_category ();
   model->collect_cancelled = g_cancellable_new ();
 
@@ -2707,11 +2707,11 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
   /* reload the command icons */
   if (model->command_icon != NULL)
     g_object_unref (G_OBJECT (model->command_icon));
-  model->command_icon = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_STOCK_EXECUTE, model->icon_size);
+  model->command_icon = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_EXECUTE, model->icon_size);
 
   if (model->command_icon_large != NULL)
     g_object_unref (G_OBJECT (model->command_icon_large));
-  model->command_icon_large = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_STOCK_EXECUTE, XFCE_APPFINDER_ICON_SIZE_48);
+  model->command_icon_large = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_EXECUTE, XFCE_APPFINDER_ICON_SIZE_48);
 
   /* update the model items */
   for (li = model->items, idx = 0; li != NULL; li = li->next, idx++)
@@ -2882,7 +2882,7 @@ xfce_appfinder_model_get_command_category (void)
     {
       category = g_object_new (GARCON_TYPE_MENU_DIRECTORY,
                                "name", _("Commands History"),
-                               "icon-name", XFCE_APPFINDER_STOCK_EXECUTE,
+                               "icon-name", XFCE_APPFINDER_ICON_NAME_EXECUTE,
                                NULL);
       appfinder_refcount_debug_add (G_OBJECT (category), "commands");
       g_object_add_weak_pointer (G_OBJECT (category), (gpointer) &category);
