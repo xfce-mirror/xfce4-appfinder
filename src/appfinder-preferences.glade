@@ -524,7 +524,7 @@
                             <property name="can_focus">False</property>
                             <property name="label" translatable="yes">Custom actions are only available in collapsed mode.</property>
                             <property name="use_markup">True</property>
-                            <property name="wrap">True</property>
+                            <property name="wrap">False</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
