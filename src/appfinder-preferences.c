@@ -263,7 +263,7 @@ xfce_appfinder_preferences_clear_history (XfceAppfinderPreferences *preferences)
 
   appfinder_return_if_fail (XFCE_IS_APPFINDER_PREFERENCES (preferences));
 
-  if (xfce_dialog_confirm (GTK_WINDOW (preferences->dialog), XFCE_APPFINDER_STOCK_CLEAR, _("C_lear"),
+  if (xfce_dialog_confirm (GTK_WINDOW (preferences->dialog), XFCE_APPFINDER_ICON_NAME_CLEAR, _("C_lear"),
                            _("This will permanently clear the custom command history."),
                            _("Are you sure you want to clear the command history?")))
     {
@@ -374,7 +374,7 @@ xfce_appfinder_preferences_action_remove (GtkWidget                *button,
                       -1);
 
   if (xfce_dialog_confirm (GTK_WINDOW (gtk_widget_get_toplevel (button)),
-                           XFCE_APPFINDER_STOCK_DELETE, _("_Delete"),
+                           XFCE_APPFINDER_ICON_NAME_DELETE, _("_Delete"),
                            _("The custom action will be deleted permanently."),
                            _("Are you sure you want to delete pattern \"%s\"?"),
                            pattern))

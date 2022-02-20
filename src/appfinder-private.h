@@ -52,18 +52,18 @@ void    appfinder_refcount_debug_add (GObject     *object,
 #define appfinder_return_val_if_fail(expr,val) G_STMT_START{ (void)0; }G_STMT_END
 #endif
 
-#define XFCE_APPFINDER_STOCK_BOOKMARK_NEW "bookmark-new"
-#define XFCE_APPFINDER_STOCK_CLEAR "edit-clear-symbolic"
-#define XFCE_APPFINDER_STOCK_DELETE "edit-delete"
-#define XFCE_APPFINDER_STOCK_DIALOG_ERROR "dialog-error"
-#define XFCE_APPFINDER_STOCK_EDIT "document-properties"
-#define XFCE_APPFINDER_STOCK_EXECUTE "system-run"
-#define XFCE_APPFINDER_STOCK_FIND "edit-find"
-#define XFCE_APPFINDER_STOCK_GO_DOWN "go-down-symbolic"
-#define XFCE_APPFINDER_STOCK_GO_UP "go-up-symbolic"
-#define XFCE_APPFINDER_STOCK_PREFERENCES "preferences-system"
-#define XFCE_APPFINDER_STOCK_REVERT_TO_SAVED "document-revert"
-#define XFCE_APPFINDER_STOCK_REMOVE "list-remove"
+#define XFCE_APPFINDER_ICON_NAME_BOOKMARK_NEW "bookmark-new-symbolic"
+#define XFCE_APPFINDER_ICON_NAME_CLEAR "edit-clear-symbolic"
+#define XFCE_APPFINDER_ICON_NAME_DELETE "edit-delete-symbolic"
+#define XFCE_APPFINDER_ICON_NAME_DIALOG_ERROR "dialog-error-symbolic"
+#define XFCE_APPFINDER_ICON_NAME_EDIT "document-properties-symbolic"
+#define XFCE_APPFINDER_ICON_NAME_EXECUTE "system-run-symbolic"
+#define XFCE_APPFINDER_ICON_NAME_FIND "edit-find-symbolic"
+#define XFCE_APPFINDER_ICON_NAME_GO_DOWN "go-down-symbolic"
+#define XFCE_APPFINDER_ICON_NAME_GO_UP "go-up-symbolic"
+#define XFCE_APPFINDER_ICON_NAME_PREFERENCES "preferences-system-symbolic"
+#define XFCE_APPFINDER_ICON_NAME_REVERT "document-revert-symbolic"
+#define XFCE_APPFINDER_ICON_NAME_REMOVE "list-remove-symbolic"
 
 
 
