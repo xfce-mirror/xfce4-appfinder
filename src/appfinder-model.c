@@ -880,6 +880,17 @@ xfce_appfinder_model_item_compare (gconstpointer a,
 
 
 
+static gint
+xfce_appfinder_model_item_compare_command (gconstpointer a,
+                                           gconstpointer b)
+{
+  const ModelItem *item_a = a, *item_b = b;
+
+  return g_utf8_collate (item_a->command, item_b->command);
+}
+
+
+
 static gchar *
 xfce_appfinder_model_item_key (GarconMenuItem *item)
 {
@@ -1138,7 +1149,7 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
   /* add new command */
   item = g_slice_new0 (ModelItem);
   item->command = g_strdup (command);
-  if (g_slist_find_custom (model->items, item, xfce_appfinder_model_item_compare) != NULL)
+  if (g_slist_find_custom (model->items, item, xfce_appfinder_model_item_compare_command) != NULL)
     {
        APPFINDER_DEBUG ("Skip adding %s to the model as it's already contained.", command);
        g_slice_free (ModelItem, item);
