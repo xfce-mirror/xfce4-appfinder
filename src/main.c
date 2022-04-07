@@ -214,7 +214,7 @@ main (gint argc, gchar **argv)
   GSList      *windows_destroy;
 
   /* set translation domain */
-  xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
+  xfce_textdomain (PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 
 #ifdef G_ENABLE_DEBUG
   /* do NOT remove this line for now, If something doesn't work,
@@ -225,7 +225,7 @@ main (gint argc, gchar **argv)
   /* get the startup notification id */
   startup_id = g_getenv ("DESKTOP_STARTUP_ID");
 
-  if (!gtk_init_with_args (&argc, &argv, NULL, option_entries, GETTEXT_PACKAGE, &error))
+  if (!gtk_init_with_args (&argc, &argv, NULL, option_entries, PACKAGE, &error))
     {
       g_printerr ("%s: %s.\n", PACKAGE_NAME, error->message);
       g_printerr (_("Type \"%s --help\" for usage."), PACKAGE_NAME);
