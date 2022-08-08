@@ -2438,9 +2438,6 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
   ModelItem       *mitem;
   gboolean         succeed = FALSE;
   gchar          **argv, **envp = NULL;
-#if GARCON_CHECK_VERSION (4, 17, 0)
-  gboolean         discrete_gpu;
-#endif
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
   appfinder_return_val_if_fail (iter->stamp == model->stamp, FALSE);
