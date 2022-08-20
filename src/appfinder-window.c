@@ -42,6 +42,10 @@
 
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
+
+#include <X11/Xatom.h>
+#include <X11/Xutil.h>
+
 #define APPFINDER_WIDGET_XID(widget) ((guint) GDK_WINDOW_XID (gtk_widget_get_window (GTK_WIDGET (widget))))
 #else
 #define APPFINDER_WIDGET_XID(widget) (0)
