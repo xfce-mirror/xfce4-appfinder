@@ -37,6 +37,7 @@ xfce4_appfinder_CFLAGS = \
 	$(GARCON_CFLAGS) \
 	$(GIO_CFLAGS) \
 	$(XFCONF_CFLAGS) \
+	$(LIBX11_CFLAGS) \
 	$(PLATFORM_CFLAGS)
 
 xfce4_appfinder_LDADD = \
@@ -47,10 +48,12 @@ xfce4_appfinder_LDADD = \
 	$(LIBXFCE4UI_LIBS) \
 	$(GARCON_LIBS) \
 	$(XFCONF_LIBS) \
+	$(LIBX11_LIBS) \
 	$(GIO_LIBS)
 
 xfce4_appfinder_LDFLAGS = \
 	-no-undefined \
+	$(LIBX11_LDFLAGS) \
 	$(PLATFORM_LDFLAGS)
 
 # install symlink to 'xfrun4'
