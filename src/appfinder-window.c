@@ -1965,15 +1965,42 @@ xfce_appfinder_window_update_frecency (XfceAppfinderWindow *window,
 
 
 
+static void xfce_appfinder_window_clamp_height (GtkWidget *widget)
+{
+    Display *display;
+    Window xwindow;
+    XSizeHints size_hints;
+    GtkRequisition requisition;
+    gint scale;
+
+    display = gdk_x11_display_get_xdisplay (gtk_widget_get_display (widget));
+    xwindow = gdk_x11_window_get_xid (gtk_widget_get_window (widget));
+    scale = gdk_window_get_scale_factor (gtk_widget_get_window (widget));
+    gtk_widget_get_preferred_size (widget, &requisition, NULL);
+
+    size_hints.flags = PMinSize | PMaxSize;
+    size_hints.min_width = 0;
+    size_hints.max_width = G_MAXINT;
+    size_hints.min_height = requisition.height * scale;
+    size_hints.max_height = requisition.height * scale;
+
+    XSetWMNormalHints (display, xwindow, &size_hints);
+}
+
+
+
 void
 xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
                                     gboolean             expanded)
 {
-  GdkGeometry         hints;
+  GtkRequisition      requisition;
   gint                width;
   GtkEntryCompletion *completion;
 
   APPFINDER_DEBUG ("set expand = %s", expanded ? "true" : "false");
+
+  /* show/hide pane with treeviews */
+  gtk_widget_set_visible (window->paned, expanded);
 
   /* force window geomentry */
   if (expanded)
@@ -1987,13 +2014,20 @@ xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
       if (gtk_widget_get_visible (GTK_WIDGET (window)))
         gtk_window_get_size (GTK_WINDOW (window), NULL, &window->last_window_height);
 
-      hints.max_height = -1;
-      hints.max_width = G_MAXINT;
-      gtk_window_set_geometry_hints (GTK_WINDOW (window), NULL, &hints, GDK_HINT_MAX_SIZE);
-    }
+      /* Explicitely resizing the window causes the problem that
+       * if the application start with collpased mode, expanded mode
+       * will have a very small height.
+       * If possible remove this and let size hints do their work.
+       * Otherwise we will need to implement a workaround to handle
+       * different heights per mode.
+       */
+      gtk_window_get_size (GTK_WINDOW (window), &width, NULL);
+      gtk_widget_get_preferred_size (GTK_WIDGET (window), &requisition, NULL);
+      gtk_window_resize (GTK_WINDOW (window), width, requisition.height);
+      gtk_widget_queue_resize (GTK_WIDGET (window));
 
-  /* show/hide pane with treeviews */
-  gtk_widget_set_visible (window->paned, expanded);
+      xfce_appfinder_window_clamp_height (GTK_WIDGET (window));
+    }
 
   /* toggle icon */
   gtk_entry_set_icon_from_icon_name (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_SECONDARY,
