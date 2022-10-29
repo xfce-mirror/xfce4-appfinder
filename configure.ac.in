@@ -1,5 +1,5 @@
 dnl
-dnl Copyright (c) 2008-2017 - The Xfce Development Team.
+dnl Copyright (c) 2008-2022 - The Xfce Development Team.
 dnl
 
 dnl ***************************
@@ -21,7 +21,7 @@ m4_define([appfinder_debug_default], [ifelse(xfce4_appfinder_version_tag(), [git
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
-AC_COPYRIGHT([Copyright (c) 2008-2020 The Xfce development team. All rights reserved.])
+AC_COPYRIGHT([Copyright (c) 2008-2022 The Xfce development team. All rights reserved.])
 AC_INIT([xfce4-appfinder], [xfce4_appfinder_version], [https://gitlab.xfce.org/xfce/xfce4-appfinder/], [xfce4-appfinder])
 AC_PREREQ([2.60])
 AC_CONFIG_MACRO_DIRS([m4])
