@@ -6,18 +6,12 @@ SUBDIRS = \
 	po
 
 EXTRA_DIST = \
-	intltool-extract.in \
-	intltool-merge.in \
-	intltool-update.in \
 	README.md
 
 distuninstallcheck_listfiles = \
 	find -type f \! -name icon-theme.cache
 
 DISTCLEANFILES = \
-	intltool-extract \
-	intltool-merge \
-	intltool-update \
 	po/.intltool-merge-cache.lock
 
 distclean-local:
