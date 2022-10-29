@@ -1,3 +1,26 @@
+4.17.1 (2022-10-29)
+======
+- build: Fix intltool lock file problem during make distcheck
+- Update COPYING
+- Avoid saving duplicate command (#58)
+- Use symbolic icons
+- Rename icon name macro constants
+- Do not allow custom action notice to wrap lines
+- Fix crashes occurring when GLib rejects to parse the command string
+- Add option to hide window decorations (#51)
+- Include keywords and generic name to search
+- Translation Updates:
+  Albanian, Amharic, Arabic, Armenian (Armenia), Basque, Belarusian,
+  Bulgarian, Catalan, Chinese (China), Chinese (Hong Kong), Chinese
+  (Taiwan), Croatian, Czech, Danish, Dutch, Eastern Armenian, English
+  (Australia), English (Canada), English (United Kingdom), Estonian,
+  Finnish, French, Galician, German, Greek, Hebrew, Hindi, Hungarian,
+  Icelandic, Indonesian, Interlingue, Italian, Japanese, Kazakh,
+  Korean, Lithuanian, Malay, Norwegian Bokmål, Norwegian Nynorsk,
+  Occitan (post 1500), Polish, Portuguese, Portuguese (Brazil),
+  Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish,
+  Telugu, Thai, Turkish, Ukrainian, Uyghur, Vietnamese
+
 4.17.0
 ======
 - Add support to garcon's PrefersNonDefaultGPU property
