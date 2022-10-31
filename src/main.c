@@ -196,8 +196,10 @@ appfinder_window_new (const gchar *startup_id,
                          "startup-id", IS_STRING (startup_id) ? startup_id : NULL,
                          NULL);
   appfinder_refcount_debug_add (G_OBJECT (window), startup_id);
-  xfce_appfinder_window_set_expanded (XFCE_APPFINDER_WINDOW (window), expanded);
   gtk_widget_show (window);
+
+  /* has to be called after show otherwise crashes the application */
+  xfce_appfinder_window_set_expanded (XFCE_APPFINDER_WINDOW (window), expanded);
 
   windows = g_slist_prepend (windows, window);
   g_signal_connect (G_OBJECT (window), "destroy",
