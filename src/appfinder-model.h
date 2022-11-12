@@ -69,7 +69,8 @@ XfceAppfinderIconSize;
 
 GType                xfce_appfinder_model_get_type               (void) G_GNUC_CONST;
 
-XfceAppfinderModel  *xfce_appfinder_model_get                    (gboolean                   sort_by_frecency) G_GNUC_MALLOC;
+XfceAppfinderModel  *xfce_appfinder_model_get                    (gboolean                   sort_by_frecency,
+                                                                  gint                       scale_factor) G_GNUC_MALLOC;
 
 GSList              *xfce_appfinder_model_get_categories         (XfceAppfinderModel        *model);
 
@@ -90,7 +91,8 @@ gboolean             xfce_appfinder_model_execute                (XfceAppfinderM
                                                                   GError                   **error);
 
 GdkPixbuf           *xfce_appfinder_model_load_pixbuf            (const gchar               *icon_name,
-                                                                  XfceAppfinderIconSize      icon_size) G_GNUC_MALLOC;
+                                                                  XfceAppfinderIconSize      icon_size,
+                                                                  gint                       scale_factor) G_GNUC_MALLOC;
 
 gboolean             xfce_appfinder_model_save_command           (XfceAppfinderModel        *model,
                                                                   const gchar               *command,
