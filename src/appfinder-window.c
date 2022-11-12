@@ -384,10 +384,15 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   image = gtk_image_new_from_icon_name (XFCE_APPFINDER_ICON_NAME_EXECUTE, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (button), image);
 
+  /* update icons when icon theme changes */
   window->icon_theme = gtk_icon_theme_get_for_screen (gtk_window_get_screen (GTK_WINDOW (window)));
   g_signal_connect_swapped (G_OBJECT (window->icon_theme), "changed",
       G_CALLBACK (xfce_appfinder_window_icon_theme_changed), window);
   g_object_ref (G_OBJECT (window->icon_theme));
+
+  /* update icons when scale factor changes */
+  g_signal_connect (G_OBJECT (window), "notify::scale-factor",
+      G_CALLBACK (xfce_appfinder_window_icon_theme_changed), NULL);
 
   /* load categories in the model */
   xfce_appfinder_window_category_set_categories (NULL, window);
@@ -416,6 +421,9 @@ xfce_appfinder_window_finalize (GObject *object)
 
   g_signal_handler_disconnect (window->channel, window->property_watch_id);
   g_signal_handler_disconnect (window->model, window->categories_changed_id);
+
+  g_signal_handlers_disconnect_by_func (G_OBJECT (window),
+      xfce_appfinder_window_icon_theme_changed, NULL);
 
   /* release our reference on the icon theme */
   g_signal_handlers_disconnect_by_func (G_OBJECT (window->icon_theme),
@@ -1771,20 +1779,24 @@ xfce_appfinder_window_row_activated (XfceAppfinderWindow *window)
 static void
 xfce_appfinder_window_icon_theme_changed (XfceAppfinderWindow *window)
 {
+  gint scale_factor;
+
   appfinder_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
+
+  scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
 
   if (window->icon_find != NULL)
     g_object_unref (G_OBJECT (window->icon_find));
   window->icon_find = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_FIND,
                                                         XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM,
-                                                        gtk_widget_get_scale_factor (GTK_WIDGET (window)));
+                                                        scale_factor);
 
   /* drop cached pixbufs */
   if (G_LIKELY (window->model != NULL))
-    xfce_appfinder_model_icon_theme_changed (window->model);
+    g_object_set (window->model, "scale-factor", scale_factor, NULL); /* theme is updated automatically */
 
   if (G_LIKELY (window->category_model != NULL))
-    xfce_appfinder_category_model_icon_theme_changed (window->category_model);
+    g_object_set (window->category_model, "scale-factor", scale_factor, NULL); /* theme is updated automatically */
 
   /* update state */
   xfce_appfinder_window_entry_changed (window);
