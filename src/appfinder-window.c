@@ -534,7 +534,7 @@ xfce_appfinder_window_window_state_event (GtkWidget           *widget,
 
           /* set sensible width instead of taking entire width */
           width = xfconf_channel_get_int (window->channel, "/last/window-width", DEFAULT_WINDOW_WIDTH);
-          gtk_window_resize (GTK_WINDOW (widget), width, 100 /* should be corrected by wm */);
+          gtk_window_resize (GTK_WINDOW (widget), width, 80 /* should be corrected by wm */);
         }
 
       if ((event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN) != 0)
@@ -1969,27 +1969,25 @@ void
 xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
                                     gboolean             expanded)
 {
-  GdkGeometry         hints;
   gint                width;
   GtkEntryCompletion *completion;
 
   APPFINDER_DEBUG ("set expand = %s", expanded ? "true" : "false");
 
-  /* force window geomentry */
+  /* update window geometry */
   if (expanded)
     {
-      gtk_window_set_geometry_hints (GTK_WINDOW (window), NULL, NULL, 0);
       gtk_window_get_size (GTK_WINDOW (window), &width, NULL);
       gtk_window_resize (GTK_WINDOW (window), width, window->last_window_height);
     }
   else
     {
       if (gtk_widget_get_visible (GTK_WIDGET (window)))
-        gtk_window_get_size (GTK_WINDOW (window), NULL, &window->last_window_height);
+        gtk_window_get_size (GTK_WINDOW (window), &width, &window->last_window_height);
+      else
+        width = xfconf_channel_get_int (window->channel, "/last/window-width", DEFAULT_WINDOW_WIDTH);
 
-      hints.max_height = -1;
-      hints.max_width = G_MAXINT;
-      gtk_window_set_geometry_hints (GTK_WINDOW (window), NULL, &hints, GDK_HINT_MAX_SIZE);
+      gtk_window_resize (GTK_WINDOW (window), width, 80 /* should be corrected by wm */);
     }
 
   /* show/hide pane with treeviews */
