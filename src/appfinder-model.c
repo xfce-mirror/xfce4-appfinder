@@ -534,7 +534,7 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
   gchar              **cat_arr;
   gchar               *cat_str;
   guint                i;
-  cairo_surface_t    *surface = NULL;
+  cairo_surface_t     *surface = NULL;
 
   appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
   appfinder_return_if_fail (iter->stamp == model->stamp);
