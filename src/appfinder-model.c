@@ -33,9 +33,10 @@
 
 
 
-#define HISTORY_PATH   "xfce4/xfce4-appfinder/history"
-#define BOOKMARKS_PATH "xfce4/appfinder/bookmarks"
-#define FRECENCY_PATH  "xfce4/appfinder/frecency"
+#define OLD_HISTORY_PATH "xfce4/xfce4-appfinder/history"
+#define NEW_HISTORY_PATH "xfce4/appfinder/history"
+#define BOOKMARKS_PATH   "xfce4/appfinder/bookmarks"
+#define FRECENCY_PATH    "xfce4/appfinder/frecency"
 
 
 static void               xfce_appfinder_model_tree_model_init        (GtkTreeModelIface        *iface);
@@ -110,6 +111,7 @@ static void               xfce_appfinder_model_frecency_collect       (XfceAppfi
                                                                        GMappedFile              *mmap);
 static void               xfce_appfinder_model_frecency_free          (gpointer                  data);
 static gchar*             xfce_appfinder_model_unescape_entry_value   (const gchar              *value);
+static void               xfce_appfinder_model_migrate_history_file   (void);
 
 struct _XfceAppfinderModelClass
 {
@@ -1931,8 +1933,10 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
         }
     }
 
+  xfce_appfinder_model_migrate_history_file ();
+
   /* load command history */
-  filename = xfce_resource_lookup (XFCE_RESOURCE_CACHE, HISTORY_PATH);
+  filename = xfce_resource_lookup (XFCE_RESOURCE_CACHE, NEW_HISTORY_PATH);
   if (G_LIKELY (filename != NULL))
     {
       APPFINDER_DEBUG ("load commands from %s", filename);
@@ -2155,6 +2159,44 @@ xfce_appfinder_model_unescape_entry_value (const gchar *value)
     }
 
   return g_string_free (string, FALSE);
+}
+
+
+
+/* Migration for history cache file, can be removed during the 4.20 cycle */
+static void
+xfce_appfinder_model_migrate_history_file (void)
+{
+  gchar  *filename;
+  GFile  *old_file, *new_file, *dir;
+  GError *error = NULL;
+
+  filename = xfce_resource_lookup (XFCE_RESOURCE_CACHE, OLD_HISTORY_PATH);
+
+  if (filename == NULL)
+    return;
+
+  old_file = g_file_new_for_path (filename);
+  g_free (filename);
+
+  new_file = g_file_resolve_relative_path (old_file, "../../../" NEW_HISTORY_PATH);
+
+  dir = g_file_get_parent (new_file);
+  g_file_make_directory_with_parents (dir, NULL, NULL);
+  g_object_unref (dir);
+
+  if (g_file_query_exists (new_file, NULL))
+    g_warning ("Old and new history files exist, migration aborted");
+  else if (g_file_move (old_file, new_file, G_FILE_COPY_NONE, NULL, NULL, NULL, &error))
+    g_message ("Migration of history file was successful");
+  else
+    {
+      g_warning ("Failed to migrate history file: %s", error->message);
+      g_clear_error (&error);
+    }
+
+  g_object_unref (old_file);
+  g_object_unref (new_file);
 }
 
 
@@ -2644,7 +2686,7 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
       g_string_append_c (contents, '\n');
     }
 
-  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, HISTORY_PATH, TRUE);
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, NEW_HISTORY_PATH, TRUE);
   if (G_LIKELY (filename != NULL))
     succeed = g_file_set_contents (filename, contents->str, contents->len, error);
   else
@@ -2775,7 +2817,7 @@ xfce_appfinder_model_history_clear (XfceAppfinderModel *model)
   xfce_appfinder_model_history_remove_items (model);
 
   /* remove the history file */
-  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, HISTORY_PATH, FALSE);
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, NEW_HISTORY_PATH, FALSE);
   if (filename != NULL)
     g_unlink (filename);
   g_free (filename);
