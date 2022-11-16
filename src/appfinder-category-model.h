@@ -47,7 +47,7 @@ enum
 
 GType                       xfce_appfinder_category_model_get_type           (void) G_GNUC_CONST;
 
-XfceAppfinderCategoryModel *xfce_appfinder_category_model_new                (void) G_GNUC_MALLOC;
+XfceAppfinderCategoryModel *xfce_appfinder_category_model_new                (gint                        scale_factor) G_GNUC_MALLOC;
 
 void                        xfce_appfinder_category_model_set_categories     (XfceAppfinderCategoryModel *model,
                                                                               GSList                     *categories);

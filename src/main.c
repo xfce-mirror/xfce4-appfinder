@@ -137,6 +137,8 @@ static void
 appfinder_window_destroyed (GtkWidget *window)
 {
   XfconfChannel *channel;
+  gboolean       sort_by_frecency;
+  gint           scale_factor;
 
   if (windows == NULL)
     return;
@@ -146,7 +148,9 @@ appfinder_window_destroyed (GtkWidget *window)
     {
       APPFINDER_DEBUG ("main took reference on the main model");
       channel = xfconf_channel_get ("xfce4-appfinder");
-      model_cache = xfce_appfinder_model_get (xfconf_channel_get_bool (channel, "/sort-by-frecency", FALSE));
+      sort_by_frecency = xfconf_channel_get_bool (channel, "/sort-by-frecency", FALSE);
+      scale_factor = gtk_widget_get_scale_factor (window);
+      model_cache = xfce_appfinder_model_get (sort_by_frecency, scale_factor);
     }
 
   /* remove from internal list */
