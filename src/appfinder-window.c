@@ -1454,17 +1454,17 @@ xfce_appfinder_window_drag_begin (GtkWidget           *widget,
                                   GdkDragContext      *drag_context,
                                   XfceAppfinderWindow *window)
 {
-  GtkTreeModel *model;
-  GtkTreeIter   iter;
-  GdkPixbuf    *pixbuf;
+  GtkTreeModel    *model;
+  GtkTreeIter      iter;
+  cairo_surface_t *surface;
 
   if (xfce_appfinder_window_view_get_selected (window, &model, &iter))
     {
-      gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE, &pixbuf, -1);
-      if (G_LIKELY (pixbuf != NULL))
+      gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE, &surface, -1);
+      if (G_LIKELY (surface != NULL))
         {
-          gtk_drag_set_icon_pixbuf (drag_context, pixbuf, 0, 0);
-          g_object_unref (G_OBJECT (pixbuf));
+          gtk_drag_set_icon_surface (drag_context, surface);
+          cairo_surface_destroy (surface);
         }
     }
   else
