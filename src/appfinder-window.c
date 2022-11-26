@@ -217,15 +217,20 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   GtkEntryCompletion *completion;
   GtkCellRenderer    *cell;
   gint                integer;
+  gboolean            sort_by_frecency;
+  gint                scale_factor;
+
+  scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
 
   window->channel = xfconf_channel_get ("xfce4-appfinder");
   window->last_window_height = xfconf_channel_get_int (window->channel, "/last/window-height", DEFAULT_WINDOW_HEIGHT);
 
-  window->category_model = xfce_appfinder_category_model_new ();
+  window->category_model = xfce_appfinder_category_model_new (scale_factor);
   xfconf_g_property_bind (window->channel, "/category-icon-size", G_TYPE_UINT,
                           G_OBJECT (window->category_model), "icon-size");
 
-  window->model = xfce_appfinder_model_get (xfconf_channel_get_bool (window->channel, "/sort-by-frecency", FALSE));
+  sort_by_frecency = xfconf_channel_get_bool (window->channel, "/sort-by-frecency", FALSE);
+  window->model = xfce_appfinder_model_get (sort_by_frecency, scale_factor);
   xfconf_g_property_bind (window->channel, "/item-icon-size", G_TYPE_UINT,
                           G_OBJECT (window->model), "icon-size");
 
@@ -249,7 +254,9 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, TRUE, 0);
   gtk_widget_show (hbox);
 
-  window->icon_find = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_FIND, XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM);
+  window->icon_find = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_FIND,
+                                                        XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM,
+                                                        scale_factor);
   window->image = image = gtk_image_new_from_pixbuf (window->icon_find);
   gtk_widget_set_size_request (image, 48, 48);
   gtk_widget_set_halign(image, GTK_ALIGN_CENTER);
@@ -334,7 +341,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   renderer = gtk_cell_renderer_pixbuf_new ();
   gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (column), renderer, FALSE);
   gtk_tree_view_column_set_attributes (GTK_TREE_VIEW_COLUMN (column), renderer,
-                                       "pixbuf", XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_ICON, NULL);
+                                       "surface", XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_ICON, NULL);
 
   renderer = gtk_cell_renderer_text_new ();
   g_object_set (renderer, "ellipsize", PANGO_ELLIPSIZE_END, NULL);
@@ -377,10 +384,15 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   image = gtk_image_new_from_icon_name (XFCE_APPFINDER_ICON_NAME_EXECUTE, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (button), image);
 
+  /* update icons when icon theme changes */
   window->icon_theme = gtk_icon_theme_get_for_screen (gtk_window_get_screen (GTK_WINDOW (window)));
   g_signal_connect_swapped (G_OBJECT (window->icon_theme), "changed",
       G_CALLBACK (xfce_appfinder_window_icon_theme_changed), window);
   g_object_ref (G_OBJECT (window->icon_theme));
+
+  /* update icons when scale factor changes */
+  g_signal_connect (G_OBJECT (window), "notify::scale-factor",
+      G_CALLBACK (xfce_appfinder_window_icon_theme_changed), NULL);
 
   /* load categories in the model */
   xfce_appfinder_window_category_set_categories (NULL, window);
@@ -409,6 +421,9 @@ xfce_appfinder_window_finalize (GObject *object)
 
   g_signal_handler_disconnect (window->channel, window->property_watch_id);
   g_signal_handler_disconnect (window->model, window->categories_changed_id);
+
+  g_signal_handlers_disconnect_by_func (G_OBJECT (window),
+      xfce_appfinder_window_icon_theme_changed, NULL);
 
   /* release our reference on the icon theme */
   g_signal_handlers_disconnect_by_func (G_OBJECT (window->icon_theme),
@@ -695,14 +710,20 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
       gtk_widget_destroy (window->view);
     }
 
-  window->filter_model = gtk_tree_model_filter_new (GTK_TREE_MODEL (window->model), NULL);
-  gtk_tree_model_filter_set_visible_func (GTK_TREE_MODEL_FILTER (window->filter_model), xfce_appfinder_window_item_visible, window, NULL);
+  if (window->filter_model == NULL)
+    {
+      window->filter_model = gtk_tree_model_filter_new (GTK_TREE_MODEL (window->model), NULL);
+      gtk_tree_model_filter_set_visible_func (GTK_TREE_MODEL_FILTER (window->filter_model), xfce_appfinder_window_item_visible, window, NULL);
+    }
 
-  window->sort_model = gtk_tree_model_sort_new_with_model (GTK_TREE_MODEL (window->filter_model));
-  if (xfconf_channel_get_bool (window->channel, "/sort-by-frecency", FALSE))
-    gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items_frecency, window->entry, NULL);
-  else
-    gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items, window->entry, NULL);
+  if (window->sort_model == NULL)
+    {
+      window->sort_model = gtk_tree_model_sort_new_with_model (GTK_TREE_MODEL (window->filter_model));
+      if (xfconf_channel_get_bool (window->channel, "/sort-by-frecency", FALSE))
+        gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items_frecency, window->entry, NULL);
+      else
+        gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items, window->entry, NULL);
+    }
 
   if (icon_view)
     {
@@ -712,7 +733,7 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
           window->filter_model);
 
       gtk_icon_view_set_selection_mode (GTK_ICON_VIEW (view), GTK_SELECTION_SINGLE);
-      gtk_icon_view_set_pixbuf_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_ICON);
+      gtk_icon_view_set_pixbuf_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_PIXBUF);
       gtk_icon_view_set_text_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_TITLE);
       gtk_icon_view_set_tooltip_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP);
       gtk_icon_view_set_row_spacing (GTK_ICON_VIEW (view), 0);
@@ -749,7 +770,7 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
       renderer = gtk_cell_renderer_pixbuf_new ();
       gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (column), renderer, FALSE);
       gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (column), renderer,
-                                      "pixbuf", XFCE_APPFINDER_MODEL_COLUMN_ICON, NULL);
+                                      "surface", XFCE_APPFINDER_MODEL_COLUMN_ICON, NULL);
 
       renderer = gtk_cell_renderer_text_new ();
       g_object_set (renderer, "ellipsize", PANGO_ELLIPSIZE_END, NULL);
@@ -1159,14 +1180,23 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
 
 static void
 xfce_appfinder_window_update_image (XfceAppfinderWindow *window,
-                                    GdkPixbuf           *pixbuf)
+                                    cairo_surface_t     *surface)
 {
-  if (pixbuf == NULL)
-    pixbuf = window->icon_find;
+  gint     scale_factor;
+  gboolean free_surface = FALSE;
 
-  /* gtk doesn't check this */
-  if (gtk_image_get_pixbuf (GTK_IMAGE (window->image)) != pixbuf)
-    gtk_image_set_from_pixbuf (GTK_IMAGE (window->image), pixbuf);
+  if (surface == NULL)
+    {
+      scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
+      surface = gdk_cairo_surface_create_from_pixbuf (window->icon_find, scale_factor,
+                                                      gtk_widget_get_window (GTK_WIDGET (window)));
+      free_surface = TRUE;
+    }
+
+    gtk_image_set_from_surface (GTK_IMAGE (window->image), surface);
+
+    if (free_surface)
+      cairo_surface_destroy (surface);
 }
 
 
@@ -1215,7 +1245,7 @@ xfce_appfinder_window_entry_changed_idle (gpointer data)
 {
   XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (data);
   const gchar         *text;
-  GdkPixbuf           *pixbuf;
+  cairo_surface_t     *surface;
   gchar               *normalized;
   GtkTreePath         *path;
   GtkTreeSelection    *selection;
@@ -1288,10 +1318,10 @@ xfce_appfinder_window_entry_changed_idle (gpointer data)
       gtk_entry_set_icon_from_icon_name (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY, NULL);
       gtk_entry_set_icon_tooltip_text (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY, NULL);
 
-      pixbuf = xfce_appfinder_model_get_icon_for_command (window->model, text);
-      xfce_appfinder_window_update_image (window, pixbuf);
-      if (pixbuf != NULL)
-        g_object_unref (G_OBJECT (pixbuf));
+      surface = xfce_appfinder_model_get_icon_for_command (window->model, text);
+      xfce_appfinder_window_update_image (window, surface);
+      if (surface != NULL)
+        cairo_surface_destroy (surface);
     }
 
 
@@ -1428,17 +1458,17 @@ xfce_appfinder_window_drag_begin (GtkWidget           *widget,
                                   GdkDragContext      *drag_context,
                                   XfceAppfinderWindow *window)
 {
-  GtkTreeModel *model;
-  GtkTreeIter   iter;
-  GdkPixbuf    *pixbuf;
+  GtkTreeModel    *model;
+  GtkTreeIter      iter;
+  cairo_surface_t *surface;
 
   if (xfce_appfinder_window_view_get_selected (window, &model, &iter))
     {
-      gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE, &pixbuf, -1);
-      if (G_LIKELY (pixbuf != NULL))
+      gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE, &surface, -1);
+      if (G_LIKELY (surface != NULL))
         {
-          gtk_drag_set_icon_pixbuf (drag_context, pixbuf, 0, 0);
-          g_object_unref (G_OBJECT (pixbuf));
+          gtk_drag_set_icon_surface (drag_context, surface);
+          cairo_surface_destroy (surface);
         }
     }
   else
@@ -1715,7 +1745,7 @@ xfce_appfinder_window_item_changed (XfceAppfinderWindow *window)
   GtkTreeIter       iter;
   GtkTreeModel     *model;
   gboolean          can_launch;
-  GdkPixbuf        *pixbuf;
+  cairo_surface_t  *surface;
 
   if (gtk_widget_get_visible (window->paned))
     {
@@ -1724,11 +1754,11 @@ xfce_appfinder_window_item_changed (XfceAppfinderWindow *window)
 
       if (can_launch)
         {
-          gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE, &pixbuf, -1);
-          if (G_LIKELY (pixbuf != NULL))
+          gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE, &surface, -1);
+          if (G_LIKELY (surface != NULL))
             {
-              xfce_appfinder_window_update_image (window, pixbuf);
-              g_object_unref (G_OBJECT (pixbuf));
+              xfce_appfinder_window_update_image (window, surface);
+              cairo_surface_destroy (surface);
             }
         }
       else
@@ -1752,18 +1782,30 @@ xfce_appfinder_window_row_activated (XfceAppfinderWindow *window)
 static void
 xfce_appfinder_window_icon_theme_changed (XfceAppfinderWindow *window)
 {
+  gint scale_factor;
+
   appfinder_return_if_fail (XFCE_IS_APPFINDER_WINDOW (window));
+
+  scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
 
   if (window->icon_find != NULL)
     g_object_unref (G_OBJECT (window->icon_find));
-  window->icon_find = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_FIND, XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM);
+  window->icon_find = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_FIND,
+                                                        XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM,
+                                                        scale_factor);
 
-  /* drop cached pixbufs */
+  /* drop cached pixbufs and surfaces */
   if (G_LIKELY (window->model != NULL))
-    xfce_appfinder_model_icon_theme_changed (window->model);
+    {
+      g_object_set (window->model, "scale-factor", scale_factor, NULL);
+      xfce_appfinder_model_icon_theme_changed (window->model);
+    }
 
   if (G_LIKELY (window->category_model != NULL))
-    xfce_appfinder_category_model_icon_theme_changed (window->category_model);
+    {
+      g_object_set (window->category_model, "scale-factor", scale_factor, NULL);
+      xfce_appfinder_category_model_icon_theme_changed (window->category_model);
+    }
 
   /* update state */
   xfce_appfinder_window_entry_changed (window);

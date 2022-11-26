@@ -40,6 +40,7 @@ enum
   XFCE_APPFINDER_MODEL_COLUMN_TITLE,
   XFCE_APPFINDER_MODEL_COLUMN_ICON,
   XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE,
+  XFCE_APPFINDER_MODEL_COLUMN_PIXBUF,
   XFCE_APPFINDER_MODEL_COLUMN_COMMAND,
   XFCE_APPFINDER_MODEL_COLUMN_URI,
   XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK,
@@ -69,7 +70,8 @@ XfceAppfinderIconSize;
 
 GType                xfce_appfinder_model_get_type               (void) G_GNUC_CONST;
 
-XfceAppfinderModel  *xfce_appfinder_model_get                    (gboolean                   sort_by_frecency) G_GNUC_MALLOC;
+XfceAppfinderModel  *xfce_appfinder_model_get                    (gboolean                   sort_by_frecency,
+                                                                  gint                       scale_factor) G_GNUC_MALLOC;
 
 GSList              *xfce_appfinder_model_get_categories         (XfceAppfinderModel        *model);
 
@@ -90,13 +92,14 @@ gboolean             xfce_appfinder_model_execute                (XfceAppfinderM
                                                                   GError                   **error);
 
 GdkPixbuf           *xfce_appfinder_model_load_pixbuf            (const gchar               *icon_name,
-                                                                  XfceAppfinderIconSize      icon_size) G_GNUC_MALLOC;
+                                                                  XfceAppfinderIconSize      icon_size,
+                                                                  gint                       scale_factor) G_GNUC_MALLOC;
 
 gboolean             xfce_appfinder_model_save_command           (XfceAppfinderModel        *model,
                                                                   const gchar               *command,
                                                                   GError                   **error);
 
-GdkPixbuf           *xfce_appfinder_model_get_icon_for_command   (XfceAppfinderModel        *model,
+cairo_surface_t     *xfce_appfinder_model_get_icon_for_command   (XfceAppfinderModel        *model,
                                                                   const gchar               *command);
 
 void                 xfce_appfinder_model_icon_theme_changed     (XfceAppfinderModel        *model);
