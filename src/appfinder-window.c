@@ -710,14 +710,20 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
       gtk_widget_destroy (window->view);
     }
 
-  window->filter_model = gtk_tree_model_filter_new (GTK_TREE_MODEL (window->model), NULL);
-  gtk_tree_model_filter_set_visible_func (GTK_TREE_MODEL_FILTER (window->filter_model), xfce_appfinder_window_item_visible, window, NULL);
+  if (window->filter_model == NULL)
+    {
+      window->filter_model = gtk_tree_model_filter_new (GTK_TREE_MODEL (window->model), NULL);
+      gtk_tree_model_filter_set_visible_func (GTK_TREE_MODEL_FILTER (window->filter_model), xfce_appfinder_window_item_visible, window, NULL);
+    }
 
-  window->sort_model = gtk_tree_model_sort_new_with_model (GTK_TREE_MODEL (window->filter_model));
-  if (xfconf_channel_get_bool (window->channel, "/sort-by-frecency", FALSE))
-    gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items_frecency, window->entry, NULL);
-  else
-    gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items, window->entry, NULL);
+  if (window->sort_model == NULL)
+    {
+      window->sort_model = gtk_tree_model_sort_new_with_model (GTK_TREE_MODEL (window->filter_model));
+      if (xfconf_channel_get_bool (window->channel, "/sort-by-frecency", FALSE))
+        gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items_frecency, window->entry, NULL);
+      else
+        gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items, window->entry, NULL);
+    }
 
   if (icon_view)
     {
