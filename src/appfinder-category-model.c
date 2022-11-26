@@ -104,6 +104,7 @@ struct _CategoryItem
 {
   GarconMenuDirectory *directory;
   GdkPixbuf           *pixbuf;
+  cairo_surface_t     *surface;
 };
 
 enum
@@ -292,7 +293,7 @@ xfce_appfinder_category_model_get_column_type (GtkTreeModel *tree_model,
       return G_TYPE_STRING;
 
     case XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_ICON:
-      return GDK_TYPE_PIXBUF;
+      return CAIRO_GOBJECT_TYPE_SURFACE;
 
     case XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_DIRECTORY:
       return GARCON_TYPE_MENU_DIRECTORY;
@@ -352,7 +353,6 @@ xfce_appfinder_category_model_get_value (GtkTreeModel *tree_model,
   XfceAppfinderCategoryModel *model = XFCE_APPFINDER_CATEGORY_MODEL (tree_model);
   CategoryItem               *item;
   const gchar                *icon_name;
-  cairo_surface_t            *surface = NULL;
 
   appfinder_return_if_fail (XFCE_IS_APPFINDER_CATEGORY_MODEL (model));
   appfinder_return_if_fail (iter->stamp == model->stamp);
@@ -369,18 +369,17 @@ xfce_appfinder_category_model_get_value (GtkTreeModel *tree_model,
       break;
 
     case XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_ICON:
-      if (item->pixbuf == NULL
-          && item->directory != NULL)
+      if (item->pixbuf == NULL && item->directory != NULL)
         {
           icon_name = garcon_menu_directory_get_icon_name (item->directory);
           item->pixbuf = xfce_appfinder_model_load_pixbuf (icon_name, model->icon_size, model->scale_factor);
         }
 
-      if (item->pixbuf != NULL)
-        surface = gdk_cairo_surface_create_from_pixbuf (item->pixbuf, model->scale_factor, NULL);
+      if (item->surface == NULL && item->pixbuf != NULL)
+        item->surface = gdk_cairo_surface_create_from_pixbuf (item->pixbuf, model->scale_factor, NULL);
 
       g_value_init (value, CAIRO_GOBJECT_TYPE_SURFACE);
-      g_value_take_boxed (value, surface);
+      g_value_set_boxed (value, item->surface);
       break;
 
     case XFCE_APPFINDER_CATEGORY_MODEL_COLUMN_DIRECTORY:
@@ -495,6 +494,8 @@ xfce_appfinder_category_category_free (CategoryItem *item,
     g_object_unref (G_OBJECT (item->directory));
   if (item->pixbuf != NULL)
     g_object_unref (G_OBJECT (item->pixbuf));
+  if (item->surface != NULL)
+    cairo_surface_destroy (item->surface);
   g_slice_free (CategoryItem, item);
 }
 
@@ -638,6 +639,12 @@ xfce_appfinder_category_model_icon_theme_changed (XfceAppfinderCategoryModel *mo
           ITER_INIT (iter, model->stamp, li);
           gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
           gtk_tree_path_free (path);
+        }
+
+      if (item->surface != NULL)
+        {
+          cairo_surface_destroy (item->surface);
+          item->surface = NULL;
         }
     }
 }

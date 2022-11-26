@@ -727,7 +727,7 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
           window->filter_model);
 
       gtk_icon_view_set_selection_mode (GTK_ICON_VIEW (view), GTK_SELECTION_SINGLE);
-      gtk_icon_view_set_pixbuf_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_ICON);
+      gtk_icon_view_set_pixbuf_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_PIXBUF);
       gtk_icon_view_set_text_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_TITLE);
       gtk_icon_view_set_tooltip_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP);
       gtk_icon_view_set_row_spacing (GTK_ICON_VIEW (view), 0);
@@ -1752,11 +1752,7 @@ xfce_appfinder_window_item_changed (XfceAppfinderWindow *window)
         {
           gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE, &surface, -1);
           if (G_LIKELY (surface != NULL))
-            {
-              xfce_appfinder_window_update_image (window, NULL, surface);
-              /* FIXME: crash, do we need to free or unref? */
-              /* g_free (surface); */
-            }
+            xfce_appfinder_window_update_image (window, NULL, surface);
         }
       else
         {
