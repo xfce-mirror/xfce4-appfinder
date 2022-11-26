@@ -99,7 +99,7 @@ gboolean             xfce_appfinder_model_save_command           (XfceAppfinderM
                                                                   const gchar               *command,
                                                                   GError                   **error);
 
-GdkPixbuf           *xfce_appfinder_model_get_icon_for_command   (XfceAppfinderModel        *model,
+cairo_surface_t     *xfce_appfinder_model_get_icon_for_command   (XfceAppfinderModel        *model,
                                                                   const gchar               *command);
 
 void                 xfce_appfinder_model_icon_theme_changed     (XfceAppfinderModel        *model);

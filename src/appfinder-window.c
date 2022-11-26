@@ -1180,7 +1180,6 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
 
 static void
 xfce_appfinder_window_update_image (XfceAppfinderWindow *window,
-                                    GdkPixbuf           *pixbuf,
                                     cairo_surface_t     *surface)
 {
   gint     scale_factor;
@@ -1189,8 +1188,7 @@ xfce_appfinder_window_update_image (XfceAppfinderWindow *window,
   if (surface == NULL)
     {
       scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
-      surface = gdk_cairo_surface_create_from_pixbuf (pixbuf == NULL ? window->icon_find : pixbuf,
-                                                      scale_factor,
+      surface = gdk_cairo_surface_create_from_pixbuf (window->icon_find, scale_factor,
                                                       gtk_widget_get_window (GTK_WIDGET (window)));
       free_surface = TRUE;
     }
@@ -1247,7 +1245,7 @@ xfce_appfinder_window_entry_changed_idle (gpointer data)
 {
   XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (data);
   const gchar         *text;
-  GdkPixbuf           *pixbuf;
+  cairo_surface_t     *surface;
   gchar               *normalized;
   GtkTreePath         *path;
   GtkTreeSelection    *selection;
@@ -1320,10 +1318,10 @@ xfce_appfinder_window_entry_changed_idle (gpointer data)
       gtk_entry_set_icon_from_icon_name (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY, NULL);
       gtk_entry_set_icon_tooltip_text (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY, NULL);
 
-      pixbuf = xfce_appfinder_model_get_icon_for_command (window->model, text);
-      xfce_appfinder_window_update_image (window, pixbuf, NULL);
-      if (pixbuf != NULL)
-        g_object_unref (G_OBJECT (pixbuf));
+      surface = xfce_appfinder_model_get_icon_for_command (window->model, text);
+      xfce_appfinder_window_update_image (window, surface);
+      if (surface != NULL)
+        cairo_surface_destroy (surface);
     }
 
 
@@ -1759,13 +1757,13 @@ xfce_appfinder_window_item_changed (XfceAppfinderWindow *window)
           gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE, &surface, -1);
           if (G_LIKELY (surface != NULL))
             {
-              xfce_appfinder_window_update_image (window, NULL, surface);
+              xfce_appfinder_window_update_image (window, surface);
               cairo_surface_destroy (surface);
             }
         }
       else
         {
-          xfce_appfinder_window_update_image (window, NULL, NULL);
+          xfce_appfinder_window_update_image (window, NULL);
         }
     }
 }
