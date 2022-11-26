@@ -1787,12 +1787,18 @@ xfce_appfinder_window_icon_theme_changed (XfceAppfinderWindow *window)
                                                         XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM,
                                                         scale_factor);
 
-  /* drop cached pixbufs */
+  /* drop cached pixbufs and surfaces */
   if (G_LIKELY (window->model != NULL))
-    g_object_set (window->model, "scale-factor", scale_factor, NULL); /* theme is updated automatically */
+    {
+      g_object_set (window->model, "scale-factor", scale_factor, NULL);
+      xfce_appfinder_model_icon_theme_changed (window->model);
+    }
 
   if (G_LIKELY (window->category_model != NULL))
-    g_object_set (window->category_model, "scale-factor", scale_factor, NULL); /* theme is updated automatically */
+    {
+      g_object_set (window->category_model, "scale-factor", scale_factor, NULL);
+      xfce_appfinder_category_model_icon_theme_changed (window->category_model);
+    }
 
   /* update state */
   xfce_appfinder_window_entry_changed (window);

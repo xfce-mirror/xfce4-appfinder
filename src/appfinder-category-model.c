@@ -232,12 +232,7 @@ xfce_appfinder_category_model_set_property (GObject      *object,
     case PROP_SCALE_FACTOR:
       scale_factor = g_value_get_uint (value);
       if (model->scale_factor != scale_factor)
-        {
-          model->scale_factor = scale_factor;
-
-          /* trigger a theme change to reload icons */
-          xfce_appfinder_category_model_icon_theme_changed (model);
-        }
+        model->scale_factor = scale_factor;
       break;
 
     default:

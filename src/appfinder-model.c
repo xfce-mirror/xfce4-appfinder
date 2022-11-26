@@ -359,12 +359,7 @@ xfce_appfinder_model_set_property (GObject      *object,
     case PROP_SCALE_FACTOR:
       scale_factor = g_value_get_uint (value);
       if (model->scale_factor != scale_factor)
-        {
-          model->scale_factor = scale_factor;
-
-          /* trigger a theme change to reload icons */
-          xfce_appfinder_model_icon_theme_changed (model);
-        }
+        model->scale_factor = scale_factor;
       break;
 
     case PROP_SORT_BY_FRECENCY:
@@ -2385,6 +2380,8 @@ xfce_appfinder_model_get (gboolean sort_by_frecency,
                             "sort-by-frecency", sort_by_frecency,
                             "scale-factor", scale_factor,
                             NULL);
+
+      xfce_appfinder_model_icon_theme_changed (model);
 
       /* only start loading data once model is fully initialized */
       model->collect_thread = g_thread_new ("Collector", xfce_appfinder_model_collect_thread, model);
