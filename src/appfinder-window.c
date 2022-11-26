@@ -1752,7 +1752,10 @@ xfce_appfinder_window_item_changed (XfceAppfinderWindow *window)
         {
           gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE, &surface, -1);
           if (G_LIKELY (surface != NULL))
-            xfce_appfinder_window_update_image (window, NULL, surface);
+            {
+              xfce_appfinder_window_update_image (window, NULL, surface);
+              cairo_surface_destroy (surface);
+            }
         }
       else
         {
