@@ -49,8 +49,8 @@
 
 
 
-#define DEFAULT_WINDOW_WIDTH   400
-#define DEFAULT_WINDOW_HEIGHT  400
+#define DEFAULT_WINDOW_WIDTH   680
+#define DEFAULT_WINDOW_HEIGHT  460
 #define DEFAULT_PANED_POSITION 180
 
 #define XFCE_APPFINDER_LOCAL_PREFIX "file://"
@@ -234,7 +234,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_window_set_default_size (GTK_WINDOW (window), integer, -1);
   gtk_window_set_icon_name (GTK_WINDOW (window), "org.xfce.appfinder");
 
-  if (xfconf_channel_get_bool (window->channel, "/always-center", FALSE))
+  if (xfconf_channel_get_bool (window->channel, "/always-center", TRUE))
     gtk_window_set_position (GTK_WINDOW (window), GTK_WIN_POS_CENTER);
 
   if (xfconf_channel_get_bool (window->channel, "/hide-window-decorations", FALSE))
@@ -307,7 +307,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
   gtk_widget_show (scroll);
 
-  if (xfconf_channel_get_bool (window->channel, "/hide-category-pane", FALSE))
+  if (xfconf_channel_get_bool (window->channel, "/hide-category-pane", TRUE))
     gtk_widget_set_visible (scroll, FALSE);
 
   sidepane = window->sidepane = gtk_tree_view_new_with_model (GTK_TREE_MODEL (window->category_model));
