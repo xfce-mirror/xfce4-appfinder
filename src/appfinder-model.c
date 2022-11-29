@@ -25,6 +25,7 @@
 #endif
 
 #include <glib/gstdio.h>
+#include <cairo/cairo-gobject.h>
 #include <libxfce4util/libxfce4util.h>
 #include <libxfce4ui/libxfce4ui.h>
 
@@ -137,8 +138,6 @@ struct _XfceAppfinderModel
   GarconMenu            *menu;
   guint                  menu_changed_idle_id;
 
-  GdkPixbuf             *command_icon;
-  GdkPixbuf             *command_icon_large;
   GarconMenuDirectory   *command_category;
 
   GSList                *categories;
@@ -157,6 +156,8 @@ struct _XfceAppfinderModel
   gboolean               sort_by_frecency;
 
   XfceAppfinderIconSize  icon_size;
+
+  gint                   scale_factor;
 };
 
 typedef struct
@@ -168,19 +169,20 @@ Frecency;
 
 typedef struct
 {
-  GarconMenuItem *item;
-  gchar          *key;
-  gchar          *abstract;
-  GPtrArray      *categories;
-  gchar          *command;
-  gchar          *tooltip;
-  guint           not_visible : 1;
-  guint           is_bookmark : 1;
+  GarconMenuItem  *item;
+  gchar           *key;
+  gchar           *abstract;
+  GPtrArray       *categories;
+  gchar           *command;
+  gchar           *tooltip;
+  guint            not_visible : 1;
+  guint            is_bookmark : 1;
 
-  Frecency       *frecency; /* owned by frecencies_hash */
+  Frecency        *frecency; /* owned by frecencies_hash */
 
-  GdkPixbuf      *icon;
-  GdkPixbuf      *icon_large;
+  GdkPixbuf       *icon;
+  cairo_surface_t *surface;
+  cairo_surface_t *surface_large;
 }
 ModelItem;
 
@@ -202,6 +204,7 @@ enum
 {
   PROP_0,
   PROP_ICON_SIZE,
+  PROP_SCALE_FACTOR,
   PROP_SORT_BY_FRECENCY
 };
 
@@ -235,6 +238,12 @@ xfce_appfinder_model_class_init (XfceAppfinderModelClass *klass)
                                                       G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 
   g_object_class_install_property (gobject_class,
+                                   PROP_SCALE_FACTOR,
+                                   g_param_spec_uint ("scale-factor", NULL, NULL,
+                                                      1, G_MAXINT, 1,
+                                                      G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
+
+  g_object_class_install_property (gobject_class,
                                    PROP_SORT_BY_FRECENCY,
                                    g_param_spec_boolean ("sort-by-frecency", NULL, NULL,
                                                          FALSE,
@@ -260,14 +269,11 @@ xfce_appfinder_model_init (XfceAppfinderModel *model)
   model->bookmarks_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
   model->frecencies_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, xfce_appfinder_model_frecency_free);
   model->icon_size = XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM;
-  model->command_icon = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_EXECUTE, model->icon_size);
-  model->command_icon_large = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_EXECUTE, XFCE_APPFINDER_ICON_SIZE_48);
   model->command_category = xfce_appfinder_model_get_command_category ();
   model->collect_cancelled = g_cancellable_new ();
 
   model->menu = garcon_menu_new_applications ();
   appfinder_refcount_debug_add (G_OBJECT (model->menu), "main menu");
-  model->collect_thread = g_thread_new ("Collector", xfce_appfinder_model_collect_thread, model);
 }
 
 
@@ -305,6 +311,10 @@ xfce_appfinder_model_get_property (GObject      *object,
       g_value_set_uint (value, model->icon_size);
       break;
 
+    case PROP_SCALE_FACTOR:
+      g_value_set_uint (value, model->scale_factor);
+      break;
+
     case PROP_SORT_BY_FRECENCY:
       g_value_set_boolean (value, model->sort_by_frecency);
       break;
@@ -325,6 +335,7 @@ xfce_appfinder_model_set_property (GObject      *object,
 {
   XfceAppfinderModel    *model = XFCE_APPFINDER_MODEL (object);
   XfceAppfinderIconSize  icon_size;
+  gint                   scale_factor;
 
   switch (prop_id)
     {
@@ -337,6 +348,12 @@ xfce_appfinder_model_set_property (GObject      *object,
           /* trigger a theme change to reload icons */
           xfce_appfinder_model_icon_theme_changed (model);
         }
+      break;
+
+    case PROP_SCALE_FACTOR:
+      scale_factor = g_value_get_uint (value);
+      if (model->scale_factor != scale_factor)
+        model->scale_factor = scale_factor;
       break;
 
     case PROP_SORT_BY_FRECENCY:
@@ -396,8 +413,6 @@ xfce_appfinder_model_finalize (GObject *object)
   g_hash_table_destroy (model->bookmarks_hash);
   g_hash_table_destroy (model->frecencies_hash);
 
-  g_object_unref (G_OBJECT (model->command_icon_large));
-  g_object_unref (G_OBJECT (model->command_icon));
   g_object_unref (G_OBJECT (model->command_category));
 
   APPFINDER_DEBUG ("model finalized");
@@ -438,6 +453,9 @@ xfce_appfinder_model_get_column_type (GtkTreeModel *tree_model,
 
     case XFCE_APPFINDER_MODEL_COLUMN_ICON:
     case XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE:
+      return CAIRO_GOBJECT_TYPE_SURFACE;
+
+    case XFCE_APPFINDER_MODEL_COLUMN_PIXBUF:
       return GDK_TYPE_PIXBUF;
 
     case XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK:
@@ -511,6 +529,7 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
   gchar              **cat_arr;
   gchar               *cat_str;
   guint                i;
+  GdkPixbuf           *pixbuf;
 
   appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
   appfinder_return_if_fail (iter->stamp == model->stamp);
@@ -563,32 +582,48 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
       break;
 
     case XFCE_APPFINDER_MODEL_COLUMN_ICON:
-      if (item->icon == NULL
-          && item->item != NULL)
+      if (item->icon == NULL && item->item != NULL)
         {
           name = garcon_menu_item_get_icon_name (item->item);
-          item->icon = xfce_appfinder_model_load_pixbuf (name, model->icon_size);
+          item->icon = xfce_appfinder_model_load_pixbuf (name, model->icon_size, model->scale_factor);
+        }
+
+      if (item->surface == NULL && item->icon != NULL)
+        item->surface = gdk_cairo_surface_create_from_pixbuf (item->icon, model->scale_factor, NULL);
+
+      g_value_init (value, CAIRO_GOBJECT_TYPE_SURFACE);
+      g_value_set_boxed (value, item->surface);
+      break;
+
+    case XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE:
+      if (item->surface_large == NULL && item->item != NULL)
+        {
+          name = garcon_menu_item_get_icon_name (item->item);
+          pixbuf = xfce_appfinder_model_load_pixbuf (name, XFCE_APPFINDER_ICON_SIZE_48, model->scale_factor);
+          if (pixbuf != NULL)
+            {
+              item->surface_large = gdk_cairo_surface_create_from_pixbuf (pixbuf, model->scale_factor, NULL);
+              g_object_unref (G_OBJECT (pixbuf));
+            }
+        }
+
+      g_value_init (value, CAIRO_GOBJECT_TYPE_SURFACE);
+      g_value_set_boxed (value, item->surface_large);
+      break;
+
+    case XFCE_APPFINDER_MODEL_COLUMN_PIXBUF:
+      if (item->icon == NULL && item->item != NULL)
+        {
+          name = garcon_menu_item_get_icon_name (item->item);
+          item->icon = xfce_appfinder_model_load_pixbuf (name, model->icon_size, model->scale_factor);
         }
 
       g_value_init (value, GDK_TYPE_PIXBUF);
       g_value_set_object (value, item->icon);
       break;
 
-    case XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE:
-      if (item->icon_large == NULL
-          && item->item != NULL)
-        {
-          name = garcon_menu_item_get_icon_name (item->item);
-          item->icon_large = xfce_appfinder_model_load_pixbuf (name, XFCE_APPFINDER_ICON_SIZE_48);
-        }
-
-      g_value_init (value, GDK_TYPE_PIXBUF);
-      g_value_set_object (value, item->icon_large);
-      break;
-
     case XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP:
-      if (item->item != NULL
-          && item->tooltip == NULL)
+      if (item->item != NULL && item->tooltip == NULL)
         {
           file = garcon_menu_item_get_file (item->item);
           parse_name = g_file_get_parse_name (file);
@@ -1063,8 +1098,10 @@ xfce_appfinder_model_item_free (gpointer            data,
     g_hash_table_remove (model->items_hash, item->command);
   if (item->icon != NULL)
     g_object_unref (G_OBJECT (item->icon));
-  if (item->icon_large != NULL)
-    g_object_unref (G_OBJECT (item->icon_large));
+  if (item->surface != NULL)
+    cairo_surface_destroy (item->surface);
+  if (item->surface_large != NULL)
+    cairo_surface_destroy (item->surface_large);
   if (item->categories != NULL)
     g_ptr_array_unref (item->categories);
   g_free (item->abstract);
@@ -1157,8 +1194,6 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
        g_slice_free (ModelItem, item);
        return FALSE;
     }
-  item->icon = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon)));
-  item->icon_large = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon_large)));
   model->items = g_slist_insert_sorted (model->items, item, xfce_appfinder_model_item_compare);
 
   /* find the item and the position */
@@ -1546,8 +1581,6 @@ xfce_appfinder_model_collect_history (XfceAppfinderModel *model,
         {
           item = g_slice_new0 (ModelItem);
           item->command = g_strndup (contents, end - contents);
-          item->icon = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon)));
-          item->icon_large = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon_large)));
           model->collect_items = g_slist_prepend (model->collect_items, item);
         }
 
@@ -2314,7 +2347,8 @@ xfce_appfinder_model_update_frecency (XfceAppfinderModel *model,
 
 
 XfceAppfinderModel *
-xfce_appfinder_model_get (gboolean sort_by_frecency)
+xfce_appfinder_model_get (gboolean sort_by_frecency,
+                          gint     scale_factor)
 {
   static XfceAppfinderModel *model = NULL;
 
@@ -2326,7 +2360,14 @@ xfce_appfinder_model_get (gboolean sort_by_frecency)
     {
       model = g_object_new (XFCE_TYPE_APPFINDER_MODEL,
                             "sort-by-frecency", sort_by_frecency,
+                            "scale-factor", scale_factor,
                             NULL);
+
+      xfce_appfinder_model_icon_theme_changed (model);
+
+      /* only start loading data once model is fully initialized */
+      model->collect_thread = g_thread_new ("Collector", xfce_appfinder_model_collect_thread, model);
+
       g_object_add_weak_pointer (G_OBJECT (model), (gpointer) &model);
       appfinder_refcount_debug_add (G_OBJECT (model), "appfinder-model");
       APPFINDER_DEBUG ("allocate new model");
@@ -2561,7 +2602,8 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
 
 GdkPixbuf *
 xfce_appfinder_model_load_pixbuf (const gchar           *icon_name,
-                                  XfceAppfinderIconSize  icon_size)
+                                  XfceAppfinderIconSize  icon_size,
+                                  gint                   scale_factor)
 {
   GdkPixbuf    *pixbuf = NULL;
   GdkPixbuf    *scaled;
@@ -2581,7 +2623,9 @@ xfce_appfinder_model_load_pixbuf (const gchar           *icon_name,
     default: return NULL;
     }
 
-  APPFINDER_DEBUG ("load icon %s at %dpx", icon_name, size);
+  APPFINDER_DEBUG ("load icon %s at %dpx and scale %dx", icon_name, size, scale_factor);
+
+  size *= scale_factor;
 
   if (icon_name != NULL)
     {
@@ -2709,12 +2753,13 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
 
 
 
-GdkPixbuf *
+cairo_surface_t*
 xfce_appfinder_model_get_icon_for_command (XfceAppfinderModel *model,
                                            const gchar        *command)
 {
   ModelItem   *item;
   const gchar *icon_name;
+  GdkPixbuf   *pixbuf;
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), NULL);
 
@@ -2723,14 +2768,18 @@ xfce_appfinder_model_get_icon_for_command (XfceAppfinderModel *model,
       item = g_hash_table_lookup (model->items_hash, command);
       if (G_LIKELY (item != NULL))
         {
-          if (item->icon_large == NULL
-              && item->item != NULL)
+          if (item->surface_large == NULL && item->item != NULL)
             {
               icon_name = garcon_menu_item_get_icon_name (item->item);
-              item->icon_large = xfce_appfinder_model_load_pixbuf (icon_name, XFCE_APPFINDER_ICON_SIZE_48);
+              pixbuf = xfce_appfinder_model_load_pixbuf (icon_name, XFCE_APPFINDER_ICON_SIZE_48, model->scale_factor);
+              if (pixbuf != NULL)
+              {
+                item->surface_large = gdk_cairo_surface_create_from_pixbuf (pixbuf, model->scale_factor, NULL);
+                g_object_unref (G_OBJECT (pixbuf));
+              }
             }
 
-          return GDK_PIXBUF (g_object_ref (G_OBJECT (item->icon_large)));
+          return cairo_surface_reference (item->surface_large);
         }
     }
 
@@ -2754,15 +2803,6 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
   APPFINDER_DEBUG ("icon theme or size changed, updating %d items",
                    g_slist_length (model->items));
 
-  /* reload the command icons */
-  if (model->command_icon != NULL)
-    g_object_unref (G_OBJECT (model->command_icon));
-  model->command_icon = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_EXECUTE, model->icon_size);
-
-  if (model->command_icon_large != NULL)
-    g_object_unref (G_OBJECT (model->command_icon_large));
-  model->command_icon_large = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_EXECUTE, XFCE_APPFINDER_ICON_SIZE_48);
-
   /* update the model items */
   for (li = model->items, idx = 0; li != NULL; li = li->next, idx++)
     {
@@ -2775,10 +2815,16 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
           item->icon = NULL;
           item_changed = TRUE;
         }
-      if (item->icon_large != NULL)
+      if (item->surface != NULL)
         {
-          g_object_unref (G_OBJECT (item->icon_large));
-          item->icon_large = NULL;
+          cairo_surface_destroy (item->surface);
+          item->surface = NULL;
+          item_changed = TRUE;
+        }
+      if (item->surface_large != NULL)
+        {
+          cairo_surface_destroy (item->surface_large);
+          item->surface_large = NULL;
           item_changed = TRUE;
         }
       if (item->abstract != NULL)
@@ -2786,12 +2832,6 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
           g_free (item->abstract);
           item->abstract = NULL;
           item_changed = TRUE;
-        }
-
-      if (item->item == NULL)
-        {
-          item->icon = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon)));
-          item->icon_large = GDK_PIXBUF (g_object_ref (G_OBJECT (model->command_icon_large)));
         }
 
       if (item_changed)
