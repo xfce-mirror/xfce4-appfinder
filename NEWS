@@ -1,3 +1,13 @@
+4.17.2 (2022-11-29)
+======
+- Update default settings (!29)
+- Fix icon blurriness UI scale > 1 (#67)
+- Migration for history cache file (!28)
+- Do not clamp window height in collapsed mode (!27)
+- Update copyright year
+- Translation Updates:
+  Croatian
+
 4.17.1 (2022-10-29)
 ======
 - build: Fix intltool lock file problem during make distcheck
