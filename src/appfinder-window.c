@@ -222,6 +222,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
 
+  force_execute = TRUE;
   window->channel = xfconf_channel_get ("xfce4-appfinder");
   window->last_window_height = xfconf_channel_get_int (window->channel, "/last/window-height", DEFAULT_WINDOW_HEIGHT);
 
@@ -1416,9 +1417,16 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
       return TRUE;
     }
 
+  if (force_execute == TRUE && (event->keyval == GDK_KEY_Return || event->keyval == GDK_KEY_KP_Enter))
+    {
+      xfce_appfinder_window_execute (window, TRUE);
+      return FALSE;
+    }
+
   if (event->keyval == GDK_KEY_Up ||
       event->keyval == GDK_KEY_Down)
     {
+      force_execute = FALSE;
       expand = (event->keyval == GDK_KEY_Down);
       is_expanded = gtk_widget_get_visible (window->paned);
 
@@ -1446,6 +1454,10 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
           gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->view), path, NULL, FALSE);
           gtk_tree_path_free (path);
         }
+    }
+  else
+    {
+      force_execute = TRUE;
     }
 
   return FALSE;
