@@ -9,7 +9,7 @@
 # Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006,2008
 # Anthony Ivanoff <a-i@bk.ru>, 2005
 # Artem Zolochevskiy <artem.zolochevskiy@gmail.com>, 2011
-# Alexander Filёv, 2018,2021
+# AlexanderFilev, 2018,2021
 # Denis Koryavov <dkoryavov@yandex.ru>, 2009-2010
 # Dmitrij Smirnov <other@igus.lv>, 2010
 # Igor <f2404@yandex.ru>, 2017-2020
@@ -19,13 +19,14 @@
 # Sergey Alyoshin <alyoshin.s@gmail.com>, 2014-2015
 # Sergey Fedoseev <fedoseev.sergey@gmail.com>, 2006
 # Sergey Shlyapugin <shlyapugin@gmail.com>, 2013
+# Артём Котлубай <artemkotlubai@yandex.ru>, 2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-30 00:47+0100\n"
-"PO-Revision-Date: 2022-03-12 01:19+0000\n"
-"Last-Translator: Andrei Stepanov\n"
+"POT-Creation-Date: 2022-11-28 14:59+0100\n"
+"PO-Revision-Date: 2013-07-02 20:40+0000\n"
+"Last-Translator: Артём Котлубай <artemkotlubai@yandex.ru>, 2022\n"
 "Language-Team: Russian (http://www.transifex.com/xfce/xfce4-appfinder/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,35 +43,35 @@ msgstr "Принудительное завершение"
 msgid "All Applications"
 msgstr "Все приложения"
 
-#: ../src/appfinder-model.c:613
+#: ../src/appfinder-model.c:615
 msgid "Name"
 msgstr "Название"
 
-#: ../src/appfinder-model.c:614
+#: ../src/appfinder-model.c:616
 msgid "Comment"
 msgstr "Комментарий"
 
-#: ../src/appfinder-model.c:615
+#: ../src/appfinder-model.c:617
 msgid "Command"
 msgstr "Команда"
 
-#: ../src/appfinder-model.c:616
+#: ../src/appfinder-model.c:618
 msgid "Categories"
 msgstr "Категории"
 
-#: ../src/appfinder-model.c:617
+#: ../src/appfinder-model.c:619
 msgid "Filename"
 msgstr "Имя файла"
 
-#: ../src/appfinder-model.c:2451
+#: ../src/appfinder-model.c:2501
 msgid "Application has no command"
 msgstr "Приложению не присвоена команда"
 
-#: ../src/appfinder-model.c:2884
+#: ../src/appfinder-model.c:2934
 msgid "Commands History"
 msgstr "Журнал команд"
 
-#: ../src/appfinder-model.c:2908
+#: ../src/appfinder-model.c:2958
 msgid "Bookmarks"
 msgstr "Закладки"
 
@@ -289,7 +290,7 @@ msgstr "Показывать недавние элементы первыми"
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
-msgstr "Сортировать элементы так, что те из них, которые использовались недавно, оказываются наверху."
+msgstr "Упорядочивать элементы так, чтобы те из них, которые использовались недавно, оказывались наверху."
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Behaviour"
@@ -345,7 +346,7 @@ msgstr "О_бщие"
 
 #: ../src/appfinder-preferences.glade.h:35
 msgid "Custom actions are only available in collapsed mode."
-msgstr "Пользовательские действия доступны только в свернутом режиме."
+msgstr "Пользовательские действия доступны только в свёрнутом режиме."
 
 #: ../src/appfinder-preferences.glade.h:36
 msgid "Pattern"
@@ -393,7 +394,7 @@ msgstr "Поиск и запуск установленных в вашей си
 
 #: ../data/xfce4-appfinder.desktop.in.h:3
 msgid "program;applications;bookmarks;"
-msgstr "программа;приложения;закладки;"
+msgstr "приложение;приложения;закладки;"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
@@ -412,7 +413,7 @@ msgstr "выполнить;команда;приложение;программ�
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
-msgstr "Приложение для быстрого запуска программ и команд"
+msgstr "Приложение для быстрого запуска приложений и команд"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
