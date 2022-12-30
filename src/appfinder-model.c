@@ -2183,6 +2183,11 @@ xfce_appfinder_model_unescape_entry_value (const gchar *value)
             case '\\':
               g_string_append_c (string, '\\');
               break;
+
+            default:
+              g_string_append_c (string, *(p - 1));
+              g_string_append_c (string, *p);
+              break;
             }
         }
       else
@@ -2552,11 +2557,12 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
                                                    garcon_menu_item_requires_terminal (item));
   g_free (uri);
 
-#if LIBXFCE4UTIL_CHECK_VERSION (4, 18, 0)
-  escaped_command = xfce_unescape_desktop_entry_value (command);
-#else
+/* DO NOT MERGE!!! */
+/* #if LIBXFCE4UTIL_CHECK_VERSION (4, 18, 0)
+   escaped_command = xfce_unescape_desktop_entry_value (command);
+ #else */
   escaped_command = xfce_appfinder_model_unescape_entry_value (command);
-#endif
+/* #endif */
   g_free (command);
   command = escaped_command;
   escaped_command = NULL;
