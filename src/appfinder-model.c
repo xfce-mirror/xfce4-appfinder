@@ -111,7 +111,6 @@ static gint               xfce_appfinder_model_item_compare_frecency  (gconstpoi
 static void               xfce_appfinder_model_frecency_collect       (XfceAppfinderModel       *model,
                                                                        GMappedFile              *mmap);
 static void               xfce_appfinder_model_frecency_free          (gpointer                  data);
-static gchar*             xfce_appfinder_model_unescape_entry_value   (const gchar              *value);
 static void               xfce_appfinder_model_migrate_history_file   (void);
 
 struct _XfceAppfinderModelClass
@@ -2158,44 +2157,6 @@ xfce_appfinder_model_frecency_free (gpointer data)
 
 
 
-/* Remove this function when libxfce4util minimal required version is bumped to 4.18 */
-static gchar*
-xfce_appfinder_model_unescape_entry_value (const gchar *value)
-{
-  const gchar *p;
-  GString     *string;
-
-  if (G_UNLIKELY (value == NULL))
-    return NULL;
-
-  string = g_string_sized_new (strlen (value));
-
-  for (p = value; *p != '\0'; ++p)
-    {
-      if (G_UNLIKELY (p[0] == '\\' && p[1] != '\0'))
-        {
-          switch (*++p)
-            {
-            case 's':
-              g_string_append_c (string, ' ');
-              break;
-
-            case '\\':
-              g_string_append_c (string, '\\');
-              break;
-            }
-        }
-      else
-        {
-          g_string_append_c (string, *p);
-        }
-    }
-
-  return g_string_free (string, FALSE);
-}
-
-
-
 /* Migration for history cache file, can be removed during the 4.20 cycle */
 static void
 xfce_appfinder_model_migrate_history_file (void)
@@ -2552,16 +2513,11 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
                                                    garcon_menu_item_requires_terminal (item));
   g_free (uri);
 
-#if LIBXFCE4UTIL_CHECK_VERSION (4, 18, 0)
   escaped_command = xfce_unescape_desktop_entry_value (command);
-#else
-  escaped_command = xfce_appfinder_model_unescape_entry_value (command);
-#endif
   g_free (command);
   command = escaped_command;
   escaped_command = NULL;
 
-#if GARCON_CHECK_VERSION (4, 17, 0)
   if (garcon_menu_item_get_prefers_non_default_gpu (item))
     {
       envp = g_get_environ ();
@@ -2569,26 +2525,15 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
       envp = g_environ_setenv (envp, "__GLX_VENDOR_LIBRARY_NAME", "nvidia", TRUE);
       envp = g_environ_setenv (envp, "__VK_LAYER_NV_optimus", "NVIDIA_only", TRUE);
     }
-#endif
 
   if (g_shell_parse_argv (command, NULL, &argv, error))
     {
-#if LIBXFCE4UI_CHECK_VERSION (4, 15, 6)
       succeed = xfce_spawn (screen,
                             garcon_menu_item_get_path (item),
                             argv, envp, G_SPAWN_SEARCH_PATH,
                             garcon_menu_item_supports_startup_notification (item),
                             gtk_get_current_event_time (),
                             icon, TRUE, error);
-#else
-      succeed = xfce_spawn_on_screen (screen,
-                                      garcon_menu_item_get_path (item),
-                                      argv, envp, G_SPAWN_SEARCH_PATH,
-                                      garcon_menu_item_supports_startup_notification (item),
-                                      gtk_get_current_event_time (),
-                                      icon, error);
-#endif
-
       g_strfreev (argv);
     }
 

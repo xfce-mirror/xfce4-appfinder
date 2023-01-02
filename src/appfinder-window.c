@@ -1859,17 +1859,10 @@ xfce_appfinder_window_execute_command (const gchar          *text,
 
       if (G_LIKELY (g_shell_parse_argv (expanded, NULL, &argv, error)))
         {
-#if LIBXFCE4UI_CHECK_VERSION (4, 15, 6)
           succeed = xfce_spawn (screen, NULL, argv, envp,
                                 G_SPAWN_SEARCH_PATH, FALSE,
                                 gtk_get_current_event_time (), NULL,
                                 TRUE, error);
-#else
-          succeed = xfce_spawn_on_screen (screen, NULL, argv, envp,
-                                          G_SPAWN_SEARCH_PATH, FALSE,
-                                          gtk_get_current_event_time (), NULL,
-                                          error);
-#endif
         }
 
       g_strfreev (argv);
