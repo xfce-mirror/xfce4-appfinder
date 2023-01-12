@@ -116,7 +116,6 @@ static gint       xfce_appfinder_window_sort_items                    (GtkTreeMo
                                                                        GtkTreeIter                 *a,
                                                                        GtkTreeIter                 *b,
                                                                        gpointer                     data);
-static gboolean   xfce_appfinder_should_sort_icon_view                (void);
 static void       xfce_appfinder_window_update_frecency               (XfceAppfinderWindow         *window,
                                                                        GtkTreeModel                *model,
                                                                        const gchar                 *uri);
@@ -727,10 +726,7 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
 
   if (icon_view)
     {
-      window->view = view = gtk_icon_view_new_with_model (
-        xfce_appfinder_should_sort_icon_view () ?
-          window->sort_model :
-          window->filter_model);
+      window->view = view = gtk_icon_view_new_with_model (window->sort_model);
 
       gtk_icon_view_set_selection_mode (GTK_ICON_VIEW (view), GTK_SELECTION_SINGLE);
       gtk_icon_view_set_pixbuf_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_PIXBUF);
@@ -1916,7 +1912,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
           child_model = model;
           gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_URI, &uri, -1);
 
-          if (GTK_IS_TREE_MODEL_SORT (model) || xfce_appfinder_should_sort_icon_view ())
+          if (GTK_IS_TREE_MODEL_SORT (model))
             {
               gtk_tree_model_sort_convert_iter_to_child_iter (GTK_TREE_MODEL_SORT (model), &child_iter, &iter);
               iter = child_iter;
@@ -2122,20 +2118,6 @@ xfce_appfinder_window_sort_items_frecency  (GtkTreeModel *model,
 
   /* If they have the same frecency, fallback to the alphabetical order */
   return xfce_appfinder_window_sort_items (model, a, b, data);
-}
-
-
-
-/*
- * Checks for gtk => 3.22.27 during runtime.
- * This is necessary because sort model for icon view did not work as expected.
- */
-static gboolean
-xfce_appfinder_should_sort_icon_view (void)
-{
-  return gtk_get_major_version () >= 3  &&
-         gtk_get_minor_version () >= 22 &&
-         gtk_get_micro_version () >= 27;
 }
 
 
