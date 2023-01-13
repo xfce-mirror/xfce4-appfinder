@@ -4,10 +4,13 @@
 # 
 # Translators:
 # Ápo. <apostolos.papadimitriu@gmail.com>, 2016
+# Ápo. <apostolos.papadimitriu@gmail.com>, 2016
+# ebal <ebalaskas@ebalaskas.gr>, 2008
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2015
 # Efstathios Iosifidis <iosifidis@opensuse.org>, 2012
 # ebal <ebalaskas@ebalaskas.gr>, 2008
 # Ioannis LM, 2022
+# Ioannis LM, 2022-2023
 # Panagiotis Mantzios <pmantzios@hotmail.com>, 2018
 # Stathis Kamperis <ekamperi@auth.gr>, 2006
 # Stavros Giannouris <stavrosg@serverhive.com>, 2005
@@ -16,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-30 00:47+0100\n"
+"POT-Creation-Date: 2022-11-28 14:59+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Ioannis LM, 2022\n"
+"Last-Translator: Ioannis LM, 2022-2023\n"
 "Language-Team: Greek (http://www.transifex.com/xfce/xfce4-appfinder/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,35 +38,35 @@ msgstr "Βίαιη έξοδος"
 msgid "All Applications"
 msgstr "Όλες οι εφαρμογές"
 
-#: ../src/appfinder-model.c:613
+#: ../src/appfinder-model.c:615
 msgid "Name"
 msgstr "Όνομα"
 
-#: ../src/appfinder-model.c:614
+#: ../src/appfinder-model.c:616
 msgid "Comment"
 msgstr "Σχόλιο"
 
-#: ../src/appfinder-model.c:615
+#: ../src/appfinder-model.c:617
 msgid "Command"
 msgstr "Εντολή"
 
-#: ../src/appfinder-model.c:616
+#: ../src/appfinder-model.c:618
 msgid "Categories"
 msgstr "Κατηγορίες"
 
-#: ../src/appfinder-model.c:617
+#: ../src/appfinder-model.c:619
 msgid "Filename"
 msgstr "Όνομα αρχείου"
 
-#: ../src/appfinder-model.c:2451
+#: ../src/appfinder-model.c:2501
 msgid "Application has no command"
 msgstr "Η εφαρμογή δεν έχει εντολή"
 
-#: ../src/appfinder-model.c:2884
+#: ../src/appfinder-model.c:2934
 msgid "Commands History"
 msgstr "Ιστορικό εντολών"
 
-#: ../src/appfinder-model.c:2908
+#: ../src/appfinder-model.c:2958
 msgid "Bookmarks"
 msgstr "Σελιδοδείκτες"
 
@@ -386,7 +389,7 @@ msgstr "Εύρεση και εκτέλεση εγκατεστημένων εφα
 
 #: ../data/xfce4-appfinder.desktop.in.h:3
 msgid "program;applications;bookmarks;"
-msgstr ""
+msgstr "πρόγραμμα;εφαρμογές;σελιδοδείκτες;"
 
 #: ../data/xfce4-run.desktop.in.h:1
 msgid "Run Program..."
@@ -413,4 +416,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr "Ο εντοπισμός εφαρμογών είναι ένα εργαλείο για την εύρεση και εκκίνηση εγκατεστημένων εφαρμογών στο σύστημά σας καθώς και την γρήγορη εκτέλεση εντολών. Μπορεί επίσης να χρησιμοποιηθεί για να προσθέσετε γρήγορες εκκινήσεις προγραμμάτων στο ταμπλό του Xfce, σύροντας ένα στοιχείο και αποθέτοντας το στο ταμπλό ."
+msgstr "Ο εντοπισμός εφαρμογών είναι ένα εργαλείο για την εύρεση και εκκίνηση εγκατεστημένων εφαρμογών στο σύστημά σας καθώς και την γρήγορη εκτέλεση εντολών. Μπορεί επίσης να χρησιμοποιηθεί για να προσθέσετε γρήγορα εκκινητές προγραμμάτων στο ταμπλό του Xfce, σύροντας ένα στοιχείο και αποθέτοντας το στο ταμπλό ."
