@@ -1925,7 +1925,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
           xfce_appfinder_window_update_frecency (window, model, uri);
           if (!result && regular_command)
             {
-              gtk_tree_model_get (model, &child_iter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
+              gtk_tree_model_get (GTK_TREE_MODEL (window->model), &child_iter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
               result = xfce_appfinder_window_execute_command (cmd, screen, window, FALSE, NULL, &error);
               g_free (cmd);
             }
