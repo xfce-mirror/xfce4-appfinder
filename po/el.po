@@ -21,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-28 14:59+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Πέτρος Σαμαράς <psamaras1@gmail.com>, 2017,2019\n"
+"Last-Translator: Ioannis LM, 2022-2023\n"
 "Language-Team: Greek (http://www.transifex.com/xfce/xfce4-appfinder/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -246,19 +246,19 @@ msgstr "_Βοήθεια"
 
 #: ../src/appfinder-preferences.glade.h:13
 msgid "Remember last _selected category"
-msgstr "Απομνημόνευση τελευταίας _επιλεγμένης κατηγορίας"
+msgstr "_Απομνημόνευση τελευταίας επιλεγμένης κατηγορίας"
 
 #: ../src/appfinder-preferences.glade.h:14
 msgid "Always c_enter the window"
-msgstr "Πάντα κ_εντραρισμένο παράθυρο"
+msgstr "_Πάντα το παράθυρο στο κέντρο"
 
 #: ../src/appfinder-preferences.glade.h:15
 msgid "Center the window on startup."
-msgstr "Κεντράρισμα του παραθύρου κατά την έναρξη."
+msgstr "Στην έναρξη το παράθυρο να βρίσκεται πάντα στο κέντρο."
 
 #: ../src/appfinder-preferences.glade.h:16
 msgid "Keep running _instance in the background"
-msgstr "Διατήρηση εκτέλεσης της _διεργασίας στο παρασκήνιο"
+msgstr "_Διατήρηση εκτέλεσης της διεργασίας στο παρασκήνιο"
 
 #: ../src/appfinder-preferences.glade.h:17
 msgid ""
@@ -285,7 +285,7 @@ msgstr "Ταξινόμηση πρώτα των στοιχείων που χρη�
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
-msgstr "Ταξινόμηση των στοιχείων έτσι ώστε, τα στοιχεία που χρησιμοποιήθηκαν πιο πρόσφατα να βρίσκονται πάντα στην κορυφή."
+msgstr "Ταξινόμηση αντικειμένων έτσι ώστε, τα στοιχεία που χρησιμοποιήθηκαν πιο πρόσφατα να βρίσκονται πάντα στην κορυφή."
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Behaviour"
@@ -293,7 +293,7 @@ msgstr "Συμπεριφορά"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "_View items as icons"
-msgstr "_Προβολή αντικειμένων ως εικονίδια"
+msgstr "Προβολή α_ντικειμένων ως εικονίδια"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Text besi_de icons"
@@ -301,7 +301,7 @@ msgstr "Κείμενο δί_πλα στα εικονίδια"
 
 #: ../src/appfinder-preferences.glade.h:25
 msgid "Ite_m icon size:"
-msgstr "Μέγεθος εικονιδίου αντι_κειμένου:"
+msgstr "Μέγεθος εικονιδίου αν_τικειμένου:"
 
 #: ../src/appfinder-preferences.glade.h:26
 msgid "Hide category pane"
@@ -329,7 +329,7 @@ msgstr "Εμφάνιση"
 
 #: ../src/appfinder-preferences.glade.h:32
 msgid "C_lear Custom Command History"
-msgstr "Ε_κκαθάριση προσαρμοσμένου ιστορικού εντολών"
+msgstr "Εκκα_θάριση προσαρμοσμένου ιστορικού εντολών"
 
 #: ../src/appfinder-preferences.glade.h:33
 msgid "History"
@@ -353,7 +353,7 @@ msgstr "Προσθήκη νέας προσαρμοσμένης ενέργεια�
 
 #: ../src/appfinder-preferences.glade.h:38
 msgid "Remove the currently selected action."
-msgstr "Αφαίρεση της τρέχουσας επιλεγμένης ενέργειας."
+msgstr "Αφαίρεση της επιλεγμένης ενέργειας."
 
 #: ../src/appfinder-preferences.glade.h:40
 #, no-c-format
@@ -365,11 +365,11 @@ msgstr "Εάν ο τύπος είναι ορισμένος στο πρόθεμα
 
 #: ../src/appfinder-preferences.glade.h:41
 msgid "Co_mmand:"
-msgstr "Εν_τολή:"
+msgstr "Ε_ντολή:"
 
 #: ../src/appfinder-preferences.glade.h:42
 msgid "Patte_rn:"
-msgstr "Μοτί_βο:"
+msgstr "Μ_οτίβο:"
 
 #: ../src/appfinder-preferences.glade.h:43
 msgid "_Type:"
@@ -381,7 +381,7 @@ msgstr "_Αποθήκευση συσχέτισης στο ιστορικό εν�
 
 #: ../src/appfinder-preferences.glade.h:45
 msgid "Custom _Actions"
-msgstr "Προσαρμοσμένες _ενέργειες"
+msgstr "_Προσαρμοσμένες ενέργειες"
 
 #: ../data/xfce4-appfinder.desktop.in.h:2
 msgid "Find and launch applications installed on your system"
@@ -408,7 +408,7 @@ msgstr "εκτέλεση;εντολή;εφαρμογή;πρόγραμμα;εύρ
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
-msgstr "Εφαρμογή για γρήγορη εκτέλεση εφαρμογών και εντολών"
+msgstr "Εφαρμογή για τη γρήγορη εκτέλεση εφαρμογών και εντολών"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
 msgid ""
@@ -416,4 +416,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr "Ο εντοπισμός εφαρμογών είναι ένα εργαλείο για την εύρεση και εκκίνηση εγκατεστημένων εφαρμογών στο σύστημά σας καθώς και την γρήγορη εκτέλεση εντολών. Μπορεί επίσης να χρησιμοποιηθεί για να προσθέσετε γρήγορα εκκινητές προγραμμάτων στο ταμπλό του Xfce, σύροντας ένα στοιχείο και αποθέτοντας το στο ταμπλό ."
+msgstr "Η εύρεση εφαρμογών είναι ένα εργαλείο για την εύρεση και εκκίνηση των εγκατεστημένων εφαρμογών στο σύστημά σας καθώς και την γρήγορη εκτέλεση εντολών. Μπορεί επίσης να χρησιμοποιηθεί για τη προσθήκη εκκινητών στο ταμπλό του Xfce, σύροντας ένα αντικείμενο και αποθέτοντας το στο ταμπλό ."
