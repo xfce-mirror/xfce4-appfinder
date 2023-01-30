@@ -592,7 +592,7 @@ xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
 
     case XFCE_APPFINDER_ICON_SIZE_SMALL:
       padding = 4;
-      width = 36 * 2.5;
+      width = 32 * 2.5;
       break;
 
     case XFCE_APPFINDER_ICON_SIZE_NORMAL:
