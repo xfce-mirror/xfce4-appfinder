@@ -2560,7 +2560,7 @@ xfce_appfinder_model_load_pixbuf (const gchar           *icon_name,
     {
     case XFCE_APPFINDER_ICON_SIZE_SMALLEST: size = 16;  break;
     case XFCE_APPFINDER_ICON_SIZE_SMALLER:  size = 24;  break;
-    case XFCE_APPFINDER_ICON_SIZE_SMALL:    size = 36;  break;
+    case XFCE_APPFINDER_ICON_SIZE_SMALL:    size = 32;  break;
     case XFCE_APPFINDER_ICON_SIZE_NORMAL:   size = 48;  break;
     case XFCE_APPFINDER_ICON_SIZE_LARGE:    size = 64;  break;
     case XFCE_APPFINDER_ICON_SIZE_LARGER:   size = 96;  break;
