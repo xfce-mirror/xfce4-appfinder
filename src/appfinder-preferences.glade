@@ -180,6 +180,7 @@
                                 <property name="receives_default">False</property>
                                 <property name="tooltip_text" translatable="yes">Center the window on startup.</property>
                                 <property name="use_underline">True</property>
+                                <property name="active">True</property>
                                 <property name="draw_indicator">True</property>
                               </object>
                               <packing>
@@ -338,7 +339,7 @@
                                 <property name="receives_default">False</property>
                                 <property name="tooltip_text" translatable="yes">Hide category panel and show all applications.</property>
                                 <property name="use_underline">True</property>
-                                <property name="active">False</property>
+                                <property name="active">True</property>
                                 <property name="draw_indicator">True</property>
                               </object>
                               <packing>
