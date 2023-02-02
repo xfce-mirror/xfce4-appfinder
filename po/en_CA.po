@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Steve Harris <steve@jbs.ca>, 2020
+# Steve Harris <steve@jbs.ca>, 2023
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-30 00:47+0100\n"
-"PO-Revision-Date: 2021-11-29 23:47+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"POT-Creation-Date: 2022-11-28 14:59+0100\n"
+"PO-Revision-Date: 2013-07-02 20:40+0000\n"
+"Last-Translator: Steve Harris <steve@jbs.ca>, 2023\n"
 "Language-Team: English (Canada) (http://www.transifex.com/xfce/xfce4-appfinder/language/en_CA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,35 +28,35 @@ msgstr "Forced to quit"
 msgid "All Applications"
 msgstr "All Applications"
 
-#: ../src/appfinder-model.c:613
+#: ../src/appfinder-model.c:615
 msgid "Name"
 msgstr "Name"
 
-#: ../src/appfinder-model.c:614
+#: ../src/appfinder-model.c:616
 msgid "Comment"
 msgstr "Comment"
 
-#: ../src/appfinder-model.c:615
+#: ../src/appfinder-model.c:617
 msgid "Command"
 msgstr "Command"
 
-#: ../src/appfinder-model.c:616
+#: ../src/appfinder-model.c:618
 msgid "Categories"
 msgstr "Categories"
 
-#: ../src/appfinder-model.c:617
+#: ../src/appfinder-model.c:619
 msgid "Filename"
 msgstr "Filename"
 
-#: ../src/appfinder-model.c:2451
+#: ../src/appfinder-model.c:2501
 msgid "Application has no command"
 msgstr "Application has no command"
 
-#: ../src/appfinder-model.c:2884
+#: ../src/appfinder-model.c:2934
 msgid "Commands History"
 msgstr "Commands History"
 
-#: ../src/appfinder-model.c:2908
+#: ../src/appfinder-model.c:2958
 msgid "Bookmarks"
 msgstr "Bookmarks"
 
@@ -306,11 +307,11 @@ msgstr "Categ_ory icon size:"
 
 #: ../src/appfinder-preferences.glade.h:29
 msgid "Hide window decorations"
-msgstr ""
+msgstr "Hide window decorations"
 
 #: ../src/appfinder-preferences.glade.h:30
 msgid "Hide window decorations such as title bar and borders."
-msgstr ""
+msgstr "Hide window decorations such as title bar and borders."
 
 #: ../src/appfinder-preferences.glade.h:31
 msgid "Appearance"
@@ -330,7 +331,7 @@ msgstr "_General"
 
 #: ../src/appfinder-preferences.glade.h:35
 msgid "Custom actions are only available in collapsed mode."
-msgstr ""
+msgstr "Custom actions are only available in collapsed mode."
 
 #: ../src/appfinder-preferences.glade.h:36
 msgid "Pattern"
