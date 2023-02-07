@@ -5,24 +5,12 @@ dnl
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
-m4_define([xfce4_appfinder_version_major], [4])
-m4_define([xfce4_appfinder_version_minor], [18])
-m4_define([xfce4_appfinder_version_micro], [0])
-m4_define([xfce4_appfinder_version_nano], []) dnl leave this empty to have no nano version
-m4_define([xfce4_appfinder_version_build], [@REVISION@])
-m4_define([xfce4_appfinder_version_tag], [git])
-m4_define([xfce4_appfinder_version], [xfce4_appfinder_version_major().xfce4_appfinder_version_minor().xfce4_appfinder_version_micro()ifelse(xfce4_appfinder_version_nano(), [], [], [.xfce4_appfinder_version_nano()])ifelse(xfce4_appfinder_version_tag(), [git], [xfce4_appfinder_version_tag()-xfce4_appfinder_version_build()], [xfce4_appfinder_version_tag()])])
-
-dnl *******************************************
-dnl *** Debugging support for GIT  snapshots ***
-dnl *******************************************
-m4_define([appfinder_debug_default], [ifelse(xfce4_appfinder_version_tag(), [git], [yes], [minimum])])
-
+XDT_VERSION_INIT([4.18.0], [git])
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2008-2023 The Xfce development team. All rights reserved.])
-AC_INIT([xfce4-appfinder], [xfce4_appfinder_version], [https://gitlab.xfce.org/xfce/xfce4-appfinder/], [xfce4-appfinder])
+AC_INIT([xfce4-appfinder], [xdt_version], [https://gitlab.xfce.org/xfce/xfce4-appfinder/], [xfce4-appfinder])
 AC_PREREQ([2.60])
 AC_CONFIG_MACRO_DIRS([m4])
 
@@ -86,7 +74,7 @@ XDT_CHECK_PACKAGE([XFCONF], [libxfconf-0], [4.18.0])
 dnl ***********************************
 dnl *** Check for debugging support ***
 dnl ***********************************
-XDT_FEATURE_DEBUG([appfinder_debug_default])
+XDT_FEATURE_DEBUG([xdt_debug_default])
 
 dnl **************************************
 dnl *** Check for linker optimizations ***

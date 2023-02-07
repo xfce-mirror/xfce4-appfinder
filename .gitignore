@@ -16,7 +16,7 @@ config.log
 config.status
 config.sub
 configure
-configure.ac
+configure~
 data/org.xfce.xfce4-appfinder.appdata.xml
 data/xfce4-appfinder.desktop
 data/xfce4-run.desktop
