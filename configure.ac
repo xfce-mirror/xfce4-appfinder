@@ -22,19 +22,11 @@ AC_CONFIG_HEADERS([config.h])
 AM_MAINTAINER_MODE()
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
-dnl *******************************
-dnl *** Check for UNIX variants ***
-dnl *******************************
-AC_AIX()
-AC_ISC_POSIX()
-AC_MINIX()
-
 dnl ********************************
 dnl *** Check for basic programs ***
 dnl ********************************
 AC_PROG_CC()
 AM_PROG_CC_C_O()
-AC_PROG_LD()
 AC_PROG_INSTALL()
 
 dnl **************************
@@ -46,7 +38,6 @@ LT_INIT([disable-static])
 dnl **********************************
 dnl *** Check for standard headers ***
 dnl **********************************
-AC_HEADER_STDC()
 AC_CHECK_HEADERS([stdlib.h string.h errno.h unistd.h])
 AC_CHECK_FUNCS([daemon setsid])
 
@@ -94,7 +85,7 @@ AC_MSG_CHECKING([PLATFORM_LDFLAGS])
 AC_MSG_RESULT([$PLATFORM_LDFLAGS])
 AC_SUBST([PLATFORM_LDFLAGS])
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
 Makefile
 data/Makefile
 data/icons/Makefile
@@ -107,6 +98,7 @@ data/icons/scalable/Makefile
 src/Makefile
 po/Makefile.in
 ])
+AC_OUTPUT
 
 dnl ***************************
 dnl *** Print configuration ***
