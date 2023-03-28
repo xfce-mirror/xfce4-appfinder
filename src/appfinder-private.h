@@ -68,6 +68,7 @@ void    appfinder_refcount_debug_add (GObject     *object,
 
 
 void appfinder_window_new (const gchar *startup_id,
-                           gboolean     expanded);
+                           gboolean     expanded,
+                           gboolean     hidden);
 
 #endif /* !__XFCE_APPFINDER_PRIVATE_H__ */

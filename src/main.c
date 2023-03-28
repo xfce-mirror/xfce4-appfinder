@@ -48,6 +48,7 @@ static gboolean            opt_version = FALSE;
 static gboolean            opt_replace = FALSE;
 static gboolean            opt_quit = FALSE;
 static gboolean            opt_disable_server = FALSE;
+static gboolean            opt_daemon = FALSE;
 static GSList             *windows = NULL;
 static gboolean            service_owner = FALSE;
 static XfceAppfinderModel *model_cache = NULL;
@@ -66,6 +67,7 @@ static GOptionEntry option_entries[] =
   { "replace", 'r', 0, G_OPTION_ARG_NONE, &opt_replace, N_("Replace the existing service"), NULL },
   { "quit", 'q', 0, G_OPTION_ARG_NONE, &opt_quit, N_("Quit all instances"), NULL },
   { "disable-server", 0, 0, G_OPTION_ARG_NONE, &opt_disable_server, N_("Do not try to use or become a D-Bus service"), NULL },
+  { "daemon", 0, 0, G_OPTION_ARG_NONE, &opt_daemon, N_("Run in daemon mode"), NULL },
   { NULL }
 };
 
@@ -180,7 +182,8 @@ appfinder_window_destroyed (GtkWidget *window)
 
 void
 appfinder_window_new (const gchar *startup_id,
-                      gboolean     expanded)
+                      gboolean     expanded,
+                      gboolean     hidden)
 {
   GtkWidget *window;
   XfconfChannel *channel;
@@ -201,7 +204,11 @@ appfinder_window_new (const gchar *startup_id,
                          NULL);
   appfinder_refcount_debug_add (G_OBJECT (window), startup_id);
   xfce_appfinder_window_set_expanded (XFCE_APPFINDER_WINDOW (window), expanded);
-  gtk_widget_show (window);
+
+  if (!hidden)
+    {
+      gtk_widget_show (window);
+    }
 
   windows = g_slist_prepend (windows, window);
   g_signal_connect (G_OBJECT (window), "destroy",
@@ -263,16 +270,19 @@ main (gint argc, gchar **argv)
    * owner to spawn an instance */
   if (G_LIKELY (!opt_disable_server))
     {
-      /* try to open a new window */
-      if (appfinder_gdbus_open_window (!opt_collapsed, startup_id, &error))
+      if (!opt_daemon)
         {
-          /* looks ok */
-          return EXIT_SUCCESS;
-        }
-      else if (!g_error_matches (error, G_DBUS_ERROR, G_DBUS_ERROR_NAME_HAS_NO_OWNER))
-        {
-          g_warning ("Unknown DBus error: %s", error->message);
-        }
+          /* try to open a new window */
+          if (appfinder_gdbus_open_window (!opt_collapsed, startup_id, &error))
+            {
+              /* looks ok */
+              return EXIT_SUCCESS;
+            }
+          else if (!g_error_matches (error, G_DBUS_ERROR, G_DBUS_ERROR_NAME_HAS_NO_OWNER))
+            {
+              g_warning ("Unknown DBus error: %s", error->message);
+            }
+         }
 
       g_clear_error (&error);
 
@@ -305,12 +315,21 @@ main (gint argc, gchar **argv)
   appfinder_refcount_debug_init ();
 #endif
 
+
   /* create initial window */
-  appfinder_window_new (NULL, !opt_collapsed);
+  appfinder_window_new (NULL, !opt_collapsed, opt_daemon);
 
-  APPFINDER_DEBUG ("enter mainloop");
+  if ((!service_owner) &&
+      (opt_daemon))
+    {
+      APPFINDER_DEBUG ("skip mainloop (nothing to do)");
+    }
+  else
+    {
+      APPFINDER_DEBUG ("enter mainloop");
 
-  gtk_main ();
+      gtk_main ();
+    }
 
   /* release the model cache */
   if (model_cache != NULL)
