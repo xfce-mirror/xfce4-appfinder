@@ -71,7 +71,7 @@ appfinder_gdbus_method_call (GDBusConnection       *connection,
       /* get paramenters */
       g_variant_get (parameters, "(bs)", &expanded, &startup_id);
 
-      appfinder_window_new (startup_id, expanded);
+      appfinder_window_new (startup_id, expanded, FALSE);
 
       /* everything went fine */
       g_dbus_method_invocation_return_value (invocation, NULL);
