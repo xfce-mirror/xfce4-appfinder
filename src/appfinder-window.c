@@ -655,9 +655,13 @@ xfce_appfinder_window_view_button_press_event (GtkWidget           *widget,
   gint         x, y;
   GtkTreePath *path;
   gboolean     have_selection = FALSE;
+  gboolean     sc_execute;
 
-  if (event->button == 3
-      && event->type == GDK_BUTTON_PRESS)
+  sc_execute = xfconf_channel_get_bool (window->channel, "/single-click-execute", FALSE);
+
+  if ((event->type == GDK_BUTTON_PRESS)
+      && ((event->button == 3)
+          || (sc_execute && (event->button == 1))))
     {
       if (GTK_IS_TREE_VIEW (widget))
         {
@@ -684,7 +688,16 @@ xfce_appfinder_window_view_button_press_event (GtkWidget           *widget,
         }
 
       if (have_selection)
-        return xfce_appfinder_window_popup_menu (widget, window);
+        {
+          if (sc_execute
+              && (event->button == 1))
+            {
+              xfce_appfinder_window_execute (window, TRUE);
+              return TRUE;
+            }
+          else
+            return xfce_appfinder_window_popup_menu (widget, window);
+        }
     }
 
   return FALSE;
