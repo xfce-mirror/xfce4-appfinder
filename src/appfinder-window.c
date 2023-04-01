@@ -244,6 +244,9 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   if (xfconf_channel_get_bool (window->channel, "/hide-window-decorations", FALSE))
     gtk_window_set_decorated (GTK_WINDOW (window), FALSE);
 
+  if (xfconf_channel_get_bool (window->channel, "/generic-names", FALSE))
+    g_object_set (G_OBJECT (window->model), "generic-names", TRUE, NULL);
+
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (window), vbox);
   gtk_container_set_border_width (GTK_CONTAINER (vbox), 6);
@@ -1713,6 +1716,11 @@ xfce_appfinder_window_property_changed (XfconfChannel       *channel,
     {
       gboolean hide = g_value_get_boolean (value);
       gtk_window_set_decorated (GTK_WINDOW (window), !hide);
+    }
+  else if (g_strcmp0 (prop, "/generic-names") == 0)
+    {
+      gboolean generic_names = g_value_get_boolean (value);
+      g_object_set (G_OBJECT (window->model), "generic-names", generic_names, NULL);
     }
 }
 
