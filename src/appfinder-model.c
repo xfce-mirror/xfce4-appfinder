@@ -159,6 +159,8 @@ struct _XfceAppfinderModel
   XfceAppfinderIconSize  icon_size;
 
   gint                   scale_factor;
+
+  gboolean               generic_names;
 };
 
 typedef struct
@@ -206,7 +208,8 @@ enum
   PROP_0,
   PROP_ICON_SIZE,
   PROP_SCALE_FACTOR,
-  PROP_SORT_BY_FRECENCY
+  PROP_SORT_BY_FRECENCY,
+  PROP_GENERIC_NAMES
 };
 
 
@@ -250,6 +253,12 @@ xfce_appfinder_model_class_init (XfceAppfinderModelClass *klass)
                                                          FALSE,
                                                          G_PARAM_CONSTRUCT_ONLY | G_PARAM_READWRITE));
 
+  g_object_class_install_property (gobject_class,
+                                   PROP_GENERIC_NAMES,
+                                   g_param_spec_boolean ("generic-names", NULL, NULL,
+                                                         FALSE,
+                                                         G_PARAM_READWRITE | G_PARAM_READWRITE));
+
   model_signals[CATEGORIES_CHANGED] =
     g_signal_new (g_intern_static_string ("categories-changed"),
                   G_TYPE_FROM_CLASS (gobject_class),
@@ -272,6 +281,7 @@ xfce_appfinder_model_init (XfceAppfinderModel *model)
   model->icon_size = XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM;
   model->command_category = xfce_appfinder_model_get_command_category ();
   model->collect_cancelled = g_cancellable_new ();
+  model->generic_names = FALSE;
 
   model->menu = garcon_menu_new_applications ();
   appfinder_refcount_debug_add (G_OBJECT (model->menu), "main menu");
@@ -320,6 +330,10 @@ xfce_appfinder_model_get_property (GObject      *object,
       g_value_set_boolean (value, model->sort_by_frecency);
       break;
 
+    case PROP_GENERIC_NAMES:
+      g_value_set_boolean (value, model->generic_names);
+      break;
+
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
       break;
@@ -359,6 +373,10 @@ xfce_appfinder_model_set_property (GObject      *object,
 
     case PROP_SORT_BY_FRECENCY:
       model->sort_by_frecency = g_value_get_boolean (value);
+      break;
+
+    case PROP_GENERIC_NAMES:
+      model->generic_names = g_value_get_boolean (value);
       break;
 
     default:
@@ -548,7 +566,10 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
         {
           if (item->item != NULL)
             {
-              name = garcon_menu_item_get_name (item->item);
+              if ((!model->generic_names)
+                  || ((name = garcon_menu_item_get_generic_name (item->item)) == NULL))
+                name = garcon_menu_item_get_name (item->item);
+
               comment = garcon_menu_item_get_comment (item->item);
 
               if (comment != NULL)
@@ -574,7 +595,12 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
     case XFCE_APPFINDER_MODEL_COLUMN_TITLE:
       g_value_init (value, G_TYPE_STRING);
       if (item->item != NULL)
-        g_value_set_static_string (value, garcon_menu_item_get_name (item->item));
+        {
+          if ((!model->generic_names)
+              || ((name = garcon_menu_item_get_generic_name (item->item)) == NULL))
+            name = garcon_menu_item_get_name (item->item);
+          g_value_set_static_string (value, name);
+        }
       else if (item->command != NULL)
         g_value_set_static_string (value, item->command);
       break;
