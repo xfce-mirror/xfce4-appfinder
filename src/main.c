@@ -197,8 +197,7 @@ appfinder_window_open (const gchar            *startup_id,
           xfconf_channel_get_bool (channel, "/single-window", TRUE))
         {
           window = g_slist_nth_data (windows, 0);
-          if ((hint & XFCE_APPFINDER_WINDOW_HINT_TOGGLE)
-              && gtk_widget_is_visible(window))
+          if ((hint & XFCE_APPFINDER_WINDOW_HINT_TOGGLE) && gtk_widget_is_visible(window))
             gtk_window_close (GTK_WINDOW (window));
           else
             gtk_window_present (GTK_WINDOW (window));
@@ -336,8 +335,7 @@ main (gint argc, gchar **argv)
                          !opt_collapsed,
                          opt_daemon ? XFCE_APPFINDER_WINDOW_HINT_HIDDEN : 0);
 
-  if ((!service_owner) &&
-      (opt_daemon))
+  if (!service_owner && opt_daemon)
     {
       APPFINDER_DEBUG ("skip mainloop (nothing to do)");
     }
