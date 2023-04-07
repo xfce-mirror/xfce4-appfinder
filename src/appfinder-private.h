@@ -68,6 +68,7 @@ void    appfinder_refcount_debug_add (GObject     *object,
 
 typedef enum
 {
+  XFCE_APPFINDER_WINDOW_HINT_NONE = 0,
   XFCE_APPFINDER_WINDOW_HINT_HIDDEN = 1,
   XFCE_APPFINDER_WINDOW_HINT_TOGGLE = 2
 } XfceAppfinderWindowHint;
