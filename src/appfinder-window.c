@@ -685,6 +685,7 @@ xfce_appfinder_window_view_button_press_event (GtkWidget           *widget,
 
       if (have_selection)
         return xfce_appfinder_window_popup_menu (widget, window);
+
     }
 
   return FALSE;
@@ -700,8 +701,11 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
   GtkTreeSelection  *selection;
   GtkWidget         *view;
   gboolean           icon_view;
+  gboolean           sc_execute;
 
   icon_view = xfconf_channel_get_bool (window->channel, "/icon-view", FALSE);
+  sc_execute = xfconf_channel_get_bool (window->channel, "/single-click-execute", FALSE);
+
   if (window->view != NULL)
     {
       if (icon_view && GTK_IS_ICON_VIEW (window->view))
@@ -735,6 +739,9 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
       gtk_icon_view_set_row_spacing (GTK_ICON_VIEW (view), 0);
       xfce_appfinder_window_set_item_width (window);
 
+      if (sc_execute)
+        gtk_icon_view_set_activate_on_single_click(GTK_ICON_VIEW (view), sc_execute);
+
       g_signal_connect_swapped (G_OBJECT (view), "selection-changed",
           G_CALLBACK (xfce_appfinder_window_item_changed), window);
       g_signal_connect_swapped (G_OBJECT (view), "item-activated",
@@ -746,6 +753,10 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
       gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (view), FALSE);
       gtk_tree_view_set_enable_search (GTK_TREE_VIEW (view), FALSE);
       gtk_tree_view_set_tooltip_column (GTK_TREE_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP);
+
+      if (sc_execute)
+        gtk_tree_view_set_activate_on_single_click(GTK_TREE_VIEW (view), sc_execute);
+
       g_signal_connect_swapped (G_OBJECT (view), "row-activated",
           G_CALLBACK (xfce_appfinder_window_row_activated), window);
       g_signal_connect_swapped (G_OBJECT (view), "start-interactive-search",
