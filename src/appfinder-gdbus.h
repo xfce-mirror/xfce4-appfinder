@@ -36,11 +36,11 @@ typedef struct
   const gchar *startup_id;
 } XfceAppfinderGdbusActionParameters;
 
-gboolean appfinder_gdbus_service     (GError      **error);
+gboolean appfinder_gdbus_service (GError                             **error);
 
-gboolean appfinder_gdbus_action (XfceAppfinderGdbusAction             action,
-                                 XfceAppfinderGdbusActionParameters  *params,
-                                 GError                             **error);
+gboolean appfinder_gdbus_action  (XfceAppfinderGdbusAction             action,
+                                  XfceAppfinderGdbusActionParameters  *params,
+                                  GError                             **error);
 
 G_END_DECLS
 

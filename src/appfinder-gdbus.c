@@ -65,20 +65,20 @@ appfinder_gdbus_method_call (GDBusConnection       *connection,
 {
   gboolean  expanded;
   gchar    *startup_id = NULL;
-  gboolean  force_shown = FALSE;
+  gboolean  force_show = FALSE;
 
   g_return_if_fail (!g_strcmp0 (object_path, APPFINDER_DBUS_PATH));
   g_return_if_fail (!g_strcmp0 (interface_name, APPFINDER_DBUS_INTERFACE));
 
   APPFINDER_DEBUG ("received dbus method %s", method_name);
 
-  if ((force_shown = (g_strcmp0 (method_name, APPFINDER_DBUS_METHOD_OPEN) == 0)) ||
+  if ((force_show = (g_strcmp0 (method_name, APPFINDER_DBUS_METHOD_OPEN) == 0)) ||
       (g_strcmp0 (method_name, APPFINDER_DBUS_METHOD_TOGGLE) == 0))
     {
       /* get paramenters */
       g_variant_get (parameters, "(bs)", &expanded, &startup_id);
 
-      appfinder_window (startup_id, expanded, force_shown);
+      appfinder_window_open (startup_id, expanded, force_show);
 
       /* everything went fine */
       g_dbus_method_invocation_return_value (invocation, NULL);
@@ -183,21 +183,21 @@ appfinder_gdbus_action (XfceAppfinderGdbusAction             action,
     {
     case XFCE_APPFINDER_GDBUS_ACTION_OPEN:
       method = APPFINDER_DBUS_METHOD_OPEN;
-      break;
-    case XFCE_APPFINDER_GDBUS_ACTION_TOGGLE:
-      method = APPFINDER_DBUS_METHOD_TOGGLE;
-      break;
-    default:
-      method = APPFINDER_DBUS_METHOD_QUIT;
-      break;
-    }
-
-  if (action != XFCE_APPFINDER_GDBUS_ACTION_QUIT)
-    {
       method_params = g_variant_new ("(bs)",
                                      params->expanded,
                                      ((params->startup_id == NULL) ? "" :
                                       params->startup_id));
+      break;
+    case XFCE_APPFINDER_GDBUS_ACTION_TOGGLE:
+      method = APPFINDER_DBUS_METHOD_TOGGLE;
+      method_params = g_variant_new ("(bs)",
+                                     params->expanded,
+                                     ((params->startup_id == NULL) ? "" :
+                                      params->startup_id));
+      break;
+    default:
+      method = APPFINDER_DBUS_METHOD_QUIT;
+      break;
     }
 
   reply = g_dbus_connection_call_sync (connection,

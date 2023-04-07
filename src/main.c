@@ -67,7 +67,7 @@ static GOptionEntry option_entries[] =
   { "replace", 'r', 0, G_OPTION_ARG_NONE, &opt_replace, N_("Replace the existing service"), NULL },
   { "quit", 'q', 0, G_OPTION_ARG_NONE, &opt_quit, N_("Quit all instances"), NULL },
   { "disable-server", 0, 0, G_OPTION_ARG_NONE, &opt_disable_server, N_("Do not try to use or become a D-Bus service"), NULL },
-  { "toggle-window", 't', 0, G_OPTION_ARG_NONE, &opt_toggle_window, N_("Toggle background service single window state"), NULL },
+  { "toggle-window", 't', 0, G_OPTION_ARG_NONE, &opt_toggle_window, N_("Toggle window visibility of background service"), NULL },
   { NULL }
 };
 
@@ -181,9 +181,9 @@ appfinder_window_destroyed (GtkWidget *window)
 
 
 void
-appfinder_window (const gchar *startup_id,
-                  gboolean     expanded,
-                  gboolean     force_shown)
+appfinder_window_open (const gchar *startup_id,
+                       gboolean     expanded,
+                       gboolean     force_show)
 {
   GtkWidget *window;
   XfconfChannel *channel;
@@ -194,7 +194,7 @@ appfinder_window (const gchar *startup_id,
       if (xfconf_channel_get_bool (channel, "/enable-service", TRUE) &&
           xfconf_channel_get_bool (channel, "/single-window", TRUE))
         {
-          if (force_shown)
+          if (force_show)
             gtk_window_present (GTK_WINDOW (g_slist_nth_data (windows, 0)));
           else
             gtk_window_close (GTK_WINDOW (g_slist_nth_data (windows, 0)));
@@ -317,12 +317,11 @@ main (gint argc, gchar **argv)
   appfinder_refcount_debug_init ();
 #endif
 
-  if (opt_toggle_window
-      && opt_disable_server)
+  if (opt_toggle_window && opt_disable_server)
     g_warning ("Ignoring toggle window request, creating new window");
 
   /* create initial window */
-  appfinder_window (NULL, !opt_collapsed, TRUE);
+  appfinder_window_open (NULL, !opt_collapsed, TRUE);
 
   APPFINDER_DEBUG ("enter mainloop");
 
