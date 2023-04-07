@@ -23,13 +23,24 @@ G_BEGIN_DECLS
 
 #include <gio/gio.h>
 
-gboolean appfinder_gdbus_service     (GError      **error);
+typedef enum
+{
+  XFCE_APPFINDER_GDBUS_ACTION_OPEN,
+  XFCE_APPFINDER_GDBUS_ACTION_TOGGLE,
+  XFCE_APPFINDER_GDBUS_ACTION_QUIT
+} XfceAppfinderGdbusAction;
 
-gboolean appfinder_gdbus_quit        (GError      **error);
+typedef struct
+{
+  gboolean     expanded;
+  const gchar *startup_id;
+} XfceAppfinderGdbusActionParameters;
 
-gboolean appfinder_gdbus_open_window (gboolean      expanded,
-                                      const gchar  *startup_id,
-                                      GError      **error);
+gboolean appfinder_gdbus_service (GError                             **error);
+
+gboolean appfinder_gdbus_action  (XfceAppfinderGdbusAction             action,
+                                  XfceAppfinderGdbusActionParameters  *params,
+                                  GError                             **error);
 
 G_END_DECLS
 

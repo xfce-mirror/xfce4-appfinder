@@ -27,11 +27,12 @@
 
 
 
-#define APPFINDER_DBUS_SERVICE     "org.xfce.Appfinder"
-#define APPFINDER_DBUS_INTERFACE   APPFINDER_DBUS_SERVICE
-#define APPFINDER_DBUS_PATH        "/org/xfce/Appfinder"
-#define APPFINDER_DBUS_METHOD_OPEN "OpenWindow"
-#define APPFINDER_DBUS_METHOD_QUIT "Quit"
+#define APPFINDER_DBUS_SERVICE       "org.xfce.Appfinder"
+#define APPFINDER_DBUS_INTERFACE     APPFINDER_DBUS_SERVICE
+#define APPFINDER_DBUS_PATH          "/org/xfce/Appfinder"
+#define APPFINDER_DBUS_METHOD_OPEN   "OpenWindow"
+#define APPFINDER_DBUS_METHOD_TOGGLE "ToggleWindow"
+#define APPFINDER_DBUS_METHOD_QUIT   "Quit"
 
 
 
@@ -39,6 +40,10 @@ static const gchar appfinder_gdbus_introspection_xml[] =
   "<node>"
     "<interface name='" APPFINDER_DBUS_INTERFACE "'>"
       "<method name='" APPFINDER_DBUS_METHOD_OPEN "'>"
+        "<arg type='b' name='expanded' direction='in'/>"
+        "<arg type='s' name='startup-id' direction='in'/>"
+      "</method>"
+      "<method name='" APPFINDER_DBUS_METHOD_TOGGLE "'>"
         "<arg type='b' name='expanded' direction='in'/>"
         "<arg type='s' name='startup-id' direction='in'/>"
       "</method>"
@@ -60,18 +65,20 @@ appfinder_gdbus_method_call (GDBusConnection       *connection,
 {
   gboolean  expanded;
   gchar    *startup_id = NULL;
+  gboolean  force_show = FALSE;
 
   g_return_if_fail (!g_strcmp0 (object_path, APPFINDER_DBUS_PATH));
   g_return_if_fail (!g_strcmp0 (interface_name, APPFINDER_DBUS_INTERFACE));
 
   APPFINDER_DEBUG ("received dbus method %s", method_name);
 
-  if (g_strcmp0 (method_name, APPFINDER_DBUS_METHOD_OPEN) == 0)
+  if ((force_show = (g_strcmp0 (method_name, APPFINDER_DBUS_METHOD_OPEN) == 0)) ||
+      (g_strcmp0 (method_name, APPFINDER_DBUS_METHOD_TOGGLE) == 0))
     {
       /* get paramenters */
       g_variant_get (parameters, "(bs)", &expanded, &startup_id);
 
-      appfinder_window_new (startup_id, expanded);
+      appfinder_window_open (startup_id, expanded, force_show);
 
       /* everything went fine */
       g_dbus_method_invocation_return_value (invocation, NULL);
@@ -156,69 +163,49 @@ appfinder_gdbus_service (GError **error)
 }
 
 
-
 gboolean
-appfinder_gdbus_quit (GError **error)
+appfinder_gdbus_action (XfceAppfinderGdbusAction             action,
+                        XfceAppfinderGdbusActionParameters  *params,
+                        GError                             **error)
 {
   GVariant        *reply;
   GDBusConnection *connection;
   GError          *err = NULL;
   gboolean         result;
+  const gchar     *method;
+  GVariant        *method_params = NULL;
 
   connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, error);
   if (G_UNLIKELY (connection == NULL))
     return FALSE;
 
-  reply = g_dbus_connection_call_sync (connection,
-                                       APPFINDER_DBUS_SERVICE,
-                                       APPFINDER_DBUS_PATH,
-                                       APPFINDER_DBUS_INTERFACE,
-                                       APPFINDER_DBUS_METHOD_QUIT,
-                                       NULL,
-                                       NULL,
-                                       G_DBUS_CALL_FLAGS_NO_AUTO_START,
-                                       2000,
-                                       NULL,
-                                       &err);
-
-  g_object_unref (connection);
-
-  result = (reply != NULL);
-  if (G_LIKELY (result))
-    g_variant_unref (reply);
-  else
-    g_propagate_error (error, err);
-
-  return result;
-}
-
-
-
-gboolean
-appfinder_gdbus_open_window (gboolean      expanded,
-                             const gchar  *startup_id,
-                             GError      **error)
-{
-  GVariant        *reply;
-  GDBusConnection *connection;
-  GError          *err = NULL;
-  gboolean         result;
-
-  connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, error);
-  if (G_UNLIKELY (connection == NULL))
-    return FALSE;
-
-  if (startup_id == NULL)
-    startup_id = "";
+  switch (action)
+    {
+    case XFCE_APPFINDER_GDBUS_ACTION_OPEN:
+      method = APPFINDER_DBUS_METHOD_OPEN;
+      method_params = g_variant_new ("(bs)",
+                                     params->expanded,
+                                     ((params->startup_id == NULL) ? "" :
+                                      params->startup_id));
+      break;
+    case XFCE_APPFINDER_GDBUS_ACTION_TOGGLE:
+      method = APPFINDER_DBUS_METHOD_TOGGLE;
+      method_params = g_variant_new ("(bs)",
+                                     params->expanded,
+                                     ((params->startup_id == NULL) ? "" :
+                                      params->startup_id));
+      break;
+    default:
+      method = APPFINDER_DBUS_METHOD_QUIT;
+      break;
+    }
 
   reply = g_dbus_connection_call_sync (connection,
                                        APPFINDER_DBUS_SERVICE,
                                        APPFINDER_DBUS_PATH,
                                        APPFINDER_DBUS_INTERFACE,
-                                       APPFINDER_DBUS_METHOD_OPEN,
-                                       g_variant_new ("(bs)",
-                                                      expanded,
-                                                      startup_id),
+                                       method,
+                                       method_params,
                                        NULL,
                                        G_DBUS_CALL_FLAGS_NO_AUTO_START,
                                        2000,
