@@ -172,6 +172,10 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
   xfconf_g_property_bind (preferences->channel, "/hide-window-decorations", G_TYPE_BOOLEAN,
                           G_OBJECT (object), "active");
 
+  object = gtk_builder_get_object (GTK_BUILDER (preferences), "generic-names");
+  xfconf_g_property_bind (preferences->channel, "/generic-names", G_TYPE_BOOLEAN,
+                          G_OBJECT (object), "active");
+
   object = gtk_builder_get_object (GTK_BUILDER (preferences), "button-clear");
   g_signal_connect_swapped (G_OBJECT (object), "clicked",
       G_CALLBACK (xfce_appfinder_preferences_clear_history), preferences);
