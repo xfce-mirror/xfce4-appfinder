@@ -8,189 +8,193 @@
 # Collet Etienne <xanaxlnx@gmail.com>, 2005
 # David D, 2018
 # jc1 <jc1.quebecos@gmail.com>, 2013
-# jc1 <jc1.quebecos@gmail.com>, 2013-2014,2017,2021
+# jc1 <jc1.quebecos@gmail.com>, 2013-2014,2017,2021,2023
 # Yannick Le Guen <leguen.yannick@gmail.com>, 2014-2015,2017-2021
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-30 00:47+0100\n"
-"PO-Revision-Date: 2021-12-01 21:49+0000\n"
-"Last-Translator: jc1 <jc1.quebecos@gmail.com>\n"
-"Language-Team: French (http://www.transifex.com/xfce/xfce4-appfinder/language/fr/)\n"
+"POT-Creation-Date: 2023-04-08 00:46+0200\n"
+"PO-Revision-Date: 2013-07-02 20:40+0000\n"
+"Last-Translator: jc1 <jc1.quebecos@gmail.com>, 2013-2014,2017,2021,2023\n"
+"Language-Team: French (http://app.transifex.com/xfce/xfce4-appfinder/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. close all windows and quit
-#: ../src/appfinder-gdbus.c:84
+#: ../src/appfinder-gdbus.c:91
 msgid "Forced to quit"
 msgstr "Forcé de quitter"
 
-#: ../src/appfinder-category-model.c:147
+#: ../src/appfinder-category-model.c:157
 msgid "All Applications"
 msgstr "Toutes les applications"
 
-#: ../src/appfinder-model.c:613
+#: ../src/appfinder-model.c:653
 msgid "Name"
 msgstr "Nom"
 
-#: ../src/appfinder-model.c:614
+#: ../src/appfinder-model.c:654
 msgid "Comment"
 msgstr "Commentaire"
 
-#: ../src/appfinder-model.c:615
+#: ../src/appfinder-model.c:655
 msgid "Command"
 msgstr "Commande"
 
-#: ../src/appfinder-model.c:616
+#: ../src/appfinder-model.c:656
 msgid "Categories"
 msgstr "Catégories"
 
-#: ../src/appfinder-model.c:617
+#: ../src/appfinder-model.c:657
 msgid "Filename"
 msgstr "Nom du fichier"
 
-#: ../src/appfinder-model.c:2451
+#: ../src/appfinder-model.c:2527
 msgid "Application has no command"
 msgstr "L’application n’a pas de commande"
 
-#: ../src/appfinder-model.c:2884
+#: ../src/appfinder-model.c:2970
 msgid "Commands History"
 msgstr "Historique des commandes"
 
-#: ../src/appfinder-model.c:2908
+#: ../src/appfinder-model.c:2994
 msgid "Bookmarks"
 msgstr "Favoris"
 
-#: ../src/appfinder-preferences.c:266
+#: ../src/appfinder-preferences.c:268
 msgid "C_lear"
 msgstr "_Effacer"
 
-#: ../src/appfinder-preferences.c:267
+#: ../src/appfinder-preferences.c:269
 msgid "This will permanently clear the custom command history."
 msgstr "Cette action effacera l’historique des commandes de manière permanente."
 
-#: ../src/appfinder-preferences.c:268
+#: ../src/appfinder-preferences.c:270
 msgid "Are you sure you want to clear the command history?"
 msgstr "Voulez-vous vraiment effacer l’historique des commandes ?"
 
-#: ../src/appfinder-preferences.c:377
+#: ../src/appfinder-preferences.c:381
 msgid "_Delete"
 msgstr "_Supprimer"
 
-#: ../src/appfinder-preferences.c:378
+#: ../src/appfinder-preferences.c:382
 msgid "The custom action will be deleted permanently."
 msgstr "Ceci supprimera l’action personnalisée de manière permanente."
 
-#: ../src/appfinder-preferences.c:379
+#: ../src/appfinder-preferences.c:383
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Voulez-vous vraiment supprimer le motif « %s » ?"
 
-#: ../src/appfinder-window.c:232 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:236 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Liste des applications"
 
-#: ../src/appfinder-window.c:279
+#: ../src/appfinder-window.c:285
 msgid "Toggle view mode"
 msgstr "Basculer le mode d’affichage"
 
-#: ../src/appfinder-window.c:358
+#: ../src/appfinder-window.c:364
 msgid "_Preferences"
 msgstr "_Préférences"
 
-#: ../src/appfinder-window.c:369 ../src/appfinder-window.c:1097
+#: ../src/appfinder-window.c:375 ../src/appfinder-window.c:1114
 msgid "La_unch"
 msgstr "_Lancer"
 
-#: ../src/appfinder-window.c:898
+#: ../src/appfinder-window.c:915
 msgid "Failed to launch desktop item editor"
 msgstr "Impossible de lancer l’éditeur de fichier desktop"
 
-#: ../src/appfinder-window.c:924
+#: ../src/appfinder-window.c:941
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Cette action effacera définitivement le fichier desktop personnalisé de votre dossier personnel."
 
-#: ../src/appfinder-window.c:925
+#: ../src/appfinder-window.c:942
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Voulez-vous vraiment annuler les modifications dans « %s » ?"
 
-#: ../src/appfinder-window.c:935
+#: ../src/appfinder-window.c:952
 msgid "Failed to remove desktop file"
 msgstr "Impossible de supprimer le fichier desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:968
+#: ../src/appfinder-window.c:985
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Pour afficher l’élément, vous devez supprimer manuellement le fichier desktop de « %s » ou ouvrir le fichier dans le même répertoire et supprimer la ligne « %s »."
 
-#: ../src/appfinder-window.c:973 ../src/appfinder-window.c:1143
+#: ../src/appfinder-window.c:990 ../src/appfinder-window.c:1160
 msgid "_Hide"
 msgstr "_Masquer"
 
-#: ../src/appfinder-window.c:974
+#: ../src/appfinder-window.c:991
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Voulez-vous vraiment masquer « %s » ?"
 
-#: ../src/appfinder-window.c:1079
+#: ../src/appfinder-window.c:1096
 msgid "Remove From Bookmarks"
 msgstr "Supprimer des favoris"
 
-#: ../src/appfinder-window.c:1079
+#: ../src/appfinder-window.c:1096
 msgid "Add to Bookmarks"
 msgstr "Ajouter aux favoris"
 
-#: ../src/appfinder-window.c:1111
+#: ../src/appfinder-window.c:1128
 msgid "_Edit"
 msgstr "M_odifier"
 
-#: ../src/appfinder-window.c:1128
+#: ../src/appfinder-window.c:1145
 msgid "_Revert"
 msgstr "_Rétablir"
 
-#: ../src/main.c:64
+#: ../src/main.c:65
 msgid "Start in collapsed mode"
 msgstr "Démarrer en mode réduit"
 
-#: ../src/main.c:65
+#: ../src/main.c:66
 msgid "Print version information and exit"
 msgstr "Afficher les informations de version et quitter"
 
-#: ../src/main.c:66
+#: ../src/main.c:67
 msgid "Replace the existing service"
 msgstr "Remplacer le service existant"
 
-#: ../src/main.c:67
+#: ../src/main.c:68
 msgid "Quit all instances"
 msgstr "Fermer toutes les instances"
 
-#: ../src/main.c:68
+#: ../src/main.c:69
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Ne pas essayer d’utiliser ou de devenir un service D-Bus."
 
-#: ../src/main.c:231
+#: ../src/main.c:70
+msgid "Toggle window visibility of background service"
+msgstr "Basculer la visibilité de la fenêtre du service d'arrière-plan"
+
+#: ../src/main.c:243
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Taper « %s --help » pour obtenir plus d’aide."
 
-#: ../src/main.c:242
+#: ../src/main.c:254
 msgid "The Xfce development team. All rights reserved."
 msgstr "L’équipe de développement Xfce. Tous droits réservés."
 
-#: ../src/main.c:243
+#: ../src/main.c:255
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Veuillez signaler les bogues à <%s>."

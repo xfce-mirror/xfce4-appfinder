@@ -138,6 +138,10 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
   xfconf_g_property_bind (preferences->channel, "/sort-by-frecency", G_TYPE_BOOLEAN,
                           G_OBJECT (object), "active");
 
+  object = gtk_builder_get_object (GTK_BUILDER (preferences), "single-click-execute");
+  xfconf_g_property_bind (preferences->channel, "/single-click-execute", G_TYPE_BOOLEAN,
+                          G_OBJECT (object), "active");
+
   previous = gtk_builder_get_object (GTK_BUILDER (preferences), "icon-view");
   xfconf_g_property_bind (preferences->channel, "/icon-view", G_TYPE_BOOLEAN,
                           G_OBJECT (previous), "active");

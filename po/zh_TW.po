@@ -8,15 +8,15 @@
 # Hydonsingore Cia <hydonsingore@educities.edu.tw>, 2005
 # 黃柏諺 <s8321414@gmail.com>, 2015,2017-2019
 # Walter Cheuk <wwycheuk@gmail.com>, 2013
-# 黃柏諺 <s8321414@gmail.com>, 2020-2021
+# 黃柏諺 <s8321414@gmail.com>, 2020-2021,2023
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-30 00:47+0100\n"
-"PO-Revision-Date: 2021-11-30 01:52+0000\n"
-"Last-Translator: 黃柏諺 <s8321414@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/xfce/xfce4-appfinder/language/zh_TW/)\n"
+"POT-Creation-Date: 2023-04-08 00:46+0200\n"
+"PO-Revision-Date: 2013-07-02 20:40+0000\n"
+"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020-2021,2023\n"
+"Language-Team: Chinese (Taiwan) (http://app.transifex.com/xfce/xfce4-appfinder/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,172 +24,176 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. close all windows and quit
-#: ../src/appfinder-gdbus.c:84
+#: ../src/appfinder-gdbus.c:91
 msgid "Forced to quit"
 msgstr "強迫退出"
 
-#: ../src/appfinder-category-model.c:147
+#: ../src/appfinder-category-model.c:157
 msgid "All Applications"
 msgstr "所有應用程式"
 
-#: ../src/appfinder-model.c:613
+#: ../src/appfinder-model.c:653
 msgid "Name"
 msgstr "名稱"
 
-#: ../src/appfinder-model.c:614
+#: ../src/appfinder-model.c:654
 msgid "Comment"
 msgstr "備註"
 
-#: ../src/appfinder-model.c:615
+#: ../src/appfinder-model.c:655
 msgid "Command"
 msgstr "指令"
 
-#: ../src/appfinder-model.c:616
+#: ../src/appfinder-model.c:656
 msgid "Categories"
 msgstr "類別"
 
-#: ../src/appfinder-model.c:617
+#: ../src/appfinder-model.c:657
 msgid "Filename"
 msgstr "檔案名稱"
 
-#: ../src/appfinder-model.c:2451
+#: ../src/appfinder-model.c:2527
 msgid "Application has no command"
 msgstr "應用程式沒有指令"
 
-#: ../src/appfinder-model.c:2884
+#: ../src/appfinder-model.c:2970
 msgid "Commands History"
 msgstr "指令歷史"
 
-#: ../src/appfinder-model.c:2908
+#: ../src/appfinder-model.c:2994
 msgid "Bookmarks"
 msgstr "書籤"
 
-#: ../src/appfinder-preferences.c:266
+#: ../src/appfinder-preferences.c:268
 msgid "C_lear"
 msgstr "清除(_L)"
 
-#: ../src/appfinder-preferences.c:267
+#: ../src/appfinder-preferences.c:269
 msgid "This will permanently clear the custom command history."
 msgstr "這會永遠清除自訂指令歷史。"
 
-#: ../src/appfinder-preferences.c:268
+#: ../src/appfinder-preferences.c:270
 msgid "Are you sure you want to clear the command history?"
 msgstr "您確定要清除指令歷史嗎？"
 
-#: ../src/appfinder-preferences.c:377
+#: ../src/appfinder-preferences.c:381
 msgid "_Delete"
 msgstr "刪除(_D)"
 
-#: ../src/appfinder-preferences.c:378
+#: ../src/appfinder-preferences.c:382
 msgid "The custom action will be deleted permanently."
 msgstr "自訂動作會永遠刪除。"
 
-#: ../src/appfinder-preferences.c:379
+#: ../src/appfinder-preferences.c:383
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "您確定要刪除「%s」樣式？"
 
-#: ../src/appfinder-window.c:232 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:236 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "應用程式協尋器"
 
-#: ../src/appfinder-window.c:279
+#: ../src/appfinder-window.c:285
 msgid "Toggle view mode"
 msgstr "切換檢視模式"
 
-#: ../src/appfinder-window.c:358
+#: ../src/appfinder-window.c:364
 msgid "_Preferences"
 msgstr "偏好設定(_P)"
 
-#: ../src/appfinder-window.c:369 ../src/appfinder-window.c:1097
+#: ../src/appfinder-window.c:375 ../src/appfinder-window.c:1114
 msgid "La_unch"
 msgstr "啟動(_U)"
 
-#: ../src/appfinder-window.c:898
+#: ../src/appfinder-window.c:915
 msgid "Failed to launch desktop item editor"
 msgstr "無法啟動桌面項目編輯器"
 
-#: ../src/appfinder-window.c:924
+#: ../src/appfinder-window.c:941
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "這會從您的家目錄永遠移除自訂桌面檔。"
 
-#: ../src/appfinder-window.c:925
+#: ../src/appfinder-window.c:942
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "您確定要還原「%s」？"
 
-#: ../src/appfinder-window.c:935
+#: ../src/appfinder-window.c:952
 msgid "Failed to remove desktop file"
 msgstr "無法移除桌面檔"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:968
+#: ../src/appfinder-window.c:985
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "若要取消隱藏該項目，您必須從「%s」手動移除桌面檔，或是在同個目錄內開啟檔案並移除「%s」這一列。"
 
-#: ../src/appfinder-window.c:973 ../src/appfinder-window.c:1143
+#: ../src/appfinder-window.c:990 ../src/appfinder-window.c:1160
 msgid "_Hide"
 msgstr "隱藏(_H)"
 
-#: ../src/appfinder-window.c:974
+#: ../src/appfinder-window.c:991
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "您確定要隱藏「%s」？"
 
-#: ../src/appfinder-window.c:1079
+#: ../src/appfinder-window.c:1096
 msgid "Remove From Bookmarks"
 msgstr "移除書籤"
 
-#: ../src/appfinder-window.c:1079
+#: ../src/appfinder-window.c:1096
 msgid "Add to Bookmarks"
 msgstr "加入書籤"
 
-#: ../src/appfinder-window.c:1111
+#: ../src/appfinder-window.c:1128
 msgid "_Edit"
 msgstr "編輯(_E)"
 
-#: ../src/appfinder-window.c:1128
+#: ../src/appfinder-window.c:1145
 msgid "_Revert"
 msgstr "還原(_R)"
 
-#: ../src/main.c:64
+#: ../src/main.c:65
 msgid "Start in collapsed mode"
 msgstr "以折疊模式啟動"
 
-#: ../src/main.c:65
+#: ../src/main.c:66
 msgid "Print version information and exit"
 msgstr "列印版本資訊並離開"
 
-#: ../src/main.c:66
+#: ../src/main.c:67
 msgid "Replace the existing service"
 msgstr "替換現有的服務"
 
-#: ../src/main.c:67
+#: ../src/main.c:68
 msgid "Quit all instances"
 msgstr "退出所有實體"
 
-#: ../src/main.c:68
+#: ../src/main.c:69
 msgid "Do not try to use or become a D-Bus service"
 msgstr "不要嘗試使用或成為 D-Bus 服務"
 
-#: ../src/main.c:231
+#: ../src/main.c:70
+msgid "Toggle window visibility of background service"
+msgstr "切換背景服務的視窗能見度"
+
+#: ../src/main.c:243
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "輸入 \"%s --help\" 以取得用法資訊。"
 
-#: ../src/main.c:242
+#: ../src/main.c:254
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce 開發團隊。保留所有權利。"
 
-#: ../src/main.c:243
+#: ../src/main.c:255
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "請回報錯誤至 <%s>。"

@@ -66,8 +66,15 @@ void    appfinder_refcount_debug_add (GObject     *object,
 #define XFCE_APPFINDER_ICON_NAME_REMOVE "list-remove-symbolic"
 
 
+typedef enum
+{
+  XFCE_APPFINDER_WINDOW_HINT_NONE = 0,
+  XFCE_APPFINDER_WINDOW_HINT_HIDDEN = 1,
+  XFCE_APPFINDER_WINDOW_HINT_TOGGLE = 2
+} XfceAppfinderWindowHint;
 
-void appfinder_window_new (const gchar *startup_id,
-                           gboolean     expanded);
+void appfinder_window_open (const gchar            *startup_id,
+                            gboolean                expanded,
+                            XfceAppfinderWindowHint hint);
 
 #endif /* !__XFCE_APPFINDER_PRIVATE_H__ */
