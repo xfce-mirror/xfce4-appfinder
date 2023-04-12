@@ -534,6 +534,23 @@ xfce_appfinder_model_get_path (GtkTreeModel *tree_model,
 
 
 
+static const gchar*
+xfce_appfinder_model_get_menu_item_name (XfceAppfinderModel *model,
+                                         GarconMenuItem     *item)
+{
+  const gchar *name = NULL;
+
+  if (model->generic_names)
+    name = garcon_menu_item_get_generic_name (item);
+
+  if (name == NULL)
+    name = garcon_menu_item_get_name (item);
+
+  return name;
+}
+
+
+
 static void
 xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
                                 GtkTreeIter  *iter,
@@ -566,10 +583,7 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
         {
           if (item->item != NULL)
             {
-              if ((!model->generic_names)
-                  || ((name = garcon_menu_item_get_generic_name (item->item)) == NULL))
-                name = garcon_menu_item_get_name (item->item);
-
+              name = xfce_appfinder_model_get_menu_item_name (model, item->item);
               comment = garcon_menu_item_get_comment (item->item);
 
               if (comment != NULL)
@@ -596,9 +610,7 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
       g_value_init (value, G_TYPE_STRING);
       if (item->item != NULL)
         {
-          if ((!model->generic_names)
-              || ((name = garcon_menu_item_get_generic_name (item->item)) == NULL))
-            name = garcon_menu_item_get_name (item->item);
+          name = xfce_appfinder_model_get_menu_item_name (model, item->item);
           g_value_set_static_string (value, name);
         }
       else if (item->command != NULL)

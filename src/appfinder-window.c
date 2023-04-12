@@ -1802,6 +1802,7 @@ xfce_appfinder_window_property_changed (XfconfChannel       *channel,
     {
       gboolean generic_names = g_value_get_boolean (value);
       g_object_set (G_OBJECT (window->model), "generic-names", generic_names, NULL);
+      xfce_appfinder_window_view (window);
     }
 }
 
