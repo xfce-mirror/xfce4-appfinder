@@ -49,6 +49,7 @@ static gboolean            opt_replace = FALSE;
 static gboolean            opt_quit = FALSE;
 static gboolean            opt_disable_server = FALSE;
 static gboolean            opt_toggle_window = FALSE;
+static gboolean            opt_daemon = FALSE;
 static GSList             *windows = NULL;
 static gboolean            service_owner = FALSE;
 static XfceAppfinderModel *model_cache = NULL;
@@ -68,6 +69,7 @@ static GOptionEntry option_entries[] =
   { "quit", 'q', 0, G_OPTION_ARG_NONE, &opt_quit, N_("Quit all instances"), NULL },
   { "disable-server", 0, 0, G_OPTION_ARG_NONE, &opt_disable_server, N_("Do not try to use or become a D-Bus service"), NULL },
   { "toggle-window", 't', 0, G_OPTION_ARG_NONE, &opt_toggle_window, N_("Toggle window visibility of background service"), NULL },
+  { "daemon", 0, 0, G_OPTION_ARG_NONE, &opt_daemon, N_("Run in daemon mode"), NULL },
   { NULL }
 };
 
@@ -181,9 +183,9 @@ appfinder_window_destroyed (GtkWidget *window)
 
 
 void
-appfinder_window_open (const gchar *startup_id,
-                       gboolean     expanded,
-                       gboolean     force_show)
+appfinder_window_open (const gchar            *startup_id,
+                       gboolean                expanded,
+                       XfceAppfinderWindowHint hint)
 {
   GtkWidget *window;
   XfconfChannel *channel;
@@ -194,10 +196,12 @@ appfinder_window_open (const gchar *startup_id,
       if (xfconf_channel_get_bool (channel, "/enable-service", TRUE) &&
           xfconf_channel_get_bool (channel, "/single-window", TRUE))
         {
-          if (force_show)
-            gtk_window_present (GTK_WINDOW (g_slist_nth_data (windows, 0)));
+          window = g_slist_nth_data (windows, 0);
+          if ((hint & XFCE_APPFINDER_WINDOW_HINT_TOGGLE) && gtk_widget_is_visible (window))
+            gtk_window_close (GTK_WINDOW (window));
           else
-            gtk_window_close (GTK_WINDOW (g_slist_nth_data (windows, 0)));
+            gtk_window_present (GTK_WINDOW (window));
+
           return;
         }
     }
@@ -207,7 +211,9 @@ appfinder_window_open (const gchar *startup_id,
                          NULL);
   appfinder_refcount_debug_add (G_OBJECT (window), startup_id);
   xfce_appfinder_window_set_expanded (XFCE_APPFINDER_WINDOW (window), expanded);
-  gtk_widget_show (window);
+
+  if (!(hint & XFCE_APPFINDER_WINDOW_HINT_HIDDEN))
+    gtk_widget_show (window);
 
   windows = g_slist_prepend (windows, window);
   g_signal_connect (G_OBJECT (window), "destroy",
@@ -273,17 +279,17 @@ main (gint argc, gchar **argv)
    * owner to spawn an instance */
   if (G_LIKELY (!opt_disable_server))
     {
-      /* try to open a new window */
-      params.expanded = (!opt_collapsed);
-      params.startup_id = startup_id;
-      if (appfinder_gdbus_action (action, &params, &error))
+      if (!opt_daemon)
         {
-          /* looks ok */
-          return EXIT_SUCCESS;
-        }
-      else if (!g_error_matches (error, G_DBUS_ERROR, G_DBUS_ERROR_NAME_HAS_NO_OWNER))
-        {
-          g_warning ("Unknown DBus error: %s", error->message);
+          /* try to open a new window */
+          params.expanded = (!opt_collapsed);
+          params.startup_id = startup_id;
+
+          if (appfinder_gdbus_action (action, &params, &error))
+            return EXIT_SUCCESS; /* looks ok */
+
+          if (!g_error_matches (error, G_DBUS_ERROR, G_DBUS_ERROR_NAME_HAS_NO_OWNER))
+            g_warning ("Unknown DBus error: %s", error->message);
         }
 
       g_clear_error (&error);
@@ -321,11 +327,19 @@ main (gint argc, gchar **argv)
     g_warning ("Ignoring toggle window request, creating new window");
 
   /* create initial window */
-  appfinder_window_open (NULL, !opt_collapsed, TRUE);
+  appfinder_window_open (NULL, !opt_collapsed,
+                         opt_daemon ? XFCE_APPFINDER_WINDOW_HINT_HIDDEN :
+                                      XFCE_APPFINDER_WINDOW_HINT_NONE);
 
-  APPFINDER_DEBUG ("enter mainloop");
-
-  gtk_main ();
+  if (!service_owner && opt_daemon)
+    {
+      APPFINDER_DEBUG ("skip mainloop (nothing to do)");
+    }
+  else
+    {
+      APPFINDER_DEBUG ("enter mainloop");
+      gtk_main ();
+    }
 
   /* release the model cache */
   if (model_cache != NULL)

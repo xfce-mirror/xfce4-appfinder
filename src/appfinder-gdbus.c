@@ -65,24 +65,32 @@ appfinder_gdbus_method_call (GDBusConnection       *connection,
 {
   gboolean  expanded;
   gchar    *startup_id = NULL;
-  gboolean  force_show = FALSE;
 
   g_return_if_fail (!g_strcmp0 (object_path, APPFINDER_DBUS_PATH));
   g_return_if_fail (!g_strcmp0 (interface_name, APPFINDER_DBUS_INTERFACE));
 
   APPFINDER_DEBUG ("received dbus method %s", method_name);
 
-  if ((force_show = (g_strcmp0 (method_name, APPFINDER_DBUS_METHOD_OPEN) == 0)) ||
-      (g_strcmp0 (method_name, APPFINDER_DBUS_METHOD_TOGGLE) == 0))
+  if (g_strcmp0 (method_name, APPFINDER_DBUS_METHOD_OPEN) == 0)
     {
-      /* get paramenters */
+      /* get parameters */
       g_variant_get (parameters, "(bs)", &expanded, &startup_id);
 
-      appfinder_window_open (startup_id, expanded, force_show);
+      appfinder_window_open (startup_id, expanded, XFCE_APPFINDER_WINDOW_HINT_NONE);
 
       /* everything went fine */
       g_dbus_method_invocation_return_value (invocation, NULL);
+      g_free (startup_id);
+    }
+   else if (g_strcmp0 (method_name, APPFINDER_DBUS_METHOD_TOGGLE) == 0)
+    {
+      /* get parameters */
+      g_variant_get (parameters, "(bs)", &expanded, &startup_id);
 
+      appfinder_window_open (startup_id, expanded, XFCE_APPFINDER_WINDOW_HINT_TOGGLE);
+
+      /* everything went fine */
+      g_dbus_method_invocation_return_value (invocation, NULL);
       g_free (startup_id);
     }
   else if (g_strcmp0 (method_name, APPFINDER_DBUS_METHOD_QUIT) == 0)
