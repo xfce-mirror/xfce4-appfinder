@@ -444,9 +444,7 @@ xfce_appfinder_window_finalize (GObject *object)
     g_object_unref (G_OBJECT (window->filter_category));
   g_free (window->filter_text);
 
-  /* Free any last hover path */
-  if (G_UNLIKELY (window->hover_path != NULL))
-    gtk_tree_path_free (window->hover_path);
+  gtk_tree_path_free (window->hover_path);
 
   (*G_OBJECT_CLASS (xfce_appfinder_window_parent_class)->finalize) (object);
 }
@@ -731,9 +729,7 @@ xfce_appfinder_window_view_motion_notify_event (GtkWidget           *widget,
       if (window->hover_path == NULL
           || (gtk_tree_path_compare (path, window->hover_path) != 0))
         {
-          if (window->hover_path != NULL)
-            gtk_tree_path_free (window->hover_path);
-
+          gtk_tree_path_free (window->hover_path);
           window->hover_path = path;
 
           /* set to 'single-click' hand cursor */
