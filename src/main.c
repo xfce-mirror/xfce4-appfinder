@@ -197,10 +197,11 @@ appfinder_window_open (const gchar            *startup_id,
           xfconf_channel_get_bool (channel, "/single-window", TRUE))
         {
           window = g_slist_nth_data (windows, 0);
-          if ((hint & XFCE_APPFINDER_WINDOW_HINT_TOGGLE) && gtk_widget_is_visible(window))
+          if ((hint & XFCE_APPFINDER_WINDOW_HINT_TOGGLE) && gtk_widget_is_visible (window))
             gtk_window_close (GTK_WINDOW (window));
           else
             gtk_window_present (GTK_WINDOW (window));
+
           return;
         }
     }
@@ -212,9 +213,7 @@ appfinder_window_open (const gchar            *startup_id,
   xfce_appfinder_window_set_expanded (XFCE_APPFINDER_WINDOW (window), expanded);
 
   if (!(hint & XFCE_APPFINDER_WINDOW_HINT_HIDDEN))
-    {
-      gtk_widget_show (window);
-    }
+    gtk_widget_show (window);
 
   windows = g_slist_prepend (windows, window);
   g_signal_connect (G_OBJECT (window), "destroy",
@@ -283,18 +282,15 @@ main (gint argc, gchar **argv)
       if (!opt_daemon)
         {
           /* try to open a new window */
-            params.expanded = (!opt_collapsed);
-            params.startup_id = startup_id;
-            if (appfinder_gdbus_action (action, &params, &error))
-            {
-              /* looks ok */
-              return EXIT_SUCCESS;
-            }
-          else if (!g_error_matches (error, G_DBUS_ERROR, G_DBUS_ERROR_NAME_HAS_NO_OWNER))
-            {
-              g_warning ("Unknown DBus error: %s", error->message);
-            }
-         }
+          params.expanded = (!opt_collapsed);
+          params.startup_id = startup_id;
+
+          if (appfinder_gdbus_action (action, &params, &error))
+            return EXIT_SUCCESS; /* looks ok */
+
+          if (!g_error_matches (error, G_DBUS_ERROR, G_DBUS_ERROR_NAME_HAS_NO_OWNER))
+            g_warning ("Unknown DBus error: %s", error->message);
+        }
 
       g_clear_error (&error);
 
@@ -331,9 +327,9 @@ main (gint argc, gchar **argv)
     g_warning ("Ignoring toggle window request, creating new window");
 
   /* create initial window */
-  appfinder_window_open (NULL,
-                         !opt_collapsed,
-                         opt_daemon ? XFCE_APPFINDER_WINDOW_HINT_HIDDEN : 0);
+  appfinder_window_open (NULL, !opt_collapsed,
+                         opt_daemon ? XFCE_APPFINDER_WINDOW_HINT_HIDDEN :
+                                      XFCE_APPFINDER_WINDOW_HINT_NONE);
 
   if (!service_owner && opt_daemon)
     {
@@ -342,7 +338,6 @@ main (gint argc, gchar **argv)
   else
     {
       APPFINDER_DEBUG ("enter mainloop");
-
       gtk_main ();
     }
 
