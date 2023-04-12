@@ -800,7 +800,7 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
       xfce_appfinder_window_set_item_width (window);
 
       if (sc_execute)
-        gtk_icon_view_set_activate_on_single_click(GTK_ICON_VIEW (view), sc_execute);
+        gtk_icon_view_set_activate_on_single_click (GTK_ICON_VIEW (view), sc_execute);
 
       g_signal_connect_swapped (G_OBJECT (view), "selection-changed",
           G_CALLBACK (xfce_appfinder_window_item_changed), window);
@@ -815,7 +815,7 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
       gtk_tree_view_set_tooltip_column (GTK_TREE_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP);
 
       if (sc_execute)
-        gtk_tree_view_set_activate_on_single_click(GTK_TREE_VIEW (view), sc_execute);
+        gtk_tree_view_set_activate_on_single_click (GTK_TREE_VIEW (view), sc_execute);
 
       g_signal_connect_swapped (G_OBJECT (view), "row-activated",
           G_CALLBACK (xfce_appfinder_window_row_activated), window);
