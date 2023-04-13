@@ -10,10 +10,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-30 00:47+0100\n"
-"PO-Revision-Date: 2021-11-29 23:47+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
-"Language-Team: Eastern Armenian (http://www.transifex.com/xfce/xfce4-appfinder/language/hye/)\n"
+"POT-Creation-Date: 2023-04-13 00:55+0200\n"
+"PO-Revision-Date: 2013-07-02 20:40+0000\n"
+"Last-Translator: Arman Harutyunyan <arman.harut468@gmail.com>, 2020\n"
+"Language-Team: Eastern Armenian (http://app.transifex.com/xfce/xfce4-appfinder/language/hye/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,172 +21,180 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. close all windows and quit
-#: ../src/appfinder-gdbus.c:84
+#: ../src/appfinder-gdbus.c:99
 msgid "Forced to quit"
 msgstr "Ստիպողական անջատում"
 
-#: ../src/appfinder-category-model.c:147
+#: ../src/appfinder-category-model.c:157
 msgid "All Applications"
 msgstr "Բոլորը"
 
-#: ../src/appfinder-model.c:613
+#: ../src/appfinder-model.c:653
 msgid "Name"
 msgstr "Անուն"
 
-#: ../src/appfinder-model.c:614
+#: ../src/appfinder-model.c:654
 msgid "Comment"
 msgstr "Մեկնաբանութիւն"
 
-#: ../src/appfinder-model.c:615
+#: ../src/appfinder-model.c:655
 msgid "Command"
 msgstr "Տեղադրութիւն"
 
-#: ../src/appfinder-model.c:616
+#: ../src/appfinder-model.c:656
 msgid "Categories"
 msgstr "Կարգեր"
 
-#: ../src/appfinder-model.c:617
+#: ../src/appfinder-model.c:657
 msgid "Filename"
 msgstr "Նշանուն"
 
-#: ../src/appfinder-model.c:2451
+#: ../src/appfinder-model.c:2527
 msgid "Application has no command"
 msgstr "Յաւելուածը չունի հրամաններ"
 
-#: ../src/appfinder-model.c:2884
+#: ../src/appfinder-model.c:2970
 msgid "Commands History"
 msgstr "Պատմութիւն"
 
-#: ../src/appfinder-model.c:2908
+#: ../src/appfinder-model.c:2994
 msgid "Bookmarks"
 msgstr "Էջանիշներ"
 
-#: ../src/appfinder-preferences.c:266
+#: ../src/appfinder-preferences.c:272
 msgid "C_lear"
 msgstr "Մ_աքրել"
 
-#: ../src/appfinder-preferences.c:267
+#: ../src/appfinder-preferences.c:273
 msgid "This will permanently clear the custom command history."
 msgstr "Հրամանների պատմութիւնը անվերադարձ կը մաքրուի։"
 
-#: ../src/appfinder-preferences.c:268
+#: ../src/appfinder-preferences.c:274
 msgid "Are you sure you want to clear the command history?"
 msgstr "Մաքրե՞լ հրամանների պատմութիւնը։"
 
-#: ../src/appfinder-preferences.c:377
+#: ../src/appfinder-preferences.c:385
 msgid "_Delete"
 msgstr "_Ջնջել"
 
-#: ../src/appfinder-preferences.c:378
+#: ../src/appfinder-preferences.c:386
 msgid "The custom action will be deleted permanently."
 msgstr "Գործողութիւնն անվերադարձ կը ջնջուի։"
 
-#: ../src/appfinder-preferences.c:379
+#: ../src/appfinder-preferences.c:387
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Ջնջե՞լ «%s» նշանը։"
 
-#: ../src/appfinder-window.c:232 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:237 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Յաւելուածների Որոնում"
 
-#: ../src/appfinder-window.c:279
+#: ../src/appfinder-window.c:286
 msgid "Toggle view mode"
 msgstr "Փոխել ցուցադրման եղանակը"
 
-#: ../src/appfinder-window.c:358
+#: ../src/appfinder-window.c:365
 msgid "_Preferences"
 msgstr "_Նախընտրանք"
 
-#: ../src/appfinder-window.c:369 ../src/appfinder-window.c:1097
+#: ../src/appfinder-window.c:376 ../src/appfinder-window.c:1187
 msgid "La_unch"
 msgstr "Գոր_ծարկել"
 
-#: ../src/appfinder-window.c:898
+#: ../src/appfinder-window.c:988
 msgid "Failed to launch desktop item editor"
 msgstr "Չյաջողուեց գործարկել աշխատասեղանի տարրերի խմբագրիչը"
 
-#: ../src/appfinder-window.c:924
+#: ../src/appfinder-window.c:1014
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Յարմարեցուած ․desktop նիշը անվերադարձ կը հեռացուի տնային նշարանից։"
 
-#: ../src/appfinder-window.c:925
+#: ../src/appfinder-window.c:1015
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Վերադարձնե՞լ «%s»֊ը։"
 
-#: ../src/appfinder-window.c:935
+#: ../src/appfinder-window.c:1025
 msgid "Failed to remove desktop file"
 msgstr "Չյաջողուեց հեռացնել .desktop նիշը"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:968
+#: ../src/appfinder-window.c:1058
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Տարրը թաքցնելու համար պէտք է ձեռքով հեռացնել ․desktop նիշը «%s»֊ից, կամ բացել նիշը նոյն նշարանում եւ հեռացնել «%s» տողը։"
 
-#: ../src/appfinder-window.c:973 ../src/appfinder-window.c:1143
+#: ../src/appfinder-window.c:1063 ../src/appfinder-window.c:1233
 msgid "_Hide"
 msgstr "_Թաքցնել"
 
-#: ../src/appfinder-window.c:974
+#: ../src/appfinder-window.c:1064
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Թաքցնե՞լ «%s»֊ը։"
 
-#: ../src/appfinder-window.c:1079
+#: ../src/appfinder-window.c:1169
 msgid "Remove From Bookmarks"
 msgstr "Հեռացնել էջանիշերից"
 
-#: ../src/appfinder-window.c:1079
+#: ../src/appfinder-window.c:1169
 msgid "Add to Bookmarks"
 msgstr "Աւելացնել էջանիշերում"
 
-#: ../src/appfinder-window.c:1111
+#: ../src/appfinder-window.c:1201
 msgid "_Edit"
 msgstr "_Խմբագրում"
 
-#: ../src/appfinder-window.c:1128
+#: ../src/appfinder-window.c:1218
 msgid "_Revert"
 msgstr "_Վերադարձ"
 
-#: ../src/main.c:64
+#: ../src/main.c:66
 msgid "Start in collapsed mode"
 msgstr "Միացնել կոծկման եղանակը"
 
-#: ../src/main.c:65
+#: ../src/main.c:67
 msgid "Print version information and exit"
 msgstr "Ցոյց տալ տարբերակի վերաբերեալ տեղեկոյթը եւ դուրս գալ"
 
-#: ../src/main.c:66
+#: ../src/main.c:68
 msgid "Replace the existing service"
 msgstr "Փոխարինել գոյութիւն ունեցող ծառայութիւնը"
 
-#: ../src/main.c:67
+#: ../src/main.c:69
 msgid "Quit all instances"
 msgstr "Դուրս գալ բոլոր աւրինակներից"
 
-#: ../src/main.c:68
+#: ../src/main.c:70
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Չփորձել աւգտագործել կամ դարձնել D-Bus ծառայութիւն"
 
-#: ../src/main.c:231
+#: ../src/main.c:71
+msgid "Toggle window visibility of background service"
+msgstr ""
+
+#: ../src/main.c:72
+msgid "Run in daemon mode"
+msgstr "Գործարկել աւժանդակ ծրագրի աշխատակերպում"
+
+#: ../src/main.c:249
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Մուտքագրել «%s --help»՝ աջակցութեան համար։"
 
-#: ../src/main.c:242
+#: ../src/main.c:260
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce֊ի մշակման խումբ։ Բոլոր իրաւունքները պաշտպանուած են։"
 
-#: ../src/main.c:243
+#: ../src/main.c:261
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Սխալների դէպքում կարող էք դիմել <%s> հասցէով։"
@@ -279,74 +287,82 @@ msgid ""
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:22
+msgid "Single-click selects and launches items"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:23
+msgid "Items are selected and launched with only a single-click."
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:24
 msgid "Behaviour"
 msgstr "Վարքագիծ"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "_View items as icons"
 msgstr "_Ցուցադրել տարրերը պատկերակների տեսքով"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "Text besi_de icons"
 msgstr "Անունը՝ պատկերա_կների կողքին"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Ite_m icon size:"
 msgstr "Տարր_ի պատկերակի չափը․"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "Hide category pane"
 msgstr "Թաքցնել կարգի փեղկը"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Hide category panel and show all applications."
 msgstr "Թաքցնել կարգի փեղկը եւ ցուցադրել բոլոր յաւելուածները"
 
-#: ../src/appfinder-preferences.glade.h:28
+#: ../src/appfinder-preferences.glade.h:30
 msgid "Categ_ory icon size:"
 msgstr "Կար_գի պատկերակի չափը․"
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Hide window decorations"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "Hide window decorations such as title bar and borders."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
 msgid "Appearance"
 msgstr "Տեսք"
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:34
 msgid "C_lear Custom Command History"
 msgstr "Մա_քրել հրամանների պատմութիւնը"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:35
 msgid "History"
 msgstr "Պատմութիւն"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:36
 msgid "_General"
 msgstr "_Ընդհանուր"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:37
 msgid "Custom actions are only available in collapsed mode."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:38
 msgid "Pattern"
 msgstr "Նշան"
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:39
 msgid "Add a new custom action."
 msgstr "Յաւելել նոր գործողութիւն։"
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:40
 msgid "Remove the currently selected action."
 msgstr "Հեռացնել ներկաումս ընտրուած գործողութիւնը։"
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:42
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -354,23 +370,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Եթե սահմանուած է նախանշանը՝ %s֊ը կը փոխարինուի նշանից յետոյ եկող տողով, իսկ %S֊ը՝ ամբողջ գրոյթով։ Հաստատուն արտայայտութիւնների համար կարելի է աւգտագործել՝ \\0 եւ \\<թիւ>։"
 
-#: ../src/appfinder-preferences.glade.h:41
+#: ../src/appfinder-preferences.glade.h:43
 msgid "Co_mmand:"
 msgstr "Հր_աման․"
 
-#: ../src/appfinder-preferences.glade.h:42
+#: ../src/appfinder-preferences.glade.h:44
 msgid "Patte_rn:"
 msgstr "Նշ_ան․"
 
-#: ../src/appfinder-preferences.glade.h:43
+#: ../src/appfinder-preferences.glade.h:45
 msgid "_Type:"
 msgstr "_Տիպ․"
 
-#: ../src/appfinder-preferences.glade.h:44
+#: ../src/appfinder-preferences.glade.h:46
 msgid "_Save match in command history"
 msgstr "Պահ_ել համընկնումը հրամանների պատմութեան մէջ"
 
-#: ../src/appfinder-preferences.glade.h:45
+#: ../src/appfinder-preferences.glade.h:47
 msgid "Custom _Actions"
 msgstr "Ընտրովի _գործողութիւններ"
 
