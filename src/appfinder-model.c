@@ -351,6 +351,7 @@ xfce_appfinder_model_set_property (GObject      *object,
   XfceAppfinderModel    *model = XFCE_APPFINDER_MODEL (object);
   XfceAppfinderIconSize  icon_size;
   gint                   scale_factor;
+  gboolean               generic_names;
 
   switch (prop_id)
     {
@@ -376,7 +377,12 @@ xfce_appfinder_model_set_property (GObject      *object,
       break;
 
     case PROP_GENERIC_NAMES:
-      model->generic_names = g_value_get_boolean (value);
+      generic_names = g_value_get_boolean (value);
+      if (model->generic_names != generic_names)
+        {
+          model->generic_names = generic_names;
+          xfce_appfinder_model_generic_names_changed (model);
+        }
       break;
 
     default:
@@ -2866,6 +2872,51 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
         {
           item->surface = cairo_surface_reference (model->command_surface);
           item->surface_large = cairo_surface_reference  (model->command_surface_large);
+        }
+
+      if (item_changed)
+        {
+          path = gtk_tree_path_new_from_indices (idx, -1);
+          ITER_INIT (iter, model->stamp, li);
+          gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
+          gtk_tree_path_free (path);
+        }
+    }
+}
+
+
+
+void
+xfce_appfinder_model_generic_names_changed (XfceAppfinderModel *model)
+{
+  ModelItem   *item;
+  GtkTreeIter  iter;
+  GtkTreePath *path;
+  gint         idx;
+  gboolean     item_changed;
+  GSList      *li;
+
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
+
+  APPFINDER_DEBUG ("item generic name changed, updating %d items",
+                   g_slist_length (model->items));
+
+  /* update model items */
+  for (li = model->items, idx = 0; li != NULL; li = li->next, idx++)
+    {
+      item = li->data;
+      item_changed = FALSE;
+
+      if (item->abstract != NULL)
+        {
+          g_free (item->abstract);
+          item->abstract = NULL;
+          item_changed = TRUE;
+        }
+
+      if (item->item != NULL)
+        {
+          item_changed = TRUE;
         }
 
       if (item_changed)

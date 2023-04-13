@@ -104,6 +104,8 @@ cairo_surface_t     *xfce_appfinder_model_get_icon_for_command   (XfceAppfinderM
 
 void                 xfce_appfinder_model_icon_theme_changed     (XfceAppfinderModel        *model);
 
+void                 xfce_appfinder_model_generic_names_changed  (XfceAppfinderModel        *model);
+
 void                 xfce_appfinder_model_history_clear          (XfceAppfinderModel        *model);
 
 gboolean             xfce_appfinder_model_bookmark_toggle        (XfceAppfinderModel        *model,
