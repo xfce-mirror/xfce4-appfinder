@@ -289,11 +289,11 @@ msgstr "Renditi objektet në mënyrë të tillë që, objektet që janë më të
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Një klikim i vetëm i përzgjedh dhe i vë në punë objektet"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Objektet përzgjidhen dhe vihen në punë me një klikim të vetëm."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Behaviour"
