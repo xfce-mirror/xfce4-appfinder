@@ -302,11 +302,11 @@ msgstr "Упорядочивать элементы так, чтобы те из
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Одиночный щелчок мыши выберет и запустит элемент"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Элементы выбираются и запускаются всего одним щелчком мыши."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Behaviour"
