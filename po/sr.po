@@ -289,11 +289,11 @@ msgstr "Распореди ставке, тако да скорашње кори
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Један клик изабира и покреће ставку"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Ставке се бирају и покрећу само једним кликом."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Behaviour"
