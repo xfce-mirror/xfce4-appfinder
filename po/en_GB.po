@@ -289,11 +289,11 @@ msgstr "Order items, such that items that are most recently used are always on t
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Single-click selects and launches items"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Items are selected and launched with only a single-click."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Behaviour"
