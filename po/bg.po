@@ -290,11 +290,11 @@ msgstr "Подреждане на елементите, така, че посл�
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Избиране и стартиране на елементите с едно кликване"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Елементите се избират и стартират само с едно кликване."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Behaviour"
