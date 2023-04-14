@@ -288,11 +288,11 @@ msgstr "最近使用したアイテムが常に一番上になるようにアイ
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "シングルクリックでアイテムを選択して起動"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "アイテムがシングル クリックのみで選択および起動されます。"
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Behaviour"
