@@ -290,11 +290,11 @@ msgstr "Rikiuoti elementus taip, kad paskiausiai naudoti elementai būtų visada
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Vienkartis spustelėjimas pažymi ir paleidžia elementus"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Elementai yra pažymimi ir paleidžiami vienkarčiu spustelėjimu."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Behaviour"
