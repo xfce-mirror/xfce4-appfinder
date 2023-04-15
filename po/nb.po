@@ -5,7 +5,7 @@
 # Translators:
 # Allan Nordhøy <epost@anotheragency.no>, 2014
 # Allan Nordhøy <epost@anotheragency.no>, 2015,2017
-# heskjestad <cato@heskjestad.xyz>, 2021
+# heskjestad <cato@heskjestad.xyz>, 2021,2023
 # Harald H. <haarektrans@gmail.com>, 2014
 # heskjestad <cato@heskjestad.xyz>, 2019-2021
 # Terje Uriansrud <terje@uriansrud.net>, 2009
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-13 00:55+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: heskjestad <cato@heskjestad.xyz>, 2021\n"
+"Last-Translator: heskjestad <cato@heskjestad.xyz>, 2021,2023\n"
 "Language-Team: Norwegian Bokmål (http://app.transifex.com/xfce/xfce4-appfinder/language/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -183,7 +183,7 @@ msgstr "Ikke prøv å bruk eller bli en D-Bus-tjeneste"
 
 #: ../src/main.c:71
 msgid "Toggle window visibility of background service"
-msgstr ""
+msgstr "Skal vindu være synlig for bakgrunnstjeneste?"
 
 #: ../src/main.c:72
 msgid "Run in daemon mode"
@@ -292,11 +292,11 @@ msgstr "Sorter elementer slik at de sist brukte alltid er øverst."
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Enkeltklikk velger og starter elementer"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Elementer velges og startes med ett enkeltklikk."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Behaviour"
