@@ -296,11 +296,11 @@ msgstr "Einträge so anordnen, dass die zuletzt verwendeten Elemente immer ganz 
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Auswählen und Starten von Elementen per Mausklick"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Elemente werden mit einem einzigen Mausklick ausgewählt und gestartet."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Behaviour"
