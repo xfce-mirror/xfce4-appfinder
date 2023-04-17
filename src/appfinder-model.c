@@ -2893,7 +2893,6 @@ xfce_appfinder_model_generic_names_changed (XfceAppfinderModel *model)
   GtkTreeIter  iter;
   GtkTreePath *path;
   gint         idx;
-  gboolean     item_changed;
   GSList      *li;
 
   appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
@@ -2905,22 +2904,12 @@ xfce_appfinder_model_generic_names_changed (XfceAppfinderModel *model)
   for (li = model->items, idx = 0; li != NULL; li = li->next, idx++)
     {
       item = li->data;
-      item_changed = FALSE;
-
-      if (item->abstract != NULL)
-        {
-          g_free (item->abstract);
-          item->abstract = NULL;
-          item_changed = TRUE;
-        }
 
       if (item->item != NULL)
         {
-          item_changed = TRUE;
-        }
+          g_free (item->abstract);
+          item->abstract = NULL;
 
-      if (item_changed)
-        {
           path = gtk_tree_path_new_from_indices (idx, -1);
           ITER_INIT (iter, model->stamp, li);
           gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
