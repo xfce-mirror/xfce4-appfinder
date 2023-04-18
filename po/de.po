@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-13 00:55+0200\n"
+"POT-Creation-Date: 2023-04-18 00:46+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Andreas Eitel <github-aneitel@online.de>, 2018,2020-2021,2023\n"
 "Language-Team: German (http://app.transifex.com/xfce/xfce4-appfinder/language/de/)\n"
@@ -37,59 +37,59 @@ msgstr "Zum Beenden gezwungen"
 msgid "All Applications"
 msgstr "Alle Anwendungen"
 
-#: ../src/appfinder-model.c:653
+#: ../src/appfinder-model.c:697
 msgid "Name"
 msgstr "Name"
 
-#: ../src/appfinder-model.c:654
+#: ../src/appfinder-model.c:698
 msgid "Comment"
 msgstr "Kommentar"
 
-#: ../src/appfinder-model.c:655
+#: ../src/appfinder-model.c:699
 msgid "Command"
 msgstr "Befehl"
 
-#: ../src/appfinder-model.c:656
+#: ../src/appfinder-model.c:700
 msgid "Categories"
 msgstr "Kategorien"
 
-#: ../src/appfinder-model.c:657
+#: ../src/appfinder-model.c:701
 msgid "Filename"
 msgstr "Dateiname"
 
-#: ../src/appfinder-model.c:2527
+#: ../src/appfinder-model.c:2571
 msgid "Application has no command"
 msgstr "Anwendung hat keinen Befehl"
 
-#: ../src/appfinder-model.c:2970
+#: ../src/appfinder-model.c:3048
 msgid "Commands History"
 msgstr "Befehlsverlauf"
 
-#: ../src/appfinder-model.c:2994
+#: ../src/appfinder-model.c:3072
 msgid "Bookmarks"
 msgstr "Lesezeichen"
 
-#: ../src/appfinder-preferences.c:272
+#: ../src/appfinder-preferences.c:276
 msgid "C_lear"
 msgstr "_Leeren"
 
-#: ../src/appfinder-preferences.c:273
+#: ../src/appfinder-preferences.c:277
 msgid "This will permanently clear the custom command history."
 msgstr "Dies wird den Verlauf der benutzerdefinierten Befehle dauerhaft löschen."
 
-#: ../src/appfinder-preferences.c:274
+#: ../src/appfinder-preferences.c:278
 msgid "Are you sure you want to clear the command history?"
 msgstr "Soll der Befehlsverlauf wirklich gelöscht werden?"
 
-#: ../src/appfinder-preferences.c:385
+#: ../src/appfinder-preferences.c:389
 msgid "_Delete"
 msgstr "_Löschen"
 
-#: ../src/appfinder-preferences.c:386
+#: ../src/appfinder-preferences.c:390
 msgid "The custom action will be deleted permanently."
 msgstr "Die benutzerdefinierte Aktion wird dauerhaft gelöscht."
 
-#: ../src/appfinder-preferences.c:387
+#: ../src/appfinder-preferences.c:391
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Soll das Muster »%s« wirklich gelöscht werden?"
@@ -100,68 +100,68 @@ msgstr "Soll das Muster »%s« wirklich gelöscht werden?"
 msgid "Application Finder"
 msgstr "Anwendungsfinder"
 
-#: ../src/appfinder-window.c:286
+#: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
 msgstr "Ansichtsmodus umstellen"
 
-#: ../src/appfinder-window.c:365
+#: ../src/appfinder-window.c:368
 msgid "_Preferences"
 msgstr "_Eigenschaften"
 
-#: ../src/appfinder-window.c:376 ../src/appfinder-window.c:1187
+#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1190
 msgid "La_unch"
 msgstr "_Starten"
 
-#: ../src/appfinder-window.c:988
+#: ../src/appfinder-window.c:991
 msgid "Failed to launch desktop item editor"
 msgstr "Die Bearbeitung für die Schreibtischeinträge konnte nicht aufgerufen werden"
 
-#: ../src/appfinder-window.c:1014
+#: ../src/appfinder-window.c:1017
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Dieses wird die benutzerdefinierten Schreibtischdateien, aus dem persönlichen Ordner, dauerhaft löschen."
 
-#: ../src/appfinder-window.c:1015
+#: ../src/appfinder-window.c:1018
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Soll »%s« wirklich zurückgesetzt werden?"
 
-#: ../src/appfinder-window.c:1025
+#: ../src/appfinder-window.c:1028
 msgid "Failed to remove desktop file"
 msgstr "Starter konnte nicht entfernt werden"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:1058
+#: ../src/appfinder-window.c:1061
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Um den Eintrag anzuzeigen, müssen Sie den Starter manuell aus »%s« löschen oder die Datei öffnen und die Zeile »%s« entfernen."
 
-#: ../src/appfinder-window.c:1063 ../src/appfinder-window.c:1233
+#: ../src/appfinder-window.c:1066 ../src/appfinder-window.c:1236
 msgid "_Hide"
 msgstr "_Verstecken"
 
-#: ../src/appfinder-window.c:1064
+#: ../src/appfinder-window.c:1067
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Soll »%s« wirklich versteckt werden?"
 
-#: ../src/appfinder-window.c:1169
+#: ../src/appfinder-window.c:1172
 msgid "Remove From Bookmarks"
 msgstr "Lesezeichen entfernen"
 
-#: ../src/appfinder-window.c:1169
+#: ../src/appfinder-window.c:1172
 msgid "Add to Bookmarks"
 msgstr "Lesezeichen hinzufügen"
 
-#: ../src/appfinder-window.c:1201
+#: ../src/appfinder-window.c:1204
 msgid "_Edit"
 msgstr "_Bearbeiten"
 
-#: ../src/appfinder-window.c:1218
+#: ../src/appfinder-window.c:1221
 msgid "_Revert"
 msgstr "_Rückgängig"
 
@@ -339,38 +339,42 @@ msgid "Hide window decorations such as title bar and borders."
 msgstr "Fensterdekorationen wie Titelleiste und Rahmen ausblenden."
 
 #: ../src/appfinder-preferences.glade.h:33
+msgid "Show generic application _names"
+msgstr "Allgemei_ne Anwendungsnamen zeigen"
+
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Appearance"
 msgstr "Erscheinungsbild"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:35
 msgid "C_lear Custom Command History"
 msgstr "Befehlsverlauf _löschen"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:36
 msgid "History"
 msgstr "Verlauf"
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:37
 msgid "_General"
 msgstr "All_gemein"
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:38
 msgid "Custom actions are only available in collapsed mode."
 msgstr "Benutzerdefinierte Aktionen sind nur im eingeklappten Modus verfügbar."
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:39
 msgid "Pattern"
 msgstr "Muster"
 
-#: ../src/appfinder-preferences.glade.h:39
+#: ../src/appfinder-preferences.glade.h:40
 msgid "Add a new custom action."
 msgstr "Eine neue benutzerdefinierte Aktion hinzufügen."
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:41
 msgid "Remove the currently selected action."
 msgstr "Die ausgewählte Aktion löschen."
 
-#: ../src/appfinder-preferences.glade.h:42
+#: ../src/appfinder-preferences.glade.h:43
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -378,23 +382,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Wenn als Typ »Präfix« gewählt ist, wird »%s« mit der Zeichenkette nach dem Muster ersetzt, »%S« mit dem kompletten Text des Eintrags. Für reguläre Ausdrücke kann \\0 and \\<num> verwendet werden."
 
-#: ../src/appfinder-preferences.glade.h:43
+#: ../src/appfinder-preferences.glade.h:44
 msgid "Co_mmand:"
 msgstr "_Befehl:"
 
-#: ../src/appfinder-preferences.glade.h:44
+#: ../src/appfinder-preferences.glade.h:45
 msgid "Patte_rn:"
 msgstr "_Muster:"
 
-#: ../src/appfinder-preferences.glade.h:45
+#: ../src/appfinder-preferences.glade.h:46
 msgid "_Type:"
 msgstr "_Typ:"
 
-#: ../src/appfinder-preferences.glade.h:46
+#: ../src/appfinder-preferences.glade.h:47
 msgid "_Save match in command history"
 msgstr "Übereinstimmungen im Befehlsverlauf _speichern"
 
-#: ../src/appfinder-preferences.glade.h:47
+#: ../src/appfinder-preferences.glade.h:48
 msgid "Custom _Actions"
 msgstr "_Benutzerdefinierte Aktionen"
 
