@@ -1,3 +1,27 @@
+4.19.0 (2023-04-19)
+======
+- New preference to use application generic names (#80)
+- Add daemon option (#78)
+- New preference option to launch items on a single click (#79)
+- New option to toggle window visibility of background service (#52)
+- Restore command icons in Commands history (!33)
+- Update preferences window to match default settings (!35)
+- Change icon size for "small" from 36px to 32px (!34)
+- Use correct model when running from Commands history (#74)
+- Remove runtime check of gtk version
+- Bump xfce dependencies min version to 4.18
+- Translation Updates:
+  Albanian, Arabic, Armenian (Armenia), Basque, Belarusian, Bulgarian,
+  Catalan, Chinese (China), Chinese (Hong Kong), Chinese (Taiwan),
+  Croatian, Czech, Danish, Dutch, Eastern Armenian, English
+  (Australia), English (Canada), English (United Kingdom), Estonian,
+  Finnish, French, Galician, German, Greek, Hebrew, Hungarian,
+  Icelandic, Indonesian, Interlingue, Italian, Japanese, Kazakh,
+  Korean, Lithuanian, Malay, Norwegian Bokmål, Norwegian Nynorsk,
+  Occitan (post 1500), Polish, Portuguese, Portuguese (Brazil),
+  Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish,
+  Thai, Turkish, Ukrainian, Uyghur, Vietnamese
+
 4.18.0 (2022-12-15)
 ======
 - build: Bump requirements for Xfce 4.18
