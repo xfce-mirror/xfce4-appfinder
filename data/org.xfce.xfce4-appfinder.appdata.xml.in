@@ -5,8 +5,8 @@
   <id>xfce4-appfinder.desktop</id>
   <metadata_license>CC-BY-3.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
-  <_name>Application Finder</_name>
-  <_summary>Application to quickly run applications and commands</_summary>
+  <name>Application Finder</name>
+  <summary>Application to quickly run applications and commands</summary>
 
   <description>
     <_p>The application finder is a tool to find and launch installed applications on your system
