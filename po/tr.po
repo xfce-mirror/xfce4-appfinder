@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-13 00:55+0200\n"
+"POT-Creation-Date: 2023-05-05 10:50+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Demiray Muhterem <mdemiray@msn.com>, 2018,2021,2023\n"
 "Language-Team: Turkish (http://app.transifex.com/xfce/xfce4-appfinder/language/tr/)\n"
@@ -38,59 +38,59 @@ msgstr "Çıkmaya zorlandı"
 msgid "All Applications"
 msgstr "Tüm Uygulamalar"
 
-#: ../src/appfinder-model.c:653
+#: ../src/appfinder-model.c:697
 msgid "Name"
 msgstr "Ad"
 
-#: ../src/appfinder-model.c:654
+#: ../src/appfinder-model.c:698
 msgid "Comment"
 msgstr "Yorum"
 
-#: ../src/appfinder-model.c:655
+#: ../src/appfinder-model.c:699
 msgid "Command"
 msgstr "Komut"
 
-#: ../src/appfinder-model.c:656
+#: ../src/appfinder-model.c:700
 msgid "Categories"
 msgstr "Kategoriler"
 
-#: ../src/appfinder-model.c:657
+#: ../src/appfinder-model.c:701
 msgid "Filename"
 msgstr "Dosya Adı"
 
-#: ../src/appfinder-model.c:2527
+#: ../src/appfinder-model.c:2571
 msgid "Application has no command"
 msgstr "Uygulamanın komutu yok"
 
-#: ../src/appfinder-model.c:2970
+#: ../src/appfinder-model.c:3048
 msgid "Commands History"
 msgstr "Komutlar Geçmişi"
 
-#: ../src/appfinder-model.c:2994
+#: ../src/appfinder-model.c:3072
 msgid "Bookmarks"
 msgstr "Yer İmleri"
 
-#: ../src/appfinder-preferences.c:272
+#: ../src/appfinder-preferences.c:276
 msgid "C_lear"
 msgstr "T_emizle"
 
-#: ../src/appfinder-preferences.c:273
+#: ../src/appfinder-preferences.c:277
 msgid "This will permanently clear the custom command history."
 msgstr "Komut geçmişini kalıcı olarak temizleyecek."
 
-#: ../src/appfinder-preferences.c:274
+#: ../src/appfinder-preferences.c:278
 msgid "Are you sure you want to clear the command history?"
 msgstr "Komut geçmişini temizlemek istediğinizden emin misiniz?"
 
-#: ../src/appfinder-preferences.c:385
+#: ../src/appfinder-preferences.c:389
 msgid "_Delete"
 msgstr "_Sil"
 
-#: ../src/appfinder-preferences.c:386
+#: ../src/appfinder-preferences.c:390
 msgid "The custom action will be deleted permanently."
 msgstr "Özelleştirilmiş davranış kalıcı olarak silinecektir."
 
-#: ../src/appfinder-preferences.c:387
+#: ../src/appfinder-preferences.c:391
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "\"%s\" desenini silmek istediğinize emin misiniz?"
@@ -101,68 +101,68 @@ msgstr "\"%s\" desenini silmek istediğinize emin misiniz?"
 msgid "Application Finder"
 msgstr "Uygulama Bulucu"
 
-#: ../src/appfinder-window.c:286
+#: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
 msgstr "Görünüm kipini değiştir"
 
-#: ../src/appfinder-window.c:365
+#: ../src/appfinder-window.c:368
 msgid "_Preferences"
 msgstr "_Tercihler"
 
-#: ../src/appfinder-window.c:376 ../src/appfinder-window.c:1187
+#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1190
 msgid "La_unch"
 msgstr "Ça_lıştır"
 
-#: ../src/appfinder-window.c:988
+#: ../src/appfinder-window.c:991
 msgid "Failed to launch desktop item editor"
 msgstr "Masaüstü öge düzenleyicisi başlatılamadı"
 
-#: ../src/appfinder-window.c:1014
+#: ../src/appfinder-window.c:1017
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Özel masaüstü dosyası ev dizininizden kalıcı olarak kaldırılacak."
 
-#: ../src/appfinder-window.c:1015
+#: ../src/appfinder-window.c:1018
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "\"%s\" geri alınsın ister misiniz?"
 
-#: ../src/appfinder-window.c:1025
+#: ../src/appfinder-window.c:1028
 msgid "Failed to remove desktop file"
 msgstr "Masaüstü dosyası kaldırılamadı"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:1058
+#: ../src/appfinder-window.c:1061
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Bir nesneyi göstermek için masaüstü dosyasını \"%s\"'dan kendiniz silmelisiniz yada dosyayı aynı dizinde açarak \"%s\" numaralı satırı silmelisiniz."
 
-#: ../src/appfinder-window.c:1063 ../src/appfinder-window.c:1233
+#: ../src/appfinder-window.c:1066 ../src/appfinder-window.c:1236
 msgid "_Hide"
 msgstr "_Gizle"
 
-#: ../src/appfinder-window.c:1064
+#: ../src/appfinder-window.c:1067
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "\"%s\" gizlensin ister emin misiniz?"
 
-#: ../src/appfinder-window.c:1169
+#: ../src/appfinder-window.c:1172
 msgid "Remove From Bookmarks"
 msgstr "Yer İmlerinden Kaldır"
 
-#: ../src/appfinder-window.c:1169
+#: ../src/appfinder-window.c:1172
 msgid "Add to Bookmarks"
 msgstr "Yer İmlerine Ekle"
 
-#: ../src/appfinder-window.c:1201
+#: ../src/appfinder-window.c:1204
 msgid "_Edit"
 msgstr "_Düzenle"
 
-#: ../src/appfinder-window.c:1218
+#: ../src/appfinder-window.c:1221
 msgid "_Revert"
 msgstr "Değişiklikleri _Geri Al"
 
@@ -297,11 +297,11 @@ msgstr "Ögeleri, en son kullanılan ögeler her zaman en üstte olacak biçimde
 
 #: ../src/appfinder-preferences.glade.h:22
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Tek-tıklama öğeleri seçer ve başlatır"
 
 #: ../src/appfinder-preferences.glade.h:23
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Öğeler yalnızca tek-tıklama ile seçilir ve başlatılır."
 
 #: ../src/appfinder-preferences.glade.h:24
 msgid "Behaviour"
@@ -340,38 +340,42 @@ msgid "Hide window decorations such as title bar and borders."
 msgstr "Başlık çubuğu ve kenarlıklar gibi pencere süslemelerini gizleyin."
 
 #: ../src/appfinder-preferences.glade.h:33
+msgid "Show generic application _names"
+msgstr "Genel uygulama _adlarını göster"
+
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Appearance"
 msgstr "Görünüm"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:35
 msgid "C_lear Custom Command History"
 msgstr "Özelleştirilmiş Komutlar Geçmişini _Temizle"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:36
 msgid "History"
 msgstr "Geçmiş"
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:37
 msgid "_General"
 msgstr "_Genel"
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:38
 msgid "Custom actions are only available in collapsed mode."
 msgstr "Özel eylemler yalnızca daraltılmış kipte kullanılabilir."
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:39
 msgid "Pattern"
 msgstr "Desen"
 
-#: ../src/appfinder-preferences.glade.h:39
+#: ../src/appfinder-preferences.glade.h:40
 msgid "Add a new custom action."
 msgstr "Özelleştirilmiş davranış ekle."
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:41
 msgid "Remove the currently selected action."
 msgstr "Şu anda seçilmiş işlemi sil"
 
-#: ../src/appfinder-preferences.glade.h:42
+#: ../src/appfinder-preferences.glade.h:43
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -379,23 +383,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Eğer tür bir ön eke ayarlanmışsa, %s kalıptan sonra dizge ile değiştirilirken, %S tüm girdi metniyle değiştirilecektir. Düzenli ifadeler için \\0 ve \\<num> kullanabilirsiniz."
 
-#: ../src/appfinder-preferences.glade.h:43
+#: ../src/appfinder-preferences.glade.h:44
 msgid "Co_mmand:"
 msgstr "Ko_mut:"
 
-#: ../src/appfinder-preferences.glade.h:44
+#: ../src/appfinder-preferences.glade.h:45
 msgid "Patte_rn:"
 msgstr "De_sen:"
 
-#: ../src/appfinder-preferences.glade.h:45
+#: ../src/appfinder-preferences.glade.h:46
 msgid "_Type:"
 msgstr "_Tip:"
 
-#: ../src/appfinder-preferences.glade.h:46
+#: ../src/appfinder-preferences.glade.h:47
 msgid "_Save match in command history"
 msgstr "_Eşleşmeleri komut geçmişinde sakla"
 
-#: ../src/appfinder-preferences.glade.h:47
+#: ../src/appfinder-preferences.glade.h:48
 msgid "Custom _Actions"
 msgstr "Özelleştirilmiş _Davranışlar"
 
