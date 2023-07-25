@@ -57,6 +57,7 @@
 
 
 static void       xfce_appfinder_window_finalize                      (GObject                     *object);
+static void       xfce_appfinder_window_focus_lost                    (GtkWidget                   *widget);
 static void       xfce_appfinder_window_unmap                         (GtkWidget                   *widget);
 static gboolean   xfce_appfinder_window_key_press_event               (GtkWidget                   *widget,
                                                                        GdkEventKey                 *event);
@@ -220,6 +221,8 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gboolean            sort_by_frecency;
   gint                scale_factor;
 
+  g_signal_connect (window, "focus-out-event", G_CALLBACK (xfce_appfinder_window_focus_lost), NULL);
+
   scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
 
   window->channel = xfconf_channel_get ("xfce4-appfinder");
@@ -372,6 +375,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_widget_set_valign (button, GTK_ALIGN_CENTER);
   gtk_button_set_always_show_image(GTK_BUTTON(button), TRUE);
   gtk_widget_show (button);
+  window->preferences_shown = FALSE;
 
   image = gtk_image_new_from_icon_name (XFCE_APPFINDER_ICON_NAME_PREFERENCES, GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (button), image);
@@ -450,6 +454,17 @@ xfce_appfinder_window_finalize (GObject *object)
   gtk_tree_path_free (window->hover_path);
 
   (*G_OBJECT_CLASS (xfce_appfinder_window_parent_class)->finalize) (object);
+}
+
+
+
+static void
+xfce_appfinder_window_focus_lost (GtkWidget *widget)
+{
+  XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (widget);
+
+  if (!gtk_window_get_decorated (GTK_WINDOW (widget)))
+    gtk_window_close (GTK_WINDOW (widget));
 }
 
 
