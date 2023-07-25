@@ -57,6 +57,7 @@
 
 
 static void       xfce_appfinder_window_finalize                      (GObject                     *object);
+static void       xfce_appfinder_window_focus_lost                    (GtkWidget                   *widget);
 static void       xfce_appfinder_window_unmap                         (GtkWidget                   *widget);
 static gboolean   xfce_appfinder_window_key_press_event               (GtkWidget                   *widget,
                                                                        GdkEventKey                 *event);
@@ -219,6 +220,8 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gint                integer;
   gboolean            sort_by_frecency;
   gint                scale_factor;
+
+  g_signal_connect (window, "focus-out-event", G_CALLBACK (xfce_appfinder_window_focus_lost), NULL);
 
   scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
 
@@ -450,6 +453,15 @@ xfce_appfinder_window_finalize (GObject *object)
   gtk_tree_path_free (window->hover_path);
 
   (*G_OBJECT_CLASS (xfce_appfinder_window_parent_class)->finalize) (object);
+}
+
+
+
+static void
+xfce_appfinder_window_focus_lost (GtkWidget *widget)
+{
+  if (!gtk_window_get_decorated (GTK_WINDOW (widget)))
+    gtk_window_close (GTK_WINDOW (widget));
 }
 
 
