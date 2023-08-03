@@ -35,7 +35,7 @@ typedef struct _XfceAppfinderPreferences      XfceAppfinderPreferences;
 
 GType xfce_appfinder_preferences_get_type (void) G_GNUC_CONST;
 
-void  xfce_appfinder_preferences_show     (GdkScreen *screen);
+void  xfce_appfinder_preferences_show     (XfceAppfinderWindow *window);
 
 G_END_DECLS
 
