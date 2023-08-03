@@ -2101,7 +2101,6 @@ xfce_appfinder_window_keep_open (XfceAppfinderWindow *window,
 {
   if (keep_open)
     g_signal_handler_block (window, window->focus_out_id);
-
   else
     g_signal_handler_unblock (window, window->focus_out_id);
 }
