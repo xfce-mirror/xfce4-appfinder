@@ -1013,7 +1013,7 @@ xfce_appfinder_window_popup_menu_revert (GtkWidget           *mi,
   if (name == NULL)
     return;
 
-  if (xfce_dialog_confirm (GTK_WINDOW (window), XFCE_APPFINDER_ICON_NAME_REVERT, NULL,
+  if (xfce_dialog_confirm (GTK_WINDOW (window), XFCE_APPFINDER_ICON_NAME_REVERT, _("Confirm"),
           _("This will permanently remove the custom desktop file from your home directory."),
           _("Are you sure you want to revert \"%s\"?"), name))
     {
