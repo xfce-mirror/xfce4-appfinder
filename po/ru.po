@@ -19,12 +19,12 @@
 # Sergey Alyoshin <alyoshin.s@gmail.com>, 2014-2015
 # Sergey Fedoseev <fedoseev.sergey@gmail.com>, 2006
 # Sergey Shlyapugin <shlyapugin@gmail.com>, 2013
-# Артём Котлубай <artemkotlubai@yandex.ru>, 2022
+# Темак, 2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-18 00:46+0200\n"
+"POT-Creation-Date: 2023-08-09 00:46+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Andrei Stepanov, 2022-2023\n"
 "Language-Team: Russian (http://app.transifex.com/xfce/xfce4-appfinder/language/ru/)\n"
@@ -121,6 +121,10 @@ msgstr "За_пустить"
 #: ../src/appfinder-window.c:991
 msgid "Failed to launch desktop item editor"
 msgstr "Не удалось запустить редактор элементов рабочего стола"
+
+#: ../src/appfinder-window.c:1016
+msgid "Confirm"
+msgstr "Подтвердить"
 
 #: ../src/appfinder-window.c:1017
 msgid ""
