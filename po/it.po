@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-05 10:50+0200\n"
+"POT-Creation-Date: 2023-08-09 00:46+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Dmytro Tokayev, 2021,2023\n"
+"Last-Translator: Emanuele Petriglia <transifex@emanuelepetriglia.com>, 2019-2021,2023\n"
 "Language-Team: Italian (http://app.transifex.com/xfce/xfce4-appfinder/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,6 +111,10 @@ msgstr "A_vvia"
 #: ../src/appfinder-window.c:991
 msgid "Failed to launch desktop item editor"
 msgstr "Impossibile avviare l'editor degli elementi della scrivania"
+
+#: ../src/appfinder-window.c:1016
+msgid "Confirm"
+msgstr "Conferma"
 
 #: ../src/appfinder-window.c:1017
 msgid ""
