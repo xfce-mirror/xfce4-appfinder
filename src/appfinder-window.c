@@ -262,6 +262,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
                                                         XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM,
                                                         scale_factor);
   window->image = image = gtk_image_new_from_pixbuf (window->icon_find);
+  gtk_style_context_add_class (gtk_widget_get_style_context (GTK_WIDGET (image)), "application-icon");
   gtk_widget_set_size_request (image, 48, 48);
   gtk_widget_set_halign(image, GTK_ALIGN_CENTER);
   gtk_container_add (GTK_CONTAINER (hbox), image);
