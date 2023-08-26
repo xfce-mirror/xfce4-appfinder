@@ -124,6 +124,7 @@ static gint       xfce_appfinder_window_sort_items_frecency           (GtkTreeMo
                                                                        GtkTreeIter                 *b,
                                                                        gpointer                     data);
 static gchar    **xfce_appfinder_parse_envp                           (gchar                      **cmd);
+static guint      xfce_appfinder_get_navigation_key                   (GdkEventKey                 *event);
 
 struct _XfceAppfinderWindowClass
 {
@@ -1478,8 +1479,7 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
                                              XfceAppfinderWindow *window)
 {
   GtkTreePath *path;
-  gboolean     is_next_key;
-  gboolean     is_prev_key;
+  guint        navigation_key;
 
   if (event->keyval == GDK_KEY_Tab &&
       !gtk_widget_get_visible (window->paned) &&
@@ -1489,15 +1489,9 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
       return TRUE;
     }
 
-  is_next_key = event->keyval == GDK_KEY_Down ||
-    ((event->state & GDK_CONTROL_MASK) != 0 &&
-      (event->keyval == GDK_KEY_n || event->keyval == GDK_KEY_N));
+  navigation_key = xfce_appfinder_get_navigation_key(event);
 
-  is_prev_key = event->keyval == GDK_KEY_Up ||
-    ((event->state & GDK_CONTROL_MASK) != 0 &&
-      (event->keyval == GDK_KEY_p || event->keyval == GDK_KEY_P));
-
-  if (!is_next_key && !is_prev_key)
+  if (navigation_key == XFCE_APPFINDER_KEY_NONE)
     return FALSE;
 
   if (!gtk_widget_get_visible (window->paned))
@@ -1510,7 +1504,7 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
           return FALSE;
         }
 
-      if (is_next_key)
+      if (navigation_key == XFCE_APPFINDER_KEY_NEXT)
         {
           xfce_appfinder_window_set_expanded (window, TRUE);
 
@@ -1523,7 +1517,7 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
       return FALSE;
     }
 
-  if (is_next_key)
+  if (navigation_key == XFCE_APPFINDER_KEY_NEXT)
     {
       /* The first item is usually selected, so we should jump to 2nd one
        * when down key is pressed */
@@ -1601,16 +1595,7 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
 {
   GdkEvent     ev;
   GtkTreePath *path;
-  gboolean     is_next_key;
-  gboolean     is_prev_key;
-
-  is_next_key = (event->keyval == GDK_KEY_Down ||
-    ((event->state & GDK_CONTROL_MASK) != 0 &&
-      (event->keyval == GDK_KEY_n || event->keyval == GDK_KEY_N)));
-
-  is_prev_key = (event->keyval == GDK_KEY_Up ||
-    ((event->state & GDK_CONTROL_MASK) != 0 &&
-      (event->keyval == GDK_KEY_p || event->keyval == GDK_KEY_P)));
+  guint        navigation_key;
 
   if (widget == window->view)
     {
@@ -1630,22 +1615,24 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
           return TRUE;
         }
 
-      if ((is_next_key || is_prev_key) &&
+      navigation_key = xfce_appfinder_get_navigation_key(event);
+
+      if (navigation_key != XFCE_APPFINDER_KEY_NONE &&
           xfce_appfinder_window_view_get_selected_path (window, &path))
         {
-          if (is_next_key)
-            {
+          if (navigation_key == XFCE_APPFINDER_KEY_NEXT)
               gtk_tree_path_next (path);
-            }
           else if (!gtk_tree_path_prev (path))
             {
               gtk_widget_grab_focus (window->entry);
               gtk_tree_path_free (path);
+
               return FALSE;
             }
 
           gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->view), path, NULL, FALSE);
           gtk_tree_path_free (path);
+
           return TRUE;
         }
 
@@ -2285,4 +2272,27 @@ xfce_appfinder_parse_envp (gchar **cmd)
   g_strfreev (vars);
 
   return envp;
+}
+
+
+
+static guint
+xfce_appfinder_get_navigation_key (GdkEventKey *event)
+{
+  if (event->keyval == GDK_KEY_Down)
+    return XFCE_APPFINDER_KEY_NEXT;
+
+  if (event->keyval == GDK_KEY_Up)
+    return XFCE_APPFINDER_KEY_PREVIOUS;
+
+  if ((event->state & GDK_CONTROL_MASK) != 0)
+    {
+      if (event->keyval == GDK_KEY_n || event->keyval == GDK_KEY_N)
+        return XFCE_APPFINDER_KEY_NEXT;
+
+      if (event->keyval == GDK_KEY_p || event->keyval == GDK_KEY_P)
+        return XFCE_APPFINDER_KEY_PREVIOUS;
+    }
+
+  return XFCE_APPFINDER_KEY_NONE;
 }
