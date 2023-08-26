@@ -38,6 +38,12 @@ GType      xfce_appfinder_window_get_type     (void) G_GNUC_CONST;
 void       xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
                                                gboolean             expanded);
 
+enum {
+  XFCE_APPFINDER_KEY_NONE,
+  XFCE_APPFINDER_KEY_NEXT,
+  XFCE_APPFINDER_KEY_PREVIOUS
+};
+
 G_END_DECLS
 
 #endif /* !__XFCE_APPFINDER_WINDOW_H__ */
