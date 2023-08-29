@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-18 00:46+0200\n"
+"POT-Creation-Date: 2023-08-09 00:46+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>, 2011-2015,2018-2020,2022-2023\n"
 "Language-Team: Korean (http://app.transifex.com/xfce/xfce4-appfinder/language/ko/)\n"
@@ -109,6 +109,10 @@ msgstr "실행(_U)"
 #: ../src/appfinder-window.c:991
 msgid "Failed to launch desktop item editor"
 msgstr "데스크톱 항목 편집기 실행 실패"
+
+#: ../src/appfinder-window.c:1016
+msgid "Confirm"
+msgstr "확인"
 
 #: ../src/appfinder-window.c:1017
 msgid ""
