@@ -430,7 +430,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
-                                <property name="tooltip_text" translatable="yes">Hide window decorations such as title bar and borders.</property>
+                                <property name="tooltip_text" translatable="yes">Hide window decorations such as title bar and borders, the window will be closed when focus is lost.</property>
                                 <property name="use_underline">True</property>
                                 <property name="active">False</property>
                                 <property name="draw_indicator">True</property>

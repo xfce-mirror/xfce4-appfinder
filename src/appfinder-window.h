@@ -35,9 +35,11 @@ typedef struct _XfceAppfinderWindow      XfceAppfinderWindow;
 
 GType      xfce_appfinder_window_get_type     (void) G_GNUC_CONST;
 
+void       xfce_appfinder_window_keep_open    (XfceAppfinderWindow *window,
+                                               gboolean             keep_open);
+
 void       xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
                                                gboolean             expanded);
-
 G_END_DECLS
 
 #endif /* !__XFCE_APPFINDER_WINDOW_H__ */

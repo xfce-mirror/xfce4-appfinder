@@ -57,6 +57,7 @@
 
 
 static void       xfce_appfinder_window_finalize                      (GObject                     *object);
+static void       xfce_appfinder_window_focus_out                     (GtkWidget                   *widget);
 static void       xfce_appfinder_window_unmap                         (GtkWidget                   *widget);
 static gboolean   xfce_appfinder_window_key_press_event               (GtkWidget                   *widget,
                                                                        GdkEventKey                 *event);
@@ -97,8 +98,7 @@ static void       xfce_appfinder_window_category_changed              (GtkTreeSe
                                                                        XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_category_set_categories       (XfceAppfinderModel          *model,
                                                                        XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_preferences                   (GtkWidget                   *button,
-                                                                       XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_preferences                   (XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_property_changed              (XfconfChannel               *channel,
                                                                        const gchar                 *prop,
                                                                        const GValue                *value,
@@ -168,6 +168,7 @@ struct _XfceAppfinderWindow
 
   gint                        last_window_height;
 
+  gulong                      focus_out_id;
   gulong                      property_watch_id;
   gulong                      categories_changed_id;
 };
@@ -219,6 +220,9 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gint                integer;
   gboolean            sort_by_frecency;
   gint                scale_factor;
+
+  window->focus_out_id =
+    g_signal_connect (window, "focus-out-event", G_CALLBACK (xfce_appfinder_window_focus_out), NULL);
 
   scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
 
@@ -368,7 +372,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   button = gtk_button_new_with_mnemonic (_("_Preferences"));
   gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
-  g_signal_connect (G_OBJECT (button), "clicked",
+  g_signal_connect_swapped (G_OBJECT (button), "clicked",
       G_CALLBACK (xfce_appfinder_window_preferences), window);
   gtk_widget_set_valign (button, GTK_ALIGN_CENTER);
   gtk_button_set_always_show_image(GTK_BUTTON(button), TRUE);
@@ -451,6 +455,15 @@ xfce_appfinder_window_finalize (GObject *object)
   gtk_tree_path_free (window->hover_path);
 
   (*G_OBJECT_CLASS (xfce_appfinder_window_parent_class)->finalize) (object);
+}
+
+
+
+static void
+xfce_appfinder_window_focus_out (GtkWidget *widget)
+{
+  if (!gtk_window_get_decorated (GTK_WINDOW (widget)))
+    gtk_window_close (GTK_WINDOW (widget));
 }
 
 
@@ -1738,16 +1751,13 @@ xfce_appfinder_window_category_set_categories (XfceAppfinderModel  *signal_from_
 
 
 static void
-xfce_appfinder_window_preferences (GtkWidget           *button,
-                                   XfceAppfinderWindow *window)
+xfce_appfinder_window_preferences (XfceAppfinderWindow *window)
 {
-  appfinder_return_if_fail (GTK_IS_WIDGET (button));
-
   /* preload the actions, to make sure there are default values */
   if (window->actions == NULL)
     window->actions = xfce_appfinder_actions_get ();
 
-  xfce_appfinder_preferences_show (gtk_widget_get_screen (button));
+  xfce_appfinder_preferences_show (window);
 }
 
 
@@ -2082,6 +2092,18 @@ xfce_appfinder_window_update_frecency (XfceAppfinderWindow *window,
       g_free (desktop_id);
       g_free (error);
     }
+}
+
+
+
+void
+xfce_appfinder_window_keep_open (XfceAppfinderWindow *window,
+                                 gboolean             keep_open)
+{
+  if (keep_open)
+    g_signal_handler_block (window, window->focus_out_id);
+  else
+    g_signal_handler_unblock (window, window->focus_out_id);
 }
 
 
