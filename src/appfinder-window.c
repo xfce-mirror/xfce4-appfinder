@@ -178,6 +178,12 @@ static const GtkTargetEntry target_list[] =
   { "text/uri-list", 0, 0 }
 };
 
+enum {
+  XFCE_APPFINDER_KEY_NONE,
+  XFCE_APPFINDER_KEY_NEXT,
+  XFCE_APPFINDER_KEY_PREVIOUS
+};
+
 
 
 G_DEFINE_TYPE (XfceAppfinderWindow, xfce_appfinder_window, GTK_TYPE_WINDOW)
@@ -1494,34 +1500,30 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
   if (navigation_key == XFCE_APPFINDER_KEY_NONE)
     return FALSE;
 
-  if (!gtk_widget_get_visible (window->paned))
+  if (!gtk_widget_get_visible (window->paned)) /* collapsed mode */
     {
       /* don't break entry completion navigation in collapsed mode */
       if (xfce_appfinder_window_pointer_is_grabbed (entry))
         {
-          /* window is still collapsed and the pointer is grabbed
-           * by the popup menu, do nothing with the event */
+          /* the pointer is grabbed by the completion menu, ignore the event */
           return FALSE;
         }
 
       if (navigation_key == XFCE_APPFINDER_KEY_NEXT)
         {
           xfce_appfinder_window_set_expanded (window, TRUE);
-
-          if (GTK_IS_TREE_VIEW (window->view))
-            gtk_widget_grab_focus (window->view);
-
           return TRUE;
         }
 
       return FALSE;
     }
 
+  /* expanded mode */
+
   if (navigation_key == XFCE_APPFINDER_KEY_NEXT)
     {
-      /* The first item is usually selected, so we should jump to 2nd one
-       * when down key is pressed */
-      if (GTK_IS_TREE_VIEW (window->view) && /* does not make sense for icon view */
+      /* if the first item is selected, we should jump to 2nd one when next key is pressed */
+      if (GTK_IS_TREE_VIEW (window->view) && /* makes sense for list view, not icon view */
           xfce_appfinder_window_view_get_selected_path (window, &path))
         {
           gtk_tree_path_next (path);
@@ -1594,7 +1596,7 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
                                                 XfceAppfinderWindow *window)
 {
   GdkEvent     ev;
-  GtkTreePath *path;
+  GtkTreePath *path = NULL;
   guint        navigation_key;
 
   if (widget == window->view)
@@ -1615,25 +1617,32 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
           return TRUE;
         }
 
-      navigation_key = xfce_appfinder_get_navigation_key(event);
+      xfce_appfinder_window_view_get_selected_path (window, &path);
+      navigation_key = xfce_appfinder_get_navigation_key (event);
 
-      if (navigation_key != XFCE_APPFINDER_KEY_NONE &&
-          xfce_appfinder_window_view_get_selected_path (window, &path))
+      if (path == NULL || navigation_key == XFCE_APPFINDER_KEY_NONE)
         {
-          if (navigation_key == XFCE_APPFINDER_KEY_NEXT)
-              gtk_tree_path_next (path);
-          else if (!gtk_tree_path_prev (path))
-            {
-              gtk_widget_grab_focus (window->entry);
-              gtk_tree_path_free (path);
-
-              return FALSE;
-            }
-
+          /* do nothing */
+        }
+      else if (navigation_key == XFCE_APPFINDER_KEY_NEXT)
+        {
+          gtk_tree_path_next (path);
           gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->view), path, NULL, FALSE);
           gtk_tree_path_free (path);
-
           return TRUE;
+        }
+      else if (navigation_key == XFCE_APPFINDER_KEY_PREVIOUS)
+        {
+          if (gtk_tree_path_prev (path))
+            {
+              gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->view), path, NULL, FALSE);
+              gtk_tree_path_free (path);
+              return TRUE;
+            }
+
+          gtk_widget_grab_focus (window->entry);
+          gtk_tree_path_free (path);
+          return FALSE;
         }
 
       gtk_widget_grab_focus (window->entry);
