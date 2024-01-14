@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ápo. <apostolos.papadimitriu@gmail.com>, 2016
+# Ápo. <apostolos.papadimitriu@gmail.com>, 2016,2024
 # Ápo. <apostolos.papadimitriu@gmail.com>, 2016
 # ebal <ebalaskas@ebalaskas.gr>, 2008
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2015
@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-13 00:55+0200\n"
+"POT-Creation-Date: 2023-08-09 00:46+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Ioannis LM, 2022-2023\n"
+"Last-Translator: Ápo. <apostolos.papadimitriu@gmail.com>, 2016,2024\n"
 "Language-Team: Greek (http://app.transifex.com/xfce/xfce4-appfinder/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,59 +38,59 @@ msgstr "Βίαιη έξοδος"
 msgid "All Applications"
 msgstr "Όλες οι εφαρμογές"
 
-#: ../src/appfinder-model.c:653
+#: ../src/appfinder-model.c:697
 msgid "Name"
 msgstr "Όνομα"
 
-#: ../src/appfinder-model.c:654
+#: ../src/appfinder-model.c:698
 msgid "Comment"
 msgstr "Σχόλιο"
 
-#: ../src/appfinder-model.c:655
+#: ../src/appfinder-model.c:699
 msgid "Command"
 msgstr "Εντολή"
 
-#: ../src/appfinder-model.c:656
+#: ../src/appfinder-model.c:700
 msgid "Categories"
 msgstr "Κατηγορίες"
 
-#: ../src/appfinder-model.c:657
+#: ../src/appfinder-model.c:701
 msgid "Filename"
 msgstr "Όνομα αρχείου"
 
-#: ../src/appfinder-model.c:2527
+#: ../src/appfinder-model.c:2571
 msgid "Application has no command"
 msgstr "Η εφαρμογή δεν έχει εντολή"
 
-#: ../src/appfinder-model.c:2970
+#: ../src/appfinder-model.c:3048
 msgid "Commands History"
 msgstr "Ιστορικό εντολών"
 
-#: ../src/appfinder-model.c:2994
+#: ../src/appfinder-model.c:3072
 msgid "Bookmarks"
 msgstr "Σελιδοδείκτες"
 
-#: ../src/appfinder-preferences.c:272
+#: ../src/appfinder-preferences.c:276
 msgid "C_lear"
 msgstr "Ε_κκαθάριση"
 
-#: ../src/appfinder-preferences.c:273
+#: ../src/appfinder-preferences.c:277
 msgid "This will permanently clear the custom command history."
 msgstr "Αυτό θα εκκαθαρίσει μόνιμα το ιστορικό προσαρμοσμένων εντολών."
 
-#: ../src/appfinder-preferences.c:274
+#: ../src/appfinder-preferences.c:278
 msgid "Are you sure you want to clear the command history?"
 msgstr "Θέλετε σίγουρα να εκκαθαρίσετε το ιστορικό εντολών;"
 
-#: ../src/appfinder-preferences.c:385
+#: ../src/appfinder-preferences.c:389
 msgid "_Delete"
 msgstr "_Διαγραφή"
 
-#: ../src/appfinder-preferences.c:386
+#: ../src/appfinder-preferences.c:390
 msgid "The custom action will be deleted permanently."
 msgstr "Η προσαρμοσμένη ενέργεια θα διαγραφεί μόνιμα."
 
-#: ../src/appfinder-preferences.c:387
+#: ../src/appfinder-preferences.c:391
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Θέλετε σίγουρα να διαγράψετε το μοτίβο \"%s\";"
@@ -101,68 +101,72 @@ msgstr "Θέλετε σίγουρα να διαγράψετε το μοτίβο 
 msgid "Application Finder"
 msgstr "Εύρεση εφαρμογών"
 
-#: ../src/appfinder-window.c:286
+#: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
 msgstr "Εναλλαγή κατάστασης προβολής"
 
-#: ../src/appfinder-window.c:365
+#: ../src/appfinder-window.c:368
 msgid "_Preferences"
 msgstr "_Προτιμήσεις"
 
-#: ../src/appfinder-window.c:376 ../src/appfinder-window.c:1187
+#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1190
 msgid "La_unch"
 msgstr "Ε_κτέλεση"
 
-#: ../src/appfinder-window.c:988
+#: ../src/appfinder-window.c:991
 msgid "Failed to launch desktop item editor"
 msgstr "Αποτυχία εκκίνησης του επεξεργαστή αντικειμένου επιφάνειας εργασίας"
 
-#: ../src/appfinder-window.c:1014
+#: ../src/appfinder-window.c:1016
+msgid "Confirm"
+msgstr "Επιβεβαίωση"
+
+#: ../src/appfinder-window.c:1017
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Αυτό θα αφαιρέσει μόνιμα το προσαρμοσμένο αρχείο επιφάνειας εργασίας από τον προσωπικό σας κατάλογο."
 
-#: ../src/appfinder-window.c:1015
+#: ../src/appfinder-window.c:1018
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Θέλετε σίγουρα να επαναφέρετε το \"%s\";"
 
-#: ../src/appfinder-window.c:1025
+#: ../src/appfinder-window.c:1028
 msgid "Failed to remove desktop file"
 msgstr "Αποτυχία αφαίρεσης αρχείου επιφάνειας εργασίας"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:1058
+#: ../src/appfinder-window.c:1061
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Για την εμφάνιση του αντικειμένου πρέπει να αφαιρέσετε χειροκίνητα το αρχείο από το \"%s\" ή ανοίξτε το αρχείο στον ίδιο κατάλογο και αφαιρέστε την γραμμή \"%s\"."
 
-#: ../src/appfinder-window.c:1063 ../src/appfinder-window.c:1233
+#: ../src/appfinder-window.c:1066 ../src/appfinder-window.c:1236
 msgid "_Hide"
 msgstr "_Απόκρυψη"
 
-#: ../src/appfinder-window.c:1064
+#: ../src/appfinder-window.c:1067
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Θέλετε σίγουρα να αποκρύψετε το \"%s\";"
 
-#: ../src/appfinder-window.c:1169
+#: ../src/appfinder-window.c:1172
 msgid "Remove From Bookmarks"
 msgstr "Αφαίρεση από τους σελιδοδείκτες"
 
-#: ../src/appfinder-window.c:1169
+#: ../src/appfinder-window.c:1172
 msgid "Add to Bookmarks"
 msgstr "Προσθήκη στους σελιδοδείκτες"
 
-#: ../src/appfinder-window.c:1201
+#: ../src/appfinder-window.c:1204
 msgid "_Edit"
 msgstr "_Επεξεργασία"
 
-#: ../src/appfinder-window.c:1218
+#: ../src/appfinder-window.c:1221
 msgid "_Revert"
 msgstr "Ακύ_ρωση αλλαγών"
 
@@ -340,38 +344,42 @@ msgid "Hide window decorations such as title bar and borders."
 msgstr "Απόκρυψη των περιγραμμάτων του παραθύρου όπως είναι η γραμμή τίτλου και τα περιθώρια."
 
 #: ../src/appfinder-preferences.glade.h:33
+msgid "Show generic application _names"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Appearance"
 msgstr "Εμφάνιση"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:35
 msgid "C_lear Custom Command History"
 msgstr "Εκκα_θάριση προσαρμοσμένου ιστορικού εντολών"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:36
 msgid "History"
 msgstr "Ιστορικό"
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:37
 msgid "_General"
 msgstr "_Γενικά"
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:38
 msgid "Custom actions are only available in collapsed mode."
 msgstr "Οι προσαρμοσμένες ενέργειες είναι διαθέσιμες μόνο σε συμπτυγμένη λειτουργία."
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:39
 msgid "Pattern"
 msgstr "Μοτίβο"
 
-#: ../src/appfinder-preferences.glade.h:39
+#: ../src/appfinder-preferences.glade.h:40
 msgid "Add a new custom action."
 msgstr "Προσθήκη νέας προσαρμοσμένης ενέργειας."
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:41
 msgid "Remove the currently selected action."
 msgstr "Αφαίρεση της επιλεγμένης ενέργειας."
 
-#: ../src/appfinder-preferences.glade.h:42
+#: ../src/appfinder-preferences.glade.h:43
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -379,23 +387,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Εάν ο τύπος είναι ορισμένος στο πρόθεμα, το %s θα αντικατασταθεί με τη συμβολοσειρά μετά το μοτίβο %S, με το πλήρες κείμενο της καταχώρησης . Για τις κανονικές εκφράσεις μπορείτε να χρησιμοποιήσετε \\0 και \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:43
+#: ../src/appfinder-preferences.glade.h:44
 msgid "Co_mmand:"
 msgstr "Ε_ντολή:"
 
-#: ../src/appfinder-preferences.glade.h:44
+#: ../src/appfinder-preferences.glade.h:45
 msgid "Patte_rn:"
 msgstr "Μ_οτίβο:"
 
-#: ../src/appfinder-preferences.glade.h:45
+#: ../src/appfinder-preferences.glade.h:46
 msgid "_Type:"
 msgstr "_Τύπος:"
 
-#: ../src/appfinder-preferences.glade.h:46
+#: ../src/appfinder-preferences.glade.h:47
 msgid "_Save match in command history"
 msgstr "_Αποθήκευση συσχέτισης στο ιστορικό εντολών"
 
-#: ../src/appfinder-preferences.glade.h:47
+#: ../src/appfinder-preferences.glade.h:48
 msgid "Custom _Actions"
 msgstr "_Προσαρμοσμένες ενέργειες"
 
