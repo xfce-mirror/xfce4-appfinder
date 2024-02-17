@@ -45,6 +45,7 @@ AC_CHECK_FUNCS([daemon setsid])
 dnl ******************************
 dnl *** Check for i18n support ***
 dnl ******************************
+GETTEXT_PACKAGE="$PACKAGE"
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$PACKAGE"], [Name of default gettext domain])
 AC_SUBST([GETTEXT_PACKAGE])
 
