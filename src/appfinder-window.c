@@ -124,6 +124,7 @@ static gint       xfce_appfinder_window_sort_items_frecency           (GtkTreeMo
                                                                        GtkTreeIter                 *b,
                                                                        gpointer                     data);
 static gchar    **xfce_appfinder_parse_envp                           (gchar                      **cmd);
+static guint      xfce_appfinder_get_navigation_key                   (GdkEventKey                 *event);
 
 struct _XfceAppfinderWindowClass
 {
@@ -138,6 +139,7 @@ struct _XfceAppfinderWindow
 
   GtkTreeModel               *sort_model;
   GtkTreeModel               *filter_model;
+  GtkTreePath                *hover_path;
 
   XfceAppfinderCategoryModel *category_model;
 
@@ -174,6 +176,12 @@ struct _XfceAppfinderWindow
 static const GtkTargetEntry target_list[] =
 {
   { "text/uri-list", 0, 0 }
+};
+
+enum {
+  XFCE_APPFINDER_KEY_NONE,
+  XFCE_APPFINDER_KEY_NEXT,
+  XFCE_APPFINDER_KEY_PREVIOUS
 };
 
 
@@ -244,6 +252,9 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   if (xfconf_channel_get_bool (window->channel, "/hide-window-decorations", FALSE))
     gtk_window_set_decorated (GTK_WINDOW (window), FALSE);
 
+  if (xfconf_channel_get_bool (window->channel, "/generic-names", FALSE))
+    g_object_set (G_OBJECT (window->model), "generic-names", TRUE, NULL);
+
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (window), vbox);
   gtk_container_set_border_width (GTK_CONTAINER (vbox), 6);
@@ -257,6 +268,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
                                                         XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM,
                                                         scale_factor);
   window->image = image = gtk_image_new_from_pixbuf (window->icon_find);
+  gtk_style_context_add_class (gtk_widget_get_style_context (GTK_WIDGET (image)), "application-icon");
   gtk_widget_set_size_request (image, 48, 48);
   gtk_widget_set_halign(image, GTK_ALIGN_CENTER);
   gtk_container_add (GTK_CONTAINER (hbox), image);
@@ -442,6 +454,8 @@ xfce_appfinder_window_finalize (GObject *object)
   if (window->filter_category != NULL)
     g_object_unref (G_OBJECT (window->filter_category));
   g_free (window->filter_text);
+
+  gtk_tree_path_free (window->hover_path);
 
   (*G_OBJECT_CLASS (xfce_appfinder_window_parent_class)->finalize) (object);
 }
@@ -685,6 +699,64 @@ xfce_appfinder_window_view_button_press_event (GtkWidget           *widget,
 
       if (have_selection)
         return xfce_appfinder_window_popup_menu (widget, window);
+
+    }
+
+  return FALSE;
+}
+
+
+
+static gboolean
+xfce_appfinder_window_view_motion_notify_event (GtkWidget           *widget,
+                                                GdkEventMotion      *event,
+                                                XfceAppfinderWindow *window)
+{
+  gint         x, y;
+  GtkTreePath *path;
+  GdkCursor   *cursor;
+  gboolean     sc_selection = FALSE;
+
+  if (GTK_IS_TREE_VIEW (widget)
+      && gtk_tree_view_get_activate_on_single_click (GTK_TREE_VIEW (widget)))
+    {
+      gtk_tree_view_convert_widget_to_bin_window_coords (GTK_TREE_VIEW (widget),
+                                                         event->x, event->y, &x, &y);
+
+      if (gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (widget), x, y, &path, NULL, NULL, NULL))
+        sc_selection = TRUE;
+    }
+  else if (GTK_IS_ICON_VIEW (widget)
+           && gtk_icon_view_get_activate_on_single_click (GTK_ICON_VIEW (widget)))
+    {
+      path = gtk_icon_view_get_path_at_pos (GTK_ICON_VIEW (widget), event->x, event->y);
+      if (path != NULL)
+        sc_selection = TRUE;
+    }
+
+  if (sc_selection)
+    {
+      /* check if hovering over a new selection */
+      if (window->hover_path == NULL
+          || (gtk_tree_path_compare (path, window->hover_path) != 0))
+        {
+          gtk_tree_path_free (window->hover_path);
+          window->hover_path = path;
+
+          /* set to 'single-click' hand cursor */
+          cursor = gdk_cursor_new_for_display (gdk_window_get_display (event->window), GDK_HAND2);
+          gdk_window_set_cursor (event->window, cursor);
+          g_object_unref (cursor);
+        }
+      else
+        gtk_tree_path_free (path);
+    }
+  else if (window->hover_path != NULL)
+    {
+      /* moved off selection, reset cursor */
+      gtk_tree_path_free (window->hover_path);
+      window->hover_path = NULL;
+      gdk_window_set_cursor (event->window, NULL);
     }
 
   return FALSE;
@@ -700,8 +772,11 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
   GtkTreeSelection  *selection;
   GtkWidget         *view;
   gboolean           icon_view;
+  gboolean           sc_execute;
 
   icon_view = xfconf_channel_get_bool (window->channel, "/icon-view", FALSE);
+  sc_execute = xfconf_channel_get_bool (window->channel, "/single-click-execute", FALSE);
+
   if (window->view != NULL)
     {
       if (icon_view && GTK_IS_ICON_VIEW (window->view))
@@ -735,6 +810,9 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
       gtk_icon_view_set_row_spacing (GTK_ICON_VIEW (view), 0);
       xfce_appfinder_window_set_item_width (window);
 
+      if (sc_execute)
+        gtk_icon_view_set_activate_on_single_click (GTK_ICON_VIEW (view), sc_execute);
+
       g_signal_connect_swapped (G_OBJECT (view), "selection-changed",
           G_CALLBACK (xfce_appfinder_window_item_changed), window);
       g_signal_connect_swapped (G_OBJECT (view), "item-activated",
@@ -746,6 +824,10 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
       gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (view), FALSE);
       gtk_tree_view_set_enable_search (GTK_TREE_VIEW (view), FALSE);
       gtk_tree_view_set_tooltip_column (GTK_TREE_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP);
+
+      if (sc_execute)
+        gtk_tree_view_set_activate_on_single_click (GTK_TREE_VIEW (view), sc_execute);
+
       g_signal_connect_swapped (G_OBJECT (view), "row-activated",
           G_CALLBACK (xfce_appfinder_window_row_activated), window);
       g_signal_connect_swapped (G_OBJECT (view), "start-interactive-search",
@@ -785,6 +867,8 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
       G_CALLBACK (xfce_appfinder_window_popup_menu), window);
   g_signal_connect (G_OBJECT (view), "button-press-event",
       G_CALLBACK (xfce_appfinder_window_view_button_press_event), window);
+  g_signal_connect (G_OBJECT (view), "motion-notify-event",
+      G_CALLBACK (xfce_appfinder_window_view_motion_notify_event), window);
   gtk_container_add (GTK_CONTAINER (window->viewscroll), view);
   gtk_widget_show (view);
 }
@@ -937,7 +1021,7 @@ xfce_appfinder_window_popup_menu_revert (GtkWidget           *mi,
   if (name == NULL)
     return;
 
-  if (xfce_dialog_confirm (GTK_WINDOW (window), XFCE_APPFINDER_ICON_NAME_REVERT, NULL,
+  if (xfce_dialog_confirm (GTK_WINDOW (window), XFCE_APPFINDER_ICON_NAME_REVERT, _("Confirm"),
           _("This will permanently remove the custom desktop file from your home directory."),
           _("Are you sure you want to revert \"%s\"?"), name))
     {
@@ -1400,9 +1484,8 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
                                              GdkEventKey         *event,
                                              XfceAppfinderWindow *window)
 {
-  gboolean          expand;
-  gboolean          is_expanded;
-  GtkTreePath      *path;
+  GtkTreePath *path;
+  guint        navigation_key;
 
   if (event->keyval == GDK_KEY_Tab &&
       !gtk_widget_get_visible (window->paned) &&
@@ -1412,39 +1495,48 @@ xfce_appfinder_window_entry_key_press_event (GtkWidget           *entry,
       return TRUE;
     }
 
-  if (event->keyval == GDK_KEY_Up ||
-      event->keyval == GDK_KEY_Down)
+  navigation_key = xfce_appfinder_get_navigation_key(event);
+
+  if (navigation_key == XFCE_APPFINDER_KEY_NONE)
+    return FALSE;
+
+  if (!gtk_widget_get_visible (window->paned)) /* collapsed mode */
     {
-      expand = (event->keyval == GDK_KEY_Down);
-      is_expanded = gtk_widget_get_visible (window->paned);
-
-      if (is_expanded != expand)
+      /* don't break entry completion navigation in collapsed mode */
+      if (xfce_appfinder_window_pointer_is_grabbed (entry))
         {
-          /* don't break entry completion navigation in collapsed mode */
-          if (!is_expanded && xfce_appfinder_window_pointer_is_grabbed (entry))
-            {
-              /* window is still collapsed and the pointer is grabbed
-               * by the popup menu, do nothing with the event */
-              return FALSE;
-            }
+          /* the pointer is grabbed by the completion menu, ignore the event */
+          return FALSE;
+        }
 
-          xfce_appfinder_window_set_expanded (window, expand);
+      if (navigation_key == XFCE_APPFINDER_KEY_NEXT)
+        {
+          xfce_appfinder_window_set_expanded (window, TRUE);
           return TRUE;
         }
 
-      /* The first item is usually selected, so we should jump to 2nd one
-       * when down key is pressed */
-      if (is_expanded && expand &&
-          GTK_IS_TREE_VIEW (window->view) && /* does not make sense for icon view */
+      return FALSE;
+    }
+
+  /* expanded mode */
+
+  if (navigation_key == XFCE_APPFINDER_KEY_NEXT)
+    {
+      /* if the first item is selected, we should jump to 2nd one when next key is pressed */
+      if (GTK_IS_TREE_VIEW (window->view) && /* makes sense for list view, not icon view */
           xfce_appfinder_window_view_get_selected_path (window, &path))
         {
           gtk_tree_path_next (path);
           gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->view), path, NULL, FALSE);
           gtk_tree_path_free (path);
         }
+
+      gtk_widget_grab_focus (window->view);
+      return TRUE;
     }
 
-  return FALSE;
+  xfce_appfinder_window_set_expanded (window, FALSE);
+  return TRUE;
 }
 
 
@@ -1504,7 +1596,8 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
                                                 XfceAppfinderWindow *window)
 {
   GdkEvent     ev;
-  GtkTreePath *path;
+  GtkTreePath *path = NULL;
+  guint        navigation_key;
 
   if (widget == window->view)
     {
@@ -1514,8 +1607,7 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
           event->keyval == GDK_KEY_Shift_R ||
           event->keyval == GDK_KEY_Alt_L ||
           event->keyval == GDK_KEY_Alt_R ||
-          event->keyval == GDK_KEY_Right ||
-          event->keyval == GDK_KEY_Down)
+          event->keyval == GDK_KEY_Right)
           return FALSE;
 
       if (event->keyval == GDK_KEY_Left)
@@ -1525,15 +1617,31 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
           return TRUE;
         }
 
-      if (event->keyval == GDK_KEY_Up)
+      xfce_appfinder_window_view_get_selected_path (window, &path);
+      navigation_key = xfce_appfinder_get_navigation_key (event);
+
+      if (path == NULL || navigation_key == XFCE_APPFINDER_KEY_NONE)
         {
-          if (xfce_appfinder_window_view_get_selected_path (window, &path))
+          /* do nothing */
+        }
+      else if (navigation_key == XFCE_APPFINDER_KEY_NEXT)
+        {
+          gtk_tree_path_next (path);
+          gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->view), path, NULL, FALSE);
+          gtk_tree_path_free (path);
+          return TRUE;
+        }
+      else if (navigation_key == XFCE_APPFINDER_KEY_PREVIOUS)
+        {
+          if (gtk_tree_path_prev (path))
             {
-              if (!gtk_tree_path_prev (path))
-                gtk_widget_grab_focus (window->entry);
+              gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->view), path, NULL, FALSE);
               gtk_tree_path_free (path);
+              return TRUE;
             }
 
+          gtk_widget_grab_focus (window->entry);
+          gtk_tree_path_free (path);
           return FALSE;
         }
 
@@ -1713,6 +1821,19 @@ xfce_appfinder_window_property_changed (XfconfChannel       *channel,
     {
       gboolean hide = g_value_get_boolean (value);
       gtk_window_set_decorated (GTK_WINDOW (window), !hide);
+    }
+  else if (g_strcmp0 (prop, "/single-click-execute") == 0)
+    {
+      gboolean sc_execute = g_value_get_boolean (value);
+      if (GTK_IS_TREE_VIEW (window->view))
+        gtk_tree_view_set_activate_on_single_click (GTK_TREE_VIEW (window->view), sc_execute);
+      else
+        gtk_icon_view_set_activate_on_single_click (GTK_ICON_VIEW (window->view), sc_execute);
+    }
+  else if (g_strcmp0 (prop, "/generic-names") == 0)
+    {
+      gboolean generic_names = g_value_get_boolean (value);
+      g_object_set (G_OBJECT (window->model), "generic-names", generic_names, NULL);
     }
 }
 
@@ -2160,4 +2281,27 @@ xfce_appfinder_parse_envp (gchar **cmd)
   g_strfreev (vars);
 
   return envp;
+}
+
+
+
+static guint
+xfce_appfinder_get_navigation_key (GdkEventKey *event)
+{
+  if (event->keyval == GDK_KEY_Down)
+    return XFCE_APPFINDER_KEY_NEXT;
+
+  if (event->keyval == GDK_KEY_Up)
+    return XFCE_APPFINDER_KEY_PREVIOUS;
+
+  if ((event->state & GDK_CONTROL_MASK) != 0)
+    {
+      if (event->keyval == GDK_KEY_n || event->keyval == GDK_KEY_N)
+        return XFCE_APPFINDER_KEY_NEXT;
+
+      if (event->keyval == GDK_KEY_p || event->keyval == GDK_KEY_P)
+        return XFCE_APPFINDER_KEY_PREVIOUS;
+    }
+
+  return XFCE_APPFINDER_KEY_NONE;
 }

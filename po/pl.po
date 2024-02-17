@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Marek Adamski, 2021
+# Marek Adamski, 2021,2023
 # Marek Piechut <mco@o2.pl>, 2005
 # Michał Olber <michal@olber.pl>, 2014
 # Marek Adamski, 2017-2021
@@ -14,10 +14,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-30 00:47+0100\n"
-"PO-Revision-Date: 2021-11-30 04:33+0000\n"
-"Last-Translator: Marek Adamski\n"
-"Language-Team: Polish (http://www.transifex.com/xfce/xfce4-appfinder/language/pl/)\n"
+"POT-Creation-Date: 2023-08-09 00:46+0200\n"
+"PO-Revision-Date: 2013-07-02 20:40+0000\n"
+"Last-Translator: Marek Adamski, 2021,2023\n"
+"Language-Team: Polish (http://app.transifex.com/xfce/xfce4-appfinder/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,172 +25,184 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #. close all windows and quit
-#: ../src/appfinder-gdbus.c:84
+#: ../src/appfinder-gdbus.c:99
 msgid "Forced to quit"
 msgstr "Wymuszenie zakończenia programu"
 
-#: ../src/appfinder-category-model.c:147
+#: ../src/appfinder-category-model.c:157
 msgid "All Applications"
 msgstr "Wszystkie programy"
 
-#: ../src/appfinder-model.c:613
+#: ../src/appfinder-model.c:697
 msgid "Name"
 msgstr "Nazwa"
 
-#: ../src/appfinder-model.c:614
+#: ../src/appfinder-model.c:698
 msgid "Comment"
 msgstr "Komentarz"
 
-#: ../src/appfinder-model.c:615
+#: ../src/appfinder-model.c:699
 msgid "Command"
 msgstr "Polecenie"
 
-#: ../src/appfinder-model.c:616
+#: ../src/appfinder-model.c:700
 msgid "Categories"
 msgstr "Kategorie"
 
-#: ../src/appfinder-model.c:617
+#: ../src/appfinder-model.c:701
 msgid "Filename"
 msgstr "Nazwa pliku"
 
-#: ../src/appfinder-model.c:2451
+#: ../src/appfinder-model.c:2571
 msgid "Application has no command"
 msgstr "Program nie posiada przypisanego polecenia"
 
-#: ../src/appfinder-model.c:2884
+#: ../src/appfinder-model.c:3048
 msgid "Commands History"
 msgstr "Historia poleceń"
 
-#: ../src/appfinder-model.c:2908
+#: ../src/appfinder-model.c:3072
 msgid "Bookmarks"
 msgstr "Zakładki"
 
-#: ../src/appfinder-preferences.c:266
+#: ../src/appfinder-preferences.c:276
 msgid "C_lear"
 msgstr "_Wyczyść"
 
-#: ../src/appfinder-preferences.c:267
+#: ../src/appfinder-preferences.c:277
 msgid "This will permanently clear the custom command history."
 msgstr "Historia poleceń zostanie trwale usunięta."
 
-#: ../src/appfinder-preferences.c:268
+#: ../src/appfinder-preferences.c:278
 msgid "Are you sure you want to clear the command history?"
 msgstr "Wyczyścić historię?"
 
-#: ../src/appfinder-preferences.c:377
+#: ../src/appfinder-preferences.c:389
 msgid "_Delete"
 msgstr "_Usuń"
 
-#: ../src/appfinder-preferences.c:378
+#: ../src/appfinder-preferences.c:390
 msgid "The custom action will be deleted permanently."
 msgstr "Czynność zostanie trwale usunięta."
 
-#: ../src/appfinder-preferences.c:379
+#: ../src/appfinder-preferences.c:391
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Usunąć wzór „%s”?"
 
-#: ../src/appfinder-window.c:232 ../src/appfinder-preferences.glade.h:10
+#: ../src/appfinder-window.c:237 ../src/appfinder-preferences.glade.h:10
 #: ../data/xfce4-appfinder.desktop.in.h:1
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Wyszukiwarka programów"
 
-#: ../src/appfinder-window.c:279
+#: ../src/appfinder-window.c:289
 msgid "Toggle view mode"
 msgstr "Przełącza tryb wyświetlania"
 
-#: ../src/appfinder-window.c:358
+#: ../src/appfinder-window.c:368
 msgid "_Preferences"
 msgstr "P_referencje"
 
-#: ../src/appfinder-window.c:369 ../src/appfinder-window.c:1097
+#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1190
 msgid "La_unch"
 msgstr "_Uruchom"
 
-#: ../src/appfinder-window.c:898
+#: ../src/appfinder-window.c:991
 msgid "Failed to launch desktop item editor"
 msgstr "Nie udało się uruchomić edytora aktywatorów"
 
-#: ../src/appfinder-window.c:924
+#: ../src/appfinder-window.c:1016
+msgid "Confirm"
+msgstr "Potwierdź"
+
+#: ../src/appfinder-window.c:1017
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Plik aktywatora zostanie trwale usunięty z katalogu użytkownika."
 
-#: ../src/appfinder-window.c:925
+#: ../src/appfinder-window.c:1018
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Przywrócić „%s”?"
 
-#: ../src/appfinder-window.c:935
+#: ../src/appfinder-window.c:1028
 msgid "Failed to remove desktop file"
 msgstr "Nie udało się usunąć pliku aktywatora"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:968
+#: ../src/appfinder-window.c:1061
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Aby ponownie wyświetlić element, należy usunąć plik odpowiedni aktywatora z położenia „%s” lub usunąć z niego wiersz „%s”."
 
-#: ../src/appfinder-window.c:973 ../src/appfinder-window.c:1143
+#: ../src/appfinder-window.c:1066 ../src/appfinder-window.c:1236
 msgid "_Hide"
 msgstr "_Ukryj"
 
-#: ../src/appfinder-window.c:974
+#: ../src/appfinder-window.c:1067
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Ukryć „%s”?"
 
-#: ../src/appfinder-window.c:1079
+#: ../src/appfinder-window.c:1172
 msgid "Remove From Bookmarks"
 msgstr "Usuń zakładkę"
 
-#: ../src/appfinder-window.c:1079
+#: ../src/appfinder-window.c:1172
 msgid "Add to Bookmarks"
 msgstr "Dodaj zakładkę"
 
-#: ../src/appfinder-window.c:1111
+#: ../src/appfinder-window.c:1204
 msgid "_Edit"
 msgstr "_Edycja"
 
-#: ../src/appfinder-window.c:1128
+#: ../src/appfinder-window.c:1221
 msgid "_Revert"
 msgstr "_Cofnij"
 
-#: ../src/main.c:64
+#: ../src/main.c:66
 msgid "Start in collapsed mode"
 msgstr "Uruchamia w trybie zwartym"
 
-#: ../src/main.c:65
+#: ../src/main.c:67
 msgid "Print version information and exit"
 msgstr "Wypisuje informacje o wersji i kończy"
 
-#: ../src/main.c:66
+#: ../src/main.c:68
 msgid "Replace the existing service"
 msgstr "Zastępuje istniejącą usługę"
 
-#: ../src/main.c:67
+#: ../src/main.c:69
 msgid "Quit all instances"
 msgstr "Kończy działanie wszystkich wystąpień programu"
 
-#: ../src/main.c:68
+#: ../src/main.c:70
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Nie używa systemu D-Bus"
 
-#: ../src/main.c:231
+#: ../src/main.c:71
+msgid "Toggle window visibility of background service"
+msgstr "Przełącza widoczność okna usługi działającej w tle"
+
+#: ../src/main.c:72
+msgid "Run in daemon mode"
+msgstr "Uruchamia w trybie demona"
+
+#: ../src/main.c:249
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Proszę wprowadzić „%s --help”, aby wypisać komunikat pomocy."
 
-#: ../src/main.c:242
+#: ../src/main.c:260
 msgid "The Xfce development team. All rights reserved."
 msgstr "Zespół twórców Xfce. Wszystkie prawa zastrzeżone."
 
-#: ../src/main.c:243
+#: ../src/main.c:261
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Proszę zgłaszać błędy na adres <%s>."
@@ -283,74 +295,86 @@ msgid ""
 msgstr "Rozmieszczanie elementów, tak aby ostatnio używane były na górze."
 
 #: ../src/appfinder-preferences.glade.h:22
+msgid "Single-click selects and launches items"
+msgstr "Pojedyncze kliknięcie wybiera i uruchamia elementy"
+
+#: ../src/appfinder-preferences.glade.h:23
+msgid "Items are selected and launched with only a single-click."
+msgstr "Elementy są wybierane i uruchamiane pojedynczym kliknięciem."
+
+#: ../src/appfinder-preferences.glade.h:24
 msgid "Behaviour"
 msgstr "Zachowanie"
 
-#: ../src/appfinder-preferences.glade.h:23
+#: ../src/appfinder-preferences.glade.h:25
 msgid "_View items as icons"
 msgstr "_Wyświetlanie zawartości jako ikony"
 
-#: ../src/appfinder-preferences.glade.h:24
+#: ../src/appfinder-preferences.glade.h:26
 msgid "Text besi_de icons"
 msgstr "Etykiety _obok ikon"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: ../src/appfinder-preferences.glade.h:27
 msgid "Ite_m icon size:"
 msgstr "Rozmiar ikon _zawartości:"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: ../src/appfinder-preferences.glade.h:28
 msgid "Hide category pane"
 msgstr "Ukrywanie panelu kategorii"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: ../src/appfinder-preferences.glade.h:29
 msgid "Hide category panel and show all applications."
 msgstr "Ukrywa panel kategorii i pokazuje wszystkie aplikacje."
 
-#: ../src/appfinder-preferences.glade.h:28
+#: ../src/appfinder-preferences.glade.h:30
 msgid "Categ_ory icon size:"
 msgstr "Rozmiar ikon _kategorii:"
 
-#: ../src/appfinder-preferences.glade.h:29
+#: ../src/appfinder-preferences.glade.h:31
 msgid "Hide window decorations"
 msgstr "Ukrywanie dekoracji okien"
 
-#: ../src/appfinder-preferences.glade.h:30
+#: ../src/appfinder-preferences.glade.h:32
 msgid "Hide window decorations such as title bar and borders."
 msgstr "Ukrywa dekoracje okien, takie jak pasek tytułu i obramowania."
 
-#: ../src/appfinder-preferences.glade.h:31
+#: ../src/appfinder-preferences.glade.h:33
+msgid "Show generic application _names"
+msgstr "Uproszczone _nazwy programów"
+
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Appearance"
 msgstr "Wygląd"
 
-#: ../src/appfinder-preferences.glade.h:32
+#: ../src/appfinder-preferences.glade.h:35
 msgid "C_lear Custom Command History"
 msgstr "_Wyczyść historię poleceń"
 
-#: ../src/appfinder-preferences.glade.h:33
+#: ../src/appfinder-preferences.glade.h:36
 msgid "History"
 msgstr "Historia"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:37
 msgid "_General"
 msgstr "_Ogólne"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:38
 msgid "Custom actions are only available in collapsed mode."
 msgstr "Czynności niestandardowe są dostępne tylko w trybie zwartym."
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:39
 msgid "Pattern"
 msgstr "Wzór"
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:40
 msgid "Add a new custom action."
 msgstr "Dodaje nową czynność."
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:41
 msgid "Remove the currently selected action."
 msgstr "Usuwa zaznaczoną czynność"
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:43
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -358,23 +382,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Wprowadza polecenie czynności. Jeśli typ ustawiono na prefiks, parametr %s zostanie zastąpiony ciągiem wprowadzonym po wzorze, a parametr %S całym ciągiem wraz ze wzorem. Dla wyrażeń regularnych można użyć \\0 i \\<numer>."
 
-#: ../src/appfinder-preferences.glade.h:41
+#: ../src/appfinder-preferences.glade.h:44
 msgid "Co_mmand:"
 msgstr "_Polecenie:"
 
-#: ../src/appfinder-preferences.glade.h:42
+#: ../src/appfinder-preferences.glade.h:45
 msgid "Patte_rn:"
 msgstr "_Wzór:"
 
-#: ../src/appfinder-preferences.glade.h:43
+#: ../src/appfinder-preferences.glade.h:46
 msgid "_Type:"
 msgstr "_Typ:"
 
-#: ../src/appfinder-preferences.glade.h:44
+#: ../src/appfinder-preferences.glade.h:47
 msgid "_Save match in command history"
 msgstr "_Zapisanie dopasowania w historii poleceń"
 
-#: ../src/appfinder-preferences.glade.h:45
+#: ../src/appfinder-preferences.glade.h:48
 msgid "Custom _Actions"
 msgstr "_Czynności"
 
