@@ -5,24 +5,13 @@ dnl
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
-m4_define([xfce4_appfinder_version_major], [4])
-m4_define([xfce4_appfinder_version_minor], [19])
-m4_define([xfce4_appfinder_version_micro], [1])
-m4_define([xfce4_appfinder_version_nano], []) dnl leave this empty to have no nano version
-m4_define([xfce4_appfinder_version_build], [@REVISION@])
-m4_define([xfce4_appfinder_version_tag], [git])
-m4_define([xfce4_appfinder_version], [xfce4_appfinder_version_major().xfce4_appfinder_version_minor().xfce4_appfinder_version_micro()ifelse(xfce4_appfinder_version_nano(), [], [], [.xfce4_appfinder_version_nano()])ifelse(xfce4_appfinder_version_tag(), [git], [xfce4_appfinder_version_tag()-xfce4_appfinder_version_build()], [xfce4_appfinder_version_tag()])])
-
-dnl *******************************************
-dnl *** Debugging support for GIT  snapshots ***
-dnl *******************************************
-m4_define([appfinder_debug_default], [ifelse(xfce4_appfinder_version_tag(), [git], [yes], [minimum])])
+XDT_VERSION_INIT([4.19.1], [git])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2008-2023 The Xfce development team. All rights reserved.])
-AC_INIT([xfce4-appfinder], [xfce4_appfinder_version], [https://gitlab.xfce.org/xfce/xfce4-appfinder/], [xfce4-appfinder])
+AC_INIT([xfce4-appfinder], [xdt_version], [https://gitlab.xfce.org/xfce/xfce4-appfinder/], [xfce4-appfinder])
 AC_PREREQ([2.60])
 AC_CONFIG_MACRO_DIRS([m4])
 
@@ -34,21 +23,12 @@ AC_CONFIG_HEADERS([config.h])
 AM_MAINTAINER_MODE()
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
-dnl *******************************
-dnl *** Check for UNIX variants ***
-dnl *******************************
-AC_AIX()
-AC_ISC_POSIX()
-AC_MINIX()
-
 dnl ********************************
 dnl *** Check for basic programs ***
 dnl ********************************
 AC_PROG_CC()
 AM_PROG_CC_C_O()
-AC_PROG_LD()
 AC_PROG_INSTALL()
-IT_PROG_INTLTOOL([0.35.0])
 
 dnl **************************
 dnl *** Initialize libtool ***
@@ -59,14 +39,18 @@ LT_INIT([disable-static])
 dnl **********************************
 dnl *** Check for standard headers ***
 dnl **********************************
-AC_HEADER_STDC()
 AC_CHECK_HEADERS([stdlib.h string.h errno.h unistd.h])
 AC_CHECK_FUNCS([daemon setsid])
 
 dnl ******************************
 dnl *** Check for i18n support ***
 dnl ******************************
-XDT_I18N([@LINGUAS@])
+GETTEXT_PACKAGE="$PACKAGE"
+AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$PACKAGE"], [Name of default gettext domain])
+AC_SUBST([GETTEXT_PACKAGE])
+
+AM_GNU_GETTEXT([external])
+AM_GNU_GETTEXT_VERSION([0.19.8])
 
 dnl ***********************************
 dnl *** Check for required packages ***
@@ -83,7 +67,7 @@ XDT_CHECK_PACKAGE([XFCONF], [libxfconf-0], [4.18.0])
 dnl ***********************************
 dnl *** Check for debugging support ***
 dnl ***********************************
-XDT_FEATURE_DEBUG([appfinder_debug_default])
+XDT_FEATURE_DEBUG([xdt_debug_default])
 
 dnl **************************************
 dnl *** Check for linker optimizations ***
@@ -103,7 +87,7 @@ AC_MSG_CHECKING([PLATFORM_LDFLAGS])
 AC_MSG_RESULT([$PLATFORM_LDFLAGS])
 AC_SUBST([PLATFORM_LDFLAGS])
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
 Makefile
 data/Makefile
 data/icons/Makefile
@@ -116,6 +100,7 @@ data/icons/scalable/Makefile
 src/Makefile
 po/Makefile.in
 ])
+AC_OUTPUT
 
 dnl ***************************
 dnl *** Print configuration ***
