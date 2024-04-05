@@ -16,7 +16,7 @@ config.log
 config.status
 config.sub
 configure
-configure.ac
+configure~
 data/org.xfce.xfce4-appfinder.appdata.xml
 data/xfce4-appfinder.desktop
 data/xfce4-run.desktop
@@ -29,15 +29,23 @@ Makefile
 Makefile.in
 missing
 po/.deps/
-po/.intltool-merge-cache*
 po/Makefile.in.in
 po/POTFILES
 po/stamp-it
 src/.deps/
+ABOUT-NLS
+po/Makevars.template
+po/Rules-quot
+po/boldquot.sed
+po/en@boldquot.header
+po/en@quot.header
+po/insert-header.sin
+po/quot.sed
+po/remove-potcdate.sed
+po/remove-potcdate.sin
+po/stamp-po
+po/*.pot
 
-intltool-extract.in
-intltool-merge.in
-intltool-update.in
 src/appfinder-preferences-ui.h
 src/xfce4-appfinder
 
