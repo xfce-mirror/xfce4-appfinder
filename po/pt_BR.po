@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-09 00:46+0200\n"
+"POT-Creation-Date: 2024-04-06 00:47+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: The Cat, 2023\n"
 "Language-Team: Portuguese (Brazil) (http://app.transifex.com/xfce/xfce4-appfinder/language/pt_BR/)\n"
@@ -93,78 +93,77 @@ msgstr "A ação personalizada será excluída permanentemente."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Você tem certeza de que quer excluir o padrão \"%s\"?"
 
-#: ../src/appfinder-window.c:237 ../src/appfinder-preferences.glade.h:10
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder-window.c:244 ../src/appfinder-preferences.glade.h:10
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Localizador de aplicativos"
 
-#: ../src/appfinder-window.c:289
+#: ../src/appfinder-window.c:297
 msgid "Toggle view mode"
 msgstr "Alternar modo de visão"
 
-#: ../src/appfinder-window.c:368
+#: ../src/appfinder-window.c:376
 msgid "_Preferences"
 msgstr "_Preferências"
 
-#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1190
+#: ../src/appfinder-window.c:387 ../src/appfinder-window.c:1198
 msgid "La_unch"
 msgstr "La_nçar"
 
-#: ../src/appfinder-window.c:991
+#: ../src/appfinder-window.c:999
 msgid "Failed to launch desktop item editor"
 msgstr "Falha ao executar o editor de item do desktop"
 
-#: ../src/appfinder-window.c:1016
+#: ../src/appfinder-window.c:1024
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: ../src/appfinder-window.c:1017
+#: ../src/appfinder-window.c:1025
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Isto irá remover permanentemente o arquivo de área de trabalho personalizado de seu diretório \"home\"."
 
-#: ../src/appfinder-window.c:1018
+#: ../src/appfinder-window.c:1026
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Você tem certeza de que quer reverter \"%s\"?"
 
-#: ../src/appfinder-window.c:1028
+#: ../src/appfinder-window.c:1036
 msgid "Failed to remove desktop file"
 msgstr "Falha ao remover arquivo de área de trabalho"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:1061
+#: ../src/appfinder-window.c:1069
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Para mostrar o item, você tem que manualmente remover o arquivo de área de trabalho de \"%s\" ou abrir o arquivo no mesmo diretório e remover a linha \"%s\"."
 
-#: ../src/appfinder-window.c:1066 ../src/appfinder-window.c:1236
+#: ../src/appfinder-window.c:1074 ../src/appfinder-window.c:1244
 msgid "_Hide"
 msgstr "_Ocultar"
 
-#: ../src/appfinder-window.c:1067
+#: ../src/appfinder-window.c:1075
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Você tem certeza de que quer ocultar \"%s\"?"
 
-#: ../src/appfinder-window.c:1172
+#: ../src/appfinder-window.c:1180
 msgid "Remove From Bookmarks"
 msgstr "Remover dos marcadores"
 
-#: ../src/appfinder-window.c:1172
+#: ../src/appfinder-window.c:1180
 msgid "Add to Bookmarks"
 msgstr "Adicionar aos marcadores"
 
-#: ../src/appfinder-window.c:1204
+#: ../src/appfinder-window.c:1212
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../src/appfinder-window.c:1221
+#: ../src/appfinder-window.c:1229
 msgid "_Revert"
 msgstr "_Reverter"
 
@@ -404,29 +403,6 @@ msgstr "_Salvar correspondente no histórico de comandos"
 #: ../src/appfinder-preferences.glade.h:48
 msgid "Custom _Actions"
 msgstr "_Ações personalizadas"
-
-#: ../data/xfce4-appfinder.desktop.in.h:2
-msgid "Find and launch applications installed on your system"
-msgstr "Localize e execute aplicativos instalados no seu sistema"
-
-#: ../data/xfce4-appfinder.desktop.in.h:3
-msgid "program;applications;bookmarks;"
-msgstr "programa, aplicativos, marcadores;"
-
-#: ../data/xfce4-run.desktop.in.h:1
-msgid "Run Program..."
-msgstr "Executar programa..."
-
-#: ../data/xfce4-run.desktop.in.h:2
-msgid "Enter a command you want to launch"
-msgstr "Digite um comando que você deseja executar"
-
-#: ../data/xfce4-run.desktop.in.h:3
-msgid ""
-"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
-" dash;krunner;synapse;ulauncher;launchy;gnome "
-"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr "executar;comando;aplicativo;programa;localizador;pesquisa;lançador;tudo;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;trackerr;beagle;kupfer;"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
