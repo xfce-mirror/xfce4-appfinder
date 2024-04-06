@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-09 00:46+0200\n"
+"POT-Creation-Date: 2024-04-06 00:47+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Nikola Radovanović <cobisimo@gmail.com>, 2018\n"
 "Language-Team: Serbian (http://app.transifex.com/xfce/xfce4-appfinder/language/sr/)\n"
@@ -87,78 +87,77 @@ msgstr "Произвољна радња ће бити трајно избрис�
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Да ли сте сигурни да желите избрисати образац „%s“?"
 
-#: ../src/appfinder-window.c:237 ../src/appfinder-preferences.glade.h:10
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder-window.c:244 ../src/appfinder-preferences.glade.h:10
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Проналазач програма"
 
-#: ../src/appfinder-window.c:289
+#: ../src/appfinder-window.c:297
 msgid "Toggle view mode"
 msgstr "Промени начин прегледа"
 
-#: ../src/appfinder-window.c:368
+#: ../src/appfinder-window.c:376
 msgid "_Preferences"
 msgstr "Поставке"
 
-#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1190
+#: ../src/appfinder-window.c:387 ../src/appfinder-window.c:1198
 msgid "La_unch"
 msgstr "По_крени"
 
-#: ../src/appfinder-window.c:991
+#: ../src/appfinder-window.c:999
 msgid "Failed to launch desktop item editor"
 msgstr "Нисам успео да покренем уређивача ставки радне површи"
 
-#: ../src/appfinder-window.c:1016
+#: ../src/appfinder-window.c:1024
 msgid "Confirm"
 msgstr "Потврди"
 
-#: ../src/appfinder-window.c:1017
+#: ../src/appfinder-window.c:1025
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Ово ће трајно уклонити произвољну датотеку покретача програма из личне фасцикле."
 
-#: ../src/appfinder-window.c:1018
+#: ../src/appfinder-window.c:1026
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Да ли сте сигурни да желите повратити „%s“?"
 
-#: ../src/appfinder-window.c:1028
+#: ../src/appfinder-window.c:1036
 msgid "Failed to remove desktop file"
 msgstr "Нисам успео да уклоним датотеку покретача програма"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:1061
+#: ../src/appfinder-window.c:1069
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Да опет прикажете ставку, морате ручно да уклоните датотеку покретача програма из „%s“ или да отворите датотеку у истој фасцикли и да уклоните ред „%s“."
 
-#: ../src/appfinder-window.c:1066 ../src/appfinder-window.c:1236
+#: ../src/appfinder-window.c:1074 ../src/appfinder-window.c:1244
 msgid "_Hide"
 msgstr "_Сакриј"
 
-#: ../src/appfinder-window.c:1067
+#: ../src/appfinder-window.c:1075
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Да ли сте сигурни да желите да сакријете „%s“?"
 
-#: ../src/appfinder-window.c:1172
+#: ../src/appfinder-window.c:1180
 msgid "Remove From Bookmarks"
 msgstr "Уклони забелешку"
 
-#: ../src/appfinder-window.c:1172
+#: ../src/appfinder-window.c:1180
 msgid "Add to Bookmarks"
 msgstr "Додај забелешку"
 
-#: ../src/appfinder-window.c:1204
+#: ../src/appfinder-window.c:1212
 msgid "_Edit"
 msgstr "_Уреди"
 
-#: ../src/appfinder-window.c:1221
+#: ../src/appfinder-window.c:1229
 msgid "_Revert"
 msgstr "_Поврати"
 
@@ -398,29 +397,6 @@ msgstr "_Сачувај поклапање у историјату наредб�
 #: ../src/appfinder-preferences.glade.h:48
 msgid "Custom _Actions"
 msgstr "Произвољне _радње"
-
-#: ../data/xfce4-appfinder.desktop.in.h:2
-msgid "Find and launch applications installed on your system"
-msgstr "Пронађите и покрените неки од програма на систему"
-
-#: ../data/xfce4-appfinder.desktop.in.h:3
-msgid "program;applications;bookmarks;"
-msgstr "програм;апликације;белешке;забелешке;обележивачи;"
-
-#: ../data/xfce4-run.desktop.in.h:1
-msgid "Run Program..."
-msgstr "Покрени програм..."
-
-#: ../data/xfce4-run.desktop.in.h:2
-msgid "Enter a command you want to launch"
-msgstr "Унесите наредбу коју желите покренути"
-
-#: ../data/xfce4-run.desktop.in.h:3
-msgid ""
-"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
-" dash;krunner;synapse;ulauncher;launchy;gnome "
-"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr "покрени;наредба;команда;програм;апликација;проналазач;претрага;све;трагач;синапса;полетник;унити;гном;чини;бакарник;"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
