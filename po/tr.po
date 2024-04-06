@@ -12,7 +12,7 @@
 # erenturkay <turkay.eren@gmail.com>, 2008
 # Gökmen Görgen <gkmngrgn@gmail.com>, 2008
 # Necdet Yücel <necdetyucel@gmail.com>, 2017
-# Sabri Ünal <libreajans@gmail.com>, 2023
+# b83946de5835331df42b9ffcc43e6a33_05e65cd <73a30e0a984b2291d4915f37112ad292_814039>, 2023
 # Serdar Sağlam <teknomobil@msn.com>, 2019-2020
 # Volkan Gezer <volkangezer@gmail.com>, 2013
 # Zafer Eren <zaferern@gmail.com>, 2014
@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-09 00:46+0200\n"
+"POT-Creation-Date: 2024-04-06 00:47+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>, 2023\n"
+"Last-Translator: b83946de5835331df42b9ffcc43e6a33_05e65cd <73a30e0a984b2291d4915f37112ad292_814039>, 2023\n"
 "Language-Team: Turkish (http://app.transifex.com/xfce/xfce4-appfinder/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,78 +96,77 @@ msgstr "Özelleştirilmiş davranış kalıcı olarak silinecektir."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "\"%s\" desenini silmek istediğinize emin misiniz?"
 
-#: ../src/appfinder-window.c:237 ../src/appfinder-preferences.glade.h:10
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder-window.c:244 ../src/appfinder-preferences.glade.h:10
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Uygulama Bulucu"
 
-#: ../src/appfinder-window.c:289
+#: ../src/appfinder-window.c:297
 msgid "Toggle view mode"
 msgstr "Görünüm kipini değiştir"
 
-#: ../src/appfinder-window.c:368
+#: ../src/appfinder-window.c:376
 msgid "_Preferences"
 msgstr "_Tercihler"
 
-#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1190
+#: ../src/appfinder-window.c:387 ../src/appfinder-window.c:1198
 msgid "La_unch"
 msgstr "Ça_lıştır"
 
-#: ../src/appfinder-window.c:991
+#: ../src/appfinder-window.c:999
 msgid "Failed to launch desktop item editor"
 msgstr "Masaüstü öge düzenleyicisi başlatılamadı"
 
-#: ../src/appfinder-window.c:1016
+#: ../src/appfinder-window.c:1024
 msgid "Confirm"
 msgstr "Onayla"
 
-#: ../src/appfinder-window.c:1017
+#: ../src/appfinder-window.c:1025
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Özel masaüstü dosyası ev dizininizden kalıcı olarak kaldırılacak."
 
-#: ../src/appfinder-window.c:1018
+#: ../src/appfinder-window.c:1026
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "\"%s\" geri alınsın ister misiniz?"
 
-#: ../src/appfinder-window.c:1028
+#: ../src/appfinder-window.c:1036
 msgid "Failed to remove desktop file"
 msgstr "Masaüstü dosyası kaldırılamadı"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:1061
+#: ../src/appfinder-window.c:1069
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Bir nesneyi göstermek için masaüstü dosyasını \"%s\"'dan kendiniz silmelisiniz yada dosyayı aynı dizinde açarak \"%s\" numaralı satırı silmelisiniz."
 
-#: ../src/appfinder-window.c:1066 ../src/appfinder-window.c:1236
+#: ../src/appfinder-window.c:1074 ../src/appfinder-window.c:1244
 msgid "_Hide"
 msgstr "_Gizle"
 
-#: ../src/appfinder-window.c:1067
+#: ../src/appfinder-window.c:1075
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "\"%s\" gizlensin ister emin misiniz?"
 
-#: ../src/appfinder-window.c:1172
+#: ../src/appfinder-window.c:1180
 msgid "Remove From Bookmarks"
 msgstr "Yer İmlerinden Kaldır"
 
-#: ../src/appfinder-window.c:1172
+#: ../src/appfinder-window.c:1180
 msgid "Add to Bookmarks"
 msgstr "Yer İmlerine Ekle"
 
-#: ../src/appfinder-window.c:1204
+#: ../src/appfinder-window.c:1212
 msgid "_Edit"
 msgstr "_Düzenle"
 
-#: ../src/appfinder-window.c:1221
+#: ../src/appfinder-window.c:1229
 msgid "_Revert"
 msgstr "Değişiklikleri _Geri Al"
 
@@ -407,29 +406,6 @@ msgstr "_Eşleşmeleri komut geçmişinde sakla"
 #: ../src/appfinder-preferences.glade.h:48
 msgid "Custom _Actions"
 msgstr "Özelleştirilmiş _Davranışlar"
-
-#: ../data/xfce4-appfinder.desktop.in.h:2
-msgid "Find and launch applications installed on your system"
-msgstr "Sisteminde kurulu uygulamaları bul ve başlat"
-
-#: ../data/xfce4-appfinder.desktop.in.h:3
-msgid "program;applications;bookmarks;"
-msgstr "program;uygulamalar;yerimleri;yer imleri;"
-
-#: ../data/xfce4-run.desktop.in.h:1
-msgid "Run Program..."
-msgstr "Çalıştır..."
-
-#: ../data/xfce4-run.desktop.in.h:2
-msgid "Enter a command you want to launch"
-msgstr "Başlatmak istediğiniz komutu girin"
-
-#: ../data/xfce4-run.desktop.in.h:3
-msgid ""
-"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
-" dash;krunner;synapse;ulauncher;launchy;gnome "
-"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr "çalıştır;komut;uygulama;program;bulucu;finder;ara;başlatıcı;çalıştırıcı;her şey;spotlight;sahne ışığı;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
