@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce4-appfinder.master package.
 # 
 # Translators:
 # Sveinn í Felli <sv1@fellsnet.is>, 2011,2013-2015,2017-2019
@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-06 00:47+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-04-06 12:47+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>, 2011,2013-2015,2017-2019\n"
 "Language-Team: Icelandic (http://app.transifex.com/xfce/xfce4-appfinder/language/is/)\n"
@@ -21,387 +21,406 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);\n"
 
 #. close all windows and quit
-#: ../src/appfinder-gdbus.c:99
+#: src/appfinder-gdbus.c:99
 msgid "Forced to quit"
 msgstr "Þvingað til að slökkva"
 
-#: ../src/appfinder-category-model.c:157
+#: src/appfinder-category-model.c:157
 msgid "All Applications"
 msgstr "Öll forrit"
 
-#: ../src/appfinder-model.c:697
+#: src/appfinder-model.c:697
 msgid "Name"
 msgstr "Heiti"
 
-#: ../src/appfinder-model.c:698
+#: src/appfinder-model.c:698
 msgid "Comment"
 msgstr "Athugasemd"
 
-#: ../src/appfinder-model.c:699
+#: src/appfinder-model.c:699
 msgid "Command"
 msgstr "Skipun"
 
-#: ../src/appfinder-model.c:700
+#: src/appfinder-model.c:700
 msgid "Categories"
 msgstr "Flokkar"
 
-#: ../src/appfinder-model.c:701
+#: src/appfinder-model.c:701
 msgid "Filename"
 msgstr "Skráarheiti"
 
-#: ../src/appfinder-model.c:2571
+#: src/appfinder-model.c:2571
 msgid "Application has no command"
 msgstr "Engin skipun er fyrir þetta forrit"
 
-#: ../src/appfinder-model.c:3048
+#: src/appfinder-model.c:3048
 msgid "Commands History"
 msgstr "Skipanaferill"
 
-#: ../src/appfinder-model.c:3072
+#: src/appfinder-model.c:3072
 msgid "Bookmarks"
 msgstr "Bókamerki"
 
-#: ../src/appfinder-preferences.c:276
+#: src/appfinder-preferences.c:276
 msgid "C_lear"
 msgstr "Hr_einsa"
 
-#: ../src/appfinder-preferences.c:277
+#: src/appfinder-preferences.c:277
 msgid "This will permanently clear the custom command history."
 msgstr "Þetta hreinsar algerlega feril sérsniðinna skipana."
 
-#: ../src/appfinder-preferences.c:278
+#: src/appfinder-preferences.c:278
 msgid "Are you sure you want to clear the command history?"
 msgstr "Ertu viss um að þú viljir feril skipana?"
 
-#: ../src/appfinder-preferences.c:389
+#: src/appfinder-preferences.c:389
 msgid "_Delete"
 msgstr "_Eyða"
 
-#: ../src/appfinder-preferences.c:390
+#: src/appfinder-preferences.c:390
 msgid "The custom action will be deleted permanently."
 msgstr "Sérsniðnu aðgerðinni verður eytt endanlega."
 
-#: ../src/appfinder-preferences.c:391
+#: src/appfinder-preferences.c:391
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Ertu viss að þú viljir eyða mynstri \"%s\"?"
 
-#: ../src/appfinder-window.c:244 ../src/appfinder-preferences.glade.h:10
-#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
+#: src/appfinder-window.c:244 src/appfinder-preferences.glade:74
+#: data/xfce4-appfinder.desktop.in:10
 msgid "Application Finder"
 msgstr "Forritaleit"
 
-#: ../src/appfinder-window.c:297
+#: src/appfinder-window.c:297
 msgid "Toggle view mode"
 msgstr "Víxla skoðunarham"
 
-#: ../src/appfinder-window.c:376
+#: src/appfinder-window.c:376
 msgid "_Preferences"
 msgstr "_Kjörstillingar"
 
-#: ../src/appfinder-window.c:387 ../src/appfinder-window.c:1198
+#: src/appfinder-window.c:387 src/appfinder-window.c:1198
 msgid "La_unch"
 msgstr "_Ræsa"
 
-#: ../src/appfinder-window.c:999
+#: src/appfinder-window.c:999
 msgid "Failed to launch desktop item editor"
 msgstr "Mistókst að ræsa ritil fyrir skjáborðsatriði"
 
-#: ../src/appfinder-window.c:1024
+#: src/appfinder-window.c:1024
 msgid "Confirm"
 msgstr ""
 
-#: ../src/appfinder-window.c:1025
+#: src/appfinder-window.c:1025
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Þetta mun fjarlægja endanlega sérsniðnu skjáborðsskrána úr heimamöppunni þinni."
 
-#: ../src/appfinder-window.c:1026
+#: src/appfinder-window.c:1026
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Ertu viss að þú viljir afturkalla \"%s\"?"
 
-#: ../src/appfinder-window.c:1036
+#: src/appfinder-window.c:1036
 msgid "Failed to remove desktop file"
 msgstr "Mistókst að fjarlægja skjáborðsskrá"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:1069
+#: src/appfinder-window.c:1069
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Til að kalla atriðið aftur fram verðurðu að fjarlægja skjáborðsskrána úr \"%s\" eða opna skrána í sömu möppu og fjarlægja línuna \"%s\"."
 
-#: ../src/appfinder-window.c:1074 ../src/appfinder-window.c:1244
+#: src/appfinder-window.c:1074 src/appfinder-window.c:1244
 msgid "_Hide"
 msgstr "_Fela"
 
-#: ../src/appfinder-window.c:1075
+#: src/appfinder-window.c:1075
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Ertu viss að þú viljir fela \"%s\"?"
 
-#: ../src/appfinder-window.c:1180
+#: src/appfinder-window.c:1180
 msgid "Remove From Bookmarks"
 msgstr "Fjarlægja úr bókamerkjum"
 
-#: ../src/appfinder-window.c:1180
+#: src/appfinder-window.c:1180
 msgid "Add to Bookmarks"
 msgstr "Bæta í bókamerki"
 
-#: ../src/appfinder-window.c:1212
+#: src/appfinder-window.c:1212
 msgid "_Edit"
 msgstr "Br_eyta"
 
-#: ../src/appfinder-window.c:1229
+#: src/appfinder-window.c:1229
 msgid "_Revert"
 msgstr "_Afturkalla"
 
-#: ../src/main.c:66
+#: src/main.c:66
 msgid "Start in collapsed mode"
 msgstr "Byrja í þjöppuðum ham"
 
-#: ../src/main.c:67
+#: src/main.c:67
 msgid "Print version information and exit"
 msgstr "Prenta upplýsingar um útgáfu og hætta"
 
-#: ../src/main.c:68
+#: src/main.c:68
 msgid "Replace the existing service"
 msgstr "Skipta út upprunalegri þjónustu"
 
-#: ../src/main.c:69
+#: src/main.c:69
 msgid "Quit all instances"
 msgstr "Slökkva á öllum tilvikum"
 
-#: ../src/main.c:70
+#: src/main.c:70
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Ekki reyna að nota eða vera D-BUS þjónusta"
 
-#: ../src/main.c:71
+#: src/main.c:71
 msgid "Toggle window visibility of background service"
 msgstr ""
 
-#: ../src/main.c:72
+#: src/main.c:72
 msgid "Run in daemon mode"
 msgstr "Keyra í miðlaraham"
 
-#: ../src/main.c:249
+#: src/main.c:249
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Skrifa \"%s --help\"  fyrir notkun."
 
-#: ../src/main.c:260
+#: src/main.c:260
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce þróunarteymið. Allur réttur áskilinn."
 
-#: ../src/main.c:261
+#: src/main.c:261
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Tilkynntu villur til <%s>."
 
-#: ../src/appfinder-preferences.glade.h:1
+#: src/appfinder-preferences.glade:13
 msgid "Prefix"
 msgstr "Forskeyti"
 
-#: ../src/appfinder-preferences.glade.h:2
+#: src/appfinder-preferences.glade:16
 msgid "Regular Expression"
 msgstr "Regluleg segð"
 
-#: ../src/appfinder-preferences.glade.h:3
+#: src/appfinder-preferences.glade:35
 msgid "Very Small"
 msgstr "Mjög litlar"
 
-#: ../src/appfinder-preferences.glade.h:4
+#: src/appfinder-preferences.glade:38
 msgid "Smaller"
 msgstr "Minni"
 
-#: ../src/appfinder-preferences.glade.h:5
+#: src/appfinder-preferences.glade:41
 msgid "Small"
 msgstr "Litlar"
 
-#: ../src/appfinder-preferences.glade.h:6
+#: src/appfinder-preferences.glade:44
 msgid "Normal"
 msgstr "Venjulegar"
 
-#: ../src/appfinder-preferences.glade.h:7
+#: src/appfinder-preferences.glade:47
 msgid "Large"
 msgstr "Stórar"
 
-#: ../src/appfinder-preferences.glade.h:8
+#: src/appfinder-preferences.glade:50
 msgid "Larger"
 msgstr "Stærri"
 
-#: ../src/appfinder-preferences.glade.h:9
+#: src/appfinder-preferences.glade:53
 msgid "Very Large"
 msgstr "Mjög stórar"
 
-#: ../src/appfinder-preferences.glade.h:11
+#: src/appfinder-preferences.glade:91
 msgid "_Close"
 msgstr "_Loka"
 
-#: ../src/appfinder-preferences.glade.h:12
+#: src/appfinder-preferences.glade:107
 msgid "_Help"
 msgstr "_Hjálp"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: src/appfinder-preferences.glade:160
 msgid "Remember last _selected category"
 msgstr "Muna _flokkinn sem síðast var valinn"
 
-#: ../src/appfinder-preferences.glade.h:14
+#: src/appfinder-preferences.glade:176
 msgid "Always c_enter the window"
 msgstr "Alltaf _miðja gluggann"
 
-#: ../src/appfinder-preferences.glade.h:15
+#: src/appfinder-preferences.glade:181
 msgid "Center the window on startup."
 msgstr "Miðja gluggan við ræsingu."
 
-#: ../src/appfinder-preferences.glade.h:16
+#: src/appfinder-preferences.glade:194
 msgid "Keep running _instance in the background"
 msgstr "_Halda forriti opnu í bakgrunni"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: src/appfinder-preferences.glade:199
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "Í staðinn fyrir að hætta í forritinu þegar síðasta glugganum er lokað, er eintaki af því haldið gangandi til að hraða opnun nýrra glugga. Þú gætir viljað gera þetta óvirkt til að minnka minnisnotkun."
 
-#: ../src/appfinder-preferences.glade.h:18
+#: src/appfinder-preferences.glade:212
 msgid "Single window"
 msgstr "Einn gluggi"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: src/appfinder-preferences.glade:217
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr "Ef tilvik forritsins keyrir í bakgrunni, opna þ aðeins einn glugga einu."
 
-#: ../src/appfinder-preferences.glade.h:20
+#: src/appfinder-preferences.glade:230
 msgid "Sort recently used items first"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:21
+#: src/appfinder-preferences.glade:235
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:22
+#: src/appfinder-preferences.glade:247
 msgid "Single-click selects and launches items"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:23
+#: src/appfinder-preferences.glade:252
 msgid "Items are selected and launched with only a single-click."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:24
+#: src/appfinder-preferences.glade:270
 msgid "Behaviour"
 msgstr "Hegðun"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: src/appfinder-preferences.glade:305
 msgid "_View items as icons"
 msgstr "Birta _atriði sem táknmyndir"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: src/appfinder-preferences.glade:320
 msgid "Text besi_de icons"
 msgstr "Texti við _hlið táknmynda"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: src/appfinder-preferences.glade:338
 msgid "Ite_m icon size:"
 msgstr "Stærð tákn_mynda fyrir atriði:"
 
-#: ../src/appfinder-preferences.glade.h:28
+#: src/appfinder-preferences.glade:352
 msgid "Hide category pane"
 msgstr "Fela flokkastiku"
 
-#: ../src/appfinder-preferences.glade.h:29
+#: src/appfinder-preferences.glade:357
 msgid "Hide category panel and show all applications."
 msgstr "Fela flokkastiku og sýna öll forrit."
 
-#: ../src/appfinder-preferences.glade.h:30
+#: src/appfinder-preferences.glade:374
 msgid "Categ_ory icon size:"
 msgstr "Stærð _táknmynda fyrir flokk:"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: src/appfinder-preferences.glade:428
 msgid "Hide window decorations"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:32
+#: src/appfinder-preferences.glade:433
 msgid "Hide window decorations such as title bar and borders."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:33
+#: src/appfinder-preferences.glade:448
 msgid "Show generic application _names"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:34
+#: src/appfinder-preferences.glade:472
 msgid "Appearance"
 msgstr "Útlit"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: src/appfinder-preferences.glade:503
 msgid "C_lear Custom Command History"
 msgstr "_Hreinsa feril sérsniðinna skipana"
 
-#: ../src/appfinder-preferences.glade.h:36
+#: src/appfinder-preferences.glade:518
 msgid "History"
 msgstr "Ferill"
 
-#: ../src/appfinder-preferences.glade.h:37
+#: src/appfinder-preferences.glade:537
 msgid "_General"
 msgstr "_Almennt"
 
-#: ../src/appfinder-preferences.glade.h:38
+#: src/appfinder-preferences.glade:561
 msgid "Custom actions are only available in collapsed mode."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:39
+#: src/appfinder-preferences.glade:609
 msgid "Pattern"
 msgstr "Mynstur"
 
-#: ../src/appfinder-preferences.glade.h:40
+#: src/appfinder-preferences.glade:645
 msgid "Add a new custom action."
 msgstr "Bæta við nýrri aðgerð."
 
-#: ../src/appfinder-preferences.glade.h:41
+#: src/appfinder-preferences.glade:666
 msgid "Remove the currently selected action."
 msgstr "Fjarlægja valda aðgerð."
 
-#: ../src/appfinder-preferences.glade.h:43
-#, no-c-format
+#: src/appfinder-preferences.glade:709
+#, c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
 msgstr "Ef gerðin er sett sama sem forskeyti, verður %s skipt út með strengnum á eftir mynstrinu, %S með öllum textanum sem var settur inn. Fyrir reglulegar segðir geturðu notað \\0 og \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:44
+#: src/appfinder-preferences.glade:740
 msgid "Co_mmand:"
 msgstr "Skipu_n:"
 
-#: ../src/appfinder-preferences.glade.h:45
+#: src/appfinder-preferences.glade:755
 msgid "Patte_rn:"
 msgstr "M_ynstur:"
 
-#: ../src/appfinder-preferences.glade.h:46
+#: src/appfinder-preferences.glade:770
 msgid "_Type:"
 msgstr "_Gerð:"
 
-#: ../src/appfinder-preferences.glade.h:47
+#: src/appfinder-preferences.glade:780
 msgid "_Save match in command history"
 msgstr "Vi_sta samsvörun í skipanaferil"
 
-#: ../src/appfinder-preferences.glade.h:48
+#: src/appfinder-preferences.glade:832
 msgid "Custom _Actions"
 msgstr "Sérsniðnar _aðgerðir"
 
-#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
-msgid "Application to quickly run applications and commands"
-msgstr "Forrit til að flyta fyrir ræsingu annarra forrita og skipana"
+#: data/xfce4-appfinder.desktop.in:11
+msgid "Find and launch applications installed on your system"
+msgstr "Finna og ræsa forrit sem uppsett eru á kerfinu"
 
-#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
+#: data/xfce4-appfinder.desktop.in:12
+msgid "program;applications;bookmarks;"
+msgstr ""
+
+#: data/xfce4-run.desktop.in:11
+msgid "Run Program..."
+msgstr "Keyra forrit..."
+
+#: data/xfce4-run.desktop.in:12
+msgid "Enter a command you want to launch"
+msgstr ""
+
+#: data/xfce4-run.desktop.in:13
+msgid ""
+"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
+" dash;krunner;synapse;ulauncher;launchy;gnome "
+"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr ""
+
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:12
 msgid ""
 "The application finder is a tool to find and launch installed applications "
 "on your system and quickly execute commands. It can also be used to quickly "
