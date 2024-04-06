@@ -2,17 +2,18 @@
 <!-- Copyright 2014 Eric Koegel <eric.koegel@gmail.com> and Simon Steinbeiss <simon@xfce.org> -->
 <!-- Copyright 2018 Andre Miranda <andreldm@xfce.org> -->
 <component type="desktop">
-  <id>xfce4-appfinder.desktop</id>
+  <id>org.xfce.xfce4-appfinder</id>
   <metadata_license>CC-BY-3.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
-  <_name>Application Finder</_name>
-  <_summary>Application to quickly run applications and commands</_summary>
+  <name>Application Finder</name>
+  <summary>Application to quickly run applications and commands</summary>
+  <launchable type="desktop-id">xfce4-appfinder.desktop</launchable>
 
   <description>
-    <_p>The application finder is a tool to find and launch installed applications on your system
+    <p>The application finder is a tool to find and launch installed applications on your system
         and quickly execute commands. It can also be used to quickly add launchers to the Xfce
         Panel by dragging an item from the view and drop it on the panel.
-    </_p>
+    </p>
   </description>
 
   <screenshots>
