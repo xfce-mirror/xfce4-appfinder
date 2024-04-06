@@ -5,18 +5,18 @@
 # Translators:
 # Allan Nordhøy <epost@anotheragency.no>, 2014
 # Allan Nordhøy <epost@anotheragency.no>, 2015,2017
-# heskjestad <cato@heskjestad.xyz>, 2021,2023
+# Kaci Heskjestad, 2021,2023
 # Harald H. <haarektrans@gmail.com>, 2014
-# heskjestad <cato@heskjestad.xyz>, 2019-2021
+# Kaci Heskjestad, 2019-2021
 # Terje Uriansrud <terje@uriansrud.net>, 2009
 # Terje Uriansrud <ter@operamail.com>, 2008
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-09 00:46+0200\n"
+"POT-Creation-Date: 2024-04-06 00:47+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: heskjestad <cato@heskjestad.xyz>, 2021,2023\n"
+"Last-Translator: Kaci Heskjestad, 2021,2023\n"
 "Language-Team: Norwegian Bokmål (http://app.transifex.com/xfce/xfce4-appfinder/language/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -90,78 +90,77 @@ msgstr "Den egendefinerte handlingen vil bli slettet permanent."
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Er du sikker på at du vil slette mønsteret «%s»?"
 
-#: ../src/appfinder-window.c:237 ../src/appfinder-preferences.glade.h:10
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder-window.c:244 ../src/appfinder-preferences.glade.h:10
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Programkatalog"
 
-#: ../src/appfinder-window.c:289
+#: ../src/appfinder-window.c:297
 msgid "Toggle view mode"
 msgstr "Bytt visningsmodus"
 
-#: ../src/appfinder-window.c:368
+#: ../src/appfinder-window.c:376
 msgid "_Preferences"
 msgstr "_Innstillinger"
 
-#: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1190
+#: ../src/appfinder-window.c:387 ../src/appfinder-window.c:1198
 msgid "La_unch"
 msgstr "St_art"
 
-#: ../src/appfinder-window.c:991
+#: ../src/appfinder-window.c:999
 msgid "Failed to launch desktop item editor"
 msgstr "Klarte ikke åpne redigering av skrivebordselement"
 
-#: ../src/appfinder-window.c:1016
+#: ../src/appfinder-window.c:1024
 msgid "Confirm"
 msgstr "Bekreft"
 
-#: ../src/appfinder-window.c:1017
+#: ../src/appfinder-window.c:1025
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Dette vil permanent fjerne den egendefinerte skrivebordsfilen fra din hjemmemappe."
 
-#: ../src/appfinder-window.c:1018
+#: ../src/appfinder-window.c:1026
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Er du sikker på at du vil tilbakestille «%s»?"
 
-#: ../src/appfinder-window.c:1028
+#: ../src/appfinder-window.c:1036
 msgid "Failed to remove desktop file"
 msgstr "Klarte ikke å fjerne skrivebordsfil"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:1061
+#: ../src/appfinder-window.c:1069
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "For å vise det skjulte elementet må du manuelt fjerne skrivebordsfilen fra «%s» eller åpne filen i samme mappe og fjerne linjen «%s»."
 
-#: ../src/appfinder-window.c:1066 ../src/appfinder-window.c:1236
+#: ../src/appfinder-window.c:1074 ../src/appfinder-window.c:1244
 msgid "_Hide"
 msgstr "Skjul"
 
-#: ../src/appfinder-window.c:1067
+#: ../src/appfinder-window.c:1075
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Er du sikker på at du ønsker å skjule «%s»?"
 
-#: ../src/appfinder-window.c:1172
+#: ../src/appfinder-window.c:1180
 msgid "Remove From Bookmarks"
 msgstr "Fjern fra bokmerker"
 
-#: ../src/appfinder-window.c:1172
+#: ../src/appfinder-window.c:1180
 msgid "Add to Bookmarks"
 msgstr "Legg til bokmerker"
 
-#: ../src/appfinder-window.c:1204
+#: ../src/appfinder-window.c:1212
 msgid "_Edit"
 msgstr "_Rediger"
 
-#: ../src/appfinder-window.c:1221
+#: ../src/appfinder-window.c:1229
 msgid "_Revert"
 msgstr "_Tilbakestill"
 
@@ -401,29 +400,6 @@ msgstr "Lagre treff i kommandohistorikk"
 #: ../src/appfinder-preferences.glade.h:48
 msgid "Custom _Actions"
 msgstr "Egendefinerte handlinger"
-
-#: ../data/xfce4-appfinder.desktop.in.h:2
-msgid "Find and launch applications installed on your system"
-msgstr "Finn og kjør programmer installert på datamaskinen din"
-
-#: ../data/xfce4-appfinder.desktop.in.h:3
-msgid "program;applications;bookmarks;"
-msgstr "program;programmer;bokmerker;"
-
-#: ../data/xfce4-run.desktop.in.h:1
-msgid "Run Program..."
-msgstr "Kjør program ..."
-
-#: ../data/xfce4-run.desktop.in.h:2
-msgid "Enter a command you want to launch"
-msgstr "Angi en kommando du vil kjøre"
-
-#: ../data/xfce4-run.desktop.in.h:3
-msgid ""
-"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
-" dash;krunner;synapse;ulauncher;launchy;gnome "
-"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr "kjør;kommando;program;programmer;søk;programstarter;everything;sherlock;spotlight;unity;dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
