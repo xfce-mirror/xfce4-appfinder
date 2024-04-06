@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-13 00:55+0200\n"
+"POT-Creation-Date: 2024-04-06 00:47+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Gábor P., 2019-2020\n"
 "Language-Team: Hungarian (http://app.transifex.com/xfce/xfce4-appfinder/language/hu/)\n"
@@ -32,131 +32,134 @@ msgstr "Kényszerített kilépés"
 msgid "All Applications"
 msgstr "Minden alkalmazás"
 
-#: ../src/appfinder-model.c:653
+#: ../src/appfinder-model.c:697
 msgid "Name"
 msgstr "Név"
 
-#: ../src/appfinder-model.c:654
+#: ../src/appfinder-model.c:698
 msgid "Comment"
 msgstr "Megjegyzés"
 
-#: ../src/appfinder-model.c:655
+#: ../src/appfinder-model.c:699
 msgid "Command"
 msgstr "Parancs"
 
-#: ../src/appfinder-model.c:656
+#: ../src/appfinder-model.c:700
 msgid "Categories"
 msgstr "Kategóriák"
 
-#: ../src/appfinder-model.c:657
+#: ../src/appfinder-model.c:701
 msgid "Filename"
 msgstr "Fájlnév"
 
-#: ../src/appfinder-model.c:2527
+#: ../src/appfinder-model.c:2571
 msgid "Application has no command"
 msgstr "Az alkalmazáshoz nem tartozik parancs"
 
-#: ../src/appfinder-model.c:2970
+#: ../src/appfinder-model.c:3048
 msgid "Commands History"
 msgstr "Parancselőzmények"
 
-#: ../src/appfinder-model.c:2994
+#: ../src/appfinder-model.c:3072
 msgid "Bookmarks"
 msgstr "Könyvjelzők"
 
-#: ../src/appfinder-preferences.c:272
+#: ../src/appfinder-preferences.c:276
 msgid "C_lear"
 msgstr "_Törlés"
 
-#: ../src/appfinder-preferences.c:273
+#: ../src/appfinder-preferences.c:277
 msgid "This will permanently clear the custom command history."
 msgstr "Az egyéni parancselőzmények véglegesen törlődni fognak."
 
-#: ../src/appfinder-preferences.c:274
+#: ../src/appfinder-preferences.c:278
 msgid "Are you sure you want to clear the command history?"
 msgstr "Biztosan törölni akarja a parancselőzményeket?"
 
-#: ../src/appfinder-preferences.c:385
+#: ../src/appfinder-preferences.c:389
 msgid "_Delete"
 msgstr "_Törlés"
 
-#: ../src/appfinder-preferences.c:386
+#: ../src/appfinder-preferences.c:390
 msgid "The custom action will be deleted permanently."
 msgstr "Az egyéni művelet véglegesen törlődni fog."
 
-#: ../src/appfinder-preferences.c:387
+#: ../src/appfinder-preferences.c:391
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Biztosan törölni akarja a(z) „%s” mintát?"
 
-#: ../src/appfinder-window.c:237 ../src/appfinder-preferences.glade.h:10
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: ../src/appfinder-window.c:244 ../src/appfinder-preferences.glade.h:10
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
 msgid "Application Finder"
 msgstr "Alkalmazáskereső"
 
-#: ../src/appfinder-window.c:286
+#: ../src/appfinder-window.c:297
 msgid "Toggle view mode"
 msgstr "Nézetmód váltása"
 
-#: ../src/appfinder-window.c:365
+#: ../src/appfinder-window.c:376
 msgid "_Preferences"
 msgstr "_Beállítások"
 
-#: ../src/appfinder-window.c:376 ../src/appfinder-window.c:1187
+#: ../src/appfinder-window.c:387 ../src/appfinder-window.c:1198
 msgid "La_unch"
 msgstr "In_dítás"
 
-#: ../src/appfinder-window.c:988
+#: ../src/appfinder-window.c:999
 msgid "Failed to launch desktop item editor"
 msgstr "Az asztali elemek szerkesztőjének indítása sikertelen"
 
-#: ../src/appfinder-window.c:1014
+#: ../src/appfinder-window.c:1024
+msgid "Confirm"
+msgstr ""
+
+#: ../src/appfinder-window.c:1025
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Az egyéni asztali fájl végleges eltávolítása a saját könyvtárából."
 
-#: ../src/appfinder-window.c:1015
+#: ../src/appfinder-window.c:1026
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Biztosan vissza akarja állítani ezt: „%s”?"
 
-#: ../src/appfinder-window.c:1025
+#: ../src/appfinder-window.c:1036
 msgid "Failed to remove desktop file"
 msgstr "Az asztali fájl eltávolítása meghiúsult"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:1058
+#: ../src/appfinder-window.c:1069
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Az elem megjelenítéséhez saját kezűleg kell eltávolítania az asztali fájlt innen: „%s”, vagy meg kell nyitnia a fájlt ugyanabban a könyvtárban, és el kell távolítania a következő sort: „%s”."
 
-#: ../src/appfinder-window.c:1063 ../src/appfinder-window.c:1233
+#: ../src/appfinder-window.c:1074 ../src/appfinder-window.c:1244
 msgid "_Hide"
 msgstr "_Elrejtés"
 
-#: ../src/appfinder-window.c:1064
+#: ../src/appfinder-window.c:1075
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Biztosan el akarja rejteni ezt: „%s”?"
 
-#: ../src/appfinder-window.c:1169
+#: ../src/appfinder-window.c:1180
 msgid "Remove From Bookmarks"
 msgstr "Eltávolítás a könyvjelzőkből"
 
-#: ../src/appfinder-window.c:1169
+#: ../src/appfinder-window.c:1180
 msgid "Add to Bookmarks"
 msgstr "Hozzáadás a könyvjelzőkhöz"
 
-#: ../src/appfinder-window.c:1201
+#: ../src/appfinder-window.c:1212
 msgid "_Edit"
 msgstr "Sz_erkesztés"
 
-#: ../src/appfinder-window.c:1218
+#: ../src/appfinder-window.c:1229
 msgid "_Revert"
 msgstr "_Visszavonás"
 
@@ -334,38 +337,42 @@ msgid "Hide window decorations such as title bar and borders."
 msgstr ""
 
 #: ../src/appfinder-preferences.glade.h:33
+msgid "Show generic application _names"
+msgstr ""
+
+#: ../src/appfinder-preferences.glade.h:34
 msgid "Appearance"
 msgstr "Megjelenés"
 
-#: ../src/appfinder-preferences.glade.h:34
+#: ../src/appfinder-preferences.glade.h:35
 msgid "C_lear Custom Command History"
 msgstr "_Egyéni parancselőzmények törlése"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: ../src/appfinder-preferences.glade.h:36
 msgid "History"
 msgstr "Előzmények"
 
-#: ../src/appfinder-preferences.glade.h:36
+#: ../src/appfinder-preferences.glade.h:37
 msgid "_General"
 msgstr "Ál_talános"
 
-#: ../src/appfinder-preferences.glade.h:37
+#: ../src/appfinder-preferences.glade.h:38
 msgid "Custom actions are only available in collapsed mode."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:38
+#: ../src/appfinder-preferences.glade.h:39
 msgid "Pattern"
 msgstr "Minta"
 
-#: ../src/appfinder-preferences.glade.h:39
+#: ../src/appfinder-preferences.glade.h:40
 msgid "Add a new custom action."
 msgstr "Új egyéni művelet hozzáadása."
 
-#: ../src/appfinder-preferences.glade.h:40
+#: ../src/appfinder-preferences.glade.h:41
 msgid "Remove the currently selected action."
 msgstr "A jelenleg kijelölt művelet eltávolítása."
 
-#: ../src/appfinder-preferences.glade.h:42
+#: ../src/appfinder-preferences.glade.h:43
 #, no-c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -373,48 +380,25 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Ha a típus előtag, akkor a %s a minta utáni karakterlánccal lesz helyettesítve, a %S pedig a beviteli mező teljes szövegével. Reguláris kifejezés esetén a \\0 és \\<num> használható."
 
-#: ../src/appfinder-preferences.glade.h:43
+#: ../src/appfinder-preferences.glade.h:44
 msgid "Co_mmand:"
 msgstr "Pa_rancs:"
 
-#: ../src/appfinder-preferences.glade.h:44
+#: ../src/appfinder-preferences.glade.h:45
 msgid "Patte_rn:"
 msgstr "Min_ta:"
 
-#: ../src/appfinder-preferences.glade.h:45
+#: ../src/appfinder-preferences.glade.h:46
 msgid "_Type:"
 msgstr "Típ_us:"
 
-#: ../src/appfinder-preferences.glade.h:46
+#: ../src/appfinder-preferences.glade.h:47
 msgid "_Save match in command history"
 msgstr "_Találat mentése a parancselőzmények közé"
 
-#: ../src/appfinder-preferences.glade.h:47
+#: ../src/appfinder-preferences.glade.h:48
 msgid "Custom _Actions"
 msgstr "Egyéni _műveletek"
-
-#: ../data/xfce4-appfinder.desktop.in.h:2
-msgid "Find and launch applications installed on your system"
-msgstr "A rendszerre telepített alkalmazások keresése és indítása"
-
-#: ../data/xfce4-appfinder.desktop.in.h:3
-msgid "program;applications;bookmarks;"
-msgstr ""
-
-#: ../data/xfce4-run.desktop.in.h:1
-msgid "Run Program..."
-msgstr "Program futtatása…"
-
-#: ../data/xfce4-run.desktop.in.h:2
-msgid "Enter a command you want to launch"
-msgstr "Adja meg a parancsot, melyet indítani akar."
-
-#: ../data/xfce4-run.desktop.in.h:3
-msgid ""
-"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
-" dash;krunner;synapse;ulauncher;launchy;gnome "
-"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr ""
 
 #: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
 msgid "Application to quickly run applications and commands"
