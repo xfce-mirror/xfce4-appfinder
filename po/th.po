@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-06 12:47+0200\n"
+"POT-Creation-Date: 2024-04-08 00:47+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>, 2013,2015,2017-2019,2021\n"
 "Language-Team: Thai (http://app.transifex.com/xfce/xfce4-appfinder/language/th/)\n"
@@ -88,6 +88,7 @@ msgstr "คุณแน่ใจหรือไม่ว่าต้องกา
 
 #: src/appfinder-window.c:244 src/appfinder-preferences.glade:74
 #: data/xfce4-appfinder.desktop.in:10
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
 msgstr "เครื่องมือค้นหาโปรแกรม"
 
@@ -420,7 +421,11 @@ msgid ""
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 msgstr "เรียกทำงาน;คำสั่ง;แอปพลิเคชัน;โปรแกรม;เครื่องมือค้นหา;ค้นหา;เครื่องมือเรียกทำงาน;ทุกอย่าง;spotlight;sherlock;applesearch;unity dash;krunner;synapse;uluancher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
-#: data/org.xfce.xfce4-appfinder.appdata.xml.in:12
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
+msgid "Application to quickly run applications and commands"
+msgstr "เครื่องมือสำหรับเรียกโปรแกรมและคำสั่งอย่างเร็ว"
+
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:13
 msgid ""
 "The application finder is a tool to find and launch installed applications "
 "on your system and quickly execute commands. It can also be used to quickly "
