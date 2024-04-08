@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-06 12:47+0200\n"
+"POT-Creation-Date: 2024-04-08 00:47+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Arnold Marko <arnold.marko@gmail.com>, 2019-2021,2023\n"
 "Language-Team: Slovenian (http://app.transifex.com/xfce/xfce4-appfinder/language/sl/)\n"
@@ -89,6 +89,7 @@ msgstr "Ali ste prepričani, da želite izbrisati vzorec \"%s\"?"
 
 #: src/appfinder-window.c:244 src/appfinder-preferences.glade:74
 #: data/xfce4-appfinder.desktop.in:10
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
 msgstr "Iskalnik programov"
 
@@ -421,7 +422,11 @@ msgid ""
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 msgstr "zaženi;ukaz;aplikacij;program;iskalnik;iskanje;zaganjalnik;vse;središče;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;ple;apwal;recoll;alfred;quicksilver;sledilnik;beagle;kupfer;"
 
-#: data/org.xfce.xfce4-appfinder.appdata.xml.in:12
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
+msgid "Application to quickly run applications and commands"
+msgstr "Aplikacija za hiter zagon aplikacij in ukazov"
+
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:13
 msgid ""
 "The application finder is a tool to find and launch installed applications "
 "on your system and quickly execute commands. It can also be used to quickly "
