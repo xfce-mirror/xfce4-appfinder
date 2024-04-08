@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-06 12:47+0200\n"
+"POT-Creation-Date: 2024-04-08 00:47+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: b83946de5835331df42b9ffcc43e6a33_05e65cd <73a30e0a984b2291d4915f37112ad292_814039>, 2023\n"
 "Language-Team: Turkish (http://app.transifex.com/xfce/xfce4-appfinder/language/tr/)\n"
@@ -98,6 +98,7 @@ msgstr "\"%s\" desenini silmek istediğinize emin misiniz?"
 
 #: src/appfinder-window.c:244 src/appfinder-preferences.glade:74
 #: data/xfce4-appfinder.desktop.in:10
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
 msgstr "Uygulama Bulucu"
 
@@ -430,7 +431,11 @@ msgid ""
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 msgstr "çalıştır;komut;uygulama;program;bulucu;finder;ara;başlatıcı;çalıştırıcı;her şey;spotlight;sahne ışığı;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
-#: data/org.xfce.xfce4-appfinder.appdata.xml.in:12
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
+msgid "Application to quickly run applications and commands"
+msgstr "Uygulamaları ve komutları hızlıca çalıştırmak için uygulama"
+
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:13
 msgid ""
 "The application finder is a tool to find and launch installed applications "
 "on your system and quickly execute commands. It can also be used to quickly "
