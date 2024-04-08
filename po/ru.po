@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-06 12:47+0200\n"
+"POT-Creation-Date: 2024-04-08 00:47+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Andrei Stepanov, 2022-2023\n"
 "Language-Team: Russian (http://app.transifex.com/xfce/xfce4-appfinder/language/ru/)\n"
@@ -102,6 +102,7 @@ msgstr "Удалить шаблон «%s»?"
 
 #: src/appfinder-window.c:244 src/appfinder-preferences.glade:74
 #: data/xfce4-appfinder.desktop.in:10
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
 msgstr "Поиск приложений"
 
@@ -434,7 +435,11 @@ msgid ""
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 msgstr "выполнить;команда;приложение;программа;поиск;запуск;всё;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
-#: data/org.xfce.xfce4-appfinder.appdata.xml.in:12
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
+msgid "Application to quickly run applications and commands"
+msgstr "Приложение для быстрого запуска приложений и команд"
+
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:13
 msgid ""
 "The application finder is a tool to find and launch installed applications "
 "on your system and quickly execute commands. It can also be used to quickly "
