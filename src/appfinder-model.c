@@ -976,6 +976,21 @@ xfce_appfinder_model_item_compare_command (gconstpointer a,
 
 
 
+static gint
+xfce_appfinder_model_item_compare_command_strict (gconstpointer a,
+                                                  gconstpointer b)
+{
+  const ModelItem *item_a = a, *item_b = b;
+
+  /* ignore non custom commands (i.e. garcon menu items) */
+  if (item_a->item != NULL || item_b->item != NULL)
+    return -1;
+
+  return g_utf8_collate (item_a->command, item_b->command);
+}
+
+
+
 static gchar *
 xfce_appfinder_model_item_key (GarconMenuItem *item)
 {
@@ -1222,7 +1237,8 @@ xfce_appfinder_model_file_get_mtime (GFile *file)
 
 static gboolean
 xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
-                                     const gchar        *command)
+                                     const gchar        *command,
+                                     ModelItem         **model_item)
 {
   ModelItem    *item;
   GtkTreeIter   iter;
@@ -1236,12 +1252,23 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
   /* add new command */
   item = g_slice_new0 (ModelItem);
   item->command = g_strdup (command);
-  if (g_slist_find_custom (model->items, item, xfce_appfinder_model_item_compare_command) != NULL)
+
+  /* check if command matches any existing item, including the ones still being loaded (collect_items) */
+  if (g_slist_find_custom (model->items, item, xfce_appfinder_model_item_compare_command) != NULL ||
+      g_slist_find_custom (model->collect_items, item, xfce_appfinder_model_item_compare_command) != NULL)
     {
-       APPFINDER_DEBUG ("Skip adding %s to the model as it's already contained.", command);
-       g_slice_free (ModelItem, item);
-       return FALSE;
+      APPFINDER_DEBUG ("Command %s already exists, mark as not visible.", command);
+      item->not_visible = TRUE;
     }
+
+  /* check if command matches any existing item which is strictly command item (i.e. not from garcon) */
+  if (g_slist_find_custom (model->items, item, xfce_appfinder_model_item_compare_command_strict) != NULL)
+    {
+      APPFINDER_DEBUG ("Skip adding %s to the history as it's already present.", command);
+      g_slice_free (ModelItem, item);
+      return FALSE;
+    }
+
   item->surface = cairo_surface_reference (model->command_surface);
   item->surface_large = cairo_surface_reference (model->command_surface_large);
   model->items = g_slist_insert_sorted (model->items, item, xfce_appfinder_model_item_compare);
@@ -1261,6 +1288,10 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
   gtk_tree_path_free (path);
 
   g_hash_table_insert (model->items_hash, item->command, item);
+
+  if (model_item)
+    *model_item = item;
+
   return TRUE;
 }
 
@@ -1315,7 +1346,7 @@ xfce_appfinder_model_history_changed (GFileMonitor       *monitor,
                         {
                           /* look for new commands */
                           command = g_strndup (contents, end - contents);
-                          xfce_appfinder_model_history_insert (model, command);
+                          xfce_appfinder_model_history_insert (model, command, NULL);
                           g_free (command);
                         }
                       contents = end + 1;
@@ -1629,10 +1660,9 @@ xfce_appfinder_model_collect_history (XfceAppfinderModel *model,
 
       if (end != contents)
         {
-          item = g_slice_new0 (ModelItem);
-          item->command = g_strndup (contents, end - contents);
-          item->surface = cairo_surface_reference (model->command_surface);
-          item->surface_large = cairo_surface_reference (model->command_surface_large);
+          gchar *command = g_strndup (contents, end - contents);
+          xfce_appfinder_model_history_insert (model, command, &item);
+          g_free (command);
           model->collect_items = g_slist_prepend (model->collect_items, item);
         }
 
@@ -2482,13 +2512,13 @@ xfce_appfinder_model_get_visible_command (XfceAppfinderModel *model,
 
   item = ITER_GET_DATA (iter);
 
-  if (item->item != NULL)
-    {
-      appfinder_return_val_if_fail (GARCON_IS_MENU_ITEM (item->item), FALSE);
-
-      if (item->not_visible)
-        return FALSE;
-    }
+  /*
+   * besides hidden garcon menus, a command may be not visible if it's
+   * a duplicate of an existing menu. For example, if "xfce4-about" is
+   * in the command history, it should not be displayed twice.
+   */
+  if (item->not_visible)
+    return FALSE;
 
   if (item->command != NULL && string != NULL)
     return xfce_appfinder_model_fuzzy_match (item->command, string);
@@ -2685,7 +2715,7 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
     return TRUE;
 
   /* add command to the model history if unique, else just return */
-  if (!xfce_appfinder_model_history_insert (model, command))
+  if (!xfce_appfinder_model_history_insert (model, command, NULL))
     return TRUE;
 
   /* add to the hashtable */
