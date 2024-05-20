@@ -93,6 +93,10 @@ static void       xfce_appfinder_window_drag_data_get                 (GtkWidget
 static gboolean   xfce_appfinder_window_treeview_key_press_event      (GtkWidget                   *widget,
                                                                        GdkEventKey                 *event,
                                                                        XfceAppfinderWindow         *window);
+static gboolean   xfce_appfinder_window_completion_match_selected     (GtkEntryCompletion          *widget,
+                                                                       GtkTreeModel                *model,
+                                                                       GtkTreeIter                 *iter,
+                                                                       gpointer                     data);
 static void       xfce_appfinder_window_category_changed              (GtkTreeSelection            *selection,
                                                                        XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_category_set_categories       (XfceAppfinderModel          *model,
@@ -303,6 +307,8 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   g_object_set (G_OBJECT (completion), "text-column", XFCE_APPFINDER_MODEL_COLUMN_COMMAND, NULL);
   gtk_entry_completion_set_popup_single_match (completion, TRUE);
   gtk_entry_completion_set_inline_completion (completion, TRUE);
+  g_signal_connect (G_OBJECT (completion), "match-selected",
+      G_CALLBACK (xfce_appfinder_window_completion_match_selected), window);
 
   cell = gtk_cell_renderer_text_new ();
   g_object_set (G_OBJECT (cell), "ellipsize", PANGO_ELLIPSIZE_END, NULL);
@@ -1667,6 +1673,30 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
 
 
 
+static gboolean
+xfce_appfinder_window_completion_match_selected (GtkEntryCompletion *widget,
+                                                 GtkTreeModel       *model,
+                                                 GtkTreeIter        *iter,
+                                                 gpointer            data)
+{
+  GdkModifierType      state;
+  XfceAppfinderWindow *window = data;
+  gchar               *cmd = NULL;
+
+  gtk_get_current_event_state (&state);
+
+  if (state & GDK_CONTROL_MASK) {
+    gtk_tree_model_get (GTK_TREE_MODEL (window->model), iter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
+    gtk_entry_set_text (GTK_ENTRY (window->entry), cmd);
+    xfce_appfinder_window_execute (window, TRUE);
+    return TRUE;
+  }
+
+  return FALSE;
+}
+
+
+
 static void
 xfce_appfinder_window_entry_icon_released (GtkEntry             *entry,
                                            GtkEntryIconPosition  icon_pos,
@@ -2003,6 +2033,15 @@ xfce_appfinder_window_launch_clicked (XfceAppfinderWindow *window)
 
 
 
+static gboolean
+xfce_appfinder_window_destroy_widget (gpointer data)
+{
+  gtk_widget_destroy (GTK_WIDGET (data));
+  return FALSE;
+}
+
+
+
 static void
 xfce_appfinder_window_execute (XfceAppfinderWindow *window,
                                gboolean             close_on_succeed)
@@ -2086,7 +2125,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
     }
 
   if (result && close_on_succeed)
-    gtk_widget_destroy (GTK_WIDGET (window));
+    g_idle_add (xfce_appfinder_window_destroy_widget, window);
 }
 
 
