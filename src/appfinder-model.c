@@ -111,7 +111,8 @@ static gint               xfce_appfinder_model_item_compare_frecency  (gconstpoi
 static void               xfce_appfinder_model_frecency_collect       (XfceAppfinderModel       *model,
                                                                        GMappedFile              *mmap);
 static void               xfce_appfinder_model_frecency_free          (gpointer                  data);
-static void               xfce_appfinder_model_migrate_history_file   (void);
+
+
 
 struct _XfceAppfinderModelClass
 {
@@ -2017,8 +2018,6 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
         }
     }
 
-  xfce_appfinder_model_migrate_history_file ();
-
   /* load command history */
   filename = xfce_resource_lookup (XFCE_RESOURCE_CACHE, NEW_HISTORY_PATH);
   if (G_LIKELY (filename != NULL))
@@ -2205,44 +2204,6 @@ static void
 xfce_appfinder_model_frecency_free (gpointer data)
 {
   g_slice_free (Frecency, data);
-}
-
-
-
-/* Migration for history cache file, can be removed during the 4.20 cycle */
-static void
-xfce_appfinder_model_migrate_history_file (void)
-{
-  gchar  *filename;
-  GFile  *old_file, *new_file, *dir;
-  GError *error = NULL;
-
-  filename = xfce_resource_lookup (XFCE_RESOURCE_CACHE, OLD_HISTORY_PATH);
-
-  if (filename == NULL)
-    return;
-
-  old_file = g_file_new_for_path (filename);
-  g_free (filename);
-
-  new_file = g_file_resolve_relative_path (old_file, "../../../" NEW_HISTORY_PATH);
-
-  dir = g_file_get_parent (new_file);
-  g_file_make_directory_with_parents (dir, NULL, NULL);
-  g_object_unref (dir);
-
-  if (g_file_query_exists (new_file, NULL))
-    g_warning ("Old and new history files exist, migration aborted");
-  else if (g_file_move (old_file, new_file, G_FILE_COPY_NONE, NULL, NULL, NULL, &error))
-    g_message ("Migration of history file was successful");
-  else
-    {
-      g_warning ("Failed to migrate history file: %s", error->message);
-      g_clear_error (&error);
-    }
-
-  g_object_unref (old_file);
-  g_object_unref (new_file);
 }
 
 
