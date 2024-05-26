@@ -28,6 +28,7 @@
 #include <libxfce4ui/libxfce4ui.h>
 #include <xfconf/xfconf.h>
 
+#include <src/appfinder-window.h>
 #include <src/appfinder-preferences.h>
 #include <src/appfinder-preferences-ui.h>
 #include <src/appfinder-model.h>
@@ -68,14 +69,15 @@ struct _XfceAppfinderPreferences
 {
   GtkBuilder __parent__;
 
-  GObject          *dialog;
+  GObject             *dialog;
+  XfceAppfinderWindow *appfinder;
 
-  XfconfChannel    *channel;
+  XfconfChannel       *channel;
 
-  GtkTreeSelection *selection;
+  GtkTreeSelection    *selection;
 
-  gulong            bindings[4];
-  gulong            property_watch_id;
+  gulong               bindings[4];
+  gulong               property_watch_id;
 };
 
 enum
@@ -120,6 +122,10 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
 
   object = gtk_builder_get_object (GTK_BUILDER (preferences), "always-center");
   xfconf_g_property_bind (preferences->channel, "/always-center", G_TYPE_BOOLEAN,
+                          G_OBJECT (object), "active");
+
+  object = gtk_builder_get_object (GTK_BUILDER (preferences), "close-on-focus-lost");
+  xfconf_g_property_bind (preferences->channel, "/close-on-focus-lost", G_TYPE_BOOLEAN,
                           G_OBJECT (object), "active");
 
   previous = gtk_builder_get_object (GTK_BUILDER (preferences), "enable-service");
@@ -226,6 +232,14 @@ xfce_appfinder_preferences_response (GtkWidget                *window,
     }
   else
     {
+      xfce_appfinder_window_keep_open (preferences->appfinder, FALSE);
+
+      /*
+       * Make sure the main window receives focus when preferences is closed because
+       * when 'close-on-focus-lost' is enabled it may unexpectedly close.
+       */
+      gtk_window_present (GTK_WINDOW (preferences->appfinder));
+
       g_signal_handler_disconnect (preferences->channel, preferences->property_watch_id);
       g_object_unref (G_OBJECT (preferences));
       gtk_widget_destroy (window);
@@ -601,16 +615,19 @@ xfce_appfinder_preferences_selection_changed (GtkTreeSelection         *selectio
 
 
 void
-xfce_appfinder_preferences_show (GdkScreen *screen)
+xfce_appfinder_preferences_show (XfceAppfinderWindow *appfinder)
 {
   static XfceAppfinderPreferences *preferences = NULL;
 
-  appfinder_return_if_fail (GDK_IS_SCREEN (screen));
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_WINDOW (appfinder));
 
   if (preferences == NULL)
     {
       preferences = g_object_new (XFCE_TYPE_APPFINDER_PREFERENCES, NULL);
       g_object_add_weak_pointer (G_OBJECT (preferences), (gpointer *) &preferences);
+
+      preferences->appfinder = appfinder;
+      xfce_appfinder_window_keep_open (appfinder, TRUE);
       gtk_widget_show (GTK_WIDGET (preferences->dialog));
     }
   else
@@ -618,5 +635,5 @@ xfce_appfinder_preferences_show (GdkScreen *screen)
       gtk_window_present (GTK_WINDOW (preferences->dialog));
     }
 
-  gtk_window_set_screen (GTK_WINDOW (preferences->dialog), screen);
+  gtk_window_set_screen (GTK_WINDOW (preferences->dialog), gtk_window_get_screen (GTK_WINDOW (appfinder)));
 }
