@@ -190,6 +190,24 @@
                               </packing>
                             </child>
                             <child>
+                              <object class="GtkCheckButton" id="close-on-focus-lost">
+                                <property name="label" translatable="yes">Close window when _focus is lost</property>
+                                <property name="use_action_appearance">False</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">False</property>
+                                <property name="tooltip_text" translatable="yes">When the focus is lost to another window, appfinder should be closed.</property>
+                                <property name="use_underline">True</property>
+                                <property name="active">False</property>
+                                <property name="draw_indicator">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
+                            <child>
                               <object class="GtkCheckButton" id="enable-service">
                                 <property name="label" translatable="yes">Keep running _instance in the background</property>
                                 <property name="use_action_appearance">False</property>
@@ -204,7 +222,7 @@
                               <packing>
                                 <property name="expand">True</property>
                                 <property name="fill">True</property>
-                                <property name="position">2</property>
+                                <property name="position">3</property>
                               </packing>
                             </child>
                             <child>
@@ -222,7 +240,7 @@
                               <packing>
                                 <property name="expand">True</property>
                                 <property name="fill">True</property>
-                                <property name="position">3</property>
+                                <property name="position">4</property>
                               </packing>
                             </child>
                             <child>
@@ -239,7 +257,7 @@
                               <packing>
                                 <property name="expand">True</property>
                                 <property name="fill">True</property>
-                                <property name="position">4</property>
+                                <property name="position">5</property>
                               </packing>
                             </child>
                             <child>
@@ -256,7 +274,7 @@
                               <packing>
                                 <property name="expand">True</property>
                                 <property name="fill">True</property>
-                                <property name="position">5</property>
+                                <property name="position">6</property>
                               </packing>
                             </child>
                           </object>
@@ -430,7 +448,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
-                                <property name="tooltip_text" translatable="yes">Hide window decorations such as title bar and borders, the window will be closed when focus is lost.</property>
+                                <property name="tooltip_text" translatable="yes">Hide window decorations such as title bar and borders.</property>
                                 <property name="use_underline">True</property>
                                 <property name="active">False</property>
                                 <property name="draw_indicator">True</property>
