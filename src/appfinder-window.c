@@ -169,10 +169,9 @@ struct _XfceAppfinderWindow
   GarconMenuDirectory        *filter_category;
   gchar                      *filter_text;
 
-  guint                       idle_entry_changed_id;
-
   gint                        last_window_height;
 
+  guint                       idle_entry_changed_id;
   gulong                      focus_out_id;
   gulong                      property_watch_id;
   gulong                      categories_changed_id;
@@ -231,9 +230,6 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gint                integer;
   gboolean            sort_by_frecency;
   gint                scale_factor;
-
-  window->focus_out_id =
-    g_signal_connect (window, "focus-out-event", G_CALLBACK (xfce_appfinder_window_focus_out), NULL);
 
   scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
 
@@ -427,6 +423,10 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
     g_signal_connect (G_OBJECT (window->channel), "property-changed",
         G_CALLBACK (xfce_appfinder_window_property_changed), window);
 
+  /* check if window should be closed on focus lost */
+  window->focus_out_id =
+    g_signal_connect (window, "focus-out-event", G_CALLBACK (xfce_appfinder_window_focus_out), NULL);
+
   APPFINDER_DEBUG ("constructed window");
 }
 
@@ -475,7 +475,9 @@ xfce_appfinder_window_finalize (GObject *object)
 static void
 xfce_appfinder_window_focus_out (GtkWidget *widget)
 {
-  if (!gtk_window_get_decorated (GTK_WINDOW (widget)))
+  XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (widget);
+
+  if (xfconf_channel_get_bool (window->channel, "/close-on-focus-lost", FALSE))
     gtk_window_close (GTK_WINDOW (widget));
 }
 
@@ -2166,6 +2168,10 @@ xfce_appfinder_window_update_frecency (XfceAppfinderWindow *window,
 
 
 
+/*
+ * When 'close-on-focus-lost' is enabled, calling this function prevents
+ * the main window being closed when preferences is opened.
+ */
 void
 xfce_appfinder_window_keep_open (XfceAppfinderWindow *window,
                                  gboolean             keep_open)

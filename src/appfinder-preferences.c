@@ -124,6 +124,10 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
   xfconf_g_property_bind (preferences->channel, "/always-center", G_TYPE_BOOLEAN,
                           G_OBJECT (object), "active");
 
+  object = gtk_builder_get_object (GTK_BUILDER (preferences), "close-on-focus-lost");
+  xfconf_g_property_bind (preferences->channel, "/close-on-focus-lost", G_TYPE_BOOLEAN,
+                          G_OBJECT (object), "active");
+
   previous = gtk_builder_get_object (GTK_BUILDER (preferences), "enable-service");
   xfconf_g_property_bind (preferences->channel, "/enable-service", G_TYPE_BOOLEAN,
                           G_OBJECT (previous), "active");
@@ -229,8 +233,12 @@ xfce_appfinder_preferences_response (GtkWidget                *window,
   else
     {
       xfce_appfinder_window_keep_open (preferences->appfinder, FALSE);
-      if (!gtk_window_get_decorated GTK_WINDOW ((preferences->appfinder)))
-        gtk_window_present (GTK_WINDOW (preferences->appfinder));
+
+      /*
+       * Make sure the main window receives focus when preferences is closed because
+       * when 'close-on-focus-lost' is enabled it may unexpectedly close.
+       */
+      gtk_window_present (GTK_WINDOW (preferences->appfinder));
 
       g_signal_handler_disconnect (preferences->channel, preferences->property_watch_id);
       g_object_unref (G_OBJECT (preferences));
