@@ -1,3 +1,25 @@
+4.19.2 (2024-06-05)
+======
+- Add new preference to close window when focus is lost (!41)
+- Immediately execute command on ctrl+enter (#56)
+- Store command to history even if it appears as a garcon menu item 
+  (#73)
+- Remove migration function
+- appdata: Fix `appstreamcli validate` issues (!44)
+- I18n: Update po/LINGUAS list
+- Switch to gettext instead of intltool (!24)
+- Translation Updates:
+  Albanian, Amharic, Arabic, Armenian (Armenia), Basque, Belarusian,
+  Bulgarian, Catalan, Chinese (China), Chinese (Hong Kong), Chinese
+  (Taiwan), Croatian, Czech, Danish, Dutch, Eastern Armenian, English
+  (Australia), English (Canada), English (United Kingdom), Estonian,
+  Finnish, French, Galician, German, Greek, Hebrew, Hindi, Hungarian,
+  Icelandic, Indonesian, Interlingue, Italian, Japanese, Kazakh,
+  Korean, Lithuanian, Malay, Norwegian Bokmål, Norwegian Nynorsk,
+  Occitan (post 1500), Polish, Portuguese, Portuguese (Brazil),
+  Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish,
+  Thai, Turkish, Ukrainian, Uyghur, Vietnamese
+
 4.19.1 (2023-09-08)
 ======
 - Ctrl+N / Ctrl+P navigation keys for treeview (#82)
