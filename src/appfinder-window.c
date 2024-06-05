@@ -57,6 +57,7 @@
 
 
 static void       xfce_appfinder_window_finalize                      (GObject                     *object);
+static void       xfce_appfinder_window_focus_out                     (GtkWidget                   *widget);
 static void       xfce_appfinder_window_unmap                         (GtkWidget                   *widget);
 static gboolean   xfce_appfinder_window_key_press_event               (GtkWidget                   *widget,
                                                                        GdkEventKey                 *event);
@@ -101,8 +102,7 @@ static void       xfce_appfinder_window_category_changed              (GtkTreeSe
                                                                        XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_category_set_categories       (XfceAppfinderModel          *model,
                                                                        XfceAppfinderWindow         *window);
-static void       xfce_appfinder_window_preferences                   (GtkWidget                   *button,
-                                                                       XfceAppfinderWindow         *window);
+static void       xfce_appfinder_window_preferences                   (XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_property_changed              (XfconfChannel               *channel,
                                                                        const gchar                 *prop,
                                                                        const GValue                *value,
@@ -169,10 +169,10 @@ struct _XfceAppfinderWindow
   GarconMenuDirectory        *filter_category;
   gchar                      *filter_text;
 
-  guint                       idle_entry_changed_id;
-
   gint                        last_window_height;
 
+  guint                       idle_entry_changed_id;
+  gulong                      focus_out_id;
   gulong                      property_watch_id;
   gulong                      categories_changed_id;
 };
@@ -381,7 +381,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   button = gtk_button_new_with_mnemonic (_("_Preferences"));
   gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
-  g_signal_connect (G_OBJECT (button), "clicked",
+  g_signal_connect_swapped (G_OBJECT (button), "clicked",
       G_CALLBACK (xfce_appfinder_window_preferences), window);
   gtk_widget_set_valign (button, GTK_ALIGN_CENTER);
   gtk_button_set_always_show_image(GTK_BUTTON(button), TRUE);
@@ -422,6 +422,10 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   window->property_watch_id =
     g_signal_connect (G_OBJECT (window->channel), "property-changed",
         G_CALLBACK (xfce_appfinder_window_property_changed), window);
+
+  /* check if window should be closed on focus lost */
+  window->focus_out_id =
+    g_signal_connect (window, "focus-out-event", G_CALLBACK (xfce_appfinder_window_focus_out), NULL);
 
   APPFINDER_DEBUG ("constructed window");
 }
@@ -464,6 +468,17 @@ xfce_appfinder_window_finalize (GObject *object)
   gtk_tree_path_free (window->hover_path);
 
   (*G_OBJECT_CLASS (xfce_appfinder_window_parent_class)->finalize) (object);
+}
+
+
+
+static void
+xfce_appfinder_window_focus_out (GtkWidget *widget)
+{
+  XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (widget);
+
+  if (xfconf_channel_get_bool (window->channel, "/close-on-focus-lost", FALSE))
+    gtk_window_close (GTK_WINDOW (widget));
 }
 
 
@@ -1799,16 +1814,13 @@ xfce_appfinder_window_category_set_categories (XfceAppfinderModel  *signal_from_
 
 
 static void
-xfce_appfinder_window_preferences (GtkWidget           *button,
-                                   XfceAppfinderWindow *window)
+xfce_appfinder_window_preferences (XfceAppfinderWindow *window)
 {
-  appfinder_return_if_fail (GTK_IS_WIDGET (button));
-
   /* preload the actions, to make sure there are default values */
   if (window->actions == NULL)
     window->actions = xfce_appfinder_actions_get ();
 
-  xfce_appfinder_preferences_show (gtk_widget_get_screen (button));
+  xfce_appfinder_preferences_show (window);
 }
 
 
@@ -2152,6 +2164,22 @@ xfce_appfinder_window_update_frecency (XfceAppfinderWindow *window,
       g_free (desktop_id);
       g_free (error);
     }
+}
+
+
+
+/*
+ * When 'close-on-focus-lost' is enabled, calling this function prevents
+ * the main window being closed when preferences is opened.
+ */
+void
+xfce_appfinder_window_keep_open (XfceAppfinderWindow *window,
+                                 gboolean             keep_open)
+{
+  if (keep_open)
+    g_signal_handler_block (window, window->focus_out_id);
+  else
+    g_signal_handler_unblock (window, window->focus_out_id);
 }
 
 
