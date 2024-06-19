@@ -103,14 +103,24 @@ static void               xfce_appfinder_model_bookmarks_monitor_stop (XfceAppfi
 static void               xfce_appfinder_model_bookmarks_monitor      (XfceAppfinderModel       *model,
                                                                        const gchar              *path);
 
-static gboolean           xfce_appfinder_model_fuzzy_match            (const gchar              *source,
-                                                                       const gchar              *token);
 static gint               xfce_appfinder_model_item_compare_frecency  (gconstpointer             a,
                                                                        gconstpointer             b,
                                                                        gpointer                  data);
 static void               xfce_appfinder_model_frecency_collect       (XfceAppfinderModel       *model,
                                                                        GMappedFile              *mmap);
 static void               xfce_appfinder_model_frecency_free          (gpointer                  data);
+static gboolean           xfce_appfinder_model_fuzzy_match            (const gchar              *pattern,
+                                                                       const gchar              *str);
+static gboolean           xfce_appfinder_model_fuzzy_match_recursive  (const gchar              *pattern,
+                                                                       const gchar              *str,
+                                                                       gint                     *outScore,
+                                                                       const gchar              *strBegin,
+                                                                       guint8 const             *srcMatches,
+                                                                       guint8                   *matches,
+                                                                       gint                      maxMatches,
+                                                                       gint                      nextMatch,
+                                                                       gint                     *recursion_count,
+                                                                       gint                     *recursionLimit);
 
 
 
@@ -3072,50 +3082,172 @@ xfce_appfinder_model_get_bookmarks_category (void)
 
 
 
-gboolean
-xfce_appfinder_model_fuzzy_match (const gchar *source,
-                                  const gchar *token)
+/* Adapted from https://github.com/forrestthewoods/lib_fts/blob/master/code/fts_fuzzy_match.h */
+static gboolean
+xfce_appfinder_model_fuzzy_match (const gchar *str,
+                                  const gchar *pattern)
 {
-    const guint token_size = strlen (token);
-    const guint cmd_part_size = token_size + 1;
-    guint index;
-    gboolean match = FALSE;
-    gboolean contain_uppercase = FALSE;
+    gint recursion_count = 0;
+    gint recursion_limit = 10;
+    gint out_score;
+    guint8 matches[256];
 
-    // length is chosen because of ".*<part1> *.*(?i)<part2>.*" pattern format
-    // "(?i)" is optional part
-    gchar pattern [token_size + 14];
-    gchar cmd_part [cmd_part_size];
-    gchar *param_part;
+    return xfce_appfinder_model_fuzzy_match_recursive (str, pattern, &out_score, str, NULL, matches, sizeof (matches), 0, &recursion_count, &recursion_limit);
+}
 
-    if (strcmp (token,"") == 0)
-        return TRUE;
 
-    for (index=1; !match && (index <= token_size); index++)
-      {
-        memset (cmd_part, 0, cmd_part_size);
-        strncpy (cmd_part, token, index);
-        cmd_part [index + 1] = '\0';
 
-        contain_uppercase = FALSE;
-        param_part = (gchar*) token + index;
+/* Adapted from https://github.com/forrestthewoods/lib_fts/blob/master/code/fts_fuzzy_match.h */
+static gboolean
+xfce_appfinder_model_fuzzy_match_recursive (const gchar   *str,
+                                            const gchar   *pattern,
+                                            gint          *out_score,
+                                            const gchar   *str_begin,
+                                            guint8 const  *src_matches,
+                                            guint8        *matches,
+                                            gint           max_matches,
+                                            gint           next_match,
+                                            gint          *recursion_count,
+                                            gint          *recursion_limit)
+{
+  /* Count recursions */
+  ++(*recursion_count);
+  if (*recursion_count >= *recursion_limit)
+    return FALSE;
 
-        while (!contain_uppercase && (*param_part != '\0'))
-          {
-            contain_uppercase = g_ascii_isupper (*param_part);
-            param_part++;
-          }
+  /* Detect end of strings */
+  if (*pattern == '\0' || *str == '\0')
+    return FALSE;
 
-        memset (pattern, 0, sizeof (pattern));
-        g_sprintf (pattern, ".*%s *.*%s%s.*", cmd_part,
-                   (contain_uppercase) ? "(?-i)" : "(?i)",
-                   token + index);
-        match = g_regex_match_simple (pattern, source, 0, 0);
-        if (match)
-          {
-            APPFINDER_DEBUG ("Fuzzy match: regexp=%s ; source=%s", pattern, source);
-          }
-      }
+  /* Recursion params */
+  gboolean recursive_match = FALSE;
+  guint8 best_recursive_matches[256];
+  gint best_recursive_score = 0;
 
-    return match;
+  /* Loop through pattern and str looking for a match */
+  gboolean first_match = TRUE;
+
+  while (*pattern != '\0' && *str != '\0')
+    {
+      /* Found match */
+      if (g_ascii_tolower (*pattern) == g_ascii_tolower (*str))
+        {
+          /* Supplied matches buffer was too short */
+          if (next_match >= max_matches)
+              return FALSE;
+
+          /* "Copy-on-Write" srcMatches into matches */
+          if (first_match && src_matches)
+            {
+              memcpy (matches, src_matches, next_match);
+              first_match = FALSE;
+            }
+
+          /* Recursive call that "skips" this match */
+          guint8 recursive_matches[256];
+          gint recursive_score;
+          if (xfce_appfinder_model_fuzzy_match_recursive (pattern, str + 1, &recursive_score, str_begin, matches, recursive_matches, sizeof (recursive_matches), next_match, recursion_count, recursion_limit))
+            {
+              /* Pick best recursive score */
+              if (!recursive_match || recursive_score > best_recursive_score)
+                {
+                    memcpy (best_recursive_matches, recursive_matches, 256);
+                    best_recursive_score = recursive_score;
+                }
+              recursive_match = TRUE;
+            }
+
+          /* Advance */
+          matches[next_match++] = (guint8)(str - str_begin);
+          ++pattern;
+        }
+      ++str;
+    }
+
+  /* Determine if full pattern was matched */
+  gboolean matched = *pattern == '\0' ? TRUE : FALSE;
+
+  /* Calculate score */
+  if (matched)
+    {
+      const gint sequential_bonus = 15;            /* bonus for adjacent matches */
+      const gint separator_bonus = 30;             /* bonus if match occurs after a separator */
+      const gint camel_bonus = 30;                 /* bonus if match is uppercase and prev is lower */
+      const gint first_letter_bonus = 15;          /* bonus if the first letter is matched */
+
+      const gint leading_letter_penalty = -5;      /* penalty applied for every letter in str before the first match */
+      const gint max_leading_letter_penalty = -15; /* maximum penalty for leading letters */
+      const gint unmatched_letter_penalty = -1;    /* penalty for every letter that doesn't matter */
+
+      /* Iterate str to end */
+      while (*str != '\0')
+        ++str;
+
+      /* Initialize score */
+      *out_score = 100;
+
+      /* Apply leading letter penalty */
+      gint penalty = leading_letter_penalty * matches[0];
+      if (penalty < max_leading_letter_penalty)
+        penalty = max_leading_letter_penalty;
+      *out_score += penalty;
+
+      /* Apply unmatched penalty */
+      gint unmatched = (gint)(str - str_begin) - next_match;
+      *out_score += unmatched_letter_penalty * unmatched;
+
+      /* Apply ordering bonuses */
+      for (gint i = 0; i < next_match; ++i)
+        {
+          guint8 curr_idx = matches[i];
+
+          if (i > 0)
+            {
+              guint8 prevIdx = matches[i - 1];
+
+              /* Sequential */
+              if (curr_idx == (prevIdx + 1))
+                *out_score += sequential_bonus;
+            }
+
+          /* Check for bonuses based on neighbor character value */
+          if (curr_idx > 0)
+            {
+              /* Camel case */
+              gchar neighbor = str_begin[curr_idx - 1];
+              gchar curr = str_begin[curr_idx];
+              if (g_ascii_islower (neighbor) && g_ascii_isupper(curr))
+                *out_score += camel_bonus;
+
+              /* Separator */
+              gboolean neighborSeparator = neighbor == '_' || neighbor == ' ';
+              if (neighborSeparator)
+                *out_score += separator_bonus;
+            }
+          else
+            {
+              /* First letter */
+              *out_score += first_letter_bonus;
+            }
+        }
+    }
+
+  /* Return best result */
+  if (recursive_match && (!matched || best_recursive_score > *out_score))
+    {
+      /* Recursive score is better than "this" */
+      memcpy (matches, best_recursive_matches, max_matches);
+      *out_score = best_recursive_score;
+      return TRUE;
+    }
+  else if (matched)
+    {
+      /* "this" score is better than recursive */
+      return TRUE;
+    }
+  else
+    {
+      /* no match */
+      return FALSE;
+    }
 }
