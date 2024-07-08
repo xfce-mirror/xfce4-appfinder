@@ -1235,16 +1235,12 @@ xfce_appfinder_model_file_get_mtime (GFile *file)
 
 
 
-static gboolean
-xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
-                                     const gchar        *command,
-                                     ModelItem         **model_item)
+static ModelItem*
+xfce_appfinder_model_create_model_item (XfceAppfinderModel *model,
+                                        const gchar        *command)
 {
-  ModelItem    *item;
-  GtkTreeIter   iter;
-  GtkTreePath  *path;
-  GSList       *lp;
-  guint         idx;
+
+  ModelItem *item;
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
   appfinder_return_val_if_fail (IS_STRING (command), FALSE);
@@ -1266,11 +1262,31 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
     {
       APPFINDER_DEBUG ("Skip adding %s to the history as it's already present.", command);
       g_slice_free (ModelItem, item);
-      return FALSE;
+      return NULL;
     }
 
   item->surface = cairo_surface_reference (model->command_surface);
   item->surface_large = cairo_surface_reference (model->command_surface_large);
+
+  return item;
+}
+
+
+
+static gboolean
+xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
+                                     const gchar        *command)
+{
+  ModelItem    *item;
+  GtkTreeIter   iter;
+  GtkTreePath  *path;
+  GSList       *lp;
+  guint         idx;
+
+  item = xfce_appfinder_model_create_model_item (model, command);
+  if (!item)
+    return FALSE;
+
   model->items = g_slist_insert_sorted (model->items, item, xfce_appfinder_model_item_compare);
 
   /* find the item and the position */
@@ -1288,9 +1304,6 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
   gtk_tree_path_free (path);
 
   g_hash_table_insert (model->items_hash, item->command, item);
-
-  if (model_item)
-    *model_item = item;
 
   return TRUE;
 }
@@ -1346,7 +1359,7 @@ xfce_appfinder_model_history_changed (GFileMonitor       *monitor,
                         {
                           /* look for new commands */
                           command = g_strndup (contents, end - contents);
-                          xfce_appfinder_model_history_insert (model, command, NULL);
+                          xfce_appfinder_model_history_insert (model, command);
                           g_free (command);
                         }
                       contents = end + 1;
@@ -1661,9 +1674,10 @@ xfce_appfinder_model_collect_history (XfceAppfinderModel *model,
       if (end != contents)
         {
           gchar *command = g_strndup (contents, end - contents);
-          xfce_appfinder_model_history_insert (model, command, &item);
+          item = xfce_appfinder_model_create_model_item (model, command);
           g_free (command);
-          model->collect_items = g_slist_prepend (model->collect_items, item);
+          if (item)
+            model->collect_items = g_slist_prepend (model->collect_items, item);
         }
 
       contents = end + 1;
@@ -2715,7 +2729,7 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
     return TRUE;
 
   /* add command to the model history if unique, else just return */
-  if (!xfce_appfinder_model_history_insert (model, command, NULL))
+  if (!xfce_appfinder_model_history_insert (model, command))
     return TRUE;
 
   /* add to the hashtable */
