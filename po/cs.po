@@ -6,15 +6,16 @@
 # Alois Nespor <Alois.Nespor@seznam.cz>, 2004
 # Alois Nešpor <info@aloisnespor.info>, 2013
 # Alois Nešpor <info@aloisnespor.info>, 2014
+# knedl1k <knedl1k@tuta.io>, 2024
 # Michal Várady <miko.vaji@gmail.com>, 2015,2017-2021
 # Pavel Borecki <pavel.borecki@gmail.com>, 2018-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-08 00:47+0200\n"
+"POT-Creation-Date: 2024-06-06 00:48+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2015,2017-2021\n"
+"Last-Translator: knedl1k <knedl1k@tuta.io>, 2024\n"
 "Language-Team: Czech (http://app.transifex.com/xfce/xfce4-appfinder/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,135 +32,135 @@ msgstr "Vynuceně ukončeno"
 msgid "All Applications"
 msgstr "Všechny aplikace"
 
-#: src/appfinder-model.c:697
+#: src/appfinder-model.c:698
 msgid "Name"
 msgstr "Název"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:699
 msgid "Comment"
 msgstr "Komentář"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:700
 msgid "Command"
 msgstr "Příkaz"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:701
 msgid "Categories"
 msgstr "Kategorie"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:702
 msgid "Filename"
 msgstr "Název souboru"
 
-#: src/appfinder-model.c:2571
+#: src/appfinder-model.c:2562
 msgid "Application has no command"
 msgstr "Aplikace nemá žádný příkaz"
 
-#: src/appfinder-model.c:3048
+#: src/appfinder-model.c:3039
 msgid "Commands History"
 msgstr "Historie příkazů"
 
-#: src/appfinder-model.c:3072
+#: src/appfinder-model.c:3063
 msgid "Bookmarks"
 msgstr "Záložky"
 
-#: src/appfinder-preferences.c:276
+#: src/appfinder-preferences.c:290
 msgid "C_lear"
 msgstr "_Vyčistit"
 
-#: src/appfinder-preferences.c:277
+#: src/appfinder-preferences.c:291
 msgid "This will permanently clear the custom command history."
 msgstr "Tato akce trvale vymaže historii vlastních příkazů."
 
-#: src/appfinder-preferences.c:278
+#: src/appfinder-preferences.c:292
 msgid "Are you sure you want to clear the command history?"
 msgstr "Opravdu chcete vymazat historii příkazů?"
 
-#: src/appfinder-preferences.c:389
+#: src/appfinder-preferences.c:403
 msgid "_Delete"
 msgstr "_Smazat"
 
-#: src/appfinder-preferences.c:390
+#: src/appfinder-preferences.c:404
 msgid "The custom action will be deleted permanently."
 msgstr "Uživatelská akce bude nevratně smazána."
 
-#: src/appfinder-preferences.c:391
+#: src/appfinder-preferences.c:405
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Opravdu chcete vymazat vzor „%s“?"
 
-#: src/appfinder-window.c:244 src/appfinder-preferences.glade:74
+#: src/appfinder-window.c:248 src/appfinder-preferences.glade:74
 #: data/xfce4-appfinder.desktop.in:10
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
 msgstr "Vyhledávač aplikací"
 
-#: src/appfinder-window.c:297
+#: src/appfinder-window.c:301
 msgid "Toggle view mode"
 msgstr "Přepnout režim pohledu"
 
-#: src/appfinder-window.c:376
+#: src/appfinder-window.c:382
 msgid "_Preferences"
 msgstr "_Předvolby"
 
-#: src/appfinder-window.c:387 src/appfinder-window.c:1198
+#: src/appfinder-window.c:393 src/appfinder-window.c:1219
 msgid "La_unch"
 msgstr "Sp_ustit"
 
-#: src/appfinder-window.c:999
+#: src/appfinder-window.c:1020
 msgid "Failed to launch desktop item editor"
 msgstr "Spuštění editoru položek plochy se nezdařilo."
 
-#: src/appfinder-window.c:1024
+#: src/appfinder-window.c:1045
 msgid "Confirm"
-msgstr ""
+msgstr "Potvrdit"
 
-#: src/appfinder-window.c:1025
+#: src/appfinder-window.c:1046
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Tato akce trvale odebere upravený soubor spouštěče z vaší domovské složky."
 
-#: src/appfinder-window.c:1026
+#: src/appfinder-window.c:1047
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Opravdu chcete vrátit zpět „%s“?"
 
-#: src/appfinder-window.c:1036
+#: src/appfinder-window.c:1057
 msgid "Failed to remove desktop file"
 msgstr "Odebrání souboru spouštěče se nezdařilo"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: src/appfinder-window.c:1069
+#: src/appfinder-window.c:1090
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Skrytou položku odkryjte ručním odebráním souboru spouštěče z „%s“ nebo tento soubor otevřete a odeberte z něj řádek „%s“."
 
-#: src/appfinder-window.c:1074 src/appfinder-window.c:1244
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1265
 msgid "_Hide"
 msgstr "_Skrýt"
 
-#: src/appfinder-window.c:1075
+#: src/appfinder-window.c:1096
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Opravdu chcete „%s“ skrýt?"
 
-#: src/appfinder-window.c:1180
+#: src/appfinder-window.c:1201
 msgid "Remove From Bookmarks"
 msgstr "Odebrat ze záložek"
 
-#: src/appfinder-window.c:1180
+#: src/appfinder-window.c:1201
 msgid "Add to Bookmarks"
 msgstr "Přidat do záložek"
 
-#: src/appfinder-window.c:1212
+#: src/appfinder-window.c:1233
 msgid "_Edit"
 msgstr "_Upravit"
 
-#: src/appfinder-window.c:1229
+#: src/appfinder-window.c:1250
 msgid "_Revert"
 msgstr "V_rátit změny"
 
@@ -185,7 +186,7 @@ msgstr "Nepokoušet se použít nebo stát se službou sběrnice D-Bus"
 
 #: src/main.c:71
 msgid "Toggle window visibility of background service"
-msgstr ""
+msgstr "Přepnout viditelnost okna služby na pozadí"
 
 #: src/main.c:72
 msgid "Run in daemon mode"
@@ -262,117 +263,125 @@ msgid "Center the window on startup."
 msgstr "Při spuštění vystředit okno."
 
 #: src/appfinder-preferences.glade:194
+msgid "Close window when _focus is lost"
+msgstr "Zavření okna při ztrátě _focus"
+
+#: src/appfinder-preferences.glade:199
+msgid "When the focus is lost to another window, appfinder should be closed."
+msgstr ""
+
+#: src/appfinder-preferences.glade:212
 msgid "Keep running _instance in the background"
 msgstr "Ponechat spuštěnou _instanci na pozadí"
 
-#: src/appfinder-preferences.glade:199
+#: src/appfinder-preferences.glade:217
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "Ponechat spuštěnou instanci na pozadí namísto ukončení aplikace po uzavření jejího posledního okna z důvodu zrychlení otevírání nových oken. Pokud chcete snížit spotřebu paměti, tuto možnost vypněte."
 
-#: src/appfinder-preferences.glade:212
+#: src/appfinder-preferences.glade:230
 msgid "Single window"
 msgstr "Jedno okno"
 
-#: src/appfinder-preferences.glade:217
+#: src/appfinder-preferences.glade:235
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr "Pokud je instance spuštěna na pozadí, otevřít najednou pouze jedno okno."
 
-#: src/appfinder-preferences.glade:230
+#: src/appfinder-preferences.glade:248
 msgid "Sort recently used items first"
 msgstr "Seřadit nedávno použité položky na začátek"
 
-#: src/appfinder-preferences.glade:235
+#: src/appfinder-preferences.glade:253
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr "Vždy umístí nahoru nedávno použité položky."
 
-#: src/appfinder-preferences.glade:247
+#: src/appfinder-preferences.glade:265
 msgid "Single-click selects and launches items"
-msgstr ""
-
-#: src/appfinder-preferences.glade:252
-msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Jedním kliknutím vyberete a spustíte položky"
 
 #: src/appfinder-preferences.glade:270
+msgid "Items are selected and launched with only a single-click."
+msgstr "Položky se vybírají a spouštějí jediným kliknutím."
+
+#: src/appfinder-preferences.glade:288
 msgid "Behaviour"
 msgstr "Chování"
 
-#: src/appfinder-preferences.glade:305
+#: src/appfinder-preferences.glade:323
 msgid "_View items as icons"
 msgstr "_Zobrazit položky jako ikony"
 
-#: src/appfinder-preferences.glade:320
+#: src/appfinder-preferences.glade:338
 msgid "Text besi_de icons"
 msgstr "Text ve_dle ikon"
 
-#: src/appfinder-preferences.glade:338
+#: src/appfinder-preferences.glade:356
 msgid "Ite_m icon size:"
 msgstr "Veli_kost ikony položky:"
 
-#: src/appfinder-preferences.glade:352
+#: src/appfinder-preferences.glade:370
 msgid "Hide category pane"
 msgstr "Skrýt podokno kategorie"
 
-#: src/appfinder-preferences.glade:357
+#: src/appfinder-preferences.glade:375
 msgid "Hide category panel and show all applications."
 msgstr "Skrýt panel kategorie a zobrazit všechny aplikace."
 
-#: src/appfinder-preferences.glade:374
+#: src/appfinder-preferences.glade:392
 msgid "Categ_ory icon size:"
 msgstr "Velik_ost ikony kategorie"
 
-#: src/appfinder-preferences.glade:428
+#: src/appfinder-preferences.glade:446
 msgid "Hide window decorations"
-msgstr ""
+msgstr "Skrýt dekorace oken"
 
-#: src/appfinder-preferences.glade:433
+#: src/appfinder-preferences.glade:451
 msgid "Hide window decorations such as title bar and borders."
-msgstr ""
+msgstr "Skrýt dekorace okna, jako jsou záhlaví a okraje."
 
-#: src/appfinder-preferences.glade:448
+#: src/appfinder-preferences.glade:466
 msgid "Show generic application _names"
-msgstr ""
+msgstr "Zobrazit obecné názvy aplikací _names"
 
-#: src/appfinder-preferences.glade:472
+#: src/appfinder-preferences.glade:490
 msgid "Appearance"
 msgstr "Vzhled"
 
-#: src/appfinder-preferences.glade:503
+#: src/appfinder-preferences.glade:521
 msgid "C_lear Custom Command History"
 msgstr "_Smazat historii vlastních příkazů"
 
-#: src/appfinder-preferences.glade:518
+#: src/appfinder-preferences.glade:536
 msgid "History"
 msgstr "Historie"
 
-#: src/appfinder-preferences.glade:537
+#: src/appfinder-preferences.glade:555
 msgid "_General"
 msgstr "_Obecné"
 
-#: src/appfinder-preferences.glade:561
+#: src/appfinder-preferences.glade:579
 msgid "Custom actions are only available in collapsed mode."
 msgstr "Vlastní akce jsou dostupné pouze ve sbaleném režimu."
 
-#: src/appfinder-preferences.glade:609
+#: src/appfinder-preferences.glade:627
 msgid "Pattern"
 msgstr "Vzorek"
 
-#: src/appfinder-preferences.glade:645
+#: src/appfinder-preferences.glade:663
 msgid "Add a new custom action."
 msgstr "Přidat novou vlastní akci."
 
-#: src/appfinder-preferences.glade:666
+#: src/appfinder-preferences.glade:684
 msgid "Remove the currently selected action."
 msgstr "Smazat aktuálně vybranou akci."
 
-#: src/appfinder-preferences.glade:709
+#: src/appfinder-preferences.glade:727
 #, c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -380,23 +389,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Pokud je typ nastaven na předponu, %s se nahradí řetězcem po vzorku a %S kompletním vstupním textem. Regulární výrazy použijte pomocí \\0 a \\<num>."
 
-#: src/appfinder-preferences.glade:740
+#: src/appfinder-preferences.glade:758
 msgid "Co_mmand:"
 msgstr "_Příkaz:"
 
-#: src/appfinder-preferences.glade:755
+#: src/appfinder-preferences.glade:773
 msgid "Patte_rn:"
 msgstr "V_zorek:"
 
-#: src/appfinder-preferences.glade:770
+#: src/appfinder-preferences.glade:788
 msgid "_Type:"
 msgstr "_Typ:"
 
-#: src/appfinder-preferences.glade:780
+#: src/appfinder-preferences.glade:798
 msgid "_Save match in command history"
 msgstr "_Uložit shodu v historii příkazů"
 
-#: src/appfinder-preferences.glade:832
+#: src/appfinder-preferences.glade:850
 msgid "Custom _Actions"
 msgstr "Vlastní _akce"
 
