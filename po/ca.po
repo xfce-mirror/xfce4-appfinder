@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Davidmp <medipas@gmail.com>, 2015
-# Oscar Perez <oscarpc@gmail.com>, 2023
+# Oscar Perez <oscarpc@gmail.com>, 2023-2024
 # Pau Rul·lan Ferragut <paurullan@bulma.net>, 2005-2006
 # Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2017-2021
 # Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2016
@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-08 00:47+0200\n"
+"POT-Creation-Date: 2024-06-06 00:48+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Oscar Perez <oscarpc@gmail.com>, 2023\n"
+"Last-Translator: Oscar Perez <oscarpc@gmail.com>, 2023-2024\n"
 "Language-Team: Catalan (http://app.transifex.com/xfce/xfce4-appfinder/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,135 +31,135 @@ msgstr "S'ha forçat la sortida"
 msgid "All Applications"
 msgstr "Totes les aplicacions"
 
-#: src/appfinder-model.c:697
+#: src/appfinder-model.c:698
 msgid "Name"
 msgstr "Nom"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:699
 msgid "Comment"
 msgstr "Comentari"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:700
 msgid "Command"
 msgstr "Ordre"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:701
 msgid "Categories"
 msgstr "Categories"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:702
 msgid "Filename"
 msgstr "Nom de fitxer"
 
-#: src/appfinder-model.c:2571
+#: src/appfinder-model.c:2562
 msgid "Application has no command"
 msgstr "L'aplicació no té cap ordre"
 
-#: src/appfinder-model.c:3048
+#: src/appfinder-model.c:3039
 msgid "Commands History"
 msgstr "Historial d'ordres"
 
-#: src/appfinder-model.c:3072
+#: src/appfinder-model.c:3063
 msgid "Bookmarks"
 msgstr "Marcadors"
 
-#: src/appfinder-preferences.c:276
+#: src/appfinder-preferences.c:290
 msgid "C_lear"
 msgstr "_Neteja"
 
-#: src/appfinder-preferences.c:277
+#: src/appfinder-preferences.c:291
 msgid "This will permanently clear the custom command history."
 msgstr "Això netejarà permanent l'historial d'ordres personalitzades."
 
-#: src/appfinder-preferences.c:278
+#: src/appfinder-preferences.c:292
 msgid "Are you sure you want to clear the command history?"
 msgstr "Esteu segur que voleu netejar l'historial d'ordres?"
 
-#: src/appfinder-preferences.c:389
+#: src/appfinder-preferences.c:403
 msgid "_Delete"
 msgstr "_Suprimeix"
 
-#: src/appfinder-preferences.c:390
+#: src/appfinder-preferences.c:404
 msgid "The custom action will be deleted permanently."
 msgstr "L'acció personalitzada se suprimirà permanent."
 
-#: src/appfinder-preferences.c:391
+#: src/appfinder-preferences.c:405
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Esteu segur que voleu suprimir el patró «%s»?"
 
-#: src/appfinder-window.c:244 src/appfinder-preferences.glade:74
+#: src/appfinder-window.c:248 src/appfinder-preferences.glade:74
 #: data/xfce4-appfinder.desktop.in:10
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
 msgstr "Cercador d'aplicacions"
 
-#: src/appfinder-window.c:297
+#: src/appfinder-window.c:301
 msgid "Toggle view mode"
 msgstr "Canvia el mode de visualització"
 
-#: src/appfinder-window.c:376
+#: src/appfinder-window.c:382
 msgid "_Preferences"
 msgstr "_Preferències"
 
-#: src/appfinder-window.c:387 src/appfinder-window.c:1198
+#: src/appfinder-window.c:393 src/appfinder-window.c:1219
 msgid "La_unch"
 msgstr "Ll_ança"
 
-#: src/appfinder-window.c:999
+#: src/appfinder-window.c:1020
 msgid "Failed to launch desktop item editor"
 msgstr "No s'ha pogut llançar l'editor d'ítems de l'escriptori"
 
-#: src/appfinder-window.c:1024
+#: src/appfinder-window.c:1045
 msgid "Confirm"
 msgstr "Confirma"
 
-#: src/appfinder-window.c:1025
+#: src/appfinder-window.c:1046
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Això suprimirà permanentment el fitxer d'escriptori personalitzat del vostre directori d'usuari."
 
-#: src/appfinder-window.c:1026
+#: src/appfinder-window.c:1047
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Esteu segur que voleu revertir «%s»?"
 
-#: src/appfinder-window.c:1036
+#: src/appfinder-window.c:1057
 msgid "Failed to remove desktop file"
 msgstr "No s'ha pogut suprimir el fitxer d'escriptori"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: src/appfinder-window.c:1069
+#: src/appfinder-window.c:1090
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Per mostrar l'ítem heu de suprimir manualment el fitxer d'escriptori de «%s» o obrir el fitxer al mateix directori i suprimir la línia «%s»."
 
-#: src/appfinder-window.c:1074 src/appfinder-window.c:1244
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1265
 msgid "_Hide"
 msgstr "_Oculta"
 
-#: src/appfinder-window.c:1075
+#: src/appfinder-window.c:1096
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Esteu segur que voleu ocultar «%s»?"
 
-#: src/appfinder-window.c:1180
+#: src/appfinder-window.c:1201
 msgid "Remove From Bookmarks"
 msgstr "Suprimeix dels marcadors"
 
-#: src/appfinder-window.c:1180
+#: src/appfinder-window.c:1201
 msgid "Add to Bookmarks"
 msgstr "Afegeix als marcadors"
 
-#: src/appfinder-window.c:1212
+#: src/appfinder-window.c:1233
 msgid "_Edit"
 msgstr "_Edita"
 
-#: src/appfinder-window.c:1229
+#: src/appfinder-window.c:1250
 msgid "_Revert"
 msgstr "_Reverteix"
 
@@ -262,117 +262,125 @@ msgid "Center the window on startup."
 msgstr "Centra la finestra amb la inicialització."
 
 #: src/appfinder-preferences.glade:194
+msgid "Close window when _focus is lost"
+msgstr "Tanca la finestra quan perdi el _focus"
+
+#: src/appfinder-preferences.glade:199
+msgid "When the focus is lost to another window, appfinder should be closed."
+msgstr "Tanca l'appfinder quan es passi el focus a una altra finestra."
+
+#: src/appfinder-preferences.glade:212
 msgid "Keep running _instance in the background"
 msgstr "Mantén una _instància en execució al rerefons"
 
-#: src/appfinder-preferences.glade:199
+#: src/appfinder-preferences.glade:217
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "En comptes de sortir de l'aplicació quan es tanqui l'última finestra, mantén una instància oberta per accelerar l'obertura de finestres noves. Potser voleu inhabilitar-ho per tal de reduir l'ús de memòria."
 
-#: src/appfinder-preferences.glade:212
+#: src/appfinder-preferences.glade:230
 msgid "Single window"
 msgstr "Una sola finestra"
 
-#: src/appfinder-preferences.glade:217
+#: src/appfinder-preferences.glade:235
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr "Quan s'estigui executant una instància en segon pla, només obre alhora una finestra."
 
-#: src/appfinder-preferences.glade:230
+#: src/appfinder-preferences.glade:248
 msgid "Sort recently used items first"
 msgstr "Ordena primer els elements utilitzats recentment"
 
-#: src/appfinder-preferences.glade:235
+#: src/appfinder-preferences.glade:253
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr "Ordena els elements, de manera que els utilitzats més recentment sempre es trobin a la part superior."
 
-#: src/appfinder-preferences.glade:247
+#: src/appfinder-preferences.glade:265
 msgid "Single-click selects and launches items"
 msgstr "Un sol clic selecciona i llança els elements"
 
-#: src/appfinder-preferences.glade:252
+#: src/appfinder-preferences.glade:270
 msgid "Items are selected and launched with only a single-click."
 msgstr "Es seleccionen i llancen els elements amb tan sols un sol clic."
 
-#: src/appfinder-preferences.glade:270
+#: src/appfinder-preferences.glade:288
 msgid "Behaviour"
 msgstr "Comportament"
 
-#: src/appfinder-preferences.glade:305
+#: src/appfinder-preferences.glade:323
 msgid "_View items as icons"
 msgstr "_Mostra els ítems com icones"
 
-#: src/appfinder-preferences.glade:320
+#: src/appfinder-preferences.glade:338
 msgid "Text besi_de icons"
 msgstr "Text a _sota de les icones"
 
-#: src/appfinder-preferences.glade:338
+#: src/appfinder-preferences.glade:356
 msgid "Ite_m icon size:"
 msgstr "Mida de les icones dels íte_ms:"
 
-#: src/appfinder-preferences.glade:352
+#: src/appfinder-preferences.glade:370
 msgid "Hide category pane"
 msgstr "Oculta el plafó de la categoria"
 
-#: src/appfinder-preferences.glade:357
+#: src/appfinder-preferences.glade:375
 msgid "Hide category panel and show all applications."
 msgstr "Oculta el plafó de la categoria i mostra totes les aplicacions."
 
-#: src/appfinder-preferences.glade:374
+#: src/appfinder-preferences.glade:392
 msgid "Categ_ory icon size:"
 msgstr "Mida de les icones de les categ_ories:"
 
-#: src/appfinder-preferences.glade:428
+#: src/appfinder-preferences.glade:446
 msgid "Hide window decorations"
 msgstr "Oculta les decoracions de finestra"
 
-#: src/appfinder-preferences.glade:433
+#: src/appfinder-preferences.glade:451
 msgid "Hide window decorations such as title bar and borders."
 msgstr "Oculta les decoracions de la finestra, com el títol i les vores."
 
-#: src/appfinder-preferences.glade:448
+#: src/appfinder-preferences.glade:466
 msgid "Show generic application _names"
 msgstr "Mostra _noms genèrics d'aplicació"
 
-#: src/appfinder-preferences.glade:472
+#: src/appfinder-preferences.glade:490
 msgid "Appearance"
 msgstr "Aparença"
 
-#: src/appfinder-preferences.glade:503
+#: src/appfinder-preferences.glade:521
 msgid "C_lear Custom Command History"
 msgstr "_Neteja l'historial d'ordres personalitzades"
 
-#: src/appfinder-preferences.glade:518
+#: src/appfinder-preferences.glade:536
 msgid "History"
 msgstr "Historial"
 
-#: src/appfinder-preferences.glade:537
+#: src/appfinder-preferences.glade:555
 msgid "_General"
 msgstr "_General"
 
-#: src/appfinder-preferences.glade:561
+#: src/appfinder-preferences.glade:579
 msgid "Custom actions are only available in collapsed mode."
 msgstr "Les accions personalitzades només estan disponibles en mode replegat."
 
-#: src/appfinder-preferences.glade:609
+#: src/appfinder-preferences.glade:627
 msgid "Pattern"
 msgstr "Patró"
 
-#: src/appfinder-preferences.glade:645
+#: src/appfinder-preferences.glade:663
 msgid "Add a new custom action."
 msgstr "Afegeix una nova acció personalitzada."
 
-#: src/appfinder-preferences.glade:666
+#: src/appfinder-preferences.glade:684
 msgid "Remove the currently selected action."
 msgstr "Suprimeix l'acció seleccionada actualment."
 
-#: src/appfinder-preferences.glade:709
+#: src/appfinder-preferences.glade:727
 #, c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -380,23 +388,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Si el tipus està establert a prefix, %s se substituirà amb el text després del patró, %S amb el text sencer. Per a les expressions regulars podeu utilitzar \\0 i \\<num>."
 
-#: src/appfinder-preferences.glade:740
+#: src/appfinder-preferences.glade:758
 msgid "Co_mmand:"
 msgstr "_Ordre:"
 
-#: src/appfinder-preferences.glade:755
+#: src/appfinder-preferences.glade:773
 msgid "Patte_rn:"
 msgstr "_Patró:"
 
-#: src/appfinder-preferences.glade:770
+#: src/appfinder-preferences.glade:788
 msgid "_Type:"
 msgstr "_Tipus:"
 
-#: src/appfinder-preferences.glade:780
+#: src/appfinder-preferences.glade:798
 msgid "_Save match in command history"
 msgstr "De_sa la coincidència a l'historial d'ordres"
 
-#: src/appfinder-preferences.glade:832
+#: src/appfinder-preferences.glade:850
 msgid "Custom _Actions"
 msgstr "_Accions personalitzades"
 
