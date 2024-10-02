@@ -12,7 +12,7 @@ dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2008-2023 The Xfce development team. All rights reserved.])
 AC_INIT([xfce4-appfinder], [xdt_version], [https://gitlab.xfce.org/xfce/xfce4-appfinder/], [xfce4-appfinder])
-AC_PREREQ([2.60])
+AC_PREREQ([2.69])
 AC_CONFIG_MACRO_DIRS([m4])
 
 dnl ***************************
@@ -55,10 +55,10 @@ AM_GNU_GETTEXT_VERSION([0.19.8])
 dnl ***********************************
 dnl *** Check for required packages ***
 dnl ***********************************
-XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.66.0])
-XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.66.0])
+XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.72.0])
+XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.72.0])
 XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.24.0])
-XDT_CHECK_PACKAGE([GIO], [gio-2.0], [2.66.0])
+XDT_CHECK_PACKAGE([GIO], [gio-2.0], [2.72.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-2], [4.18.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.18.0])
 XDT_CHECK_PACKAGE([GARCON], [garcon-1], [4.18.0])
