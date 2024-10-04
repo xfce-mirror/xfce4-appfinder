@@ -55,7 +55,7 @@ msgstr "Nazwa pliku"
 
 #: src/appfinder-model.c:2562
 msgid "Application has no command"
-msgstr "Program nie posiada przypisanego polecenia"
+msgstr "Program nie ma przypisanego polecenia"
 
 #: src/appfinder-model.c:3039
 msgid "Commands History"
@@ -300,7 +300,7 @@ msgstr "Sortowanie najpierw ostatnio używanych elementów"
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
-msgstr "Rozmieszczanie elementów, tak aby ostatnio używane były na górze."
+msgstr "Rozmieszcza elementy, tak aby ostatnio używane były na górze."
 
 #: src/appfinder-preferences.glade:265
 msgid "Single-click selects and launches items"
@@ -332,7 +332,7 @@ msgstr "Ukrywanie panelu kategorii"
 
 #: src/appfinder-preferences.glade:375
 msgid "Hide category panel and show all applications."
-msgstr "Ukrywa panel kategorii i pokazuje wszystkie aplikacje."
+msgstr "Ukrywa panel kategorii i pokazuje wszystkie programy."
 
 #: src/appfinder-preferences.glade:392
 msgid "Categ_ory icon size:"
