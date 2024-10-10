@@ -120,7 +120,7 @@ msgstr "Potwierdź"
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Plik aktywatora zostanie trwale usunięty z katalogu użytkownika."
+msgstr "Plik aktywatora zostanie trwale usunięty z katalogu domowego."
 
 #: src/appfinder-window.c:1047
 #, c-format
