@@ -10,7 +10,7 @@ XDT_VERSION_INIT([4.19.2], [git])
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
-AC_COPYRIGHT([Copyright (c) 2008-2023 The Xfce development team. All rights reserved.])
+AC_COPYRIGHT([Copyright (c) 2008-2024 The Xfce development team. All rights reserved.])
 AC_INIT([xfce4-appfinder], [xdt_version], [https://gitlab.xfce.org/xfce/xfce4-appfinder/], [xfce4-appfinder])
 AC_PREREQ([2.69])
 AC_CONFIG_MACRO_DIRS([m4])
