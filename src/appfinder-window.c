@@ -1126,6 +1126,38 @@ xfce_appfinder_window_popup_menu_hide (GtkWidget           *mi,
 
 
 
+static void
+xfce_appfinder_window_popup_menu_launch_action (GtkWidget           *mi,
+                                                XfceAppfinderWindow *window)
+{
+  GtkTreeModel *model, *child_model;
+  GtkTreeIter   iter, child_iter;
+  GdkScreen    *screen;
+  const gchar  *action_name;
+  gboolean      regular_command = FALSE;
+  GError       *error = NULL;
+
+  action_name = g_object_get_data (G_OBJECT (mi), "action");
+  screen = gtk_window_get_screen (GTK_WINDOW (window));
+
+  if (xfce_appfinder_window_view_get_selected (window, &model, &iter))
+    {
+      child_model = model;
+
+      if (GTK_IS_TREE_MODEL_SORT (model))
+        {
+          gtk_tree_model_sort_convert_iter_to_child_iter (GTK_TREE_MODEL_SORT (model), &child_iter, &iter);
+          iter = child_iter;
+          child_model = gtk_tree_model_sort_get_model (GTK_TREE_MODEL_SORT (model));
+        }
+
+      gtk_tree_model_filter_convert_iter_to_child_iter (GTK_TREE_MODEL_FILTER (child_model), &child_iter, &iter);
+      xfce_appfinder_model_execute (window->model, &child_iter, screen, &regular_command, action_name, &error);
+    }
+}
+
+
+
 static gboolean
 xfce_appfinder_window_popup_menu (GtkWidget           *view,
                                   XfceAppfinderWindow *window)
@@ -1142,6 +1174,7 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
   gchar        *path;
   gboolean      uri_is_local;
   gboolean      is_bookmark;
+  GList        *actions, *li;
 
   if (xfce_appfinder_window_view_get_selected (window, &model, &iter))
     {
@@ -1149,6 +1182,7 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
                           XFCE_APPFINDER_MODEL_COLUMN_TITLE, &title,
                           XFCE_APPFINDER_MODEL_COLUMN_URI, &uri,
                           XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK, &is_bookmark,
+                          XFCE_APPFINDER_MODEL_COLUMN_ACTION_ITEMS, &actions,
                           -1);
 
       /* custom command don't have an uri */
@@ -1185,6 +1219,35 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
       mi = gtk_separator_menu_item_new ();
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
       gtk_widget_show (mi);
+
+      /* Actions */
+      for (li = actions; li != NULL; li = li->next)
+        {
+          gchar *action_name = li->data;
+          mi = gtk_menu_item_new ();
+          gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
+          g_object_set_data (G_OBJECT (mi), "action", action_name);
+          g_signal_connect (G_OBJECT (mi), "activate",
+              G_CALLBACK (xfce_appfinder_window_popup_menu_launch_action), window);
+
+          box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+          label = gtk_label_new_with_mnemonic (action_name);
+          image = gtk_image_new_from_icon_name ("", GTK_ICON_SIZE_MENU);
+          gtk_container_add (GTK_CONTAINER (box), image);
+          gtk_container_add (GTK_CONTAINER (box), label);
+          gtk_container_add (GTK_CONTAINER (mi), box);
+          gtk_widget_show_all (mi);
+        }
+
+      /* Separator (if actions were added) */
+      if (actions != NULL)
+        {
+          mi = gtk_separator_menu_item_new ();
+          gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
+          gtk_widget_show (mi);
+
+          g_list_free (actions);
+        }
 
       /* Add/Remove from Bookmarks */
       mi = gtk_menu_item_new ();
@@ -2092,7 +2155,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
             }
 
           gtk_tree_model_filter_convert_iter_to_child_iter (GTK_TREE_MODEL_FILTER (child_model), &child_iter, &iter);
-          result = xfce_appfinder_model_execute (window->model, &child_iter, screen, &regular_command, &error);
+          result = xfce_appfinder_model_execute (window->model, &child_iter, screen, &regular_command, NULL, &error);
 
           xfce_appfinder_window_update_frecency (window, model, uri);
           if (!result && regular_command)
