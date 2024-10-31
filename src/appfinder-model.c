@@ -495,6 +495,9 @@ xfce_appfinder_model_get_column_type (GtkTreeModel *tree_model,
     case XFCE_APPFINDER_MODEL_COLUMN_RECENCY:
       return G_TYPE_UINT64;
 
+    case XFCE_APPFINDER_MODEL_COLUMN_ACTION_ITEMS:
+      return G_TYPE_POINTER;
+
     default:
       g_assert_not_reached ();
       return G_TYPE_INVALID;
@@ -728,6 +731,11 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
     case XFCE_APPFINDER_MODEL_COLUMN_RECENCY:
       g_value_init (value, G_TYPE_UINT64);
       g_value_set_uint64 (value, item->frecency ? item->frecency->recency : 0);
+      break;
+
+    case XFCE_APPFINDER_MODEL_COLUMN_ACTION_ITEMS:
+      g_value_init (value, G_TYPE_POINTER);
+      g_value_set_pointer (value, garcon_menu_item_get_actions (item->item));
       break;
 
     default:
@@ -2547,10 +2555,11 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
                               const GtkTreeIter   *iter,
                               GdkScreen           *screen,
                               gboolean            *is_regular_command,
+                              const gchar         *action_name,
                               GError             **error)
 {
   const gchar     *icon;
-  gchar           *command, *escaped_command, *uri;
+  gchar           *command = NULL, *escaped_command, *uri;
   GarconMenuItem  *item;
   ModelItem       *mitem;
   gboolean         succeed = FALSE;
@@ -2570,10 +2579,18 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
 
   appfinder_return_val_if_fail (GARCON_IS_MENU_ITEM (item), FALSE);
 
-  command = (gchar*) garcon_menu_item_get_command (item);
+  if (action_name)
+    {
+      GarconMenuItemAction *action = garcon_menu_item_get_action (item, action_name);
+      if (action)
+        command = (gchar*) garcon_menu_item_action_get_command (action);
+    }
+  else
+    command = (gchar*) garcon_menu_item_get_command (item);
+
   if (!IS_STRING (command))
     {
-      g_set_error_literal (error, 0, 0, _("Application has no command"));
+      g_set_error_literal (error, 0, 0, _("Application or action has no command"));
       return FALSE;
     }
 

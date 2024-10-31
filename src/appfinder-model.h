@@ -47,6 +47,7 @@ enum
   XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY,
   XFCE_APPFINDER_MODEL_COLUMN_RECENCY,
   XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP,
+  XFCE_APPFINDER_MODEL_COLUMN_ACTION_ITEMS,
   XFCE_APPFINDER_MODEL_N_COLUMNS,
 };
 
@@ -89,6 +90,7 @@ gboolean             xfce_appfinder_model_execute                (XfceAppfinderM
                                                                   const GtkTreeIter         *iter,
                                                                   GdkScreen                 *screen,
                                                                   gboolean                  *is_regular_command,
+                                                                  const gchar               *action_name,
                                                                   GError                   **error);
 
 GdkPixbuf           *xfce_appfinder_model_load_pixbuf            (const gchar               *icon_name,
