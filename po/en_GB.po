@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-06-06 00:48+0200\n"
+"POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>, 2018,2023-2024\n"
 "Language-Team: English (United Kingdom) (http://app.transifex.com/xfce/xfce4-appfinder/language/en_GB/)\n"
@@ -30,35 +30,35 @@ msgstr "Forced to quit"
 msgid "All Applications"
 msgstr "All Applications"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:701
 msgid "Name"
 msgstr "Name"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:702
 msgid "Comment"
 msgstr "Comment"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:703
 msgid "Command"
 msgstr "Command"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:704
 msgid "Categories"
 msgstr "Categories"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:705
 msgid "Filename"
 msgstr "Filename"
 
-#: src/appfinder-model.c:2562
-msgid "Application has no command"
-msgstr "Application has no command"
+#: src/appfinder-model.c:2593
+msgid "Application or action has no command"
+msgstr ""
 
-#: src/appfinder-model.c:3039
+#: src/appfinder-model.c:3070
 msgid "Commands History"
 msgstr "Commands History"
 
-#: src/appfinder-model.c:3063
+#: src/appfinder-model.c:3094
 msgid "Bookmarks"
 msgstr "Bookmarks"
 
@@ -101,7 +101,7 @@ msgstr "Toggle view mode"
 msgid "_Preferences"
 msgstr "_Preferences"
 
-#: src/appfinder-window.c:393 src/appfinder-window.c:1219
+#: src/appfinder-window.c:393 src/appfinder-window.c:1282
 msgid "La_unch"
 msgstr "La_unch"
 
@@ -137,7 +137,7 @@ msgid ""
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "To unhide the item you have to manually remove the desktop file from \"%s\" or open the file in the same directory and remove the line \"%s\"."
 
-#: src/appfinder-window.c:1095 src/appfinder-window.c:1265
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
 msgstr "_Hide"
 
@@ -146,19 +146,19 @@ msgstr "_Hide"
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Are you sure you want to hide \"%s\"?"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Remove From Bookmarks"
 msgstr "Remove From Bookmarks"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Add to Bookmarks"
 msgstr "Add to Bookmarks"
 
-#: src/appfinder-window.c:1233
+#: src/appfinder-window.c:1296
 msgid "_Edit"
 msgstr "_Edit"
 
-#: src/appfinder-window.c:1250
+#: src/appfinder-window.c:1313
 msgid "_Revert"
 msgstr "_Revert"
 
