@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-06-06 00:48+0200\n"
+"POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2020-2021,2023-2024\n"
 "Language-Team: Japanese (http://app.transifex.com/xfce/xfce4-appfinder/language/ja/)\n"
@@ -29,35 +29,35 @@ msgstr "強制終了"
 msgid "All Applications"
 msgstr "すべてのアプリケーション"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:701
 msgid "Name"
 msgstr "名前"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:702
 msgid "Comment"
 msgstr "コメント"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:703
 msgid "Command"
 msgstr "コマンド"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:704
 msgid "Categories"
 msgstr "カテゴリ"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:705
 msgid "Filename"
 msgstr "ファイル名"
 
-#: src/appfinder-model.c:2562
-msgid "Application has no command"
-msgstr "アプリケーションにはコマンドがありません"
+#: src/appfinder-model.c:2593
+msgid "Application or action has no command"
+msgstr ""
 
-#: src/appfinder-model.c:3039
+#: src/appfinder-model.c:3070
 msgid "Commands History"
 msgstr "コマンド履歴"
 
-#: src/appfinder-model.c:3063
+#: src/appfinder-model.c:3094
 msgid "Bookmarks"
 msgstr "ブックマーク"
 
@@ -100,7 +100,7 @@ msgstr "表示モードの切り替え"
 msgid "_Preferences"
 msgstr "設定(_P)..."
 
-#: src/appfinder-window.c:393 src/appfinder-window.c:1219
+#: src/appfinder-window.c:393 src/appfinder-window.c:1282
 msgid "La_unch"
 msgstr "起動(_U)"
 
@@ -136,7 +136,7 @@ msgid ""
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "隠したアイテムを再び表示させるには、\"%s\" からデスクトップファイルを手動で削除するか、そのディレクトリにあるデスクトップファイルを開き、\"%s\" の行を削除してください。"
 
-#: src/appfinder-window.c:1095 src/appfinder-window.c:1265
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
 msgstr "隠す(_H)"
 
@@ -145,19 +145,19 @@ msgstr "隠す(_H)"
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "\"%s\" を隠してもよろしいですか?"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Remove From Bookmarks"
 msgstr "ブックマークから削除"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Add to Bookmarks"
 msgstr "ブックマークに追加"
 
-#: src/appfinder-window.c:1233
+#: src/appfinder-window.c:1296
 msgid "_Edit"
 msgstr "編集(_E)"
 
-#: src/appfinder-window.c:1250
+#: src/appfinder-window.c:1313
 msgid "_Revert"
 msgstr "元に戻す(_R)"
 
