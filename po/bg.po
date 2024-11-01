@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-06-06 00:48+0200\n"
+"POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Kiril Kirilov <cybercop_montana@abv.bg>, 2014-2015,2017-2021,2023-2024\n"
 "Language-Team: Bulgarian (http://app.transifex.com/xfce/xfce4-appfinder/language/bg/)\n"
@@ -31,35 +31,35 @@ msgstr "Принудително спиране"
 msgid "All Applications"
 msgstr "Всички приложения"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:701
 msgid "Name"
 msgstr "Име"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:702
 msgid "Comment"
 msgstr "Коментар"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:703
 msgid "Command"
 msgstr "Команда"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:704
 msgid "Categories"
 msgstr "Категории"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:705
 msgid "Filename"
 msgstr "Име на файл"
 
-#: src/appfinder-model.c:2562
-msgid "Application has no command"
-msgstr "Не е зададена команда за приложението"
+#: src/appfinder-model.c:2593
+msgid "Application or action has no command"
+msgstr ""
 
-#: src/appfinder-model.c:3039
+#: src/appfinder-model.c:3070
 msgid "Commands History"
 msgstr "История на командите"
 
-#: src/appfinder-model.c:3063
+#: src/appfinder-model.c:3094
 msgid "Bookmarks"
 msgstr "Отметки"
 
@@ -102,7 +102,7 @@ msgstr "Превключване в режим на преглед"
 msgid "_Preferences"
 msgstr "_Предпочитания"
 
-#: src/appfinder-window.c:393 src/appfinder-window.c:1219
+#: src/appfinder-window.c:393 src/appfinder-window.c:1282
 msgid "La_unch"
 msgstr "Стартиране"
 
@@ -138,7 +138,7 @@ msgid ""
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "За да се покаже тази позиция, ще трябва ръчно да премахнете файла за работен плот „%s“ или да да отворите файла в същата директория и да премахнете ред „%s“."
 
-#: src/appfinder-window.c:1095 src/appfinder-window.c:1265
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
 msgstr "Скриване"
 
@@ -147,19 +147,19 @@ msgstr "Скриване"
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Сигурни ли сте, че искате да скриете „%s“?"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Remove From Bookmarks"
 msgstr "Премахване от Отметки"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Add to Bookmarks"
 msgstr "Добавяне към Отметки"
 
-#: src/appfinder-window.c:1233
+#: src/appfinder-window.c:1296
 msgid "_Edit"
 msgstr "_Редактиране"
 
-#: src/appfinder-window.c:1250
+#: src/appfinder-window.c:1313
 msgid "_Revert"
 msgstr "_Обръщане"
 
