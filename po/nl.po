@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-06-06 00:48+0200\n"
+"POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>, 2013-2015,2017-2021,2023-2024\n"
 "Language-Team: Dutch (http://app.transifex.com/xfce/xfce4-appfinder/language/nl/)\n"
@@ -29,35 +29,35 @@ msgstr "Gedwongen om af te sluiten"
 msgid "All Applications"
 msgstr "Alle toepassingen"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:701
 msgid "Name"
 msgstr "Naam"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:702
 msgid "Comment"
 msgstr "Commentaar"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:703
 msgid "Command"
 msgstr "Opdracht"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:704
 msgid "Categories"
 msgstr "Categorieën"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:705
 msgid "Filename"
 msgstr "Bestandnaam"
 
-#: src/appfinder-model.c:2562
-msgid "Application has no command"
-msgstr "Toepassing heeft geen opdracht"
+#: src/appfinder-model.c:2593
+msgid "Application or action has no command"
+msgstr ""
 
-#: src/appfinder-model.c:3039
+#: src/appfinder-model.c:3070
 msgid "Commands History"
 msgstr "Opdrachtgeschiedenis"
 
-#: src/appfinder-model.c:3063
+#: src/appfinder-model.c:3094
 msgid "Bookmarks"
 msgstr "Bladwijzers"
 
@@ -100,7 +100,7 @@ msgstr "Schakel de kijkmodus om"
 msgid "_Preferences"
 msgstr "_Voorkeuren"
 
-#: src/appfinder-window.c:393 src/appfinder-window.c:1219
+#: src/appfinder-window.c:393 src/appfinder-window.c:1282
 msgid "La_unch"
 msgstr "_Starten"
 
@@ -136,7 +136,7 @@ msgid ""
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Om het element zichtbaar te maken moet u het bureaubladbestand verwijderen uit '%s' of (wanneer u het daar wil laten staan) het bureaubladbestand openen en de regel '%s' verwijderen."
 
-#: src/appfinder-window.c:1095 src/appfinder-window.c:1265
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
 msgstr "Verbergen"
 
@@ -145,19 +145,19 @@ msgstr "Verbergen"
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Weet u zeker dat u  '%s' wilt verbergen?"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Remove From Bookmarks"
 msgstr "Verwijder uit bladwijzers"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Add to Bookmarks"
 msgstr "Voeg toe aan bladwijzers"
 
-#: src/appfinder-window.c:1233
+#: src/appfinder-window.c:1296
 msgid "_Edit"
 msgstr "_Bewerken"
 
-#: src/appfinder-window.c:1250
+#: src/appfinder-window.c:1313
 msgid "_Revert"
 msgstr "_Terugdraaien"
 
