@@ -2131,7 +2131,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
   gboolean      regular_command = FALSE;
   gboolean      save_cmd;
   gboolean      only_custom_cmd = FALSE;
-  const gchar  *uri;
+  gchar        *uri;
 
   screen = gtk_window_get_screen (GTK_WINDOW (window));
   if (gtk_widget_get_visible (window->paned))
@@ -2158,6 +2158,8 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
           result = xfce_appfinder_model_execute (window->model, &child_iter, screen, &regular_command, NULL, &error);
 
           xfce_appfinder_window_update_frecency (window, model, uri);
+          g_free (uri);
+
           if (!result && regular_command)
             {
               gtk_tree_model_get (GTK_TREE_MODEL (window->model), &child_iter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
