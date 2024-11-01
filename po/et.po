@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-06-06 00:48+0200\n"
+"POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Priit Jõerüüt <transifex@joeruut.com>, 2020-2021,2023-2024\n"
 "Language-Team: Estonian (http://app.transifex.com/xfce/xfce4-appfinder/language/et/)\n"
@@ -30,35 +30,35 @@ msgstr "Sunnitud lõpetama"
 msgid "All Applications"
 msgstr "Kõik rakendused"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:701
 msgid "Name"
 msgstr "Nimi"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:702
 msgid "Comment"
 msgstr "Kommentaar"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:703
 msgid "Command"
 msgstr "Käsk"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:704
 msgid "Categories"
 msgstr "Kategooriad"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:705
 msgid "Filename"
 msgstr "Failinimi"
 
-#: src/appfinder-model.c:2562
-msgid "Application has no command"
-msgstr "Rakendusel ei ole käsku"
+#: src/appfinder-model.c:2593
+msgid "Application or action has no command"
+msgstr "Rakendusel või tegevusel ei ole käsku"
 
-#: src/appfinder-model.c:3039
+#: src/appfinder-model.c:3070
 msgid "Commands History"
 msgstr "Käskude ajalugu"
 
-#: src/appfinder-model.c:3063
+#: src/appfinder-model.c:3094
 msgid "Bookmarks"
 msgstr "Järjehoidjad"
 
@@ -101,7 +101,7 @@ msgstr "Vaheta vaadet"
 msgid "_Preferences"
 msgstr "_Eelistused"
 
-#: src/appfinder-window.c:393 src/appfinder-window.c:1219
+#: src/appfinder-window.c:393 src/appfinder-window.c:1282
 msgid "La_unch"
 msgstr "K_äivita"
 
@@ -137,7 +137,7 @@ msgid ""
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Kirje nähtavaks tegemiseks sa peaksid kustutama töölauafaili siit „%s“ või samast kaustast avama faili ning eemaldama rea „%s“."
 
-#: src/appfinder-window.c:1095 src/appfinder-window.c:1265
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
 msgstr "_Peida"
 
@@ -146,19 +146,19 @@ msgstr "_Peida"
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Kas oled kindel, et soovid peita „%s“?"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Remove From Bookmarks"
 msgstr "Eemalda järjehoidjate seast"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Add to Bookmarks"
 msgstr "Lisa järjehoidjaks"
 
-#: src/appfinder-window.c:1233
+#: src/appfinder-window.c:1296
 msgid "_Edit"
 msgstr "_Muuda"
 
-#: src/appfinder-window.c:1250
+#: src/appfinder-window.c:1313
 msgid "_Revert"
 msgstr "_Pööra tagasi"
 
