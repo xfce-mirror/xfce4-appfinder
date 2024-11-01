@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-04-06 12:47+0200\n"
+"POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Uyghur (http://app.transifex.com/xfce/xfce4-appfinder/language/ug/)\n"
@@ -26,134 +26,135 @@ msgstr "مەجبۇرىي ئاخىرلاشتۇرسۇن"
 msgid "All Applications"
 msgstr "بارلىق پروگراممىلار"
 
-#: src/appfinder-model.c:697
+#: src/appfinder-model.c:701
 msgid "Name"
 msgstr "ئاتى"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:702
 msgid "Comment"
 msgstr "ئىزاھات"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:703
 msgid "Command"
 msgstr "بۇيرۇق"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:704
 msgid "Categories"
 msgstr "كاتېگورىيە"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:705
 msgid "Filename"
 msgstr "ھۆججەت ئاتى"
 
-#: src/appfinder-model.c:2571
-msgid "Application has no command"
-msgstr "پروگراممىنىڭ بۇيرۇقى يوق"
+#: src/appfinder-model.c:2593
+msgid "Application or action has no command"
+msgstr ""
 
-#: src/appfinder-model.c:3048
+#: src/appfinder-model.c:3070
 msgid "Commands History"
 msgstr "بۇيرۇق ئىزلىرى"
 
-#: src/appfinder-model.c:3072
+#: src/appfinder-model.c:3094
 msgid "Bookmarks"
 msgstr ""
 
-#: src/appfinder-preferences.c:276
+#: src/appfinder-preferences.c:290
 msgid "C_lear"
 msgstr "تازىلا(_L)"
 
-#: src/appfinder-preferences.c:277
+#: src/appfinder-preferences.c:291
 msgid "This will permanently clear the custom command history."
 msgstr "بۇ بارلىق ئىختىيارىي بۇيرۇق ئىزىنى تازىلايدۇ."
 
-#: src/appfinder-preferences.c:278
+#: src/appfinder-preferences.c:292
 msgid "Are you sure you want to clear the command history?"
 msgstr "بۇيرۇق ئىزلىرىنى تازىلىۋېتەمسىز؟"
 
-#: src/appfinder-preferences.c:389
+#: src/appfinder-preferences.c:403
 msgid "_Delete"
 msgstr "ئۆچۈر(_D)"
 
-#: src/appfinder-preferences.c:390
+#: src/appfinder-preferences.c:404
 msgid "The custom action will be deleted permanently."
 msgstr "ئىختىيارىي مەشغۇلاتلار مەڭگۈلۈككە ئۆچۈرۈلىدۇ."
 
-#: src/appfinder-preferences.c:391
+#: src/appfinder-preferences.c:405
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "ئەندىزە «%s» نى راستىنىلا ئۆچۈرەمسىز؟"
 
-#: src/appfinder-window.c:244 src/appfinder-preferences.glade:74
+#: src/appfinder-window.c:248 src/appfinder-preferences.glade:74
 #: data/xfce4-appfinder.desktop.in:10
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
 msgstr "پروگرامما ئىزدىگۈ"
 
-#: src/appfinder-window.c:297
+#: src/appfinder-window.c:301
 msgid "Toggle view mode"
 msgstr "كۆرۈنۈش ھالىتىنى ئۆزگەرتىش"
 
-#: src/appfinder-window.c:376
+#: src/appfinder-window.c:382
 msgid "_Preferences"
 msgstr ""
 
-#: src/appfinder-window.c:387 src/appfinder-window.c:1198
+#: src/appfinder-window.c:393 src/appfinder-window.c:1282
 msgid "La_unch"
 msgstr "ئىجرا قىل(_U)"
 
-#: src/appfinder-window.c:999
+#: src/appfinder-window.c:1020
 msgid "Failed to launch desktop item editor"
 msgstr "ئۈستەلئۈستى تۇرى تەھرىرلىگۈچىنى ئىجرا قىلىش مەغلۇپ بولدى"
 
-#: src/appfinder-window.c:1024
+#: src/appfinder-window.c:1045
 msgid "Confirm"
 msgstr ""
 
-#: src/appfinder-window.c:1025
+#: src/appfinder-window.c:1046
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "ئىختىيارىي ئۈستەلئۈستى ھۆججىتى ماكان مۇندەرىجىڭىزدىن مەڭگۈلۈككە يوقىلىدۇ."
 
-#: src/appfinder-window.c:1026
+#: src/appfinder-window.c:1047
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "راستلا «%s» نى ئەسلىگە قايتۇرامسىز؟"
 
-#: src/appfinder-window.c:1036
+#: src/appfinder-window.c:1057
 msgid "Failed to remove desktop file"
 msgstr "ئۈستەلئۈستى ھۆججىتىنى ئۆچۈرۈش مەغلۇپ بولدى"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: src/appfinder-window.c:1069
+#: src/appfinder-window.c:1090
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "بىرەر تۇرنى كۆرۈنىدىغان قىلىش ئۈچۈن ئۈستەلئۈستى ھۆججىتىنى «%s» دىن ئۆچۈرسىڭىز ياكى مۇشۇ مۇندەرىجىدىكى  ھۆججەتنى ئېچىپ «%s» دېگەن قۇرنى ئۆچۈرۈۋەتسىڭىز بولىدۇ."
 
-#: src/appfinder-window.c:1074 src/appfinder-window.c:1244
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
 msgstr "يوشۇر(_H)"
 
-#: src/appfinder-window.c:1075
+#: src/appfinder-window.c:1096
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "راستلا «%s» نى يوشۇرامسىز؟"
 
-#: src/appfinder-window.c:1180
+#: src/appfinder-window.c:1264
 msgid "Remove From Bookmarks"
 msgstr ""
 
-#: src/appfinder-window.c:1180
+#: src/appfinder-window.c:1264
 msgid "Add to Bookmarks"
 msgstr ""
 
-#: src/appfinder-window.c:1212
+#: src/appfinder-window.c:1296
 msgid "_Edit"
 msgstr "تەھرىر(_E)"
 
-#: src/appfinder-window.c:1229
+#: src/appfinder-window.c:1313
 msgid "_Revert"
 msgstr ""
 
@@ -256,117 +257,125 @@ msgid "Center the window on startup."
 msgstr "قوزغالغاندا كۆزنەكنى ئوتتۇرىدا كۆرسەت"
 
 #: src/appfinder-preferences.glade:194
+msgid "Close window when _focus is lost"
+msgstr ""
+
+#: src/appfinder-preferences.glade:199
+msgid "When the focus is lost to another window, appfinder should be closed."
+msgstr ""
+
+#: src/appfinder-preferences.glade:212
 msgid "Keep running _instance in the background"
 msgstr "ئىجرا بولۇۋاتقان ئۈلگىسى ئارقىدا تۇرۇۋەرسۇن(_I)"
 
-#: src/appfinder-preferences.glade:199
+#: src/appfinder-preferences.glade:217
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "ئەڭ ئاخىرقى كۆزنەك يېپىلغاندا، ئۈلگىنى ئاخىرلاشماستىن ئارقا تەرەپتە تۇرۇۋېرىدۇ. بۇنىڭ بىلەن يېڭى كۆزنەك ئېچىلغاندا تەز ئېچىلىدۇيۇ ئەسلەك خورايدۇ."
 
-#: src/appfinder-preferences.glade:212
+#: src/appfinder-preferences.glade:230
 msgid "Single window"
 msgstr ""
 
-#: src/appfinder-preferences.glade:217
+#: src/appfinder-preferences.glade:235
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr ""
 
-#: src/appfinder-preferences.glade:230
+#: src/appfinder-preferences.glade:248
 msgid "Sort recently used items first"
 msgstr ""
 
-#: src/appfinder-preferences.glade:235
+#: src/appfinder-preferences.glade:253
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr ""
 
-#: src/appfinder-preferences.glade:247
+#: src/appfinder-preferences.glade:265
 msgid "Single-click selects and launches items"
 msgstr ""
 
-#: src/appfinder-preferences.glade:252
+#: src/appfinder-preferences.glade:270
 msgid "Items are selected and launched with only a single-click."
 msgstr ""
 
-#: src/appfinder-preferences.glade:270
+#: src/appfinder-preferences.glade:288
 msgid "Behaviour"
 msgstr "قىلمىش"
 
-#: src/appfinder-preferences.glade:305
+#: src/appfinder-preferences.glade:323
 msgid "_View items as icons"
 msgstr "تۈرلەرنى سىنبەلگە سۈپىتىدە كۆرسەتسۇن(_V)"
 
-#: src/appfinder-preferences.glade:320
+#: src/appfinder-preferences.glade:338
 msgid "Text besi_de icons"
 msgstr "تېكىست سىنبەلگىلەرنىڭ يېنىدا(_D)"
 
-#: src/appfinder-preferences.glade:338
+#: src/appfinder-preferences.glade:356
 msgid "Ite_m icon size:"
 msgstr "تۇرنىڭ سىنبەلگە چوڭلۇقى(_M):"
 
-#: src/appfinder-preferences.glade:352
+#: src/appfinder-preferences.glade:370
 msgid "Hide category pane"
 msgstr ""
 
-#: src/appfinder-preferences.glade:357
+#: src/appfinder-preferences.glade:375
 msgid "Hide category panel and show all applications."
 msgstr ""
 
-#: src/appfinder-preferences.glade:374
+#: src/appfinder-preferences.glade:392
 msgid "Categ_ory icon size:"
 msgstr "كاتېگورىيە سىنبەلگىسى چوڭلۇقى"
 
-#: src/appfinder-preferences.glade:428
+#: src/appfinder-preferences.glade:446
 msgid "Hide window decorations"
 msgstr ""
 
-#: src/appfinder-preferences.glade:433
+#: src/appfinder-preferences.glade:451
 msgid "Hide window decorations such as title bar and borders."
 msgstr ""
 
-#: src/appfinder-preferences.glade:448
+#: src/appfinder-preferences.glade:466
 msgid "Show generic application _names"
 msgstr ""
 
-#: src/appfinder-preferences.glade:472
+#: src/appfinder-preferences.glade:490
 msgid "Appearance"
 msgstr "كۆرۈنۈشى"
 
-#: src/appfinder-preferences.glade:503
+#: src/appfinder-preferences.glade:521
 msgid "C_lear Custom Command History"
 msgstr "ئىختىيارى بۇيرۇق ئىزىنى تازىلاش(_C)"
 
-#: src/appfinder-preferences.glade:518
+#: src/appfinder-preferences.glade:536
 msgid "History"
 msgstr "ئىز"
 
-#: src/appfinder-preferences.glade:537
+#: src/appfinder-preferences.glade:555
 msgid "_General"
 msgstr "ئادەتتىكى(_G)"
 
-#: src/appfinder-preferences.glade:561
+#: src/appfinder-preferences.glade:579
 msgid "Custom actions are only available in collapsed mode."
 msgstr ""
 
-#: src/appfinder-preferences.glade:609
+#: src/appfinder-preferences.glade:627
 msgid "Pattern"
 msgstr "ئەندىزە"
 
-#: src/appfinder-preferences.glade:645
+#: src/appfinder-preferences.glade:663
 msgid "Add a new custom action."
 msgstr "يېڭى ئىختىيارى مەشغۇلات قوشىدۇ."
 
-#: src/appfinder-preferences.glade:666
+#: src/appfinder-preferences.glade:684
 msgid "Remove the currently selected action."
 msgstr "ھازىرقى تاللانغان مەشغۇلاتنى ئۆچۈرىدۇ."
 
-#: src/appfinder-preferences.glade:709
+#: src/appfinder-preferences.glade:727
 #, c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -374,23 +383,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "تىپى ئالدى قوشۇلغۇچى بولسا، %s ئەندىزىنىڭ ئاخىرىدىكى تېكىستىگە، %S بولسا پۈتۈن تېكىستكە ئالمىشىدۇ. مۇنتىزىم ئىپادىدە \\0 ۋە \\<num> ئارقىلىق ئاخىرىنى تېپىشقا بولىدۇ."
 
-#: src/appfinder-preferences.glade:740
+#: src/appfinder-preferences.glade:758
 msgid "Co_mmand:"
 msgstr "بۇيرۇق(_M):"
 
-#: src/appfinder-preferences.glade:755
+#: src/appfinder-preferences.glade:773
 msgid "Patte_rn:"
 msgstr "ئەندىزە(_R):"
 
-#: src/appfinder-preferences.glade:770
+#: src/appfinder-preferences.glade:788
 msgid "_Type:"
 msgstr "تىپى(_T):"
 
-#: src/appfinder-preferences.glade:780
+#: src/appfinder-preferences.glade:798
 msgid "_Save match in command history"
 msgstr "ماسلاشقاننى بۇيرۇق ئىزىدا ساقلىسۇن(_S)"
 
-#: src/appfinder-preferences.glade:832
+#: src/appfinder-preferences.glade:850
 msgid "Custom _Actions"
 msgstr "ئىختىيارى مەشغۇلاتلار(_A)"
 
@@ -417,7 +426,11 @@ msgid ""
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 msgstr ""
 
-#: data/org.xfce.xfce4-appfinder.appdata.xml.in:12
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
+msgid "Application to quickly run applications and commands"
+msgstr ""
+
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:13
 msgid ""
 "The application finder is a tool to find and launch installed applications "
 "on your system and quickly execute commands. It can also be used to quickly "
