@@ -2349,12 +2349,11 @@ xfce_appfinder_model_update_frecency (XfceAppfinderModel *model,
         }
 
       /* collect items' frecency */
-      g_string_append (frecency_contents, g_strdup_printf (
-        "%s:%" G_GUINT32_FORMAT ":%" G_GUINT64_FORMAT,
-        item_desktop_id,
-        item->frecency->frequency,
-        item->frecency->recency));
-      g_string_append_c (frecency_contents, '\n');
+      g_string_append_printf (frecency_contents,
+                              "%s:%" G_GUINT32_FORMAT ":%" G_GUINT64_FORMAT "\n",
+                              item_desktop_id,
+                              item->frecency->frequency,
+                              item->frecency->recency);
     }
 
   APPFINDER_DEBUG ("saving frecencies");
@@ -3126,7 +3125,7 @@ xfce_appfinder_model_fuzzy_match (const gchar *source,
       {
         memset (cmd_part, 0, cmd_part_size);
         strncpy (cmd_part, token, index);
-        cmd_part [index + 1] = '\0';
+        cmd_part [index] = '\0';
 
         contain_uppercase = FALSE;
         param_part = (gchar*) token + index;
