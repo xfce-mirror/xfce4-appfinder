@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-06-06 00:48+0200\n"
+"POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2009,2013-2015,2017-2022,2024\n"
 "Language-Team: Kazakh (http://app.transifex.com/xfce/xfce4-appfinder/language/kk/)\n"
@@ -27,35 +27,35 @@ msgstr "Шығуға мәжбүрленген"
 msgid "All Applications"
 msgstr "Барлық қолданбалар"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:701
 msgid "Name"
 msgstr "Аты"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:702
 msgid "Comment"
 msgstr "Комментарий"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:703
 msgid "Command"
 msgstr "Команда"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:704
 msgid "Categories"
 msgstr "Санаттар"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:705
 msgid "Filename"
 msgstr "Файл аты"
 
-#: src/appfinder-model.c:2562
-msgid "Application has no command"
-msgstr "Қолданбада команда жоқ"
+#: src/appfinder-model.c:2593
+msgid "Application or action has no command"
+msgstr ""
 
-#: src/appfinder-model.c:3039
+#: src/appfinder-model.c:3070
 msgid "Commands History"
 msgstr "Командалар тарихы"
 
-#: src/appfinder-model.c:3063
+#: src/appfinder-model.c:3094
 msgid "Bookmarks"
 msgstr "Бетбелгілер"
 
@@ -98,7 +98,7 @@ msgstr "Қарау түрін ауыстыру"
 msgid "_Preferences"
 msgstr "Ба_птаулар"
 
-#: src/appfinder-window.c:393 src/appfinder-window.c:1219
+#: src/appfinder-window.c:393 src/appfinder-window.c:1282
 msgid "La_unch"
 msgstr "Жө_нелту"
 
@@ -134,7 +134,7 @@ msgid ""
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Жасыруды болдырмау үшін сізге \"%s\" ішінен desktop файлын өшіру немесе файлды дәл сол бумада ашып, \"%s\" жолын өшіру керек."
 
-#: src/appfinder-window.c:1095 src/appfinder-window.c:1265
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
 msgstr "Жа_сыру"
 
@@ -143,19 +143,19 @@ msgstr "Жа_сыру"
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "\"%s\" жасыруды шынымен қалайсыз ба?"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Remove From Bookmarks"
 msgstr "Бетбелгілерден өшіру"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Add to Bookmarks"
 msgstr "Бетбелгілерге қосу"
 
-#: src/appfinder-window.c:1233
+#: src/appfinder-window.c:1296
 msgid "_Edit"
 msgstr "Түз_ету"
 
-#: src/appfinder-window.c:1250
+#: src/appfinder-window.c:1313
 msgid "_Revert"
 msgstr "Қайта_ру"
 
