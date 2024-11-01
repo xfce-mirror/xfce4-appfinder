@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Adolfo Jayme Barrientos, 2014
-# Adolfo Jayme Barrientos, 2014
+# Adolfo Jayme-Barrientos, 2014
 # Casper, 2019-2021
 # Casper, 2024
 # Edscott Wilson Garcia <edscott@xfce.org>, 2004
@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-06-06 00:48+0200\n"
+"POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Casper, 2024\n"
 "Language-Team: Spanish (http://app.transifex.com/xfce/xfce4-appfinder/language/es/)\n"
@@ -39,35 +39,35 @@ msgstr "Se ha forzado la salida"
 msgid "All Applications"
 msgstr "Todas las aplicaciones"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:701
 msgid "Name"
 msgstr "Nombre"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:702
 msgid "Comment"
 msgstr "Comentario"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:703
 msgid "Command"
 msgstr "Orden"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:704
 msgid "Categories"
 msgstr "Categorías"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:705
 msgid "Filename"
 msgstr "Nombre del archivo"
 
-#: src/appfinder-model.c:2562
-msgid "Application has no command"
-msgstr "La aplicación no tiene ninguna orden"
+#: src/appfinder-model.c:2593
+msgid "Application or action has no command"
+msgstr ""
 
-#: src/appfinder-model.c:3039
+#: src/appfinder-model.c:3070
 msgid "Commands History"
 msgstr "Historial de órdenes"
 
-#: src/appfinder-model.c:3063
+#: src/appfinder-model.c:3094
 msgid "Bookmarks"
 msgstr "Marcadores"
 
@@ -110,7 +110,7 @@ msgstr "Cambiar el modo de vista"
 msgid "_Preferences"
 msgstr "_Preferencias"
 
-#: src/appfinder-window.c:393 src/appfinder-window.c:1219
+#: src/appfinder-window.c:393 src/appfinder-window.c:1282
 msgid "La_unch"
 msgstr "Ejec_utar"
 
@@ -146,7 +146,7 @@ msgid ""
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Para mostrar el elemento hay que eliminar manualmente el archivo de escritorio de la carpeta «%s» o abrir el archivo y eliminar la línea «%s»."
 
-#: src/appfinder-window.c:1095 src/appfinder-window.c:1265
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
 msgstr "_Ocultar"
 
@@ -155,19 +155,19 @@ msgstr "_Ocultar"
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "¿Seguro que quiere ocultar «%s»?"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Remove From Bookmarks"
 msgstr "Eliminar de los marcadores"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Add to Bookmarks"
 msgstr "Añadir a los marcadores"
 
-#: src/appfinder-window.c:1233
+#: src/appfinder-window.c:1296
 msgid "_Edit"
 msgstr "_Editar"
 
-#: src/appfinder-window.c:1250
+#: src/appfinder-window.c:1313
 msgid "_Revert"
 msgstr "_Restaurar"
 
