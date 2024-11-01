@@ -8,7 +8,7 @@
 # Andre Miranda <andre@andreldm.com>, 2015
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2008
 # Lucas Wilm <lucaswilm@gmail.com>, 2021
-# Michael Martins <michaelfm21@gmail.com>, 2018,2020
+# Michael Martins, 2018,2020
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2013-2014
 # Rodrigo Coacci <rcoacci@gmail.com>, 2004
 # The Cat, 2023
@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-06-06 00:48+0200\n"
+"POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: The Cat, 2023\n"
 "Language-Team: Portuguese (Brazil) (http://app.transifex.com/xfce/xfce4-appfinder/language/pt_BR/)\n"
@@ -36,35 +36,35 @@ msgstr "Forçado a sair"
 msgid "All Applications"
 msgstr "Todos os aplicativos"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:701
 msgid "Name"
 msgstr "Nome"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:702
 msgid "Comment"
 msgstr "Comentário"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:703
 msgid "Command"
 msgstr "Comando"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:704
 msgid "Categories"
 msgstr "Categorias"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:705
 msgid "Filename"
 msgstr "Nome do arquivo"
 
-#: src/appfinder-model.c:2562
-msgid "Application has no command"
-msgstr "O aplicativo não tem comando"
+#: src/appfinder-model.c:2593
+msgid "Application or action has no command"
+msgstr ""
 
-#: src/appfinder-model.c:3039
+#: src/appfinder-model.c:3070
 msgid "Commands History"
 msgstr "Histórico de comandos"
 
-#: src/appfinder-model.c:3063
+#: src/appfinder-model.c:3094
 msgid "Bookmarks"
 msgstr "Marcadores"
 
@@ -107,7 +107,7 @@ msgstr "Alternar modo de visão"
 msgid "_Preferences"
 msgstr "_Preferências"
 
-#: src/appfinder-window.c:393 src/appfinder-window.c:1219
+#: src/appfinder-window.c:393 src/appfinder-window.c:1282
 msgid "La_unch"
 msgstr "La_nçar"
 
@@ -143,7 +143,7 @@ msgid ""
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Para mostrar o item, você tem que manualmente remover o arquivo de área de trabalho de \"%s\" ou abrir o arquivo no mesmo diretório e remover a linha \"%s\"."
 
-#: src/appfinder-window.c:1095 src/appfinder-window.c:1265
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
 msgstr "_Ocultar"
 
@@ -152,19 +152,19 @@ msgstr "_Ocultar"
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Você tem certeza de que quer ocultar \"%s\"?"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Remove From Bookmarks"
 msgstr "Remover dos marcadores"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Add to Bookmarks"
 msgstr "Adicionar aos marcadores"
 
-#: src/appfinder-window.c:1233
+#: src/appfinder-window.c:1296
 msgid "_Edit"
 msgstr "_Editar"
 
-#: src/appfinder-window.c:1250
+#: src/appfinder-window.c:1313
 msgid "_Revert"
 msgstr "_Reverter"
 
