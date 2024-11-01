@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-06-06 00:48+0200\n"
+"POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Quentin PAGÈS, 2021,2023-2024\n"
 "Language-Team: Occitan (post 1500) (http://app.transifex.com/xfce/xfce4-appfinder/language/oc/)\n"
@@ -29,35 +29,35 @@ msgstr "Forçar a quitar"
 msgid "All Applications"
 msgstr "Totas las aplicacions"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:701
 msgid "Name"
 msgstr "Nom"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:702
 msgid "Comment"
 msgstr "Comentari"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:703
 msgid "Command"
 msgstr "Comanda"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:704
 msgid "Categories"
 msgstr "Categorias"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:705
 msgid "Filename"
 msgstr "Nom del fichièr"
 
-#: src/appfinder-model.c:2562
-msgid "Application has no command"
-msgstr "L'aplicacion a pas cap de comanda"
+#: src/appfinder-model.c:2593
+msgid "Application or action has no command"
+msgstr ""
 
-#: src/appfinder-model.c:3039
+#: src/appfinder-model.c:3070
 msgid "Commands History"
 msgstr "Istoric de las comandas"
 
-#: src/appfinder-model.c:3063
+#: src/appfinder-model.c:3094
 msgid "Bookmarks"
 msgstr "Marcapaginas"
 
@@ -100,7 +100,7 @@ msgstr "Bascuolar cap al mòde vista"
 msgid "_Preferences"
 msgstr "_Preferéncias"
 
-#: src/appfinder-window.c:393 src/appfinder-window.c:1219
+#: src/appfinder-window.c:393 src/appfinder-window.c:1282
 msgid "La_unch"
 msgstr "A_viar"
 
@@ -136,7 +136,7 @@ msgid ""
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Per afichar l'element vos cal suprimir manualament lo fichièr de burèu a partir de « %s » o dobrir lo fichièr dins lo meteis repertòri e suprimir la linha « %s »."
 
-#: src/appfinder-window.c:1095 src/appfinder-window.c:1265
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
 msgstr "A_magar"
 
@@ -145,19 +145,19 @@ msgstr "A_magar"
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Sètz segur que volètz amagar « %s » ?"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Remove From Bookmarks"
 msgstr "Suprimir dels marcapaginas"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Add to Bookmarks"
 msgstr "Apondre als marcapaginas"
 
-#: src/appfinder-window.c:1233
+#: src/appfinder-window.c:1296
 msgid "_Edit"
 msgstr "Edit_ar"
 
-#: src/appfinder-window.c:1250
+#: src/appfinder-window.c:1313
 msgid "_Revert"
 msgstr "_Restablir"
 
