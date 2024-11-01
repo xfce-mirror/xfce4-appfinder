@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-06-06 00:48+0200\n"
+"POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Elishai Eliyahu <elishai@mailfence.com>, 2021-2024\n"
 "Language-Team: Hebrew (http://app.transifex.com/xfce/xfce4-appfinder/language/he/)\n"
@@ -35,35 +35,35 @@ msgstr "נאלץ להפסיק"
 msgid "All Applications"
 msgstr "כל היישומים"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:701
 msgid "Name"
 msgstr "שם"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:702
 msgid "Comment"
 msgstr "הערה"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:703
 msgid "Command"
 msgstr "פקודה"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:704
 msgid "Categories"
 msgstr "קטגוריות"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:705
 msgid "Filename"
 msgstr "שם קובץ"
 
-#: src/appfinder-model.c:2562
-msgid "Application has no command"
-msgstr "יישום נטול פקודה"
+#: src/appfinder-model.c:2593
+msgid "Application or action has no command"
+msgstr ""
 
-#: src/appfinder-model.c:3039
+#: src/appfinder-model.c:3070
 msgid "Commands History"
 msgstr "היסטוריית פקודות"
 
-#: src/appfinder-model.c:3063
+#: src/appfinder-model.c:3094
 msgid "Bookmarks"
 msgstr "סימניות"
 
@@ -106,7 +106,7 @@ msgstr "החלף מצב תצוגה"
 msgid "_Preferences"
 msgstr "ה_עדפות"
 
-#: src/appfinder-window.c:393 src/appfinder-window.c:1219
+#: src/appfinder-window.c:393 src/appfinder-window.c:1282
 msgid "La_unch"
 msgstr "_הפעל"
 
@@ -142,7 +142,7 @@ msgid ""
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "כדי לגלות את הפריט עליך להסיר ידנית את קובץ שולחן העבודה מ \"%s\" או לפתוח את הקובץ באותה תיקייה ולהסיר את השורה \"%s\"."
 
-#: src/appfinder-window.c:1095 src/appfinder-window.c:1265
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
 msgstr "הס_תר"
 
@@ -151,19 +151,19 @@ msgstr "הס_תר"
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "האם אתה בטוח כי ברצונך להסתיר את \"%s\"?"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Remove From Bookmarks"
 msgstr "הסר מתוך הסימניות"
 
-#: src/appfinder-window.c:1201
+#: src/appfinder-window.c:1264
 msgid "Add to Bookmarks"
 msgstr "הוסף לסימניות"
 
-#: src/appfinder-window.c:1233
+#: src/appfinder-window.c:1296
 msgid "_Edit"
 msgstr "ע_רוך"
 
-#: src/appfinder-window.c:1250
+#: src/appfinder-window.c:1313
 msgid "_Revert"
 msgstr "ב_טל"
 
