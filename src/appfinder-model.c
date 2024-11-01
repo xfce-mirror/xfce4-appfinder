@@ -3126,7 +3126,7 @@ xfce_appfinder_model_fuzzy_match (const gchar *source,
       {
         memset (cmd_part, 0, cmd_part_size);
         strncpy (cmd_part, token, index);
-        cmd_part [index + 1] = '\0';
+        cmd_part [index] = '\0';
 
         contain_uppercase = FALSE;
         param_part = (gchar*) token + index;
