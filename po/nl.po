@@ -51,7 +51,7 @@ msgstr "Bestandnaam"
 
 #: src/appfinder-model.c:2593
 msgid "Application or action has no command"
-msgstr ""
+msgstr "Toepassing of actie heeft geen opdracht"
 
 #: src/appfinder-model.c:3070
 msgid "Commands History"
