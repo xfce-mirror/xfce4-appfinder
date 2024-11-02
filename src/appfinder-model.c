@@ -1250,8 +1250,8 @@ xfce_appfinder_model_create_model_item (XfceAppfinderModel *model,
 
   ModelItem *item;
 
-  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
-  appfinder_return_val_if_fail (IS_STRING (command), FALSE);
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), NULL);
+  appfinder_return_val_if_fail (IS_STRING (command), NULL);
 
   /* add new command */
   item = g_slice_new0 (ModelItem);
@@ -1269,6 +1269,7 @@ xfce_appfinder_model_create_model_item (XfceAppfinderModel *model,
   if (g_slist_find_custom (model->items, item, xfce_appfinder_model_item_compare_command_strict) != NULL)
     {
       APPFINDER_DEBUG ("Skip adding %s to the history as it's already present.", command);
+      g_free (item->command);
       g_slice_free (ModelItem, item);
       return NULL;
     }
