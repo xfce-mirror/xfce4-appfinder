@@ -2241,6 +2241,10 @@ void
 xfce_appfinder_window_keep_open (XfceAppfinderWindow *window,
                                  gboolean             keep_open)
 {
+  /* if the main window was already closed do nothing */
+  if (!window)
+    return;
+
   if (keep_open)
     g_signal_handler_block (window, window->focus_out_id);
   else
