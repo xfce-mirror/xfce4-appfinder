@@ -229,8 +229,10 @@ xfce_appfinder_preferences_response (GtkWidget                *window,
   if (response_id == GTK_RESPONSE_HELP)
     {
       xfce_dialog_show_help (GTK_WINDOW (window), "xfce4-appfinder", "preferences", NULL);
+      return;
     }
-  else
+
+  if (preferences->appfinder)
     {
       xfce_appfinder_window_keep_open (preferences->appfinder, FALSE);
 
@@ -239,11 +241,11 @@ xfce_appfinder_preferences_response (GtkWidget                *window,
        * when 'close-on-focus-lost' is enabled it may unexpectedly close.
        */
       gtk_window_present (GTK_WINDOW (preferences->appfinder));
-
-      g_signal_handler_disconnect (preferences->channel, preferences->property_watch_id);
-      g_object_unref (G_OBJECT (preferences));
-      gtk_widget_destroy (window);
     }
+
+  g_signal_handler_disconnect (preferences->channel, preferences->property_watch_id);
+  g_object_unref (G_OBJECT (preferences));
+  gtk_widget_destroy (window);
 }
 
 
@@ -625,14 +627,19 @@ xfce_appfinder_preferences_show (XfceAppfinderWindow *appfinder)
     {
       preferences = g_object_new (XFCE_TYPE_APPFINDER_PREFERENCES, NULL);
       g_object_add_weak_pointer (G_OBJECT (preferences), (gpointer *) &preferences);
-
-      preferences->appfinder = appfinder;
-      xfce_appfinder_window_keep_open (appfinder, TRUE);
       gtk_widget_show (GTK_WIDGET (preferences->dialog));
     }
   else
     {
       gtk_window_present (GTK_WINDOW (preferences->dialog));
+    }
+
+  /* the main window may have been detached previously */
+  if (preferences->appfinder == NULL)
+    {
+      preferences->appfinder = appfinder;
+      xfce_appfinder_window_keep_open (appfinder, TRUE);
+      g_object_add_weak_pointer (G_OBJECT (appfinder), (gpointer *) &(preferences->appfinder));
     }
 
   gtk_window_set_screen (GTK_WINDOW (preferences->dialog), gtk_window_get_screen (GTK_WINDOW (appfinder)));
