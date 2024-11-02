@@ -56,7 +56,7 @@ msgstr "Nom du fichier"
 
 #: src/appfinder-model.c:2593
 msgid "Application or action has no command"
-msgstr ""
+msgstr "L’application ou l’action n’a pas de commande"
 
 #: src/appfinder-model.c:3070
 msgid "Commands History"
@@ -417,7 +417,7 @@ msgstr "Rechercher et lancer des applications installées sur votre système"
 
 #: data/xfce4-appfinder.desktop.in:12
 msgid "program;applications;bookmarks;"
-msgstr "programme;applications;marque-pages;"
+msgstr "programme;applications;marque-pages;signets;bookmarks;"
 
 #: data/xfce4-run.desktop.in:11
 msgid "Run Program..."
