@@ -1250,8 +1250,8 @@ xfce_appfinder_model_create_model_item (XfceAppfinderModel *model,
 
   ModelItem *item;
 
-  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
-  appfinder_return_val_if_fail (IS_STRING (command), FALSE);
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), NULL);
+  appfinder_return_val_if_fail (IS_STRING (command), NULL);
 
   /* add new command */
   item = g_slice_new0 (ModelItem);
@@ -1269,6 +1269,7 @@ xfce_appfinder_model_create_model_item (XfceAppfinderModel *model,
   if (g_slist_find_custom (model->items, item, xfce_appfinder_model_item_compare_command_strict) != NULL)
     {
       APPFINDER_DEBUG ("Skip adding %s to the history as it's already present.", command);
+      g_free (item->command);
       g_slice_free (ModelItem, item);
       return NULL;
     }
@@ -2349,12 +2350,11 @@ xfce_appfinder_model_update_frecency (XfceAppfinderModel *model,
         }
 
       /* collect items' frecency */
-      g_string_append (frecency_contents, g_strdup_printf (
-        "%s:%" G_GUINT32_FORMAT ":%" G_GUINT64_FORMAT,
-        item_desktop_id,
-        item->frecency->frequency,
-        item->frecency->recency));
-      g_string_append_c (frecency_contents, '\n');
+      g_string_append_printf (frecency_contents,
+                              "%s:%" G_GUINT32_FORMAT ":%" G_GUINT64_FORMAT "\n",
+                              item_desktop_id,
+                              item->frecency->frequency,
+                              item->frecency->recency);
     }
 
   APPFINDER_DEBUG ("saving frecencies");
@@ -3126,7 +3126,7 @@ xfce_appfinder_model_fuzzy_match (const gchar *source,
       {
         memset (cmd_part, 0, cmd_part_size);
         strncpy (cmd_part, token, index);
-        cmd_part [index + 1] = '\0';
+        cmd_part [index] = '\0';
 
         contain_uppercase = FALSE;
         param_part = (gchar*) token + index;
