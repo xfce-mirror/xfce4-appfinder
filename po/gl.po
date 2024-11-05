@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Daniel Muñiz Fontoira <dani@damufo.eu>, 2018-2021
+# Daniel Muñiz Fontoira <dani@damufo.eu>, 2024
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2006,2008-2009
 # Xosé, 2015,2018
 msgid ""
@@ -12,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Daniel Muñiz Fontoira <dani@damufo.eu>, 2018-2021\n"
+"Last-Translator: Daniel Muñiz Fontoira <dani@damufo.eu>, 2024\n"
 "Language-Team: Galician (http://app.transifex.com/xfce/xfce4-appfinder/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,7 +52,7 @@ msgstr "Nome de ficheiro"
 
 #: src/appfinder-model.c:2593
 msgid "Application or action has no command"
-msgstr ""
+msgstr "A aplicación ou a acción non ten orde"
 
 #: src/appfinder-model.c:3070
 msgid "Commands History"
@@ -110,7 +111,7 @@ msgstr "Produciuse un fallo ao iniciar o editor de elemento de escritorio"
 
 #: src/appfinder-window.c:1045
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmar"
 
 #: src/appfinder-window.c:1046
 msgid ""
@@ -183,7 +184,7 @@ msgstr "Non tentar usar ou converterse un servizo de D-Bus"
 
 #: src/main.c:71
 msgid "Toggle window visibility of background service"
-msgstr ""
+msgstr "Alternar a visibilidade da xanela do servizo en segundo plano"
 
 #: src/main.c:72
 msgid "Run in daemon mode"
@@ -261,11 +262,11 @@ msgstr "Centrar a xanela ao iniciar."
 
 #: src/appfinder-preferences.glade:194
 msgid "Close window when _focus is lost"
-msgstr ""
+msgstr "Pechar a xanela cando se perde o _foco"
 
 #: src/appfinder-preferences.glade:199
 msgid "When the focus is lost to another window, appfinder should be closed."
-msgstr ""
+msgstr "Cando se perde o foco para outra xanela, o buscador de aplicacións debe pecharse."
 
 #: src/appfinder-preferences.glade:212
 msgid "Keep running _instance in the background"
@@ -300,11 +301,11 @@ msgstr "Ordena os elementos de xeito que os elementos de máis recente uso sempr
 
 #: src/appfinder-preferences.glade:265
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Seleccionar e iniciar os elementos cun simple clic"
 
 #: src/appfinder-preferences.glade:270
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Os elementos son seleccionados e iniciados cun simple clic."
 
 #: src/appfinder-preferences.glade:288
 msgid "Behaviour"
@@ -336,15 +337,15 @@ msgstr "Tamaño da icona da categ_oría:"
 
 #: src/appfinder-preferences.glade:446
 msgid "Hide window decorations"
-msgstr ""
+msgstr "Agochar as decoracións da xanela"
 
 #: src/appfinder-preferences.glade:451
 msgid "Hide window decorations such as title bar and borders."
-msgstr ""
+msgstr "Agocha as decoracións das xanelas como a barra de título e os bordos."
 
 #: src/appfinder-preferences.glade:466
 msgid "Show generic application _names"
-msgstr ""
+msgstr "Amosar os _nomes xenéricos das aplicacións"
 
 #: src/appfinder-preferences.glade:490
 msgid "Appearance"
