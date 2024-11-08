@@ -54,7 +54,7 @@ msgstr "Nome de ficheiro"
 
 #: src/appfinder-model.c:2593
 msgid "Application or action has no command"
-msgstr ""
+msgstr "A aplicação ou ação não tem comando"
 
 #: src/appfinder-model.c:3070
 msgid "Commands History"
