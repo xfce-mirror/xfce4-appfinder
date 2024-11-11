@@ -1752,6 +1752,15 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
 
 
 static gboolean
+xfce_appfinder_window_execute_with_delay (gpointer data)
+{
+  xfce_appfinder_window_execute (XFCE_APPFINDER_WINDOW (data), TRUE);
+  return FALSE;
+}
+
+
+
+static gboolean
 xfce_appfinder_window_completion_match_selected (GtkEntryCompletion *widget,
                                                  GtkTreeModel       *model,
                                                  GtkTreeIter        *iter,
@@ -1763,12 +1772,13 @@ xfce_appfinder_window_completion_match_selected (GtkEntryCompletion *widget,
 
   gtk_get_current_event_state (&state);
 
-  if (state & GDK_CONTROL_MASK) {
-    gtk_tree_model_get (GTK_TREE_MODEL (window->model), iter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
-    gtk_entry_set_text (GTK_ENTRY (window->entry), cmd);
-    xfce_appfinder_window_execute (window, TRUE);
-    return TRUE;
-  }
+  if (state & GDK_CONTROL_MASK)
+    {
+      gtk_tree_model_get (GTK_TREE_MODEL (window->model), iter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
+      gtk_entry_set_text (GTK_ENTRY (window->entry), cmd);
+      g_idle_add (xfce_appfinder_window_execute_with_delay, window);
+      return TRUE;
+    }
 
   return FALSE;
 }
@@ -2108,15 +2118,6 @@ xfce_appfinder_window_launch_clicked (XfceAppfinderWindow *window)
 
 
 
-static gboolean
-xfce_appfinder_window_destroy_widget (gpointer data)
-{
-  gtk_widget_destroy (GTK_WIDGET (data));
-  return FALSE;
-}
-
-
-
 static void
 xfce_appfinder_window_execute (XfceAppfinderWindow *window,
                                gboolean             close_on_succeed)
@@ -2202,7 +2203,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
     }
 
   if (result && close_on_succeed)
-    g_idle_add (xfce_appfinder_window_destroy_widget, window);
+    gtk_widget_destroy (GTK_WIDGET (window));
 }
 
 
