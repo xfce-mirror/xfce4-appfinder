@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce4-appfinder.master package.
 # 
 # Translators:
 # Ammuu5, 2017-2018
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2013,2019-2020
 # Juha Kautto <juha@xfce.org>, 2004
 # Pasi Lallinaho <pasi@shimmerproject.org>, 2014-2015,2019
+# Skunnyk <skunnyk@alteroot.org>, 2024
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-06 00:47+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>, 2013,2019-2020\n"
+"Last-Translator: Skunnyk <skunnyk@alteroot.org>, 2024\n"
 "Language-Team: Finnish (http://app.transifex.com/xfce/xfce4-appfinder/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,387 +23,419 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. close all windows and quit
-#: ../src/appfinder-gdbus.c:99
+#: src/appfinder-gdbus.c:99
 msgid "Forced to quit"
 msgstr "Pakotettu lopettamaan"
 
-#: ../src/appfinder-category-model.c:157
+#: src/appfinder-category-model.c:157
 msgid "All Applications"
 msgstr "Kaikki sovellukset"
 
-#: ../src/appfinder-model.c:697
+#: src/appfinder-model.c:701
 msgid "Name"
 msgstr "Nimi"
 
-#: ../src/appfinder-model.c:698
+#: src/appfinder-model.c:702
 msgid "Comment"
 msgstr "Kommentti"
 
-#: ../src/appfinder-model.c:699
+#: src/appfinder-model.c:703
 msgid "Command"
 msgstr "Komento"
 
-#: ../src/appfinder-model.c:700
+#: src/appfinder-model.c:704
 msgid "Categories"
 msgstr "Luokat"
 
-#: ../src/appfinder-model.c:701
+#: src/appfinder-model.c:705
 msgid "Filename"
 msgstr "Tiedostonimi"
 
-#: ../src/appfinder-model.c:2571
-msgid "Application has no command"
-msgstr "Sovelluksen komento puuttuu"
+#: src/appfinder-model.c:2593
+msgid "Application or action has no command"
+msgstr ""
 
-#: ../src/appfinder-model.c:3048
+#: src/appfinder-model.c:3070
 msgid "Commands History"
 msgstr "Komentohistoria"
 
-#: ../src/appfinder-model.c:3072
+#: src/appfinder-model.c:3094
 msgid "Bookmarks"
 msgstr "Kirjanmerkit"
 
-#: ../src/appfinder-preferences.c:276
+#: src/appfinder-preferences.c:290
 msgid "C_lear"
 msgstr "_Tyhjennä"
 
-#: ../src/appfinder-preferences.c:277
+#: src/appfinder-preferences.c:291
 msgid "This will permanently clear the custom command history."
 msgstr "Tämä tyhjentää mukautetun komentohistorian pysyvästi."
 
-#: ../src/appfinder-preferences.c:278
+#: src/appfinder-preferences.c:292
 msgid "Are you sure you want to clear the command history?"
 msgstr "Haluatko varmasti tyhjentää komentohistorian?"
 
-#: ../src/appfinder-preferences.c:389
+#: src/appfinder-preferences.c:403
 msgid "_Delete"
 msgstr "_Poista"
 
-#: ../src/appfinder-preferences.c:390
+#: src/appfinder-preferences.c:404
 msgid "The custom action will be deleted permanently."
 msgstr "Mukautettu toiminto poistetaan pysyvästi."
 
-#: ../src/appfinder-preferences.c:391
+#: src/appfinder-preferences.c:405
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Haluatko varmasti poistaa kaavan \"%s\"?"
 
-#: ../src/appfinder-window.c:244 ../src/appfinder-preferences.glade.h:10
-#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:1
+#: src/appfinder-window.c:248 src/appfinder-preferences.glade:74
+#: data/xfce4-appfinder.desktop.in:10
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
 msgstr "Sovellusten hakutyökalu"
 
-#: ../src/appfinder-window.c:297
+#: src/appfinder-window.c:301
 msgid "Toggle view mode"
 msgstr "Vaihda näkymää"
 
-#: ../src/appfinder-window.c:376
+#: src/appfinder-window.c:382
 msgid "_Preferences"
 msgstr "_Asetukset"
 
-#: ../src/appfinder-window.c:387 ../src/appfinder-window.c:1198
+#: src/appfinder-window.c:393 src/appfinder-window.c:1282
 msgid "La_unch"
 msgstr "_Käynnistä"
 
-#: ../src/appfinder-window.c:999
+#: src/appfinder-window.c:1020
 msgid "Failed to launch desktop item editor"
 msgstr "Käynnistineditorin käynnistys epäonnistui"
 
-#: ../src/appfinder-window.c:1024
+#: src/appfinder-window.c:1045
 msgid "Confirm"
 msgstr ""
 
-#: ../src/appfinder-window.c:1025
+#: src/appfinder-window.c:1046
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Tämä poistaa mukautetun käynnistimen kotikansiostasi pysyvästi."
 
-#: ../src/appfinder-window.c:1026
+#: src/appfinder-window.c:1047
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Haluatko varmasti palauttaa kohteen \"%s\"?"
 
-#: ../src/appfinder-window.c:1036
+#: src/appfinder-window.c:1057
 msgid "Failed to remove desktop file"
 msgstr "Käynnistimen poistaminen epäonnistui"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: ../src/appfinder-window.c:1069
+#: src/appfinder-window.c:1090
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Palauttaaksesi kohteen näkyväksi, sinun täytyy poistaa käynnistintiedosto kohteesta \"%s\" tai avata tiedosto ja poistaa rivi \"%s\"."
 
-#: ../src/appfinder-window.c:1074 ../src/appfinder-window.c:1244
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
 msgstr "_Piilota"
 
-#: ../src/appfinder-window.c:1075
+#: src/appfinder-window.c:1096
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Haluatko varmasti piilottaa kohteen \"%s\"?"
 
-#: ../src/appfinder-window.c:1180
+#: src/appfinder-window.c:1264
 msgid "Remove From Bookmarks"
 msgstr "Poista kirjanmerkeistä"
 
-#: ../src/appfinder-window.c:1180
+#: src/appfinder-window.c:1264
 msgid "Add to Bookmarks"
 msgstr "Lisää kirjanmerkkeihin"
 
-#: ../src/appfinder-window.c:1212
+#: src/appfinder-window.c:1296
 msgid "_Edit"
 msgstr "_Muokkaa"
 
-#: ../src/appfinder-window.c:1229
+#: src/appfinder-window.c:1313
 msgid "_Revert"
 msgstr "_Palauta"
 
-#: ../src/main.c:66
+#: src/main.c:66
 msgid "Start in collapsed mode"
 msgstr "Tiivis näkymä käynnistäessä"
 
-#: ../src/main.c:67
+#: src/main.c:67
 msgid "Print version information and exit"
 msgstr "Näytä versiotiedot ja poistu"
 
-#: ../src/main.c:68
+#: src/main.c:68
 msgid "Replace the existing service"
 msgstr "Korvaa olemassaoleva palvelu"
 
-#: ../src/main.c:69
+#: src/main.c:69
 msgid "Quit all instances"
 msgstr "Lopeta kaikki istunnot"
 
-#: ../src/main.c:70
+#: src/main.c:70
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Älä yritä käyttää tai käynnistää D-Bus-palvelua."
 
-#: ../src/main.c:71
+#: src/main.c:71
 msgid "Toggle window visibility of background service"
 msgstr ""
 
-#: ../src/main.c:72
+#: src/main.c:72
 msgid "Run in daemon mode"
 msgstr "Suorita taustaprosessina"
 
-#: ../src/main.c:249
+#: src/main.c:249
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Saat käyttöohjeita kirjoittamalla \"%s --help\"."
 
-#: ../src/main.c:260
+#: src/main.c:260
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce:n kehitystiimi. Kaikki oikeudet pidätetään."
 
-#: ../src/main.c:261
+#: src/main.c:261
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Vikailmoitukset osoitteeseen <%s>."
 
-#: ../src/appfinder-preferences.glade.h:1
+#: src/appfinder-preferences.glade:13
 msgid "Prefix"
 msgstr "Etuliite"
 
-#: ../src/appfinder-preferences.glade.h:2
+#: src/appfinder-preferences.glade:16
 msgid "Regular Expression"
 msgstr "Säännöllinen lauseke"
 
-#: ../src/appfinder-preferences.glade.h:3
+#: src/appfinder-preferences.glade:35
 msgid "Very Small"
 msgstr "Hyvin pieni"
 
-#: ../src/appfinder-preferences.glade.h:4
+#: src/appfinder-preferences.glade:38
 msgid "Smaller"
 msgstr "Pienempi"
 
-#: ../src/appfinder-preferences.glade.h:5
+#: src/appfinder-preferences.glade:41
 msgid "Small"
 msgstr "Pieni"
 
-#: ../src/appfinder-preferences.glade.h:6
+#: src/appfinder-preferences.glade:44
 msgid "Normal"
 msgstr "Normaali"
 
-#: ../src/appfinder-preferences.glade.h:7
+#: src/appfinder-preferences.glade:47
 msgid "Large"
 msgstr "Suuri"
 
-#: ../src/appfinder-preferences.glade.h:8
+#: src/appfinder-preferences.glade:50
 msgid "Larger"
 msgstr "Suurempi"
 
-#: ../src/appfinder-preferences.glade.h:9
+#: src/appfinder-preferences.glade:53
 msgid "Very Large"
 msgstr "Hyvin suuri"
 
-#: ../src/appfinder-preferences.glade.h:11
+#: src/appfinder-preferences.glade:91
 msgid "_Close"
 msgstr "_Sulje"
 
-#: ../src/appfinder-preferences.glade.h:12
+#: src/appfinder-preferences.glade:107
 msgid "_Help"
 msgstr "_Ohje"
 
-#: ../src/appfinder-preferences.glade.h:13
+#: src/appfinder-preferences.glade:160
 msgid "Remember last _selected category"
 msgstr "Muista viimeksi _valittu luokka"
 
-#: ../src/appfinder-preferences.glade.h:14
+#: src/appfinder-preferences.glade:176
 msgid "Always c_enter the window"
 msgstr "_Keskitä ikkuna aina"
 
-#: ../src/appfinder-preferences.glade.h:15
+#: src/appfinder-preferences.glade:181
 msgid "Center the window on startup."
 msgstr "Keskitä ikkuna käynnistäessä."
 
-#: ../src/appfinder-preferences.glade.h:16
+#: src/appfinder-preferences.glade:194
+msgid "Close window when _focus is lost"
+msgstr ""
+
+#: src/appfinder-preferences.glade:199
+msgid "When the focus is lost to another window, appfinder should be closed."
+msgstr ""
+
+#: src/appfinder-preferences.glade:212
 msgid "Keep running _instance in the background"
 msgstr "Pidä _istunto taustalla käynnissä"
 
-#: ../src/appfinder-preferences.glade.h:17
+#: src/appfinder-preferences.glade:217
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "Sen sijaan että sovellus sammutetaan kun viimeinen ikkuna suljetaan, pidä istunto taustalla uusien ikkunoiden avaamisen nopeuttamiseksi. Voit haluta poistaa tämän käytöstä vähentääksesi muistin käyttöä."
 
-#: ../src/appfinder-preferences.glade.h:18
+#: src/appfinder-preferences.glade:230
 msgid "Single window"
 msgstr "Yksi ikkuna"
 
-#: ../src/appfinder-preferences.glade.h:19
+#: src/appfinder-preferences.glade:235
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr "Kun istunto on käynnissä taustalla, avaa vain yksi ikkuna kerrallaan."
 
-#: ../src/appfinder-preferences.glade.h:20
+#: src/appfinder-preferences.glade:248
 msgid "Sort recently used items first"
 msgstr "Järjestä viimeksi käytetyt ensimmäiseksi"
 
-#: ../src/appfinder-preferences.glade.h:21
+#: src/appfinder-preferences.glade:253
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:22
+#: src/appfinder-preferences.glade:265
 msgid "Single-click selects and launches items"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:23
+#: src/appfinder-preferences.glade:270
 msgid "Items are selected and launched with only a single-click."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:24
+#: src/appfinder-preferences.glade:288
 msgid "Behaviour"
 msgstr "Toiminta"
 
-#: ../src/appfinder-preferences.glade.h:25
+#: src/appfinder-preferences.glade:323
 msgid "_View items as icons"
 msgstr "Näytä kohteet k_uvakkeina"
 
-#: ../src/appfinder-preferences.glade.h:26
+#: src/appfinder-preferences.glade:338
 msgid "Text besi_de icons"
 msgstr "_Teksti kuvakkeen vierellä"
 
-#: ../src/appfinder-preferences.glade.h:27
+#: src/appfinder-preferences.glade:356
 msgid "Ite_m icon size:"
 msgstr "Kohtee_n kuvakekoko:"
 
-#: ../src/appfinder-preferences.glade.h:28
+#: src/appfinder-preferences.glade:370
 msgid "Hide category pane"
 msgstr "Piilota luokkapaneeli"
 
-#: ../src/appfinder-preferences.glade.h:29
+#: src/appfinder-preferences.glade:375
 msgid "Hide category panel and show all applications."
 msgstr "Piilota luokkapaneeli ja näytä kaikki sovellukset."
 
-#: ../src/appfinder-preferences.glade.h:30
+#: src/appfinder-preferences.glade:392
 msgid "Categ_ory icon size:"
 msgstr "L_uokkakuvakkeen koko:"
 
-#: ../src/appfinder-preferences.glade.h:31
+#: src/appfinder-preferences.glade:446
 msgid "Hide window decorations"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:32
+#: src/appfinder-preferences.glade:451
 msgid "Hide window decorations such as title bar and borders."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:33
+#: src/appfinder-preferences.glade:466
 msgid "Show generic application _names"
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:34
+#: src/appfinder-preferences.glade:490
 msgid "Appearance"
 msgstr "Ulkoasu"
 
-#: ../src/appfinder-preferences.glade.h:35
+#: src/appfinder-preferences.glade:521
 msgid "C_lear Custom Command History"
 msgstr "_Tyhjennä komentohistoria"
 
-#: ../src/appfinder-preferences.glade.h:36
+#: src/appfinder-preferences.glade:536
 msgid "History"
 msgstr "Historia"
 
-#: ../src/appfinder-preferences.glade.h:37
+#: src/appfinder-preferences.glade:555
 msgid "_General"
 msgstr "_Yleiset"
 
-#: ../src/appfinder-preferences.glade.h:38
+#: src/appfinder-preferences.glade:579
 msgid "Custom actions are only available in collapsed mode."
 msgstr ""
 
-#: ../src/appfinder-preferences.glade.h:39
+#: src/appfinder-preferences.glade:627
 msgid "Pattern"
 msgstr "Kuvio"
 
-#: ../src/appfinder-preferences.glade.h:40
+#: src/appfinder-preferences.glade:663
 msgid "Add a new custom action."
 msgstr "Lisää mukautettu toiminto."
 
-#: ../src/appfinder-preferences.glade.h:41
+#: src/appfinder-preferences.glade:684
 msgid "Remove the currently selected action."
 msgstr "Poista valittu toiminto."
 
-#: ../src/appfinder-preferences.glade.h:43
-#, no-c-format
+#: src/appfinder-preferences.glade:727
+#, c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Jos tyyppi on etuliite, %s korvataan merkkijonolla kaavan jälkeen ja %s syötteen koko tekstillä. Säännölliset lausekkeet onnistuvat merkeillä \\0 ja \\<nro>."
+msgstr "Jos tyyppi on etuliite, %s korvataan merkkijonolla kaavan jälkeen ja %S syötteen koko tekstillä. Säännölliset lausekkeet onnistuvat merkeillä \\0 ja \\<nro>."
 
-#: ../src/appfinder-preferences.glade.h:44
+#: src/appfinder-preferences.glade:758
 msgid "Co_mmand:"
 msgstr "K_omento:"
 
-#: ../src/appfinder-preferences.glade.h:45
+#: src/appfinder-preferences.glade:773
 msgid "Patte_rn:"
 msgstr "Ku_vio:"
 
-#: ../src/appfinder-preferences.glade.h:46
+#: src/appfinder-preferences.glade:788
 msgid "_Type:"
 msgstr "Tyy_ppi:"
 
-#: ../src/appfinder-preferences.glade.h:47
+#: src/appfinder-preferences.glade:798
 msgid "_Save match in command history"
 msgstr "Talle_nna vastaavuus komentohistoriaan"
 
-#: ../src/appfinder-preferences.glade.h:48
+#: src/appfinder-preferences.glade:850
 msgid "Custom _Actions"
 msgstr "_Mukautetut komennot"
 
-#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:2
+#: data/xfce4-appfinder.desktop.in:11
+msgid "Find and launch applications installed on your system"
+msgstr "Etsi ja käynnistä järjestelmään asennettuja sovelluksia"
+
+#: data/xfce4-appfinder.desktop.in:12
+msgid "program;applications;bookmarks;"
+msgstr ""
+
+#: data/xfce4-run.desktop.in:11
+msgid "Run Program..."
+msgstr "Suorita sovellus..."
+
+#: data/xfce4-run.desktop.in:12
+msgid "Enter a command you want to launch"
+msgstr "Kirjoita käynnistettävä komento"
+
+#: data/xfce4-run.desktop.in:13
+msgid ""
+"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
+" dash;krunner;synapse;ulauncher;launchy;gnome "
+"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr ""
+
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
 msgid "Application to quickly run applications and commands"
 msgstr "Sovellus sovellusten ja komentojen nopeaan käynnistämiseen"
 
-#: ../data/org.xfce.xfce4-appfinder.appdata.xml.in.h:3
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:13
 msgid ""
 "The application finder is a tool to find and launch installed applications "
 "on your system and quickly execute commands. It can also be used to quickly "
