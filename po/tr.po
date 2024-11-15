@@ -14,6 +14,7 @@
 # Necdet Yücel <necdetyucel@gmail.com>, 2017
 # b83946de5835331df42b9ffcc43e6a33_05e65cd <73a30e0a984b2291d4915f37112ad292_814039>, 2023
 # Serdar Sağlam <teknomobil@msn.com>, 2019-2020
+# Ufuk Furkan Öztürk, 2024
 # Volkan Gezer <volkangezer@gmail.com>, 2013
 # Zafer Eren <zaferern@gmail.com>, 2014
 msgid ""
@@ -22,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: b83946de5835331df42b9ffcc43e6a33_05e65cd <73a30e0a984b2291d4915f37112ad292_814039>, 2023\n"
+"Last-Translator: Ufuk Furkan Öztürk, 2024\n"
 "Language-Team: Turkish (http://app.transifex.com/xfce/xfce4-appfinder/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,7 +62,7 @@ msgstr "Dosya Adı"
 
 #: src/appfinder-model.c:2593
 msgid "Application or action has no command"
-msgstr ""
+msgstr "Uygulama veya eylemin komutu yok"
 
 #: src/appfinder-model.c:3070
 msgid "Commands History"
@@ -271,11 +272,11 @@ msgstr "Açılışta pencereyi ortala."
 
 #: src/appfinder-preferences.glade:194
 msgid "Close window when _focus is lost"
-msgstr ""
+msgstr "_Odak kaybedildiğinde pencereyi kapat"
 
 #: src/appfinder-preferences.glade:199
 msgid "When the focus is lost to another window, appfinder should be closed."
-msgstr ""
+msgstr "Odak başka bir pencereye geçtiğinde appfinder kapanmalı."
 
 #: src/appfinder-preferences.glade:212
 msgid "Keep running _instance in the background"
