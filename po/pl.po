@@ -138,7 +138,7 @@ msgstr "Nie udało się usunąć pliku aktywatora"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Aby ponownie wyświetlić element, należy usunąć plik odpowiedni aktywatora z położenia „%s” lub usunąć z niego wiersz „%s”."
+msgstr "Aby ponownie wyświetlić element, należy ręcznie usunąć plik aktywatora z położenia „%s” lub otworzyć plik w tym samym katalogu i usunąć z niego wiersz „%s”."
 
 #: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
@@ -388,7 +388,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Wprowadza polecenie czynności. Jeśli typ ustawiono na prefiks, parametr %s zostanie zastąpiony ciągiem wprowadzonym po wzorze, a parametr %S całym ciągiem wraz ze wzorem. Dla wyrażeń regularnych można użyć \\0 i \\<numer>."
+msgstr "Wprowadza polecenie czynności. Jeśli typ ustawiono na prefiks, parametr %s zostanie zastąpiony ciągiem wprowadzonym po wzorze, a parametr %S całym ciągiem wraz ze wzorem. Dla wyrażeń regularnych można użyć \\0 i \\<num>."
 
 #: src/appfinder-preferences.glade:758
 msgid "Co_mmand:"
