@@ -37,6 +37,7 @@
 
 
 
+static void xfce_appfinder_preferences_finalize                (GObject                  *object);
 static void xfce_appfinder_preferences_response                (GtkWidget                *window,
                                                                 gint                      response_id,
                                                                 XfceAppfinderPreferences *preferences);
@@ -95,6 +96,10 @@ G_DEFINE_TYPE (XfceAppfinderPreferences, xfce_appfinder_preferences, GTK_TYPE_BU
 static void
 xfce_appfinder_preferences_class_init (XfceAppfinderPreferencesClass *klass)
 {
+  GObjectClass *gobject_class;
+
+  gobject_class = G_OBJECT_CLASS (klass);
+  gobject_class->finalize = xfce_appfinder_preferences_finalize;
 }
 
 
@@ -214,6 +219,24 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
   preferences->property_watch_id =
     g_signal_connect (G_OBJECT (preferences->channel), "property-changed",
         G_CALLBACK (xfce_appfinder_preferences_action_changed), preferences);
+}
+
+
+
+static void
+xfce_appfinder_preferences_finalize (GObject *object)
+{
+  XfceAppfinderPreferences *preferences = XFCE_APPFINDER_PREFERENCES (object);
+
+  if (preferences->appfinder)
+    {
+      g_object_remove_weak_pointer (G_OBJECT (preferences->appfinder),
+                                    (gpointer*) &preferences->appfinder);
+      preferences->appfinder = NULL;
+    }
+
+
+  (*G_OBJECT_CLASS (xfce_appfinder_preferences_parent_class)->finalize) (object);
 }
 
 
