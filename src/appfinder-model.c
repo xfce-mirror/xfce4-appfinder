@@ -571,6 +571,7 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
   ModelItem           *item;
   const gchar         *name;
   const gchar         *comment;
+  gchar               *command;
   GFile               *file;
   gchar               *parse_name;
   GList               *categories, *li;
@@ -693,6 +694,8 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
           if (comment == NULL)
             comment = "";
 
+          command = g_utf8_make_valid (garcon_menu_item_get_command (item->item), -1);
+
           item->tooltip = g_markup_printf_escaped ("<b>%s:</b> %s\n"
                                                    "<b>%s:</b> %s\n"
                                                    "<b>%s:</b> %s\n"
@@ -700,10 +703,11 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
                                                    "<b>%s:</b> %s",
                                                    _("Name"), garcon_menu_item_get_name (item->item),
                                                    _("Comment"), comment,
-                                                   _("Command"), garcon_menu_item_get_command (item->item),
+                                                   _("Command"), command,
                                                    _("Categories"), cat_str,
                                                    _("Filename"), parse_name);
 
+          g_free (command);
           g_free (parse_name);
           g_free (cat_str);
         }
@@ -1005,9 +1009,7 @@ xfce_appfinder_model_item_key (GarconMenuItem *item)
   const gchar *value, *keyword;
   GList       *keywords, *li;
   GString     *str;
-  gchar       *normalized;
-  gchar       *casefold;
-  gchar       *p;
+  gchar       *command, *normalized, *casefold, *p;
 
   str = g_string_sized_new (128);
 
@@ -1016,14 +1018,15 @@ xfce_appfinder_model_item_key (GarconMenuItem *item)
     g_string_append (str, value);
   g_string_append_c (str, '\n');
 
-  value = garcon_menu_item_get_command (item);
-  if (value != NULL)
+  command = g_utf8_make_valid (garcon_menu_item_get_command (item), -1);
+  if (command != NULL)
     {
       /* only the non-expanding command items */
-      p = strchr (value, '%');
-      g_string_append_len (str, value, p != NULL ? p - value : -1);
+      p = strchr (command, '%');
+      g_string_append_len (str, command, p != NULL ? p - command : -1);
+      g_string_append_c (str, '\n');
+      g_free (command);
     }
-  g_string_append_c (str, '\n');
 
   value = garcon_menu_item_get_comment (item);
   if (value != NULL)
@@ -1058,7 +1061,7 @@ static ModelItem *
 xfce_appfinder_model_item_new (GarconMenuItem *menu_item)
 {
   ModelItem   *item;
-  const gchar *command, *p;
+  gchar *command, *p;
 
   appfinder_return_val_if_fail (GARCON_IS_MENU_ITEM (menu_item), NULL);
 
@@ -1068,7 +1071,7 @@ xfce_appfinder_model_item_new (GarconMenuItem *menu_item)
   appfinder_refcount_debug_add (G_OBJECT (menu_item),
      garcon_menu_item_get_desktop_id (menu_item));
 
-  command = garcon_menu_item_get_command (menu_item);
+  command = g_utf8_make_valid (garcon_menu_item_get_command (menu_item), -1);
   if (G_LIKELY (command != NULL))
     {
       p = strstr (command, " %");
@@ -1076,6 +1079,7 @@ xfce_appfinder_model_item_new (GarconMenuItem *menu_item)
         item->command = g_strndup (command, p - command);
       else
         item->command = g_strdup (command);
+      g_free (command);
     }
 
   item->key = xfce_appfinder_model_item_key (menu_item);
@@ -2586,7 +2590,7 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
         command = (gchar*) garcon_menu_item_action_get_command (action);
     }
   else
-    command = (gchar*) garcon_menu_item_get_command (item);
+    command = g_utf8_make_valid (garcon_menu_item_get_command (item), -1);
 
   if (!IS_STRING (command))
     {
