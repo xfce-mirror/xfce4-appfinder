@@ -1,3 +1,19 @@
+4.19.4 (2024-12-01)
+======
+- Fix buffer overflow and leaks (#92)
+- I18n: Update po/LINGUAS list
+- Translation Updates:
+  Albanian, Amharic, Arabic, Armenian (Armenia), Asturian, Basque,
+  Belarusian, Bulgarian, Catalan, Chinese (China), Chinese (Hong Kong),
+  Chinese (Taiwan), Croatian, Czech, Danish, Dutch, Eastern Armenian,
+  English (Australia), English (Canada), English (United Kingdom),
+  Estonian, Finnish, French, Galician, German, Greek, Hebrew, Hindi,
+  Hungarian, Icelandic, Indonesian, Interlingue, Italian, Japanese,
+  Kazakh, Korean, Lithuanian, Malay, Norwegian Bokmål, Norwegian
+  Nynorsk, Occitan (post 1500), Polish, Portuguese, Portuguese
+  (Brazil), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish,
+  Swedish, Telugu, Thai, Turkish, Ukrainian, Uyghur, Vietnamese
+
 4.19.3 (2024-11-01)
 ======
 - Add support to application actions (#86)
