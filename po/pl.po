@@ -380,7 +380,7 @@ msgstr "Dodaje nową czynność."
 
 #: src/appfinder-preferences.glade:684
 msgid "Remove the currently selected action."
-msgstr "Usuwa zaznaczoną czynność"
+msgstr "Usuwa zaznaczoną czynność."
 
 #: src/appfinder-preferences.glade:727
 #, c-format
