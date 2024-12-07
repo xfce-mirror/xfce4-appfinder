@@ -57,7 +57,7 @@ msgstr "שם קובץ"
 
 #: src/appfinder-model.c:2593
 msgid "Application or action has no command"
-msgstr ""
+msgstr "ישום או פעולה ללא פקודה"
 
 #: src/appfinder-model.c:3070
 msgid "Commands History"
