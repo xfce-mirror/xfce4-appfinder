@@ -4,6 +4,7 @@
 # 
 # Translators:
 # beriain, 2020-2021
+# Eder Etxebarria Rojo, 2024
 # Piarres Beobide <pi@beobide.net>, 2004-2005,2008-2009
 msgid ""
 msgstr ""
@@ -11,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: beriain, 2020-2021\n"
+"Last-Translator: Eder Etxebarria Rojo, 2024\n"
 "Language-Team: Basque (http://app.transifex.com/xfce/xfce4-appfinder/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,7 +51,7 @@ msgstr "Fitxategi-izena"
 
 #: src/appfinder-model.c:2593
 msgid "Application or action has no command"
-msgstr ""
+msgstr "Ez dago komandorik aplikazio edo ekintzarentzat"
 
 #: src/appfinder-model.c:3070
 msgid "Commands History"
@@ -109,7 +110,7 @@ msgstr "Huts mahaigain elementu editorea abiaraztean"
 
 #: src/appfinder-window.c:1045
 msgid "Confirm"
-msgstr ""
+msgstr "Berretsi"
 
 #: src/appfinder-window.c:1046
 msgid ""
@@ -182,7 +183,7 @@ msgstr "Ez saiatu erabiltzen edo bihurtu D-Bus zerbitzua"
 
 #: src/main.c:71
 msgid "Toggle window visibility of background service"
-msgstr ""
+msgstr "Aldatu atzeko planoko zerbitzuaren leihoen ikusgarritasuna"
 
 #: src/main.c:72
 msgid "Run in daemon mode"
@@ -260,11 +261,11 @@ msgstr "Erdiratu leihoa abioan."
 
 #: src/appfinder-preferences.glade:194
 msgid "Close window when _focus is lost"
-msgstr ""
+msgstr "Itxi leihoa fokua galtzen denean"
 
 #: src/appfinder-preferences.glade:199
 msgid "When the focus is lost to another window, appfinder should be closed."
-msgstr ""
+msgstr "Fokua beste leiho batean galtzen denean, appfinder itxi egin behar da."
 
 #: src/appfinder-preferences.glade:212
 msgid "Keep running _instance in the background"
@@ -299,11 +300,11 @@ msgstr "Elementuak zerrendatu, azkenaldian erabilitako elementuak beti goiko ald
 
 #: src/appfinder-preferences.glade:265
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "klik bakarrak elementuak hautatzen eta abiarazten ditu"
 
 #: src/appfinder-preferences.glade:270
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Elementuak klik bakarrarekin hautatzen eta abiarazten dira."
 
 #: src/appfinder-preferences.glade:288
 msgid "Behaviour"
@@ -343,7 +344,7 @@ msgstr "Izenburu barra edota ertzak bezalako leiho dekorazioak ezkutatu."
 
 #: src/appfinder-preferences.glade:466
 msgid "Show generic application _names"
-msgstr ""
+msgstr "Erakutsi aplikazioen izen generikoak"
 
 #: src/appfinder-preferences.glade:490
 msgid "Appearance"
