@@ -4,14 +4,16 @@
 # 
 # Translators:
 # Marius Ghita, 2022
+# Marius Ghita, 2022
 # Mișu Moldovan <dumol@xfce.org>, 2015
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Marius Ghita, 2022\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024\n"
 "Language-Team: Romanian (http://app.transifex.com/xfce/xfce4-appfinder/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +28,7 @@ msgstr "Ieșire forțată"
 
 #: src/appfinder-category-model.c:157
 msgid "All Applications"
-msgstr "Toate programele"
+msgstr "Toate aplicațiile"
 
 #: src/appfinder-model.c:701
 msgid "Name"
@@ -50,7 +52,7 @@ msgstr "Nume de fișier"
 
 #: src/appfinder-model.c:2593
 msgid "Application or action has no command"
-msgstr ""
+msgstr "Aplicația sau acțiunea nu are comandă"
 
 #: src/appfinder-model.c:3070
 msgid "Commands History"
@@ -58,7 +60,7 @@ msgstr "Istoricul comenzilor"
 
 #: src/appfinder-model.c:3094
 msgid "Bookmarks"
-msgstr "Programe favorite"
+msgstr "Aplicații favorite"
 
 #: src/appfinder-preferences.c:290
 msgid "C_lear"
@@ -89,7 +91,7 @@ msgstr "Sigur doriți să ștergeți modelul „%s”?"
 #: data/xfce4-appfinder.desktop.in:10
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
-msgstr "Pornire de programe"
+msgstr "Instrument pentru căutarea aplicațiilor"
 
 #: src/appfinder-window.c:301
 msgid "Toggle view mode"
@@ -105,17 +107,17 @@ msgstr "Po_rnește"
 
 #: src/appfinder-window.c:1020
 msgid "Failed to launch desktop item editor"
-msgstr "Nu s-a putut deschide editorul elementului de pe desktop"
+msgstr "Nu s-a putut deschide editorul elementului .desktop"
 
 #: src/appfinder-window.c:1045
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmă"
 
 #: src/appfinder-window.c:1046
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Această comandă va șterge pentru totdeauna fișierul desktop personalizat din directorul „Acasă”."
+msgstr "Această comandă va șterge pentru totdeauna fișierul .desktop personalizat din directorul „Acasă”."
 
 #: src/appfinder-window.c:1047
 #, c-format
@@ -124,7 +126,7 @@ msgstr "Sigur doriți să reveniți în privința „%s”?"
 
 #: src/appfinder-window.c:1057
 msgid "Failed to remove desktop file"
-msgstr "Nu s-a putut șterge fișierul desktop"
+msgstr "Nu s-a putut elimina fișierul .desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -133,7 +135,7 @@ msgstr "Nu s-a putut șterge fișierul desktop"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Pentru a afișa acest element va trebui să ștergeți manual fișierul desktop din „%s” sau să deschideți fișierul din acest director și să eliminați linia „%s”."
+msgstr "Pentru a afișa acest element va trebui să eliminați manual fișierul .desktop din „%s” sau să deschideți fișierul din acest director și să eliminați linia „%s”."
 
 #: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
@@ -158,7 +160,7 @@ msgstr "_Editare"
 
 #: src/appfinder-window.c:1313
 msgid "_Revert"
-msgstr ""
+msgstr "_Revenire"
 
 #: src/main.c:66
 msgid "Start in collapsed mode"
@@ -166,7 +168,7 @@ msgstr "Pornește în modul restrâns"
 
 #: src/main.c:67
 msgid "Print version information and exit"
-msgstr "Arată detalii despre versiune și ieși"
+msgstr "Afișează informațiile despre versiune și iese"
 
 #: src/main.c:68
 msgid "Replace the existing service"
@@ -182,7 +184,7 @@ msgstr "Nu încerca să utilizezi ori să devii un serviciu D-Bus"
 
 #: src/main.c:71
 msgid "Toggle window visibility of background service"
-msgstr ""
+msgstr "Afișează/ascunde fereastra serviciului ce rulează în fundal"
 
 #: src/main.c:72
 msgid "Run in daemon mode"
@@ -191,7 +193,7 @@ msgstr "Pornește în modul demon"
 #: src/main.c:249
 #, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Utilizați „%s --help” pentru detalii de utilizare."
+msgstr "Tastați «%s --help» pentru detalii despre utilizare."
 
 #: src/main.c:260
 msgid "The Xfce development team. All rights reserved."
@@ -260,11 +262,11 @@ msgstr "Centrează pe ecran fereastra la pornire."
 
 #: src/appfinder-preferences.glade:194
 msgid "Close window when _focus is lost"
-msgstr ""
+msgstr "Închide fereastra atunci când se pierde _focalizarea"
 
 #: src/appfinder-preferences.glade:199
 msgid "When the focus is lost to another window, appfinder should be closed."
-msgstr ""
+msgstr "Când focalizarea este pierdută pentru o altă fereastră, «appfinder» trebuie închis."
 
 #: src/appfinder-preferences.glade:212
 msgid "Keep running _instance in the background"
@@ -275,7 +277,7 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "În loc ca programul să se termine când ultima fereastră este închisă, se va păstra o instanță pornită pentru a deschide mai rapid noi ferestre. Puteți dezactiva acest comportament pentru a reduce consumul de memorie."
+msgstr "În loc ca aplicațial să se termine când ultima fereastră este închisă, se va păstra o instanță pornită pentru a deschide mai rapid noi ferestre. Puteți dezactiva acest comportament pentru a reduce consumul de memorie."
 
 #: src/appfinder-preferences.glade:230
 msgid "Single window"
@@ -285,7 +287,7 @@ msgstr "O singură fereastră"
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
-msgstr ""
+msgstr "Când o instanță rulează în fundal, se va deschide o singură fereastră în același timp."
 
 #: src/appfinder-preferences.glade:248
 msgid "Sort recently used items first"
@@ -295,15 +297,15 @@ msgstr "Sortează după cele recent folosite"
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
-msgstr ""
+msgstr "Ordonează elementele, astfel încât elementele utilizate cel mai recent să fie întotdeauna în partea de sus."
 
 #: src/appfinder-preferences.glade:265
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Un singur clic selectează și lansează elemente"
 
 #: src/appfinder-preferences.glade:270
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Elementele sunt selectate și lansate cu un singur clic."
 
 #: src/appfinder-preferences.glade:288
 msgid "Behaviour"
@@ -311,39 +313,39 @@ msgstr "Comportament"
 
 #: src/appfinder-preferences.glade:323
 msgid "_View items as icons"
-msgstr "Arată elementele ca _iconițe"
+msgstr "Afișează elementele ca p_ictograme"
 
 #: src/appfinder-preferences.glade:338
 msgid "Text besi_de icons"
-msgstr "Te_xt lângă iconițe"
+msgstr "Te_xt lângă pictograme"
 
 #: src/appfinder-preferences.glade:356
 msgid "Ite_m icon size:"
-msgstr "_Mărimea iconițelor elementelor:"
+msgstr "Dimensiunea pictogramelor ele_mentelor:"
 
 #: src/appfinder-preferences.glade:370
 msgid "Hide category pane"
-msgstr ""
+msgstr "Ascunde panoul cu categorii"
 
 #: src/appfinder-preferences.glade:375
 msgid "Hide category panel and show all applications."
-msgstr ""
+msgstr "Ascunde panoul cu categorii și afișează toate aplicațiile."
 
 #: src/appfinder-preferences.glade:392
 msgid "Categ_ory icon size:"
-msgstr "Mă_rimea iconițelor categoriilor:"
+msgstr "Dimensiunea pictogramelor categ_oriilor:"
 
 #: src/appfinder-preferences.glade:446
 msgid "Hide window decorations"
-msgstr ""
+msgstr "Ascunde decorațiunile ferestrei"
 
 #: src/appfinder-preferences.glade:451
 msgid "Hide window decorations such as title bar and borders."
-msgstr ""
+msgstr "Ascunde decorațiunile ferestrei, cum ar fi bara de titlu și marginile."
 
 #: src/appfinder-preferences.glade:466
 msgid "Show generic application _names"
-msgstr ""
+msgstr "Afișează _numele generice ale aplicațiilor"
 
 #: src/appfinder-preferences.glade:490
 msgid "Appearance"
@@ -363,7 +365,7 @@ msgstr "_Generale"
 
 #: src/appfinder-preferences.glade:579
 msgid "Custom actions are only available in collapsed mode."
-msgstr ""
+msgstr "Acțiunile personalizate sunt disponibile numai în modul restrâns."
 
 #: src/appfinder-preferences.glade:627
 msgid "Pattern"
@@ -371,11 +373,11 @@ msgstr "Model"
 
 #: src/appfinder-preferences.glade:663
 msgid "Add a new custom action."
-msgstr "Adăugați o nouă acțiune personalizată."
+msgstr "Adaugă o nouă acțiune personalizată."
 
 #: src/appfinder-preferences.glade:684
 msgid "Remove the currently selected action."
-msgstr "Eliminați acțiunea selectată curent."
+msgstr "Elimină acțiunea selectată curent."
 
 #: src/appfinder-preferences.glade:727
 #, c-format
@@ -407,15 +409,15 @@ msgstr "Acțiuni p_ersonalizate"
 
 #: data/xfce4-appfinder.desktop.in:11
 msgid "Find and launch applications installed on your system"
-msgstr "Căutați și porniți programe instalate în sistem"
+msgstr "Căutați și lansați aplicațiile instalate în sistem"
 
 #: data/xfce4-appfinder.desktop.in:12
 msgid "program;applications;bookmarks;"
-msgstr ""
+msgstr "program;aplicații;favorite;"
 
 #: data/xfce4-run.desktop.in:11
 msgid "Run Program..."
-msgstr "Pornire de programe…"
+msgstr "Rulați programul..."
 
 #: data/xfce4-run.desktop.in:12
 msgid "Enter a command you want to launch"
@@ -426,11 +428,11 @@ msgid ""
 "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
 " dash;krunner;synapse;ulauncher;launchy;gnome "
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr ""
+msgstr "rulează;comandă;aplicație;program;căutător;căutare;lansator;totul;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
 msgid "Application to quickly run applications and commands"
-msgstr ""
+msgstr "Aplicație pentru a rula rapid aplicații și comenzi"
 
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:13
 msgid ""
@@ -438,4 +440,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr ""
+msgstr "Programul de căutare a aplicațiilor este un instrument pentru găsirea și lansarea aplicațiilor instalate în sistem și pentru executarea rapidă a comenzilor. De asemenea, acesta poate fi utilizat pentru a adăuga rapid lansatoare la panoul Xfce prin glisarea unui element din vizualizare și plasarea acestuia pe panou."
