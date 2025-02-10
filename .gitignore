@@ -46,6 +46,7 @@ po/remove-potcdate.sin
 po/stamp-po
 po/*.pot
 
+src/appfinder-preferences-ui.c
 src/appfinder-preferences-ui.h
 src/xfce4-appfinder
 

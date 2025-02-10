@@ -113,8 +113,10 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
   preferences->channel = xfconf_channel_get ("xfce4-appfinder");
 
   /* load the builder data into the object */
-  gtk_builder_add_from_string (GTK_BUILDER (preferences), appfinder_preferences_ui,
-                               appfinder_preferences_ui_length, NULL);
+  appfinder_preferences_ui_register_resource ();
+  gtk_builder_add_from_resource (GTK_BUILDER (preferences),
+                                 "/org/xfce/appfinder/preferences/appfinder-preferences.glade",
+                                 NULL);
 
   preferences->dialog = gtk_builder_get_object (GTK_BUILDER (preferences), "dialog");
   appfinder_return_if_fail (XFCE_IS_TITLED_DIALOG (preferences->dialog));
