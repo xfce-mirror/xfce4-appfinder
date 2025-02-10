@@ -9,7 +9,11 @@ AM_CPPFLAGS = \
 bin_PROGRAMS = xfce4-appfinder
 
 xfce4_appfinder_built_sources = \
-	appfinder-preferences-ui.h
+	appfinder-preferences-ui.h \
+	appfinder-preferences-ui.c
+
+xfce4_appfinder_glade_files = \
+	appfinder-preferences.glade
 
 xfce4_appfinder_SOURCES = \
 	$(xfce4_appfinder_built_sources) \
@@ -58,10 +62,11 @@ install-exec-hook:
 	$(mkinstalldirs) $(DESTDIR)$(bindir)
 	-( cd $(DESTDIR)$(bindir) ; test -x xfrun4 || ln -sf xfce4-appfinder xfrun4 )
 
-if MAINTAINER_MODE
+%-ui.h: $(srcdir)/%-ui.gresource.xml $(glade_files) Makefile
+	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-header --manual-register $<
 
-appfinder-preferences-ui.h: $(srcdir)/appfinder-preferences.glade Makefile
-	$(AM_V_GEN) xdt-csource --static --strip-comments --strip-content --name=appfinder_preferences_ui $< >$@
+%-ui.c: $(srcdir)/%-ui.gresource.xml $(glade_files) Makefile
+	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-source --manual-register $<
 
 DISTCLEANFILES = \
 	$(xfce4_appfinder_built_sources)
@@ -69,7 +74,5 @@ DISTCLEANFILES = \
 BUILT_SOURCES = \
 	$(xfce4_appfinder_built_sources)
 
-endif
-
 EXTRA_DIST = \
-	appfinder-preferences.glade
+	$(xfce4_appfinder_glade_files)
