@@ -47,3 +47,8 @@ appfinder = executable(
   install_dir: get_option('prefix') / get_option('bindir'),
 )
 
+install_symlink(
+  'xfrun4',
+  install_dir: get_option('prefix') / get_option('bindir'),
+  pointing_to: appfinder.name()
+)
