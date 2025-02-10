@@ -14,6 +14,7 @@ AC_COPYRIGHT([Copyright (c) 2008-2024 The Xfce development team. All rights rese
 AC_INIT([xfce4-appfinder], [xdt_version], [https://gitlab.xfce.org/xfce/xfce4-appfinder/], [xfce4-appfinder])
 AC_PREREQ([2.69])
 AC_CONFIG_MACRO_DIRS([m4])
+AC_DEFINE([VERSION_FULL], [PACKAGE_VERSION], [Alias for VERSION and PACKAGE_VERSION for meson compatibility])
 
 dnl ***************************
 dnl *** Initialize automake ***
