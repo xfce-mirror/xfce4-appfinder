@@ -25,7 +25,8 @@ appdata_in_files = org.xfce.xfce4-appfinder.appdata.xml.in
 
 EXTRA_DIST = \
 	$(apps_in_files)	\
-	$(appdata_in_files)
+	$(appdata_in_files)	\
+	meson.build
 
 CLEANFILES = $(appdata_DATA)
 

@@ -18,3 +18,6 @@ install-data-hook:
                 echo "***   $(gtk_update_icon_cache)";			\
 		echo "***";						\
         fi
+
+EXTRA_DIST = \
+	meson.build
