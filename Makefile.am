@@ -7,6 +7,7 @@ SUBDIRS = \
 
 EXTRA_DIST = \
 	README.md \
+	xfce-revision.h.in \
 	meson.build
 
 distuninstallcheck_listfiles = \
