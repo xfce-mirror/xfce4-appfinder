@@ -1091,7 +1091,7 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
                                    XfceAppfinderModel *model)
 {
   GSList      *li;
-  ModelItem   *item;
+  ModelItem   *item, *item_new;
   gint         idx;
   GtkTreeIter  iter;
   GtkTreePath *path;
@@ -1105,6 +1105,13 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
       item = li->data;
       if (item->item == menu_item)
         {
+          item_new = xfce_appfinder_model_item_new (menu_item);
+          if (item_new == NULL)
+            {
+              g_warning ("Failed to create new model item");
+              break;
+            }
+
           categories = g_ptr_array_ref (item->categories);
           g_object_ref (G_OBJECT (menu_item));
 
@@ -1114,7 +1121,8 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
 
           xfce_appfinder_model_item_free (item, model);
 
-          item = xfce_appfinder_model_item_new (menu_item);
+          item = item_new;
+          item_new = NULL;
           item->categories = categories;
           li->data = item;
 
@@ -1714,6 +1722,11 @@ xfce_appfinder_model_collect_item (const gchar    *desktop_id,
         return;
 
       item = xfce_appfinder_model_item_new (menu_item);
+      if (item == NULL)
+        {
+          g_warning ("Failed to create new model item");
+          return;
+        }
 
       item->categories = g_ptr_array_new_with_free_func (g_object_unref);
       if (context->category != NULL)
