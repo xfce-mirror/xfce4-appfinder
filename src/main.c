@@ -29,6 +29,9 @@
 #ifdef HAVE_ERRNO_H
 #include <errno.h>
 #endif
+#ifdef HAVE_XFCE_REVISION_H
+#include "xfce-revision.h"
+#endif
 
 #include <gtk/gtk.h>
 #include <libxfce4util/libxfce4util.h>
@@ -255,7 +258,7 @@ main (gint argc, gchar **argv)
 
   if (opt_version)
     {
-      g_print ("%s %s (Xfce %s)\n\n", PACKAGE_NAME, PACKAGE_VERSION, xfce_version_string ());
+      g_print ("%s %s (Xfce %s)\n\n", PACKAGE_NAME, VERSION_FULL, xfce_version_string ());
       g_print ("%s\n", "Copyright (c) 2004-2024");
       g_print ("\t%s\n\n", _("The Xfce development team. All rights reserved."));
       g_print (_("Please report bugs to <%s>."), PACKAGE_BUGREPORT);

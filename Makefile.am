@@ -6,7 +6,8 @@ SUBDIRS = \
 	po
 
 EXTRA_DIST = \
-	README.md
+	README.md \
+	meson.build
 
 distuninstallcheck_listfiles = \
 	find -type f \! -name icon-theme.cache
