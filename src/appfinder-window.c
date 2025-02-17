@@ -563,11 +563,13 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
             {
               gtk_tree_selection_select_path (selection, path);
               gtk_tree_view_scroll_to_cell (GTK_TREE_VIEW (window->view), path, NULL, FALSE, 0, 0);
+              gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->view), path, NULL, FALSE);
             }
           else
             {
               gtk_icon_view_select_path (GTK_ICON_VIEW (window->view), path);
               gtk_icon_view_scroll_to_path (GTK_ICON_VIEW (window->view), path, FALSE, 0, 0);
+              gtk_icon_view_set_cursor (GTK_ICON_VIEW (window->view), path, NULL, FALSE);
             }
           gtk_tree_path_free (path);
         }
