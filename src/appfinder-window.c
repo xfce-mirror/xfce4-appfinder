@@ -522,7 +522,7 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
 
   if (event->keyval == GDK_KEY_Tab || event->keyval == GDK_KEY_ISO_Left_Tab)
     {
-      GtkTreeSelection *selection;
+      GtkTreeSelection *selection = NULL;
       GtkTreeModel *model;
       GtkTreeIter iter, first_iter;
       GtkTreePath *path = NULL;
