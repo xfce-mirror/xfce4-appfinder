@@ -596,7 +596,7 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
               name = xfce_appfinder_model_get_menu_item_name (model, item->item);
               comment = garcon_menu_item_get_comment (item->item);
 
-              if (comment != NULL)
+              if (comment != NULL && strlen (comment) > 0)
                 {
                   if (model->icon_size < XFCE_APPFINDER_ICON_SIZE_SMALL)
                     item->abstract = g_markup_printf_escaped ("<b>%s</b> &#8212; %s", name, comment);
