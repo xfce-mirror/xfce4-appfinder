@@ -75,5 +75,6 @@ BUILT_SOURCES = \
 	$(xfce4_appfinder_built_sources)
 
 EXTRA_DIST = \
-	$(xfce4_appfinder_glade_files) \
+	$(xfce4_appfinder_glade_files)			\
+	appfinder-preferences-ui.gresource.xml	\
 	meson.build
