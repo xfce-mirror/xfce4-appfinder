@@ -30,7 +30,6 @@
 
 #include <src/appfinder-window.h>
 #include <src/appfinder-preferences.h>
-#include <src/appfinder-preferences-ui.h>
 #include <src/appfinder-model.h>
 #include <src/appfinder-private.h>
 #include <src/appfinder-actions.h>
@@ -113,7 +112,6 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
   preferences->channel = xfconf_channel_get ("xfce4-appfinder");
 
   /* load the builder data into the object */
-  appfinder_preferences_ui_register_resource ();
   gtk_builder_add_from_resource (GTK_BUILDER (preferences),
                                  "/org/xfce/appfinder/preferences/appfinder-preferences.glade",
                                  NULL);

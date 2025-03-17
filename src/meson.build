@@ -3,9 +3,6 @@ appfinder_generated_sources += gnome.compile_resources(
   'appfinder-preferences-ui',
   'appfinder-preferences-ui.gresource.xml',
   export: false,
-  extra_args: [
-    '--manual-register',
-  ],
 )
 
 appfinder_sources = [

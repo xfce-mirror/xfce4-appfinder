@@ -9,7 +9,6 @@ AM_CPPFLAGS = \
 bin_PROGRAMS = xfce4-appfinder
 
 xfce4_appfinder_built_sources = \
-	appfinder-preferences-ui.h \
 	appfinder-preferences-ui.c
 
 xfce4_appfinder_glade_files = \
@@ -62,11 +61,8 @@ install-exec-hook:
 	$(mkinstalldirs) $(DESTDIR)$(bindir)
 	-( cd $(DESTDIR)$(bindir) ; test -x xfrun4 || ln -sf xfce4-appfinder xfrun4 )
 
-%-ui.h: $(srcdir)/%-ui.gresource.xml $(glade_files) Makefile
-	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-header --manual-register $<
-
 %-ui.c: $(srcdir)/%-ui.gresource.xml $(glade_files) Makefile
-	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-source --manual-register $<
+	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-source $<
 
 DISTCLEANFILES = \
 	$(xfce4_appfinder_built_sources)
