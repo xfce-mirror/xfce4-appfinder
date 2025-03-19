@@ -302,6 +302,25 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
       xfce_appfinder_actions_save (actions, TRUE);
     }
 
+    /* Should be removed after 4.22 */
+    if (!xfconf_channel_get_bool (actions->channel, "/migrated-exo-open", FALSE))
+    {
+      for (li = actions->actions; li != NULL; li = li->next)
+        {
+          GString *string;
+
+          action = li->data;
+          string = g_string_new (action->command);
+          g_string_replace (string, "exo-open", "xfce-open", 0);
+          g_free (action->command);
+          action->command = string->str;
+          g_string_free (string, FALSE);
+        }
+
+      xfce_appfinder_actions_save (actions, TRUE);
+      xfconf_channel_set_bool (actions->channel, "/migrated-exo-open", TRUE);
+    }
+
   if (old_actions != NULL)
     {
       g_slist_foreach (old_actions, (GFunc) xfce_appfinder_actions_free, NULL);
