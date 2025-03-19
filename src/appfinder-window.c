@@ -1012,7 +1012,7 @@ xfce_appfinder_window_popup_menu_edit (GtkWidget           *mi,
   uri = g_object_get_data (G_OBJECT (menu), "uri");
   if (G_LIKELY (uri != NULL))
     {
-      cmd = g_strdup_printf ("exo-desktop-item-edit --xid=0x%x '%s'",
+      cmd = g_strdup_printf ("xfce-desktop-item-edit --xid=0x%x '%s'",
                              APPFINDER_WIDGET_XID (window), uri);
       if (!g_spawn_command_line_async (cmd, &error))
         {
