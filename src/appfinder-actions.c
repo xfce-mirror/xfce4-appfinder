@@ -313,8 +313,7 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
           string = g_string_new (action->command);
           g_string_replace (string, "exo-open", "xfce-open", 0);
           g_free (action->command);
-          action->command = string->str;
-          g_string_free (string, FALSE);
+          action->command = g_string_free (string, FALSE);
         }
 
       xfce_appfinder_actions_save (actions, TRUE);
