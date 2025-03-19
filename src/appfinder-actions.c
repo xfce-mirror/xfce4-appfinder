@@ -157,27 +157,27 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
     /* default actions, sorted */
     { XFCE_APPFINDER_ACTION_TYPE_REGEX, 0,
       "^(file|http|https):\\/\\/(.*)$",
-      "exo-open \\0",
+      "xfce-open \\0",
       FALSE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "$",
-      "exo-open --launch TerminalEmulator %s",
+      "xfce-open --launch TerminalEmulator %s",
       TRUE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "!w",
-      "exo-open --launch WebBrowser http://en.wikipedia.org/wiki/%s",
+      "xfce-open --launch WebBrowser http://en.wikipedia.org/wiki/%s",
       FALSE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "#",
-      "exo-open --launch TerminalEmulator man %s",
+      "xfce-open --launch TerminalEmulator man %s",
       FALSE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "/",
-      "exo-open --launch FileManager %S",
+      "xfce-open --launch FileManager %S",
       FALSE,
       NULL },
   };
@@ -300,6 +300,24 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
     {
       xfce_appfinder_actions_load_defaults (actions);
       xfce_appfinder_actions_save (actions, TRUE);
+    }
+
+    /* Should be removed after 4.22 */
+    if (!xfconf_channel_get_bool (actions->channel, "/migrated-exo-open", FALSE))
+    {
+      for (li = actions->actions; li != NULL; li = li->next)
+        {
+          GString *string;
+
+          action = li->data;
+          string = g_string_new (action->command);
+          g_string_replace (string, "exo-open", "xfce-open", 0);
+          g_free (action->command);
+          action->command = g_string_free (string, FALSE);
+        }
+
+      xfce_appfinder_actions_save (actions, TRUE);
+      xfconf_channel_set_bool (actions->channel, "/migrated-exo-open", TRUE);
     }
 
   if (old_actions != NULL)
