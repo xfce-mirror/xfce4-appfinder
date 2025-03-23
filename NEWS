@@ -1,3 +1,16 @@
+4.21.0 (2025-03-23)
+======
+- Replace deprecated exo with libxfce4ui 4.21.0
+- Remove manual registration of resources
+- meson: Add missing file to EXTRA_DIST
+- Hide dash from list view when comment is empty
+- build: Automate copyright year management
+- meson: Check for headers
+- Fix potential dereference of NULL
+- Add support to Meson
+- Translation Updates:
+  Albanian, Basque, Catalan, Danish, Greek, Hungarian, Romanian, Slovak
+
 4.20.0 (2024-12-15)
 ======
 - Translation Updates:

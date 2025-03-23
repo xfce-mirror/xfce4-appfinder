@@ -1,14 +1,10 @@
 project(
   'xfce4-appfinder',
   'c',
-  version: '4.20.0-dev',
-  license: 'GPL-2.0-or-later',
-  meson_version: '>= 0.61.0',
-  default_options: [
-    'c_std=gnu11',
-    'buildtype=debugoptimized',
-    'warning_level=2',
-  ]
+version : '4.21.0',
+  license : 'GPL-2.0-or-later',
+  meson_version : '>= 0.61.0',
+  default_options : ['c_std=gnu11', 'buildtype=debugoptimized', 'warning_level=2']
 )
 
 project_namespace = 'xfce'
