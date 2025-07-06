@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Steve Harris <steve@jbs.ca>, 2020
-# Steve Harris <steve@jbs.ca>, 2023
+# Steve Harris <steve@jbs.ca>, 2023,2025
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Steve Harris <steve@jbs.ca>, 2023\n"
+"Last-Translator: Steve Harris <steve@jbs.ca>, 2023,2025\n"
 "Language-Team: English (Canada) (http://app.transifex.com/xfce/xfce4-appfinder/language/en_CA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,7 +50,7 @@ msgstr "Filename"
 
 #: src/appfinder-model.c:2593
 msgid "Application or action has no command"
-msgstr ""
+msgstr "Application or action has no command"
 
 #: src/appfinder-model.c:3070
 msgid "Commands History"
@@ -109,7 +109,7 @@ msgstr "Failed to launch desktop item editor"
 
 #: src/appfinder-window.c:1045
 msgid "Confirm"
-msgstr ""
+msgstr "Confirm"
 
 #: src/appfinder-window.c:1046
 msgid ""
@@ -182,11 +182,11 @@ msgstr "Do not try to use or become a D-Bus service"
 
 #: src/main.c:71
 msgid "Toggle window visibility of background service"
-msgstr ""
+msgstr "Toggle window visibility of background service"
 
 #: src/main.c:72
 msgid "Run in daemon mode"
-msgstr ""
+msgstr "Run in daemon mode"
 
 #: src/main.c:249
 #, c-format
@@ -260,11 +260,11 @@ msgstr "Centre the window on startup."
 
 #: src/appfinder-preferences.glade:194
 msgid "Close window when _focus is lost"
-msgstr ""
+msgstr "Close window when _focus is lost"
 
 #: src/appfinder-preferences.glade:199
 msgid "When the focus is lost to another window, appfinder should be closed."
-msgstr ""
+msgstr "When the focus is lost to another window, appfinder should be closed."
 
 #: src/appfinder-preferences.glade:212
 msgid "Keep running _instance in the background"
@@ -299,11 +299,11 @@ msgstr "Order items, such that items that are most recently used are always on t
 
 #: src/appfinder-preferences.glade:265
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Single-click selects and launches items"
 
 #: src/appfinder-preferences.glade:270
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Items are selected and launched with only a single-click."
 
 #: src/appfinder-preferences.glade:288
 msgid "Behaviour"
@@ -343,7 +343,7 @@ msgstr "Hide window decorations such as title bar and borders."
 
 #: src/appfinder-preferences.glade:466
 msgid "Show generic application _names"
-msgstr ""
+msgstr "Show generic application _names"
 
 #: src/appfinder-preferences.glade:490
 msgid "Appearance"
