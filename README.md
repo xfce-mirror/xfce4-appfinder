@@ -32,17 +32,17 @@ See [NEWS](https://gitlab.xfce.org/xfce/xfce4-appfinder/-/blob/master/NEWS) for 
 From source: 
 
     % cd xfce4-appfinder
-    % ./autogen.sh
-    % make
-    % make install
+    % meson setup build
+    % meson compile -C build
+    % meson install -C build
 
 From release tarball:
 
-    % tar xf xfce4-appfinder-<version>.tar.bz2
+    % tar xf xfce4-appfinder-<version>.tar.xz
     % cd xfce4-appfinder-<version>
-    % ./configure
-    % make
-    % make install
+    % meson setup build
+    % meson compile -C build
+    % meson install -C build
 
 ### Reporting Bugs
 
