@@ -1,0 +1,439 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce4-appfinder.master package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-11-01 12:47+0100\n"
+"PO-Revision-Date: 2013-07-02 20:40+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Tatar (http://app.transifex.com/xfce/xfce4-appfinder/language/tt/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tt\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. close all windows and quit
+#: src/appfinder-gdbus.c:99
+msgid "Forced to quit"
+msgstr "Мәҗбүри рәвештә туктату"
+
+#: src/appfinder-category-model.c:157
+msgid "All Applications"
+msgstr "Барлык кушымталар"
+
+#: src/appfinder-model.c:701
+msgid "Name"
+msgstr "Исем"
+
+#: src/appfinder-model.c:702
+msgid "Comment"
+msgstr "Комментарий"
+
+#: src/appfinder-model.c:703
+msgid "Command"
+msgstr "Команда"
+
+#: src/appfinder-model.c:704
+msgid "Categories"
+msgstr "Категорияләр"
+
+#: src/appfinder-model.c:705
+msgid "Filename"
+msgstr "Файл исеме"
+
+#: src/appfinder-model.c:2593
+msgid "Application or action has no command"
+msgstr ""
+
+#: src/appfinder-model.c:3070
+msgid "Commands History"
+msgstr "Командалар журналы"
+
+#: src/appfinder-model.c:3094
+msgid "Bookmarks"
+msgstr "Кыстыргычлар"
+
+#: src/appfinder-preferences.c:290
+msgid "C_lear"
+msgstr "_Чистартырга"
+
+#: src/appfinder-preferences.c:291
+msgid "This will permanently clear the custom command history."
+msgstr "Командалар журналы кире кайтарылмаслык итеп чистартылачак."
+
+#: src/appfinder-preferences.c:292
+msgid "Are you sure you want to clear the command history?"
+msgstr "Командалар журналын чистартыргамы?"
+
+#: src/appfinder-preferences.c:403
+msgid "_Delete"
+msgstr "_Бетерергә"
+
+#: src/appfinder-preferences.c:404
+msgid "The custom action will be deleted permanently."
+msgstr "Кулланучы гамәле торгызу мөмкинлегеннән башка бетереләчәк."
+
+#: src/appfinder-preferences.c:405
+#, c-format
+msgid "Are you sure you want to delete pattern \"%s\"?"
+msgstr "«%s» шаблонын бетерергәме?"
+
+#: src/appfinder-window.c:248 src/appfinder-preferences.glade:74
+#: data/xfce4-appfinder.desktop.in:10
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
+msgid "Application Finder"
+msgstr "Кушымталар эзләү"
+
+#: src/appfinder-window.c:301
+msgid "Toggle view mode"
+msgstr "Күрсәтү режимын күчерергә"
+
+#: src/appfinder-window.c:382
+msgid "_Preferences"
+msgstr "_Көйләүләр"
+
+#: src/appfinder-window.c:393 src/appfinder-window.c:1282
+msgid "La_unch"
+msgstr "_Эшләтергә"
+
+#: src/appfinder-window.c:1020
+msgid "Failed to launch desktop item editor"
+msgstr "Эш өстәле элементлары редакторын эшләтеп булмады"
+
+#: src/appfinder-window.c:1045
+msgid "Confirm"
+msgstr ""
+
+#: src/appfinder-window.c:1046
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr "Сезнең desktop-файл төп каталогыгыздан мәңгегә бетереләчәк."
+
+#: src/appfinder-window.c:1047
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr "«%s» шаблонын кайтарыргамы?"
+
+#: src/appfinder-window.c:1057
+msgid "Failed to remove desktop file"
+msgstr "Эш өстәлендәге файлны бетереп булмады"
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: src/appfinder-window.c:1090
+#, c-format
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr "Бу элементны яңадан күрсәтү өчен сезгә «%s» битеннән desktop-файлны кулдан бетерергә яисә бу файлны шул ук каталогта ачып «%s» юлын бетерергә туры киләчәк."
+
+#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
+msgid "_Hide"
+msgstr "_Яшерергә"
+
+#: src/appfinder-window.c:1096
+#, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr "«%s» яшерергәме?"
+
+#: src/appfinder-window.c:1264
+msgid "Remove From Bookmarks"
+msgstr "Кыстыргычлардан бетерергә"
+
+#: src/appfinder-window.c:1264
+msgid "Add to Bookmarks"
+msgstr "Кыстыргычларга өстәргә"
+
+#: src/appfinder-window.c:1296
+msgid "_Edit"
+msgstr "_Үзгәртергә"
+
+#: src/appfinder-window.c:1313
+msgid "_Revert"
+msgstr "_Баш тарту"
+
+#: src/main.c:66
+msgid "Start in collapsed mode"
+msgstr "Төрелгән режимда эшләтеп җибәрергә"
+
+#: src/main.c:67
+msgid "Print version information and exit"
+msgstr "Версия турында мәгълүматны күрсәтергә һәм чыгарга"
+
+#: src/main.c:68
+msgid "Replace the existing service"
+msgstr "Гамәлдә булган хезмәтне алмаштырырга"
+
+#: src/main.c:69
+msgid "Quit all instances"
+msgstr "Барлык экземплярларны ябарга"
+
+#: src/main.c:70
+msgid "Do not try to use or become a D-Bus service"
+msgstr "D-Bus хезмәтен кулланырга яисә ул булырга кирәкми"
+
+#: src/main.c:71
+msgid "Toggle window visibility of background service"
+msgstr ""
+
+#: src/main.c:72
+msgid "Run in daemon mode"
+msgstr "Хезмәт режимында эшләтергә"
+
+#: src/main.c:249
+#, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr "Куллану турында мәгълүмат алу өчен «%s --help» языгыз."
+
+#: src/main.c:260
+msgid "The Xfce development team. All rights reserved."
+msgstr "Xfce төзүчеләр командасы. Барлык хокуклар якланган."
+
+#: src/main.c:261
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr "Хаталар турында <%s> хәбәр итегез."
+
+#: src/appfinder-preferences.glade:13
+msgid "Prefix"
+msgstr "Префикс"
+
+#: src/appfinder-preferences.glade:16
+msgid "Regular Expression"
+msgstr "Регуляр аңлатма"
+
+#: src/appfinder-preferences.glade:35
+msgid "Very Small"
+msgstr "Бик кечкенә"
+
+#: src/appfinder-preferences.glade:38
+msgid "Smaller"
+msgstr "Кечкенәрәк"
+
+#: src/appfinder-preferences.glade:41
+msgid "Small"
+msgstr "Кечкенә"
+
+#: src/appfinder-preferences.glade:44
+msgid "Normal"
+msgstr "Нормаль"
+
+#: src/appfinder-preferences.glade:47
+msgid "Large"
+msgstr "Зур"
+
+#: src/appfinder-preferences.glade:50
+msgid "Larger"
+msgstr "Зуррак"
+
+#: src/appfinder-preferences.glade:53
+msgid "Very Large"
+msgstr "Бик зур"
+
+#: src/appfinder-preferences.glade:91
+msgid "_Close"
+msgstr "_Ябарга"
+
+#: src/appfinder-preferences.glade:107
+msgid "_Help"
+msgstr "_Ярдәм"
+
+#: src/appfinder-preferences.glade:160
+msgid "Remember last _selected category"
+msgstr "Кулланылган категорияләрне _истә калдырырга"
+
+#: src/appfinder-preferences.glade:176
+msgid "Always c_enter the window"
+msgstr "Һәрвакыт _экран үзәгендә"
+
+#: src/appfinder-preferences.glade:181
+msgid "Center the window on startup."
+msgstr "Тәрәзне экран үзәгендә күрсәтергә."
+
+#: src/appfinder-preferences.glade:194
+msgid "Close window when _focus is lost"
+msgstr ""
+
+#: src/appfinder-preferences.glade:199
+msgid "When the focus is lost to another window, appfinder should be closed."
+msgstr ""
+
+#: src/appfinder-preferences.glade:212
+msgid "Keep running _instance in the background"
+msgstr "Эшләгән кушымтаның фон режимында эшен тәэмин итәргә"
+
+#: src/appfinder-preferences.glade:217
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "Яңа тәрәзләрне ачуны тизләтү өчен, соңгы тәрәзне япканда чыгу урынына, кушымтаның эшли торган экземплярын тоткарларга. Сез хәтер куллануны киметү өчен бу опцияне өзеп куя аласыз."
+
+#: src/appfinder-preferences.glade:230
+msgid "Single window"
+msgstr "Бер тәрәз"
+
+#: src/appfinder-preferences.glade:235
+msgid ""
+"When an instance is running in the background, only open one window at a "
+"time."
+msgstr "Кушымтаның экземпляры фон режимында эшләгәндә бер генә тәрәз ачарга."
+
+#: src/appfinder-preferences.glade:248
+msgid "Sort recently used items first"
+msgstr "Яңа кулланылган элементларны беренче күрсәтергә"
+
+#: src/appfinder-preferences.glade:253
+msgid ""
+"Order items, such that items that are most recently used are always on the "
+"top."
+msgstr "Элементларны яңа гына кулланылганнары өстә булырлык итеп тәртипләштерергә."
+
+#: src/appfinder-preferences.glade:265
+msgid "Single-click selects and launches items"
+msgstr ""
+
+#: src/appfinder-preferences.glade:270
+msgid "Items are selected and launched with only a single-click."
+msgstr ""
+
+#: src/appfinder-preferences.glade:288
+msgid "Behaviour"
+msgstr "Үз-үзен тотышы"
+
+#: src/appfinder-preferences.glade:323
+msgid "_View items as icons"
+msgstr "_Элементлар пиктограммалар буларак"
+
+#: src/appfinder-preferences.glade:338
+msgid "Text besi_de icons"
+msgstr "_Пиктограммалар янында текст"
+
+#: src/appfinder-preferences.glade:356
+msgid "Ite_m icon size:"
+msgstr "_Элемент пиктограммасы күләме:"
+
+#: src/appfinder-preferences.glade:370
+msgid "Hide category pane"
+msgstr "Категорияләр панелен яшерергә"
+
+#: src/appfinder-preferences.glade:375
+msgid "Hide category panel and show all applications."
+msgstr "Категорияләр панелен яшерергә һәм барлык кушымталарны күрсәтергә."
+
+#: src/appfinder-preferences.glade:392
+msgid "Categ_ory icon size:"
+msgstr "Категория пиктограммасы күләме:"
+
+#: src/appfinder-preferences.glade:446
+msgid "Hide window decorations"
+msgstr "Тәрәз бизәлешләрен яшерергә"
+
+#: src/appfinder-preferences.glade:451
+msgid "Hide window decorations such as title bar and borders."
+msgstr "Башлам юлы һәм тәрәз читләре кебек тәрәз бизәлеше элементларын яшерергә."
+
+#: src/appfinder-preferences.glade:466
+msgid "Show generic application _names"
+msgstr ""
+
+#: src/appfinder-preferences.glade:490
+msgid "Appearance"
+msgstr "Тышкы күренеш"
+
+#: src/appfinder-preferences.glade:521
+msgid "C_lear Custom Command History"
+msgstr "Командалар журналын чистартырга"
+
+#: src/appfinder-preferences.glade:536
+msgid "History"
+msgstr "Журнал"
+
+#: src/appfinder-preferences.glade:555
+msgid "_General"
+msgstr "_Гомуми"
+
+#: src/appfinder-preferences.glade:579
+msgid "Custom actions are only available in collapsed mode."
+msgstr "Кулланучы гамәлләре бары тик төрелгән режимда гына мөмкин."
+
+#: src/appfinder-preferences.glade:627
+msgid "Pattern"
+msgstr "Шаблон"
+
+#: src/appfinder-preferences.glade:663
+msgid "Add a new custom action."
+msgstr "Кулланучы гамәлен өстәргә."
+
+#: src/appfinder-preferences.glade:684
+msgid "Remove the currently selected action."
+msgstr "Сайланган гамәлне бетерергә."
+
+#: src/appfinder-preferences.glade:727
+#, c-format
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr "Әгәр тип буларак 'префикс' сайланса, ул вакытта %s шаблоннан соң юлга, ә %S тулысынча текстка алыштырылачак. Регуляр аңлатмалар өчен \\0 һәм \\<сан> эзлеклелекләрен кулланырга була."
+
+#: src/appfinder-preferences.glade:758
+msgid "Co_mmand:"
+msgstr "_Команда:"
+
+#: src/appfinder-preferences.glade:773
+msgid "Patte_rn:"
+msgstr "_Шаблон:"
+
+#: src/appfinder-preferences.glade:788
+msgid "_Type:"
+msgstr "_Тип:"
+
+#: src/appfinder-preferences.glade:798
+msgid "_Save match in command history"
+msgstr "_Командалар журналында тәңгәл килүләрне сакларга"
+
+#: src/appfinder-preferences.glade:850
+msgid "Custom _Actions"
+msgstr "_Кулланучы гамәлләре"
+
+#: data/xfce4-appfinder.desktop.in:11
+msgid "Find and launch applications installed on your system"
+msgstr "Системагызда урнаштырылган кушымталарны эзләү һәм эшләтү"
+
+#: data/xfce4-appfinder.desktop.in:12
+msgid "program;applications;bookmarks;"
+msgstr "программа;кушымталар;кыстыргычлар;"
+
+#: data/xfce4-run.desktop.in:11
+msgid "Run Program..."
+msgstr "Кушымтаны эшләтергә..."
+
+#: data/xfce4-run.desktop.in:12
+msgid "Enter a command you want to launch"
+msgstr "Эшләтергә теләгән команданы кертегез"
+
+#: data/xfce4-run.desktop.in:13
+msgid ""
+"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
+" dash;krunner;synapse;ulauncher;launchy;gnome "
+"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr "башкарырга;команда;кушымта;программа;эзләү;эшләтү;барысы да;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
+msgid "Application to quickly run applications and commands"
+msgstr "Кушымталар һәм командаларны җәһәт эшләтеп җибәрү өчен кушымта"
+
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:13
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and quickly execute commands. It can also be used to quickly "
+"add launchers to the Xfce Panel by dragging an item from the view and drop "
+"it on the panel."
+msgstr "Кушымталарны эзләү — системагызда урнаштырылган кушымталарны эзләү һәм эшләтеп җибәрү, командаларны җәһәт башкару коралы. Ул шулай ук Xfce панеленә тартып күчереп тиз генә тамгасурәтләр өстәү өчен дә кулланылырга мөмкин."
