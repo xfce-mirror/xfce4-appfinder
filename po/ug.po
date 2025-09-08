@@ -20,11 +20,11 @@ msgstr ""
 #. close all windows and quit
 #: src/appfinder-gdbus.c:99
 msgid "Forced to quit"
-msgstr "مەجبۇرىي ئاخىرلاشتۇرسۇن"
+msgstr "مەجبۇرىي چېكىن"
 
 #: src/appfinder-category-model.c:157
 msgid "All Applications"
-msgstr "بارلىق پروگراممىلار"
+msgstr "بارلىق پىروگرامما"
 
 #: src/appfinder-model.c:701
 msgid "Name"
@@ -48,15 +48,15 @@ msgstr "ھۆججەت ئاتى"
 
 #: src/appfinder-model.c:2593
 msgid "Application or action has no command"
-msgstr ""
+msgstr "پىروگرامما ياكى مەشغۇلاتنىڭ بۇيرۇقى يوق"
 
 #: src/appfinder-model.c:3070
 msgid "Commands History"
-msgstr "بۇيرۇق ئىزلىرى"
+msgstr "بۇيرۇق تارىخى"
 
 #: src/appfinder-model.c:3094
 msgid "Bookmarks"
-msgstr ""
+msgstr "خەتكۈش"
 
 #: src/appfinder-preferences.c:290
 msgid "C_lear"
@@ -87,7 +87,7 @@ msgstr "ئەندىزە «%s» نى راستىنىلا ئۆچۈرەمسىز؟"
 #: data/xfce4-appfinder.desktop.in:10
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
-msgstr "پروگرامما ئىزدىگۈ"
+msgstr "پىروگرامما ئىزدىگۈچ"
 
 #: src/appfinder-window.c:301
 msgid "Toggle view mode"
@@ -95,7 +95,7 @@ msgstr "كۆرۈنۈش ھالىتىنى ئۆزگەرتىش"
 
 #: src/appfinder-window.c:382
 msgid "_Preferences"
-msgstr ""
+msgstr "مايىللىق(_P)"
 
 #: src/appfinder-window.c:393 src/appfinder-window.c:1282
 msgid "La_unch"
@@ -107,7 +107,7 @@ msgstr "ئۈستەلئۈستى تۇرى تەھرىرلىگۈچىنى ئىجرا 
 
 #: src/appfinder-window.c:1045
 msgid "Confirm"
-msgstr ""
+msgstr "جەزملە"
 
 #: src/appfinder-window.c:1046
 msgid ""
@@ -144,11 +144,11 @@ msgstr "راستلا «%s» نى يوشۇرامسىز؟"
 
 #: src/appfinder-window.c:1264
 msgid "Remove From Bookmarks"
-msgstr ""
+msgstr "خەتكۈچتىن چىقىرىۋەت"
 
 #: src/appfinder-window.c:1264
 msgid "Add to Bookmarks"
-msgstr ""
+msgstr "خەتكۈشكە قوش"
 
 #: src/appfinder-window.c:1296
 msgid "_Edit"
@@ -156,7 +156,7 @@ msgstr "تەھرىر(_E)"
 
 #: src/appfinder-window.c:1313
 msgid "_Revert"
-msgstr ""
+msgstr "ئەسلىگە قايتۇر(_R)"
 
 #: src/main.c:66
 msgid "Start in collapsed mode"
@@ -164,7 +164,7 @@ msgstr "قاتلانغان ھالەتتە باشلانسۇن"
 
 #: src/main.c:67
 msgid "Print version information and exit"
-msgstr "نەشر ئۇچۇرىنى كۆرسىتىپ ئاخىرلاشتۇرۇش"
+msgstr "نەشر ئۇچۇرىنى كۆرسىتىپ ئاخىرلاشتۇرىدۇ"
 
 #: src/main.c:68
 msgid "Replace the existing service"
@@ -180,11 +180,11 @@ msgstr "ئىشلەتمىسۇن ياكى D-Bus مۇلازىمىتى بولمىس�
 
 #: src/main.c:71
 msgid "Toggle window visibility of background service"
-msgstr ""
+msgstr "ئارقا سۇپا مۇلازىمىتىنىڭ كۆزنەك كۆرۈنۈشچانلىقىنى ئالماشتۇرىدۇ"
 
 #: src/main.c:72
 msgid "Run in daemon mode"
-msgstr "مۇئەككەل ھالىتىدە ئىجرا قىل"
+msgstr "نازارەتچى ھالىتىدە ئىجرا قىل"
 
 #: src/main.c:249
 #, c-format
@@ -193,7 +193,7 @@ msgstr "ئىشلىتىش ئۇسۇلىنى كۆرۈش ئۈچۈن «%s --help» ن
 
 #: src/main.c:260
 msgid "The Xfce development team. All rights reserved."
-msgstr "Xfce ئىجادىيەت گۇرۇپپىسى. نەشر ھوقۇقى ئۆزىمىزگە تەۋە."
+msgstr "Xfce ئىجادىيەت گۇرۇپپىسى. بارلىق ھوقۇقنى ساقلاپ قالىدۇ."
 
 #: src/main.c:261
 #, c-format
@@ -238,7 +238,7 @@ msgstr "ئىنتايىن چوڭ"
 
 #: src/appfinder-preferences.glade:91
 msgid "_Close"
-msgstr "تاقا(_C)"
+msgstr "ياپ(_C)"
 
 #: src/appfinder-preferences.glade:107
 msgid "_Help"
@@ -254,15 +254,15 @@ msgstr "كۆزنەك ھەمىشە ئوتتۇرىدا بولسۇن(_C)"
 
 #: src/appfinder-preferences.glade:181
 msgid "Center the window on startup."
-msgstr "قوزغالغاندا كۆزنەكنى ئوتتۇرىدا كۆرسەت"
+msgstr "قوزغالغاندا كۆزنەكنى ئوتتۇرىدا كۆرسىتىدۇ."
 
 #: src/appfinder-preferences.glade:194
 msgid "Close window when _focus is lost"
-msgstr ""
+msgstr "فوكۇسلانمىغاندا كۆزنەكنى ياپ(_F)"
 
 #: src/appfinder-preferences.glade:199
 msgid "When the focus is lost to another window, appfinder should be closed."
-msgstr ""
+msgstr "فوكۇس باشقا بىر كۆزنەككە يۆتكەلگەندە، appfinder تاقىلىدۇ."
 
 #: src/appfinder-preferences.glade:212
 msgid "Keep running _instance in the background"
@@ -277,31 +277,31 @@ msgstr "ئەڭ ئاخىرقى كۆزنەك يېپىلغاندا، ئۈلگىنى
 
 #: src/appfinder-preferences.glade:230
 msgid "Single window"
-msgstr ""
+msgstr "يەككە كۆزنەك"
 
 #: src/appfinder-preferences.glade:235
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
-msgstr ""
+msgstr "بىر ئەمەلىي مىسال ئارقا سۇپىدا ئىجرا بولۇۋاتقاندا، ھەر قېتىم بىرلا كۆزنەك ئاچىدۇ."
 
 #: src/appfinder-preferences.glade:248
 msgid "Sort recently used items first"
-msgstr ""
+msgstr "يېقىندا ئىشلەتكەن تۈرلەرنى ئالدى بىلەن رەتلەيدۇ"
 
 #: src/appfinder-preferences.glade:253
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
-msgstr ""
+msgstr "تۈر تەرتىپى، يېقىندا ئىشلەتكەن تۈرلەر ھەمىشە چوققىسىدا تۇرىدۇ."
 
 #: src/appfinder-preferences.glade:265
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "يەككە چېكىپ تاللىنىدۇ ۋە تۈر قوزغىتىلىدۇ"
 
 #: src/appfinder-preferences.glade:270
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "يەككە چېكىپ تۈر تاللاندى ۋە قوزغىتىلدى."
 
 #: src/appfinder-preferences.glade:288
 msgid "Behaviour"
@@ -321,27 +321,27 @@ msgstr "تۇرنىڭ سىنبەلگە چوڭلۇقى(_M):"
 
 #: src/appfinder-preferences.glade:370
 msgid "Hide category pane"
-msgstr ""
+msgstr "سەھىپە كۆزنەكچىنى يوشۇر"
 
 #: src/appfinder-preferences.glade:375
 msgid "Hide category panel and show all applications."
-msgstr ""
+msgstr "سەھىپە كۆزنەكچىنى يوشۇرۇپ ۋە ھەممە پىروگراممىنى كۆرسىتىدۇ."
 
 #: src/appfinder-preferences.glade:392
 msgid "Categ_ory icon size:"
-msgstr "كاتېگورىيە سىنبەلگىسى چوڭلۇقى"
+msgstr "سەھىپە سىنبەلگىسىنىڭ چوڭلۇقى(_O):"
 
 #: src/appfinder-preferences.glade:446
 msgid "Hide window decorations"
-msgstr ""
+msgstr "كۆزنەك بېزەكلىرىنى يوشۇر"
 
 #: src/appfinder-preferences.glade:451
 msgid "Hide window decorations such as title bar and borders."
-msgstr ""
+msgstr "ماۋزۇ بالداق ۋە گىرۋەككە ئوخشاش كۆزنەك بېزەكلىرىنى يوشۇرىدۇ."
 
 #: src/appfinder-preferences.glade:466
 msgid "Show generic application _names"
-msgstr ""
+msgstr "ئادەتتىكى پىروگرامما ئاتىنى كۆرسىتىدۇ(_N)"
 
 #: src/appfinder-preferences.glade:490
 msgid "Appearance"
@@ -349,7 +349,7 @@ msgstr "كۆرۈنۈشى"
 
 #: src/appfinder-preferences.glade:521
 msgid "C_lear Custom Command History"
-msgstr "ئىختىيارى بۇيرۇق ئىزىنى تازىلاش(_C)"
+msgstr "ئىختىيارى بۇيرۇق ئىزىنى تازىلايدۇ(_C)"
 
 #: src/appfinder-preferences.glade:536
 msgid "History"
@@ -361,7 +361,7 @@ msgstr "ئادەتتىكى(_G)"
 
 #: src/appfinder-preferences.glade:579
 msgid "Custom actions are only available in collapsed mode."
-msgstr ""
+msgstr "ئىختىيارى مەشغۇلاتنى پەقەت ئىخچام ھالەتتە ئىشلەتكىلى بولىدۇ."
 
 #: src/appfinder-preferences.glade:627
 msgid "Pattern"
@@ -405,30 +405,30 @@ msgstr "ئىختىيارى مەشغۇلاتلار(_A)"
 
 #: data/xfce4-appfinder.desktop.in:11
 msgid "Find and launch applications installed on your system"
-msgstr "كومپيۇتېرىڭىزغا ئورنىتىلغان پروگراممىلارنى ئىزدەيدۇ ۋە ئىجرا قىلىدۇ"
+msgstr "كومپيۇتېرىڭىزغا ئورنىتىلغان پىروگراممىلارنى ئىزدەيدۇ ۋە ئىجرا قىلىدۇ"
 
 #: data/xfce4-appfinder.desktop.in:12
 msgid "program;applications;bookmarks;"
-msgstr ""
+msgstr "پىروگرامما؛قوللىنىشچان پىروگرامما؛خەتكۈش؛"
 
 #: data/xfce4-run.desktop.in:11
 msgid "Run Program..."
-msgstr "پروگرامما ئىجرا قىل..."
+msgstr "پىروگرامما ئىجرا قىل..."
 
 #: data/xfce4-run.desktop.in:12
 msgid "Enter a command you want to launch"
-msgstr ""
+msgstr "قوزغىتىدىغان بۇيرۇقنى كىرگۈزۈڭ"
 
 #: data/xfce4-run.desktop.in:13
 msgid ""
 "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
 " dash;krunner;synapse;ulauncher;launchy;gnome "
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr ""
+msgstr "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;ئىجرا قىل؛قوللىنىشچان پىروگرامما؛ پىروگرامما؛ئىزدىگۈچ؛ئىزدە؛قوزغاتقۇچ؛ھەممە نەرسە؛يورۇت؛ئىزدەش؛قوزغاتقۇچ؛ئىزلىغۇچ؛"
 
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
 msgid "Application to quickly run applications and commands"
-msgstr ""
+msgstr "قوللىنىشچان پىروگرامما ۋە بۇيرۇقلارنى تېز ئىجرا قىلىدىغان پىروگرامما"
 
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:13
 msgid ""
@@ -436,4 +436,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr ""
+msgstr "پىروگرامما ئىزدىگۈچ سىستېمىڭىزغا ئورنىتىلغان پىروگراممىلارنى ئىزدەپ ۋە قوزغىتىدىغان پىروگرامما. ئۇنىڭدىن پايدىلىنىپ Xfce كۆزنەكچىنى تېز سۈرئەتتە قوزغاتقۇچقا قوشالايسىز، پەقەت مۇناسىپ تۈرنى كۆرۈنۈشتىن كۆزنەكچىگە سۆرەپ تاشلىسىلا بولىدۇ."
