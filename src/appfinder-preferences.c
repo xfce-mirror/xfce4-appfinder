@@ -42,7 +42,8 @@ static void xfce_appfinder_preferences_single_window_sensitive (GtkWidget       
                                                                 GtkWidget                *single_window);
 static void xfce_appfinder_preferences_hide_category_sensitive (GtkWidget                *hide_category,
                                                                 GtkWidget                *category_icon_size);
-static void xfce_appfinder_preferences_clear_history           (XfceAppfinderPreferences *preferences);
+static void xfce_appfinder_preferences_clear_command_history   (XfceAppfinderPreferences *preferences);
+static void xfce_appfinder_preferences_clear_frecency_history  (XfceAppfinderPreferences *preferences);
 static void xfce_appfinder_preferences_action_add              (XfceAppfinderPreferences *preferences);
 static void xfce_appfinder_preferences_action_remove           (GtkWidget                *button,
                                                                 XfceAppfinderPreferences *preferences);
@@ -187,9 +188,13 @@ xfce_appfinder_preferences_init (XfceAppfinderPreferences *preferences)
   xfconf_g_property_bind (preferences->channel, "/generic-names", G_TYPE_BOOLEAN,
                           G_OBJECT (object), "active");
 
-  object = gtk_builder_get_object (GTK_BUILDER (preferences), "button-clear");
+  object = gtk_builder_get_object (GTK_BUILDER (preferences), "button-clear-command-history");
   g_signal_connect_swapped (G_OBJECT (object), "clicked",
-      G_CALLBACK (xfce_appfinder_preferences_clear_history), preferences);
+      G_CALLBACK (xfce_appfinder_preferences_clear_command_history), preferences);
+
+  object = gtk_builder_get_object (GTK_BUILDER (preferences), "button-clear-frecency-history");
+  g_signal_connect_swapped (G_OBJECT (object), "clicked",
+      G_CALLBACK (xfce_appfinder_preferences_clear_frecency_history), preferences);
 
   object = gtk_builder_get_object (GTK_BUILDER (preferences), "button-add");
   g_signal_connect_swapped (G_OBJECT (object), "clicked",
@@ -300,7 +305,7 @@ xfce_appfinder_preferences_hide_category_sensitive (GtkWidget *hide_category,
 
 
 static void
-xfce_appfinder_preferences_clear_history (XfceAppfinderPreferences *preferences)
+xfce_appfinder_preferences_clear_command_history (XfceAppfinderPreferences *preferences)
 {
   XfceAppfinderModel *model;
   gboolean            sort_by_frecency;
@@ -315,7 +320,30 @@ xfce_appfinder_preferences_clear_history (XfceAppfinderPreferences *preferences)
       sort_by_frecency = xfconf_channel_get_bool (preferences->channel, "/sort-by-frecency", FALSE);
       scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (preferences->dialog));
       model = xfce_appfinder_model_get (sort_by_frecency, scale_factor);
-      xfce_appfinder_model_history_clear (model);
+      xfce_appfinder_model_clear_command_history (model);
+      g_object_unref (G_OBJECT (model));
+    }
+}
+
+
+
+static void
+xfce_appfinder_preferences_clear_frecency_history (XfceAppfinderPreferences *preferences)
+{
+  XfceAppfinderModel *model;
+  gboolean            sort_by_frecency;
+  gint                scale_factor;
+
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_PREFERENCES (preferences));
+
+  if (xfce_dialog_confirm (GTK_WINDOW (preferences->dialog), XFCE_APPFINDER_ICON_NAME_CLEAR, _("C_lear"),
+                           _("This will permanently clear the recent items history."),
+                           _("Are you sure you want to clear the recent items history?")))
+    {
+      sort_by_frecency = xfconf_channel_get_bool (preferences->channel, "/sort-by-frecency", FALSE);
+      scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (preferences->dialog));
+      model = xfce_appfinder_model_get (sort_by_frecency, scale_factor);
+      xfce_appfinder_model_clear_frecency_history (model);
       g_object_unref (G_OBJECT (model));
     }
 }
