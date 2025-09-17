@@ -71,7 +71,9 @@ XfceAppfinderIconSize;
 
 GType                xfce_appfinder_model_get_type               (void) G_GNUC_CONST;
 
-XfceAppfinderModel  *xfce_appfinder_model_get                    (gboolean                   sort_by_frecency,
+XfceAppfinderModel  *xfce_appfinder_model_get                    (void) G_GNUC_MALLOC;
+
+XfceAppfinderModel  *xfce_appfinder_model_get_or_create          (gboolean                   sort_by_frecency,
                                                                   gint                       scale_factor) G_GNUC_MALLOC;
 
 GSList              *xfce_appfinder_model_get_categories         (XfceAppfinderModel        *model);

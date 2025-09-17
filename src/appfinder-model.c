@@ -211,6 +211,7 @@ enum
 
 
 
+static XfceAppfinderModel *model_instance = NULL;
 static guint model_signals[LAST_SIGNAL];
 
 
@@ -2411,10 +2412,24 @@ xfce_appfinder_model_update_frecency (XfceAppfinderModel *model,
 
 
 XfceAppfinderModel *
-xfce_appfinder_model_get (gboolean sort_by_frecency,
-                          gint     scale_factor)
+xfce_appfinder_model_get (void)
 {
-  static XfceAppfinderModel *model = NULL;
+  if (G_LIKELY (model_instance != NULL))
+    {
+      g_object_ref (G_OBJECT (model_instance));
+      return model_instance;
+    }
+
+  return NULL;
+}
+
+
+
+XfceAppfinderModel *
+xfce_appfinder_model_get_or_create (gboolean sort_by_frecency,
+                                    gint     scale_factor)
+{
+  XfceAppfinderModel *model = model_instance;
 
   if (G_LIKELY (model != NULL))
     {
@@ -2424,10 +2439,10 @@ xfce_appfinder_model_get (gboolean sort_by_frecency,
     {
       GdkPixbuf *pixbuf;
 
-      model = g_object_new (XFCE_TYPE_APPFINDER_MODEL,
-                            "sort-by-frecency", sort_by_frecency,
-                            "scale-factor", scale_factor,
-                            NULL);
+      model = model_instance = g_object_new (XFCE_TYPE_APPFINDER_MODEL,
+                                             "sort-by-frecency", sort_by_frecency,
+                                             "scale-factor", scale_factor,
+                                             NULL);
 
       xfce_appfinder_model_icon_theme_changed (model);
 
