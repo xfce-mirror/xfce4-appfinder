@@ -308,8 +308,6 @@ static void
 xfce_appfinder_preferences_clear_command_history (XfceAppfinderPreferences *preferences)
 {
   XfceAppfinderModel *model;
-  gboolean            sort_by_frecency;
-  gint                scale_factor;
 
   appfinder_return_if_fail (XFCE_IS_APPFINDER_PREFERENCES (preferences));
 
@@ -317,11 +315,11 @@ xfce_appfinder_preferences_clear_command_history (XfceAppfinderPreferences *pref
                            _("This will permanently clear the custom command history."),
                            _("Are you sure you want to clear the command history?")))
     {
-      sort_by_frecency = xfconf_channel_get_bool (preferences->channel, "/sort-by-frecency", FALSE);
-      scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (preferences->dialog));
-      model = xfce_appfinder_model_get (sort_by_frecency, scale_factor);
-      xfce_appfinder_model_clear_command_history (model);
-      g_object_unref (G_OBJECT (model));
+      if (G_LIKELY ((model = xfce_appfinder_model_get ()) != NULL))
+        {
+          xfce_appfinder_model_clear_command_history (model);
+          g_object_unref (G_OBJECT (model));
+        }
     }
 }
 
@@ -331,8 +329,6 @@ static void
 xfce_appfinder_preferences_clear_frecency_history (XfceAppfinderPreferences *preferences)
 {
   XfceAppfinderModel *model;
-  gboolean            sort_by_frecency;
-  gint                scale_factor;
 
   appfinder_return_if_fail (XFCE_IS_APPFINDER_PREFERENCES (preferences));
 
@@ -340,11 +336,11 @@ xfce_appfinder_preferences_clear_frecency_history (XfceAppfinderPreferences *pre
                            _("This will permanently clear the recent items history."),
                            _("Are you sure you want to clear the recent items history?")))
     {
-      sort_by_frecency = xfconf_channel_get_bool (preferences->channel, "/sort-by-frecency", FALSE);
-      scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (preferences->dialog));
-      model = xfce_appfinder_model_get (sort_by_frecency, scale_factor);
-      xfce_appfinder_model_clear_frecency_history (model);
-      g_object_unref (G_OBJECT (model));
+      if (G_LIKELY ((model = xfce_appfinder_model_get ()) != NULL))
+        {
+          xfce_appfinder_model_clear_frecency_history (model);
+          g_object_unref (G_OBJECT (model));
+        }
     }
 }
 
