@@ -108,7 +108,9 @@ void                 xfce_appfinder_model_icon_theme_changed     (XfceAppfinderM
 
 void                 xfce_appfinder_model_generic_names_changed  (XfceAppfinderModel        *model);
 
-void                 xfce_appfinder_model_history_clear          (XfceAppfinderModel        *model);
+void                 xfce_appfinder_model_clear_command_history  (XfceAppfinderModel        *model);
+
+void                 xfce_appfinder_model_clear_frecency_history (XfceAppfinderModel        *model);
 
 gboolean             xfce_appfinder_model_bookmark_toggle        (XfceAppfinderModel        *model,
                                                                   const gchar               *desktop_id,
