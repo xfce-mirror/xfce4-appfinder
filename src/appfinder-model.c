@@ -211,6 +211,7 @@ enum
 
 
 
+static XfceAppfinderModel *model_instance = NULL;
 static guint model_signals[LAST_SIGNAL];
 
 
@@ -1220,6 +1221,35 @@ xfce_appfinder_model_history_remove_items (XfceAppfinderModel *model)
 
   /* unset stamp */
   model->history_mtime = 0;
+}
+
+
+
+static void
+xfce_appfinder_model_reset_frecency (XfceAppfinderModel *model)
+{
+  ModelItem   *item;
+  GtkTreeIter  iter;
+  GtkTreePath *path;
+  gint         idx;
+  GSList      *li;
+
+  APPFINDER_DEBUG ("reset frecency");
+
+  for (li = model->items, idx = 0; li != NULL; li = li->next, idx++)
+    {
+      item = li->data;
+      item->frecency->frequency = 0;
+      item->frecency->recency = 0;
+
+      if (item->item != NULL)
+        {
+          path = gtk_tree_path_new_from_indices (idx, -1);
+          ITER_INIT (iter, model->stamp, li);
+          gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
+          gtk_tree_path_free (path);
+        }
+    }
 }
 
 
@@ -2382,10 +2412,24 @@ xfce_appfinder_model_update_frecency (XfceAppfinderModel *model,
 
 
 XfceAppfinderModel *
-xfce_appfinder_model_get (gboolean sort_by_frecency,
-                          gint     scale_factor)
+xfce_appfinder_model_get (void)
 {
-  static XfceAppfinderModel *model = NULL;
+  if (G_LIKELY (model_instance != NULL))
+    {
+      g_object_ref (G_OBJECT (model_instance));
+      return model_instance;
+    }
+
+  return NULL;
+}
+
+
+
+XfceAppfinderModel *
+xfce_appfinder_model_get_or_create (gboolean sort_by_frecency,
+                                    gint     scale_factor)
+{
+  XfceAppfinderModel *model = model_instance;
 
   if (G_LIKELY (model != NULL))
     {
@@ -2395,10 +2439,10 @@ xfce_appfinder_model_get (gboolean sort_by_frecency,
     {
       GdkPixbuf *pixbuf;
 
-      model = g_object_new (XFCE_TYPE_APPFINDER_MODEL,
-                            "sort-by-frecency", sort_by_frecency,
-                            "scale-factor", scale_factor,
-                            NULL);
+      model = model_instance = g_object_new (XFCE_TYPE_APPFINDER_MODEL,
+                                             "sort-by-frecency", sort_by_frecency,
+                                             "scale-factor", scale_factor,
+                                             NULL);
 
       xfce_appfinder_model_icon_theme_changed (model);
 
@@ -2952,7 +2996,7 @@ xfce_appfinder_model_generic_names_changed (XfceAppfinderModel *model)
 
 
 void
-xfce_appfinder_model_history_clear (XfceAppfinderModel *model)
+xfce_appfinder_model_clear_command_history (XfceAppfinderModel *model)
 {
   gchar *filename;
 
@@ -2963,6 +3007,25 @@ xfce_appfinder_model_history_clear (XfceAppfinderModel *model)
 
   /* remove the history file */
   filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, NEW_HISTORY_PATH, FALSE);
+  if (filename != NULL)
+    g_unlink (filename);
+  g_free (filename);
+}
+
+
+
+void
+xfce_appfinder_model_clear_frecency_history (XfceAppfinderModel *model)
+{
+  gchar *filename;
+
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
+
+  /* remove items from model */
+  xfce_appfinder_model_reset_frecency (model);
+
+  /* remove the history file */
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, FRECENCY_PATH, FALSE);
   if (filename != NULL)
     g_unlink (filename);
   g_free (filename);
