@@ -21,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-11-01 12:47+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Πέτρος Σαμαράς <psamaras1@gmail.com>, 2017,2019\n"
+"Last-Translator: Ioannis LM, 2022-2025\n"
 "Language-Team: Greek (http://app.transifex.com/xfce/xfce4-appfinder/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -115,7 +115,7 @@ msgstr "Ε_κτέλεση"
 
 #: src/appfinder-window.c:1020
 msgid "Failed to launch desktop item editor"
-msgstr "Απέτυχε η εκτέλεση επεξεργασίας του αντικειμένου"
+msgstr "Απέτυχε η εκκίνηση του προγράμματος επεξεργασίας"
 
 #: src/appfinder-window.c:1045
 msgid "Confirm"
@@ -143,7 +143,7 @@ msgstr "Απέτυχε η αφαίρεση του αρχείου"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Για την εμφάνιση του αντικειμένου πρέπει να αφαιρέσετε χειροκίνητα το αρχείο από το \"%s\" ή ανοίξτε το αρχείο στον ίδιο κατάλογο και αφαιρέστε την γραμμή \"%s\"."
+msgstr "Για να εμφανίσετε το στοιχείο, πρέπει να αφαιρέσετε το αρχείο από το \"%s\" ή να ανοίξετε το αρχείο στον ίδιο κατάλογο και να αφαιρέστε την γραμμή \"%s\"."
 
 #: src/appfinder-window.c:1095 src/appfinder-window.c:1328
 msgid "_Hide"
@@ -299,21 +299,21 @@ msgstr "Όταν εκτελείται μια διεργασία στο παρα�
 
 #: src/appfinder-preferences.glade:248
 msgid "Sort recently used items first"
-msgstr "Ταξινόμηση στην αρχή των αντικειμένων που χρησιμοποιήθηκαν πρόσφατα"
+msgstr "Ταξινόμηση στην αρχή των στοιχείων που χρησιμοποιήθηκαν πρόσφατα"
 
 #: src/appfinder-preferences.glade:253
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
-msgstr "Ταξινόμηση των αντικειμένων, ώστε τα πιο πρόσφατα χρησιμοποιημένα να βρίσκονται πάντα στην κορυφή."
+msgstr "Ταξινόμηση των στοιχείων, ώστε τα πιο πρόσφατα χρησιμοποιημένα να βρίσκονται πάντα στην κορυφή."
 
 #: src/appfinder-preferences.glade:265
 msgid "Single-click selects and launches items"
-msgstr "Μονό κλικ για την επιλογή και ενεργοποίηση αντικειμένων"
+msgstr "Μονό κλικ για την επιλογή και ενεργοποίηση των στοιχείων"
 
 #: src/appfinder-preferences.glade:270
 msgid "Items are selected and launched with only a single-click."
-msgstr "Τα αντικείμενα επιλέγονται και ενεργοποιούνται μόνο με μονό κλικ."
+msgstr "Τα στοιχεία επιλέγονται και ενεργοποιούνται μόνο με μονό κλικ."
 
 #: src/appfinder-preferences.glade:288
 msgid "Behaviour"
@@ -321,7 +321,7 @@ msgstr "Συμπεριφορά"
 
 #: src/appfinder-preferences.glade:323
 msgid "_View items as icons"
-msgstr "Προβολή α_ντικειμένων ως εικονίδια"
+msgstr "Προβολή στοιχείων ως εικονίδι_α"
 
 #: src/appfinder-preferences.glade:338
 msgid "Text besi_de icons"
@@ -393,7 +393,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Εάν ο τύπος είναι ορισμένος στο πρόθεμα, το %s θα αντικατασταθεί με τη συμβολοσειρά μετά το σχέδιο %S, με το πλήρες κείμενο της καταχώρησης . Για τις κανονικές εκφράσεις μπορείτε να χρησιμοποιήσετε \\0 και \\<num>."
+msgstr "Εάν ο τύπος είναι ορισμένος στο πρόθεμα, το %s θα αντικατασταθεί με τη συμβολοσειρά μετά το σχέδιο %S, με το πλήρες κείμενο της καταχώρησης. Για τις κανονικές εκφράσεις μπορείτε να χρησιμοποιήσετε \\0 και \\<num>."
 
 #: src/appfinder-preferences.glade:758
 msgid "Co_mmand:"
@@ -448,4 +448,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr "Η εύρεση εφαρμογών είναι εργαλείο αναζήτησης και εκτέλεσης των εγκατεστημένων εφαρμογών στο σύστημα σας καθώς και γρήγορη εκτέλεση άλλων εντολών. Επίσης μπορεί να χρησιμοποιηθεί για τη προσθήκη εκκινητών στο ταμπλό του Xfce, σύροντας ένα αντικείμενο και αποθέτοντας το στο ταμπλό."
+msgstr "Η εύρεση εφαρμογών είναι, εργαλείο αναζήτησης και εκτέλεσης των εγκατεστημένων εφαρμογών στο σύστημα σας καθώς και γρήγορη εκτέλεση άλλων εντολών. Μπορεί επίσης να χρησιμοποιηθεί για τη προσθήκη εκκινητών στο ταμπλό του Xfce, σύροντας ένα αντικείμενο και αποθέτοντας το στο ταμπλό."
