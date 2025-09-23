@@ -229,6 +229,9 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
 
+  /* add xfce4-appfinder style class for easier theming */
+  gtk_style_context_add_class (gtk_widget_get_style_context (GTK_WIDGET (window)), "xfce4-appfinder");
+
   window->channel = xfconf_channel_get ("xfce4-appfinder");
   window->last_window_height = xfconf_channel_get_int (window->channel, "/last/window-height", DEFAULT_WINDOW_HEIGHT);
 
