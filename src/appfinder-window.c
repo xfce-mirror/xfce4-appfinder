@@ -240,7 +240,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
                           G_OBJECT (window->category_model), "icon-size");
 
   sort_by_frecency = xfconf_channel_get_bool (window->channel, "/sort-by-frecency", FALSE);
-  window->model = xfce_appfinder_model_get (sort_by_frecency, scale_factor);
+  window->model = xfce_appfinder_model_get_or_create (sort_by_frecency, scale_factor);
   xfconf_g_property_bind (window->channel, "/item-icon-size", G_TYPE_UINT,
                           G_OBJECT (window->model), "icon-size");
 
@@ -2214,7 +2214,6 @@ xfce_appfinder_window_update_frecency (XfceAppfinderWindow *window,
 {
   GFile      *gfile;
   gchar      *desktop_id;
-  GError     *error = NULL;
 
   if (uri != NULL)
     {
@@ -2224,10 +2223,8 @@ xfce_appfinder_window_update_frecency (XfceAppfinderWindow *window,
       APPFINDER_DEBUG ("desktop : %s", desktop_id);
 
       model = gtk_tree_model_filter_get_model (GTK_TREE_MODEL_FILTER (window->filter_model));
-      xfce_appfinder_model_update_frecency (XFCE_APPFINDER_MODEL (model), desktop_id, &error);
-
+      xfce_appfinder_model_update_frecency (XFCE_APPFINDER_MODEL (model), desktop_id, NULL);
       g_free (desktop_id);
-      g_free (error);
     }
 }
 
