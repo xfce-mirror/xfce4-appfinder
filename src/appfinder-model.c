@@ -595,9 +595,9 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
               if (comment != NULL && strlen (comment) > 0)
                 {
                   if (model->icon_size < XFCE_APPFINDER_ICON_SIZE_SMALL)
-                    item->abstract = g_markup_printf_escaped ("<b>%s</b> &#8212; %s", name, comment);
+                    item->abstract = g_markup_printf_escaped ("<b>%s</b> <span alpha=\"70%%\">&#8212; %s</span>", name, comment);
                   else
-                    item->abstract = g_markup_printf_escaped ("<b>%s</b>\n%s", name, comment);
+                    item->abstract = g_markup_printf_escaped ("<b>%s</b>\n<span alpha=\"70%%\">%s</span>", name, comment);
                 }
               else
                 item->abstract = g_markup_printf_escaped ("<b>%s</b>", name);
