@@ -71,7 +71,9 @@ XfceAppfinderIconSize;
 
 GType                xfce_appfinder_model_get_type               (void) G_GNUC_CONST;
 
-XfceAppfinderModel  *xfce_appfinder_model_get                    (gboolean                   sort_by_frecency,
+XfceAppfinderModel  *xfce_appfinder_model_get                    (void) G_GNUC_MALLOC;
+
+XfceAppfinderModel  *xfce_appfinder_model_get_or_create          (gboolean                   sort_by_frecency,
                                                                   gint                       scale_factor) G_GNUC_MALLOC;
 
 GSList              *xfce_appfinder_model_get_categories         (XfceAppfinderModel        *model);
@@ -108,7 +110,9 @@ void                 xfce_appfinder_model_icon_theme_changed     (XfceAppfinderM
 
 void                 xfce_appfinder_model_generic_names_changed  (XfceAppfinderModel        *model);
 
-void                 xfce_appfinder_model_history_clear          (XfceAppfinderModel        *model);
+void                 xfce_appfinder_model_clear_command_history  (XfceAppfinderModel        *model);
+
+void                 xfce_appfinder_model_clear_frecency_history (XfceAppfinderModel        *model);
 
 gboolean             xfce_appfinder_model_bookmark_toggle        (XfceAppfinderModel        *model,
                                                                   const gchar               *desktop_id,
