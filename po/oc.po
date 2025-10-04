@@ -284,7 +284,7 @@ msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr "Al luòc de quitar l'aplicacion quand la darrièra fenèstra es tampada, gardar una instància en cors d'execucion per tal d'accelerir la dobertura de novèlas fenèstras. Podètz desactivar aquesta opcion per redusir la consomacion de memòria."
+msgstr "Al luòc de quitar l'aplicacion quand la darrièra fenèstra es tampada, gardar una instància en cors d'execucion per tal d'accelerar la dobertura de fenèstras novèlas. Podètz desactivar aquesta opcion per reduire la consomacion de memòria."
 
 #: src/appfinder-preferences.glade:235
 msgid "Single window"
