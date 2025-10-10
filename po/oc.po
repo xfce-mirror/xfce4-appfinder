@@ -204,7 +204,7 @@ msgstr "Picatz '%s ---help' per obténer d'informacions sus l'utilizacion."
 
 #: src/main.c:254
 msgid "The Xfce development team. All rights reserved."
-msgstr "L'equipa de desvolopament Xfce. Totes los dreches reservats."
+msgstr "L'equipa de desvolopament Xfce. Totes los dreits reservats."
 
 #: src/main.c:255
 #, c-format
@@ -451,4 +451,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr "L’aplicacion finder es un esplech per trobar e lançar d’aplicacions installadas sus vòstre sistèma e executar rapidament de comandas. Pòt tanben servir per apondre rapidament d’aviadors al Panèl Xfce en lisant un element a partir de la vista e en lo depausant pel panèl."
+msgstr "L’aplicacion finder es un espleit per trobar e lançar d’aplicacions installadas sus vòstre sistèma e executar rapidament de comandas. Pòt tanben servir per apondre rapidament d’aviadors al Panèl Xfce en lisant un element a partir de la vista e en lo depausant pel panèl."
