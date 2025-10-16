@@ -316,7 +316,7 @@ msgstr "Un sol clic basta per seleccionar e lançar los elements."
 
 #: src/appfinder-preferences.glade:293
 msgid "Behaviour"
-msgstr "Comportament"
+msgstr "Compòrtament"
 
 #: src/appfinder-preferences.glade:328
 msgid "_View items as icons"
@@ -400,7 +400,7 @@ msgstr "Se lo tipe es prefix, %s serà remplaçat per la cadena aprèp lo motiu,
 
 #: src/appfinder-preferences.glade:775
 msgid "Co_mmand:"
-msgstr "_Comanda :"
+msgstr "Co_manda :"
 
 #: src/appfinder-preferences.glade:790
 msgid "Patte_rn:"
