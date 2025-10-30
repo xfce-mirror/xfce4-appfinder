@@ -1011,7 +1011,7 @@ xfce_appfinder_model_item_key (GarconMenuItem *item)
   value = garcon_menu_item_get_name (item);
   if (value != NULL)
     g_string_append (str, value);
-  g_string_append_c (str, '\n');
+  g_string_append_c (str, ' ');
 
   value = garcon_menu_item_get_command (item);
   if (value != NULL)
@@ -1020,7 +1020,7 @@ xfce_appfinder_model_item_key (GarconMenuItem *item)
       p = strchr (value, '%');
       g_string_append_len (str, value, p != NULL ? p - value : -1);
     }
-  g_string_append_c (str, '\n');
+  g_string_append_c (str, ' ');
 
   value = garcon_menu_item_get_comment (item);
   if (value != NULL)
@@ -1036,7 +1036,7 @@ xfce_appfinder_model_item_key (GarconMenuItem *item)
       keyword = li->data;
       if (keyword != NULL) {
         g_string_append (str, keyword);
-        g_string_append_c (str, '\n');
+        g_string_append_c (str, ' ');
       }
     }
 
@@ -3179,46 +3179,65 @@ gboolean
 xfce_appfinder_model_fuzzy_match (const gchar *source,
                                   const gchar *token)
 {
+    static gchar *previous_token = NULL;
+    static GSList *patterns = NULL;
     const guint token_size = strlen (token);
-    const guint cmd_part_size = token_size + 1;
-    guint index;
-    gboolean match = FALSE;
-    gboolean contain_uppercase = FALSE;
+    GSList *li;
 
-    // length is chosen because of ".*<part1> *.*(?i)<part2>.*" pattern format
-    // "(?i)" is optional part
-    gchar pattern [token_size + 14];
-    gchar cmd_part [cmd_part_size];
-    gchar *param_part;
-
-    if (strcmp (token,"") == 0)
+    if (token_size == 0)
         return TRUE;
 
-    for (index=1; !match && (index <= token_size); index++)
+    /* if the token has changed, recreate the patterns */
+    if (g_strcmp0 (token, previous_token) != 0)
       {
-        memset (cmd_part, 0, cmd_part_size);
-        strncpy (cmd_part, token, index);
-        cmd_part [index] = '\0';
+        guint index;
+        // length is 14 because of ".*<part1> *.*(?i)<part2>.*" pattern format
+        // "(?i)" is an optional part
+        gchar pattern [token_size + 14];
+        const guint cmd_part_size = token_size + 1;
+        gchar cmd_part [cmd_part_size];
+        gchar *param_part;
+        gboolean contain_uppercase = FALSE;
 
-        contain_uppercase = FALSE;
-        param_part = (gchar*) token + index;
+        APPFINDER_DEBUG ("Fuzzy match: token changed, recreating patterns");
 
-        while (!contain_uppercase && (*param_part != '\0'))
+        g_free (previous_token);
+        previous_token = g_strdup (token);
+        g_slist_free_full (patterns, g_free);
+        patterns = NULL;
+
+        for (index = 1; index <= token_size; index++)
           {
-            contain_uppercase = g_ascii_isupper (*param_part);
-            param_part++;
-          }
+            memset (cmd_part, 0, cmd_part_size);
+            strncpy (cmd_part, token, index);
+            cmd_part [index] = '\0';
 
-        memset (pattern, 0, sizeof (pattern));
-        g_sprintf (pattern, ".*%s *.*%s%s.*", cmd_part,
-                   (contain_uppercase) ? "(?-i)" : "(?i)",
-                   token + index);
-        match = g_regex_match_simple (pattern, source, 0, 0);
-        if (match)
-          {
-            APPFINDER_DEBUG ("Fuzzy match: regexp=%s ; source=%s", pattern, source);
+            contain_uppercase = FALSE;
+            param_part = (gchar*) token + index;
+
+            while (!contain_uppercase && (*param_part != '\0'))
+              {
+                contain_uppercase = g_ascii_isupper (*param_part);
+                param_part++;
+              }
+
+            memset (pattern, 0, sizeof (pattern));
+            g_sprintf (pattern, ".*%s *.*%s%s.*", cmd_part,
+                       (contain_uppercase) ? "(?-i)" : "(?i)",
+                       token + index);
+            patterns = g_slist_append (patterns, g_strdup (pattern));
           }
       }
 
-    return match;
+    for (li = patterns; li != NULL; li = li->next)
+      {
+        gchar *pattern = li->data;
+        if (g_regex_match_simple (pattern, source, 0, 0))
+        {
+          APPFINDER_DEBUG ("Fuzzy match: regexp=%s ; source=%s", pattern, source);
+          return TRUE;
+        }
+      }
+
+    return FALSE;
 }
