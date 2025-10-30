@@ -101,6 +101,9 @@ static void               xfce_appfinder_model_bookmarks_monitor      (XfceAppfi
 
 static gboolean           xfce_appfinder_model_fuzzy_match            (const gchar              *source,
                                                                        const gchar              *token);
+static gboolean           xfce_appfinder_model_regular_match          (const gchar              *source1,
+                                                                       const gchar              *source2,
+                                                                       const gchar              *token);
 static gint               xfce_appfinder_model_item_compare_frecency  (gconstpointer             a,
                                                                        gconstpointer             b,
                                                                        gpointer                  data);
@@ -170,7 +173,8 @@ Frecency;
 typedef struct
 {
   GarconMenuItem  *item;
-  gchar           *key;
+  gchar           *key_basic; /* app name and command, used for regular string and fuzzy matching */
+  gchar           *key_extended; /* comments, generic name and keywords, used only for regular string matching */
   gchar           *abstract;
   GPtrArray       *categories;
   gchar           *command;
@@ -997,7 +1001,8 @@ xfce_appfinder_model_item_compare_command_strict (gconstpointer a,
 
 
 static gchar *
-xfce_appfinder_model_item_key (GarconMenuItem *item)
+xfce_appfinder_model_item_key (GarconMenuItem *item,
+                               gboolean        extended)
 {
   const gchar *value, *keyword;
   GList       *keywords, *li;
@@ -1008,36 +1013,40 @@ xfce_appfinder_model_item_key (GarconMenuItem *item)
 
   str = g_string_sized_new (128);
 
-  value = garcon_menu_item_get_name (item);
-  if (value != NULL)
-    g_string_append (str, value);
-  g_string_append_c (str, ' ');
-
-  value = garcon_menu_item_get_command (item);
-  if (value != NULL)
+  if (extended)
     {
-      /* only the non-expanding command items */
-      p = strchr (value, '%');
-      g_string_append_len (str, value, p != NULL ? p - value : -1);
+      value = garcon_menu_item_get_comment (item);
+      if (value != NULL)
+        g_string_append (str, value);
+
+      value = garcon_menu_item_get_generic_name (item);
+      if (value != NULL)
+        g_string_append (str, value);
+
+      keywords = garcon_menu_item_get_keywords (item);
+      for (li = keywords; li != NULL; li = li->next)
+        {
+          keyword = li->data;
+          if (keyword != NULL) {
+            g_string_append (str, keyword);
+            g_string_append_c (str, ' ');
+          }
+        }
     }
-  g_string_append_c (str, ' ');
-
-  value = garcon_menu_item_get_comment (item);
-  if (value != NULL)
-    g_string_append (str, value);
-
-  value = garcon_menu_item_get_generic_name (item);
-  if (value != NULL)
-    g_string_append (str, value);
-
-  keywords = garcon_menu_item_get_keywords (item);
-  for (li = keywords; li != NULL; li = li->next)
+  else
     {
-      keyword = li->data;
-      if (keyword != NULL) {
-        g_string_append (str, keyword);
-        g_string_append_c (str, ' ');
-      }
+      value = garcon_menu_item_get_name (item);
+      if (value != NULL)
+        g_string_append (str, value);
+      g_string_append_c (str, ' ');
+
+      value = garcon_menu_item_get_command (item);
+      if (value != NULL)
+        {
+          /* only the non-expanding command items */
+          p = strchr (value, '%');
+          g_string_append_len (str, value, p != NULL ? p - value : -1);
+        }
     }
 
   normalized = g_utf8_normalize (str->str, str->len, G_NORMALIZE_ALL);
@@ -1075,7 +1084,8 @@ xfce_appfinder_model_item_new (GarconMenuItem *menu_item)
         item->command = g_strdup (command);
     }
 
-  item->key = xfce_appfinder_model_item_key (menu_item);
+  item->key_basic = xfce_appfinder_model_item_key (menu_item, FALSE);
+  item->key_extended = xfce_appfinder_model_item_key (menu_item, TRUE);
   item->not_visible = !garcon_menu_element_get_visible (GARCON_MENU_ELEMENT (menu_item));
 
   return item;
@@ -1181,7 +1191,8 @@ xfce_appfinder_model_item_free (gpointer            data,
   if (item->categories != NULL)
     g_ptr_array_unref (item->categories);
   g_free (item->abstract);
-  g_free (item->key);
+  g_free (item->key_basic);
+  g_free (item->key_extended);
   g_free (item->command);
   g_free (item->tooltip);
   g_slice_free (ModelItem, item);
@@ -2556,8 +2567,9 @@ xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
             }
         }
 
-      if (string_casefold != NULL && item->key != NULL)
-        return xfce_appfinder_model_fuzzy_match (item->key, string_casefold);
+      if (string_casefold == NULL || item->key_basic == NULL || item->key_extended == NULL)
+        return TRUE;
+      return xfce_appfinder_model_regular_match (item->key_basic, item->key_extended, string_casefold) || xfce_appfinder_model_fuzzy_match (item->key_basic, string_casefold);
     }
   else /* command item */
     {
@@ -3226,6 +3238,7 @@ xfce_appfinder_model_fuzzy_match (const gchar *source,
                        (contain_uppercase) ? "(?-i)" : "(?i)",
                        token + index);
             patterns = g_slist_append (patterns, g_strdup (pattern));
+          APPFINDER_DEBUG ("    %s", pattern);
           }
       }
 
@@ -3240,4 +3253,26 @@ xfce_appfinder_model_fuzzy_match (const gchar *source,
       }
 
     return FALSE;
+}
+
+
+
+gboolean
+xfce_appfinder_model_regular_match (const gchar *source1,
+                                    const gchar *source2,
+                                    const gchar *token)
+{
+  if (g_strrstr (source1, token) != NULL)
+    {
+      APPFINDER_DEBUG ("Regular match: token=%s ; source=%s", token, source1);
+      return TRUE;
+    }
+
+  if (g_strrstr (source2, token) != NULL)
+    {
+      APPFINDER_DEBUG ("Regular match: token=%s ; source=%s", token, source2);
+      return TRUE;
+    }
+
+  return FALSE;
 }
