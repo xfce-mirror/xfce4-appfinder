@@ -338,7 +338,7 @@ msgstr "Oculta el plafó de la categoria"
 
 #: src/appfinder-preferences.glade:380
 msgid "Hide category panel and show all applications."
-msgstr "Oculta el plafó de la categoria i mostra totes les aplicacions."
+msgstr "Oculta el panell de la categoria i mostra totes les aplicacions."
 
 #: src/appfinder-preferences.glade:397
 msgid "Categ_ory icon size:"
@@ -453,4 +453,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr "El cercador d'aplicacions és una eina per trobar i llançar les aplicacions instal·lades al vostre sistema i per a l'execució ràpida d'ordres. També es pot utilitzar per afegir ràpidament llançadors al tauler de Xfce en arrossegar i deixar anar un ítem des de la vista fins al tauler."
+msgstr "El cercador d'aplicacions és una eina per trobar i llançar les aplicacions instal·lades al sistema i per a l'execució ràpida d'ordres. També es pot usar per afegir ràpidament llançadors al panell d'Xfce en arrossegar i deixar anar un ítem des de la vista fins al panell."
