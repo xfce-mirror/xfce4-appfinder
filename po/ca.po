@@ -334,7 +334,7 @@ msgstr "Mida de les icones dels íte_ms:"
 
 #: src/appfinder-preferences.glade:375
 msgid "Hide category pane"
-msgstr "Oculta el plafó de la categoria"
+msgstr "Oculta el tauler de la categoria"
 
 #: src/appfinder-preferences.glade:380
 msgid "Hide category panel and show all applications."
