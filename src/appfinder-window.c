@@ -406,6 +406,12 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
       G_CALLBACK (xfce_appfinder_window_icon_theme_changed), window);
   g_object_ref (G_OBJECT (window->icon_theme));
 
+  /* update icons when theme changes */
+  g_signal_connect_swapped (gtk_settings_get_default (), "notify::gtk-theme-name",
+      G_CALLBACK(xfce_appfinder_window_icon_theme_changed), window);
+  g_signal_connect_swapped (gtk_settings_get_default (), "notify::gtk-application-prefer-dark-theme",
+      G_CALLBACK(xfce_appfinder_window_icon_theme_changed), window);
+
   /* update icons when scale factor changes */
   g_signal_connect (G_OBJECT (window), "notify::scale-factor",
       G_CALLBACK (xfce_appfinder_window_icon_theme_changed), NULL);

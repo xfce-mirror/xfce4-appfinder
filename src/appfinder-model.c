@@ -2724,8 +2724,29 @@ xfce_appfinder_model_load_pixbuf (const gchar           *icon_name,
       else
         {
           icon_theme = gtk_icon_theme_get_default ();
-          pixbuf = gtk_icon_theme_load_icon (icon_theme, icon_name, size,
-                                             GTK_ICON_LOOKUP_FORCE_SIZE, NULL);
+          if (strstr (icon_name, "symbolic") != NULL)
+            {
+              /* 
+               * symbolic icons need the style context to be correctly tinted.
+               * unfortunately there is no reference to a widget here, therefore it's necessary to create a context from scratch.
+               */
+              GtkStyleContext *context = gtk_style_context_new ();
+              GtkIconInfo *info = gtk_icon_theme_lookup_icon (icon_theme, icon_name, size,
+                                                              GTK_ICON_LOOKUP_FORCE_SIZE | GTK_ICON_LOOKUP_FORCE_SYMBOLIC);
+              GtkWidgetPath *path = gtk_widget_path_new ();
+              gtk_widget_path_append_type (path, GTK_TYPE_WINDOW);
+              gtk_style_context_set_path (context, path);
+              gtk_style_context_add_class (context, "view");
+              pixbuf = gtk_icon_info_load_symbolic_for_context (info, context, NULL, NULL);
+              gtk_widget_path_unref (path);
+              g_object_unref (info);
+              g_object_unref (context);
+            }
+          else
+            {
+              pixbuf = gtk_icon_theme_load_icon (icon_theme, icon_name, size,
+                                                 GTK_ICON_LOOKUP_FORCE_SIZE, NULL);
+            }
 
           if (pixbuf == NULL)
             {
