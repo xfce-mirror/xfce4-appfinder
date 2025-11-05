@@ -525,6 +525,63 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
       return TRUE;
     }
 
+  if (event->keyval == GDK_KEY_Tab || event->keyval == GDK_KEY_ISO_Left_Tab)
+    {
+      GtkTreeSelection *selection = NULL;
+      GtkTreeModel *model;
+      GtkTreeIter iter, first_iter;
+      GtkTreePath *path = NULL;
+      gboolean has_selection = FALSE;
+
+      if (GTK_IS_TREE_VIEW (window->view))
+        {
+          model = gtk_tree_view_get_model (GTK_TREE_VIEW (window->view));
+          selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (window->view));
+          has_selection = gtk_tree_selection_get_selected (selection, &model, &iter);
+        }
+      else
+        {
+          GList *items;
+          model = gtk_icon_view_get_model (GTK_ICON_VIEW (window->view));
+          items = gtk_icon_view_get_selected_items (GTK_ICON_VIEW (window->view));
+          if (items != NULL)
+            {
+              has_selection = TRUE;
+              gtk_tree_model_get_iter (model, &iter, items->data);
+            }
+            g_list_free_full (items, (GDestroyNotify) gtk_tree_path_free);
+        }
+
+      if (gtk_tree_model_get_iter_first (model, &first_iter))
+        path = gtk_tree_model_get_path (model, &first_iter);
+
+      if (has_selection)
+        {
+          gtk_tree_path_free (path);
+          path = gtk_tree_model_get_path (model, &iter);
+          event->keyval == GDK_KEY_Tab ? gtk_tree_path_next (path) : gtk_tree_path_prev (path);
+        }
+
+      if (path)
+        {
+          if (GTK_IS_TREE_VIEW (window->view))
+            {
+              gtk_tree_selection_select_path (selection, path);
+              gtk_tree_view_scroll_to_cell (GTK_TREE_VIEW (window->view), path, NULL, FALSE, 0, 0);
+              gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->view), path, NULL, FALSE);
+            }
+          else
+            {
+              gtk_icon_view_select_path (GTK_ICON_VIEW (window->view), path);
+              gtk_icon_view_scroll_to_path (GTK_ICON_VIEW (window->view), path, FALSE, 0, 0);
+              gtk_icon_view_set_cursor (GTK_ICON_VIEW (window->view), path, NULL, FALSE);
+            }
+          gtk_tree_path_free (path);
+        }
+
+      return TRUE;
+    }
+
   if ((event->state & GDK_CONTROL_MASK) != 0)
     {
       switch (event->keyval)
