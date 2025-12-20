@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-11-01 12:47+0100\n"
+"POT-Creation-Date: 2025-10-02 00:52+0200\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Triyan W. Nugroho <triyan.wn@gmail.com>, 2021\n"
 "Language-Team: Indonesian (http://app.transifex.com/xfce/xfce4-appfinder/language/id/)\n"
@@ -25,184 +25,192 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. close all windows and quit
-#: src/appfinder-gdbus.c:99
+#: src/appfinder-gdbus.c:95
 msgid "Forced to quit"
 msgstr "Dipaksa berhenti"
 
-#: src/appfinder-category-model.c:157
+#: src/appfinder-category-model.c:153
 msgid "All Applications"
 msgstr "Semua Aplikasi"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:698
 msgid "Name"
 msgstr "Nama"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:699
 msgid "Comment"
 msgstr "Komentar"
 
-#: src/appfinder-model.c:703
+#: src/appfinder-model.c:700
 msgid "Command"
 msgstr "Perintah"
 
-#: src/appfinder-model.c:704
+#: src/appfinder-model.c:701
 msgid "Categories"
 msgstr "Kategori"
 
-#: src/appfinder-model.c:705
+#: src/appfinder-model.c:702
 msgid "Filename"
 msgstr "Nama Berkas"
 
-#: src/appfinder-model.c:2593
+#: src/appfinder-model.c:2646
 msgid "Application or action has no command"
-msgstr ""
+msgstr "Aplikasi atau tindakan tidak memiliki perintah"
 
-#: src/appfinder-model.c:3070
+#: src/appfinder-model.c:3142
 msgid "Commands History"
 msgstr "Historis Perintah"
 
-#: src/appfinder-model.c:3094
+#: src/appfinder-model.c:3166
 msgid "Bookmarks"
 msgstr "Bookmark"
 
-#: src/appfinder-preferences.c:290
+#: src/appfinder-preferences.c:314 src/appfinder-preferences.c:335
 msgid "C_lear"
 msgstr "Ber_sihkan"
 
-#: src/appfinder-preferences.c:291
+#: src/appfinder-preferences.c:315
 msgid "This will permanently clear the custom command history."
 msgstr "Perintah ini akan membersihkan daftar historis perintah."
 
-#: src/appfinder-preferences.c:292
+#: src/appfinder-preferences.c:316
 msgid "Are you sure you want to clear the command history?"
 msgstr "Apakah anda ingin menghapus daftar historis perintah?"
 
-#: src/appfinder-preferences.c:403
+#: src/appfinder-preferences.c:336
+msgid "This will permanently clear the recent items history."
+msgstr "Ini akan membersihkan riwayat item terkini secara permanen."
+
+#: src/appfinder-preferences.c:337
+msgid "Are you sure you want to clear the recent items history?"
+msgstr "Apakah Anda yakin ingin membersihkan riwayat item terkini?"
+
+#: src/appfinder-preferences.c:448
 msgid "_Delete"
 msgstr "_Hapus"
 
-#: src/appfinder-preferences.c:404
+#: src/appfinder-preferences.c:449
 msgid "The custom action will be deleted permanently."
 msgstr "Deretan aksi akan dihapus."
 
-#: src/appfinder-preferences.c:405
+#: src/appfinder-preferences.c:450
 #, c-format
 msgid "Are you sure you want to delete pattern \"%s\"?"
 msgstr "Apakah anda ingin menghapus pola \"%s\"?"
 
-#: src/appfinder-window.c:248 src/appfinder-preferences.glade:74
+#: src/appfinder-window.c:247 src/appfinder-preferences.glade:79
 #: data/xfce4-appfinder.desktop.in:10
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
 msgstr "Pencari Aplikasi"
 
-#: src/appfinder-window.c:301
+#: src/appfinder-window.c:300
 msgid "Toggle view mode"
 msgstr "Beralih model tampilan"
 
-#: src/appfinder-window.c:382
+#: src/appfinder-window.c:381
 msgid "_Preferences"
 msgstr "_Preferensi"
 
-#: src/appfinder-window.c:393 src/appfinder-window.c:1282
+#: src/appfinder-window.c:392 src/appfinder-window.c:1281
 msgid "La_unch"
 msgstr "Jal_ankan"
 
-#: src/appfinder-window.c:1020
+#: src/appfinder-window.c:1019
 msgid "Failed to launch desktop item editor"
 msgstr "Gagal menjalankan penyunting item desktop"
 
-#: src/appfinder-window.c:1045
+#: src/appfinder-window.c:1044
 msgid "Confirm"
-msgstr ""
+msgstr "Konfirmasi"
 
-#: src/appfinder-window.c:1046
+#: src/appfinder-window.c:1045
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Perintah ini akan menghapus berkas desktop dari folder rumah anda."
 
-#: src/appfinder-window.c:1047
+#: src/appfinder-window.c:1046
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Apakah anda ingin mengembalikan kondisi \"%s\"?"
 
-#: src/appfinder-window.c:1057
+#: src/appfinder-window.c:1056
 msgid "Failed to remove desktop file"
 msgstr "Gagal menghapus berkas desktop"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: src/appfinder-window.c:1090
+#: src/appfinder-window.c:1089
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Untuk menampilkan kembali item ini, anda harus menghapus berkas desktop dari \"%s\" atau membuka berkas tersebut di folder yang sama dan menghapus baris \"%s\"."
 
-#: src/appfinder-window.c:1095 src/appfinder-window.c:1328
+#: src/appfinder-window.c:1094 src/appfinder-window.c:1327
 msgid "_Hide"
 msgstr "_Sembunyi"
 
-#: src/appfinder-window.c:1096
+#: src/appfinder-window.c:1095
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Apakah anda ingin menyembunyikan \"%s\"?"
 
-#: src/appfinder-window.c:1264
+#: src/appfinder-window.c:1263
 msgid "Remove From Bookmarks"
 msgstr "Hapus dari Bookmark"
 
-#: src/appfinder-window.c:1264
+#: src/appfinder-window.c:1263
 msgid "Add to Bookmarks"
 msgstr "Tambahkan ke Bookmark"
 
-#: src/appfinder-window.c:1296
+#: src/appfinder-window.c:1295
 msgid "_Edit"
 msgstr "Sunt_ing"
 
-#: src/appfinder-window.c:1313
+#: src/appfinder-window.c:1312
 msgid "_Revert"
 msgstr "_Kembalikan"
 
-#: src/main.c:66
+#: src/main.c:65
 msgid "Start in collapsed mode"
 msgstr "Mulai aplikasi dalam mode ringkas"
 
-#: src/main.c:67
+#: src/main.c:66
 msgid "Print version information and exit"
 msgstr "Tampilkan informasi versi dan keluar"
 
-#: src/main.c:68
+#: src/main.c:67
 msgid "Replace the existing service"
 msgstr "Ganti servis yang ada"
 
-#: src/main.c:69
+#: src/main.c:68
 msgid "Quit all instances"
 msgstr "Hentikan semua instansi"
 
-#: src/main.c:70
+#: src/main.c:69
 msgid "Do not try to use or become a D-Bus service"
 msgstr "Jangan menggunakan atau memanipulasi servis D-Bus"
 
-#: src/main.c:71
+#: src/main.c:70
 msgid "Toggle window visibility of background service"
-msgstr ""
+msgstr "Alihkan visibilitas jendela layanan latar belakang"
 
-#: src/main.c:72
+#: src/main.c:71
 msgid "Run in daemon mode"
 msgstr "Jalankan di mode jurik (daemon)"
 
-#: src/main.c:249
+#: src/main.c:243
 #, c-format
 msgid "Type \"%s --help\" for usage."
 msgstr "Ketik \"%s --help\" untuk penggunaan."
 
-#: src/main.c:260
+#: src/main.c:254
 msgid "The Xfce development team. All rights reserved."
 msgstr "Tim pengembang Xfce. Hak cipta dilindungi undang-undang."
 
-#: src/main.c:261
+#: src/main.c:255
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Silakan laporkan kutu ke <%s>."
@@ -243,146 +251,150 @@ msgstr "Lebih Besar"
 msgid "Very Large"
 msgstr "Sangat Besar"
 
-#: src/appfinder-preferences.glade:91
+#: src/appfinder-preferences.glade:96
 msgid "_Close"
 msgstr "_Tutup"
 
-#: src/appfinder-preferences.glade:107
+#: src/appfinder-preferences.glade:112
 msgid "_Help"
 msgstr "_Bantuan"
 
-#: src/appfinder-preferences.glade:160
+#: src/appfinder-preferences.glade:165
 msgid "Remember last _selected category"
 msgstr "Ingat kategori _terpilih terakhir"
 
-#: src/appfinder-preferences.glade:176
+#: src/appfinder-preferences.glade:181
 msgid "Always c_enter the window"
 msgstr "Selalu t_engahkan jendela"
 
-#: src/appfinder-preferences.glade:181
+#: src/appfinder-preferences.glade:186
 msgid "Center the window on startup."
 msgstr "Tengahkan jendela saat hidupkan."
 
-#: src/appfinder-preferences.glade:194
-msgid "Close window when _focus is lost"
-msgstr ""
-
 #: src/appfinder-preferences.glade:199
-msgid "When the focus is lost to another window, appfinder should be closed."
-msgstr ""
+msgid "Close window when _focus is lost"
+msgstr "Tutup jendela ketika _fokus hilang"
 
-#: src/appfinder-preferences.glade:212
+#: src/appfinder-preferences.glade:204
+msgid "When the focus is lost to another window, appfinder should be closed."
+msgstr "Ketika fokus hilang ke jendela lain, pencari aplikasi harus ditutup."
+
+#: src/appfinder-preferences.glade:217
 msgid "Keep running _instance in the background"
 msgstr "Simpan _instansi berjalan di latar belakang"
 
-#: src/appfinder-preferences.glade:217
+#: src/appfinder-preferences.glade:222
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "Ketimbang menutup aplikasi ketika jendela terakhir ditutup, simpan instansi berjalan untuk mempercepat ketika membuka jendela baru. Anda mungkin ingin menonaktifkan ini untuk mengurangi penggunaan memori."
 
-#: src/appfinder-preferences.glade:230
+#: src/appfinder-preferences.glade:235
 msgid "Single window"
 msgstr "Jendela tunggal"
 
-#: src/appfinder-preferences.glade:235
+#: src/appfinder-preferences.glade:240
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr "Ketika sebuah aplikasi berjalan di latar belakang, hanya buka satu jendela dalam satu waktu."
 
-#: src/appfinder-preferences.glade:248
+#: src/appfinder-preferences.glade:253
 msgid "Sort recently used items first"
 msgstr "Urutkan item yang baru-baru ini digunakan terlebih dahulu"
 
-#: src/appfinder-preferences.glade:253
+#: src/appfinder-preferences.glade:258
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr "Atur item, sehingga item yang baru-baru ini digunakan selalu berada di atas."
 
-#: src/appfinder-preferences.glade:265
-msgid "Single-click selects and launches items"
-msgstr ""
-
 #: src/appfinder-preferences.glade:270
-msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgid "Single-click selects and launches items"
+msgstr "Satu klik memilih dan meluncurkan item"
 
-#: src/appfinder-preferences.glade:288
+#: src/appfinder-preferences.glade:275
+msgid "Items are selected and launched with only a single-click."
+msgstr "Item dipilih dan diluncurkan hanya dengan satu klik."
+
+#: src/appfinder-preferences.glade:293
 msgid "Behaviour"
 msgstr "Perilaku"
 
-#: src/appfinder-preferences.glade:323
+#: src/appfinder-preferences.glade:328
 msgid "_View items as icons"
 msgstr "Tampilkan _item sebagai ikon"
 
-#: src/appfinder-preferences.glade:338
+#: src/appfinder-preferences.glade:343
 msgid "Text besi_de icons"
 msgstr "T_eks di samping ikon"
 
-#: src/appfinder-preferences.glade:356
+#: src/appfinder-preferences.glade:361
 msgid "Ite_m icon size:"
 msgstr "Ukuran ikon ite_m:"
 
-#: src/appfinder-preferences.glade:370
+#: src/appfinder-preferences.glade:375
 msgid "Hide category pane"
 msgstr "Sembunyikan panel kategori"
 
-#: src/appfinder-preferences.glade:375
+#: src/appfinder-preferences.glade:380
 msgid "Hide category panel and show all applications."
 msgstr "Sembunyikan panel kategori dan tampilkan semua aplikasi."
 
-#: src/appfinder-preferences.glade:392
+#: src/appfinder-preferences.glade:397
 msgid "Categ_ory icon size:"
 msgstr "Ukuran ikon kategori:"
 
-#: src/appfinder-preferences.glade:446
+#: src/appfinder-preferences.glade:451
 msgid "Hide window decorations"
 msgstr "Sembunyikan dekorasi jendela"
 
-#: src/appfinder-preferences.glade:451
+#: src/appfinder-preferences.glade:456
 msgid "Hide window decorations such as title bar and borders."
 msgstr "Sembunyikan dekorasi jendela seperti bilah judul dan garis tepi."
 
-#: src/appfinder-preferences.glade:466
+#: src/appfinder-preferences.glade:471
 msgid "Show generic application _names"
-msgstr ""
+msgstr "Tampilkan _nama aplikasi generik"
 
-#: src/appfinder-preferences.glade:490
+#: src/appfinder-preferences.glade:495
 msgid "Appearance"
 msgstr "Penampilan"
 
-#: src/appfinder-preferences.glade:521
+#: src/appfinder-preferences.glade:525
 msgid "C_lear Custom Command History"
 msgstr "Bersih_kan Riwayat Perintah Suai"
 
-#: src/appfinder-preferences.glade:536
+#: src/appfinder-preferences.glade:537
+msgid "Clear _Recently Used Items History"
+msgstr "Bersihkan Riwayat Item yang Baru Digunakan"
+
+#: src/appfinder-preferences.glade:553
 msgid "History"
 msgstr "Riwayat"
 
-#: src/appfinder-preferences.glade:555
+#: src/appfinder-preferences.glade:572
 msgid "_General"
 msgstr "_Umum"
 
-#: src/appfinder-preferences.glade:579
+#: src/appfinder-preferences.glade:596
 msgid "Custom actions are only available in collapsed mode."
 msgstr "Aksi tersuai hanya tersedia pada mode ringkas."
 
-#: src/appfinder-preferences.glade:627
+#: src/appfinder-preferences.glade:644
 msgid "Pattern"
 msgstr "Pola"
 
-#: src/appfinder-preferences.glade:663
+#: src/appfinder-preferences.glade:680
 msgid "Add a new custom action."
 msgstr "Tambah aksi suai baru."
 
-#: src/appfinder-preferences.glade:684
+#: src/appfinder-preferences.glade:701
 msgid "Remove the currently selected action."
 msgstr "Hapus aksi terpilih saat ini."
 
-#: src/appfinder-preferences.glade:727
+#: src/appfinder-preferences.glade:744
 #, c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -390,23 +402,23 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Jika tipe diatur ke prefiks, %s akan digantikan dengan string setelah pola, %S dengan teks entri lengkap. Untuk ekspresi reguler Anda dapat menggunakan \\0 dan \\<num>."
 
-#: src/appfinder-preferences.glade:758
+#: src/appfinder-preferences.glade:775
 msgid "Co_mmand:"
 msgstr "P_erintah:"
 
-#: src/appfinder-preferences.glade:773
+#: src/appfinder-preferences.glade:790
 msgid "Patte_rn:"
 msgstr "Po_la:"
 
-#: src/appfinder-preferences.glade:788
+#: src/appfinder-preferences.glade:805
 msgid "_Type:"
 msgstr "_Tipe:"
 
-#: src/appfinder-preferences.glade:798
+#: src/appfinder-preferences.glade:815
 msgid "_Save match in command history"
 msgstr "_Simpan kecocokan di riwayat perintah"
 
-#: src/appfinder-preferences.glade:850
+#: src/appfinder-preferences.glade:867
 msgid "Custom _Actions"
 msgstr "_Aksi Suai"
 
