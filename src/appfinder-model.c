@@ -2699,6 +2699,24 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
 }
 
 
+gint
+xfce_appfinder_model_get_icon_size_value (XfceAppfinderIconSize icon_size)
+{
+  // this function could be replaced by a lookup array, but I'm going for
+  // a function with switch to avoid any possibility of out of bounds access
+  switch (icon_size)
+    {
+    case XFCE_APPFINDER_ICON_SIZE_SMALLEST: return 16;  break;
+    case XFCE_APPFINDER_ICON_SIZE_SMALLER:  return 24;  break;
+    case XFCE_APPFINDER_ICON_SIZE_SMALL:    return 32;  break;
+    case XFCE_APPFINDER_ICON_SIZE_NORMAL:   return 48;  break;
+    case XFCE_APPFINDER_ICON_SIZE_LARGE:    return 64;  break;
+    case XFCE_APPFINDER_ICON_SIZE_LARGER:   return 96;  break;
+    case XFCE_APPFINDER_ICON_SIZE_LARGEST:  return 128; break;
+    default: return 0;
+    }
+}
+
 
 GdkPixbuf *
 xfce_appfinder_model_load_pixbuf (const gchar           *icon_name,
@@ -2711,17 +2729,8 @@ xfce_appfinder_model_load_pixbuf (const gchar           *icon_name,
   GtkIconTheme *icon_theme;
   gint          size;
 
-  switch (icon_size)
-    {
-    case XFCE_APPFINDER_ICON_SIZE_SMALLEST: size = 16;  break;
-    case XFCE_APPFINDER_ICON_SIZE_SMALLER:  size = 24;  break;
-    case XFCE_APPFINDER_ICON_SIZE_SMALL:    size = 32;  break;
-    case XFCE_APPFINDER_ICON_SIZE_NORMAL:   size = 48;  break;
-    case XFCE_APPFINDER_ICON_SIZE_LARGE:    size = 64;  break;
-    case XFCE_APPFINDER_ICON_SIZE_LARGER:   size = 96;  break;
-    case XFCE_APPFINDER_ICON_SIZE_LARGEST:  size = 128; break;
-    default: return NULL;
-    }
+  size = xfce_appfinder_model_get_icon_size_value (icon_size);
+  if (size == 0) return NULL;
 
   APPFINDER_DEBUG ("load icon %s at %dpx and scale %dx", icon_name, size, scale_factor);
 

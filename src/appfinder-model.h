@@ -95,6 +95,8 @@ gboolean             xfce_appfinder_model_execute                (XfceAppfinderM
                                                                   const gchar               *action_name,
                                                                   GError                   **error);
 
+gint                 xfce_appfinder_model_get_icon_size_value    (XfceAppfinderIconSize      icon_size);
+
 GdkPixbuf           *xfce_appfinder_model_load_pixbuf            (const gchar               *icon_name,
                                                                   XfceAppfinderIconSize      icon_size,
                                                                   gint                       scale_factor) G_GNUC_MALLOC;
