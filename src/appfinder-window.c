@@ -602,13 +602,13 @@ xfce_appfinder_window_window_state_event (GtkWidget           *widget,
 }
 
 
-
 static void
 xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
 {
-  gint                   width = 0, padding = 0;
+  gint                   width = 0, padding = 0, text_width = 0;
   gint                   text_column_idx, column_idx = 0;
   XfceAppfinderIconSize  icon_size;
+  gint                   icon_size_value = 0;
   GtkOrientation         item_orientation = GTK_ORIENTATION_VERTICAL;
   GList                 *renderers;
   GList                 *li;
@@ -617,49 +617,20 @@ xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
 
   g_object_get (G_OBJECT (window->model), "icon-size", &icon_size, NULL);
 
-  /* some hard-coded values for the cell size that seem to work fine */
-  switch (icon_size)
-    {
-    case XFCE_APPFINDER_ICON_SIZE_SMALLEST:
-      padding = 2;
-      width = 16 * 3.75;
-      break;
-
-    case XFCE_APPFINDER_ICON_SIZE_SMALLER:
-      padding = 2;
-      width = 24 * 3;
-      break;
-
-    case XFCE_APPFINDER_ICON_SIZE_SMALL:
-      padding = 4;
-      width = 32 * 2.5;
-      break;
-
-    case XFCE_APPFINDER_ICON_SIZE_NORMAL:
-      padding = 4;
-      width = 48 * 2;
-      break;
-
-    case XFCE_APPFINDER_ICON_SIZE_LARGE:
-      padding = 6;
-      width = 64 * 1.5;
-      break;
-
-    case XFCE_APPFINDER_ICON_SIZE_LARGER:
-      padding = 6;
-      width = 96 * 1.75;
-      break;
-
-    case XFCE_APPFINDER_ICON_SIZE_LARGEST:
-      padding = 6;
-      width = 128 * 1.25;
-      break;
-    }
-
   if (xfconf_channel_get_bool (window->channel, "/text-beside-icons", FALSE))
     {
       item_orientation = GTK_ORIENTATION_HORIZONTAL;
-      width *= 2;
+      text_width = 140;
+    }
+  else text_width = 48;
+
+  if ((icon_size_value = xfce_appfinder_model_get_icon_size_value (icon_size)))
+    {
+      width = icon_size_value + text_width;
+
+      if (icon_size_value < 32) padding = 2;
+      else if (icon_size_value < 64) padding = 4;
+      else { padding = 6; }
     }
 
   gtk_icon_view_set_item_orientation (GTK_ICON_VIEW (window->view), item_orientation);
