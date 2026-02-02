@@ -2702,8 +2702,6 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
 gint
 xfce_appfinder_model_get_icon_size_value (XfceAppfinderIconSize icon_size)
 {
-  // this function could be replaced by a lookup array, but I'm going for
-  // a function with switch to avoid any possibility of out of bounds access
   switch (icon_size)
     {
     case XFCE_APPFINDER_ICON_SIZE_SMALLEST: return 16;  break;
