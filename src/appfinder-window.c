@@ -620,7 +620,7 @@ xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
   if (xfconf_channel_get_bool (window->channel, "/text-beside-icons", FALSE))
     {
       item_orientation = GTK_ORIENTATION_HORIZONTAL;
-      text_width = 140;
+      text_width = 150;
     }
   else text_width = 48;
 
