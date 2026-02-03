@@ -605,7 +605,7 @@ xfce_appfinder_window_window_state_event (GtkWidget           *widget,
 static void
 xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
 {
-  gint                   width = 0, padding = 0, text_width = 0;
+  gint                   width = 0, padding = 4, text_width = 0;
   gint                   text_column_idx, column_idx = 0;
   XfceAppfinderIconSize  icon_size;
   gint                   icon_size_value = 0;
@@ -622,16 +622,11 @@ xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
       item_orientation = GTK_ORIENTATION_HORIZONTAL;
       text_width = 150;
     }
-  else text_width = 48;
+  else
+    text_width = 48;
 
   if ((icon_size_value = xfce_appfinder_model_get_icon_size_value (icon_size)))
-    {
-      width = icon_size_value + text_width;
-
-      if (icon_size_value < 32) padding = 2;
-      else if (icon_size_value < 64) padding = 4;
-      else { padding = 6; }
-    }
+    width = icon_size_value + text_width;
 
   gtk_icon_view_set_item_orientation (GTK_ICON_VIEW (window->view), item_orientation);
   gtk_icon_view_set_item_padding (GTK_ICON_VIEW (window->view), padding);
