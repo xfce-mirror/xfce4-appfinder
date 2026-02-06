@@ -77,12 +77,12 @@ struct _XfceAppfinderPreferences
   gulong               property_watch_id;
 };
 
-enum
+typedef enum
 {
   COLUMN_PATTERN,
   COLUMN_UNIQUE_ID,
   COLUMN_NAME
-};
+} Column;
 
 
 
@@ -472,6 +472,7 @@ typedef struct
 {
   gint          unique_id;
   const GValue *value;
+  Column        column;
 }
 UpdateContext;
 
@@ -490,7 +491,7 @@ xfce_appfinder_preferences_action_changed_func (GtkTreeModel *model,
 
   if (context->unique_id == unique_id)
     {
-      gtk_list_store_set (GTK_LIST_STORE (model), iter, COLUMN_PATTERN,
+      gtk_list_store_set (GTK_LIST_STORE (model), iter, context->column,
                           g_value_get_string (context->value),
                           -1);
 
@@ -522,10 +523,18 @@ xfce_appfinder_preferences_action_changed (XfconfChannel            *channel,
     }
   else if (G_VALUE_HOLDS_STRING (value)
            && sscanf (prop_name, "/actions/action-%d%n", &unique_id, &offset) == 1
-           && g_strcmp0 (prop_name + offset, "/pattern") == 0)
+           && (g_strcmp0 (prop_name + offset, "/pattern") == 0
+               || (g_strcmp0(prop_name + offset, "/name") == 0)))
     {
       context.unique_id = unique_id;
       context.value = value;
+
+      if (g_strcmp0 (prop_name + offset, "/pattern") == 0)
+        context.column = COLUMN_PATTERN;
+      else if (g_strcmp0 (prop_name + offset, "/name") == 0)
+        context.column = COLUMN_NAME;
+      else
+        return;
 
       store = gtk_builder_get_object (GTK_BUILDER (preferences), "actions-store");
       gtk_tree_model_foreach (GTK_TREE_MODEL (store),
@@ -543,8 +552,7 @@ xfce_appfinder_preferences_action_populate (XfceAppfinderPreferences *preference
   const GValue *value;
   gint          unique_id;
   gchar         prop[32];
-  gchar        *pattern;
-  gchar        *name;
+  gchar        *pattern, *name;
   guint         i;
   gint          restore_id = -1;
   GtkTreeIter   iter;

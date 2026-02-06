@@ -642,6 +642,17 @@
                               <object class="GtkTreeSelection"/>
                             </child>
                             <child>
+                              <object class="GtkTreeViewColumn">
+                                <property name="title" translatable="yes">Name</property>
+                                <child>
+                                  <object class="GtkCellRendererText" />
+                                  <attributes>
+                                    <attribute name="text">2</attribute>
+                                  </attributes>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
                               <object class="GtkTreeViewColumn" id="treeviewcolumn1">
                                 <property name="title" translatable="yes">Pattern</property>
                                 <child>
