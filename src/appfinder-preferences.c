@@ -73,14 +73,15 @@ struct _XfceAppfinderPreferences
 
   GtkTreeSelection    *selection;
 
-  gulong               bindings[4];
+  gulong               bindings[5];
   gulong               property_watch_id;
 };
 
 enum
 {
   COLUMN_PATTERN,
-  COLUMN_UNIQUE_ID
+  COLUMN_UNIQUE_ID,
+  COLUMN_NAME
 };
 
 
@@ -431,6 +432,7 @@ xfce_appfinder_preferences_action_remove (GtkWidget                *button,
   GtkTreeIter       iter;
   gchar            *pattern;
   gint              id;
+  gchar            *name;
   gchar             prop[32];
 
   appfinder_return_if_fail (GTK_IS_WIDGET (button));
@@ -442,12 +444,13 @@ xfce_appfinder_preferences_action_remove (GtkWidget                *button,
   gtk_tree_model_get (model, &iter,
                       COLUMN_PATTERN, &pattern,
                       COLUMN_UNIQUE_ID, &id,
+                      COLUMN_NAME, &name,
                       -1);
 
   if (xfce_dialog_confirm (GTK_WINDOW (gtk_widget_get_toplevel (button)),
                            XFCE_APPFINDER_ICON_NAME_DELETE, _("_Delete"),
                            _("The custom action will be deleted permanently."),
-                           _("Are you sure you want to delete pattern \"%s\"?"),
+                           _("Are you sure you want to delete pattern \"%s\"?"), // TODO: maybe can use name here
                            pattern))
     {
       gtk_list_store_remove (GTK_LIST_STORE (model), &iter);
@@ -541,6 +544,7 @@ xfce_appfinder_preferences_action_populate (XfceAppfinderPreferences *preference
   gint          unique_id;
   gchar         prop[32];
   gchar        *pattern;
+  gchar        *name;
   guint         i;
   gint          restore_id = -1;
   GtkTreeIter   iter;
@@ -564,9 +568,13 @@ xfce_appfinder_preferences_action_populate (XfceAppfinderPreferences *preference
           g_snprintf (prop, sizeof (prop), "/actions/action-%d/pattern", unique_id);
           pattern = xfconf_channel_get_string (preferences->channel, prop, NULL);
 
+          g_snprintf (prop, sizeof (prop), "/actions/action-%d/name", unique_id);
+          name = xfconf_channel_get_string (preferences->channel, prop, NULL);
+
           gtk_list_store_insert_with_values (GTK_LIST_STORE (store), &iter, i,
                                              COLUMN_UNIQUE_ID, unique_id,
                                              COLUMN_PATTERN, pattern,
+                                             COLUMN_NAME, name,
                                              -1);
 
           if (restore_id == unique_id)
@@ -604,6 +612,7 @@ xfce_appfinder_preferences_selection_changed (GtkTreeSelection         *selectio
   dialog_object  objects[] =
   {
      { "type", "active", G_TYPE_INT },
+     { "name", "text", G_TYPE_STRING },
      { "pattern", "text", G_TYPE_STRING },
      { "command", "text", G_TYPE_STRING },
      { "save", "active", G_TYPE_BOOLEAN }
