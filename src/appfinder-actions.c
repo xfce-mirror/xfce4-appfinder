@@ -73,6 +73,7 @@ struct _XfceAppfinderAction
 
   gint                 unique_id;
   gchar               *pattern;
+  gchar               *name;
   gchar               *command;
   guint                save : 1;
 
@@ -153,26 +154,31 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
     /* default actions, sorted */
     { XFCE_APPFINDER_ACTION_TYPE_REGEX, 0,
       "^(file|http|https):\\/\\/(.*)$",
+      "URI",
       "xfce-open \\0",
       FALSE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "$",
+      "Terminal command",
       "xfce-open --launch TerminalEmulator %s",
       TRUE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "!w",
+      "Wikipedia search",
       "xfce-open --launch WebBrowser http://en.wikipedia.org/wiki/%s",
       FALSE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "#",
+      "Man page",
       "xfce-open --launch TerminalEmulator man %s",
       FALSE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "/",
+      "File manager search",
       "xfce-open --launch FileManager %S",
       FALSE,
       NULL },
@@ -186,6 +192,7 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
       action->type = defaults[i].type;
       action->unique_id = i + 1;
       action->pattern = g_strdup (defaults[i].pattern);
+      action->name = g_strdup (defaults[i].name);
       action->command = g_strdup (defaults[i].command);
       action->save = defaults[i].save;
 
@@ -218,7 +225,7 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
   XfceAppfinderAction *action;
   gchar                prop[32];
   gint                 type;
-  gchar               *pattern, *command;
+  gchar               *pattern, *command, *name;
   gboolean             save;
   const GValue        *value;
   guint                i;
@@ -273,6 +280,9 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
               g_snprintf (prop, sizeof (prop), "/actions/action-%d/pattern", unique_id);
               pattern = xfconf_channel_get_string (actions->channel, prop, NULL);
 
+              g_snprintf (prop, sizeof (prop), "/actions/action-%d/name", unique_id);
+              name = xfconf_channel_get_string (actions->channel, prop, NULL);
+
               g_snprintf (prop, sizeof (prop), "/actions/action-%d/command", unique_id);
               command = xfconf_channel_get_string (actions->channel, prop, NULL);
 
@@ -283,6 +293,7 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
               action->type = type;
               action->unique_id = unique_id;
               action->pattern = pattern;
+              action->name = name;
               action->command = command;
               action->save = save;
 
@@ -378,6 +389,9 @@ xfce_appfinder_actions_save (XfceAppfinderActions *actions,
           g_snprintf (prop, sizeof (prop), "/actions/action-%d/pattern", action->unique_id);
           xfconf_channel_set_string (actions->channel, prop, action->pattern);
 
+          g_snprintf (prop, sizeof (prop), "/actions/action-%d/name", action->unique_id);
+          xfconf_channel_set_string (actions->channel, prop, action->name);
+
           g_snprintf (prop, sizeof (prop), "/actions/action-%d/command", action->unique_id);
           xfconf_channel_set_string (actions->channel, prop, action->command);
 
@@ -451,6 +465,12 @@ xfce_appfinder_actions_changed (XfconfChannel        *channel,
                 {
                   g_free (action->command);
                   action->command = g_value_dup_string (value);
+                }
+              else if (strcmp (field, "name") == 0
+                       && G_VALUE_HOLDS_STRING (value))
+                {
+                  g_free (action->name);
+                  action->name = g_value_dup_string (value);
                 }
               else if (strcmp (field, "save") == 0
                        && G_VALUE_HOLDS_BOOLEAN (value))
