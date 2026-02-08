@@ -414,7 +414,7 @@
                                 <property name="can_focus">False</property>
                                 <property name="model">icon-sizes</property>
                                 <child>
-                                  <object class="GtkCellRendererText" id="cellrenderertext4"/>
+                                  <object class="GtkCellRendererText" />
                                   <attributes>
                                     <attribute name="text">0</attribute>
                                   </attributes>
@@ -434,7 +434,7 @@
                                 <property name="can_focus">False</property>
                                 <property name="model">icon-sizes</property>
                                 <child>
-                                  <object class="GtkCellRendererText" id="cellrenderertext2"/>
+                                  <object class="GtkCellRendererText" />
                                   <attributes>
                                     <attribute name="text">0</attribute>
                                   </attributes>
@@ -653,10 +653,10 @@
                               </object>
                             </child>
                             <child>
-                              <object class="GtkTreeViewColumn" id="treeviewcolumn1">
+                              <object class="GtkTreeViewColumn">
                                 <property name="title" translatable="yes">Pattern</property>
                                 <child>
-                                  <object class="GtkCellRendererText" id="cellrenderertext1"/>
+                                  <object class="GtkCellRendererText" />
                                   <attributes>
                                     <attribute name="text">0</attribute>
                                   </attributes>
@@ -882,7 +882,7 @@
                         <property name="hexpand">True</property>
                         <property name="model">action-types</property>
                         <child>
-                          <object class="GtkCellRendererText" id="cellrenderertext3"/>
+                          <object class="GtkCellRendererText" />
                           <attributes>
                             <attribute name="text">0</attribute>
                           </attributes>
