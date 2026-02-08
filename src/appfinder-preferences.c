@@ -430,9 +430,8 @@ xfce_appfinder_preferences_action_remove (GtkWidget                *button,
 {
   GtkTreeModel     *model;
   GtkTreeIter       iter;
-  gchar            *pattern;
+  gchar            *pattern, *name;
   gint              id;
-  gchar            *name;
   gchar             prop[32];
 
   appfinder_return_if_fail (GTK_IS_WIDGET (button));
