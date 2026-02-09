@@ -73,15 +73,16 @@ struct _XfceAppfinderPreferences
 
   GtkTreeSelection    *selection;
 
-  gulong               bindings[4];
+  gulong               bindings[5];
   gulong               property_watch_id;
 };
 
-enum
+typedef enum
 {
   COLUMN_PATTERN,
-  COLUMN_UNIQUE_ID
-};
+  COLUMN_UNIQUE_ID,
+  COLUMN_NAME
+} Column;
 
 
 
@@ -429,7 +430,7 @@ xfce_appfinder_preferences_action_remove (GtkWidget                *button,
 {
   GtkTreeModel     *model;
   GtkTreeIter       iter;
-  gchar            *pattern;
+  gchar            *pattern, *name;
   gint              id;
   gchar             prop[32];
 
@@ -442,12 +443,13 @@ xfce_appfinder_preferences_action_remove (GtkWidget                *button,
   gtk_tree_model_get (model, &iter,
                       COLUMN_PATTERN, &pattern,
                       COLUMN_UNIQUE_ID, &id,
+                      COLUMN_NAME, &name,
                       -1);
 
   if (xfce_dialog_confirm (GTK_WINDOW (gtk_widget_get_toplevel (button)),
                            XFCE_APPFINDER_ICON_NAME_DELETE, _("_Delete"),
                            _("The custom action will be deleted permanently."),
-                           _("Are you sure you want to delete pattern \"%s\"?"),
+                           _("Are you sure you want to delete pattern \"%s\"?"), // TODO: maybe can use name here
                            pattern))
     {
       gtk_list_store_remove (GTK_LIST_STORE (model), &iter);
@@ -469,6 +471,7 @@ typedef struct
 {
   gint          unique_id;
   const GValue *value;
+  Column        column;
 }
 UpdateContext;
 
@@ -487,7 +490,7 @@ xfce_appfinder_preferences_action_changed_func (GtkTreeModel *model,
 
   if (context->unique_id == unique_id)
     {
-      gtk_list_store_set (GTK_LIST_STORE (model), iter, COLUMN_PATTERN,
+      gtk_list_store_set (GTK_LIST_STORE (model), iter, context->column,
                           g_value_get_string (context->value),
                           -1);
 
@@ -519,10 +522,18 @@ xfce_appfinder_preferences_action_changed (XfconfChannel            *channel,
     }
   else if (G_VALUE_HOLDS_STRING (value)
            && sscanf (prop_name, "/actions/action-%d%n", &unique_id, &offset) == 1
-           && g_strcmp0 (prop_name + offset, "/pattern") == 0)
+           && (g_strcmp0 (prop_name + offset, "/pattern") == 0
+               || (g_strcmp0(prop_name + offset, "/name") == 0)))
     {
       context.unique_id = unique_id;
       context.value = value;
+
+      if (g_strcmp0 (prop_name + offset, "/pattern") == 0)
+        context.column = COLUMN_PATTERN;
+      else if (g_strcmp0 (prop_name + offset, "/name") == 0)
+        context.column = COLUMN_NAME;
+      else
+        return;
 
       store = gtk_builder_get_object (GTK_BUILDER (preferences), "actions-store");
       gtk_tree_model_foreach (GTK_TREE_MODEL (store),
@@ -540,7 +551,7 @@ xfce_appfinder_preferences_action_populate (XfceAppfinderPreferences *preference
   const GValue *value;
   gint          unique_id;
   gchar         prop[32];
-  gchar        *pattern;
+  gchar        *pattern, *name;
   guint         i;
   gint          restore_id = -1;
   GtkTreeIter   iter;
@@ -564,9 +575,13 @@ xfce_appfinder_preferences_action_populate (XfceAppfinderPreferences *preference
           g_snprintf (prop, sizeof (prop), "/actions/action-%d/pattern", unique_id);
           pattern = xfconf_channel_get_string (preferences->channel, prop, NULL);
 
+          g_snprintf (prop, sizeof (prop), "/actions/action-%d/name", unique_id);
+          name = xfconf_channel_get_string (preferences->channel, prop, NULL);
+
           gtk_list_store_insert_with_values (GTK_LIST_STORE (store), &iter, i,
                                              COLUMN_UNIQUE_ID, unique_id,
                                              COLUMN_PATTERN, pattern,
+                                             COLUMN_NAME, name,
                                              -1);
 
           if (restore_id == unique_id)
@@ -604,6 +619,7 @@ xfce_appfinder_preferences_selection_changed (GtkTreeSelection         *selectio
   dialog_object  objects[] =
   {
      { "type", "active", G_TYPE_INT },
+     { "name", "text", G_TYPE_STRING },
      { "pattern", "text", G_TYPE_STRING },
      { "command", "text", G_TYPE_STRING },
      { "save", "active", G_TYPE_BOOLEAN }
