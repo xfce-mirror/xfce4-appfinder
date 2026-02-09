@@ -120,7 +120,7 @@ XfceAppfinderAction default_actions[] =
 };
 
 static const gchar *xfce_appfinder_actions_get_default_name (AppfinderActionType  type,
-                                                             const gchar        *pattern);
+                                                             const gchar         *pattern);
 
 
 static void
