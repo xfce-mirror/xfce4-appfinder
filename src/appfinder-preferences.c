@@ -521,19 +521,17 @@ xfce_appfinder_preferences_action_changed (XfconfChannel            *channel,
       xfce_appfinder_preferences_action_populate (preferences);
     }
   else if (G_VALUE_HOLDS_STRING (value)
-           && sscanf (prop_name, "/actions/action-%d%n", &unique_id, &offset) == 1
-           && (g_strcmp0 (prop_name + offset, "/pattern") == 0
-               || (g_strcmp0(prop_name + offset, "/name") == 0)))
+           && sscanf (prop_name, "/actions/action-%d%n", &unique_id, &offset) == 1)
     {
-      context.unique_id = unique_id;
-      context.value = value;
-
-      if (g_strcmp0 (prop_name + offset, "/pattern") == 0)
+      if (g_strcmp0(prop_name + offset, "/pattern") == 0)
         context.column = COLUMN_PATTERN;
-      else if (g_strcmp0 (prop_name + offset, "/name") == 0)
+      else if (g_strcmp0(prop_name + offset, "/name") == 0)
         context.column = COLUMN_NAME;
       else
         return;
+
+      context.unique_id = unique_id;
+      context.value = value;
 
       store = gtk_builder_get_object (GTK_BUILDER (preferences), "actions-store");
       gtk_tree_model_foreach (GTK_TREE_MODEL (store),
