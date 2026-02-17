@@ -588,6 +588,7 @@ xfce_appfinder_preferences_action_populate (XfceAppfinderPreferences *preference
             gtk_tree_selection_select_iter (preferences->selection, &iter);
 
           g_free (pattern);
+          g_free (name);
         }
 
       xfconf_array_free (array);
