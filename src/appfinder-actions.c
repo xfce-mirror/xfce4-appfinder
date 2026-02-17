@@ -89,7 +89,7 @@ XfceAppfinderAction default_actions[] =
   /* default actions, sorted */
   { XFCE_APPFINDER_ACTION_TYPE_REGEX, 0,
     "^(file|http|https):\\/\\/(.*)$",
-    "URI",
+    "Open URI",
     "xfce-open \\0",
     FALSE,
     NULL },
@@ -113,7 +113,7 @@ XfceAppfinderAction default_actions[] =
     NULL },
   { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
     "/",
-    "File manager search",
+    "Open in file manager",
     "xfce-open --launch FileManager %S",
     FALSE,
     NULL },
