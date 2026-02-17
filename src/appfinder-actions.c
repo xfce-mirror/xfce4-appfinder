@@ -343,7 +343,7 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
       xfconf_channel_set_bool (actions->channel, "/migrated-exo-open", TRUE);
     }
 
-    /* Create action names in xfconf for existing default actions */
+    /* Should be removed after 4.22: Creates action names in xfconf for existing default actions */
     if (!xfconf_channel_get_bool (actions->channel, "/migrated-action-names", FALSE))
     {
       for (li = actions->actions; li != NULL; li = li->next)
