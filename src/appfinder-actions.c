@@ -84,6 +84,8 @@ struct _XfceAppfinderAction
 
 G_DEFINE_TYPE (XfceAppfinderActions, xfce_appfinder_actions, G_TYPE_OBJECT)
 
+
+
 static void
 xfce_appfinder_actions_class_init (XfceAppfinderActionsClass *klass)
 {
@@ -148,7 +150,7 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
 {
   guint                i;
   XfceAppfinderAction *action;
-  XfceAppfinderAction defaults[] =
+  XfceAppfinderAction  defaults[] =
   {
     /* default actions, sorted */
     { XFCE_APPFINDER_ACTION_TYPE_REGEX, 0,
