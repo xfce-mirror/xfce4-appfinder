@@ -172,6 +172,7 @@ xfce_appfinder_actions_free (XfceAppfinderAction *action,
 {
   g_free (action->pattern);
   g_free (action->command);
+  g_free (action->name);
 
   if (action->regex != NULL)
     g_regex_unref (action->regex);
