@@ -370,7 +370,7 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
               if (default_name != NULL)
                 action->name = g_strdup (default_name);
               else
-                action->name = ""; // prevents name entry being set to null
+                action->name = "";
               g_free (default_name);
             }
         }
