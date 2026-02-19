@@ -185,6 +185,8 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
       NULL },
   };
 
+  APPFINDER_DEBUG ("loaded default actions");
+
   for (i = 0; i < G_N_ELEMENTS (defaults); i++)
     {
       action = g_slice_new0 (XfceAppfinderAction);
