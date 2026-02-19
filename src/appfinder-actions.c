@@ -221,7 +221,7 @@ xfce_appfinder_actions_sort (gconstpointer a,
 
 static gchar *
 xfce_appfinder_actions_get_default_name (AppfinderActionType type,
-                                          const gchar       *pattern)
+                                         const gchar        *pattern)
 {
   XfceAppfinderActions  defaults = {0};
   XfceAppfinderAction  *action;
