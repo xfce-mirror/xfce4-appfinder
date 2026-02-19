@@ -84,45 +84,6 @@ struct _XfceAppfinderAction
 
 G_DEFINE_TYPE (XfceAppfinderActions, xfce_appfinder_actions, G_TYPE_OBJECT)
 
-XfceAppfinderAction default_actions[] =
-{
-  /* default actions, sorted */
-  { XFCE_APPFINDER_ACTION_TYPE_REGEX, 0,
-    "^(file|http|https):\\/\\/(.*)$",
-    "Open URI",
-    "xfce-open \\0",
-    FALSE,
-    NULL },
-  { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
-    "$",
-    "Terminal command",
-    "xfce-open --launch TerminalEmulator %s",
-    TRUE,
-    NULL },
-  { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
-    "!w",
-    "Wikipedia search",
-    "xfce-open --launch WebBrowser http://en.wikipedia.org/wiki/%s",
-    FALSE,
-    NULL },
-  { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
-    "#",
-    "Man page",
-    "xfce-open --launch TerminalEmulator man %s",
-    FALSE,
-    NULL },
-  { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
-    "/",
-    "Open in file manager",
-    "xfce-open --launch FileManager %S",
-    FALSE,
-    NULL },
-};
-
-static const gchar *xfce_appfinder_actions_get_default_name (AppfinderActionType  type,
-                                                             const gchar         *pattern);
-
-
 static void
 xfce_appfinder_actions_class_init (XfceAppfinderActionsClass *klass)
 {
@@ -187,16 +148,50 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
 {
   guint                i;
   XfceAppfinderAction *action;
+  XfceAppfinderAction defaults[] =
+  {
+    /* default actions, sorted */
+    { XFCE_APPFINDER_ACTION_TYPE_REGEX, 0,
+      "^(file|http|https):\\/\\/(.*)$",
+      "Open URI",
+      "xfce-open \\0",
+      FALSE,
+      NULL },
+    { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
+      "$",
+      "Terminal command",
+      "xfce-open --launch TerminalEmulator %s",
+      TRUE,
+      NULL },
+    { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
+      "!w",
+      "Wikipedia search",
+      "xfce-open --launch WebBrowser http://en.wikipedia.org/wiki/%s",
+      FALSE,
+      NULL },
+    { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
+      "#",
+      "Man page",
+      "xfce-open --launch TerminalEmulator man %s",
+      FALSE,
+      NULL },
+    { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
+      "/",
+      "Open in file manager",
+      "xfce-open --launch FileManager %S",
+      FALSE,
+      NULL },
+  };
 
-  for (i = 0; i < G_N_ELEMENTS (default_actions); i++)
+  for (i = 0; i < G_N_ELEMENTS (defaults); i++)
     {
       action = g_slice_new0 (XfceAppfinderAction);
-      action->type = default_actions[i].type;
+      action->type = defaults[i].type;
       action->unique_id = i + 1;
-      action->pattern = g_strdup (default_actions[i].pattern);
-      action->name = g_strdup (default_actions[i].name);
-      action->command = g_strdup (default_actions[i].command);
-      action->save = default_actions[i].save;
+      action->pattern = g_strdup (defaults[i].pattern);
+      action->name = g_strdup (defaults[i].name);
+      action->command = g_strdup (defaults[i].command);
+      action->save = defaults[i].save;
 
       actions->actions = g_slist_prepend (actions->actions, action);
     }
@@ -219,21 +214,35 @@ xfce_appfinder_actions_sort (gconstpointer a,
 }
 
 
-static const gchar *
+
+static gchar *
 xfce_appfinder_actions_get_default_name (AppfinderActionType type,
                                           const gchar       *pattern)
 {
-  for (guint i = 0; i < G_N_ELEMENTS (default_actions); i++)
+  XfceAppfinderActions  defaults = {0};
+  XfceAppfinderAction  *action;
+  GSList               *li;
+  gchar                *name = NULL;
+
+  xfce_appfinder_actions_load_defaults (&defaults);
+
+  for (li = defaults.actions; li != NULL; li = li->next)
     {
-      if (default_actions[i].type == type &&
-          g_strcmp0 (default_actions[i].pattern, pattern) == 0)
+      action = li->data;
+      if (action->type == type && g_strcmp0 (action->pattern, pattern) == 0)
         {
-          return default_actions[i].name;
+          name = g_strdup (action->name);
+          break;
         }
     }
 
-  return NULL;
+    g_slist_foreach (defaults.actions, (GFunc) xfce_appfinder_actions_free, NULL);
+    g_slist_free (defaults.actions);
+
+    return name;
 }
+
+
 
 static void
 xfce_appfinder_actions_load (XfceAppfinderActions *actions,
@@ -353,9 +362,10 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
 
           if (action->name == NULL)
             {
-              const gchar *default_name = xfce_appfinder_actions_get_default_name (action->type, action->pattern);
+              gchar *default_name = xfce_appfinder_actions_get_default_name (action->type, action->pattern);
               if (default_name != NULL)
                   action->name = g_strdup (default_name);
+              g_free (default_name);
             }
         }
 
