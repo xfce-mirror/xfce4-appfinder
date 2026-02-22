@@ -523,9 +523,9 @@ xfce_appfinder_preferences_action_changed (XfconfChannel            *channel,
   else if (G_VALUE_HOLDS_STRING (value)
            && sscanf (prop_name, "/actions/action-%d%n", &unique_id, &offset) == 1)
     {
-      if (g_strcmp0(prop_name + offset, "/pattern") == 0)
+      if (g_strcmp0 (prop_name + offset, "/pattern") == 0)
         context.column = COLUMN_PATTERN;
-      else if (g_strcmp0(prop_name + offset, "/name") == 0)
+      else if (g_strcmp0 (prop_name + offset, "/name") == 0)
         context.column = COLUMN_NAME;
       else
         return;
