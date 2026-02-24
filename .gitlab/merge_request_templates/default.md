@@ -12,4 +12,7 @@
 <!--
 Failure to disclose AI-assisted content, removal of this section, or false declarations
 will result in rejection of the Merge Request.
+
+Please refer to our Terms of Services for more details:
+https://gitlab.xfce.org/-/users/terms
 -->
