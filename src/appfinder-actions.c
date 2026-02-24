@@ -73,6 +73,7 @@ struct _XfceAppfinderAction
 
   gint                 unique_id;
   gchar               *pattern;
+  gchar               *name;
   gchar               *command;
   guint                save : 1;
 
@@ -134,6 +135,7 @@ xfce_appfinder_actions_free (XfceAppfinderAction *action,
 {
   g_free (action->pattern);
   g_free (action->command);
+  g_free (action->name);
 
   if (action->regex != NULL)
     g_regex_unref (action->regex);
@@ -153,26 +155,31 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
     /* default actions, sorted */
     { XFCE_APPFINDER_ACTION_TYPE_REGEX, 0,
       "^(file|http|https):\\/\\/(.*)$",
+      _("Open URI"),
       "xfce-open \\0",
       FALSE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "$",
+      _("Terminal command"),
       "xfce-open --launch TerminalEmulator %s",
       TRUE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "!w",
+      _("Wikipedia search"),
       "xfce-open --launch WebBrowser http://en.wikipedia.org/wiki/%s",
       FALSE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "#",
+      _("Man page"),
       "xfce-open --launch TerminalEmulator man %s",
       FALSE,
       NULL },
     { XFCE_APPFINDER_ACTION_TYPE_PREFIX, 0,
       "/",
+      _("Open in file manager"),
       "xfce-open --launch FileManager %S",
       FALSE,
       NULL },
@@ -186,6 +193,7 @@ xfce_appfinder_actions_load_defaults (XfceAppfinderActions *actions)
       action->type = defaults[i].type;
       action->unique_id = i + 1;
       action->pattern = g_strdup (defaults[i].pattern);
+      action->name = g_strdup (defaults[i].name);
       action->command = g_strdup (defaults[i].command);
       action->save = defaults[i].save;
 
@@ -211,6 +219,35 @@ xfce_appfinder_actions_sort (gconstpointer a,
 
 
 
+static gchar *
+xfce_appfinder_actions_get_default_name (AppfinderActionType type,
+                                         const gchar        *pattern)
+{
+  XfceAppfinderActions  defaults = {0};
+  XfceAppfinderAction  *action;
+  GSList               *li;
+  gchar                *name = NULL;
+
+  xfce_appfinder_actions_load_defaults (&defaults);
+
+  for (li = defaults.actions; li != NULL; li = li->next)
+    {
+      action = li->data;
+      if (action->type == type && g_strcmp0 (action->pattern, pattern) == 0)
+        {
+          name = g_strdup (action->name);
+          break;
+        }
+    }
+
+    g_slist_foreach (defaults.actions, (GFunc) xfce_appfinder_actions_free, NULL);
+    g_slist_free (defaults.actions);
+
+    return name;
+}
+
+
+
 static void
 xfce_appfinder_actions_load (XfceAppfinderActions *actions,
                              gboolean              steal)
@@ -218,7 +255,7 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
   XfceAppfinderAction *action;
   gchar                prop[32];
   gint                 type;
-  gchar               *pattern, *command;
+  gchar               *pattern, *command, *name;
   gboolean             save;
   const GValue        *value;
   guint                i;
@@ -273,6 +310,9 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
               g_snprintf (prop, sizeof (prop), "/actions/action-%d/pattern", unique_id);
               pattern = xfconf_channel_get_string (actions->channel, prop, NULL);
 
+              g_snprintf (prop, sizeof (prop), "/actions/action-%d/name", unique_id);
+              name = xfconf_channel_get_string (actions->channel, prop, NULL);
+
               g_snprintf (prop, sizeof (prop), "/actions/action-%d/command", unique_id);
               command = xfconf_channel_get_string (actions->channel, prop, NULL);
 
@@ -283,6 +323,7 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
               action->type = type;
               action->unique_id = unique_id;
               action->pattern = pattern;
+              action->name = name;
               action->command = command;
               action->save = save;
 
@@ -314,6 +355,25 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
 
       xfce_appfinder_actions_save (actions, TRUE);
       xfconf_channel_set_bool (actions->channel, "/migrated-exo-open", TRUE);
+    }
+
+    /* Should be removed after 4.22: Creates action names in xfconf for existing default actions */
+    if (!xfconf_channel_get_bool (actions->channel, "/migrated-action-names", FALSE))
+    {
+      for (li = actions->actions; li != NULL; li = li->next)
+        {
+          action = li->data;
+
+          if (action->name == NULL)
+            {
+              gchar *default_name = xfce_appfinder_actions_get_default_name (action->type, action->pattern);
+              action->name = g_strdup (default_name != NULL ? default_name : "");
+              g_free (default_name);
+            }
+        }
+
+      xfce_appfinder_actions_save (actions, TRUE);
+      xfconf_channel_set_bool (actions->channel, "/migrated-action-names", TRUE);
     }
 
   if (old_actions != NULL)
@@ -377,6 +437,9 @@ xfce_appfinder_actions_save (XfceAppfinderActions *actions,
 
           g_snprintf (prop, sizeof (prop), "/actions/action-%d/pattern", action->unique_id);
           xfconf_channel_set_string (actions->channel, prop, action->pattern);
+
+          g_snprintf (prop, sizeof (prop), "/actions/action-%d/name", action->unique_id);
+          xfconf_channel_set_string (actions->channel, prop, action->name);
 
           g_snprintf (prop, sizeof (prop), "/actions/action-%d/command", action->unique_id);
           xfconf_channel_set_string (actions->channel, prop, action->command);
@@ -451,6 +514,12 @@ xfce_appfinder_actions_changed (XfconfChannel        *channel,
                 {
                   g_free (action->command);
                   action->command = g_value_dup_string (value);
+                }
+              else if (strcmp (field, "name") == 0
+                       && G_VALUE_HOLDS_STRING (value))
+                {
+                  g_free (action->name);
+                  action->name = g_value_dup_string (value);
                 }
               else if (strcmp (field, "save") == 0
                        && G_VALUE_HOLDS_BOOLEAN (value))
