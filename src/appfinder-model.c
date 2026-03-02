@@ -1250,8 +1250,12 @@ xfce_appfinder_model_reset_frecency (XfceAppfinderModel *model)
   for (li = model->items, idx = 0; li != NULL; li = li->next, idx++)
     {
       item = li->data;
-      item->frecency->frequency = 0;
-      item->frecency->recency = 0;
+
+      if (item->frecency != NULL)
+        {
+          item->frecency->frequency = 0;
+          item->frecency->recency = 0;
+        }
 
       if (item->item != NULL)
         {
