@@ -3153,7 +3153,7 @@ xfce_appfinder_model_favorite_toggle (XfceAppfinderModel  *model,
             }
         }
 
-      /* collect favoriteed items */
+      /* collect favorited items */
       if (item->is_favorite)
         {
           desktop_id2 = garcon_menu_item_get_desktop_id (item->item);
