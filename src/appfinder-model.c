@@ -30,10 +30,13 @@
 
 
 
-#define OLD_HISTORY_PATH "xfce4/xfce4-appfinder/history"
-#define NEW_HISTORY_PATH "xfce4/appfinder/history"
-#define BOOKMARKS_PATH   "xfce4/appfinder/bookmarks"
-#define FRECENCY_PATH    "xfce4/appfinder/frecency"
+#define OLD_HISTORY_PATH   "xfce4/xfce4-appfinder/history" // can this be removed?
+#define CONFIG_DIR_PATH    "xfce4/appfinder/"
+#define NEW_HISTORY_PATH   CONFIG_DIR_PATH "history"
+#define BOOKMARKS_PATH     CONFIG_DIR_PATH "bookmarks" // Should be removed after 4.22: replaced by FAVORITES_PATH
+#define FAVORITES_FILENAME "favorites" // should be removed after 4.22: only needed for file rename
+#define FAVORITES_PATH     CONFIG_DIR_PATH FAVORITES_FILENAME
+#define FRECENCY_PATH      CONFIG_DIR_PATH "frecency"
 
 
 static void               xfce_appfinder_model_tree_model_init        (GtkTreeModelIface        *iface);
@@ -2094,6 +2097,32 @@ xfce_appfinder_model_menu_changed (GarconMenu         *menu,
 
 
 
+/* Should be removed after 4.22 */
+static void
+xfce_appfinder_model_rename_bookmarks_file (void)
+{
+  gchar  *filename;
+  GFile  *old_file;
+  GError *error = NULL;
+
+  filename = xfce_resource_lookup (XFCE_RESOURCE_CONFIG, BOOKMARKS_PATH);
+  if (filename == NULL) return;
+
+  old_file = g_file_new_for_path (filename);
+  g_free (filename);
+
+  g_file_set_display_name (old_file, FAVORITES_FILENAME, NULL, &error);
+  g_object_unref (old_file);
+
+  if (error != NULL)
+    {
+      g_warning ("Error renaming bookmarks file to favorites: %s\n", error->message);
+      g_clear_error (&error);
+    }
+}
+
+
+
 static gpointer
 xfce_appfinder_model_collect_thread (gpointer user_data)
 {
@@ -2149,8 +2178,10 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
       g_free (filename);
     }
 
-  /* load bookmarks */
-  filename = xfce_resource_lookup (XFCE_RESOURCE_CONFIG, BOOKMARKS_PATH);
+  xfce_appfinder_model_rename_bookmarks_file ();
+
+  /* load favorites */
+  filename = xfce_resource_lookup (XFCE_RESOURCE_CONFIG, FAVORITES_PATH);
   if (G_LIKELY (filename != NULL))
     {
       APPFINDER_DEBUG ("load favorites from %s", filename);
@@ -3140,8 +3171,8 @@ xfce_appfinder_model_favorite_toggle (XfceAppfinderModel  *model,
 
   APPFINDER_DEBUG ("saving favorites");
 
-  /* write new bookmarks */
-  filename = xfce_resource_save_location (XFCE_RESOURCE_CONFIG, BOOKMARKS_PATH, TRUE);
+  /* write new favorites */
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CONFIG, FAVORITES_PATH, TRUE);
   if (G_LIKELY (filename != NULL))
     succeed = g_file_set_contents (filename, contents->str, contents->len, error);
   else
