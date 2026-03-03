@@ -2102,17 +2102,17 @@ static void
 xfce_appfinder_model_rename_bookmarks_file (void)
 {
   gchar  *filename;
-  GFile  *old_file;
+  GFile  *file;
   GError *error = NULL;
 
   filename = xfce_resource_lookup (XFCE_RESOURCE_CONFIG, BOOKMARKS_PATH);
   if (filename == NULL) return;
 
-  old_file = g_file_new_for_path (filename);
+  file = g_file_new_for_path (filename);
   g_free (filename);
 
-  g_file_set_display_name (old_file, FAVORITES_FILENAME, NULL, &error);
-  g_object_unref (old_file);
+  g_file_set_display_name (file, FAVORITES_FILENAME, NULL, &error);
+  g_object_unref (file);
 
   if (error != NULL)
     {
