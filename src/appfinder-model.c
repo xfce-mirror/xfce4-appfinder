@@ -32,8 +32,8 @@
 
 #define CONFIG_DIR_PATH    "xfce4/appfinder/"
 #define HISTORY_PATH       CONFIG_DIR_PATH "history"
-#define BOOKMARKS_PATH     CONFIG_DIR_PATH "bookmarks" // Should be removed after 4.22: replaced by FAVORITES_PATH
-#define FAVORITES_FILENAME "favorites" // should be removed after 4.22: only needed for file rename
+#define BOOKMARKS_PATH     CONFIG_DIR_PATH "bookmarks" /* Should be removed after 4.22: replaced by FAVORITES_PATH */
+#define FAVORITES_FILENAME "favorites" /* Should be removed after 4.22: only needed for file rename */
 #define FAVORITES_PATH     CONFIG_DIR_PATH FAVORITES_FILENAME
 #define FRECENCY_PATH      CONFIG_DIR_PATH "frecency"
 
@@ -2105,7 +2105,8 @@ xfce_appfinder_model_rename_bookmarks_file (void)
   GError *error = NULL;
 
   filename = xfce_resource_lookup (XFCE_RESOURCE_CONFIG, BOOKMARKS_PATH);
-  if (filename == NULL) return;
+  if (filename == NULL)
+    return;
 
   file = g_file_new_for_path (filename);
   g_free (filename);
