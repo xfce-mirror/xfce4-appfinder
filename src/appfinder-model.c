@@ -30,10 +30,12 @@
 
 
 
-#define OLD_HISTORY_PATH "xfce4/xfce4-appfinder/history"
-#define NEW_HISTORY_PATH "xfce4/appfinder/history"
-#define BOOKMARKS_PATH   "xfce4/appfinder/bookmarks"
-#define FRECENCY_PATH    "xfce4/appfinder/frecency"
+#define CONFIG_DIR_PATH    "xfce4/appfinder/"
+#define HISTORY_PATH       CONFIG_DIR_PATH "history"
+#define BOOKMARKS_PATH     CONFIG_DIR_PATH "bookmarks" /* Should be removed after 4.22: replaced by FAVORITES_PATH */
+#define FAVORITES_FILENAME "favorites" /* Should be removed after 4.22: only needed for file rename */
+#define FAVORITES_PATH     CONFIG_DIR_PATH FAVORITES_FILENAME
+#define FRECENCY_PATH      CONFIG_DIR_PATH "frecency"
 
 
 static void               xfce_appfinder_model_tree_model_init        (GtkTreeModelIface        *iface);
@@ -90,13 +92,13 @@ static void               xfce_appfinder_model_history_changed        (GFileMoni
 static void               xfce_appfinder_model_history_monitor_stop   (XfceAppfinderModel       *model);
 static void               xfce_appfinder_model_history_monitor        (XfceAppfinderModel       *model,
                                                                        const gchar              *path);
-static void               xfce_appfinder_model_bookmarks_changed      (GFileMonitor             *monitor,
+static void               xfce_appfinder_model_favorites_changed      (GFileMonitor             *monitor,
                                                                        GFile                    *file,
                                                                        GFile                    *other_file,
                                                                        GFileMonitorEvent         event_type,
                                                                        XfceAppfinderModel       *model);
-static void               xfce_appfinder_model_bookmarks_monitor_stop (XfceAppfinderModel       *model);
-static void               xfce_appfinder_model_bookmarks_monitor      (XfceAppfinderModel       *model,
+static void               xfce_appfinder_model_favorites_monitor_stop (XfceAppfinderModel       *model);
+static void               xfce_appfinder_model_favorites_monitor      (XfceAppfinderModel       *model,
                                                                        const gchar              *path);
 
 static gboolean           xfce_appfinder_model_fuzzy_match            (const gchar              *source,
@@ -127,12 +129,12 @@ struct _XfceAppfinderModel
   GSList                *items;
   GHashTable            *items_hash;
 
-  GHashTable            *bookmarks_hash;
+  GHashTable            *favorites_hash;
   GHashTable            *frecencies_hash;
 
-  GFileMonitor          *bookmarks_monitor;
-  GFile                 *bookmarks_file;
-  guint64                bookmarks_mtime;
+  GFileMonitor          *favorites_monitor;
+  GFile                 *favorites_file;
+  guint64                favorites_mtime;
 
   GarconMenu            *menu;
   guint                  menu_changed_idle_id;
@@ -180,7 +182,7 @@ typedef struct
   gchar           *command;
   gchar           *tooltip;
   guint            not_visible : 1;
-  guint            is_bookmark : 1;
+  guint            is_favorite : 1;
 
   Frecency        *frecency; /* owned by frecencies_hash */
 
@@ -278,7 +280,7 @@ xfce_appfinder_model_init (XfceAppfinderModel *model)
   /* generate a unique stamp */
   model->stamp = g_random_int ();
   model->items_hash = g_hash_table_new (g_str_hash, g_str_equal);
-  model->bookmarks_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
+  model->favorites_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
   model->frecencies_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, xfce_appfinder_model_frecency_free);
   model->icon_size = XFCE_APPFINDER_ICON_SIZE_DEFAULT_ITEM;
   model->command_category = xfce_appfinder_model_get_command_category ();
@@ -419,8 +421,8 @@ xfce_appfinder_model_finalize (GObject *object)
   /* stop history file monitoring */
   xfce_appfinder_model_history_monitor_stop (model);
 
-  /* stop monitoring bookmarks file */
-  xfce_appfinder_model_bookmarks_monitor_stop (model);
+  /* stop monitoring favorites file */
+  xfce_appfinder_model_favorites_monitor_stop (model);
 
   g_signal_handlers_disconnect_by_func (G_OBJECT (model->menu),
       G_CALLBACK (xfce_appfinder_model_menu_changed), model);
@@ -437,7 +439,7 @@ xfce_appfinder_model_finalize (GObject *object)
   g_slist_free (model->categories);
 
   g_hash_table_destroy (model->items_hash);
-  g_hash_table_destroy (model->bookmarks_hash);
+  g_hash_table_destroy (model->favorites_hash);
   g_hash_table_destroy (model->frecencies_hash);
 
   cairo_surface_destroy (model->command_surface);
@@ -487,7 +489,7 @@ xfce_appfinder_model_get_column_type (GtkTreeModel *tree_model,
     case XFCE_APPFINDER_MODEL_COLUMN_PIXBUF:
       return GDK_TYPE_PIXBUF;
 
-    case XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK:
+    case XFCE_APPFINDER_MODEL_COLUMN_FAVORITE:
       return G_TYPE_BOOLEAN;
 
     case XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY:
@@ -719,9 +721,9 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
         g_value_take_string (value, garcon_menu_item_get_uri (item->item));
       break;
 
-    case XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK:
+    case XFCE_APPFINDER_MODEL_COLUMN_FAVORITE:
       g_value_init (value, G_TYPE_BOOLEAN);
-      g_value_set_boolean (value, item->is_bookmark);
+      g_value_set_boolean (value, item->is_favorite);
       break;
 
     case XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY:
@@ -911,7 +913,7 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
                             G_CALLBACK (xfce_appfinder_model_item_changed), model);
 
           desktop_id = garcon_menu_item_get_desktop_id (item->item);
-          item->is_bookmark = g_hash_table_lookup (model->bookmarks_hash, desktop_id) != NULL;
+          item->is_favorite = g_hash_table_lookup (model->favorites_hash, desktop_id) != NULL;
           item->frecency = g_hash_table_lookup (model->frecencies_hash, desktop_id);
         }
 
@@ -1133,15 +1135,15 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
           item->categories = categories;
           li->data = item;
 
-          /* check if the item should be a bookmark */
+          /* check if the item should be a favorite */
           desktop_id = garcon_menu_item_get_desktop_id (menu_item);
           if (desktop_id != NULL)
             {
-              item->is_bookmark = g_hash_table_lookup (model->bookmarks_hash, desktop_id) != NULL;
+              item->is_favorite = g_hash_table_lookup (model->favorites_hash, desktop_id) != NULL;
               item->frecency = g_hash_table_lookup (model->frecencies_hash, desktop_id);
             }
           else
-            item->is_bookmark = FALSE;
+            item->is_favorite = FALSE;
 
           if (G_LIKELY (item->command != NULL))
             g_hash_table_insert (model->items_hash, item->command, item);
@@ -1504,7 +1506,7 @@ xfce_appfinder_model_history_monitor (XfceAppfinderModel *model,
 
 
 static void
-xfce_appfinder_model_bookmarks_collect (XfceAppfinderModel *model,
+xfce_appfinder_model_favorites_collect (XfceAppfinderModel *model,
                                         GMappedFile        *mmap)
 {
   gchar *line;
@@ -1512,7 +1514,7 @@ xfce_appfinder_model_bookmarks_collect (XfceAppfinderModel *model,
   gchar *contents;
 
   /* empty the database */
-  g_hash_table_remove_all (model->bookmarks_hash);
+  g_hash_table_remove_all (model->favorites_hash);
 
   contents = g_mapped_file_get_contents (mmap);
   if (contents == NULL)
@@ -1529,7 +1531,7 @@ xfce_appfinder_model_bookmarks_collect (XfceAppfinderModel *model,
         {
           /* look for new commands */
           line = g_strndup (contents, end - contents);
-          g_hash_table_insert (model->bookmarks_hash, line, GUINT_TO_POINTER (1));
+          g_hash_table_insert (model->favorites_hash, line, GUINT_TO_POINTER (1));
         }
       contents = end + 1;
     }
@@ -1538,7 +1540,7 @@ xfce_appfinder_model_bookmarks_collect (XfceAppfinderModel *model,
 
 
 static void
-xfce_appfinder_model_bookmarks_changed (GFileMonitor       *monitor,
+xfce_appfinder_model_favorites_changed (GFileMonitor       *monitor,
                                         GFile              *file,
                                         GFile              *other_file,
                                         GFileMonitorEvent   event_type,
@@ -1548,7 +1550,7 @@ xfce_appfinder_model_bookmarks_changed (GFileMonitor       *monitor,
   gchar       *filename;
   GError      *error = NULL;
   GMappedFile *mmap;
-  gboolean     is_bookmark;
+  gboolean     is_favorite;
   ModelItem   *item;
   GSList      *li;
   const gchar *desktop_id;
@@ -1557,9 +1559,9 @@ xfce_appfinder_model_bookmarks_changed (GFileMonitor       *monitor,
   GtkTreeIter  iter;
 
   appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
-  appfinder_return_if_fail (model->bookmarks_monitor == monitor);
+  appfinder_return_if_fail (model->favorites_monitor == monitor);
   appfinder_return_if_fail (G_IS_FILE_MONITOR (monitor));
-  appfinder_return_if_fail (G_IS_FILE (model->bookmarks_file));
+  appfinder_return_if_fail (G_IS_FILE (model->favorites_file));
 
   switch (event_type)
     {
@@ -1568,10 +1570,10 @@ xfce_appfinder_model_bookmarks_changed (GFileMonitor       *monitor,
       break;
 
     case G_FILE_MONITOR_EVENT_CREATED:
-      mtime = xfce_appfinder_model_file_get_mtime (model->bookmarks_file);
-      if (mtime > model->bookmarks_mtime)
+      mtime = xfce_appfinder_model_file_get_mtime (model->favorites_file);
+      if (mtime > model->favorites_mtime)
         {
-          APPFINDER_DEBUG ("bookmarks file changed");
+          APPFINDER_DEBUG ("favorites file changed");
 
           /* read the new file and update the commands */
           filename = g_file_get_path (file);
@@ -1580,7 +1582,7 @@ xfce_appfinder_model_bookmarks_changed (GFileMonitor       *monitor,
 
           if (G_LIKELY (mmap != NULL))
             {
-              xfce_appfinder_model_bookmarks_collect (model, mmap);
+              xfce_appfinder_model_favorites_collect (model, mmap);
               g_mapped_file_unref (mmap);
 
               /* update the model items */
@@ -1590,18 +1592,18 @@ xfce_appfinder_model_bookmarks_changed (GFileMonitor       *monitor,
                   if (item->item == NULL)
                     continue;
 
-                  /* check if the item should be a bookmark */
+                  /* check if the item should be a favorite */
                   desktop_id = garcon_menu_item_get_desktop_id (item->item);
                   if (desktop_id != NULL)
-                    is_bookmark = g_hash_table_lookup (model->bookmarks_hash, desktop_id) != NULL;
+                    is_favorite = g_hash_table_lookup (model->favorites_hash, desktop_id) != NULL;
                   else
-                    is_bookmark = FALSE;
+                    is_favorite = FALSE;
 
-                  if (item->is_bookmark != is_bookmark)
+                  if (item->is_favorite != is_favorite)
                     {
-                      APPFINDER_DEBUG ("bookmark %s changed", desktop_id);
+                      APPFINDER_DEBUG ("favorite %s changed", desktop_id);
 
-                      item->is_bookmark = is_bookmark;
+                      item->is_favorite = is_favorite;
 
                       /* let model know what happened */
                       path = gtk_tree_path_new_from_indices (idx, -1);
@@ -1622,28 +1624,28 @@ xfce_appfinder_model_bookmarks_changed (GFileMonitor       *monitor,
 
 
 static void
-xfce_appfinder_model_bookmarks_monitor_stop (XfceAppfinderModel *model)
+xfce_appfinder_model_favorites_monitor_stop (XfceAppfinderModel *model)
 {
-  if (model->bookmarks_monitor != NULL)
+  if (model->favorites_monitor != NULL)
     {
-      g_signal_handlers_disconnect_by_func (model->bookmarks_monitor,
-          G_CALLBACK (xfce_appfinder_model_bookmarks_changed), model);
+      g_signal_handlers_disconnect_by_func (model->favorites_monitor,
+          G_CALLBACK (xfce_appfinder_model_favorites_changed), model);
 
-      g_object_unref (G_OBJECT (model->bookmarks_monitor));
-      model->bookmarks_monitor = NULL;
+      g_object_unref (G_OBJECT (model->favorites_monitor));
+      model->favorites_monitor = NULL;
     }
 
-  if (model->bookmarks_file != NULL)
+  if (model->favorites_file != NULL)
     {
-      g_object_unref (G_OBJECT (model->bookmarks_file));
-      model->bookmarks_file = NULL;
+      g_object_unref (G_OBJECT (model->favorites_file));
+      model->favorites_file = NULL;
     }
 }
 
 
 
 static void
-xfce_appfinder_model_bookmarks_monitor (XfceAppfinderModel *model,
+xfce_appfinder_model_favorites_monitor (XfceAppfinderModel *model,
                                         const gchar        *path)
 {
   GFile  *file;
@@ -1651,22 +1653,22 @@ xfce_appfinder_model_bookmarks_monitor (XfceAppfinderModel *model,
 
   file = g_file_new_for_path (path);
 
-  if (model->bookmarks_file == NULL
-      || model->bookmarks_monitor == NULL
-      || !g_file_equal (file, model->bookmarks_file))
+  if (model->favorites_file == NULL
+      || model->favorites_monitor == NULL
+      || !g_file_equal (file, model->favorites_file))
     {
-      xfce_appfinder_model_bookmarks_monitor_stop (model);
+      xfce_appfinder_model_favorites_monitor_stop (model);
 
       /* monitor the file for changes */
-      model->bookmarks_monitor = g_file_monitor_file (file, G_FILE_MONITOR_NONE, model->collect_cancelled, &error);
-      appfinder_refcount_debug_add (G_OBJECT (model->bookmarks_monitor), "bookmarks file monitor");
-      if (model->bookmarks_monitor != NULL)
+      model->favorites_monitor = g_file_monitor_file (file, G_FILE_MONITOR_NONE, model->collect_cancelled, &error);
+      appfinder_refcount_debug_add (G_OBJECT (model->favorites_monitor), "favorites file monitor");
+      if (model->favorites_monitor != NULL)
         {
-          APPFINDER_DEBUG ("monitor bookmarks file %s", path);
+          APPFINDER_DEBUG ("monitor favorites file %s", path);
 
-          model->bookmarks_file = G_FILE (g_object_ref (G_OBJECT (file)));
-          g_signal_connect (G_OBJECT (model->bookmarks_monitor), "changed",
-              G_CALLBACK (xfce_appfinder_model_bookmarks_changed), model);
+          model->favorites_file = G_FILE (g_object_ref (G_OBJECT (file)));
+          g_signal_connect (G_OBJECT (model->favorites_monitor), "changed",
+              G_CALLBACK (xfce_appfinder_model_favorites_changed), model);
         }
       else
         {
@@ -1675,7 +1677,7 @@ xfce_appfinder_model_bookmarks_monitor (XfceAppfinderModel *model,
         }
     }
 
-  model->bookmarks_mtime = xfce_appfinder_model_file_get_mtime (file);
+  model->favorites_mtime = xfce_appfinder_model_file_get_mtime (file);
 
   g_object_unref (G_OBJECT (file));
 }
@@ -2094,6 +2096,33 @@ xfce_appfinder_model_menu_changed (GarconMenu         *menu,
 
 
 
+/* Should be removed after 4.22 */
+static void
+xfce_appfinder_model_rename_bookmarks_file (void)
+{
+  gchar  *filename;
+  GFile  *file;
+  GError *error = NULL;
+
+  filename = xfce_resource_lookup (XFCE_RESOURCE_CONFIG, BOOKMARKS_PATH);
+  if (filename == NULL)
+    return;
+
+  file = g_file_new_for_path (filename);
+  g_free (filename);
+
+  g_file_set_display_name (file, FAVORITES_FILENAME, NULL, &error);
+  g_object_unref (file);
+
+  if (error != NULL)
+    {
+      g_warning ("Error renaming bookmarks file to favorites: %s\n", error->message);
+      g_clear_error (&error);
+    }
+}
+
+
+
 static gpointer
 xfce_appfinder_model_collect_thread (gpointer user_data)
 {
@@ -2126,7 +2155,7 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
     }
 
   /* load command history */
-  filename = xfce_resource_lookup (XFCE_RESOURCE_CACHE, NEW_HISTORY_PATH);
+  filename = xfce_resource_lookup (XFCE_RESOURCE_CACHE, HISTORY_PATH);
   if (G_LIKELY (filename != NULL))
     {
       APPFINDER_DEBUG ("load commands from %s", filename);
@@ -2149,26 +2178,28 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
       g_free (filename);
     }
 
-  /* load bookmarks */
-  filename = xfce_resource_lookup (XFCE_RESOURCE_CONFIG, BOOKMARKS_PATH);
+  xfce_appfinder_model_rename_bookmarks_file ();
+
+  /* load favorites */
+  filename = xfce_resource_lookup (XFCE_RESOURCE_CONFIG, FAVORITES_PATH);
   if (G_LIKELY (filename != NULL))
     {
-      APPFINDER_DEBUG ("load bookmarks from %s", filename);
+      APPFINDER_DEBUG ("load favorites from %s", filename);
 
       mmap = g_mapped_file_new (filename, FALSE, &error);
       if (G_LIKELY (mmap != NULL))
         {
-          xfce_appfinder_model_bookmarks_collect (model, mmap);
+          xfce_appfinder_model_favorites_collect (model, mmap);
           g_mapped_file_unref (mmap);
         }
       else
         {
-          g_warning ("Failed to open bookmarks file: %s", error->message);
+          g_warning ("Failed to open favorites file: %s", error->message);
           g_clear_error (&error);
         }
 
       /* start monitoring and update mtime */
-      xfce_appfinder_model_bookmarks_monitor (model, filename);
+      xfce_appfinder_model_favorites_monitor (model, filename);
 
       g_free (filename);
     }
@@ -2537,7 +2568,7 @@ xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
                                   const gchar               *string_casefold)
 {
   ModelItem *item;
-  GarconMenuDirectory *bookmarks;
+  GarconMenuDirectory *favorites;
   gboolean             in_category;
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
@@ -2559,11 +2590,11 @@ xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
           if (!xfce_appfinder_model_ptr_array_find (item->categories, category))
             {
               in_category = FALSE;
-              if (item->is_bookmark)
+              if (item->is_favorite)
                 {
-                  bookmarks = xfce_appfinder_model_get_bookmarks_category ();
-                  in_category = (bookmarks == category);
-                  g_object_unref (G_OBJECT (bookmarks));
+                  favorites = xfce_appfinder_model_get_favorites_category ();
+                  in_category = (favorites == category);
+                  g_object_unref (G_OBJECT (favorites));
                 }
 
               if (!in_category)
@@ -2855,7 +2886,7 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
       g_string_append_c (contents, '\n');
     }
 
-  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, NEW_HISTORY_PATH, TRUE);
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, HISTORY_PATH, TRUE);
   if (G_LIKELY (filename != NULL))
     succeed = g_file_set_contents (filename, contents->str, contents->len, error);
   else
@@ -3043,7 +3074,7 @@ xfce_appfinder_model_clear_command_history (XfceAppfinderModel *model)
   xfce_appfinder_model_history_remove_items (model);
 
   /* remove the history file */
-  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, NEW_HISTORY_PATH, FALSE);
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, HISTORY_PATH, FALSE);
   if (filename != NULL)
     g_unlink (filename);
   g_free (filename);
@@ -3071,7 +3102,7 @@ xfce_appfinder_model_clear_frecency_history (XfceAppfinderModel *model)
 
 
 gboolean
-xfce_appfinder_model_bookmark_toggle (XfceAppfinderModel  *model,
+xfce_appfinder_model_favorite_toggle (XfceAppfinderModel  *model,
                                       const gchar         *desktop_id,
                                       GError             **error)
 {
@@ -3090,10 +3121,10 @@ xfce_appfinder_model_bookmark_toggle (XfceAppfinderModel  *model,
   appfinder_return_val_if_fail (error == NULL || *error == NULL, FALSE);
   appfinder_return_val_if_fail (desktop_id != NULL, FALSE);
 
-  if (g_hash_table_lookup (model->bookmarks_hash, desktop_id) == NULL)
-    g_hash_table_insert (model->bookmarks_hash, g_strdup (desktop_id), GUINT_TO_POINTER (1));
+  if (g_hash_table_lookup (model->favorites_hash, desktop_id) == NULL)
+    g_hash_table_insert (model->favorites_hash, g_strdup (desktop_id), GUINT_TO_POINTER (1));
   else
-    g_hash_table_remove (model->bookmarks_hash, desktop_id);
+    g_hash_table_remove (model->favorites_hash, desktop_id);
 
   /* string to store custom commands */
   contents = g_string_sized_new (old_len);
@@ -3113,7 +3144,7 @@ xfce_appfinder_model_bookmark_toggle (XfceAppfinderModel  *model,
               && strcmp (desktop_id2, desktop_id) == 0)
             {
               /* toggle state */
-              item->is_bookmark = !item->is_bookmark;
+              item->is_favorite = !item->is_favorite;
 
               /* stop searching, continue collecting */
               desktop_id = NULL;
@@ -3126,8 +3157,8 @@ xfce_appfinder_model_bookmark_toggle (XfceAppfinderModel  *model,
             }
         }
 
-      /* collect bookmarked items */
-      if (item->is_bookmark)
+      /* collect favorited items */
+      if (item->is_favorite)
         {
           desktop_id2 = garcon_menu_item_get_desktop_id (item->item);
           if (G_LIKELY (desktop_id2 != NULL))
@@ -3138,19 +3169,19 @@ xfce_appfinder_model_bookmark_toggle (XfceAppfinderModel  *model,
         }
     }
 
-  APPFINDER_DEBUG ("saving bookmarks");
+  APPFINDER_DEBUG ("saving favorites");
 
-  /* write new bookmarks */
-  filename = xfce_resource_save_location (XFCE_RESOURCE_CONFIG, BOOKMARKS_PATH, TRUE);
+  /* write new favorites */
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CONFIG, FAVORITES_PATH, TRUE);
   if (G_LIKELY (filename != NULL))
     succeed = g_file_set_contents (filename, contents->str, contents->len, error);
   else
-    g_set_error_literal (error, 0, 0, "Unable to create bookmarks file");
+    g_set_error_literal (error, 0, 0, "Unable to create favorites file");
 
   if (succeed)
     {
       /* possible restart monitoring and update mtime */
-      xfce_appfinder_model_bookmarks_monitor (model, filename);
+      xfce_appfinder_model_favorites_monitor (model, filename);
     }
 
   /* optimization for next run */
@@ -3189,7 +3220,7 @@ xfce_appfinder_model_get_command_category (void)
 
 
 GarconMenuDirectory *
-xfce_appfinder_model_get_bookmarks_category (void)
+xfce_appfinder_model_get_favorites_category (void)
 {
   static GarconMenuDirectory *category = NULL;
 
@@ -3200,10 +3231,10 @@ xfce_appfinder_model_get_bookmarks_category (void)
   else
     {
       category = g_object_new (GARCON_TYPE_MENU_DIRECTORY,
-                               "name", _("Bookmarks"),
+                               "name", _("Favorites"),
                                "icon-name", "user-bookmarks",
                                NULL);
-      appfinder_refcount_debug_add (G_OBJECT (category), "bookmarks");
+      appfinder_refcount_debug_add (G_OBJECT (category), "favorites");
       g_object_add_weak_pointer (G_OBJECT (category), (gpointer) &category);
     }
 

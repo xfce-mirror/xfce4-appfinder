@@ -52,7 +52,7 @@ void    appfinder_refcount_debug_add (GObject     *object,
 #define appfinder_return_val_if_fail(expr,val) G_STMT_START{ (void)0; }G_STMT_END
 #endif
 
-#define XFCE_APPFINDER_ICON_NAME_BOOKMARK_NEW "bookmark-new-symbolic"
+#define XFCE_APPFINDER_ICON_NAME_FAVORITE_NEW "bookmark-new-symbolic"
 #define XFCE_APPFINDER_ICON_NAME_CLEAR "edit-clear-symbolic"
 #define XFCE_APPFINDER_ICON_NAME_DELETE "edit-delete-symbolic"
 #define XFCE_APPFINDER_ICON_NAME_DIALOG_ERROR "dialog-error-symbolic"
