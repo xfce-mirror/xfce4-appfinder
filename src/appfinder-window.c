@@ -960,7 +960,7 @@ xfce_appfinder_window_view_get_selected_path (XfceAppfinderWindow  *window,
 
 
 static void
-xfce_appfinder_window_popup_menu_toggle_bookmark (GtkWidget           *mi,
+xfce_appfinder_window_popup_menu_toggle_favorite (GtkWidget           *mi,
                                                   XfceAppfinderWindow *window)
 {
   const gchar  *uri;
@@ -977,15 +977,15 @@ xfce_appfinder_window_popup_menu_toggle_bookmark (GtkWidget           *mi,
       desktop_id = g_file_get_basename (gfile);
       g_object_unref (G_OBJECT (gfile));
 
-      /* toggle bookmarks */
+      /* toggle favorites */
       model = gtk_tree_model_filter_get_model (GTK_TREE_MODEL_FILTER (window->filter_model));
-      xfce_appfinder_model_bookmark_toggle (XFCE_APPFINDER_MODEL (model), desktop_id, &error);
+      xfce_appfinder_model_favorite_toggle (XFCE_APPFINDER_MODEL (model), desktop_id, &error);
 
       g_free (desktop_id);
 
       if (G_UNLIKELY (error != NULL))
         {
-          g_printerr ("%s: failed to save bookmarks: %s\n", G_LOG_DOMAIN, error->message);
+          g_printerr ("%s: failed to save favorites: %s\n", G_LOG_DOMAIN, error->message);
           g_error_free (error);
         }
     }
@@ -1178,7 +1178,7 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
   GtkWidget    *label;
   gchar        *path;
   gboolean      uri_is_local;
-  gboolean      is_bookmark;
+  gboolean      is_favorite;
   GList        *actions, *li;
 
   if (xfce_appfinder_window_view_get_selected (window, &model, &iter))
@@ -1186,7 +1186,7 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
       gtk_tree_model_get (model, &iter,
                           XFCE_APPFINDER_MODEL_COLUMN_TITLE, &title,
                           XFCE_APPFINDER_MODEL_COLUMN_URI, &uri,
-                          XFCE_APPFINDER_MODEL_COLUMN_BOOKMARK, &is_bookmark,
+                          XFCE_APPFINDER_MODEL_COLUMN_FAVORITE, &is_favorite,
                           XFCE_APPFINDER_MODEL_COLUMN_ACTION_ITEMS, &actions,
                           -1);
 
@@ -1254,19 +1254,19 @@ xfce_appfinder_window_popup_menu (GtkWidget           *view,
           g_list_free (actions);
         }
 
-      /* Add/Remove from Bookmarks */
+      /* Add/Remove from Favorites */
       mi = gtk_menu_item_new ();
       gtk_menu_shell_append (GTK_MENU_SHELL (menu), mi);
       g_signal_connect (G_OBJECT (mi), "activate",
-          G_CALLBACK (xfce_appfinder_window_popup_menu_toggle_bookmark), window);
+          G_CALLBACK (xfce_appfinder_window_popup_menu_toggle_favorite), window);
 
-      if (is_bookmark)
+      if (is_favorite)
         image = gtk_image_new_from_icon_name (XFCE_APPFINDER_ICON_NAME_REMOVE, GTK_ICON_SIZE_MENU);
       else
-        image = gtk_image_new_from_icon_name (XFCE_APPFINDER_ICON_NAME_BOOKMARK_NEW, GTK_ICON_SIZE_MENU);
+        image = gtk_image_new_from_icon_name (XFCE_APPFINDER_ICON_NAME_FAVORITE_NEW, GTK_ICON_SIZE_MENU);
 
       box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
-      label = gtk_label_new (is_bookmark ? _("Remove From Bookmarks") : _("Add to Bookmarks"));
+      label = gtk_label_new (is_favorite ? _("Remove From Favorites") : _("Add to Favorites"));
       gtk_container_add (GTK_CONTAINER (box), image);
       gtk_container_add (GTK_CONTAINER (box), label);
       gtk_container_add (GTK_CONTAINER (mi), box);
