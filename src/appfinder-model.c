@@ -30,9 +30,8 @@
 
 
 
-#define OLD_HISTORY_PATH   "xfce4/xfce4-appfinder/history" // can this be removed?
 #define CONFIG_DIR_PATH    "xfce4/appfinder/"
-#define NEW_HISTORY_PATH   CONFIG_DIR_PATH "history"
+#define HISTORY_PATH       CONFIG_DIR_PATH "history"
 #define BOOKMARKS_PATH     CONFIG_DIR_PATH "bookmarks" // Should be removed after 4.22: replaced by FAVORITES_PATH
 #define FAVORITES_FILENAME "favorites" // should be removed after 4.22: only needed for file rename
 #define FAVORITES_PATH     CONFIG_DIR_PATH FAVORITES_FILENAME
@@ -2155,7 +2154,7 @@ xfce_appfinder_model_collect_thread (gpointer user_data)
     }
 
   /* load command history */
-  filename = xfce_resource_lookup (XFCE_RESOURCE_CACHE, NEW_HISTORY_PATH);
+  filename = xfce_resource_lookup (XFCE_RESOURCE_CACHE, HISTORY_PATH);
   if (G_LIKELY (filename != NULL))
     {
       APPFINDER_DEBUG ("load commands from %s", filename);
@@ -2886,7 +2885,7 @@ xfce_appfinder_model_save_command (XfceAppfinderModel  *model,
       g_string_append_c (contents, '\n');
     }
 
-  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, NEW_HISTORY_PATH, TRUE);
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, HISTORY_PATH, TRUE);
   if (G_LIKELY (filename != NULL))
     succeed = g_file_set_contents (filename, contents->str, contents->len, error);
   else
@@ -3074,7 +3073,7 @@ xfce_appfinder_model_clear_command_history (XfceAppfinderModel *model)
   xfce_appfinder_model_history_remove_items (model);
 
   /* remove the history file */
-  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, NEW_HISTORY_PATH, FALSE);
+  filename = xfce_resource_save_location (XFCE_RESOURCE_CACHE, HISTORY_PATH, FALSE);
   if (filename != NULL)
     g_unlink (filename);
   g_free (filename);
