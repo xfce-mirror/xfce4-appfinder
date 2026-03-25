@@ -1,0 +1,475 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce4-appfinder.master package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2026-03-04 00:54+0100\n"
+"PO-Revision-Date: 2013-07-02 20:40+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Georgian (http://app.transifex.com/xfce/xfce4-appfinder/language/ka/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ka\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#. close all windows and quit
+#: src/appfinder-gdbus.c:95
+msgid "Forced to quit"
+msgstr "ნაძალადევი გასვლა"
+
+#: src/appfinder-actions.c:158
+msgid "Open URI"
+msgstr "URI-ის გახსნა"
+
+#: src/appfinder-actions.c:164
+msgid "Terminal command"
+msgstr "ტერმინალის ბრძანება"
+
+#: src/appfinder-actions.c:170
+msgid "Wikipedia search"
+msgstr "ვიკიპედიაში ძებნა"
+
+#: src/appfinder-actions.c:176
+msgid "Man page"
+msgstr "მთავარი გვერდი"
+
+#: src/appfinder-actions.c:182
+msgid "Open in file manager"
+msgstr "გახსნა ფაილების მმართველში"
+
+#: src/appfinder-category-model.c:153
+msgid "All Applications"
+msgstr "ყველა აპლიკაცია"
+
+#: src/appfinder-model.c:704 src/appfinder-preferences.glade:647
+msgid "Name"
+msgstr "სახელი"
+
+#: src/appfinder-model.c:705
+msgid "Comment"
+msgstr "შენიშვნა"
+
+#: src/appfinder-model.c:706
+msgid "Command"
+msgstr "ბრძანება"
+
+#: src/appfinder-model.c:707
+msgid "Categories"
+msgstr "კატეგორიები"
+
+#: src/appfinder-model.c:708
+msgid "Filename"
+msgstr "ფაილის სახელი"
+
+#: src/appfinder-model.c:2693
+msgid "Application or action has no command"
+msgstr "აპლიკაციას, ან ქმედებას ბრძანება არ აქვს"
+
+#: src/appfinder-model.c:3210
+msgid "Commands History"
+msgstr "ბრძანებების ისტორია"
+
+#: src/appfinder-model.c:3234
+msgid "Favorites"
+msgstr "რჩეულები"
+
+#: src/appfinder-preferences.c:315 src/appfinder-preferences.c:336
+msgid "C_lear"
+msgstr "_გასუფთავება"
+
+#: src/appfinder-preferences.c:316
+msgid "This will permanently clear the custom command history."
+msgstr "ეს სამუდამოდ გაასუფთავებს მომხმარებლის ბრძანებების ისტორიას."
+
+#: src/appfinder-preferences.c:317
+msgid "Are you sure you want to clear the command history?"
+msgstr "მართლა გნებავთ ბრძანებების ისტორიის გასუფთავება?"
+
+#: src/appfinder-preferences.c:337
+msgid "This will permanently clear the recent items history."
+msgstr "ეს სამუდამოდ გაასუფთავებს უახლესი ელემენტების ისტორიას."
+
+#: src/appfinder-preferences.c:338
+msgid "Are you sure you want to clear the recent items history?"
+msgstr "მართლა გნებავთ უახლესი ელემენტების ისტორიის გასუფთავება?"
+
+#: src/appfinder-preferences.c:450
+msgid "_Delete"
+msgstr "წაშლა"
+
+#: src/appfinder-preferences.c:451
+msgid "The custom action will be deleted permanently."
+msgstr "მორგებული ქმედება შეუქცევადად წაიშლება."
+
+#: src/appfinder-preferences.c:452
+#, c-format
+msgid "Are you sure you want to delete action \"%s\"?"
+msgstr "მართლა გნებავთ, წაშალოთ ქმედება \"%s\"?"
+
+#: src/appfinder-window.c:247 src/appfinder-preferences.glade:81
+#: data/xfce4-appfinder.desktop.in:10
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
+msgid "Application Finder"
+msgstr "პროგრამის მპოვნელი"
+
+#: src/appfinder-window.c:300
+msgid "Toggle view mode"
+msgstr "ხედის რეჟიმის გადართვა"
+
+#: src/appfinder-window.c:381
+msgid "_Preferences"
+msgstr "გამართვა"
+
+#: src/appfinder-window.c:392 src/appfinder-window.c:1287
+msgid "La_unch"
+msgstr "_გაშვება"
+
+#: src/appfinder-window.c:1025
+msgid "Failed to launch desktop item editor"
+msgstr "სამუშაო მაგიდის ელემენტის რედაქტორის გაშვება ჩავარდა"
+
+#: src/appfinder-window.c:1050
+msgid "Confirm"
+msgstr "დადასტურება"
+
+#: src/appfinder-window.c:1051
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr "ეს შეუქცევადად წაშლის მორგებული სამუშაო მაგიდის ფაილს თქვენი საწყისი საქაღალდიდან."
+
+#: src/appfinder-window.c:1052
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr "მართლა გნებავთ, დააბრუნოთ \"%s\"?"
+
+#: src/appfinder-window.c:1062
+msgid "Failed to remove desktop file"
+msgstr "სამუშაო მაგიდის ფაილის წაშლის შეცდომა"
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: src/appfinder-window.c:1095
+#, c-format
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr "იმისათვის, რომ ელემენტი გამოაჩინოთ, \"%s\"-დან სამუშაო მაგიდის ფაილი ხელით უნდა წაშალოთ, ან გახსნათ ფაილი იგივე საქაღალდეში და წაშალოთ ხაზი \"%s\"."
+
+#: src/appfinder-window.c:1100 src/appfinder-window.c:1333
+msgid "_Hide"
+msgstr "_დამალვა"
+
+#: src/appfinder-window.c:1101
+#, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr "მართლა გნებავთ, დამალოთ \"%s\"?"
+
+#: src/appfinder-window.c:1269
+msgid "Remove From Favorites"
+msgstr "რჩეულებიდან წაშლა"
+
+#: src/appfinder-window.c:1269
+msgid "Add to Favorites"
+msgstr "რჩეულებში ჩამატება"
+
+#: src/appfinder-window.c:1301
+msgid "_Edit"
+msgstr "_ჩასწორება"
+
+#: src/appfinder-window.c:1318
+msgid "_Revert"
+msgstr "და_ბრუნება"
+
+#: src/main.c:65
+msgid "Start in collapsed mode"
+msgstr "გაშვება აკეცილ რეჟიმში"
+
+#: src/main.c:66
+msgid "Print version information and exit"
+msgstr "ვერსიის შესახებ ინფორმაციის დაბეჭდვა და გასვლა"
+
+#: src/main.c:67
+msgid "Replace the existing service"
+msgstr "არსებული სერვისის ჩანაცვლება"
+
+#: src/main.c:68
+msgid "Quit all instances"
+msgstr "ყველა ასლის მოკვლა"
+
+#: src/main.c:69
+msgid "Do not try to use or become a D-Bus service"
+msgstr "D-Bus-ის სერვისის გამოყენების მცდელობა არ მოხდება"
+
+#: src/main.c:70
+msgid "Toggle window visibility of background service"
+msgstr "ფონური სერვისის ფანჯრის ხილვადობის გადართვა"
+
+#: src/main.c:71
+msgid "Run in daemon mode"
+msgstr "დემონის რეჟიმში გაშვება"
+
+#: src/main.c:243
+#, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr "აკრიფეთ \"%s --help\" გამოყენებისთვის."
+
+#: src/main.c:254
+msgid "The Xfce development team. All rights reserved."
+msgstr "Xfce-ის განვითარების ჯგუფი. ყველა უფლება დაცულია."
+
+#: src/main.c:255
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr "გთხოვთ, შეცდომების შესახებ გვაცნობეთ აქ <%s>."
+
+#: src/appfinder-preferences.glade:13
+msgid "Prefix"
+msgstr "პრეფიქსი"
+
+#: src/appfinder-preferences.glade:16
+msgid "Regular Expression"
+msgstr "რეგულარული ექსპრესია"
+
+#: src/appfinder-preferences.glade:37
+msgid "Very Small"
+msgstr "ძალიან პატარა"
+
+#: src/appfinder-preferences.glade:40
+msgid "Smaller"
+msgstr "უფრო პატარა"
+
+#: src/appfinder-preferences.glade:43
+msgid "Small"
+msgstr "პატარა"
+
+#: src/appfinder-preferences.glade:46
+msgid "Normal"
+msgstr "ნორმალური"
+
+#: src/appfinder-preferences.glade:49
+msgid "Large"
+msgstr "დიდი"
+
+#: src/appfinder-preferences.glade:52
+msgid "Larger"
+msgstr "უფრო დიდი"
+
+#: src/appfinder-preferences.glade:55
+msgid "Very Large"
+msgstr "ძალიან დიდი"
+
+#: src/appfinder-preferences.glade:98
+msgid "_Close"
+msgstr "დახურვა"
+
+#: src/appfinder-preferences.glade:114
+msgid "_Help"
+msgstr "_დახმარება"
+
+#: src/appfinder-preferences.glade:167
+msgid "Remember last _selected category"
+msgstr "ბოლოს არჩეული კატეგორიის დამახ_სოვრება"
+
+#: src/appfinder-preferences.glade:183
+msgid "Always c_enter the window"
+msgstr "გამოსახულების ფანჯრის ცენტრში გასწორ_ება"
+
+#: src/appfinder-preferences.glade:188
+msgid "Center the window on startup."
+msgstr "ფანჯრის ცენტრზე გასწორება გაშვებისას."
+
+#: src/appfinder-preferences.glade:201
+msgid "Close window when _focus is lost"
+msgstr "ფანჯრის დახურვა, როცა ის _ფოკუსს დაკარგავს"
+
+#: src/appfinder-preferences.glade:206
+msgid "When the focus is lost to another window, appfinder should be closed."
+msgstr "როცა ფოკუსი სხვა ფანჯარაზე გადავა, appfinder დაიხურება."
+
+#: src/appfinder-preferences.glade:219
+msgid "Keep running _instance in the background"
+msgstr "გაშვებულ_ი ასლის შენარჩუნება ფონში"
+
+#: src/appfinder-preferences.glade:224
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "როცა ბოლო ფანჯარა დაიხურება, ახალი ფანჯრების გახსნის ასაჩქარებლად აპლიკაციიდან გასვლის მაგიერ შენარჩუნებული იქნება გაშვებული ასლი. შეგიძლიათ, გამორთოთ ეს და დაზოგოთ მეხსიერება."
+
+#: src/appfinder-preferences.glade:237
+msgid "Single window"
+msgstr "ერთი ფანჯარა"
+
+#: src/appfinder-preferences.glade:242
+msgid ""
+"When an instance is running in the background, only open one window at a "
+"time."
+msgstr "როცა გაშვებული ასლი ფონურია, ერთდროულად, მხოლოდ, ერთი ფანჯრის გახსნა."
+
+#: src/appfinder-preferences.glade:255
+msgid "Sort recently used items first"
+msgstr "ჯერ უახლესი ელემენტების დალაგება"
+
+#: src/appfinder-preferences.glade:260
+msgid ""
+"Order items, such that items that are most recently used are always on the "
+"top."
+msgstr "ელემენტების დალაგება ისე, რომ უახლესი ელემენტები ყოველთვის დასაწყისში იქნება."
+
+#: src/appfinder-preferences.glade:272
+msgid "Single-click selects and launches items"
+msgstr "ერთი წკაპი მონიშნავს და გაუშვებს ელემენტებს"
+
+#: src/appfinder-preferences.glade:277
+msgid "Items are selected and launched with only a single-click."
+msgstr "ელემენტების მონიშვნა და გაშვება ერთი წკაპით მოხდება."
+
+#: src/appfinder-preferences.glade:295
+msgid "Behaviour"
+msgstr "ქცევა"
+
+#: src/appfinder-preferences.glade:330
+msgid "_View items as icons"
+msgstr "ელემენტების ნახ_ვა ხატულების სახით"
+
+#: src/appfinder-preferences.glade:345
+msgid "Text besi_de icons"
+msgstr "ტექსტი ხატულის გვერ_დზე"
+
+#: src/appfinder-preferences.glade:363
+msgid "Ite_m icon size:"
+msgstr "ელე_მენტის ხატულას ზომა:"
+
+#: src/appfinder-preferences.glade:377
+msgid "Hide category pane"
+msgstr "კატეგორიების პანელის დამალვა"
+
+#: src/appfinder-preferences.glade:382
+msgid "Hide category panel and show all applications."
+msgstr "კატეგორიების პანელის დამალვა და ყველა აპლიკაციის ჩვენება."
+
+#: src/appfinder-preferences.glade:399
+msgid "Categ_ory icon size:"
+msgstr "კატეგ_ორიის ხატულას ზომა:"
+
+#: src/appfinder-preferences.glade:453
+msgid "Hide window decorations"
+msgstr "ფანჯრის დეკორაციების დამალვა"
+
+#: src/appfinder-preferences.glade:458
+msgid "Hide window decorations such as title bar and borders."
+msgstr "ფანჯრის ისეთი დეკორაციების დამალვა, როგორიცაა სათაურის ზოლი და საზღვრები."
+
+#: src/appfinder-preferences.glade:473
+msgid "Show generic application _names"
+msgstr "აპლიკაციის ზოგადი სახელების ჩვე_ნება"
+
+#: src/appfinder-preferences.glade:497
+msgid "Appearance"
+msgstr "გარეგნობა"
+
+#: src/appfinder-preferences.glade:527
+msgid "C_lear Custom Command History"
+msgstr "მორგებული ბრძანებების ისტორიის გასუფ_თავება"
+
+#: src/appfinder-preferences.glade:539
+msgid "Clear _Recently Used Items History"
+msgstr "ახლახან გამოყენებული ელემენტების ისტო_რიის გასუფთავება"
+
+#: src/appfinder-preferences.glade:555
+msgid "History"
+msgstr "ისტორია"
+
+#: src/appfinder-preferences.glade:574
+msgid "_General"
+msgstr "ზოგადი"
+
+#: src/appfinder-preferences.glade:598
+msgid "Custom actions are only available in collapsed mode."
+msgstr "მორგებული ქმედებები, მხოლოდ, აკეცილ რეჟიმშია ხელმისაწვდომი."
+
+#: src/appfinder-preferences.glade:659
+msgid "Pattern"
+msgstr "ნიმუში"
+
+#: src/appfinder-preferences.glade:695
+msgid "Add a new custom action."
+msgstr "ახალი მორგებული ქმედების დამატება."
+
+#: src/appfinder-preferences.glade:716
+msgid "Remove the currently selected action."
+msgstr "ამჟამად არჩეული ქმედების წაშლა."
+
+#: src/appfinder-preferences.glade:774
+#, c-format
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr ""
+
+#: src/appfinder-preferences.glade:805
+msgid "_Name:"
+msgstr "_სახელი:"
+
+#: src/appfinder-preferences.glade:818
+msgid "Co_mmand:"
+msgstr "ბრძა_ნება:"
+
+#: src/appfinder-preferences.glade:833
+msgid "Patte_rn:"
+msgstr "_ნიმუში:"
+
+#: src/appfinder-preferences.glade:848
+msgid "_Type:"
+msgstr "ტიპი:"
+
+#: src/appfinder-preferences.glade:860
+msgid "_Save match in command history"
+msgstr "ბრძანებები_ს ისტორიაში დამთხვევის შენახვა"
+
+#: src/appfinder-preferences.glade:914
+msgid "Custom _Actions"
+msgstr "მ_ორგებული ქმედებები"
+
+#: data/xfce4-appfinder.desktop.in:11
+msgid "Find and launch applications installed on your system"
+msgstr "იპოვეთ და გაუშვით თქვენს სისტემაში დაყენებული პროგრამები"
+
+#: data/xfce4-appfinder.desktop.in:12
+msgid "program;applications;bookmarks;"
+msgstr "program;applications;bookmarks;პროგრამა;აპლიკაციები;სანიშნეები;"
+
+#: data/xfce4-run.desktop.in:11
+msgid "Run Program..."
+msgstr "პროგრამის გაშვება..."
+
+#: data/xfce4-run.desktop.in:12
+msgid "Enter a command you want to launch"
+msgstr "შეიყვანეთ ბრძანება, რომელიც გნებავთ, გაუშვათ"
+
+#: data/xfce4-run.desktop.in:13
+msgid ""
+"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
+" dash;krunner;synapse;ulauncher;launchy;gnome "
+"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
+msgid "Application to quickly run applications and commands"
+msgstr "აპლიკაცია ბრძანებების სწრაფად გასაშვებად"
+
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:13
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and quickly execute commands. It can also be used to quickly "
+"add launchers to the Xfce Panel by dragging an item from the view and drop "
+"it on the panel."
+msgstr ""
