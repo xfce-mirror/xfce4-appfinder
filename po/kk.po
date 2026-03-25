@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-10-02 00:52+0200\n"
+"POT-Creation-Date: 2026-03-04 00:54+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2009,2013-2015,2017-2022,2024,2026\n"
 "Language-Team: Kazakh (http://app.transifex.com/xfce/xfce4-appfinder/language/kk/)\n"
@@ -23,76 +23,96 @@ msgstr ""
 msgid "Forced to quit"
 msgstr "Шығуға мәжбүрленген"
 
+#: src/appfinder-actions.c:158
+msgid "Open URI"
+msgstr "URI ашу"
+
+#: src/appfinder-actions.c:164
+msgid "Terminal command"
+msgstr "Терминал командасы"
+
+#: src/appfinder-actions.c:170
+msgid "Wikipedia search"
+msgstr "Википедия іздеуі"
+
+#: src/appfinder-actions.c:176
+msgid "Man page"
+msgstr "Man парағы"
+
+#: src/appfinder-actions.c:182
+msgid "Open in file manager"
+msgstr "Файлдар басқарушысында ашу"
+
 #: src/appfinder-category-model.c:153
 msgid "All Applications"
 msgstr "Барлық қолданбалар"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:704 src/appfinder-preferences.glade:647
 msgid "Name"
 msgstr "Аты"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:705
 msgid "Comment"
 msgstr "Комментарий"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:706
 msgid "Command"
 msgstr "Команда"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:707
 msgid "Categories"
 msgstr "Санаттар"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:708
 msgid "Filename"
 msgstr "Файл аты"
 
-#: src/appfinder-model.c:2646
+#: src/appfinder-model.c:2693
 msgid "Application or action has no command"
 msgstr "Қолданбада немесе әрекетте команда жоқ"
 
-#: src/appfinder-model.c:3142
+#: src/appfinder-model.c:3210
 msgid "Commands History"
 msgstr "Командалар тарихы"
 
-#: src/appfinder-model.c:3166
-msgid "Bookmarks"
-msgstr "Бетбелгілер"
+#: src/appfinder-model.c:3234
+msgid "Favorites"
+msgstr "Таңдамалы"
 
-#: src/appfinder-preferences.c:314 src/appfinder-preferences.c:335
+#: src/appfinder-preferences.c:315 src/appfinder-preferences.c:336
 msgid "C_lear"
 msgstr "Та_зарту"
 
-#: src/appfinder-preferences.c:315
+#: src/appfinder-preferences.c:316
 msgid "This will permanently clear the custom command history."
 msgstr "Бұл пайдаланушы командалар тарихын өшіреді."
 
-#: src/appfinder-preferences.c:316
+#: src/appfinder-preferences.c:317
 msgid "Are you sure you want to clear the command history?"
 msgstr "Командалар тарихын өшіруді шынымен қалайсыз ба?"
 
-#: src/appfinder-preferences.c:336
+#: src/appfinder-preferences.c:337
 msgid "This will permanently clear the recent items history."
 msgstr "Бұл жуырдағы элементтер тарихын толықтай өшіреді."
 
-#: src/appfinder-preferences.c:337
+#: src/appfinder-preferences.c:338
 msgid "Are you sure you want to clear the recent items history?"
 msgstr "Жуырдағы элементтер тарихын өшіруді шынымен қалайсыз ба?"
 
-#: src/appfinder-preferences.c:448
+#: src/appfinder-preferences.c:450
 msgid "_Delete"
 msgstr "Ө_шіру"
 
-#: src/appfinder-preferences.c:449
+#: src/appfinder-preferences.c:451
 msgid "The custom action will be deleted permanently."
 msgstr "Пайдаланушы әрекеті өшіріледі."
 
-#: src/appfinder-preferences.c:450
+#: src/appfinder-preferences.c:452
 #, c-format
-msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "\"%s\" шаблонын өшіруді шынымен қалайсыз ба?"
+msgid "Are you sure you want to delete action \"%s\"?"
+msgstr "\"%s\" әрекетін өшіруді шынымен қалайсыз ба?"
 
-#: src/appfinder-window.c:247 src/appfinder-preferences.glade:79
+#: src/appfinder-window.c:247 src/appfinder-preferences.glade:81
 #: data/xfce4-appfinder.desktop.in:10
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
@@ -106,64 +126,64 @@ msgstr "Қарау түрін ауыстыру"
 msgid "_Preferences"
 msgstr "Ба_птаулар"
 
-#: src/appfinder-window.c:392 src/appfinder-window.c:1281
+#: src/appfinder-window.c:392 src/appfinder-window.c:1287
 msgid "La_unch"
 msgstr "Жө_нелту"
 
-#: src/appfinder-window.c:1019
+#: src/appfinder-window.c:1025
 msgid "Failed to launch desktop item editor"
 msgstr "desktop элементтер түзетушісін жөнелту сәтсіз"
 
-#: src/appfinder-window.c:1044
+#: src/appfinder-window.c:1050
 msgid "Confirm"
 msgstr "Растау"
 
-#: src/appfinder-window.c:1045
+#: src/appfinder-window.c:1051
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Бұл әрекет нәтижесінде үй бумаңыздан өзіңіз жасаған desktop файлы өшіріледі."
 
-#: src/appfinder-window.c:1046
+#: src/appfinder-window.c:1052
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "\"%s\" болдырмауды қалайсыз ба?"
 
-#: src/appfinder-window.c:1056
+#: src/appfinder-window.c:1062
 msgid "Failed to remove desktop file"
 msgstr "desktop файлын өшіру сәтсіз"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: src/appfinder-window.c:1089
+#: src/appfinder-window.c:1095
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Жасыруды болдырмау үшін сізге \"%s\" ішінен desktop файлын өшіру немесе файлды дәл сол бумада ашып, \"%s\" жолын өшіру керек."
 
-#: src/appfinder-window.c:1094 src/appfinder-window.c:1327
+#: src/appfinder-window.c:1100 src/appfinder-window.c:1333
 msgid "_Hide"
 msgstr "Жа_сыру"
 
-#: src/appfinder-window.c:1095
+#: src/appfinder-window.c:1101
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "\"%s\" жасыруды шынымен қалайсыз ба?"
 
-#: src/appfinder-window.c:1263
-msgid "Remove From Bookmarks"
-msgstr "Бетбелгілерден өшіру"
+#: src/appfinder-window.c:1269
+msgid "Remove From Favorites"
+msgstr "Таңдамалылардан өшіру"
 
-#: src/appfinder-window.c:1263
-msgid "Add to Bookmarks"
-msgstr "Бетбелгілерге қосу"
+#: src/appfinder-window.c:1269
+msgid "Add to Favorites"
+msgstr "Таңдамалыларға қосу"
 
-#: src/appfinder-window.c:1295
+#: src/appfinder-window.c:1301
 msgid "_Edit"
 msgstr "Түз_ету"
 
-#: src/appfinder-window.c:1312
+#: src/appfinder-window.c:1318
 msgid "_Revert"
 msgstr "Қайта_ру"
 
@@ -217,178 +237,178 @@ msgstr "Префикс"
 msgid "Regular Expression"
 msgstr "Тұрақты өрнек"
 
-#: src/appfinder-preferences.glade:35
+#: src/appfinder-preferences.glade:37
 msgid "Very Small"
 msgstr "Өте кіші"
 
-#: src/appfinder-preferences.glade:38
+#: src/appfinder-preferences.glade:40
 msgid "Smaller"
 msgstr "Кішірек"
 
-#: src/appfinder-preferences.glade:41
+#: src/appfinder-preferences.glade:43
 msgid "Small"
 msgstr "Кіші"
 
-#: src/appfinder-preferences.glade:44
+#: src/appfinder-preferences.glade:46
 msgid "Normal"
 msgstr "Қалыпты"
 
-#: src/appfinder-preferences.glade:47
+#: src/appfinder-preferences.glade:49
 msgid "Large"
 msgstr "Үлкен"
 
-#: src/appfinder-preferences.glade:50
+#: src/appfinder-preferences.glade:52
 msgid "Larger"
 msgstr "Үлкенірек"
 
-#: src/appfinder-preferences.glade:53
+#: src/appfinder-preferences.glade:55
 msgid "Very Large"
 msgstr "Өте үлкен"
 
-#: src/appfinder-preferences.glade:96
+#: src/appfinder-preferences.glade:98
 msgid "_Close"
 msgstr "Жаб_у"
 
-#: src/appfinder-preferences.glade:112
+#: src/appfinder-preferences.glade:114
 msgid "_Help"
 msgstr "Кө_мек"
 
-#: src/appfinder-preferences.glade:165
+#: src/appfinder-preferences.glade:167
 msgid "Remember last _selected category"
 msgstr "Соңғы таңдалған са_натты есте сақтау"
 
-#: src/appfinder-preferences.glade:181
+#: src/appfinder-preferences.glade:183
 msgid "Always c_enter the window"
 msgstr "Тере_зені әрқашан ортаға туралау"
 
-#: src/appfinder-preferences.glade:186
+#: src/appfinder-preferences.glade:188
 msgid "Center the window on startup."
 msgstr "Іске қосылғанда, терезені ортаға қарай туралау."
 
-#: src/appfinder-preferences.glade:199
+#: src/appfinder-preferences.glade:201
 msgid "Close window when _focus is lost"
 msgstr "_Фокус жоғалған кезде терезені жабу"
 
-#: src/appfinder-preferences.glade:204
+#: src/appfinder-preferences.glade:206
 msgid "When the focus is lost to another window, appfinder should be closed."
 msgstr "Фокус басқа терезеге ауысқан кезде, қолданбалар табушы жабылу керек."
 
-#: src/appfinder-preferences.glade:217
+#: src/appfinder-preferences.glade:219
 msgid "Keep running _instance in the background"
 msgstr "Фонда орындалып тұрған қолданбаны ұ_стау"
 
-#: src/appfinder-preferences.glade:222
+#: src/appfinder-preferences.glade:224
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "Соңғы терезе жабылғаннан кейін қолданбаны жабу орнына жаңа терезелерді ашу жылдамдығын арттыру үшін фонда жұмысты жасау. Жады қолдануды төмендету үшін осыны өшірсеңіз де болады."
 
-#: src/appfinder-preferences.glade:235
+#: src/appfinder-preferences.glade:237
 msgid "Single window"
 msgstr "Дара терезе"
 
-#: src/appfinder-preferences.glade:240
+#: src/appfinder-preferences.glade:242
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr "Қолданба фонда орындалып тұрса, бір уақытта тек бір терезені ашу."
 
-#: src/appfinder-preferences.glade:253
+#: src/appfinder-preferences.glade:255
 msgid "Sort recently used items first"
 msgstr "Жуырда қолданылған нәрселер тізімін сұрыптау"
 
-#: src/appfinder-preferences.glade:258
+#: src/appfinder-preferences.glade:260
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr "Жуырда қолданылған нәрселер тізім басында тұратындай етіп сұрыптау."
 
-#: src/appfinder-preferences.glade:270
+#: src/appfinder-preferences.glade:272
 msgid "Single-click selects and launches items"
 msgstr "Бір шерту нәрселерді таңдайды және орындайды"
 
-#: src/appfinder-preferences.glade:275
+#: src/appfinder-preferences.glade:277
 msgid "Items are selected and launched with only a single-click."
 msgstr "Нәрселер бір шертумен таңдалады және орындалады."
 
-#: src/appfinder-preferences.glade:293
+#: src/appfinder-preferences.glade:295
 msgid "Behaviour"
 msgstr "Мінез-құлығы"
 
-#: src/appfinder-preferences.glade:328
+#: src/appfinder-preferences.glade:330
 msgid "_View items as icons"
 msgstr "Нәрс_елерді таңбашалар ретінде қарау"
 
-#: src/appfinder-preferences.glade:343
+#: src/appfinder-preferences.glade:345
 msgid "Text besi_de icons"
 msgstr "Таң_башалар қасындағы мәтін"
 
-#: src/appfinder-preferences.glade:361
+#: src/appfinder-preferences.glade:363
 msgid "Ite_m icon size:"
 msgstr "Нәр_се таңбашасы өлшемі:"
 
-#: src/appfinder-preferences.glade:375
+#: src/appfinder-preferences.glade:377
 msgid "Hide category pane"
 msgstr "Санаттар панелін жасыру"
 
-#: src/appfinder-preferences.glade:380
+#: src/appfinder-preferences.glade:382
 msgid "Hide category panel and show all applications."
 msgstr "Санаттар панелін жасыру және барлық қолданбаларды көрсету."
 
-#: src/appfinder-preferences.glade:397
+#: src/appfinder-preferences.glade:399
 msgid "Categ_ory icon size:"
 msgstr "Санат таң_башасы өлшемі:"
 
-#: src/appfinder-preferences.glade:451
+#: src/appfinder-preferences.glade:453
 msgid "Hide window decorations"
 msgstr "Терезе қоршауын жасыру"
 
-#: src/appfinder-preferences.glade:456
+#: src/appfinder-preferences.glade:458
 msgid "Hide window decorations such as title bar and borders."
 msgstr "Атау жолағы және шекарасы сияқты терезе қоршауын жасыру."
 
-#: src/appfinder-preferences.glade:471
+#: src/appfinder-preferences.glade:473
 msgid "Show generic application _names"
 msgstr "Қолданбалардың негізгі а_тауларын көрсету"
 
-#: src/appfinder-preferences.glade:495
+#: src/appfinder-preferences.glade:497
 msgid "Appearance"
 msgstr "Сыртқы түрі"
 
-#: src/appfinder-preferences.glade:525
+#: src/appfinder-preferences.glade:527
 msgid "C_lear Custom Command History"
 msgstr "Пайдаланушы командалар тар_ихын өшіру"
 
-#: src/appfinder-preferences.glade:537
+#: src/appfinder-preferences.glade:539
 msgid "Clear _Recently Used Items History"
 msgstr "Жуы_рда қолданылған элементтер тізімін өшіру"
 
-#: src/appfinder-preferences.glade:553
+#: src/appfinder-preferences.glade:555
 msgid "History"
 msgstr "Тарих"
 
-#: src/appfinder-preferences.glade:572
+#: src/appfinder-preferences.glade:574
 msgid "_General"
 msgstr "Жал_пы"
 
-#: src/appfinder-preferences.glade:596
+#: src/appfinder-preferences.glade:598
 msgid "Custom actions are only available in collapsed mode."
 msgstr "Таңдауыңызша әрекеттер тек қайырылған түрде қолжетімді."
 
-#: src/appfinder-preferences.glade:644
+#: src/appfinder-preferences.glade:659
 msgid "Pattern"
 msgstr "Шаблон"
 
-#: src/appfinder-preferences.glade:680
+#: src/appfinder-preferences.glade:695
 msgid "Add a new custom action."
 msgstr "Жаңа таңдауыңызша әрекетті қосу."
 
-#: src/appfinder-preferences.glade:701
+#: src/appfinder-preferences.glade:716
 msgid "Remove the currently selected action."
 msgstr "Ағымдағы таңдалған әрекетті өшіру."
 
-#: src/appfinder-preferences.glade:744
+#: src/appfinder-preferences.glade:774
 #, c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -396,23 +416,27 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Егер түрі префикске орнатылса, %s орнына шаблоннан кейінгі мәтін қойылады, ал %S жазбаның толық мәтіні болады. Тұрақты өрнектер үшін сіз \\0 пен \\<сан> қолдана аласын."
 
-#: src/appfinder-preferences.glade:775
+#: src/appfinder-preferences.glade:805
+msgid "_Name:"
+msgstr "_Аты:"
+
+#: src/appfinder-preferences.glade:818
 msgid "Co_mmand:"
 msgstr "Ко_манда:"
 
-#: src/appfinder-preferences.glade:790
+#: src/appfinder-preferences.glade:833
 msgid "Patte_rn:"
 msgstr "Шаб_лон:"
 
-#: src/appfinder-preferences.glade:805
+#: src/appfinder-preferences.glade:848
 msgid "_Type:"
 msgstr "_Түрі:"
 
-#: src/appfinder-preferences.glade:815
+#: src/appfinder-preferences.glade:860
 msgid "_Save match in command history"
 msgstr "Сә_йкестікті командалар тарихында сақтау"
 
-#: src/appfinder-preferences.glade:867
+#: src/appfinder-preferences.glade:914
 msgid "Custom _Actions"
 msgstr "Пайдалану_шы әрекеттері"
 
