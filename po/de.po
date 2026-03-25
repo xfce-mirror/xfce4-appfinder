@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the xfce4-appfinder.master package.
 # 
 # Translators:
-# Andreas Eitel <github-aneitel@online.de>, 2018,2020-2021,2023-2025
+# Andreas Eitel <github-aneitel@online.de>, 2018,2020-2021,2023-2026
 # Enrico Tröger <enrico.troeger@uvena.de>, 2006,2008
 # Fabian Nowak <timystery@arcor.de>, 2008,2011
 # Georg Eckert <eckert.georg@gmx.de>, 2013
@@ -13,14 +13,14 @@
 # Nico Schümann <nico@prog.nico22.de>, 2008
 # Thomas Schütz <xfce@thschuetz.de>, 2012
 # Tobias Bannert <tobannert@gmail.com>, 2014-2015,2017
-# Vinzenz Vietzke <vinz@vinzv.de>, 2017-2019
+# Vinzenz Vietzke <vv@muibox.de>, 2017-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-10-02 00:52+0200\n"
+"POT-Creation-Date: 2026-03-04 00:54+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Andreas Eitel <github-aneitel@online.de>, 2018,2020-2021,2023-2025\n"
+"Last-Translator: Andreas Eitel <github-aneitel@online.de>, 2018,2020-2021,2023-2026\n"
 "Language-Team: German (http://app.transifex.com/xfce/xfce4-appfinder/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,76 +33,96 @@ msgstr ""
 msgid "Forced to quit"
 msgstr "Zum Beenden gezwungen"
 
+#: src/appfinder-actions.c:158
+msgid "Open URI"
+msgstr "Öffne URI"
+
+#: src/appfinder-actions.c:164
+msgid "Terminal command"
+msgstr "Terminalbefehl"
+
+#: src/appfinder-actions.c:170
+msgid "Wikipedia search"
+msgstr "Wikipedia-Suche"
+
+#: src/appfinder-actions.c:176
+msgid "Man page"
+msgstr "Handbuchseite"
+
+#: src/appfinder-actions.c:182
+msgid "Open in file manager"
+msgstr "Im Dateimanager öffnen"
+
 #: src/appfinder-category-model.c:153
 msgid "All Applications"
 msgstr "Alle Anwendungen"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:704 src/appfinder-preferences.glade:647
 msgid "Name"
 msgstr "Name"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:705
 msgid "Comment"
 msgstr "Kommentar"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:706
 msgid "Command"
 msgstr "Befehl"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:707
 msgid "Categories"
 msgstr "Kategorien"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:708
 msgid "Filename"
 msgstr "Dateiname"
 
-#: src/appfinder-model.c:2646
+#: src/appfinder-model.c:2693
 msgid "Application or action has no command"
 msgstr "Anwendung oder Aktion hat keinen Befehl"
 
-#: src/appfinder-model.c:3142
+#: src/appfinder-model.c:3210
 msgid "Commands History"
 msgstr "Befehlsverlauf"
 
-#: src/appfinder-model.c:3166
-msgid "Bookmarks"
-msgstr "Lesezeichen"
+#: src/appfinder-model.c:3234
+msgid "Favorites"
+msgstr "Favoriten"
 
-#: src/appfinder-preferences.c:314 src/appfinder-preferences.c:335
+#: src/appfinder-preferences.c:315 src/appfinder-preferences.c:336
 msgid "C_lear"
 msgstr "_Leeren"
 
-#: src/appfinder-preferences.c:315
+#: src/appfinder-preferences.c:316
 msgid "This will permanently clear the custom command history."
 msgstr "Dies wird den Verlauf der benutzerdefinierten Befehle dauerhaft löschen."
 
-#: src/appfinder-preferences.c:316
+#: src/appfinder-preferences.c:317
 msgid "Are you sure you want to clear the command history?"
 msgstr "Soll der Befehlsverlauf wirklich gelöscht werden?"
 
-#: src/appfinder-preferences.c:336
+#: src/appfinder-preferences.c:337
 msgid "This will permanently clear the recent items history."
 msgstr "Dadurch wird der Verlauf der zuletzt verwendeten Elemente dauerhaft gelöscht."
 
-#: src/appfinder-preferences.c:337
+#: src/appfinder-preferences.c:338
 msgid "Are you sure you want to clear the recent items history?"
 msgstr "Möchten Sie den Verlauf der zuletzt verwendeten Elemente wirklich löschen?"
 
-#: src/appfinder-preferences.c:448
+#: src/appfinder-preferences.c:450
 msgid "_Delete"
 msgstr "_Löschen"
 
-#: src/appfinder-preferences.c:449
+#: src/appfinder-preferences.c:451
 msgid "The custom action will be deleted permanently."
 msgstr "Die benutzerdefinierte Aktion wird dauerhaft gelöscht."
 
-#: src/appfinder-preferences.c:450
+#: src/appfinder-preferences.c:452
 #, c-format
-msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "Soll das Muster »%s« wirklich gelöscht werden?"
+msgid "Are you sure you want to delete action \"%s\"?"
+msgstr "Möchten Sie die Aktion \"%s\" wirklich löschen?"
 
-#: src/appfinder-window.c:247 src/appfinder-preferences.glade:79
+#: src/appfinder-window.c:247 src/appfinder-preferences.glade:81
 #: data/xfce4-appfinder.desktop.in:10
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
@@ -116,64 +136,64 @@ msgstr "Ansichtsmodus umstellen"
 msgid "_Preferences"
 msgstr "_Eigenschaften"
 
-#: src/appfinder-window.c:392 src/appfinder-window.c:1281
+#: src/appfinder-window.c:392 src/appfinder-window.c:1287
 msgid "La_unch"
 msgstr "_Starten"
 
-#: src/appfinder-window.c:1019
+#: src/appfinder-window.c:1025
 msgid "Failed to launch desktop item editor"
 msgstr "Die Bearbeitung für die Schreibtischeinträge konnte nicht aufgerufen werden"
 
-#: src/appfinder-window.c:1044
+#: src/appfinder-window.c:1050
 msgid "Confirm"
 msgstr "Bestätigen"
 
-#: src/appfinder-window.c:1045
+#: src/appfinder-window.c:1051
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "Dieses wird die benutzerdefinierten Schreibtischdateien, aus dem persönlichen Ordner, dauerhaft löschen."
 
-#: src/appfinder-window.c:1046
+#: src/appfinder-window.c:1052
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Soll »%s« wirklich zurückgesetzt werden?"
 
-#: src/appfinder-window.c:1056
+#: src/appfinder-window.c:1062
 msgid "Failed to remove desktop file"
 msgstr "Starter konnte nicht entfernt werden"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: src/appfinder-window.c:1089
+#: src/appfinder-window.c:1095
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Um den Eintrag anzuzeigen, müssen Sie den Starter manuell aus »%s« löschen oder die Datei öffnen und die Zeile »%s« entfernen."
 
-#: src/appfinder-window.c:1094 src/appfinder-window.c:1327
+#: src/appfinder-window.c:1100 src/appfinder-window.c:1333
 msgid "_Hide"
 msgstr "_Verstecken"
 
-#: src/appfinder-window.c:1095
+#: src/appfinder-window.c:1101
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Soll »%s« wirklich versteckt werden?"
 
-#: src/appfinder-window.c:1263
-msgid "Remove From Bookmarks"
-msgstr "Lesezeichen entfernen"
+#: src/appfinder-window.c:1269
+msgid "Remove From Favorites"
+msgstr "Aus Favoriten entfernen"
 
-#: src/appfinder-window.c:1263
-msgid "Add to Bookmarks"
-msgstr "Lesezeichen hinzufügen"
+#: src/appfinder-window.c:1269
+msgid "Add to Favorites"
+msgstr "Zu Favoriten hinzufügen"
 
-#: src/appfinder-window.c:1295
+#: src/appfinder-window.c:1301
 msgid "_Edit"
 msgstr "_Bearbeiten"
 
-#: src/appfinder-window.c:1312
+#: src/appfinder-window.c:1318
 msgid "_Revert"
 msgstr "_Rückgängig"
 
@@ -227,178 +247,178 @@ msgstr "Präfix"
 msgid "Regular Expression"
 msgstr "Regulärer Ausdruck"
 
-#: src/appfinder-preferences.glade:35
+#: src/appfinder-preferences.glade:37
 msgid "Very Small"
 msgstr "Sehr klein"
 
-#: src/appfinder-preferences.glade:38
+#: src/appfinder-preferences.glade:40
 msgid "Smaller"
 msgstr "Kleiner"
 
-#: src/appfinder-preferences.glade:41
+#: src/appfinder-preferences.glade:43
 msgid "Small"
 msgstr "Klein"
 
-#: src/appfinder-preferences.glade:44
+#: src/appfinder-preferences.glade:46
 msgid "Normal"
 msgstr "Normal"
 
-#: src/appfinder-preferences.glade:47
+#: src/appfinder-preferences.glade:49
 msgid "Large"
 msgstr "Groß"
 
-#: src/appfinder-preferences.glade:50
+#: src/appfinder-preferences.glade:52
 msgid "Larger"
 msgstr "Größer"
 
-#: src/appfinder-preferences.glade:53
+#: src/appfinder-preferences.glade:55
 msgid "Very Large"
 msgstr "Sehr groß"
 
-#: src/appfinder-preferences.glade:96
+#: src/appfinder-preferences.glade:98
 msgid "_Close"
 msgstr "_Schließen"
 
-#: src/appfinder-preferences.glade:112
+#: src/appfinder-preferences.glade:114
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: src/appfinder-preferences.glade:165
+#: src/appfinder-preferences.glade:167
 msgid "Remember last _selected category"
 msgstr "_Zuletzt gewählte Kategorie speichern"
 
-#: src/appfinder-preferences.glade:181
+#: src/appfinder-preferences.glade:183
 msgid "Always c_enter the window"
 msgstr "_Fenster immer zentrieren"
 
-#: src/appfinder-preferences.glade:186
+#: src/appfinder-preferences.glade:188
 msgid "Center the window on startup."
 msgstr "Fenster beim Starten zentrieren."
 
-#: src/appfinder-preferences.glade:199
+#: src/appfinder-preferences.glade:201
 msgid "Close window when _focus is lost"
 msgstr "Fenster schließen, wenn der _Fokus verloren geht"
 
-#: src/appfinder-preferences.glade:204
+#: src/appfinder-preferences.glade:206
 msgid "When the focus is lost to another window, appfinder should be closed."
 msgstr "Wenn der Fokus an ein anderes Fenster verloren geht, sollte der Appfinder geschlossen werden."
 
-#: src/appfinder-preferences.glade:217
+#: src/appfinder-preferences.glade:219
 msgid "Keep running _instance in the background"
 msgstr "_Eine laufende Instanz im Hintergrund behalten"
 
-#: src/appfinder-preferences.glade:222
+#: src/appfinder-preferences.glade:224
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "Beim Beenden der Anwendung, verbleibt eine laufende Instanz im Speicher, damit neue Fenster schneller geöffnet werden. Diese Einstellung deaktivieren, um Speicher zu sparen."
 
-#: src/appfinder-preferences.glade:235
+#: src/appfinder-preferences.glade:237
 msgid "Single window"
 msgstr "Einzelnes Fenster"
 
-#: src/appfinder-preferences.glade:240
+#: src/appfinder-preferences.glade:242
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr "Falls eine Instanz bereits im Hintergrund läuft, nur ein Fenster gleichzeitig öffnen."
 
-#: src/appfinder-preferences.glade:253
+#: src/appfinder-preferences.glade:255
 msgid "Sort recently used items first"
 msgstr "Zuletzt verwendete Elemente zuerst sortieren"
 
-#: src/appfinder-preferences.glade:258
+#: src/appfinder-preferences.glade:260
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr "Einträge so anordnen, dass die zuletzt verwendeten Elemente immer ganz oben stehen."
 
-#: src/appfinder-preferences.glade:270
+#: src/appfinder-preferences.glade:272
 msgid "Single-click selects and launches items"
 msgstr "Auswählen und Starten von Elementen per Mausklick"
 
-#: src/appfinder-preferences.glade:275
+#: src/appfinder-preferences.glade:277
 msgid "Items are selected and launched with only a single-click."
 msgstr "Elemente werden mit einem einzigen Mausklick ausgewählt und gestartet."
 
-#: src/appfinder-preferences.glade:293
+#: src/appfinder-preferences.glade:295
 msgid "Behaviour"
 msgstr "Verhalten"
 
-#: src/appfinder-preferences.glade:328
+#: src/appfinder-preferences.glade:330
 msgid "_View items as icons"
 msgstr "Elemente als _Symbole anzeigen"
 
-#: src/appfinder-preferences.glade:343
+#: src/appfinder-preferences.glade:345
 msgid "Text besi_de icons"
 msgstr "Text neben _den Symbolen"
 
-#: src/appfinder-preferences.glade:361
+#: src/appfinder-preferences.glade:363
 msgid "Ite_m icon size:"
 msgstr "Größe der _Anwendungssymbole:"
 
-#: src/appfinder-preferences.glade:375
+#: src/appfinder-preferences.glade:377
 msgid "Hide category pane"
 msgstr "Kategoriebereich ausblenden"
 
-#: src/appfinder-preferences.glade:380
+#: src/appfinder-preferences.glade:382
 msgid "Hide category panel and show all applications."
 msgstr "Kategoriebereich ausblenden und alle Anwendungen anzeigen."
 
-#: src/appfinder-preferences.glade:397
+#: src/appfinder-preferences.glade:399
 msgid "Categ_ory icon size:"
 msgstr "Größe der _Kategoriesymbole:"
 
-#: src/appfinder-preferences.glade:451
+#: src/appfinder-preferences.glade:453
 msgid "Hide window decorations"
 msgstr "Fensterdekorationen ausblenden"
 
-#: src/appfinder-preferences.glade:456
+#: src/appfinder-preferences.glade:458
 msgid "Hide window decorations such as title bar and borders."
 msgstr "Fensterdekorationen wie Titelleiste und Rahmen ausblenden."
 
-#: src/appfinder-preferences.glade:471
+#: src/appfinder-preferences.glade:473
 msgid "Show generic application _names"
 msgstr "Allgemei_ne Anwendungsnamen zeigen"
 
-#: src/appfinder-preferences.glade:495
+#: src/appfinder-preferences.glade:497
 msgid "Appearance"
 msgstr "Erscheinungsbild"
 
-#: src/appfinder-preferences.glade:525
+#: src/appfinder-preferences.glade:527
 msgid "C_lear Custom Command History"
 msgstr "Befehlsverlauf _löschen"
 
-#: src/appfinder-preferences.glade:537
+#: src/appfinder-preferences.glade:539
 msgid "Clear _Recently Used Items History"
 msgstr "Verlauf der zuletzt ve_rwendeten Elemente löschen"
 
-#: src/appfinder-preferences.glade:553
+#: src/appfinder-preferences.glade:555
 msgid "History"
 msgstr "Verlauf"
 
-#: src/appfinder-preferences.glade:572
+#: src/appfinder-preferences.glade:574
 msgid "_General"
 msgstr "All_gemein"
 
-#: src/appfinder-preferences.glade:596
+#: src/appfinder-preferences.glade:598
 msgid "Custom actions are only available in collapsed mode."
 msgstr "Benutzerdefinierte Aktionen sind nur im eingeklappten Modus verfügbar."
 
-#: src/appfinder-preferences.glade:644
+#: src/appfinder-preferences.glade:659
 msgid "Pattern"
 msgstr "Muster"
 
-#: src/appfinder-preferences.glade:680
+#: src/appfinder-preferences.glade:695
 msgid "Add a new custom action."
 msgstr "Eine neue benutzerdefinierte Aktion hinzufügen."
 
-#: src/appfinder-preferences.glade:701
+#: src/appfinder-preferences.glade:716
 msgid "Remove the currently selected action."
 msgstr "Die ausgewählte Aktion löschen."
 
-#: src/appfinder-preferences.glade:744
+#: src/appfinder-preferences.glade:774
 #, c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -406,23 +426,27 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Wenn als Typ »Präfix« gewählt ist, wird »%s« mit der Zeichenkette nach dem Muster ersetzt, »%S« mit dem kompletten Text des Eintrags. Für reguläre Ausdrücke kann \\0 and \\<num> verwendet werden."
 
-#: src/appfinder-preferences.glade:775
+#: src/appfinder-preferences.glade:805
+msgid "_Name:"
+msgstr "_Name:"
+
+#: src/appfinder-preferences.glade:818
 msgid "Co_mmand:"
 msgstr "_Befehl:"
 
-#: src/appfinder-preferences.glade:790
+#: src/appfinder-preferences.glade:833
 msgid "Patte_rn:"
 msgstr "_Muster:"
 
-#: src/appfinder-preferences.glade:805
+#: src/appfinder-preferences.glade:848
 msgid "_Type:"
 msgstr "_Typ:"
 
-#: src/appfinder-preferences.glade:815
+#: src/appfinder-preferences.glade:860
 msgid "_Save match in command history"
 msgstr "Übereinstimmungen im Befehlsverlauf _speichern"
 
-#: src/appfinder-preferences.glade:867
+#: src/appfinder-preferences.glade:914
 msgid "Custom _Actions"
 msgstr "_Benutzerdefinierte Aktionen"
 
