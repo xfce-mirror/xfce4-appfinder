@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-appfinder\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-10-02 00:52+0200\n"
+"POT-Creation-Date: 2026-03-04 00:54+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
 "Last-Translator: Dejweed, 2025\n"
 "Language-Team: Slovenian (http://app.transifex.com/xfce/xfce4-appfinder/language/sl/)\n"
@@ -27,76 +27,96 @@ msgstr ""
 msgid "Forced to quit"
 msgstr "Prisilni izhod"
 
+#: src/appfinder-actions.c:158
+msgid "Open URI"
+msgstr ""
+
+#: src/appfinder-actions.c:164
+msgid "Terminal command"
+msgstr ""
+
+#: src/appfinder-actions.c:170
+msgid "Wikipedia search"
+msgstr ""
+
+#: src/appfinder-actions.c:176
+msgid "Man page"
+msgstr ""
+
+#: src/appfinder-actions.c:182
+msgid "Open in file manager"
+msgstr ""
+
 #: src/appfinder-category-model.c:153
 msgid "All Applications"
 msgstr "Vsi programi"
 
-#: src/appfinder-model.c:698
+#: src/appfinder-model.c:704 src/appfinder-preferences.glade:647
 msgid "Name"
 msgstr "Ime"
 
-#: src/appfinder-model.c:699
+#: src/appfinder-model.c:705
 msgid "Comment"
 msgstr "Opomba"
 
-#: src/appfinder-model.c:700
+#: src/appfinder-model.c:706
 msgid "Command"
 msgstr "Ukaz"
 
-#: src/appfinder-model.c:701
+#: src/appfinder-model.c:707
 msgid "Categories"
 msgstr "Kategorije"
 
-#: src/appfinder-model.c:702
+#: src/appfinder-model.c:708
 msgid "Filename"
 msgstr "Ime datoteke"
 
-#: src/appfinder-model.c:2646
+#: src/appfinder-model.c:2693
 msgid "Application or action has no command"
 msgstr "Aplikacija ali dejanje nima določenega ukaza"
 
-#: src/appfinder-model.c:3142
+#: src/appfinder-model.c:3210
 msgid "Commands History"
 msgstr "Zgodovina ukazov"
 
-#: src/appfinder-model.c:3166
-msgid "Bookmarks"
-msgstr "Zaznamki"
+#: src/appfinder-model.c:3234
+msgid "Favorites"
+msgstr ""
 
-#: src/appfinder-preferences.c:314 src/appfinder-preferences.c:335
+#: src/appfinder-preferences.c:315 src/appfinder-preferences.c:336
 msgid "C_lear"
 msgstr "_Počisti"
 
-#: src/appfinder-preferences.c:315
+#: src/appfinder-preferences.c:316
 msgid "This will permanently clear the custom command history."
 msgstr "To bo trajno izbrisalo zgodovino po meri prilagojenih ukazov."
 
-#: src/appfinder-preferences.c:316
+#: src/appfinder-preferences.c:317
 msgid "Are you sure you want to clear the command history?"
 msgstr "Ali ste prepričani, da želite počistiti zgodovino ukazov?"
 
-#: src/appfinder-preferences.c:336
+#: src/appfinder-preferences.c:337
 msgid "This will permanently clear the recent items history."
 msgstr "To bo trajno izbrisalo zgodovino nedavnih predmetov."
 
-#: src/appfinder-preferences.c:337
+#: src/appfinder-preferences.c:338
 msgid "Are you sure you want to clear the recent items history?"
 msgstr "Ali ste prepričani, da želite izbrisati zgodovino nedavnih predmetov?"
 
-#: src/appfinder-preferences.c:448
+#: src/appfinder-preferences.c:450
 msgid "_Delete"
 msgstr "I_zbriši"
 
-#: src/appfinder-preferences.c:449
+#: src/appfinder-preferences.c:451
 msgid "The custom action will be deleted permanently."
 msgstr "Po meri prilagojeno dejanje bo trajno izbrisano."
 
-#: src/appfinder-preferences.c:450
+#: src/appfinder-preferences.c:452
 #, c-format
-msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr "Ali ste prepričani, da želite izbrisati vzorec \"%s\"?"
+msgid "Are you sure you want to delete action \"%s\"?"
+msgstr ""
 
-#: src/appfinder-window.c:247 src/appfinder-preferences.glade:79
+#: src/appfinder-window.c:247 src/appfinder-preferences.glade:81
 #: data/xfce4-appfinder.desktop.in:10
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
@@ -110,64 +130,64 @@ msgstr "Preklopi način pogleda"
 msgid "_Preferences"
 msgstr "_Lastnosti"
 
-#: src/appfinder-window.c:392 src/appfinder-window.c:1281
+#: src/appfinder-window.c:392 src/appfinder-window.c:1287
 msgid "La_unch"
 msgstr "Z_aženi"
 
-#: src/appfinder-window.c:1019
+#: src/appfinder-window.c:1025
 msgid "Failed to launch desktop item editor"
 msgstr "Zagon urejevalnika predmetov namizja ni bil uspešen"
 
-#: src/appfinder-window.c:1044
+#: src/appfinder-window.c:1050
 msgid "Confirm"
 msgstr "Potrdi"
 
-#: src/appfinder-window.c:1045
+#: src/appfinder-window.c:1051
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
 msgstr "To bo trajno izbrisalo po meri prilagojeno datoteko namizja iz vaše domače mape."
 
-#: src/appfinder-window.c:1046
+#: src/appfinder-window.c:1052
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
 msgstr "Ste prepričani, da želite povrniti \"%s\"?"
 
-#: src/appfinder-window.c:1056
+#: src/appfinder-window.c:1062
 msgid "Failed to remove desktop file"
 msgstr "Napaka pri odstranjevanju namizne datoteke"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
-#: src/appfinder-window.c:1089
+#: src/appfinder-window.c:1095
 #, c-format
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
 msgstr "Da bi prikazali predmet, morate ročno odstraniti namizno datoteko iz \"%s\" ali odpreti to datoteko in odstraniti vrstico \"%s\"."
 
-#: src/appfinder-window.c:1094 src/appfinder-window.c:1327
+#: src/appfinder-window.c:1100 src/appfinder-window.c:1333
 msgid "_Hide"
 msgstr "_Skrij"
 
-#: src/appfinder-window.c:1095
+#: src/appfinder-window.c:1101
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
 msgstr "Ali ste prepričani, da želite skriti \"%s\"?"
 
-#: src/appfinder-window.c:1263
-msgid "Remove From Bookmarks"
-msgstr "Odstrani iz zaznamkov"
+#: src/appfinder-window.c:1269
+msgid "Remove From Favorites"
+msgstr ""
 
-#: src/appfinder-window.c:1263
-msgid "Add to Bookmarks"
-msgstr "Dodaj med zaznamke"
+#: src/appfinder-window.c:1269
+msgid "Add to Favorites"
+msgstr ""
 
-#: src/appfinder-window.c:1295
+#: src/appfinder-window.c:1301
 msgid "_Edit"
 msgstr "Ur_edi"
 
-#: src/appfinder-window.c:1312
+#: src/appfinder-window.c:1318
 msgid "_Revert"
 msgstr "Pov_rni"
 
@@ -221,178 +241,178 @@ msgstr "Predpona"
 msgid "Regular Expression"
 msgstr "Logični izraz"
 
-#: src/appfinder-preferences.glade:35
+#: src/appfinder-preferences.glade:37
 msgid "Very Small"
 msgstr "Zelo majhno"
 
-#: src/appfinder-preferences.glade:38
+#: src/appfinder-preferences.glade:40
 msgid "Smaller"
 msgstr "Manjše"
 
-#: src/appfinder-preferences.glade:41
+#: src/appfinder-preferences.glade:43
 msgid "Small"
 msgstr "Majhno"
 
-#: src/appfinder-preferences.glade:44
+#: src/appfinder-preferences.glade:46
 msgid "Normal"
 msgstr "Običajno"
 
-#: src/appfinder-preferences.glade:47
+#: src/appfinder-preferences.glade:49
 msgid "Large"
 msgstr "Veliko"
 
-#: src/appfinder-preferences.glade:50
+#: src/appfinder-preferences.glade:52
 msgid "Larger"
 msgstr "Večje"
 
-#: src/appfinder-preferences.glade:53
+#: src/appfinder-preferences.glade:55
 msgid "Very Large"
 msgstr "Zelo veliko"
 
-#: src/appfinder-preferences.glade:96
+#: src/appfinder-preferences.glade:98
 msgid "_Close"
 msgstr "_Zapri"
 
-#: src/appfinder-preferences.glade:112
+#: src/appfinder-preferences.glade:114
 msgid "_Help"
 msgstr "_Pomoč"
 
-#: src/appfinder-preferences.glade:165
+#: src/appfinder-preferences.glade:167
 msgid "Remember last _selected category"
 msgstr "Zapomni si na_zadnje izbrano kategorijo"
 
-#: src/appfinder-preferences.glade:181
+#: src/appfinder-preferences.glade:183
 msgid "Always c_enter the window"
 msgstr "Okno vedno _poravnaj na sredino"
 
-#: src/appfinder-preferences.glade:186
+#: src/appfinder-preferences.glade:188
 msgid "Center the window on startup."
 msgstr "Ob zagonu postavi okno na sredino."
 
-#: src/appfinder-preferences.glade:199
+#: src/appfinder-preferences.glade:201
 msgid "Close window when _focus is lost"
 msgstr "Zapri okno, ko je izgubljen _fokus"
 
-#: src/appfinder-preferences.glade:204
+#: src/appfinder-preferences.glade:206
 msgid "When the focus is lost to another window, appfinder should be closed."
 msgstr "Ko je fokus predan drugemu oknu, se naj iskalnik programov zapre."
 
-#: src/appfinder-preferences.glade:217
+#: src/appfinder-preferences.glade:219
 msgid "Keep running _instance in the background"
 msgstr "P_usti, da se trenutna instanca izvaja v ozadju"
 
-#: src/appfinder-preferences.glade:222
+#: src/appfinder-preferences.glade:224
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
 msgstr "Namesto da bi prekinili aplikacijo, ko je zadnje okno zaprto, se trenutno zagnana instanca obdrži v ozdaju, kar pospeši odpiranje novih oken. Z izklopom te funkcije je mogoče zmanjšati porabo pomnilnika."
 
-#: src/appfinder-preferences.glade:235
+#: src/appfinder-preferences.glade:237
 msgid "Single window"
 msgstr "Posamično okno"
 
-#: src/appfinder-preferences.glade:240
+#: src/appfinder-preferences.glade:242
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
 msgstr "Ko instanca teče v ozadju, odpri le po eno okno."
 
-#: src/appfinder-preferences.glade:253
+#: src/appfinder-preferences.glade:255
 msgid "Sort recently used items first"
 msgstr "Nedavno uporabljeni predmeti na vrhu"
 
-#: src/appfinder-preferences.glade:258
+#: src/appfinder-preferences.glade:260
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
 msgstr "Razporedi predmete tako, da so nedavno uporabljeni vedno na vrhu."
 
-#: src/appfinder-preferences.glade:270
+#: src/appfinder-preferences.glade:272
 msgid "Single-click selects and launches items"
 msgstr "Enojni klik izbere in zažene predmet"
 
-#: src/appfinder-preferences.glade:275
+#: src/appfinder-preferences.glade:277
 msgid "Items are selected and launched with only a single-click."
 msgstr "Predmeti so izbran in zagnani z le enim klikom."
 
-#: src/appfinder-preferences.glade:293
+#: src/appfinder-preferences.glade:295
 msgid "Behaviour"
 msgstr "Obnašanje"
 
-#: src/appfinder-preferences.glade:328
+#: src/appfinder-preferences.glade:330
 msgid "_View items as icons"
 msgstr "_Prikaži predmete kot ikone"
 
-#: src/appfinder-preferences.glade:343
+#: src/appfinder-preferences.glade:345
 msgid "Text besi_de icons"
 msgstr "Besedilo o_b ikonah"
 
-#: src/appfinder-preferences.glade:361
+#: src/appfinder-preferences.glade:363
 msgid "Ite_m icon size:"
 msgstr "Velikost ikon _predmetov:"
 
-#: src/appfinder-preferences.glade:375
+#: src/appfinder-preferences.glade:377
 msgid "Hide category pane"
 msgstr "Skrij pano s kategorijo"
 
-#: src/appfinder-preferences.glade:380
+#: src/appfinder-preferences.glade:382
 msgid "Hide category panel and show all applications."
 msgstr "Skrij pano s kategorijami in prikaži vse aplikacije."
 
-#: src/appfinder-preferences.glade:397
+#: src/appfinder-preferences.glade:399
 msgid "Categ_ory icon size:"
 msgstr "Velikost ikone _kategorije:"
 
-#: src/appfinder-preferences.glade:451
+#: src/appfinder-preferences.glade:453
 msgid "Hide window decorations"
 msgstr "Skrij okenske okraske"
 
-#: src/appfinder-preferences.glade:456
+#: src/appfinder-preferences.glade:458
 msgid "Hide window decorations such as title bar and borders."
 msgstr "Skrij okenske okraske, kot sta naslovna vrstica in obrobe."
 
-#: src/appfinder-preferences.glade:471
+#: src/appfinder-preferences.glade:473
 msgid "Show generic application _names"
 msgstr "Prikaži generična _imena programov"
 
-#: src/appfinder-preferences.glade:495
+#: src/appfinder-preferences.glade:497
 msgid "Appearance"
 msgstr "Videz"
 
-#: src/appfinder-preferences.glade:525
+#: src/appfinder-preferences.glade:527
 msgid "C_lear Custom Command History"
 msgstr "Po_čisti zgodovino po meri prirejenih ukazov"
 
-#: src/appfinder-preferences.glade:537
+#: src/appfinder-preferences.glade:539
 msgid "Clear _Recently Used Items History"
 msgstr "Počisti z_godovino nedavnih predmetov"
 
-#: src/appfinder-preferences.glade:553
+#: src/appfinder-preferences.glade:555
 msgid "History"
 msgstr "Zgodovina"
 
-#: src/appfinder-preferences.glade:572
+#: src/appfinder-preferences.glade:574
 msgid "_General"
 msgstr "_Splošno"
 
-#: src/appfinder-preferences.glade:596
+#: src/appfinder-preferences.glade:598
 msgid "Custom actions are only available in collapsed mode."
 msgstr "Po meri prirejena dejanja so na voljo le v zloženem načinu."
 
-#: src/appfinder-preferences.glade:644
+#: src/appfinder-preferences.glade:659
 msgid "Pattern"
 msgstr "Vzorec"
 
-#: src/appfinder-preferences.glade:680
+#: src/appfinder-preferences.glade:695
 msgid "Add a new custom action."
 msgstr "Dodaj novo dejanje po meri."
 
-#: src/appfinder-preferences.glade:701
+#: src/appfinder-preferences.glade:716
 msgid "Remove the currently selected action."
 msgstr "Odstrani trenutno izbrano dejanje."
 
-#: src/appfinder-preferences.glade:744
+#: src/appfinder-preferences.glade:774
 #, c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
@@ -400,23 +420,27 @@ msgid ""
 "use \\0 and \\<num>."
 msgstr "Če je vrsta nastavljena na predpono, bo %s zamenjan z nizom za vzorcem %S s celotnim vnešenim besedilom. Za regularne izraze lahko uporabite \\0 in \\<num>."
 
-#: src/appfinder-preferences.glade:775
+#: src/appfinder-preferences.glade:805
+msgid "_Name:"
+msgstr "_Ime:"
+
+#: src/appfinder-preferences.glade:818
 msgid "Co_mmand:"
 msgstr "_Ukaz:"
 
-#: src/appfinder-preferences.glade:790
+#: src/appfinder-preferences.glade:833
 msgid "Patte_rn:"
 msgstr "_Vzorec"
 
-#: src/appfinder-preferences.glade:805
+#: src/appfinder-preferences.glade:848
 msgid "_Type:"
 msgstr "V_rsta:"
 
-#: src/appfinder-preferences.glade:815
+#: src/appfinder-preferences.glade:860
 msgid "_Save match in command history"
 msgstr "_Shrani zadetek v zgodovino ukazov"
 
-#: src/appfinder-preferences.glade:867
+#: src/appfinder-preferences.glade:914
 msgid "Custom _Actions"
 msgstr "_Dejanja po meri"
 
