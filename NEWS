@@ -1,3 +1,31 @@
+4.21.1 (2026-03-29)
+======
+- Rename bookmarks to favorites
+- Avoid crash when resetting items frecency
+- Add Name field and column to Custom Actions tab
+- Add merge request template
+- build: Fix typo in optimization level
+- search: Only fuzzy search by app name and command
+- fuzzy search: Optimize
+- Correctly load symbolic icons
+- Add option to clear frecency history (#102)
+- Add css class for easier theming (#107)
+- Make item description slightly transparent (#99)
+- README.md: Add uninstall info
+- Update README after switchover to meson
+- Remove autotools build
+- Translation Updates:
+  Albanian, Amharic, Arabic, Armenian (Armenia), Asturian, Basque,
+  Belarusian, Bulgarian, Catalan, Chinese (China), Chinese (Hong Kong),
+  Chinese (Taiwan), Croatian, Czech, Danish, Dutch, Eastern Armenian,
+  English (Australia), English (Canada), English (United Kingdom),
+  Estonian, Finnish, French, Galician, Georgian, German, Greek, Hebrew,
+  Hindi, Hungarian, Icelandic, Indonesian, Interlingue, Italian,
+  Japanese, Kazakh, Korean, Lithuanian, Malay, Norwegian Bokmål,
+  Norwegian Nynorsk, Occitan (post 1500), Polish, Portuguese,
+  Portuguese (Brazil), Romanian, Russian, Serbian, Slovak, Slovenian,
+  Spanish, Swedish, Tatar, Thai, Turkish, Ukrainian, Uyghur, Vietnamese
+
 4.21.0 (2025-03-23)
 ======
 - Replace deprecated exo with libxfce4ui 4.21.0
