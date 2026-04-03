@@ -80,7 +80,7 @@ msgstr "Commands History"
 
 #: src/appfinder-model.c:3234
 msgid "Favorites"
-msgstr ""
+msgstr "Favourites"
 
 #: src/appfinder-preferences.c:315 src/appfinder-preferences.c:336
 msgid "C_lear"
@@ -176,11 +176,11 @@ msgstr "Are you sure you want to hide \"%s\"?"
 
 #: src/appfinder-window.c:1269
 msgid "Remove From Favorites"
-msgstr ""
+msgstr "Remove From Favourites"
 
 #: src/appfinder-window.c:1269
 msgid "Add to Favorites"
-msgstr ""
+msgstr "Add to Favourites"
 
 #: src/appfinder-window.c:1301
 msgid "_Edit"
