@@ -1,0 +1,475 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce4-appfinder.master package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2026-03-04 00:54+0100\n"
+"PO-Revision-Date: 2013-07-02 20:40+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Lao (http://app.transifex.com/xfce/xfce4-appfinder/language/lo/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lo\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. close all windows and quit
+#: src/appfinder-gdbus.c:95
+msgid "Forced to quit"
+msgstr "ບັງຄັບໃຫ້ອອກ"
+
+#: src/appfinder-actions.c:158
+msgid "Open URI"
+msgstr "ເປີດ URI"
+
+#: src/appfinder-actions.c:164
+msgid "Terminal command"
+msgstr "ຄຳສັ່ງເທີມີນໍ"
+
+#: src/appfinder-actions.c:170
+msgid "Wikipedia search"
+msgstr "ຄົ້ນຫາໃນວິກິພີເດຍ"
+
+#: src/appfinder-actions.c:176
+msgid "Man page"
+msgstr "ໜ້າຄູ່ມື (Man page)"
+
+#: src/appfinder-actions.c:182
+msgid "Open in file manager"
+msgstr "ເປີດໃນຕົວຈັດການໄຟລ໌"
+
+#: src/appfinder-category-model.c:153
+msgid "All Applications"
+msgstr "ທຸກແອັບພລິເຄຊັນ"
+
+#: src/appfinder-model.c:704 src/appfinder-preferences.glade:647
+msgid "Name"
+msgstr "ຊື່"
+
+#: src/appfinder-model.c:705
+msgid "Comment"
+msgstr "ຄຳອະທິບາຍ"
+
+#: src/appfinder-model.c:706
+msgid "Command"
+msgstr "ຄຳສັ່ງ"
+
+#: src/appfinder-model.c:707
+msgid "Categories"
+msgstr "ໝວດໝູ່"
+
+#: src/appfinder-model.c:708
+msgid "Filename"
+msgstr "ຊື່ໄຟລ໌"
+
+#: src/appfinder-model.c:2693
+msgid "Application or action has no command"
+msgstr "ແອັບພລິເຄຊັນ ຫຼື ການກະທຳບໍ່ມີຄຳສັ່ງ"
+
+#: src/appfinder-model.c:3210
+msgid "Commands History"
+msgstr "ປະຫວັດຄຳສັ່ງ"
+
+#: src/appfinder-model.c:3234
+msgid "Favorites"
+msgstr "ລາຍການທີ່ມັກ"
+
+#: src/appfinder-preferences.c:315 src/appfinder-preferences.c:336
+msgid "C_lear"
+msgstr "_ລ້າງ"
+
+#: src/appfinder-preferences.c:316
+msgid "This will permanently clear the custom command history."
+msgstr "ນີ້ຈະລ້າງປະຫວັດຄຳສັ່ງທີ່ກຳນົດເອງແບບຖາວອນ."
+
+#: src/appfinder-preferences.c:317
+msgid "Are you sure you want to clear the command history?"
+msgstr "ເຈົ້າແນ່ໃຈບໍ່ວ່າຕ້ອງການລ້າງປະຫວັດຄຳສັ່ງ?"
+
+#: src/appfinder-preferences.c:337
+msgid "This will permanently clear the recent items history."
+msgstr "ນີ້ຈະລ້າງປະຫວັດລາຍການທີ່ໃຊ້ຫວ່າງໆນີ້ແບບຖາວອນ."
+
+#: src/appfinder-preferences.c:338
+msgid "Are you sure you want to clear the recent items history?"
+msgstr "ເຈົ້າແນ່ໃຈບໍ່ວ່າຕ້ອງການລ້າງປະຫວັດລາຍການທີ່ໃຊ້ຫວ່າງໆນີ້?"
+
+#: src/appfinder-preferences.c:450
+msgid "_Delete"
+msgstr "_ລຶບ"
+
+#: src/appfinder-preferences.c:451
+msgid "The custom action will be deleted permanently."
+msgstr "ການກະທຳທີ່ກຳນົດເອງຈະຖືກລຶບແບບຖາວອນ."
+
+#: src/appfinder-preferences.c:452
+#, c-format
+msgid "Are you sure you want to delete action \"%s\"?"
+msgstr "ເຈົ້າແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບການກະທຳ \"%s\"?"
+
+#: src/appfinder-window.c:247 src/appfinder-preferences.glade:81
+#: data/xfce4-appfinder.desktop.in:10
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
+msgid "Application Finder"
+msgstr "ຕົວຄົ້ນຫາແອັບພລິເຄຊັນ"
+
+#: src/appfinder-window.c:300
+msgid "Toggle view mode"
+msgstr "ສະຫຼັບໂໝດການເບິ່ງ"
+
+#: src/appfinder-window.c:381
+msgid "_Preferences"
+msgstr "_ການຕັ້ງຄ່າ"
+
+#: src/appfinder-window.c:392 src/appfinder-window.c:1287
+msgid "La_unch"
+msgstr "ເ_ລີ່ມໃຊ້"
+
+#: src/appfinder-window.c:1025
+msgid "Failed to launch desktop item editor"
+msgstr "ບໍ່ສາມາດເປີດຕົວແກ້ໄຂລາຍການເດັສທັອບໄດ້"
+
+#: src/appfinder-window.c:1050
+msgid "Confirm"
+msgstr "ຢືນຢັນ"
+
+#: src/appfinder-window.c:1051
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr "ນີ້ຈະລຶບໄຟລ໌ເດັສທັອບທີ່ກຳນົດເອງອອກຈາກໂຟນເດີຫຼັກຂອງທ່ານແບບຖາວອນ."
+
+#: src/appfinder-window.c:1052
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr "ເຈົ້າແນ່ໃຈບໍ່ວ່າຕ້ອງການຄືນຄ່າ \"%s\"?"
+
+#: src/appfinder-window.c:1062
+msgid "Failed to remove desktop file"
+msgstr "ບໍ່ສາມາດລຶບໄຟລ໌ເດັສທັອບໄດ້"
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: src/appfinder-window.c:1095
+#, c-format
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr "ເພື່ອສະແດງລາຍການທີ່ຊ່ອນໄວ້ ເຈົ້າຕ້ອງລຶບໄຟລ໌ເດັສທັອບອອກຈາກ \"%s\" ດ້ວຍຕົນເອງ ຫຼື ເປີດໄຟລ໌ໃນໂຟນເດີດຽວກັນແລ້ວລຶບແຖວ \"%s\" ອອກ."
+
+#: src/appfinder-window.c:1100 src/appfinder-window.c:1333
+msgid "_Hide"
+msgstr "_ຊ່ອນ"
+
+#: src/appfinder-window.c:1101
+#, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr "ເຈົ້າແນ່ໃຈບໍ່ວ່າຕ້ອງການຊ່ອນ \"%s\"?"
+
+#: src/appfinder-window.c:1269
+msgid "Remove From Favorites"
+msgstr "ລຶບອອກຈາກລາຍການທີ່ມັກ"
+
+#: src/appfinder-window.c:1269
+msgid "Add to Favorites"
+msgstr "ເພີ່ມເຂົ້າໃນລາຍການທີ່ມັກ"
+
+#: src/appfinder-window.c:1301
+msgid "_Edit"
+msgstr "_ແກ້ໄຂ"
+
+#: src/appfinder-window.c:1318
+msgid "_Revert"
+msgstr "_ຄືນຄ່າ"
+
+#: src/main.c:65
+msgid "Start in collapsed mode"
+msgstr "ເລີ່ມໃນໂໝດຫຍໍ້"
+
+#: src/main.c:66
+msgid "Print version information and exit"
+msgstr "ພິມຂໍ້ມູນເວີຊັນ ແລະ ອອກ"
+
+#: src/main.c:67
+msgid "Replace the existing service"
+msgstr "ແທນທີ່ການບໍລິການທີ່ມີຢູ່"
+
+#: src/main.c:68
+msgid "Quit all instances"
+msgstr "ອອກຈາກທຸກອິນສະແຕນຊ໌"
+
+#: src/main.c:69
+msgid "Do not try to use or become a D-Bus service"
+msgstr "ບໍ່ຕ້ອງພະຍາຍາມໃຊ້ ຫຼື ກາຍເປັນບໍລິການ D-Bus"
+
+#: src/main.c:70
+msgid "Toggle window visibility of background service"
+msgstr "ສະຫຼັບການເບິ່ງເຫັນໜ້າຕ່າງຂອງບໍລິການພື້ນຫຼັງ"
+
+#: src/main.c:71
+msgid "Run in daemon mode"
+msgstr "ເຮັດວຽກໃນໂໝດດີມອນ (daemon)"
+
+#: src/main.c:243
+#, c-format
+msgid "Type \"%s --help\" for usage."
+msgstr "ພິມ \"%s --help\" ເພື່ອເບິ່ງວິທີໃຊ້."
+
+#: src/main.c:254
+msgid "The Xfce development team. All rights reserved."
+msgstr "ທີມງານພັດທະນາ Xfce. ສະຫງວນລິຂະສິດທັງໝົດ."
+
+#: src/main.c:255
+#, c-format
+msgid "Please report bugs to <%s>."
+msgstr "ກະລຸນາລາຍງານຂໍ້ຜິດພາດໄປທີ່ <%s>."
+
+#: src/appfinder-preferences.glade:13
+msgid "Prefix"
+msgstr "ຄຳນຳໜ້າ"
+
+#: src/appfinder-preferences.glade:16
+msgid "Regular Expression"
+msgstr "ເຣກູລາເອກເພຣດຊັນ (Regular Expression)"
+
+#: src/appfinder-preferences.glade:37
+msgid "Very Small"
+msgstr "ນ້ອຍຫຼາຍ"
+
+#: src/appfinder-preferences.glade:40
+msgid "Smaller"
+msgstr "ນ້ອຍລົງ"
+
+#: src/appfinder-preferences.glade:43
+msgid "Small"
+msgstr "ນ້ອຍ"
+
+#: src/appfinder-preferences.glade:46
+msgid "Normal"
+msgstr "ປົກກະຕິ"
+
+#: src/appfinder-preferences.glade:49
+msgid "Large"
+msgstr "ໃຫຍ່"
+
+#: src/appfinder-preferences.glade:52
+msgid "Larger"
+msgstr "ໃຫຍ່ຂຶ້ນ"
+
+#: src/appfinder-preferences.glade:55
+msgid "Very Large"
+msgstr "ໃຫຍ່ຫຼາຍ"
+
+#: src/appfinder-preferences.glade:98
+msgid "_Close"
+msgstr "_ປິດ"
+
+#: src/appfinder-preferences.glade:114
+msgid "_Help"
+msgstr "_ຊ່ວຍເຫຼືອ"
+
+#: src/appfinder-preferences.glade:167
+msgid "Remember last _selected category"
+msgstr "ຈື່ໝວດໝູ່ທີ່ເລືອກ _ຫຼ້າສຸດ"
+
+#: src/appfinder-preferences.glade:183
+msgid "Always c_enter the window"
+msgstr "ໃຫ້ໜ້າຕ່າງຢູ່ _ກາງ ສະເໝີ"
+
+#: src/appfinder-preferences.glade:188
+msgid "Center the window on startup."
+msgstr "ໃຫ້ໜ້າຕ່າງຢູ່ກາງຕອນເລີ່ມຕົ້ນ."
+
+#: src/appfinder-preferences.glade:201
+msgid "Close window when _focus is lost"
+msgstr "ປິດໜ້າຕ່າງເມື່ອບໍ່ໄດ້ _ໂຟກັດ"
+
+#: src/appfinder-preferences.glade:206
+msgid "When the focus is lost to another window, appfinder should be closed."
+msgstr "ເມື່ອໂຟກັດໄປຫາໜ້າຕ່າງອື່ນ, ຕົວຄົ້ນຫາແອັບຄວນຈະຖືກປິດ."
+
+#: src/appfinder-preferences.glade:219
+msgid "Keep running _instance in the background"
+msgstr "ໃຫ້ _ອິນສະແຕນຊ໌ ເຮັດວຽກຢູ່ພື້ນຫຼັງຕໍ່ໄປ"
+
+#: src/appfinder-preferences.glade:224
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "ແທນທີ່ຈະປິດແອັບພລິເຄຊັນເມື່ອໜ້າຕ່າງສຸດທ້າຍຖືກປິດ, ໃຫ້ຮັກສາອິນສະແຕນຊ໌ທີ່ເຮັດວຽກຢູ່ເພື່ອເລັ່ງການເປີດໜ້າຕ່າງໃໝ່. ເຈົ້າອາດຈະຕ້ອງການປິດການໃຊ້ງານນີ້ເພື່ອຫຼຸດຜ່ອນການໃຊ້ຄວາມຈຳ."
+
+#: src/appfinder-preferences.glade:237
+msgid "Single window"
+msgstr "ໜ້າຕ່າງດຽວ"
+
+#: src/appfinder-preferences.glade:242
+msgid ""
+"When an instance is running in the background, only open one window at a "
+"time."
+msgstr "ເມື່ອມີອິນສະແຕນຊ໌ເຮັດວຽກຢູ່ພື້ນຫຼັງ, ໃຫ້ເປີດພຽງໜ້າຕ່າງດຽວໃນແຕ່ລະຄັ້ງ."
+
+#: src/appfinder-preferences.glade:255
+msgid "Sort recently used items first"
+msgstr "ຈັດລຽງລາຍການທີ່ໃຊ້ຫວ່າງໆນີ້ຂຶ້ນກ່ອນ"
+
+#: src/appfinder-preferences.glade:260
+msgid ""
+"Order items, such that items that are most recently used are always on the "
+"top."
+msgstr "ຈັດລຽງລາຍການ ໂດຍໃຫ້ລາຍການທີ່ໃຊ້ຫຼ້າສຸດຢູ່ທາງເທິງສະເໝີ."
+
+#: src/appfinder-preferences.glade:272
+msgid "Single-click selects and launches items"
+msgstr "ຄລິກບາດດຽວເພື່ອເລືອກ ແລະ ເປີດລາຍການ"
+
+#: src/appfinder-preferences.glade:277
+msgid "Items are selected and launched with only a single-click."
+msgstr "ລາຍການຈະຖືກເລືອກ ແລະ ເປີດດ້ວຍການຄລິກພຽງບາດດຽວ."
+
+#: src/appfinder-preferences.glade:295
+msgid "Behaviour"
+msgstr "ພຶດຕິກຳ"
+
+#: src/appfinder-preferences.glade:330
+msgid "_View items as icons"
+msgstr "_ເບິ່ງລາຍການເປັນໄອຄອນ"
+
+#: src/appfinder-preferences.glade:345
+msgid "Text besi_de icons"
+msgstr "ຂໍ້ຄວາມຢູ່ _ຂ້າງ ໄອຄອນ"
+
+#: src/appfinder-preferences.glade:363
+msgid "Ite_m icon size:"
+msgstr "ຂະໜາດໄອຄອນ _ລາຍການ:"
+
+#: src/appfinder-preferences.glade:377
+msgid "Hide category pane"
+msgstr "ຊ່ອນແຖບໝວດໝູ່"
+
+#: src/appfinder-preferences.glade:382
+msgid "Hide category panel and show all applications."
+msgstr "ຊ່ອນແຖບໝວດໝູ່ ແລະ ສະແດງທຸກແອັບພລິເຄຊັນ."
+
+#: src/appfinder-preferences.glade:399
+msgid "Categ_ory icon size:"
+msgstr "ຂະໜາດໄອຄອນ _ໝວດໝູ່:"
+
+#: src/appfinder-preferences.glade:453
+msgid "Hide window decorations"
+msgstr "ຊ່ອນສ່ວນຕົກແຕ່ງໜ້າຕ່າງ"
+
+#: src/appfinder-preferences.glade:458
+msgid "Hide window decorations such as title bar and borders."
+msgstr "ຊ່ອນສ່ວນຕົກແຕ່ງໜ້າຕ່າງ ເຊັ່ນ: ແຖບຊື່ ແລະ ຂອບ."
+
+#: src/appfinder-preferences.glade:473
+msgid "Show generic application _names"
+msgstr "ສະແດງ _ຊື່ ທົ່ວໄປຂອງແອັບພລິເຄຊັນ"
+
+#: src/appfinder-preferences.glade:497
+msgid "Appearance"
+msgstr "ຮູບລັກສະນະ"
+
+#: src/appfinder-preferences.glade:527
+msgid "C_lear Custom Command History"
+msgstr "_ລ້າງ ປະຫວັດຄຳັ່ງທີ່ກຳນົດເອງ"
+
+#: src/appfinder-preferences.glade:539
+msgid "Clear _Recently Used Items History"
+msgstr "ລ້າງປະຫວັດລາຍການທີ່ໃຊ້ _ຫວ່າງໆນີ້"
+
+#: src/appfinder-preferences.glade:555
+msgid "History"
+msgstr "ປະຫວັດ"
+
+#: src/appfinder-preferences.glade:574
+msgid "_General"
+msgstr "_ທົ່ວໄປ"
+
+#: src/appfinder-preferences.glade:598
+msgid "Custom actions are only available in collapsed mode."
+msgstr "ການກະທຳທີ່ກຳນົດເອງສາມາດໃຊ້ໄດ້ໃນໂໝດຫຍໍ້ເທົ່ານັ້ນ."
+
+#: src/appfinder-preferences.glade:659
+msgid "Pattern"
+msgstr "ຮູບແບບ"
+
+#: src/appfinder-preferences.glade:695
+msgid "Add a new custom action."
+msgstr "ເພີ່ມການກະທຳທີ່ກຳນົດເອງໃໝ່."
+
+#: src/appfinder-preferences.glade:716
+msgid "Remove the currently selected action."
+msgstr "ລຶບການກະທຳທີ່ເລືອກໄວ້ໃນປັດຈຸບັນ."
+
+#: src/appfinder-preferences.glade:774
+#, c-format
+msgid ""
+"If the type is set to prefix, %s will be replaced with the string after the "
+"pattern, %S with the complete entry text. For regular expressions you can "
+"use \\0 and \\<num>."
+msgstr "ຖ້າປະເພດຖືກຕັ້ງເປັນຄຳນຳໜ້າ, %s ຈະຖືກແທນທີ່ດ້ວຍຂໍ້ຄວາມຫຼັງຮູບແບບ, %S ດ້ວຍຂໍ້ຄວາມທັງໝົດ. ສຳລັບເຣກູລາເອກເພຣດຊັນ ເຈົ້າສາມາດໃຊ້ \\0 ແລະ \\<num> ໄດ້."
+
+#: src/appfinder-preferences.glade:805
+msgid "_Name:"
+msgstr "_ຊື່:"
+
+#: src/appfinder-preferences.glade:818
+msgid "Co_mmand:"
+msgstr "_ຄຳສັ່ງ:"
+
+#: src/appfinder-preferences.glade:833
+msgid "Patte_rn:"
+msgstr "_ຮູບແບບ:"
+
+#: src/appfinder-preferences.glade:848
+msgid "_Type:"
+msgstr "_ປະເພດ:"
+
+#: src/appfinder-preferences.glade:860
+msgid "_Save match in command history"
+msgstr "_ບັນທຶກ ຜົນທີ່ກົງກັນໄວ້ໃນປະຫວັດຄຳສັ່ງ"
+
+#: src/appfinder-preferences.glade:914
+msgid "Custom _Actions"
+msgstr "ການ _ກະທຳ ທີ່ກຳນົດເອງ"
+
+#: data/xfce4-appfinder.desktop.in:11
+msgid "Find and launch applications installed on your system"
+msgstr "ຄົ້ນຫາ ແລະ ເປີດແອັບພລິເຄຊັນທີ່ຕິດຕັ້ງຢູ່ໃນລະບົບຂອງທ່ານ"
+
+#: data/xfce4-appfinder.desktop.in:12
+msgid "program;applications;bookmarks;"
+msgstr "ໂປຣແກຣມ;ແອັບພລິເຄຊັນ;ບຸກມາກ;"
+
+#: data/xfce4-run.desktop.in:11
+msgid "Run Program..."
+msgstr "ເປີດໂປຣແກຣມ..."
+
+#: data/xfce4-run.desktop.in:12
+msgid "Enter a command you want to launch"
+msgstr "ປ້ອນຄຳສັ່ງທີ່ທ່ານຕ້ອງການເປີດ"
+
+#: data/xfce4-run.desktop.in:13
+msgid ""
+"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
+" dash;krunner;synapse;ulauncher;launchy;gnome "
+"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
+msgid "Application to quickly run applications and commands"
+msgstr "ແອັບພລິເຄຊັນສຳລັບເປີດແອັບ ແລະ ຄຳສັ່ງຢ່າງໄວວາ"
+
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:13
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and quickly execute commands. It can also be used to quickly "
+"add launchers to the Xfce Panel by dragging an item from the view and drop "
+"it on the panel."
+msgstr "ຕົວຄົ້ນຫາແອັບພລິເຄຊັນແມ່ນເຄື່ອງມືສຳລັບຄົ້ນຫາ ແລະ ເປີດແອັບພລິເຄຊັນທີ່ຕິດຕັ້ງຢູ່ໃນລະບົບຂອງທ່ານ ແລະ ເອັກຊີຄິວຄຳສັ່ງຢ່າງໄວວາ. ມັນຍັງສາມາດໃຊ້ເພື່ອເພີ່ມຕົວເປີດແອັບໃສ່ໃນແຖບ Xfce ໄດ້ຢ່າງໄວວາ ໂດຍການລາກລາຍການຈາກມຸມມອງໄປວາງໄວ້ໃນແຖບພາເນລ."
