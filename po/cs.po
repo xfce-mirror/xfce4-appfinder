@@ -30,7 +30,7 @@ msgstr "Vynuceně ukončeno"
 
 #: src/appfinder-actions.c:158
 msgid "Open URI"
-msgstr "Otevřít umístnění URI"
+msgstr "Otevřít umístění URI"
 
 #: src/appfinder-actions.c:164
 msgid "Terminal command"
@@ -115,7 +115,7 @@ msgstr "Uživatelská akce bude nevratně smazána."
 #: src/appfinder-preferences.c:452
 #, c-format
 msgid "Are you sure you want to delete action \"%s\"?"
-msgstr "Opravdu chcete smazat akci %s?"
+msgstr "Opravdu chcete smazat akci „%s“?"
 
 #: src/appfinder-window.c:247 src/appfinder-preferences.glade:81
 #: data/xfce4-appfinder.desktop.in:10
@@ -125,7 +125,7 @@ msgstr "Vyhledávač aplikací"
 
 #: src/appfinder-window.c:300
 msgid "Toggle view mode"
-msgstr "Přepnout režim pohledu"
+msgstr "Přepnout režim zobrazení"
 
 #: src/appfinder-window.c:381
 msgid "_Preferences"
@@ -137,7 +137,7 @@ msgstr "Sp_ustit"
 
 #: src/appfinder-window.c:1025
 msgid "Failed to launch desktop item editor"
-msgstr "Spuštění editoru položek plochy se nezdařilo."
+msgstr "Nepodařilo se spustit editor spouštěčů"
 
 #: src/appfinder-window.c:1050
 msgid "Confirm"
@@ -147,7 +147,7 @@ msgstr "Potvrdit"
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr "Tato akce trvale odebere upravený soubor spouštěče z vaší domovské složky."
+msgstr "Tato akce trvale odebere vlastní soubor spouštěče z vaší domovské složky."
 
 #: src/appfinder-window.c:1052
 #, c-format
@@ -165,7 +165,7 @@ msgstr "Odebrání souboru spouštěče se nezdařilo"
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr "Skrytou položku odkryjte ručním odebráním souboru spouštěče z „%s“ nebo tento soubor otevřete a odeberte z něj řádek „%s“."
+msgstr "Chcete-li položku znovu zobrazit, ručně odeberte soubor spouštěče z „%s“ nebo ve stejném adresáři otevřete tento soubor a odeberte řádek „%s“."
 
 #: src/appfinder-window.c:1100 src/appfinder-window.c:1333
 msgid "_Hide"
@@ -182,7 +182,7 @@ msgstr "Odstranit z oblíbených"
 
 #: src/appfinder-window.c:1269
 msgid "Add to Favorites"
-msgstr "Přidat k oblíbeným"
+msgstr "Přidat do oblíbených"
 
 #: src/appfinder-window.c:1301
 msgid "_Edit"
@@ -210,7 +210,7 @@ msgstr "Ukončit všechny instance"
 
 #: src/main.c:69
 msgid "Do not try to use or become a D-Bus service"
-msgstr "Nepokoušet se použít nebo stát se službou sběrnice D-Bus"
+msgstr "Nepokoušet se použít ani zaregistrovat jako služba D-Bus"
 
 #: src/main.c:70
 msgid "Toggle window visibility of background service"
@@ -218,7 +218,7 @@ msgstr "Přepnout viditelnost okna služby na pozadí"
 
 #: src/main.c:71
 msgid "Run in daemon mode"
-msgstr "Spustit v režimu démon"
+msgstr "Spustit jako démon"
 
 #: src/main.c:243
 #, c-format
@@ -284,7 +284,7 @@ msgstr "Zapamatovat _si poslední vybranou kategorii"
 
 #: src/appfinder-preferences.glade:183
 msgid "Always c_enter the window"
-msgstr "Okno vždy vystř_edit"
+msgstr "Vždy vystř_edit okno"
 
 #: src/appfinder-preferences.glade:188
 msgid "Center the window on startup."
@@ -292,11 +292,11 @@ msgstr "Při spuštění vystředit okno."
 
 #: src/appfinder-preferences.glade:201
 msgid "Close window when _focus is lost"
-msgstr "Zavření okna při ztrátě _focus"
+msgstr "Zavření okna při ztrátě _zaměření"
 
 #: src/appfinder-preferences.glade:206
 msgid "When the focus is lost to another window, appfinder should be closed."
-msgstr "Pokud se zaměření ztratí ve prospěch jiného okna, měl by se appfinder zavřít."
+msgstr "Zavřít okno vyhledávače aplikací, když se zaměření přesune na jiné okno."
 
 #: src/appfinder-preferences.glade:219
 msgid "Keep running _instance in the background"
@@ -311,7 +311,7 @@ msgstr "Ponechat spuštěnou instanci na pozadí namísto ukončení aplikace po
 
 #: src/appfinder-preferences.glade:237
 msgid "Single window"
-msgstr "Jedno okno"
+msgstr "Používat jediné okno"
 
 #: src/appfinder-preferences.glade:242
 msgid ""
@@ -321,7 +321,7 @@ msgstr "Pokud je instance spuštěna na pozadí, otevřít najednou pouze jedno 
 
 #: src/appfinder-preferences.glade:255
 msgid "Sort recently used items first"
-msgstr "Seřadit nedávno použité položky na začátek"
+msgstr "Nedávno použité položky řadit jako první"
 
 #: src/appfinder-preferences.glade:260
 msgid ""
@@ -331,7 +331,7 @@ msgstr "Vždy umístí nahoru nedávno použité položky."
 
 #: src/appfinder-preferences.glade:272
 msgid "Single-click selects and launches items"
-msgstr "Jedním kliknutím vyberete a spustíte položky"
+msgstr "Vybírat a spouštět položky jedním kliknutím"
 
 #: src/appfinder-preferences.glade:277
 msgid "Items are selected and launched with only a single-click."
@@ -355,15 +355,15 @@ msgstr "Veli_kost ikony položky:"
 
 #: src/appfinder-preferences.glade:377
 msgid "Hide category pane"
-msgstr "Skrýt podokno kategorie"
+msgstr "Skrýt panel kategorií"
 
 #: src/appfinder-preferences.glade:382
 msgid "Hide category panel and show all applications."
-msgstr "Skrýt panel kategorie a zobrazit všechny aplikace."
+msgstr "Skrýt panel kategorií a zobrazit všechny aplikace."
 
 #: src/appfinder-preferences.glade:399
 msgid "Categ_ory icon size:"
-msgstr "Velik_ost ikony kategorie"
+msgstr "Velik_ost ikon kategorií:"
 
 #: src/appfinder-preferences.glade:453
 msgid "Hide window decorations"
@@ -375,7 +375,7 @@ msgstr "Skrýt dekorace okna, jako jsou záhlaví a okraje."
 
 #: src/appfinder-preferences.glade:473
 msgid "Show generic application _names"
-msgstr "Zobrazit obecné názvy aplikací _names"
+msgstr "Zobrazit obecné _názvy aplikací"
 
 #: src/appfinder-preferences.glade:497
 msgid "Appearance"
@@ -383,11 +383,11 @@ msgstr "Vzhled"
 
 #: src/appfinder-preferences.glade:527
 msgid "C_lear Custom Command History"
-msgstr "_Smazat historii vlastních příkazů"
+msgstr "_Vymazat historii vlastních příkazů"
 
 #: src/appfinder-preferences.glade:539
 msgid "Clear _Recently Used Items History"
-msgstr "Smazat historii _nedávno použitých položek"
+msgstr "Vymazat historii _nedávno použitých položek"
 
 #: src/appfinder-preferences.glade:555
 msgid "History"
@@ -403,7 +403,7 @@ msgstr "Vlastní akce jsou dostupné pouze ve sbaleném režimu."
 
 #: src/appfinder-preferences.glade:659
 msgid "Pattern"
-msgstr "Vzorek"
+msgstr "Vzor"
 
 #: src/appfinder-preferences.glade:695
 msgid "Add a new custom action."
@@ -419,7 +419,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Pokud je typ nastaven na předponu, %s se nahradí řetězcem po vzorku a %S kompletním vstupním textem. Regulární výrazy použijte pomocí \\0 a \\<num>."
+msgstr "Je-li typ nastaven na předponu, %s bude nahrazeno řetězcem za vzorem a %S celým zadaným textem. U regulárních výrazů lze použít \\0 a \\<num>."
 
 #: src/appfinder-preferences.glade:805
 msgid "_Name:"
@@ -447,7 +447,7 @@ msgstr "Vlastní _akce"
 
 #: data/xfce4-appfinder.desktop.in:11
 msgid "Find and launch applications installed on your system"
-msgstr "Umožňuje najít a spouštět aplikace nainstalované v systému."
+msgstr "Vyhledává a spouští aplikace nainstalované v systému"
 
 #: data/xfce4-appfinder.desktop.in:12
 msgid "program;applications;bookmarks;"
@@ -466,7 +466,7 @@ msgid ""
 "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
 " dash;krunner;synapse;ulauncher;launchy;gnome "
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr "spustit;příkaz;aplikace;program,finder;hledat;najít;spouštěč;vše;všechno;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr "spustit;příkaz;aplikace;program;finder;hledat;najít;spouštěč;vše;všechno;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
 msgid "Application to quickly run applications and commands"
@@ -478,4 +478,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr "Vyhledávač aplikací je nástroj pro hledání a spouštění aplikací nainstalovaných v systému a rychlé spouštění příkazů. Také jej lze přetažením a puštěním položky na panel použít k rychlému přidání spouštěčů na panel Xfce."
+msgstr "Vyhledávač aplikací je nástroj pro hledání a spouštění aplikací nainstalovaných v systému a rychlé spouštění příkazů. Také jej lze přetažením položky ze zobrazení a jejím puštěním na panel použít k rychlému přidání spouštěčů na panel Xfce."
