@@ -30,7 +30,7 @@ msgstr "Vynuceně ukončeno"
 
 #: src/appfinder-actions.c:158
 msgid "Open URI"
-msgstr "Otevřít umístění URI"
+msgstr "Otevřít URI"
 
 #: src/appfinder-actions.c:164
 msgid "Terminal command"
@@ -178,7 +178,7 @@ msgstr "Opravdu chcete „%s“ skrýt?"
 
 #: src/appfinder-window.c:1269
 msgid "Remove From Favorites"
-msgstr "Odstranit z oblíbených"
+msgstr "Odebrat z oblíbených"
 
 #: src/appfinder-window.c:1269
 msgid "Add to Favorites"
@@ -292,7 +292,7 @@ msgstr "Při spuštění vystředit okno."
 
 #: src/appfinder-preferences.glade:201
 msgid "Close window when _focus is lost"
-msgstr "Zavření okna při ztrátě _zaměření"
+msgstr "Zavřít okno při ztrátě _zaměření"
 
 #: src/appfinder-preferences.glade:206
 msgid "When the focus is lost to another window, appfinder should be closed."
@@ -351,7 +351,7 @@ msgstr "Text ve_dle ikon"
 
 #: src/appfinder-preferences.glade:363
 msgid "Ite_m icon size:"
-msgstr "Veli_kost ikony položky:"
+msgstr "Veli_kost ikon položek:"
 
 #: src/appfinder-preferences.glade:377
 msgid "Hide category pane"
@@ -431,7 +431,7 @@ msgstr "_Příkaz:"
 
 #: src/appfinder-preferences.glade:833
 msgid "Patte_rn:"
-msgstr "V_zorek:"
+msgstr "V_zor:"
 
 #: src/appfinder-preferences.glade:848
 msgid "_Type:"
