@@ -549,17 +549,20 @@ xfce_appfinder_window_key_press_event (GtkWidget   *widget,
               has_selection = TRUE;
               gtk_tree_model_get_iter (model, &iter, items->data);
             }
-            g_list_free_full (items, (GDestroyNotify) gtk_tree_path_free);
+          g_list_free_full (items, (GDestroyNotify) gtk_tree_path_free);
         }
-
-      if (gtk_tree_model_get_iter_first (model, &first_iter))
-        path = gtk_tree_model_get_path (model, &first_iter);
 
       if (has_selection)
         {
-          gtk_tree_path_free (path);
           path = gtk_tree_model_get_path (model, &iter);
-          event->keyval == GDK_KEY_Tab ? gtk_tree_path_next (path) : gtk_tree_path_prev (path);
+          if (event->keyval == GDK_KEY_Tab)
+            gtk_tree_path_next (path);
+          else
+            gtk_tree_path_prev (path);
+        }
+      else if (gtk_tree_model_get_iter_first (model, &first_iter))
+        {
+          path = gtk_tree_model_get_path (model, &first_iter);
         }
 
       if (path)
