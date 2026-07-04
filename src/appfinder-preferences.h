@@ -33,7 +33,7 @@ typedef struct _XfceAppfinderPreferences      XfceAppfinderPreferences;
 #define XFCE_IS_APPFINDER_PREFERENCES_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), XFCE_TYPE_APPFINDER_PREFERENCES))
 #define XFCE_APPFINDER_PREFERENCES_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), XFCE_TYPE_APPFINDER_PREFERENCES, XfceAppfinderPreferencesClass))
 
-GType xfce_appfinder_preferences_get_type (void) G_GNUC_CONST;
+GType xfce_appfinder_preferences_get_type (void);
 
 void  xfce_appfinder_preferences_show     (XfceAppfinderWindow *window);
 
