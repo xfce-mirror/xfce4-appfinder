@@ -6,7 +6,7 @@
 # Dušan Kazik <prescott66@gmail.com>, 2017-2018,2020
 # Robert Hartl <hartl.robert@gmail.com>, 2009
 # Roman Moravčík <roman.moravcik@gmail.com>, 2006
-# Slavko <linux@slavino.sk>, 2015,2019,2025
+# Slavko <linux@slavino.sk>, 2015,2019,2025-2026
 # 7dcd6f74323fe8d9c477949ff8fcbb1c_c427b63 <3fcd202e3dfab15fda15b8e88e54d449_7173>, 2011-2012
 msgid ""
 msgstr ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2026-03-04 00:54+0100\n"
 "PO-Revision-Date: 2013-07-02 20:40+0000\n"
-"Last-Translator: Slavko <linux@slavino.sk>, 2015,2019,2025\n"
+"Last-Translator: Slavko <linux@slavino.sk>, 2015,2019,2025-2026\n"
 "Language-Team: Slovak (http://app.transifex.com/xfce/xfce4-appfinder/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,23 +29,23 @@ msgstr "Vynútiť ukončenie"
 
 #: src/appfinder-actions.c:158
 msgid "Open URI"
-msgstr ""
+msgstr "Otvoriť URI"
 
 #: src/appfinder-actions.c:164
 msgid "Terminal command"
-msgstr ""
+msgstr "Príkaz terminálu"
 
 #: src/appfinder-actions.c:170
 msgid "Wikipedia search"
-msgstr ""
+msgstr "Hľadanie vo Wikipédii"
 
 #: src/appfinder-actions.c:176
 msgid "Man page"
-msgstr ""
+msgstr "Manuálová stránka"
 
 #: src/appfinder-actions.c:182
 msgid "Open in file manager"
-msgstr ""
+msgstr "Otvoriť v správcovi súborov"
 
 #: src/appfinder-category-model.c:153
 msgid "All Applications"
@@ -81,7 +81,7 @@ msgstr "História príkazov"
 
 #: src/appfinder-model.c:3234
 msgid "Favorites"
-msgstr ""
+msgstr "Obľúbené"
 
 #: src/appfinder-preferences.c:315 src/appfinder-preferences.c:336
 msgid "C_lear"
@@ -89,7 +89,7 @@ msgstr "_Vyčistiť"
 
 #: src/appfinder-preferences.c:316
 msgid "This will permanently clear the custom command history."
-msgstr "Toto trvale vyčistí vlastnú históriu príkazov."
+msgstr "Toto trvale odstráni históriu vlastných príkazov."
 
 #: src/appfinder-preferences.c:317
 msgid "Are you sure you want to clear the command history?"
@@ -97,11 +97,11 @@ msgstr "Ste si istý, že chcete vyčistiť históriu príkazov?"
 
 #: src/appfinder-preferences.c:337
 msgid "This will permanently clear the recent items history."
-msgstr ""
+msgstr "Toto trvalo odstráni históriu nedávnych položiek."
 
 #: src/appfinder-preferences.c:338
 msgid "Are you sure you want to clear the recent items history?"
-msgstr ""
+msgstr "Naozaj chcete vymazať históriu nedávnych položiek?"
 
 #: src/appfinder-preferences.c:450
 msgid "_Delete"
@@ -114,7 +114,7 @@ msgstr "Vlastná akcia bude natrvalo odstránená."
 #: src/appfinder-preferences.c:452
 #, c-format
 msgid "Are you sure you want to delete action \"%s\"?"
-msgstr ""
+msgstr "Naozaj chcete odstrániť akciu „%s”?"
 
 #: src/appfinder-window.c:247 src/appfinder-preferences.glade:81
 #: data/xfce4-appfinder.desktop.in:10
@@ -177,11 +177,11 @@ msgstr "Ste si istí, že chcete skryť \"%s\"?"
 
 #: src/appfinder-window.c:1269
 msgid "Remove From Favorites"
-msgstr ""
+msgstr "Odstrániť z obľúbených"
 
 #: src/appfinder-window.c:1269
 msgid "Add to Favorites"
-msgstr ""
+msgstr "Pridať do obľúbených"
 
 #: src/appfinder-window.c:1301
 msgid "_Edit"
@@ -382,11 +382,11 @@ msgstr "Vzhľad"
 
 #: src/appfinder-preferences.glade:527
 msgid "C_lear Custom Command History"
-msgstr "Vyčistiť vlastnú históriu príkazov"
+msgstr "Vymazať históriu vlastných príkazov"
 
 #: src/appfinder-preferences.glade:539
 msgid "Clear _Recently Used Items History"
-msgstr ""
+msgstr "Vymazať nedávno použité položky"
 
 #: src/appfinder-preferences.glade:555
 msgid "History"
