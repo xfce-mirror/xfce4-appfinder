@@ -104,7 +104,7 @@ msgstr "Ez véglegesen törli a legutóbbi elemek előzményeit."
 
 #: src/appfinder-preferences.c:338
 msgid "Are you sure you want to clear the recent items history?"
-msgstr ""
+msgstr "Biztosan törölni szeretné a legutóbbi elemek előzményeit?"
 
 #: src/appfinder-preferences.c:450
 msgid "_Delete"
@@ -117,7 +117,7 @@ msgstr "Az egyéni művelet véglegesen törlődni fog."
 #: src/appfinder-preferences.c:452
 #, c-format
 msgid "Are you sure you want to delete action \"%s\"?"
-msgstr ""
+msgstr "Biztosan törölni szeretné a(z) \"%s\" műveletet?"
 
 #: src/appfinder-window.c:247 src/appfinder-preferences.glade:81
 #: data/xfce4-appfinder.desktop.in:10
@@ -180,7 +180,7 @@ msgstr "Biztosan el akarja rejteni ezt: „%s”?"
 
 #: src/appfinder-window.c:1269
 msgid "Remove From Favorites"
-msgstr ""
+msgstr "Eltávolítás a kedvencekből"
 
 #: src/appfinder-window.c:1269
 msgid "Add to Favorites"
