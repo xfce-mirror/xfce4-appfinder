@@ -184,7 +184,7 @@ msgstr "Eltávolítás a kedvencekből"
 
 #: src/appfinder-window.c:1269
 msgid "Add to Favorites"
-msgstr ""
+msgstr "Hozzáadás a kedvencekhez"
 
 #: src/appfinder-window.c:1301
 msgid "_Edit"
@@ -294,11 +294,11 @@ msgstr "Ablak középre igazítása indításkor."
 
 #: src/appfinder-preferences.glade:201
 msgid "Close window when _focus is lost"
-msgstr ""
+msgstr "Ablak bezárása, ha elveszíti a _fókuszt"
 
 #: src/appfinder-preferences.glade:206
 msgid "When the focus is lost to another window, appfinder should be closed."
-msgstr ""
+msgstr "Ha a fókusz egy másik ablakra kerül, az appfinder bezáródik."
 
 #: src/appfinder-preferences.glade:219
 msgid "Keep running _instance in the background"
@@ -333,11 +333,11 @@ msgstr "Az elemek rendezése úgy, hogy a legutóbb használ elemek mindig felü
 
 #: src/appfinder-preferences.glade:272
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Egyszeri kattintás kiválasztja és elindítja az elemeket"
 
 #: src/appfinder-preferences.glade:277
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Az elemek kiválasztása és elindítása egyetlen kattintással történik."
 
 #: src/appfinder-preferences.glade:295
 msgid "Behaviour"
@@ -369,15 +369,15 @@ msgstr "_Kategóriaikon mérete:"
 
 #: src/appfinder-preferences.glade:453
 msgid "Hide window decorations"
-msgstr ""
+msgstr "Ablakdíszítések elrejtése"
 
 #: src/appfinder-preferences.glade:458
 msgid "Hide window decorations such as title bar and borders."
-msgstr ""
+msgstr "Az ablakdíszítések – például a címsor és a szegélyek – elrejtése."
 
 #: src/appfinder-preferences.glade:473
 msgid "Show generic application _names"
-msgstr ""
+msgstr "Általános alkalmazás_nevek megjelenítése"
 
 #: src/appfinder-preferences.glade:497
 msgid "Appearance"
@@ -389,7 +389,7 @@ msgstr "_Egyéni parancselőzmények törlése"
 
 #: src/appfinder-preferences.glade:539
 msgid "Clear _Recently Used Items History"
-msgstr ""
+msgstr "Legutóbb használt elemek előzményeinek _törlése"
 
 #: src/appfinder-preferences.glade:555
 msgid "History"
@@ -401,7 +401,7 @@ msgstr "Ál_talános"
 
 #: src/appfinder-preferences.glade:598
 msgid "Custom actions are only available in collapsed mode."
-msgstr ""
+msgstr "Az egyéni műveletek csak összecsukott módban érhetők el."
 
 #: src/appfinder-preferences.glade:659
 msgid "Pattern"
@@ -453,7 +453,7 @@ msgstr "A rendszerre telepített alkalmazások keresése és indítása"
 
 #: data/xfce4-appfinder.desktop.in:12
 msgid "program;applications;bookmarks;"
-msgstr ""
+msgstr "program;alkalmazások;könyvjelzők;"
 
 #: data/xfce4-run.desktop.in:11
 msgid "Run Program..."
@@ -468,7 +468,7 @@ msgid ""
 "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
 " dash;krunner;synapse;ulauncher;launchy;gnome "
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr ""
+msgstr "alkalmazáskereső;parancs;alkalmazás;program;kereső;keresés;indító;everything;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
 msgid "Application to quickly run applications and commands"
