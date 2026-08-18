@@ -276,7 +276,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   gtk_widget_set_halign(image, GTK_ALIGN_CENTER);
   gtk_container_add (GTK_CONTAINER (hbox), image);
   gtk_widget_show (image);
-  
+
   window->entry = entry = gtk_entry_new ();
   gtk_widget_set_halign(entry, GTK_ALIGN_FILL);
   gtk_widget_set_valign (entry, GTK_ALIGN_CENTER);
@@ -2320,14 +2320,16 @@ void
 xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
                                     gboolean             expanded)
 {
+  GdkGeometry         hints;
   gint                width;
   GtkEntryCompletion *completion;
 
   APPFINDER_DEBUG ("set expand = %s", expanded ? "true" : "false");
 
-  /* update window geometry */
+  /* force window geometry */
   if (expanded)
     {
+      gtk_window_set_geometry_hints (GTK_WINDOW (window), NULL, NULL, 0);
       gtk_window_get_size (GTK_WINDOW (window), &width, NULL);
       gtk_window_resize (GTK_WINDOW (window), width, window->last_window_height);
     }
@@ -2338,6 +2340,9 @@ xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
       else
         width = xfconf_channel_get_int (window->channel, "/last/window-width", DEFAULT_WINDOW_WIDTH);
 
+      hints.max_height = -1; /* prevents manual vertical resizing */
+      hints.max_width = 32767; /* G_MAXINT causes overflow when GTK multiplies by scale factor (see issue #49) */
+      gtk_window_set_geometry_hints (GTK_WINDOW (window), NULL, &hints, GDK_HINT_MAX_SIZE);
       gtk_window_resize (GTK_WINDOW (window), width, 80 /* should be corrected by wm */);
     }
 
