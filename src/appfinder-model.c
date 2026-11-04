@@ -3248,8 +3248,7 @@ xfce_appfinder_model_fuzzy_match (const gchar *source,
 
         APPFINDER_DEBUG ("Fuzzy match: token changed, recreating patterns");
 
-        g_free (previous_token);
-        previous_token = g_strdup (token);
+        g_set_str (&previous_token, token);
         g_clear_slist (&patterns, g_free);
 
         for (index = 1; index <= token_size; index++)
