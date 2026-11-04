@@ -1928,7 +1928,7 @@ xfce_appfinder_model_menu_changed_remove (gpointer key,
 
 
 
-static gboolean
+static void
 xfce_appfinder_model_menu_changed_idle (gpointer data)
 {
   XfceAppfinderModel *model = XFCE_APPFINDER_MODEL (data);
@@ -1947,8 +1947,8 @@ xfce_appfinder_model_menu_changed_idle (gpointer data)
   GSList             *old_li;
   GError             *error = NULL;
 
-  appfinder_return_val_if_fail (GARCON_IS_MENU (menu), FALSE);
-  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
+  appfinder_return_if_fail (GARCON_IS_MENU (menu));
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
 
   APPFINDER_DEBUG ("menu changed");
 
@@ -1971,7 +1971,7 @@ xfce_appfinder_model_menu_changed_idle (gpointer data)
 
       model->menu_changed_idle_id = 0;
 
-      return FALSE;
+      return;
     }
 
   xfce_appfinder_model_collect_menu (menu, NULL, &collect_items, &collect_categories);
@@ -2061,8 +2061,6 @@ xfce_appfinder_model_menu_changed_idle (gpointer data)
   g_slist_free (tmp);
 
   model->menu_changed_idle_id = 0;
-
-  return FALSE;
 }
 
 
@@ -2076,7 +2074,7 @@ xfce_appfinder_model_menu_changed (GarconMenu         *menu,
   appfinder_return_if_fail (model->menu == menu);
 
   if (model->menu_changed_idle_id == 0)
-    model->menu_changed_idle_id = g_timeout_add (1000, xfce_appfinder_model_menu_changed_idle, model);
+    model->menu_changed_idle_id = g_timeout_add_once (1000, xfce_appfinder_model_menu_changed_idle, model);
 }
 
 
