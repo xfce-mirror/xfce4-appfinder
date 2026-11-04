@@ -46,6 +46,8 @@ gchar                      *xfce_appfinder_actions_execute       (XfceAppfinderA
                                                                   gboolean              *save_cmd,
                                                                   GError               **error);
 
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (XfceAppfinderActions, g_object_unref)
+
 G_END_DECLS
 
 #endif /* !__XFCE_APPFINDER_ACTIONS_H__ */

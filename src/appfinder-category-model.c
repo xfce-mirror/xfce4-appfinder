@@ -72,8 +72,7 @@ static gboolean           xfce_appfinder_category_model_iter_nth_child        (G
 static gboolean           xfce_appfinder_category_model_iter_parent           (GtkTreeModel             *tree_model,
                                                                                GtkTreeIter              *iter,
                                                                                GtkTreeIter              *child);
-static void               xfce_appfinder_category_category_free               (CategoryItem             *item,
-                                                                               gpointer                  user_data);
+static void               xfce_appfinder_category_category_free               (CategoryItem             *item);
 
 
 
@@ -245,8 +244,7 @@ xfce_appfinder_category_model_finalize (GObject *object)
   XfceAppfinderCategoryModel *model = XFCE_APPFINDER_CATEGORY_MODEL (object);
 
   /* remove the categories */
-  g_slist_foreach (model->categories, (GFunc) xfce_appfinder_category_category_free, NULL);
-  g_slist_free (model->categories);
+  g_slist_free_full (model->categories, (GDestroyNotify)xfce_appfinder_category_category_free);
 
   g_object_unref (G_OBJECT (model->all_applications));
 
@@ -480,8 +478,7 @@ xfce_appfinder_category_model_iter_parent (GtkTreeModel *tree_model,
 
 
 static void
-xfce_appfinder_category_category_free (CategoryItem *item,
-                                       gpointer      user_data)
+xfce_appfinder_category_category_free (CategoryItem *item)
 {
   if (item->directory != NULL)
     g_object_unref (G_OBJECT (item->directory));
@@ -532,9 +529,7 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
      gtk_tree_path_free (path);
 
      /* cleanup structures */
-     g_slist_foreach (model->categories, (GFunc)xfce_appfinder_category_category_free, NULL);
-     g_slist_free (model->categories);
-     model->categories = NULL;
+     g_clear_slist (&model->categories, (GDestroyNotify)xfce_appfinder_category_category_free);
     }
 
   appfinder_assert (model->categories == NULL);
@@ -566,8 +561,7 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
   for (li = model->categories; li != NULL; li = lnext)
     {
       /* remember the next item */
-      lnext = li->next;
-      li->next = NULL;
+      lnext = g_steal_pointer (&li->next);
 
       /* emit the "row-inserted" signal */
       ITER_INIT (iter, model->stamp, li);
@@ -623,8 +617,7 @@ xfce_appfinder_category_model_icon_theme_changed (XfceAppfinderCategoryModel *mo
 
       if (item->surface != NULL)
         {
-          cairo_surface_destroy (item->surface);
-          item->surface = NULL;
+          g_clear_pointer (&item->surface, cairo_surface_destroy);
 
           path = gtk_tree_path_new_from_indices (idx, -1);
           ITER_INIT (iter, model->stamp, li);

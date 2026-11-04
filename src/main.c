@@ -342,8 +342,7 @@ main (gint argc, gchar **argv)
   if (windows != NULL)
     {
       /* avoid calling appfinder_window_destroyed */
-      windows_destroy = windows;
-      windows = NULL;
+      windows_destroy = g_steal_pointer (&windows);
 
       /* destroy all windows */
       g_slist_foreach (windows_destroy, (GFunc) (void (*)(void)) gtk_widget_destroy, NULL);

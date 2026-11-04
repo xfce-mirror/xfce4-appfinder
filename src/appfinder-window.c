@@ -840,8 +840,7 @@ xfce_appfinder_window_view_motion_notify_event (GtkWidget           *widget,
   else if (window->hover_path != NULL)
     {
       /* moved off selection, reset cursor */
-      gtk_tree_path_free (window->hover_path);
-      window->hover_path = NULL;
+      g_clear_pointer (&window->hover_path, gtk_tree_path_free);
       gdk_window_set_cursor (event->window, NULL);
     }
 
@@ -1200,7 +1199,6 @@ xfce_appfinder_window_popup_menu_launch_action (GtkWidget           *mi,
   GdkScreen    *screen;
   const gchar  *action_name;
   gboolean      regular_command = FALSE;
-  GError       *error = NULL;
 
   action_name = g_object_get_data (G_OBJECT (mi), "action");
   screen = gtk_window_get_screen (GTK_WINDOW (window));
@@ -1217,7 +1215,7 @@ xfce_appfinder_window_popup_menu_launch_action (GtkWidget           *mi,
         }
 
       gtk_tree_model_filter_convert_iter_to_child_iter (GTK_TREE_MODEL_FILTER (child_model), &child_iter, &iter);
-      xfce_appfinder_model_execute (window->model, &child_iter, screen, &regular_command, action_name, &error);
+      xfce_appfinder_model_execute (window->model, &child_iter, screen, &regular_command, action_name, NULL);
     }
 }
 
@@ -1816,11 +1814,10 @@ xfce_appfinder_window_treeview_key_press_event (GtkWidget           *widget,
 
 
 
-static gboolean
+static void
 xfce_appfinder_window_execute_with_delay (gpointer data)
 {
   xfce_appfinder_window_execute (XFCE_APPFINDER_WINDOW (data), TRUE);
-  return FALSE;
 }
 
 
@@ -1841,7 +1838,7 @@ xfce_appfinder_window_completion_match_selected (GtkEntryCompletion *widget,
     {
       gtk_tree_model_get (GTK_TREE_MODEL (window->model), iter, XFCE_APPFINDER_MODEL_COLUMN_COMMAND, &cmd, -1);
       gtk_entry_set_text (GTK_ENTRY (window->entry), cmd);
-      g_idle_add (xfce_appfinder_window_execute_with_delay, window);
+      g_idle_add_once (xfce_appfinder_window_execute_with_delay, window);
       return TRUE;
     }
 

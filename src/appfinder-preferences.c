@@ -230,12 +230,7 @@ xfce_appfinder_preferences_finalize (GObject *object)
 {
   XfceAppfinderPreferences *preferences = XFCE_APPFINDER_PREFERENCES (object);
 
-  if (preferences->appfinder)
-    {
-      g_object_remove_weak_pointer (G_OBJECT (preferences->appfinder),
-                                    (gpointer*) &preferences->appfinder);
-      preferences->appfinder = NULL;
-    }
+  g_clear_weak_pointer (&preferences->appfinder);
 
 
   (*G_OBJECT_CLASS (xfce_appfinder_preferences_parent_class)->finalize) (object);

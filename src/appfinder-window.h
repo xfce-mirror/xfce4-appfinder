@@ -40,6 +40,9 @@ void       xfce_appfinder_window_keep_open    (XfceAppfinderWindow *window,
 
 void       xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
                                                gboolean             expanded);
+
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (XfceAppfinderWindow, g_object_unref)
+
 G_END_DECLS
 
 #endif /* !__XFCE_APPFINDER_WINDOW_H__ */

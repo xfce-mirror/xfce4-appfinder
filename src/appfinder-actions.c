@@ -267,10 +267,7 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
   appfinder_return_if_fail (steal || actions->actions == NULL);
 
   if (steal)
-    {
-      old_actions = actions->actions;
-      actions->actions = NULL;
-    }
+    old_actions = g_steal_pointer (&actions->actions);
 
   if (xfconf_channel_has_property (actions->channel, "/actions"))
     {
@@ -350,7 +347,7 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
           string = g_string_new (action->command);
           g_string_replace (string, "exo-open", "xfce-open", 0);
           g_free (action->command);
-          action->command = g_string_free (string, FALSE);
+          action->command = g_string_free_and_steal (string);
         }
 
       xfce_appfinder_actions_save (actions, TRUE);
@@ -503,11 +500,7 @@ xfce_appfinder_actions_changed (XfconfChannel        *channel,
                   g_free (action->pattern);
                   action->pattern = g_value_dup_string (value);
 
-                  if (action->regex != NULL)
-                    {
-                      g_regex_unref (action->regex);
-                      action->regex = NULL;
-                    }
+                  g_clear_pointer (&action->regex, g_regex_unref);
                 }
               else if (strcmp (field, "command") == 0
                        && G_VALUE_HOLDS_STRING (value))
@@ -577,7 +570,7 @@ xfce_appfinder_actions_expand_command (XfceAppfinderAction *action,
         }
     }
 
-  return g_string_free (string, FALSE);
+  return g_string_free_and_steal (string);
 }
 
 

@@ -61,6 +61,8 @@ void                        xfce_appfinder_category_model_icon_theme_changed (Xf
 GtkTreePath                *xfce_appfinder_category_model_find_category      (XfceAppfinderCategoryModel *model,
                                                                               const gchar                *name);
 
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (XfceAppfinderCategoryModel, g_object_unref)
+
 G_END_DECLS
 
 #endif /* !__XFCE_APPFINDER_CATEGORY_MODEL_H__ */

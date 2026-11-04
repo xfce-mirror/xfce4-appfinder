@@ -127,6 +127,8 @@ void                 xfce_appfinder_model_update_frecency        (XfceAppfinderM
 guint                xfce_appfinder_model_calculate_frecency     (guint                     frequency,
                                                                   guint64                   recency);
 
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (XfceAppfinderModel, g_object_unref)
+
 G_END_DECLS
 
 #endif /* !__XFCE_APPFINDER_MODEL_H__ */

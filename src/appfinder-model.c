@@ -255,13 +255,13 @@ xfce_appfinder_model_class_init (XfceAppfinderModelClass *klass)
                                    PROP_SORT_BY_FRECENCY,
                                    g_param_spec_boolean ("sort-by-frecency", NULL, NULL,
                                                          FALSE,
-                                                         G_PARAM_CONSTRUCT_ONLY | G_PARAM_READWRITE));
+                                                         G_PARAM_CONSTRUCT_ONLY | G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 
   g_object_class_install_property (gobject_class,
                                    PROP_GENERIC_NAMES,
                                    g_param_spec_boolean ("generic-names", NULL, NULL,
                                                          FALSE,
-                                                         G_PARAM_READWRITE | G_PARAM_READWRITE));
+                                                         G_PARAM_READWRITE | G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 
   model_signals[CATEGORIES_CHANGED] =
     g_signal_new (g_intern_static_string ("categories-changed"),
@@ -882,16 +882,14 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
   APPFINDER_DEBUG ("insert idle start");
 
   /* move the collected items "online" */
-  model->items = model->collect_items;
-  model->collect_items = NULL;
+  model->items = g_steal_pointer (&model->collect_items);
 
   /* emit notifications for all new items */
   path = gtk_tree_path_new_first ();
   for (li = model->items; li != NULL; li = li->next)
     {
       /* remember the next item */
-      lnext = li->next;
-      li->next = NULL;
+      lnext = g_steal_pointer (&li->next);
 
       /* generate the iterator */
       ITER_INIT (iter, model->stamp, li);
@@ -927,8 +925,7 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
   if (model->collect_categories != NULL)
     {
       tmp = model->categories;
-      model->categories = model->collect_categories;
-      model->collect_categories = NULL;
+      model->categories = g_steal_pointer (&model->collect_categories);
 
       xfce_appfinder_model_categories_changed (model);
 
@@ -1130,8 +1127,7 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
 
           xfce_appfinder_model_item_free (item, model);
 
-          item = item_new;
-          item_new = NULL;
+          item = g_steal_pointer (&item_new);
           item->categories = categories;
           li->data = item;
 
@@ -1453,15 +1449,10 @@ xfce_appfinder_model_history_monitor_stop (XfceAppfinderModel *model)
       g_signal_handlers_disconnect_by_func (model->history_monitor,
           G_CALLBACK (xfce_appfinder_model_history_changed), model);
 
-      g_object_unref (G_OBJECT (model->history_monitor));
-      model->history_monitor = NULL;
+      g_clear_object (&model->history_monitor);
     }
 
-  if (model->history_file != NULL)
-    {
-      g_object_unref (G_OBJECT (model->history_file));
-      model->history_file = NULL;
-    }
+  g_clear_object (&model->history_file);
 }
 
 
@@ -1548,7 +1539,6 @@ xfce_appfinder_model_favorites_changed (GFileMonitor       *monitor,
 {
   guint64      mtime;
   gchar       *filename;
-  GError      *error = NULL;
   GMappedFile *mmap;
   gboolean     is_favorite;
   ModelItem   *item;
@@ -1577,7 +1567,7 @@ xfce_appfinder_model_favorites_changed (GFileMonitor       *monitor,
 
           /* read the new file and update the commands */
           filename = g_file_get_path (file);
-          mmap = g_mapped_file_new (filename, FALSE, &error);
+          mmap = g_mapped_file_new (filename, FALSE, NULL);
           g_free (filename);
 
           if (G_LIKELY (mmap != NULL))
@@ -1631,15 +1621,10 @@ xfce_appfinder_model_favorites_monitor_stop (XfceAppfinderModel *model)
       g_signal_handlers_disconnect_by_func (model->favorites_monitor,
           G_CALLBACK (xfce_appfinder_model_favorites_changed), model);
 
-      g_object_unref (G_OBJECT (model->favorites_monitor));
-      model->favorites_monitor = NULL;
+      g_clear_object (&model->favorites_monitor);
     }
 
-  if (model->favorites_file != NULL)
-    {
-      g_object_unref (G_OBJECT (model->favorites_file));
-      model->favorites_file = NULL;
-    }
+  g_clear_object (&model->favorites_file);
 }
 
 
@@ -1942,7 +1927,7 @@ xfce_appfinder_model_menu_changed_remove (gpointer key,
 
 
 
-static gboolean
+static void
 xfce_appfinder_model_menu_changed_idle (gpointer data)
 {
   XfceAppfinderModel *model = XFCE_APPFINDER_MODEL (data);
@@ -1961,8 +1946,8 @@ xfce_appfinder_model_menu_changed_idle (gpointer data)
   GSList             *old_li;
   GError             *error = NULL;
 
-  appfinder_return_val_if_fail (GARCON_IS_MENU (menu), FALSE);
-  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
+  appfinder_return_if_fail (GARCON_IS_MENU (menu));
+  appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
 
   APPFINDER_DEBUG ("menu changed");
 
@@ -1985,7 +1970,7 @@ xfce_appfinder_model_menu_changed_idle (gpointer data)
 
       model->menu_changed_idle_id = 0;
 
-      return FALSE;
+      return;
     }
 
   xfce_appfinder_model_collect_menu (menu, NULL, &collect_items, &collect_categories);
@@ -2018,8 +2003,7 @@ xfce_appfinder_model_menu_changed_idle (gpointer data)
 
           /* steal the categories */
           g_ptr_array_unref (old_item->categories);
-          old_item->categories = item->categories;
-          item->categories = NULL;
+          old_item->categories = g_steal_pointer (&item->categories);
 
           /* this is not interesting, since those items are also updated
            * by the GarconMenuItem::changed signal, so don't touch the
@@ -2076,8 +2060,6 @@ xfce_appfinder_model_menu_changed_idle (gpointer data)
   g_slist_free (tmp);
 
   model->menu_changed_idle_id = 0;
-
-  return FALSE;
 }
 
 
@@ -2091,7 +2073,7 @@ xfce_appfinder_model_menu_changed (GarconMenu         *menu,
   appfinder_return_if_fail (model->menu == menu);
 
   if (model->menu_changed_idle_id == 0)
-    model->menu_changed_idle_id = g_timeout_add (1000, xfce_appfinder_model_menu_changed_idle, model);
+    model->menu_changed_idle_id = g_timeout_add_once (1000, xfce_appfinder_model_menu_changed_idle, model);
 }
 
 
@@ -2675,7 +2657,10 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
   /* leave if this is not a menu item */
   *is_regular_command = (item == NULL);
   if (item == NULL)
-    return FALSE;
+    {
+      g_set_error_literal (error, 0, 0, "Iter does not point to a menu item");
+      return FALSE;
+    }
 
   appfinder_return_val_if_fail (GARCON_IS_MENU_ITEM (item), FALSE);
 
@@ -2705,8 +2690,7 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
 
   escaped_command = xfce_unescape_desktop_entry_value (command);
   g_free (command);
-  command = escaped_command;
-  escaped_command = NULL;
+  command = g_steal_pointer (&escaped_command);
 
   if (garcon_menu_item_get_prefers_non_default_gpu (item))
     {
@@ -2988,26 +2972,22 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
 
       if (item->icon != NULL)
         {
-          g_object_unref (G_OBJECT (item->icon));
-          item->icon = NULL;
+          g_clear_object (&item->icon);
           item_changed = TRUE;
         }
       if (item->surface != NULL)
         {
-          cairo_surface_destroy (item->surface);
-          item->surface = NULL;
+          g_clear_pointer (&item->surface, cairo_surface_destroy);
           item_changed = TRUE;
         }
       if (item->surface_large != NULL)
         {
-          cairo_surface_destroy (item->surface_large);
-          item->surface_large = NULL;
+          g_clear_pointer (&item->surface_large, cairo_surface_destroy);
           item_changed = TRUE;
         }
       if (item->abstract != NULL)
         {
-          g_free (item->abstract);
-          item->abstract = NULL;
+          g_clear_pointer (&item->abstract, g_free);
           item_changed = TRUE;
         }
 
@@ -3050,8 +3030,7 @@ xfce_appfinder_model_generic_names_changed (XfceAppfinderModel *model)
 
       if (item->item != NULL)
         {
-          g_free (item->abstract);
-          item->abstract = NULL;
+          g_clear_pointer (&item->abstract, g_free);
 
           path = gtk_tree_path_new_from_indices (idx, -1);
           ITER_INIT (iter, model->stamp, li);
@@ -3269,10 +3248,8 @@ xfce_appfinder_model_fuzzy_match (const gchar *source,
 
         APPFINDER_DEBUG ("Fuzzy match: token changed, recreating patterns");
 
-        g_free (previous_token);
-        previous_token = g_strdup (token);
-        g_slist_free_full (patterns, g_free);
-        patterns = NULL;
+        g_set_str (&previous_token, token);
+        g_clear_slist (&patterns, g_free);
 
         for (index = 1; index <= token_size; index++)
           {
