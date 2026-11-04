@@ -37,6 +37,8 @@ GType xfce_appfinder_preferences_get_type (void);
 
 void  xfce_appfinder_preferences_show     (XfceAppfinderWindow *window);
 
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (XfceAppfinderPreferences, g_object_unref)
+
 G_END_DECLS
 
 #endif /* !__XFCE_APPFINDER_PREFERENCES_H__ */
