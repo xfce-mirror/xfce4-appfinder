@@ -840,8 +840,7 @@ xfce_appfinder_window_view_motion_notify_event (GtkWidget           *widget,
   else if (window->hover_path != NULL)
     {
       /* moved off selection, reset cursor */
-      gtk_tree_path_free (window->hover_path);
-      window->hover_path = NULL;
+      g_clear_pointer (&window->hover_path, gtk_tree_path_free);
       gdk_window_set_cursor (event->window, NULL);
     }
 

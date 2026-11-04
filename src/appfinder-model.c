@@ -1449,15 +1449,10 @@ xfce_appfinder_model_history_monitor_stop (XfceAppfinderModel *model)
       g_signal_handlers_disconnect_by_func (model->history_monitor,
           G_CALLBACK (xfce_appfinder_model_history_changed), model);
 
-      g_object_unref (G_OBJECT (model->history_monitor));
-      model->history_monitor = NULL;
+      g_clear_object (&model->history_monitor);
     }
 
-  if (model->history_file != NULL)
-    {
-      g_object_unref (G_OBJECT (model->history_file));
-      model->history_file = NULL;
-    }
+  g_clear_object (&model->history_file);
 }
 
 
@@ -1627,15 +1622,10 @@ xfce_appfinder_model_favorites_monitor_stop (XfceAppfinderModel *model)
       g_signal_handlers_disconnect_by_func (model->favorites_monitor,
           G_CALLBACK (xfce_appfinder_model_favorites_changed), model);
 
-      g_object_unref (G_OBJECT (model->favorites_monitor));
-      model->favorites_monitor = NULL;
+      g_clear_object (&model->favorites_monitor);
     }
 
-  if (model->favorites_file != NULL)
-    {
-      g_object_unref (G_OBJECT (model->favorites_file));
-      model->favorites_file = NULL;
-    }
+  g_clear_object (&model->favorites_file);
 }
 
 
@@ -2982,26 +2972,22 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
 
       if (item->icon != NULL)
         {
-          g_object_unref (G_OBJECT (item->icon));
-          item->icon = NULL;
+          g_clear_object (&item->icon);
           item_changed = TRUE;
         }
       if (item->surface != NULL)
         {
-          cairo_surface_destroy (item->surface);
-          item->surface = NULL;
+          g_clear_pointer (&item->surface, cairo_surface_destroy);
           item_changed = TRUE;
         }
       if (item->surface_large != NULL)
         {
-          cairo_surface_destroy (item->surface_large);
-          item->surface_large = NULL;
+          g_clear_pointer (&item->surface_large, cairo_surface_destroy);
           item_changed = TRUE;
         }
       if (item->abstract != NULL)
         {
-          g_free (item->abstract);
-          item->abstract = NULL;
+          g_clear_pointer (&item->abstract, g_free);
           item_changed = TRUE;
         }
 
@@ -3044,8 +3030,7 @@ xfce_appfinder_model_generic_names_changed (XfceAppfinderModel *model)
 
       if (item->item != NULL)
         {
-          g_free (item->abstract);
-          item->abstract = NULL;
+          g_clear_pointer (&item->abstract, g_free);
 
           path = gtk_tree_path_new_from_indices (idx, -1);
           ITER_INIT (iter, model->stamp, li);
@@ -3265,8 +3250,7 @@ xfce_appfinder_model_fuzzy_match (const gchar *source,
 
         g_free (previous_token);
         previous_token = g_strdup (token);
-        g_slist_free_full (patterns, g_free);
-        patterns = NULL;
+        g_clear_slist (&patterns, g_free);
 
         for (index = 1; index <= token_size; index++)
           {
