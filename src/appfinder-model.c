@@ -2657,7 +2657,10 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
   /* leave if this is not a menu item */
   *is_regular_command = (item == NULL);
   if (item == NULL)
-    return FALSE;
+    {
+      g_set_error_literal (error, 0, 0, "Iter does not point to a menu item");
+      return FALSE;
+    }
 
   appfinder_return_val_if_fail (GARCON_IS_MENU_ITEM (item), FALSE);
 
