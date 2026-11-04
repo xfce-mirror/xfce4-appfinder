@@ -1199,7 +1199,6 @@ xfce_appfinder_window_popup_menu_launch_action (GtkWidget           *mi,
   GdkScreen    *screen;
   const gchar  *action_name;
   gboolean      regular_command = FALSE;
-  GError       *error = NULL;
 
   action_name = g_object_get_data (G_OBJECT (mi), "action");
   screen = gtk_window_get_screen (GTK_WINDOW (window));
@@ -1216,7 +1215,7 @@ xfce_appfinder_window_popup_menu_launch_action (GtkWidget           *mi,
         }
 
       gtk_tree_model_filter_convert_iter_to_child_iter (GTK_TREE_MODEL_FILTER (child_model), &child_iter, &iter);
-      xfce_appfinder_model_execute (window->model, &child_iter, screen, &regular_command, action_name, &error);
+      xfce_appfinder_model_execute (window->model, &child_iter, screen, &regular_command, action_name, NULL);
     }
 }
 

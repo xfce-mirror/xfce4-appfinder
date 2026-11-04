@@ -1539,7 +1539,6 @@ xfce_appfinder_model_favorites_changed (GFileMonitor       *monitor,
 {
   guint64      mtime;
   gchar       *filename;
-  GError      *error = NULL;
   GMappedFile *mmap;
   gboolean     is_favorite;
   ModelItem   *item;
@@ -1568,7 +1567,7 @@ xfce_appfinder_model_favorites_changed (GFileMonitor       *monitor,
 
           /* read the new file and update the commands */
           filename = g_file_get_path (file);
-          mmap = g_mapped_file_new (filename, FALSE, &error);
+          mmap = g_mapped_file_new (filename, FALSE, NULL);
           g_free (filename);
 
           if (G_LIKELY (mmap != NULL))
