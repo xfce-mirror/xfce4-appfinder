@@ -500,11 +500,7 @@ xfce_appfinder_actions_changed (XfconfChannel        *channel,
                   g_free (action->pattern);
                   action->pattern = g_value_dup_string (value);
 
-                  if (action->regex != NULL)
-                    {
-                      g_regex_unref (action->regex);
-                      action->regex = NULL;
-                    }
+                  g_clear_pointer (&action->regex, g_regex_unref);
                 }
               else if (strcmp (field, "command") == 0
                        && G_VALUE_HOLDS_STRING (value))

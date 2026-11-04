@@ -232,9 +232,7 @@ xfce_appfinder_preferences_finalize (GObject *object)
 
   if (preferences->appfinder)
     {
-      g_object_remove_weak_pointer (G_OBJECT (preferences->appfinder),
-                                    (gpointer*) &preferences->appfinder);
-      preferences->appfinder = NULL;
+      g_clear_weak_pointer (&preferences->appfinder);
     }
 
 
