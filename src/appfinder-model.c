@@ -255,13 +255,13 @@ xfce_appfinder_model_class_init (XfceAppfinderModelClass *klass)
                                    PROP_SORT_BY_FRECENCY,
                                    g_param_spec_boolean ("sort-by-frecency", NULL, NULL,
                                                          FALSE,
-                                                         G_PARAM_CONSTRUCT_ONLY | G_PARAM_READWRITE));
+                                                         G_PARAM_CONSTRUCT_ONLY | G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 
   g_object_class_install_property (gobject_class,
                                    PROP_GENERIC_NAMES,
                                    g_param_spec_boolean ("generic-names", NULL, NULL,
                                                          FALSE,
-                                                         G_PARAM_READWRITE | G_PARAM_READWRITE));
+                                                         G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 
   model_signals[CATEGORIES_CHANGED] =
     g_signal_new (g_intern_static_string ("categories-changed"),
