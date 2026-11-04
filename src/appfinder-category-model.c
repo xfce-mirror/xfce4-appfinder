@@ -566,8 +566,7 @@ xfce_appfinder_category_model_set_categories (XfceAppfinderCategoryModel *model,
   for (li = model->categories; li != NULL; li = lnext)
     {
       /* remember the next item */
-      lnext = li->next;
-      li->next = NULL;
+      lnext = g_steal_pointer (&li->next);
 
       /* emit the "row-inserted" signal */
       ITER_INIT (iter, model->stamp, li);

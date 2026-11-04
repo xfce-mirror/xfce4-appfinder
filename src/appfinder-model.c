@@ -882,16 +882,14 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
   APPFINDER_DEBUG ("insert idle start");
 
   /* move the collected items "online" */
-  model->items = model->collect_items;
-  model->collect_items = NULL;
+  model->items = g_steal_pointer (&model->collect_items);
 
   /* emit notifications for all new items */
   path = gtk_tree_path_new_first ();
   for (li = model->items; li != NULL; li = li->next)
     {
       /* remember the next item */
-      lnext = li->next;
-      li->next = NULL;
+      lnext = g_steal_pointer (&li->next);
 
       /* generate the iterator */
       ITER_INIT (iter, model->stamp, li);
@@ -927,8 +925,7 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
   if (model->collect_categories != NULL)
     {
       tmp = model->categories;
-      model->categories = model->collect_categories;
-      model->collect_categories = NULL;
+      model->categories = g_steal_pointer (&model->collect_categories);
 
       xfce_appfinder_model_categories_changed (model);
 
@@ -1130,8 +1127,7 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
 
           xfce_appfinder_model_item_free (item, model);
 
-          item = item_new;
-          item_new = NULL;
+          item = g_steal_pointer (&item_new);
           item->categories = categories;
           li->data = item;
 
@@ -2018,8 +2014,7 @@ xfce_appfinder_model_menu_changed_idle (gpointer data)
 
           /* steal the categories */
           g_ptr_array_unref (old_item->categories);
-          old_item->categories = item->categories;
-          item->categories = NULL;
+          old_item->categories = g_steal_pointer (&item->categories);
 
           /* this is not interesting, since those items are also updated
            * by the GarconMenuItem::changed signal, so don't touch the
@@ -2705,8 +2700,7 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
 
   escaped_command = xfce_unescape_desktop_entry_value (command);
   g_free (command);
-  command = escaped_command;
-  escaped_command = NULL;
+  command = g_steal_pointer (&escaped_command);
 
   if (garcon_menu_item_get_prefers_non_default_gpu (item))
     {

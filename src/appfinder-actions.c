@@ -267,10 +267,7 @@ xfce_appfinder_actions_load (XfceAppfinderActions *actions,
   appfinder_return_if_fail (steal || actions->actions == NULL);
 
   if (steal)
-    {
-      old_actions = actions->actions;
-      actions->actions = NULL;
-    }
+    old_actions = g_steal_pointer (&actions->actions);
 
   if (xfconf_channel_has_property (actions->channel, "/actions"))
     {
