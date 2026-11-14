@@ -5,7 +5,7 @@
 # Translators:
 # Dejweed, 2025-2026
 # Arnold Marko <arnold.marko@gmail.com>, 2019-2021,2023
-# Kernc, 2013,2015
+# K, 2013,2015
 # Klemen Košir <klemen.kosir@kream.io>, 2013
 # Martin Srebotnjak <miles@filmsi.net>, 2022
 msgid ""
@@ -374,7 +374,7 @@ msgstr "Skrij okenske okraske, kot sta naslovna vrstica in obrobe."
 
 #: src/appfinder-preferences.glade:473
 msgid "Show generic application _names"
-msgstr "Prikaži generična _imena programov"
+msgstr "Prikaži splošna _imena programov"
 
 #: src/appfinder-preferences.glade:497
 msgid "Appearance"
@@ -430,7 +430,7 @@ msgstr "_Ukaz:"
 
 #: src/appfinder-preferences.glade:833
 msgid "Patte_rn:"
-msgstr "_Vzorec"
+msgstr "_Vzorec:"
 
 #: src/appfinder-preferences.glade:848
 msgid "_Type:"
