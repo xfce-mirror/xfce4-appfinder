@@ -1,273 +1,479 @@
-# translation of lv.po to Latvian
-# Latvian translations for xfce4-appfinder package.
-# Copyright (C) 2004-2008 Eduard Roccatello.
-# This file is distributed under the same license as the xfce4-appfinder package.
-#
-# Rihards Prieditis <rprieditis@inbox.lv>, 2008.
-# Rihards Prieditis <RPrieditis@gmail.com>, 2008.
-# Rihards Prieditis <rprieditis@gmail.com>, 2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce4-appfinder.master package.
+# 
+# Translators:
+# Rihards Priedītis <rprieditis@gmail.com>, 2009
+# Rihards Prieditis <RPrieditis@gmail.com>, 2008
+# Rihards Priedītis <rprieditis@gmail.com>, 2007-2009,2026
+# Rihards Prieditis <rprieditis@inbox.lv>, 2008
 msgid ""
 msgstr ""
-"Project-Id-Version: lv\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-21 20:43+0200\n"
-"PO-Revision-Date: 2009-10-21 13:07+0100\n"
-"Last-Translator: Rihards Prieditis <rprieditis@gmail.com>\n"
-"Language-Team: Latvian <translation-team-lv@lists.sourceforge.net>\n"
-"Language: lv\n"
+"Project-Id-Version: Xfce4-appfinder\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2026-03-04 00:54+0100\n"
+"PO-Revision-Date: 2013-07-02 20:40+0000\n"
+"Last-Translator: Rihards Priedītis <rprieditis@gmail.com>, 2007-2009,2026\n"
+"Language-Team: Latvian (http://app.transifex.com/xfce/xfce4-appfinder/language/lv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
-"2);\n"
-"X-Poedit-Language: Latvian\n"
-"X-Poedit-Country: Latvia\n"
+"Language: lv\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
 
-#: ../src/appfinder-category-model.c:108
-#, fuzzy
+#. close all windows and quit
+#: src/appfinder-gdbus.c:95
+msgid "Forced to quit"
+msgstr "Darbs beigts piespiedu kārtā"
+
+#: src/appfinder-actions.c:158
+msgid "Open URI"
+msgstr "Atvērt URI"
+
+#: src/appfinder-actions.c:164
+msgid "Terminal command"
+msgstr "Termināļa komanda"
+
+#: src/appfinder-actions.c:170
+msgid "Wikipedia search"
+msgstr "Meklēšana Vikipēdijā"
+
+#: src/appfinder-actions.c:176
+msgid "Man page"
+msgstr "Rokasgrāmatas lapa"
+
+#: src/appfinder-actions.c:182
+msgid "Open in file manager"
+msgstr "Atvērt failu pārvaldniekā"
+
+#: src/appfinder-category-model.c:153
 msgid "All Applications"
-msgstr "Lietotņu meklētājs"
+msgstr "Visas lietotnes"
 
-#: ../src/appfinder-model.c:422
+#: src/appfinder-model.c:704 src/appfinder-preferences.glade:647
 msgid "Name"
-msgstr ""
+msgstr "Nosaukums"
 
-#: ../src/appfinder-model.c:423
+#: src/appfinder-model.c:705
+msgid "Comment"
+msgstr "Komentārs"
+
+#: src/appfinder-model.c:706
 msgid "Command"
-msgstr ""
+msgstr "Komanda"
 
-#: ../src/appfinder-model.c:424
+#: src/appfinder-model.c:707
 msgid "Categories"
 msgstr "Kategorijas"
 
-#: ../src/appfinder-model.c:425
+#: src/appfinder-model.c:708
 msgid "Filename"
-msgstr ""
+msgstr "Faila nosaukums"
 
-#: ../src/appfinder-model.c:1317
-#, fuzzy
-msgid "Application has no command"
-msgstr "Lietotņu meklētājs"
+#: src/appfinder-model.c:2693
+msgid "Application or action has no command"
+msgstr "Lietotnei vai darbībai nav komandas"
 
-#: ../src/appfinder-model.c:1634
+#: src/appfinder-model.c:3210
 msgid "Commands History"
-msgstr ""
+msgstr "Komandu vēsture"
 
-#: ../src/appfinder-preferences.c:175
+#: src/appfinder-model.c:3234
+msgid "Favorites"
+msgstr "Izlase"
+
+#: src/appfinder-preferences.c:315 src/appfinder-preferences.c:336
 msgid "C_lear"
-msgstr ""
+msgstr "_Notīrīt"
 
-#: ../src/appfinder-preferences.c:176
+#: src/appfinder-preferences.c:316
 msgid "This will permanently clear the custom command history."
-msgstr ""
+msgstr "Pielāgoto komandu vēsture tiks neatgriezeniski notīrīta."
 
-#: ../src/appfinder-preferences.c:177
+#: src/appfinder-preferences.c:317
 msgid "Are you sure you want to clear the command history?"
-msgstr ""
+msgstr "Vai tiešām vēlaties notīrīt komandu vēsturi?"
 
-#: ../src/appfinder-preferences.c:287
+#: src/appfinder-preferences.c:337
+msgid "This will permanently clear the recent items history."
+msgstr "Nesen izmantoto vienumu vēsture tiks neatgriezeniski notīrīta."
+
+#: src/appfinder-preferences.c:338
+msgid "Are you sure you want to clear the recent items history?"
+msgstr "Vai tiešām vēlaties notīrīt nesen izmantoto vienumu vēsturi?"
+
+#: src/appfinder-preferences.c:450
+msgid "_Delete"
+msgstr "_Dzēst"
+
+#: src/appfinder-preferences.c:451
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "Pielāgotā darbība tiks neatgriezeniski izdzēsta."
 
-#: ../src/appfinder-preferences.c:288
+#: src/appfinder-preferences.c:452
 #, c-format
-msgid "Are you sure you want to delete pattern \"%s\"?"
-msgstr ""
+msgid "Are you sure you want to delete action \"%s\"?"
+msgstr "Vai tiešām vēlaties dzēst darbību „%s”?"
 
-#: ../src/appfinder-window.c:183 ../src/main.c:344
-#: ../src/appfinder-preferences.glade.h:3
-#: ../data/xfce4-appfinder.desktop.in.h:1
+#: src/appfinder-window.c:247 src/appfinder-preferences.glade:81
+#: data/xfce4-appfinder.desktop.in:10
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:8
 msgid "Application Finder"
 msgstr "Lietotņu meklētājs"
 
-#: ../src/appfinder-window.c:224
+#: src/appfinder-window.c:300
 msgid "Toggle view mode"
-msgstr ""
+msgstr "Pārslēgt skata režīmu"
 
-#: ../src/main.c:70
+#: src/appfinder-window.c:381
+msgid "_Preferences"
+msgstr "_Iestatījumi"
+
+#: src/appfinder-window.c:392 src/appfinder-window.c:1287
+msgid "La_unch"
+msgstr "_Palaist"
+
+#: src/appfinder-window.c:1025
+msgid "Failed to launch desktop item editor"
+msgstr "Neizdevās palaist .desktop vienumu redaktoru"
+
+#: src/appfinder-window.c:1050
+msgid "Confirm"
+msgstr "Apstiprināt"
+
+#: src/appfinder-window.c:1051
+msgid ""
+"This will permanently remove the custom desktop file from your home "
+"directory."
+msgstr "Pielāgotais .desktop fails tiks neatgriezeniski noņemts no jūsu mājas mapes."
+
+#: src/appfinder-window.c:1052
+#, c-format
+msgid "Are you sure you want to revert \"%s\"?"
+msgstr "Vai tiešām vēlaties atjaunot „%s” sākotnējo stāvokli?"
+
+#: src/appfinder-window.c:1062
+msgid "Failed to remove desktop file"
+msgstr "Neizdevās noņemt .desktop failu"
+
+#. I18N: the first %s will be replace with users' applications directory, the
+#. * second with Hidden=true
+#: src/appfinder-window.c:1095
+#, c-format
+msgid ""
+"To unhide the item you have to manually remove the desktop file from \"%s\" "
+"or open the file in the same directory and remove the line \"%s\"."
+msgstr "Lai vienumu vairs neslēptu, pašrocīgi noņemiet .desktop failu no „%s” vai atveriet failu tajā pašā mapē un izdzēsiet rindu „%s”."
+
+#: src/appfinder-window.c:1100 src/appfinder-window.c:1333
+msgid "_Hide"
+msgstr "_Paslēpt"
+
+#: src/appfinder-window.c:1101
+#, c-format
+msgid "Are you sure you want to hide \"%s\"?"
+msgstr "Vai tiešām vēlaties paslēpt „%s”?"
+
+#: src/appfinder-window.c:1269
+msgid "Remove From Favorites"
+msgstr "Noņemt no izlases"
+
+#: src/appfinder-window.c:1269
+msgid "Add to Favorites"
+msgstr "Pievienot izlasei"
+
+#: src/appfinder-window.c:1301
+msgid "_Edit"
+msgstr "_Rediģēt"
+
+#: src/appfinder-window.c:1318
+msgid "_Revert"
+msgstr "_Atjaunot sākotnējo"
+
+#: src/main.c:65
 msgid "Start in collapsed mode"
-msgstr ""
+msgstr "Startēt sakļautā režīmā"
 
-#: ../src/main.c:71
-#, fuzzy
+#: src/main.c:66
 msgid "Print version information and exit"
-msgstr "Versijas informācija"
+msgstr "Izdrukāt versijas informāciju un iziet"
 
-#: ../src/main.c:72
+#: src/main.c:67
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Aizstāt esošo pakalpojumu"
 
-#: ../src/main.c:73
+#: src/main.c:68
 msgid "Quit all instances"
-msgstr ""
+msgstr "Beigt visu instanču darbu"
 
-#: ../src/main.c:74
+#: src/main.c:69
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "Nemēģināt izmantot D-Bus pakalpojumu vai kļūt par to"
 
-#. close all windows and quit
-#: ../src/main.c:159
-msgid "Forced to quit"
-msgstr ""
+#: src/main.c:70
+msgid "Toggle window visibility of background service"
+msgstr "Pārslēgt fona pakalpojuma loga redzamību"
 
-#: ../src/main.c:346
-msgid "Unable to daemonize the process"
-msgstr ""
+#: src/main.c:71
+msgid "Run in daemon mode"
+msgstr "Palaist dēmona režīmā"
 
-#: ../src/main.c:418
-#, fuzzy, c-format
+#: src/main.c:243
+#, c-format
 msgid "Type \"%s --help\" for usage."
-msgstr "Ievadiet \"%s --help\", lai iegūtu lietošanas informāciju."
+msgstr "Lai uzzinātu, kā lietot, ievadiet „%s --help”."
 
-#: ../src/main.c:429
+#: src/main.c:254
 msgid "The Xfce development team. All rights reserved."
-msgstr "Xfce izstrādes komanda. Visas tiesības paturētas."
+msgstr "Xfce izstrādātāju komanda. Visas tiesības paturētas."
 
-#: ../src/main.c:430
+#: src/main.c:255
 #, c-format
 msgid "Please report bugs to <%s>."
-msgstr "Lūdzu ziņojiet par kļūdām uz <%s>."
+msgstr "Lūdzu, ziņojiet par kļūdām <%s>."
 
-#: ../src/appfinder-preferences.glade.h:1
-msgid "Add a new custom action."
-msgstr ""
+#: src/appfinder-preferences.glade:13
+msgid "Prefix"
+msgstr "Priedēklis"
 
-#: ../src/appfinder-preferences.glade.h:2
+#: src/appfinder-preferences.glade:16
+msgid "Regular Expression"
+msgstr "Regulārā izteiksme"
+
+#: src/appfinder-preferences.glade:37
+msgid "Very Small"
+msgstr "Ļoti mazs"
+
+#: src/appfinder-preferences.glade:40
+msgid "Smaller"
+msgstr "Mazāks"
+
+#: src/appfinder-preferences.glade:43
+msgid "Small"
+msgstr "Mazs"
+
+#: src/appfinder-preferences.glade:46
+msgid "Normal"
+msgstr "Parasts"
+
+#: src/appfinder-preferences.glade:49
+msgid "Large"
+msgstr "Liels"
+
+#: src/appfinder-preferences.glade:52
+msgid "Larger"
+msgstr "Lielāks"
+
+#: src/appfinder-preferences.glade:55
+msgid "Very Large"
+msgstr "Ļoti liels"
+
+#: src/appfinder-preferences.glade:98
+msgid "_Close"
+msgstr "_Aizvērt"
+
+#: src/appfinder-preferences.glade:114
+msgid "_Help"
+msgstr "_Palīdzība"
+
+#: src/appfinder-preferences.glade:167
+msgid "Remember last _selected category"
+msgstr "Atcerēties pēdējo _atlasīto kategoriju"
+
+#: src/appfinder-preferences.glade:183
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "Vienmēr _centrēt logu"
 
-#: ../src/appfinder-preferences.glade.h:4
-msgid "Behaviour"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:5
-msgid "C_lear Custom Command History"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:6
+#: src/appfinder-preferences.glade:188
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Startējot centrēt logu."
 
-#: ../src/appfinder-preferences.glade.h:7
-msgid "Co_mmand:"
-msgstr ""
+#: src/appfinder-preferences.glade:201
+msgid "Close window when _focus is lost"
+msgstr "Aizvērt logu, zaudējot _fokusu"
 
-#: ../src/appfinder-preferences.glade.h:8
-msgid "Custom _Actions"
-msgstr ""
+#: src/appfinder-preferences.glade:206
+msgid "When the focus is lost to another window, appfinder should be closed."
+msgstr "Kad fokuss pāriet uz citu logu, lietotņu meklētājs jāaizver."
 
-#: ../src/appfinder-preferences.glade.h:9
+#: src/appfinder-preferences.glade:219
+msgid "Keep running _instance in the background"
+msgstr "Paturēt fonā darbojošos _instanci"
+
+#: src/appfinder-preferences.glade:224
+msgid ""
+"Instead of quitting the application when the last window is closed, keep a "
+"running instance to speed up opening new windows. You might want to disable "
+"this to reduce memory usage."
+msgstr "Kad aizvērts pēdējais logs, lietotnes darbs netiek beigts, bet instance turpina darboties, lai jauni logi atvērtos ātrāk. Lai samazinātu atmiņas lietojumu, to var atspējot."
+
+#: src/appfinder-preferences.glade:237
+msgid "Single window"
+msgstr "Viens logs"
+
+#: src/appfinder-preferences.glade:242
+msgid ""
+"When an instance is running in the background, only open one window at a "
+"time."
+msgstr "Kad instance darbojas fonā, vienlaikus atvērt tikai vienu logu."
+
+#: src/appfinder-preferences.glade:255
+msgid "Sort recently used items first"
+msgstr "Nesen izmantotos vienumus kārtot pirmos"
+
+#: src/appfinder-preferences.glade:260
+msgid ""
+"Order items, such that items that are most recently used are always on the "
+"top."
+msgstr "Kārtot vienumus tā, lai nesenāk izmantotie vienmēr būtu augšā."
+
+#: src/appfinder-preferences.glade:272
+msgid "Single-click selects and launches items"
+msgstr "Vienumu atlase un palaišana ar vienu klikšķi"
+
+#: src/appfinder-preferences.glade:277
+msgid "Items are selected and launched with only a single-click."
+msgstr "Vienumi tiek atlasīti un palaisti ar vienu klikšķi."
+
+#: src/appfinder-preferences.glade:295
+msgid "Behaviour"
+msgstr "Uzvedība"
+
+#: src/appfinder-preferences.glade:330
+msgid "_View items as icons"
+msgstr "_Rādīt vienumus kā ikonas"
+
+#: src/appfinder-preferences.glade:345
+msgid "Text besi_de icons"
+msgstr "Teksts _blakus ikonām"
+
+#: src/appfinder-preferences.glade:363
+msgid "Ite_m icon size:"
+msgstr "Vienumu i_konu izmērs:"
+
+#: src/appfinder-preferences.glade:377
+msgid "Hide category pane"
+msgstr "Paslēpt kategoriju rūti"
+
+#: src/appfinder-preferences.glade:382
+msgid "Hide category panel and show all applications."
+msgstr "Paslēpt kategoriju paneli un rādīt visas lietotnes."
+
+#: src/appfinder-preferences.glade:399
+msgid "Categ_ory icon size:"
+msgstr "Kategoriju ik_onu izmērs:"
+
+#: src/appfinder-preferences.glade:453
+msgid "Hide window decorations"
+msgstr "Paslēpt logu noformējumu"
+
+#: src/appfinder-preferences.glade:458
+msgid "Hide window decorations such as title bar and borders."
+msgstr "Paslēpt logu noformējumu, piemēram, virsraksta joslu un apmales."
+
+#: src/appfinder-preferences.glade:473
+msgid "Show generic application _names"
+msgstr "Rādīt vispārīgos lietotņu _nosaukumus"
+
+#: src/appfinder-preferences.glade:497
+msgid "Appearance"
+msgstr "Izskats"
+
+#: src/appfinder-preferences.glade:527
+msgid "C_lear Custom Command History"
+msgstr "_Notīrīt pielāgoto komandu vēsturi"
+
+#: src/appfinder-preferences.glade:539
+msgid "Clear _Recently Used Items History"
+msgstr "Notīrīt _nesen izmantoto vienumu vēsturi"
+
+#: src/appfinder-preferences.glade:555
 msgid "History"
-msgstr ""
+msgstr "Vēsture"
 
-#: ../src/appfinder-preferences.glade.h:11
-#, no-c-format
+#: src/appfinder-preferences.glade:574
+msgid "_General"
+msgstr "_Vispārīgi"
+
+#: src/appfinder-preferences.glade:598
+msgid "Custom actions are only available in collapsed mode."
+msgstr "Pielāgotās darbības pieejamas tikai sakļautajā režīmā."
+
+#: src/appfinder-preferences.glade:659
+msgid "Pattern"
+msgstr "Šablons"
+
+#: src/appfinder-preferences.glade:695
+msgid "Add a new custom action."
+msgstr "Pievienot jaunu pielāgotu darbību."
+
+#: src/appfinder-preferences.glade:716
+msgid "Remove the currently selected action."
+msgstr "Noņemt pašlaik atlasīto darbību."
+
+#: src/appfinder-preferences.glade:774
+#, c-format
 msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Ja tips iestatīts uz „Priedēklis”, %s tiks aizstāts ar virkni aiz šablona, %S — ar visu ievadīto tekstu. Regulārajās izteiksmēs var izmantot \\0 un \\<num>."
 
-#: ../src/appfinder-preferences.glade.h:12
+#: src/appfinder-preferences.glade:805
+msgid "_Name:"
+msgstr "_Nosaukums:"
+
+#: src/appfinder-preferences.glade:818
+msgid "Co_mmand:"
+msgstr "Ko_manda:"
+
+#: src/appfinder-preferences.glade:833
 msgid "Patte_rn:"
-msgstr ""
+msgstr "Ša_blons:"
 
-#: ../src/appfinder-preferences.glade.h:13
-msgid "Pattern"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:14
-msgid "Prefix"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:15
-msgid "Regular Expression"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:16
-msgid "Remember last _selected category"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:17
-msgid "Remove the currently selected action."
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:18
-msgid "_General"
-msgstr ""
-
-#: ../src/appfinder-preferences.glade.h:19
+#: src/appfinder-preferences.glade:848
 msgid "_Type:"
-msgstr ""
+msgstr "_Tips:"
 
-#: ../data/xfce4-appfinder.desktop.in.h:2
+#: src/appfinder-preferences.glade:860
+msgid "_Save match in command history"
+msgstr "_Saglabāt atbilsmi komandu vēsturē"
+
+#: src/appfinder-preferences.glade:914
+msgid "Custom _Actions"
+msgstr "Pielāgotās _darbības"
+
+#: data/xfce4-appfinder.desktop.in:11
 msgid "Find and launch applications installed on your system"
-msgstr "Atrodiet un izsauciet lietotnes, kas ir instalētas jūsu sistēmā."
+msgstr "Atrast un palaist sistēmā instalētās lietotnes"
 
-#: ../data/xfce4-run.desktop.in.h:1
+#: data/xfce4-appfinder.desktop.in:12
+msgid "program;applications;bookmarks;"
+msgstr "programma;lietotnes;grāmatzīmes;program;applications;bookmarks;"
+
+#: data/xfce4-run.desktop.in:11
 msgid "Run Program..."
-msgstr ""
+msgstr "Palaist programmu..."
 
-#: ../data/xfce4-run.desktop.in.h:2
-msgid "Run a program"
-msgstr ""
+#: data/xfce4-run.desktop.in:12
+msgid "Enter a command you want to launch"
+msgstr "Ievadiet komandu, ko vēlaties palaist"
 
-#~ msgid "[MENUFILE]"
-#~ msgstr "[IZVĒLNESFAILS]"
+#: data/xfce4-run.desktop.in:13
+msgid ""
+"run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
+" dash;krunner;synapse;ulauncher;launchy;gnome "
+"do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr "palaist;komanda;lietotne;programma;meklētājs;meklēt;palaidējs;run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
-#~ msgid "Unable to initialize GTK+."
-#~ msgstr "Neizdevās inicializēt GTK+."
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
+msgid "Application to quickly run applications and commands"
+msgstr "Lietotne ātrai lietotņu un komandu palaišanai"
 
-#~ msgid "Failed to connect to xfconf daemon. Reason: %s"
-#~ msgstr "Neizdevās savienoties ar xfconf dēmonu. Iemesls: %s"
-
-#~ msgid "Failed to connect to xfconf daemon."
-#~ msgstr "Neizdevās savienoties ar xfconf dēmonu."
-
-#~ msgid "Search"
-#~ msgstr "Meklēt"
-
-#~ msgid "C_lose after launch"
-#~ msgstr "Ai_zvērt pēc izpildīšanas"
-
-#~ msgid "Launch"
-#~ msgstr "Izpildīt"
-
-#~ msgid "Could not load menu from %s"
-#~ msgstr "Nevarēja ielādēt izvēlni no %s"
-
-#~ msgid "All"
-#~ msgstr "Viss"
-
-#, fuzzy
-#~ msgid "Failed to execute command \"%s\"."
-#~ msgstr "Nevarēja izpildīt lietotni %s."
-
-#~ msgid "<b>Categories:</b> %s"
-#~ msgstr "<b>Kategorijas:</b> %s"
-
-#~ msgid "<b>Command:</b> %s"
-#~ msgstr "<b>Komanda:</b> %s"
-
-#~ msgid "Could not load system menu"
-#~ msgstr "Nevarēja ielādēt sistēmas izvēlni"
-
-#~ msgid "Could not execute application %s. Reason: %s"
-#~ msgstr "Nevarēja izpildīt lietotni %s. Iemesls: %s"
-
-#~ msgid "Could not load menu from %s. Reason: %s"
-#~ msgstr "Nevarēja ielādēt izvēlni no %s. Iemesls: %s"
-
-#~ msgid "Filter"
-#~ msgstr "Filtrs"
-
-#, fuzzy
-#~ msgid "Find and launch applications installed on the system"
-#~ msgstr "Atrast lietotni, kura ir instalēta sistēmā."
-
-#~ msgid "Find applications installed on the system."
-#~ msgstr "Atrast lietotni, kura ir instalēta sistēmā."
-
-#~ msgid "Failed to open display"
-#~ msgstr "Neizdevās atvērt displeju"
+#: data/org.xfce.xfce4-appfinder.appdata.xml.in:13
+msgid ""
+"The application finder is a tool to find and launch installed applications "
+"on your system and quickly execute commands. It can also be used to quickly "
+"add launchers to the Xfce Panel by dragging an item from the view and drop "
+"it on the panel."
+msgstr "Lietotņu meklētājs ir rīks, ar ko atrast un palaist sistēmā instalētās lietotnes un ātri izpildīt komandas. Ar to var arī ātri pievienot palaidējus Xfce panelim, velkot vienumu no skata un nometot to uz paneļa."
