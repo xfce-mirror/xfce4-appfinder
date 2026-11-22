@@ -55,7 +55,7 @@ msgstr "Naam"
 
 #: src/appfinder-model.c:705
 msgid "Comment"
-msgstr "Commentaar"
+msgstr "Opmerking"
 
 #: src/appfinder-model.c:706
 msgid "Command"
@@ -67,7 +67,7 @@ msgstr "Categorieën"
 
 #: src/appfinder-model.c:708
 msgid "Filename"
-msgstr "Bestandnaam"
+msgstr "Bestandsnaam"
 
 #: src/appfinder-model.c:2693
 msgid "Application or action has no command"
@@ -203,7 +203,7 @@ msgstr "Vervang de bestaande dienst"
 
 #: src/main.c:68
 msgid "Quit all instances"
-msgstr "Sluit alle onderdelen"
+msgstr "Sluit alle exemplaren"
 
 #: src/main.c:69
 msgid "Do not try to use or become a D-Bus service"
@@ -297,7 +297,7 @@ msgstr "Wanneer de scherpstelling overgaat naar een ander venster, moet appfinde
 
 #: src/appfinder-preferences.glade:219
 msgid "Keep running _instance in the background"
-msgstr "Houd de toepassing actief als achtergronddienst"
+msgstr "Behoud actief e_xemplaar op de achtergrond"
 
 #: src/appfinder-preferences.glade:224
 msgid ""
@@ -314,7 +314,7 @@ msgstr "Enkel venster"
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
-msgstr "Open slechts één venster per keer, indien er een instantie op de achtergrond draait."
+msgstr "Open slechts één venster per keer, indien er een exemplaar op de achtergrond draait."
 
 #: src/appfinder-preferences.glade:255
 msgid "Sort recently used items first"
@@ -440,7 +440,7 @@ msgstr "_Sla vondst op in opdrachtgeschiedenis"
 
 #: src/appfinder-preferences.glade:914
 msgid "Custom _Actions"
-msgstr "Aangepaste acties"
+msgstr "_Aangepaste acties"
 
 #: data/xfce4-appfinder.desktop.in:11
 msgid "Find and launch applications installed on your system"
