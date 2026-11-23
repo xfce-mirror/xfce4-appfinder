@@ -76,7 +76,7 @@ msgstr "Historia mandātōrum"
 
 #: src/appfinder-model.c:3234
 msgid "Favorites"
-msgstr "Praedīlēcta"
+msgstr "Praeposita"
 
 #: src/appfinder-preferences.c:315 src/appfinder-preferences.c:336
 msgid "C_lear"
@@ -104,12 +104,12 @@ msgstr "_Dēlē"
 
 #: src/appfinder-preferences.c:451
 msgid "The custom action will be deleted permanently."
-msgstr ""
+msgstr "Actiō ā tē creāta in perpetuum dēlēbitur."
 
 #: src/appfinder-preferences.c:452
 #, c-format
 msgid "Are you sure you want to delete action \"%s\"?"
-msgstr ""
+msgstr "Certusne es? Vīsne actiōnem \"%s\" dēlēre?"
 
 #: src/appfinder-window.c:247 src/appfinder-preferences.glade:81
 #: data/xfce4-appfinder.desktop.in:10
@@ -119,7 +119,7 @@ msgstr "Quaesītor applicātiōnum"
 
 #: src/appfinder-window.c:300
 msgid "Toggle view mode"
-msgstr "Mūtā modum vīsūs"
+msgstr "Alternā modum vīsūs"
 
 #: src/appfinder-window.c:381
 msgid "_Preferences"
@@ -131,7 +131,7 @@ msgstr "_Incipe"
 
 #: src/appfinder-window.c:1025
 msgid "Failed to launch desktop item editor"
-msgstr ""
+msgstr "Editōrium reī mēnsae initiārī nōn potuit"
 
 #: src/appfinder-window.c:1050
 msgid "Confirm"
@@ -141,16 +141,16 @@ msgstr "Cōnfīrmā"
 msgid ""
 "This will permanently remove the custom desktop file from your home "
 "directory."
-msgstr ""
+msgstr "Hoc plicam mēnsae ā tē creātam ex directōriō domesticō in perpetuum removēbit."
 
 #: src/appfinder-window.c:1052
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr ""
+msgstr "Certusne es? Vīsne \"%s\" restituere?"
 
 #: src/appfinder-window.c:1062
 msgid "Failed to remove desktop file"
-msgstr ""
+msgstr "Plica mēnsae removērī nōn potuit"
 
 #. I18N: the first %s will be replace with users' applications directory, the
 #. * second with Hidden=true
@@ -159,7 +159,7 @@ msgstr ""
 msgid ""
 "To unhide the item you have to manually remove the desktop file from \"%s\" "
 "or open the file in the same directory and remove the line \"%s\"."
-msgstr ""
+msgstr "Ut rem iterum ostendās, plicam mēnsae ex \"%s\" manū removēre dēbēs aut plicam in eōdem directōriō aperīre et lineam \"%s\" dēlēre."
 
 #: src/appfinder-window.c:1100 src/appfinder-window.c:1333
 msgid "_Hide"
@@ -168,15 +168,15 @@ msgstr "_Cēlā"
 #: src/appfinder-window.c:1101
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr ""
+msgstr "Certusne es? Vīsne \"%s\" cēlāre?"
 
 #: src/appfinder-window.c:1269
 msgid "Remove From Favorites"
-msgstr ""
+msgstr "Ē praepositīs remove"
 
 #: src/appfinder-window.c:1269
 msgid "Add to Favorites"
-msgstr ""
+msgstr "Praepositīs adde"
 
 #: src/appfinder-window.c:1301
 msgid "_Edit"
@@ -184,35 +184,35 @@ msgstr "_Mūtā"
 
 #: src/appfinder-window.c:1318
 msgid "_Revert"
-msgstr ""
+msgstr "_Restitue"
 
 #: src/main.c:65
 msgid "Start in collapsed mode"
-msgstr ""
+msgstr "Incipe in modō contractō"
 
 #: src/main.c:66
 msgid "Print version information and exit"
-msgstr ""
+msgstr "Ostende īnfōrmātiōnem dē versiōne et exī"
 
 #: src/main.c:67
 msgid "Replace the existing service"
-msgstr ""
+msgstr "Officium iam exsistēns novō commūtā"
 
 #: src/main.c:68
 msgid "Quit all instances"
-msgstr ""
+msgstr "Omnia exemplāria claude"
 
 #: src/main.c:69
 msgid "Do not try to use or become a D-Bus service"
-msgstr ""
+msgstr "Nōlī cōnārī officiō D-Bus ūtī aut officium D-Bus fierī"
 
 #: src/main.c:70
 msgid "Toggle window visibility of background service"
-msgstr ""
+msgstr "Alternā vīsibilitātem fenestrae officiī in occultō operantis"
 
 #: src/main.c:71
 msgid "Run in daemon mode"
-msgstr ""
+msgstr "Operāre modō daemōnis"
 
 #: src/main.c:243
 #, c-format
@@ -274,19 +274,19 @@ msgstr "Au_xilium"
 
 #: src/appfinder-preferences.glade:167
 msgid "Remember last _selected category"
-msgstr ""
+msgstr "Mementō catēgoriae novissimē _sēlēctae"
 
 #: src/appfinder-preferences.glade:183
 msgid "Always c_enter the window"
-msgstr ""
+msgstr "Semper fenestram in _mediō pōne"
 
 #: src/appfinder-preferences.glade:188
 msgid "Center the window on startup."
-msgstr ""
+msgstr "Pōne fenestram in mediō initiō."
 
 #: src/appfinder-preferences.glade:201
 msgid "Close window when _focus is lost"
-msgstr ""
+msgstr "Claude _fenestram cum nōn iam actuōsa est."
 
 #: src/appfinder-preferences.glade:206
 msgid "When the focus is lost to another window, appfinder should be closed."
@@ -401,7 +401,7 @@ msgstr "Fōrma"
 
 #: src/appfinder-preferences.glade:695
 msgid "Add a new custom action."
-msgstr ""
+msgstr "Adde novam actiōnem ā tē creātam."
 
 #: src/appfinder-preferences.glade:716
 msgid "Remove the currently selected action."
@@ -437,7 +437,7 @@ msgstr ""
 
 #: src/appfinder-preferences.glade:914
 msgid "Custom _Actions"
-msgstr ""
+msgstr "_Actiōnēs ā tē creātae"
 
 #: data/xfce4-appfinder.desktop.in:11
 msgid "Find and launch applications installed on your system"
@@ -445,7 +445,7 @@ msgstr ""
 
 #: data/xfce4-appfinder.desktop.in:12
 msgid "program;applications;bookmarks;"
-msgstr ""
+msgstr "programma;applicātiōnēs;signācula;"
 
 #: data/xfce4-run.desktop.in:11
 msgid "Run Program..."
