@@ -290,82 +290,82 @@ msgstr "Claude _fenestram cum nōn iam actuōsa est."
 
 #: src/appfinder-preferences.glade:206
 msgid "When the focus is lost to another window, appfinder should be closed."
-msgstr ""
+msgstr "Cum alia fenestra actuōsa fit, Appfinder claudī dēbet."
 
 #: src/appfinder-preferences.glade:219
 msgid "Keep running _instance in the background"
-msgstr ""
+msgstr "Permitte ut exemplar _in occultō operārī pergat."
 
 #: src/appfinder-preferences.glade:224
 msgid ""
 "Instead of quitting the application when the last window is closed, keep a "
 "running instance to speed up opening new windows. You might want to disable "
 "this to reduce memory usage."
-msgstr ""
+msgstr "Potius quam applicātiōnem claudās, cum ultima fenestra clauditur, exemplar operāns servā, ut novās fenestrās celerius aperīre possīs. Fortasse hanc optiōnem vetāre velīs, ut minōre memoriā ūtāris."
 
 #: src/appfinder-preferences.glade:237
 msgid "Single window"
-msgstr ""
+msgstr "Ūna fenestra"
 
 #: src/appfinder-preferences.glade:242
 msgid ""
 "When an instance is running in the background, only open one window at a "
 "time."
-msgstr ""
+msgstr "Cum exemplar in occultō operātur, ūnam tantum fenestram eōdem tempore aperī."
 
 #: src/appfinder-preferences.glade:255
 msgid "Sort recently used items first"
-msgstr ""
+msgstr "Rēs nūper adhibitās prīmō locō dīgere"
 
 #: src/appfinder-preferences.glade:260
 msgid ""
 "Order items, such that items that are most recently used are always on the "
 "top."
-msgstr ""
+msgstr "Dīgere rēs ita ut rēs novissimē adhibitae semper in summā parte sint."
 
 #: src/appfinder-preferences.glade:272
 msgid "Single-click selects and launches items"
-msgstr ""
+msgstr "Sī semel clic facis, rēs sēliguntur et initiāntur"
 
 #: src/appfinder-preferences.glade:277
 msgid "Items are selected and launched with only a single-click."
-msgstr ""
+msgstr "Rēs sēliguntur et initiāntur, sī semel tantum clic facis."
 
 #: src/appfinder-preferences.glade:295
 msgid "Behaviour"
-msgstr ""
+msgstr "Modus operandī"
 
 #: src/appfinder-preferences.glade:330
 msgid "_View items as icons"
-msgstr ""
+msgstr "_Rēs ut iconēs ostende"
 
 #: src/appfinder-preferences.glade:345
 msgid "Text besi_de icons"
-msgstr ""
+msgstr "Textus iu_xta iconēs"
 
 #: src/appfinder-preferences.glade:363
 msgid "Ite_m icon size:"
-msgstr ""
+msgstr "Magnitūdō iconis reī:"
 
 #: src/appfinder-preferences.glade:377
 msgid "Hide category pane"
-msgstr ""
+msgstr "Cēlā tabulam catēgoriārum"
 
 #: src/appfinder-preferences.glade:382
 msgid "Hide category panel and show all applications."
-msgstr ""
+msgstr "Cēlā tabulam catēgoriārum et ostende omnēs applicātiōnēs."
 
 #: src/appfinder-preferences.glade:399
 msgid "Categ_ory icon size:"
-msgstr ""
+msgstr "Magnitūdō iconum catēgoriārum:"
 
 #: src/appfinder-preferences.glade:453
 msgid "Hide window decorations"
-msgstr ""
+msgstr "Cēlā ōrnāmenta fenestrae"
 
 #: src/appfinder-preferences.glade:458
 msgid "Hide window decorations such as title bar and borders."
-msgstr ""
+msgstr "Cēlā ōrnāmenta fenestrae, velut fasciam titulī et marginēs."
 
 #: src/appfinder-preferences.glade:473
 msgid "Show generic application _names"
