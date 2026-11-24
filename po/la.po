@@ -369,7 +369,7 @@ msgstr "Cēlā ōrnāmenta fenestrae, velut fasciam titulī et marginēs."
 
 #: src/appfinder-preferences.glade:473
 msgid "Show generic application _names"
-msgstr ""
+msgstr "Ostende _nōmina generālia applicātiōnum"
 
 #: src/appfinder-preferences.glade:497
 msgid "Appearance"
@@ -393,7 +393,7 @@ msgstr "_Generalis"
 
 #: src/appfinder-preferences.glade:598
 msgid "Custom actions are only available in collapsed mode."
-msgstr ""
+msgstr "Actiōnēs ā tē creātae tantum in modō contractō adhibērī possunt."
 
 #: src/appfinder-preferences.glade:659
 msgid "Pattern"
@@ -405,7 +405,7 @@ msgstr "Adde novam actiōnem ā tē creātam."
 
 #: src/appfinder-preferences.glade:716
 msgid "Remove the currently selected action."
-msgstr ""
+msgstr "Removē actiōnem nunc sēlēctam."
 
 #: src/appfinder-preferences.glade:774
 #, c-format
@@ -413,7 +413,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr ""
+msgstr "Sī genus \"praefīxum\" sēlēctum est, locō %s textus quī post fōrmulam est pōnētur, locō %S autem tōtus textus intrōductus pōnētur. In expressiōnibus regulāribus \\0 et \\<num> adhibēre potes."
 
 #: src/appfinder-preferences.glade:805
 msgid "_Name:"
@@ -433,7 +433,7 @@ msgstr "_Genus:"
 
 #: src/appfinder-preferences.glade:860
 msgid "_Save match in command history"
-msgstr ""
+msgstr "_Servā textum congruentem in historiā mandātōrum"
 
 #: src/appfinder-preferences.glade:914
 msgid "Custom _Actions"
@@ -441,7 +441,7 @@ msgstr "_Actiōnēs ā tē creātae"
 
 #: data/xfce4-appfinder.desktop.in:11
 msgid "Find and launch applications installed on your system"
-msgstr ""
+msgstr "Quaere et incipe applicātiōnēs in systemate tuō īnstallātās"
 
 #: data/xfce4-appfinder.desktop.in:12
 msgid "program;applications;bookmarks;"
@@ -453,18 +453,18 @@ msgstr "Exsequere Programma…"
 
 #: data/xfce4-run.desktop.in:12
 msgid "Enter a command you want to launch"
-msgstr ""
+msgstr "Scrībe mandātum quod vīs incipere"
 
 #: data/xfce4-run.desktop.in:13
 msgid ""
 "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
 " dash;krunner;synapse;ulauncher;launchy;gnome "
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr ""
+msgstr "run;command;application;program;finder;search;launcher;exsequere;mandātum;applicātiō;programma;quaerere;iaculātor;everything;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
 
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
 msgid "Application to quickly run applications and commands"
-msgstr ""
+msgstr "Applicātiō ad applicātiōnēs et mandāta celeriter exsequenda"
 
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:13
 msgid ""
@@ -472,4 +472,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr ""
+msgstr "Quaesītor applicātiōnum est apparātus ad applicātiōnēs in systemate tuō īnstallātās quaerendās et incipiendās atque ad mandāta celeriter exsequenda. Etiam ad iactātōrēs celeriter addendōs ad lingulam Xfce adhibērī potest, rem trahendō et in lingulā dēpōnendō."
