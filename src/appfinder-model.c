@@ -126,6 +126,8 @@ struct _XfceAppfinderModel
 
   gint                   stamp;
 
+  /* The window filter supplies the contents of this reserved first row. */
+  GSList                 action_row;
   GSList                *items;
   GHashTable            *items_hash;
 
@@ -139,6 +141,7 @@ struct _XfceAppfinderModel
   GarconMenu            *menu;
   guint                  menu_changed_idle_id;
 
+  GdkPixbuf             *command_icon;
   cairo_surface_t       *command_surface;
   cairo_surface_t       *command_surface_large;
   GarconMenuDirectory   *command_category;
@@ -442,6 +445,7 @@ xfce_appfinder_model_finalize (GObject *object)
   g_hash_table_destroy (model->favorites_hash);
   g_hash_table_destroy (model->frecencies_hash);
 
+  g_clear_object (&model->command_icon);
   cairo_surface_destroy (model->command_surface);
   cairo_surface_destroy (model->command_surface_large);
   g_object_unref (G_OBJECT (model->command_category));
@@ -510,6 +514,19 @@ xfce_appfinder_model_get_column_type (GtkTreeModel *tree_model,
 
 
 static gboolean
+xfce_appfinder_model_get_iter_at_index (XfceAppfinderModel *model,
+                                        GtkTreeIter        *iter,
+                                        gint               index)
+{
+  iter->stamp = model->stamp;
+  iter->user_data = index == 0 ? &model->action_row : g_slist_nth (model->items, index - 1);
+
+  return (iter->user_data != NULL);
+}
+
+
+
+static gboolean
 xfce_appfinder_model_get_iter (GtkTreeModel *tree_model,
                                GtkTreeIter  *iter,
                                GtkTreePath  *path)
@@ -519,10 +536,24 @@ xfce_appfinder_model_get_iter (GtkTreeModel *tree_model,
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
   appfinder_return_val_if_fail (gtk_tree_path_get_depth (path) > 0, FALSE);
 
-  iter->stamp = model->stamp;
-  iter->user_data = g_slist_nth (model->items, gtk_tree_path_get_indices (path)[0]);
+  return xfce_appfinder_model_get_iter_at_index (model, iter, gtk_tree_path_get_indices (path)[0]);
+}
 
-  return (iter->user_data != NULL);
+
+
+gboolean
+xfce_appfinder_model_is_action (XfceAppfinderModel *model,
+                                const GtkTreeIter  *iter)
+{
+  return iter->user_data == &model->action_row;
+}
+
+
+
+static GtkTreePath *
+xfce_appfinder_model_item_path (gint index)
+{
+  return gtk_tree_path_new_from_indices (index + 1, -1);
 }
 
 
@@ -537,12 +568,15 @@ xfce_appfinder_model_get_path (GtkTreeModel *tree_model,
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), NULL);
   appfinder_return_val_if_fail (iter->stamp == model->stamp, NULL);
 
+  if (xfce_appfinder_model_is_action (model, iter))
+    return gtk_tree_path_new_first ();
+
   /* determine the index of the iter */
   idx = g_slist_position (model->items, iter->user_data);
   if (G_UNLIKELY (idx < 0))
     return NULL;
 
-  return gtk_tree_path_new_from_indices (idx, -1);
+  return xfce_appfinder_model_item_path (idx);
 }
 
 
@@ -560,6 +594,22 @@ xfce_appfinder_model_get_menu_item_name (XfceAppfinderModel *model,
     name = garcon_menu_item_get_name (item);
 
   return name;
+}
+
+
+
+gchar *
+xfce_appfinder_model_format_abstract (const gchar *title,
+                                      const gchar *description,
+                                      gboolean     compact)
+{
+  if (!IS_STRING (description))
+    return g_markup_printf_escaped ("<b>%s</b>", title);
+
+  if (compact)
+    return g_markup_printf_escaped ("<b>%s</b> <span alpha=\"70%%\">&#8212; %s</span>", title, description);
+
+  return g_markup_printf_escaped ("<b>%s</b>\n<span alpha=\"70%%\">%s</span>", title, description);
 }
 
 
@@ -585,6 +635,18 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
   appfinder_return_if_fail (XFCE_IS_APPFINDER_MODEL (model));
   appfinder_return_if_fail (iter->stamp == model->stamp);
 
+  if (xfce_appfinder_model_is_action (model, iter))
+    {
+      g_value_init (value, xfce_appfinder_model_get_column_type (tree_model, column));
+      if (column == XFCE_APPFINDER_MODEL_COLUMN_ICON)
+        g_value_set_boxed (value, model->command_surface);
+      else if (column == XFCE_APPFINDER_MODEL_COLUMN_ICON_LARGE)
+        g_value_set_boxed (value, model->command_surface_large);
+      else if (column == XFCE_APPFINDER_MODEL_COLUMN_PIXBUF)
+        g_value_set_object (value, model->command_icon);
+      return;
+    }
+
   item = ITER_GET_DATA (iter);
   appfinder_return_if_fail ((item->item == NULL && item->command != NULL)
                     || (item->item != NULL && GARCON_IS_MENU_ITEM (item->item)));
@@ -599,15 +661,8 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
               name = xfce_appfinder_model_get_menu_item_name (model, item->item);
               comment = garcon_menu_item_get_comment (item->item);
 
-              if (comment != NULL && strlen (comment) > 0)
-                {
-                  if (model->icon_size < XFCE_APPFINDER_ICON_SIZE_SMALL)
-                    item->abstract = g_markup_printf_escaped ("<b>%s</b> <span alpha=\"70%%\">&#8212; %s</span>", name, comment);
-                  else
-                    item->abstract = g_markup_printf_escaped ("<b>%s</b>\n<span alpha=\"70%%\">%s</span>", name, comment);
-                }
-              else
-                item->abstract = g_markup_printf_escaped ("<b>%s</b>", name);
+              item->abstract = xfce_appfinder_model_format_abstract (name, comment,
+                  model->icon_size < XFCE_APPFINDER_ICON_SIZE_SMALL);
             }
           else if (item->command != NULL)
             {
@@ -738,7 +793,8 @@ xfce_appfinder_model_get_value (GtkTreeModel *tree_model,
 
     case XFCE_APPFINDER_MODEL_COLUMN_ACTION_ITEMS:
       g_value_init (value, G_TYPE_POINTER);
-      g_value_set_pointer (value, garcon_menu_item_get_actions (item->item));
+      if (item->item != NULL)
+        g_value_set_pointer (value, garcon_menu_item_get_actions (item->item));
       break;
 
     default:
@@ -753,10 +809,12 @@ static gboolean
 xfce_appfinder_model_iter_next (GtkTreeModel *tree_model,
                                 GtkTreeIter  *iter)
 {
-  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (tree_model), FALSE);
-  appfinder_return_val_if_fail (iter->stamp == XFCE_APPFINDER_MODEL (tree_model)->stamp, FALSE);
+  XfceAppfinderModel *model = XFCE_APPFINDER_MODEL (tree_model);
 
-  iter->user_data = g_slist_next (iter->user_data);
+  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (tree_model), FALSE);
+  appfinder_return_val_if_fail (iter->stamp == model->stamp, FALSE);
+
+  iter->user_data = xfce_appfinder_model_is_action (model, iter) ? model->items : g_slist_next (iter->user_data);
   return (iter->user_data != NULL);
 }
 
@@ -771,14 +829,7 @@ xfce_appfinder_model_iter_children (GtkTreeModel *tree_model,
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
 
-  if (G_LIKELY (parent == NULL && model->items != NULL))
-    {
-      iter->stamp = model->stamp;
-      iter->user_data = model->items;
-      return TRUE;
-    }
-
-  return FALSE;
+  return parent == NULL && xfce_appfinder_model_get_iter_at_index (model, iter, 0);
 }
 
 
@@ -800,7 +851,7 @@ xfce_appfinder_model_iter_n_children (GtkTreeModel *tree_model,
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), 0);
 
-  return (iter == NULL) ? g_slist_length (model->items) : 0;
+  return (iter == NULL) ? 1 + g_slist_length (model->items) : 0;
 }
 
 
@@ -815,14 +866,7 @@ xfce_appfinder_model_iter_nth_child (GtkTreeModel *tree_model,
 
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
 
-  if (G_LIKELY (parent != NULL))
-    {
-      iter->stamp = model->stamp;
-      iter->user_data = g_slist_nth (model->items, n);
-      return (iter->user_data != NULL);
-    }
-
-  return FALSE;
+  return parent == NULL && xfce_appfinder_model_get_iter_at_index (model, iter, n);
 }
 
 
@@ -885,7 +929,7 @@ xfce_appfinder_model_collect_idle (gpointer user_data)
   model->items = g_steal_pointer (&model->collect_items);
 
   /* emit notifications for all new items */
-  path = gtk_tree_path_new_first ();
+  path = xfce_appfinder_model_item_path (0);
   for (li = model->items; li != NULL; li = li->next)
     {
       /* remember the next item */
@@ -1149,7 +1193,7 @@ xfce_appfinder_model_item_changed (GarconMenuItem     *menu_item,
 
           g_object_unref (G_OBJECT (menu_item));
 
-          path = gtk_tree_path_new_from_indices (idx, -1);
+          path = xfce_appfinder_model_item_path (idx);
           ITER_INIT (iter, model->stamp, li);
           gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
           gtk_tree_path_free (path);
@@ -1221,7 +1265,7 @@ xfce_appfinder_model_history_remove_items (XfceAppfinderModel *model)
 
       model->items = g_slist_delete_link (model->items, li);
 
-      path = gtk_tree_path_new_from_indices (idx--, -1);
+      path = xfce_appfinder_model_item_path (idx--);
       gtk_tree_model_row_deleted (GTK_TREE_MODEL (model), path);
       gtk_tree_path_free (path);
 
@@ -1257,7 +1301,7 @@ xfce_appfinder_model_reset_frecency (XfceAppfinderModel *model)
 
       if (item->item != NULL)
         {
-          path = gtk_tree_path_new_from_indices (idx, -1);
+          path = xfce_appfinder_model_item_path (idx);
           ITER_INIT (iter, model->stamp, li);
           gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
           gtk_tree_path_free (path);
@@ -1354,7 +1398,7 @@ xfce_appfinder_model_history_insert (XfceAppfinderModel *model,
   APPFINDER_DEBUG ("insert %s in the model", command);
 
   /* emit the insert-row signal */
-  path = gtk_tree_path_new_from_indices (idx, -1);
+  path = xfce_appfinder_model_item_path (idx);
   ITER_INIT (iter, model->stamp, lp);
   gtk_tree_model_row_inserted (GTK_TREE_MODEL (model), path, &iter);
   gtk_tree_path_free (path);
@@ -1596,7 +1640,7 @@ xfce_appfinder_model_favorites_changed (GFileMonitor       *monitor,
                       item->is_favorite = is_favorite;
 
                       /* let model know what happened */
-                      path = gtk_tree_path_new_from_indices (idx, -1);
+                      path = xfce_appfinder_model_item_path (idx);
                       ITER_INIT (iter, model->stamp, li);
                       gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
                       gtk_tree_path_free (path);
@@ -1920,7 +1964,7 @@ xfce_appfinder_model_menu_changed_remove (gpointer key,
   xfce_appfinder_model_item_free (li->data, model);
   model->items = g_slist_delete_link (model->items, li);
 
-  path = gtk_tree_path_new_from_indices (position, -1);
+  path = xfce_appfinder_model_item_path (position);
   gtk_tree_model_row_deleted (GTK_TREE_MODEL (model), path);
   gtk_tree_path_free (path);
 }
@@ -2026,7 +2070,7 @@ xfce_appfinder_model_menu_changed_idle (gpointer data)
           APPFINDER_DEBUG ("insert %s in the model", desktop_id);
 
           /* emit the insert-row signal */
-          path = gtk_tree_path_new_from_indices (idx, -1);
+          path = xfce_appfinder_model_item_path (idx);
           ITER_INIT (iter, model->stamp, lp);
           gtk_tree_model_row_inserted (GTK_TREE_MODEL (model), path, &iter);
           gtk_tree_path_free (path);
@@ -2410,7 +2454,7 @@ xfce_appfinder_model_update_frecency (XfceAppfinderModel *model,
           desktop_id = NULL;
 
           /* update model */
-          path = gtk_tree_path_new_from_indices (idx, -1);
+          path = xfce_appfinder_model_item_path (idx);
           ITER_INIT (iter, model->stamp, li);
           gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
           gtk_tree_path_free (path);
@@ -2465,8 +2509,6 @@ xfce_appfinder_model_get_or_create (gboolean sort_by_frecency,
     }
   else
     {
-      GdkPixbuf *pixbuf;
-
       model = model_instance = g_object_new (XFCE_TYPE_APPFINDER_MODEL,
                                              "sort-by-frecency", sort_by_frecency,
                                              "scale-factor", scale_factor,
@@ -2474,24 +2516,10 @@ xfce_appfinder_model_get_or_create (gboolean sort_by_frecency,
 
       xfce_appfinder_model_icon_theme_changed (model);
 
-      /* load default icons for command */
-      pixbuf = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_EXECUTE, model->icon_size, scale_factor);
-      if (pixbuf != NULL)
-        {
-          model->command_surface = gdk_cairo_surface_create_from_pixbuf (pixbuf, scale_factor, NULL);
-          g_object_unref (G_OBJECT (pixbuf));
-        }
-      pixbuf = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_EXECUTE, XFCE_APPFINDER_ICON_SIZE_48, scale_factor);
-      if (pixbuf != NULL)
-        {
-          model->command_surface_large = gdk_cairo_surface_create_from_pixbuf (pixbuf, scale_factor, NULL);
-          g_object_unref (G_OBJECT (pixbuf));
-        }
-
       /* only start loading data once model is fully initialized */
       model->collect_thread = g_thread_new ("Collector", xfce_appfinder_model_collect_thread, model);
 
-      g_object_add_weak_pointer (G_OBJECT (model), (gpointer) &model);
+      g_object_add_weak_pointer (G_OBJECT (model), (gpointer) &model_instance);
       appfinder_refcount_debug_add (G_OBJECT (model), "appfinder-model");
       APPFINDER_DEBUG ("allocate new model");
     }
@@ -2558,6 +2586,9 @@ xfce_appfinder_model_get_visible (XfceAppfinderModel        *model,
   appfinder_return_val_if_fail (category == NULL || GARCON_IS_MENU_DIRECTORY (category), FALSE);
   appfinder_return_val_if_fail (GARCON_IS_MENU_DIRECTORY (model->command_category), FALSE);
 
+  if (xfce_appfinder_model_is_action (model, iter))
+    return FALSE;
+
   item = ITER_GET_DATA (iter);
 
   if (item->item != NULL)
@@ -2614,6 +2645,9 @@ xfce_appfinder_model_get_visible_command (XfceAppfinderModel *model,
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
   appfinder_return_val_if_fail (iter->stamp == model->stamp, FALSE);
 
+  if (xfce_appfinder_model_is_action (model, iter))
+    return FALSE;
+
   item = ITER_GET_DATA (iter);
 
   /*
@@ -2650,6 +2684,9 @@ xfce_appfinder_model_execute (XfceAppfinderModel  *model,
   appfinder_return_val_if_fail (XFCE_IS_APPFINDER_MODEL (model), FALSE);
   appfinder_return_val_if_fail (iter->stamp == model->stamp, FALSE);
   appfinder_return_val_if_fail (GDK_IS_SCREEN (screen), FALSE);
+
+  if (xfce_appfinder_model_is_action (model, iter))
+    return FALSE;
 
   mitem = ITER_GET_DATA (iter);
   item = mitem->item;
@@ -2950,8 +2987,9 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
   pixbuf = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_EXECUTE, model->icon_size, model->scale_factor);
   if (pixbuf != NULL)
     {
+      g_clear_object (&model->command_icon);
+      model->command_icon = pixbuf;
       model->command_surface = gdk_cairo_surface_create_from_pixbuf (pixbuf, model->scale_factor, NULL);
-      g_object_unref (G_OBJECT (pixbuf));
     }
 
   pixbuf = xfce_appfinder_model_load_pixbuf (XFCE_APPFINDER_ICON_NAME_EXECUTE, XFCE_APPFINDER_ICON_SIZE_48, model->scale_factor);
@@ -2959,6 +2997,13 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
     {
       model->command_surface_large = gdk_cairo_surface_create_from_pixbuf (pixbuf, model->scale_factor, NULL);
       g_object_unref (G_OBJECT (pixbuf));
+    }
+
+  if (xfce_appfinder_model_get_iter_at_index (model, &iter, 0))
+    {
+      path = gtk_tree_path_new_first ();
+      gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
+      gtk_tree_path_free (path);
     }
 
   /* update the model items */
@@ -2996,7 +3041,7 @@ xfce_appfinder_model_icon_theme_changed (XfceAppfinderModel *model)
 
       if (item_changed)
         {
-          path = gtk_tree_path_new_from_indices (idx, -1);
+          path = xfce_appfinder_model_item_path (idx);
           ITER_INIT (iter, model->stamp, li);
           gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
           gtk_tree_path_free (path);
@@ -3029,7 +3074,7 @@ xfce_appfinder_model_generic_names_changed (XfceAppfinderModel *model)
         {
           g_clear_pointer (&item->abstract, g_free);
 
-          path = gtk_tree_path_new_from_indices (idx, -1);
+          path = xfce_appfinder_model_item_path (idx);
           ITER_INIT (iter, model->stamp, li);
           gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
           gtk_tree_path_free (path);
@@ -3126,7 +3171,7 @@ xfce_appfinder_model_favorite_toggle (XfceAppfinderModel  *model,
               desktop_id = NULL;
 
               /* update model */
-              path = gtk_tree_path_new_from_indices (idx, -1);
+              path = xfce_appfinder_model_item_path (idx);
               ITER_INIT (iter, model->stamp, li);
               gtk_tree_model_row_changed (GTK_TREE_MODEL (model), path, &iter);
               gtk_tree_path_free (path);

@@ -78,6 +78,13 @@ XfceAppfinderModel  *xfce_appfinder_model_get_or_create          (gboolean      
 
 GSList              *xfce_appfinder_model_get_categories         (XfceAppfinderModel        *model);
 
+gboolean             xfce_appfinder_model_is_action              (XfceAppfinderModel        *model,
+                                                                  const GtkTreeIter         *iter);
+
+gchar               *xfce_appfinder_model_format_abstract        (const gchar               *title,
+                                                                  const gchar               *description,
+                                                                  gboolean                   compact) G_GNUC_MALLOC;
+
 gboolean             xfce_appfinder_model_get_visible            (XfceAppfinderModel        *model,
                                                                   const GtkTreeIter         *iter,
                                                                   const GarconMenuDirectory *category,
