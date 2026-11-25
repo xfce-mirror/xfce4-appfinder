@@ -106,6 +106,11 @@ static void       xfce_appfinder_window_property_changed              (XfconfCha
 static gboolean   xfce_appfinder_window_item_visible                  (GtkTreeModel                *model,
                                                                        GtkTreeIter                 *iter,
                                                                        gpointer                     data);
+static void       xfce_appfinder_window_item_value                    (GtkTreeModel                *model,
+                                                                       GtkTreeIter                 *iter,
+                                                                       GValue                      *value,
+                                                                       gint                         column,
+                                                                       gpointer                     data);
 static void       xfce_appfinder_window_item_changed                  (XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_row_activated                 (XfceAppfinderWindow         *window);
 static void       xfce_appfinder_window_icon_theme_changed            (XfceAppfinderWindow         *window);
@@ -119,10 +124,6 @@ static gint       xfce_appfinder_window_sort_items                    (GtkTreeMo
 static void       xfce_appfinder_window_update_frecency               (XfceAppfinderWindow         *window,
                                                                        GtkTreeModel                *model,
                                                                        const gchar                 *uri);
-static gint       xfce_appfinder_window_sort_items_frecency           (GtkTreeModel                *model,
-                                                                       GtkTreeIter                 *a,
-                                                                       GtkTreeIter                 *b,
-                                                                       gpointer                     data);
 static gchar    **xfce_appfinder_parse_envp                           (gchar                      **cmd);
 static guint      xfce_appfinder_get_navigation_key                   (GdkEventKey                 *event);
 
@@ -144,6 +145,13 @@ struct _XfceAppfinderWindow
   XfceAppfinderCategoryModel *category_model;
 
   XfceAppfinderActions       *actions;
+  gchar                      *action_command;
+  gchar                      *action_title;
+  gchar                      *action_icon_text;
+  gchar                      *action_markup;
+  gboolean                    action_markup_compact;
+  gboolean                    action_save;
+  gboolean                    sort_by_frecency;
 
   GtkIconTheme               *icon_theme;
 
@@ -176,6 +184,12 @@ struct _XfceAppfinderWindow
 static const GtkTargetEntry target_list[] =
 {
   { "text/uri-list", 0, 0 }
+};
+
+enum
+{
+  XFCE_APPFINDER_WINDOW_COLUMN_ICON_TEXT = XFCE_APPFINDER_MODEL_N_COLUMNS,
+  XFCE_APPFINDER_WINDOW_N_COLUMNS,
 };
 
 enum {
@@ -224,7 +238,6 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   GtkEntryCompletion *completion;
   GtkCellRenderer    *cell;
   gint                integer;
-  gboolean            sort_by_frecency;
   gint                scale_factor;
 
   scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
@@ -239,8 +252,8 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
   xfconf_g_property_bind (window->channel, "/category-icon-size", G_TYPE_UINT,
                           G_OBJECT (window->category_model), "icon-size");
 
-  sort_by_frecency = xfconf_channel_get_bool (window->channel, "/sort-by-frecency", FALSE);
-  window->model = xfce_appfinder_model_get_or_create (sort_by_frecency, scale_factor);
+  window->sort_by_frecency = xfconf_channel_get_bool (window->channel, "/sort-by-frecency", FALSE);
+  window->model = xfce_appfinder_model_get_or_create (window->sort_by_frecency, scale_factor);
   xfconf_g_property_bind (window->channel, "/item-icon-size", G_TYPE_UINT,
                           G_OBJECT (window->model), "icon-size");
 
@@ -302,7 +315,7 @@ xfce_appfinder_window_init (XfceAppfinderWindow *window)
 
   window->completion = completion = gtk_entry_completion_new ();
   gtk_entry_completion_set_model (completion, GTK_TREE_MODEL (window->model));
-  gtk_entry_completion_set_match_func (completion, xfce_appfinder_window_completion_match_func, window, NULL);
+  gtk_entry_completion_set_match_func (completion, xfce_appfinder_window_completion_match_func, NULL, NULL);
   g_object_set (G_OBJECT (completion), "text-column", XFCE_APPFINDER_MODEL_COLUMN_COMMAND, NULL);
   gtk_entry_completion_set_popup_single_match (completion, TRUE);
   gtk_entry_completion_set_inline_completion (completion, TRUE);
@@ -465,6 +478,10 @@ xfce_appfinder_window_finalize (GObject *object)
 
   if (window->actions != NULL)
     g_object_unref (G_OBJECT (window->actions));
+  g_free (window->action_command);
+  g_free (window->action_title);
+  g_free (window->action_icon_text);
+  g_free (window->action_markup);
 
   if (window->filter_category != NULL)
     g_object_unref (G_OBJECT (window->filter_category));
@@ -667,7 +684,6 @@ static void
 xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
 {
   gint                   width = 0, padding = 0;
-  gint                   text_column_idx, column_idx = 0;
   XfceAppfinderIconSize  icon_size;
   GtkOrientation         item_orientation = GTK_ORIENTATION_VERTICAL;
   GList                 *renderers;
@@ -727,16 +743,15 @@ xfce_appfinder_window_set_item_width (XfceAppfinderWindow *window)
   gtk_icon_view_set_item_width (GTK_ICON_VIEW (window->view), width);
 
   renderers = gtk_cell_layout_get_cells (GTK_CELL_LAYOUT (window->view));
-  text_column_idx = gtk_icon_view_get_text_column (GTK_ICON_VIEW (window->view));
 
-  for (li = renderers; li != NULL; li = li->next, column_idx++) {
+  for (li = renderers; li != NULL; li = li->next) {
     /* work around the yalign = 0.0 gtk uses */
     if (item_orientation == GTK_ORIENTATION_HORIZONTAL) {
       g_object_set (li->data, "yalign", 0.5, NULL);
     }
 
     /* do not wrap when text beside icons is enabled */
-    if (column_idx == text_column_idx) {
+    if (GTK_IS_CELL_RENDERER_TEXT (li->data)) {
       g_object_set (li->data, "ellipsize",
                     item_orientation == GTK_ORIENTATION_HORIZONTAL ?
                     PANGO_ELLIPSIZE_END : PANGO_ELLIPSIZE_NONE, NULL);
@@ -871,17 +886,24 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
 
   if (window->filter_model == NULL)
     {
+      GType column_types[XFCE_APPFINDER_WINDOW_N_COLUMNS];
+
+      for (gint i = 0; i < XFCE_APPFINDER_MODEL_N_COLUMNS; i++)
+        column_types[i] = gtk_tree_model_get_column_type (GTK_TREE_MODEL (window->model), i);
+      column_types[XFCE_APPFINDER_WINDOW_COLUMN_ICON_TEXT] = G_TYPE_STRING;
+
       window->filter_model = gtk_tree_model_filter_new (GTK_TREE_MODEL (window->model), NULL);
       gtk_tree_model_filter_set_visible_func (GTK_TREE_MODEL_FILTER (window->filter_model), xfce_appfinder_window_item_visible, window, NULL);
+      gtk_tree_model_filter_set_modify_func (GTK_TREE_MODEL_FILTER (window->filter_model),
+                                             XFCE_APPFINDER_WINDOW_N_COLUMNS, column_types,
+                                             xfce_appfinder_window_item_value, window, NULL);
     }
 
   if (window->sort_model == NULL)
     {
       window->sort_model = gtk_tree_model_sort_new_with_model (GTK_TREE_MODEL (window->filter_model));
-      if (xfconf_channel_get_bool (window->channel, "/sort-by-frecency", FALSE))
-        gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items_frecency, window->entry, NULL);
-      else
-        gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model), xfce_appfinder_window_sort_items, window->entry, NULL);
+      gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (window->sort_model),
+                                               xfce_appfinder_window_sort_items, window, NULL);
     }
 
   if (icon_view)
@@ -890,7 +912,7 @@ xfce_appfinder_window_view (XfceAppfinderWindow *window)
 
       gtk_icon_view_set_selection_mode (GTK_ICON_VIEW (view), GTK_SELECTION_SINGLE);
       gtk_icon_view_set_pixbuf_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_PIXBUF);
-      gtk_icon_view_set_text_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_TITLE);
+      gtk_icon_view_set_text_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_WINDOW_COLUMN_ICON_TEXT);
       gtk_icon_view_set_tooltip_column (GTK_ICON_VIEW (view), XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP);
       gtk_icon_view_set_row_spacing (GTK_ICON_VIEW (view), 0);
       xfce_appfinder_window_set_item_width (window);
@@ -1450,19 +1472,81 @@ xfce_appfinder_window_completion_match_func (GtkEntryCompletion *completion,
                                              GtkTreeIter        *iter,
                                              gpointer            data)
 {
+  GtkWidget *entry;
   const gchar *text;
 
-  XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (data);
-
   appfinder_return_val_if_fail (GTK_IS_ENTRY_COMPLETION (completion), FALSE);
-  appfinder_return_val_if_fail (XFCE_IS_APPFINDER_WINDOW (data), FALSE);
-  appfinder_return_val_if_fail (GTK_TREE_MODEL (window->model)
-      == gtk_entry_completion_get_model (completion), FALSE);
+
+  entry = gtk_entry_completion_get_entry (completion);
+  if (entry == NULL)
+    return FALSE;
 
   /* don't use the casefolded key generated by gtk */
-  text = gtk_entry_get_text (GTK_ENTRY (window->entry));
+  text = gtk_entry_get_text (GTK_ENTRY (entry));
 
-  return xfce_appfinder_model_get_visible_command (window->model, iter, text);
+  return xfce_appfinder_model_get_visible_command (
+      XFCE_APPFINDER_MODEL (gtk_entry_completion_get_model (completion)), iter, text);
+}
+
+
+
+static void
+xfce_appfinder_window_actions_changed (XfceAppfinderWindow *window)
+{
+  if (gtk_widget_get_visible (window->paned))
+    xfce_appfinder_window_entry_changed (window);
+}
+
+
+
+static void
+xfce_appfinder_window_ensure_actions (XfceAppfinderWindow *window)
+{
+  if (window->actions == NULL)
+    {
+      window->actions = xfce_appfinder_actions_get ();
+      g_signal_connect_object (window->actions, "changed",
+                               G_CALLBACK (xfce_appfinder_window_actions_changed), window, G_CONNECT_SWAPPED);
+    }
+}
+
+
+
+static void
+xfce_appfinder_window_update_action (XfceAppfinderWindow *window,
+                                     const gchar         *text)
+{
+  const gchar *name = NULL;
+  gchar       *command = NULL;
+  GError      *error = NULL;
+
+  if (IS_STRING (text))
+    {
+      xfce_appfinder_window_ensure_actions (window);
+      command = xfce_appfinder_actions_match (window->actions, text, &name, &window->action_save, &error);
+      g_clear_error (&error);
+      if (!IS_STRING (command))
+        g_clear_pointer (&command, g_free);
+    }
+
+  if (command == NULL)
+    name = NULL;
+  else if (!IS_STRING (name))
+    name = _("Custom Action");
+
+  if (g_strcmp0 (window->action_command, command) == 0
+      && g_strcmp0 (window->action_title, name) == 0)
+    {
+      g_free (command);
+      return;
+    }
+
+  g_free (window->action_command);
+  g_free (window->action_title);
+  g_clear_pointer (&window->action_icon_text, g_free);
+  g_clear_pointer (&window->action_markup, g_free);
+  window->action_command = command;
+  window->action_title = g_strdup (name);
 }
 
 
@@ -1481,6 +1565,9 @@ xfce_appfinder_window_entry_changed_idle (gpointer data)
 
   if (gtk_widget_get_visible (window->paned))
     {
+      gboolean had_action = window->action_command != NULL;
+      gboolean reset_icon_model;
+
       g_free (window->filter_text);
 
       if (IS_STRING (text))
@@ -1494,10 +1581,34 @@ xfce_appfinder_window_entry_changed_idle (gpointer data)
           window->filter_text = NULL;
         }
 
-      APPFINDER_DEBUG ("refilter entry");
+      xfce_appfinder_window_update_action (window, text);
+      reset_icon_model = had_action && window->action_command == NULL && GTK_IS_ICON_VIEW (window->view);
 
+      /* GtkIconView can unref the wrong iterator when its first row is removed. */
+      if (reset_icon_model)
+        gtk_icon_view_set_model (GTK_ICON_VIEW (window->view), NULL);
+
+      APPFINDER_DEBUG ("refilter entry");
       gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (window->filter_model));
       APPFINDER_DEBUG ("FILTER TEXT: %s\n", window->filter_text);
+
+      if (reset_icon_model)
+        gtk_icon_view_set_model (GTK_ICON_VIEW (window->view), window->sort_model);
+
+      if (window->action_command != NULL)
+        {
+          path = gtk_tree_path_new_first ();
+          if (GTK_IS_TREE_VIEW (window->view))
+            gtk_tree_view_set_cursor (GTK_TREE_VIEW (window->view), path, NULL, FALSE);
+          else
+            {
+              gtk_icon_view_select_path (GTK_ICON_VIEW (window->view), path);
+              gtk_icon_view_set_cursor (GTK_ICON_VIEW (window->view), path, NULL, FALSE);
+              gtk_icon_view_scroll_to_path (GTK_ICON_VIEW (window->view), path, FALSE, 0, 0);
+            }
+          gtk_tree_path_free (path);
+          return FALSE;
+        }
 
       if (GTK_IS_TREE_VIEW (window->view))
         {
@@ -1579,6 +1690,18 @@ xfce_appfinder_window_entry_changed (XfceAppfinderWindow *window)
 
 
 static void
+xfce_appfinder_window_apply_pending_search (XfceAppfinderWindow *window)
+{
+  if (window->idle_entry_changed_id != 0)
+    {
+      g_source_remove (window->idle_entry_changed_id);
+      xfce_appfinder_window_entry_changed_idle (window);
+    }
+}
+
+
+
+static void
 xfce_appfinder_window_entry_activate (GtkEditable         *entry,
                                       XfceAppfinderWindow *window)
 {
@@ -1588,6 +1711,8 @@ xfce_appfinder_window_entry_activate (GtkEditable         *entry,
 
   if (gtk_widget_get_visible (window->paned))
     {
+      xfce_appfinder_window_apply_pending_search (window);
+
       if (GTK_IS_TREE_VIEW (window->view))
         {
           selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (window->view));
@@ -1730,7 +1855,8 @@ xfce_appfinder_window_drag_data_get (GtkWidget           *widget,
     {
       uris[1] = NULL;
       gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_URI, &uris[0], -1);
-      gtk_selection_data_set_uris (data, uris);
+      if (uris[0] != NULL)
+        gtk_selection_data_set_uris (data, uris);
       g_free (uris[0]);
     }
 }
@@ -1952,8 +2078,7 @@ static void
 xfce_appfinder_window_preferences (XfceAppfinderWindow *window)
 {
   /* preload the actions, to make sure there are default values */
-  if (window->actions == NULL)
-    window->actions = xfce_appfinder_actions_get ();
+  xfce_appfinder_window_ensure_actions (window);
 
   xfce_appfinder_preferences_show (window);
 }
@@ -2024,11 +2149,68 @@ xfce_appfinder_window_item_visible (GtkTreeModel *model,
   XfceAppfinderWindow *window = XFCE_APPFINDER_WINDOW (data);
   const gchar *filter_string = gtk_entry_get_text (GTK_ENTRY (window->entry));
 
+  if (xfce_appfinder_model_is_action (window->model, iter))
+    return window->action_command != NULL;
+
   return xfce_appfinder_model_get_visible (XFCE_APPFINDER_MODEL (model),
                                            iter,
                                            window->filter_category,
                                            filter_string,
                                            window->filter_text);
+}
+
+
+
+static void
+xfce_appfinder_window_item_value (GtkTreeModel *model,
+                                  GtkTreeIter  *iter,
+                                  GValue       *value,
+                                  gint          column,
+                                  gpointer      data)
+{
+  XfceAppfinderWindow *window = data;
+  GtkTreeIter child_iter;
+  guint icon_size;
+  gboolean compact;
+
+  gtk_tree_model_filter_convert_iter_to_child_iter (GTK_TREE_MODEL_FILTER (model), &child_iter, iter);
+  if (xfce_appfinder_model_is_action (window->model, &child_iter))
+    {
+      switch (column)
+        {
+        case XFCE_APPFINDER_MODEL_COLUMN_TITLE:
+          g_value_set_static_string (value, window->action_title);
+          return;
+        case XFCE_APPFINDER_MODEL_COLUMN_ABSTRACT:
+        case XFCE_APPFINDER_MODEL_COLUMN_TOOLTIP:
+          g_object_get (window->model, "icon-size", &icon_size, NULL);
+          compact = icon_size < XFCE_APPFINDER_ICON_SIZE_SMALL;
+          if (window->action_markup == NULL || window->action_markup_compact != compact)
+            {
+              g_free (window->action_markup);
+              window->action_markup = xfce_appfinder_model_format_abstract (window->action_title,
+                  window->action_command, compact);
+              window->action_markup_compact = compact;
+            }
+          g_value_set_static_string (value, window->action_markup);
+          return;
+        case XFCE_APPFINDER_WINDOW_COLUMN_ICON_TEXT:
+          if (window->action_icon_text == NULL)
+            window->action_icon_text = g_strconcat (window->action_title, "\n", window->action_command, NULL);
+          g_value_set_static_string (value, window->action_icon_text);
+          return;
+        case XFCE_APPFINDER_MODEL_COLUMN_COMMAND:
+          g_value_set_static_string (value, window->action_command);
+          return;
+        }
+    }
+
+  if (column == XFCE_APPFINDER_WINDOW_COLUMN_ICON_TEXT)
+    column = XFCE_APPFINDER_MODEL_COLUMN_TITLE;
+
+  /* The filter initializes the value before calling the modify function. */
+  g_value_unset (value);
+  gtk_tree_model_get_value (GTK_TREE_MODEL (window->model), &child_iter, column, value);
 }
 
 
@@ -2109,16 +2291,47 @@ xfce_appfinder_window_icon_theme_changed (XfceAppfinderWindow *window)
 
 
 static gboolean
+xfce_appfinder_window_spawn_command (const gchar *text,
+                                     GdkScreen   *screen,
+                                     GError     **error)
+{
+  gboolean  succeed = FALSE;
+  gchar    *expanded;
+  gchar   **argv = NULL;
+  gchar   **envp;
+
+  if (!IS_STRING (text))
+    return FALSE;
+
+  expanded = xfce_expand_variables (text, NULL);
+  APPFINDER_DEBUG ("spawn \"%s\"", expanded);
+
+  envp = xfce_appfinder_parse_envp (&expanded);
+  if (G_LIKELY (g_shell_parse_argv (expanded, NULL, &argv, error)))
+    succeed = xfce_spawn (screen, NULL, argv, envp,
+                          G_SPAWN_SEARCH_PATH, FALSE,
+                          gtk_get_current_event_time (), NULL,
+                          TRUE, error);
+
+  g_strfreev (argv);
+  g_strfreev (envp);
+  g_free (expanded);
+
+  return succeed;
+}
+
+
+
+static gboolean
 xfce_appfinder_window_execute_command (const gchar          *text,
                                        GdkScreen            *screen,
                                        XfceAppfinderWindow  *window,
                                        gboolean              only_custom_cmd,
                                        gboolean             *save_cmd,
-                                       GError              **error)
+                                       GError               **error)
 {
   gboolean  succeed = FALSE;
-  gchar    *action_cmd = NULL;
-  gchar    *expanded;
+  gchar    *action_cmd;
 
   appfinder_return_val_if_fail (error != NULL && *error == NULL, FALSE);
   appfinder_return_val_if_fail (GDK_IS_SCREEN (screen), FALSE);
@@ -2126,44 +2339,10 @@ xfce_appfinder_window_execute_command (const gchar          *text,
   if (!IS_STRING (text))
     return TRUE;
 
-  if (window->actions == NULL)
-    window->actions = xfce_appfinder_actions_get ();
-
-  /* try to match a custom action */
-  action_cmd = xfce_appfinder_actions_execute (window->actions, text, save_cmd, error);
-  if (*error != NULL)
-    return FALSE;
-  else if (action_cmd != NULL)
-    text = action_cmd;
-  else if (only_custom_cmd)
-    return FALSE;
-
-  if (IS_STRING (text))
-    {
-      gchar **argv = NULL;
-      gchar **envp;
-
-      /* expand variables */
-      expanded = xfce_expand_variables (text, NULL);
-
-      /* spawn the command */
-      APPFINDER_DEBUG ("spawn \"%s\"", expanded);
-
-      envp = xfce_appfinder_parse_envp (&expanded);
-
-      if (G_LIKELY (g_shell_parse_argv (expanded, NULL, &argv, error)))
-        {
-          succeed = xfce_spawn (screen, NULL, argv, envp,
-                                G_SPAWN_SEARCH_PATH, FALSE,
-                                gtk_get_current_event_time (), NULL,
-                                TRUE, error);
-        }
-
-      g_strfreev (argv);
-      g_strfreev (envp);
-
-      g_free (expanded);
-    }
+  xfce_appfinder_window_ensure_actions (window);
+  action_cmd = xfce_appfinder_actions_match (window->actions, text, NULL, save_cmd, error);
+  if (*error == NULL && (action_cmd != NULL || !only_custom_cmd))
+    succeed = xfce_appfinder_window_spawn_command (action_cmd != NULL ? action_cmd : text, screen, error);
 
   g_free (action_cmd);
 
@@ -2199,6 +2378,8 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
   screen = gtk_window_get_screen (GTK_WINDOW (window));
   if (gtk_widget_get_visible (window->paned))
     {
+      xfce_appfinder_window_apply_pending_search (window);
+
       if (!gtk_widget_get_sensitive (window->button_launch))
         {
           only_custom_cmd = TRUE;
@@ -2208,8 +2389,6 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
       if (xfce_appfinder_window_view_get_selected (window, &model, &iter))
         {
           child_model = model;
-          gtk_tree_model_get (model, &iter, XFCE_APPFINDER_MODEL_COLUMN_URI, &uri, -1);
-
           if (GTK_IS_TREE_MODEL_SORT (model))
             {
               gtk_tree_model_sort_convert_iter_to_child_iter (GTK_TREE_MODEL_SORT (model), &child_iter, &iter);
@@ -2218,6 +2397,16 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
             }
 
           gtk_tree_model_filter_convert_iter_to_child_iter (GTK_TREE_MODEL_FILTER (child_model), &child_iter, &iter);
+          if (xfce_appfinder_model_is_action (window->model, &child_iter))
+            {
+              result = xfce_appfinder_window_spawn_command (window->action_command, screen, &error);
+              if (result && window->action_save)
+                result = xfce_appfinder_model_save_command (window->model,
+                    gtk_entry_get_text (GTK_ENTRY (window->entry)), &error);
+              goto execution_complete;
+            }
+
+          gtk_tree_model_get (GTK_TREE_MODEL (window->model), &child_iter, XFCE_APPFINDER_MODEL_COLUMN_URI, &uri, -1);
           result = xfce_appfinder_model_execute (window->model, &child_iter, screen, &regular_command, NULL, &error);
 
           xfce_appfinder_window_update_frecency (window, model, uri);
@@ -2250,6 +2439,7 @@ xfce_appfinder_window_execute (XfceAppfinderWindow *window,
         }
     }
 
+execution_complete:
   if (!only_custom_cmd)
     {
       gtk_entry_set_icon_from_icon_name (GTK_ENTRY (window->entry), GTK_ENTRY_ICON_PRIMARY,
@@ -2367,79 +2557,85 @@ xfce_appfinder_window_set_expanded (XfceAppfinderWindow *window,
 
 
 static gint
-xfce_appfinder_window_sort_items (GtkTreeModel *model,
-                                  GtkTreeIter  *a,
-                                  GtkTreeIter  *b,
-                                  gpointer      data)
+xfce_appfinder_window_compare_frecency (GtkTreeModel *model,
+                                       GtkTreeIter  *a,
+                                       GtkTreeIter  *b)
 {
-  gchar        *normalized, *casefold, *title_a, *title_b, *found;
-  GtkWidget    *entry = GTK_WIDGET (data);
-  gint          result = -1;
+  guint   a_freq, b_freq;
+  guint64 a_rec, b_rec;
+  guint   a_res, b_res;
 
-  appfinder_return_val_if_fail (GTK_IS_ENTRY (entry), 0);
+  gtk_tree_model_get (model, a,
+                      XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY, &a_freq,
+                      XFCE_APPFINDER_MODEL_COLUMN_RECENCY, &a_rec, -1);
+  gtk_tree_model_get (model, b,
+                      XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY, &b_freq,
+                      XFCE_APPFINDER_MODEL_COLUMN_RECENCY, &b_rec, -1);
 
-  normalized = g_utf8_normalize (gtk_entry_get_text (GTK_ENTRY (entry)), -1, G_NORMALIZE_ALL);
-  casefold = g_utf8_casefold (normalized, -1);
-  g_free (normalized);
+  a_res = xfce_appfinder_model_calculate_frecency (a_freq, a_rec);
+  b_res = xfce_appfinder_model_calculate_frecency (b_freq, b_rec);
 
-  gtk_tree_model_get (model, a, XFCE_APPFINDER_MODEL_COLUMN_TITLE, &title_a, -1);
-  normalized = g_utf8_normalize (title_a, -1, G_NORMALIZE_ALL);
-  g_free (title_a);
-  title_a = g_utf8_casefold (normalized, -1);
-  g_free (normalized);
-
-  gtk_tree_model_get (model, b, XFCE_APPFINDER_MODEL_COLUMN_TITLE, &title_b, -1);
-  normalized = g_utf8_normalize (title_b, -1, G_NORMALIZE_ALL);
-  g_free (title_b);
-  title_b = g_utf8_casefold (normalized, -1);
-  g_free (normalized);
-
-  if (g_strcmp0 (casefold, "") == 0)
-    result = g_strcmp0 (title_a, title_b);
-  else
-    {
-      found = g_strrstr (title_a, casefold);
-      if (found)
-        result -= (G_MAXINT - (found - title_a));
-
-      found = g_strrstr (title_b, casefold);
-      if (found)
-        result += (G_MAXINT - (found - title_b));
-    }
-
-  g_free (casefold);
-  g_free (title_a);
-  g_free (title_b);
-  return result;
+  return b_res - a_res;
 }
 
 
 
 static gint
-xfce_appfinder_window_sort_items_frecency  (GtkTreeModel *model,
-                                            GtkTreeIter  *a,
-                                            GtkTreeIter  *b,
-                                            gpointer      data)
+xfce_appfinder_window_sort_items (GtkTreeModel *model,
+                                  GtkTreeIter  *a,
+                                  GtkTreeIter  *b,
+                                  gpointer      data)
 {
-  guint        a_freq, b_freq;
-  guint64      a_rec, b_rec;
-  guint        a_res, b_res;
+  XfceAppfinderWindow *window = data;
+  GtkTreeModelFilter *filter = GTK_TREE_MODEL_FILTER (model);
+  GtkTreeModel *items = GTK_TREE_MODEL (window->model);
+  GtkTreeIter child_a, child_b;
+  gboolean action_a, action_b;
+  gchar *normalized, *title_a, *title_b, *found;
+  gint result = -1;
 
-  gtk_tree_model_get (model, a, XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY, &a_freq, -1);
-  gtk_tree_model_get (model, b, XFCE_APPFINDER_MODEL_COLUMN_FREQUENCY, &b_freq, -1);
+  gtk_tree_model_filter_convert_iter_to_child_iter (filter, &child_a, a);
+  gtk_tree_model_filter_convert_iter_to_child_iter (filter, &child_b, b);
+  action_a = xfce_appfinder_model_is_action (window->model, &child_a);
+  action_b = xfce_appfinder_model_is_action (window->model, &child_b);
+  if (action_a || action_b)
+    return (gint) action_b - (gint) action_a;
 
-  gtk_tree_model_get (model, a, XFCE_APPFINDER_MODEL_COLUMN_RECENCY, &a_rec, -1);
-  gtk_tree_model_get (model, b, XFCE_APPFINDER_MODEL_COLUMN_RECENCY, &b_rec, -1);
+  if (window->sort_by_frecency)
+    {
+      gint frecency = xfce_appfinder_window_compare_frecency (items, &child_a, &child_b);
+      if (frecency != 0)
+        return frecency;
+    }
 
-  a_res = xfce_appfinder_model_calculate_frecency (a_freq, a_rec);
-  b_res = xfce_appfinder_model_calculate_frecency (b_freq, b_rec);
+  gtk_tree_model_get (items, &child_a, XFCE_APPFINDER_MODEL_COLUMN_TITLE, &title_a, -1);
+  normalized = g_utf8_normalize (title_a, -1, G_NORMALIZE_ALL);
+  g_free (title_a);
+  title_a = g_utf8_casefold (normalized, -1);
+  g_free (normalized);
 
-  /* Sort according the frecency */
-  if (b_res - a_res != 0)
-    return b_res - a_res;
+  gtk_tree_model_get (items, &child_b, XFCE_APPFINDER_MODEL_COLUMN_TITLE, &title_b, -1);
+  normalized = g_utf8_normalize (title_b, -1, G_NORMALIZE_ALL);
+  g_free (title_b);
+  title_b = g_utf8_casefold (normalized, -1);
+  g_free (normalized);
 
-  /* If they have the same frecency, fallback to the alphabetical order */
-  return xfce_appfinder_window_sort_items (model, a, b, data);
+  if (window->filter_text == NULL)
+    result = g_strcmp0 (title_a, title_b);
+  else
+    {
+      found = g_strrstr (title_a, window->filter_text);
+      if (found)
+        result -= (G_MAXINT - (found - title_a));
+
+      found = g_strrstr (title_b, window->filter_text);
+      if (found)
+        result += (G_MAXINT - (found - title_b));
+    }
+
+  g_free (title_a);
+  g_free (title_b);
+  return result;
 }
 
 

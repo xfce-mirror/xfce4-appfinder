@@ -41,8 +41,10 @@ XfceAppfinderActions       *xfce_appfinder_actions_get           (void) G_GNUC_M
 
 gint                        xfce_appfinder_actions_get_unique_id (XfceAppfinderActions  *actions);
 
-gchar                      *xfce_appfinder_actions_execute       (XfceAppfinderActions  *actions,
+/* The matched action owns the returned name. */
+gchar                      *xfce_appfinder_actions_match         (XfceAppfinderActions  *actions,
                                                                   const gchar           *text,
+                                                                  const gchar          **name,
                                                                   gboolean              *save_cmd,
                                                                   GError               **error);
 

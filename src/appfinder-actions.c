@@ -60,6 +60,8 @@ struct _XfceAppfinderActions
   GSList        *actions;
 };
 
+static guint actions_changed_signal;
+
 typedef enum
 {
   XFCE_APPFINDER_ACTION_TYPE_PREFIX,
@@ -78,6 +80,7 @@ struct _XfceAppfinderAction
   guint                save : 1;
 
   GRegex              *regex;
+  gboolean             invalid_regex;
 };
 
 
@@ -93,6 +96,10 @@ xfce_appfinder_actions_class_init (XfceAppfinderActionsClass *klass)
 
   gobject_class = G_OBJECT_CLASS (klass);
   gobject_class->finalize = xfce_appfinder_actions_finalize;
+
+  actions_changed_signal = g_signal_new ("changed", G_TYPE_FROM_CLASS (klass),
+                                         G_SIGNAL_RUN_LAST, 0, NULL, NULL, NULL,
+                                         G_TYPE_NONE, 0);
 }
 
 
@@ -390,6 +397,7 @@ static gboolean
 xfce_appfinder_actions_reload_idle (gpointer data)
 {
   xfce_appfinder_actions_load (XFCE_APPFINDER_ACTIONS (data), TRUE);
+  g_signal_emit (data, actions_changed_signal, 0);
   return FALSE;
 }
 
@@ -501,6 +509,7 @@ xfce_appfinder_actions_changed (XfconfChannel        *channel,
                   action->pattern = g_value_dup_string (value);
 
                   g_clear_pointer (&action->regex, g_regex_unref);
+                  action->invalid_regex = FALSE;
                 }
               else if (strcmp (field, "command") == 0
                        && G_VALUE_HOLDS_STRING (value))
@@ -520,6 +529,7 @@ xfce_appfinder_actions_changed (XfconfChannel        *channel,
                   action->save = g_value_get_boolean (value);
                 }
 
+              g_signal_emit (actions, actions_changed_signal, 0);
               break;
             }
         }
@@ -535,7 +545,7 @@ xfce_appfinder_actions_expand_command (XfceAppfinderAction *action,
   GString     *string;
   const gchar *p;
   gsize        len;
-  gchar       *trim;
+  const gchar *argument = NULL;
 
   if (G_UNLIKELY (action->command == NULL))
     return NULL;
@@ -550,9 +560,13 @@ xfce_appfinder_actions_expand_command (XfceAppfinderAction *action,
           switch (*++p)
             {
             case 's':
-              trim = g_strdup (text + len);
-              g_string_append (string, g_strchug (trim));
-              g_free (trim);
+              if (argument == NULL)
+                {
+                  argument = text + len;
+                  while (g_ascii_isspace (*argument))
+                    argument++;
+                }
+              g_string_append (string, argument);
               break;
 
             case 'S':
@@ -624,16 +638,16 @@ xfce_appfinder_actions_get_unique_id (XfceAppfinderActions *actions)
 
 
 gchar *
-xfce_appfinder_actions_execute (XfceAppfinderActions  *actions,
-                                const gchar           *text,
-                                gboolean              *save_cmd,
-                                GError               **error)
+xfce_appfinder_actions_match (XfceAppfinderActions  *actions,
+                              const gchar           *text,
+                              const gchar          **name,
+                              gboolean              *save_cmd,
+                              GError               **error)
 {
   GSList              *li;
   XfceAppfinderAction *action;
   GError              *err = NULL;
   gchar               *cmd = NULL;
-  GMatchInfo          *match_info = NULL;
   gboolean             found = FALSE;
 
   appfinder_return_val_if_fail (error != NULL && *error == NULL, NULL);
@@ -660,6 +674,9 @@ xfce_appfinder_actions_execute (XfceAppfinderActions  *actions,
           break;
 
         case XFCE_APPFINDER_ACTION_TYPE_REGEX:
+          if (action->invalid_regex)
+            break;
+
           if (action->regex == NULL)
             {
               /* allocate the regex */
@@ -668,12 +685,14 @@ xfce_appfinder_actions_execute (XfceAppfinderActions  *actions,
                 {
                   g_message ("Failed to create regex for \"%s\": %s",
                              action->pattern, err->message);
-                  g_error_free (err);
+                  g_clear_error (&err);
+                  action->invalid_regex = TRUE;
 
                   break;
                 }
             }
 
+          GMatchInfo *match_info = NULL;
           if (g_regex_match (action->regex, text, 0, &match_info))
             {
               /* expand the command string */
@@ -695,13 +714,13 @@ xfce_appfinder_actions_execute (XfceAppfinderActions  *actions,
 
       if (found)
         {
+          if (name != NULL)
+            *name = action->name;
           if (save_cmd != NULL)
             *save_cmd = action->save;
           break;
         }
     }
-
-  appfinder_assert ((cmd != NULL) == found);
 
   return cmd;
 }
