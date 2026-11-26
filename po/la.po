@@ -24,7 +24,7 @@ msgstr "Exīre coāctus est"
 
 #: src/appfinder-actions.c:158
 msgid "Open URI"
-msgstr "Aperi URI"
+msgstr "Aperī URI"
 
 #: src/appfinder-actions.c:164
 msgid "Terminal command"
@@ -60,7 +60,7 @@ msgstr "Mandātum"
 
 #: src/appfinder-model.c:707
 msgid "Categories"
-msgstr "Categorīae"
+msgstr "Catēgorīae"
 
 #: src/appfinder-model.c:708
 msgid "Filename"
@@ -92,11 +92,11 @@ msgstr "Vīsne certē historiam mandātōrum purgāre?"
 
 #: src/appfinder-preferences.c:337
 msgid "This will permanently clear the recent items history."
-msgstr "Hoc historiam rērum recentium perpetuō purgābit."
+msgstr "Hoc historiam rērum nūper adhibitārum perpetuō purgābit."
 
 #: src/appfinder-preferences.c:338
 msgid "Are you sure you want to clear the recent items history?"
-msgstr "Vīsne certē historiam rērum recentium purgāre?"
+msgstr "Vīsne certē historiam rērum nūper adhibitārum purgāre?"
 
 #: src/appfinder-preferences.c:450
 msgid "_Delete"
@@ -104,12 +104,12 @@ msgstr "_Dēlē"
 
 #: src/appfinder-preferences.c:451
 msgid "The custom action will be deleted permanently."
-msgstr "Actiō ā tē creāta in perpetuum dēlēbitur."
+msgstr "Āctiō ā tē creāta in perpetuum dēlēbitur."
 
 #: src/appfinder-preferences.c:452
 #, c-format
 msgid "Are you sure you want to delete action \"%s\"?"
-msgstr "Certusne es? Vīsne actiōnem \"%s\" dēlēre?"
+msgstr "Vīsne certē āctiōnem \"%s\" dēlēre?"
 
 #: src/appfinder-window.c:247 src/appfinder-preferences.glade:81
 #: data/xfce4-appfinder.desktop.in:10
@@ -146,7 +146,7 @@ msgstr "Hoc plicam mēnsae ā tē creātam ex directōriō domesticō in perpetu
 #: src/appfinder-window.c:1052
 #, c-format
 msgid "Are you sure you want to revert \"%s\"?"
-msgstr "Certusne es? Vīsne \"%s\" restituere?"
+msgstr "Vīsne certē \"%s\" restituere?"
 
 #: src/appfinder-window.c:1062
 msgid "Failed to remove desktop file"
@@ -168,11 +168,11 @@ msgstr "_Cēlā"
 #: src/appfinder-window.c:1101
 #, c-format
 msgid "Are you sure you want to hide \"%s\"?"
-msgstr "Certusne es? Vīsne \"%s\" cēlāre?"
+msgstr "Vīsne certē \"%s\" cēlāre?"
 
 #: src/appfinder-window.c:1269
 msgid "Remove From Favorites"
-msgstr "Ē praepositīs remove"
+msgstr "Ē praepositīs removē"
 
 #: src/appfinder-window.c:1269
 msgid "Add to Favorites"
@@ -286,11 +286,11 @@ msgstr "Pōne fenestram in mediō initiō."
 
 #: src/appfinder-preferences.glade:201
 msgid "Close window when _focus is lost"
-msgstr "Claude _fenestram cum nōn iam actuōsa est."
+msgstr "Claude _fenestram cum iam nōn āctuōsa est"
 
 #: src/appfinder-preferences.glade:206
 msgid "When the focus is lost to another window, appfinder should be closed."
-msgstr "Cum alia fenestra actuōsa fit, Appfinder claudī dēbet."
+msgstr "Cum alia fenestra āctuōsa fit, Appfinder claudī dēbet."
 
 #: src/appfinder-preferences.glade:219
 msgid "Keep running _instance in the background"
@@ -337,7 +337,7 @@ msgstr "Modus operandī"
 
 #: src/appfinder-preferences.glade:330
 msgid "_View items as icons"
-msgstr "_Rēs ut iconēs ostende"
+msgstr "_Rēs ut īconēs ostende"
 
 #: src/appfinder-preferences.glade:345
 msgid "Text besi_de icons"
@@ -345,7 +345,7 @@ msgstr "Textus iu_xta iconēs"
 
 #: src/appfinder-preferences.glade:363
 msgid "Ite_m icon size:"
-msgstr "Magnitūdō iconis reī:"
+msgstr "Magnitūdō īconis reī:"
 
 #: src/appfinder-preferences.glade:377
 msgid "Hide category pane"
@@ -357,7 +357,7 @@ msgstr "Cēlā tabulam catēgoriārum et ostende omnēs applicātiōnēs."
 
 #: src/appfinder-preferences.glade:399
 msgid "Categ_ory icon size:"
-msgstr "Magnitūdō iconum catēgoriārum:"
+msgstr "Magnitūdō īconum catēgoriārum:"
 
 #: src/appfinder-preferences.glade:453
 msgid "Hide window decorations"
@@ -381,7 +381,7 @@ msgstr "_Purgā historiam mandātōrum ab ūsōre dēfīnītōrum"
 
 #: src/appfinder-preferences.glade:539
 msgid "Clear _Recently Used Items History"
-msgstr "Purgā Historiam Rērum _Recentium"
+msgstr "Purgā historiam rērum nūper _adhibitārum"
 
 #: src/appfinder-preferences.glade:555
 msgid "History"
@@ -389,11 +389,11 @@ msgstr "Historia"
 
 #: src/appfinder-preferences.glade:574
 msgid "_General"
-msgstr "_Generalis"
+msgstr "_Generālis"
 
 #: src/appfinder-preferences.glade:598
 msgid "Custom actions are only available in collapsed mode."
-msgstr "Actiōnēs ā tē creātae tantum in modō contractō adhibērī possunt."
+msgstr "Āctiōnēs ā tē creātae tantum in modō contractō adhibērī possunt."
 
 #: src/appfinder-preferences.glade:659
 msgid "Pattern"
@@ -401,11 +401,11 @@ msgstr "Fōrma"
 
 #: src/appfinder-preferences.glade:695
 msgid "Add a new custom action."
-msgstr "Adde novam actiōnem ā tē creātam."
+msgstr "Adde novam āctiōnem tuam."
 
 #: src/appfinder-preferences.glade:716
 msgid "Remove the currently selected action."
-msgstr "Removē actiōnem nunc sēlēctam."
+msgstr "Removē āctiōnem nunc sēlēctam."
 
 #: src/appfinder-preferences.glade:774
 #, c-format
@@ -413,7 +413,7 @@ msgid ""
 "If the type is set to prefix, %s will be replaced with the string after the "
 "pattern, %S with the complete entry text. For regular expressions you can "
 "use \\0 and \\<num>."
-msgstr "Sī genus \"praefīxum\" sēlēctum est, locō %s textus quī post fōrmulam est pōnētur, locō %S autem tōtus textus intrōductus pōnētur. In expressiōnibus regulāribus \\0 et \\<num> adhibēre potes."
+msgstr "Sī genus \"praefīxum\" sēlēctum est, locō %s textus quī post fōrmulam est pōnētur, locō %S autem tōtus textus intrōductus pōnētur. In expressiōnibus rēgulāribus \\0 et \\<num> adhibēre potes."
 
 #: src/appfinder-preferences.glade:805
 msgid "_Name:"
@@ -437,7 +437,7 @@ msgstr "_Servā textum congruentem in historiā mandātōrum"
 
 #: src/appfinder-preferences.glade:914
 msgid "Custom _Actions"
-msgstr "_Actiōnēs ā tē creātae"
+msgstr "_Āctiōnēs ā tē creātae"
 
 #: data/xfce4-appfinder.desktop.in:11
 msgid "Find and launch applications installed on your system"
@@ -453,14 +453,14 @@ msgstr "Exsequere Programma…"
 
 #: data/xfce4-run.desktop.in:12
 msgid "Enter a command you want to launch"
-msgstr "Scrībe mandātum quod vīs incipere"
+msgstr "Scrībe mandātum quod vīs exsequī"
 
 #: data/xfce4-run.desktop.in:13
 msgid ""
 "run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity"
 " dash;krunner;synapse;ulauncher;launchy;gnome "
 "do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
-msgstr "run;command;application;program;finder;search;launcher;exsequere;mandātum;applicātiō;programma;quaerere;iaculātor;everything;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;"
+msgstr "run;command;application;program;finder;search;launcher;exsequere;mandātum;applicātiō;programma;quaerere;iaculātor;everything;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;quaesītor;"
 
 #: data/org.xfce.xfce4-appfinder.appdata.xml.in:9
 msgid "Application to quickly run applications and commands"
@@ -472,4 +472,4 @@ msgid ""
 "on your system and quickly execute commands. It can also be used to quickly "
 "add launchers to the Xfce Panel by dragging an item from the view and drop "
 "it on the panel."
-msgstr "Quaesītor applicātiōnum est apparātus ad applicātiōnēs in systemate tuō īnstallātās quaerendās et incipiendās atque ad mandāta celeriter exsequenda. Etiam ad iactātōrēs celeriter addendōs ad lingulam Xfce adhibērī potest, rem trahendō et in lingulā dēpōnendō."
+msgstr "Quaesītor applicātiōnum est apparātus ad applicātiōnēs in systemate tuō īnstallātās quaerendās et incipiendās atque ad mandāta celeriter exsequenda. Etiam ad iaculātōrēs celeriter addendōs ad tabulam Xfce adhibērī potest, rem trahendō et in ltabulā dēpōnendō."
